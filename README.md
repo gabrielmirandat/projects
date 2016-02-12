@@ -1,15 +1,16 @@
-## Projects
+# Projects
 It contains all projects I have done in my undergraduate studies.
 
-# Programs
+## Programs
 Directory containing all source code I made separated by field.
 
-# Tutorials
+## Tutorials
 Directory containing all tutorials I made separated by field.
 
-# Lattes
-Take a look at my curriculum: [lattes] (http://lattes.cnpq.br/8785474690835899) 
+## Curriculum
+- [lattes] (http://lattes.cnpq.br/8785474690835899) 
+- [linkedIn] (https://www.linkedin.com/in/gabriel-miranda-195382114?trk=nav_responsive_tab_profile)
 
-# License
+## License
 - This repository for now is private. 
 - There is no license attached to it.
