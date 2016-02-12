@@ -9,7 +9,7 @@ Directory containing all tutorials I made separated by field.
 
 ## Curriculum
 - [lattes] (http://lattes.cnpq.br/8785474690835899) 
-- [linkedIn] (https://www.linkedin.com/in/gabriel-miranda-195382114?trk=nav_responsive_tab_profile)
+- [linkedIn] (https://br.linkedin.com/in/gabriel-miranda-195382114)
 
 ## License
 - This repository for now is private. 
