@@ -1,2 +1,4 @@
 #Ignores all object files
 *.o
+#*
+#!*.*
