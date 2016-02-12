@@ -1,5 +1,5 @@
 # Projects
-It contains all projects/tutorials I have done in my undergraduate studies.
+It contains all projects I have done in my undergraduate studies.
 
 # Programs
 Directory containing all source code I made separated by field.
