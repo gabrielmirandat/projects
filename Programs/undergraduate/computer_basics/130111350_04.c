@@ -52,8 +52,8 @@ char continua='s'; /*"continua" recebe 'sim' para entrar no loop principal*/
 int perdeu=7;     /*para entrar no loop, "perdeu" recebe um valor maior que zero. 
                     Como sao 7 as chances, resolvi colocar 7*/
 tipoRanking* vet_ranking;
-char ranking_bin[15] ="ranking.bin";  /*arquivo de onde sera gravado o Ranking*/
-char temas_bin[10]="temas.bin";
+char ranking_bin[30] ="content/ranking.bin";  /*arquivo de onde sera gravado o Ranking*/
+char temas_bin[30]="content/temas.bin";
 
 
 int menu() {
@@ -128,7 +128,7 @@ int escolhe_tema() {
 int criar_tema() {
     FILE* fp;
     FILE* fp2;
-    char temas_texto[20];
+    char temas_texto[30];
     int flag,k1,k2,i,pontuacao_palavra;
     char cadastra,c;
     char palavra_tema[20];
