@@ -1,0 +1,4 @@
+make c prog='first_semester/computer_basics/130111350_01'
+make c prog='first_semester/computer_basics/130111350_02'
+make c prog='first_semester/computer_basics/130111350_03'
+make c prog='first_semester/computer_basics/130111350_04'
