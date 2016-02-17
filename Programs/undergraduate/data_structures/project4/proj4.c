@@ -111,125 +111,136 @@ LISTA* cria_lista(LISTA* p){
     int arq,aux_tam_global=0;
     char palavra_atual[20];
 
-    fp=fopen("doc1.txt","r");
-    arq=1;
-    while(fscanf(fp,"%s",&palavra_atual)>0){
-        p=insere(p,palavra_atual,arq);
-        aux_tam_global++;
-    }
-    if(aux_tam_global<tam_global)
-        tam_global=aux_tam_global;
+    fp=fopen("content/doc1.txt","r"); if(fp){
+        arq=1;
+        while(fscanf(fp,"%s",palavra_atual)>0){
+	    p=insere(p,palavra_atual,arq);
+	    aux_tam_global++;
+        }
+        if(aux_tam_global<tam_global)
+	    tam_global=aux_tam_global;
 
-    fclose(fp);
-    aux_tam_global=0;
 
-    fp=fopen("doc2.txt","r");
-    arq=2;
-    while(fscanf(fp,"%s",&palavra_atual)>0){
-        p=insere(p,palavra_atual,arq);
-        aux_tam_global++;
-    }
-    if(aux_tam_global<tam_global)
-        tam_global=aux_tam_global;
+        fclose(fp);
+        aux_tam_global=0;
+    }else{printf("\nerro ao carregar doc1.txt.\n");exit(-1);}
 
-    fclose(fp);
-    aux_tam_global=0;
+    fp=fopen("content/doc2.txt","r"); if(fp){
+        arq=2;
+        while(fscanf(fp,"%s",palavra_atual)>0){
+            p=insere(p,palavra_atual,arq);
+            aux_tam_global++;
+        }
+        if(aux_tam_global<tam_global)
+            tam_global=aux_tam_global;
 
-    fp=fopen("doc3.txt","r");
-    arq=3;
-    while(fscanf(fp,"%s",&palavra_atual)>0){
-        p=insere(p,palavra_atual,arq);
-        aux_tam_global++;
-    }
-    if(aux_tam_global<tam_global)
-        tam_global=aux_tam_global;
+        fclose(fp);
+        aux_tam_global=0;
+    }else{printf("\nerro ao carregar doc2.txt.\n");exit(-1);}
 
-    fclose(fp);
-    aux_tam_global=0;
+    fp=fopen("content/doc3.txt","r"); if(fp){
+        arq=3;
+        while(fscanf(fp,"%s",palavra_atual)>0){
+            p=insere(p,palavra_atual,arq);
+            aux_tam_global++;
+        }
+        if(aux_tam_global<tam_global)
+            tam_global=aux_tam_global;
 
-    fp=fopen("doc4.txt","r");
-    arq=4;
-    while(fscanf(fp,"%s",&palavra_atual)>0){
-        p=insere(p,palavra_atual,arq);
-        aux_tam_global++;
-    }
-    if(aux_tam_global<tam_global)
-        tam_global=aux_tam_global;
+        fclose(fp);
+        aux_tam_global=0;
+    }else{printf("\nerro ao carregar doc3.txt.\n");exit(-1);}
 
-    fclose(fp);
-    aux_tam_global=0;
+    fp=fopen("content/doc4.txt","r"); if(fp){
+        arq=4;
+        while(fscanf(fp,"%s",palavra_atual)>0){
+            p=insere(p,palavra_atual,arq);
+            aux_tam_global++;
+        }
+        if(aux_tam_global<tam_global)
+            tam_global=aux_tam_global;
 
-    fp=fopen("doc5.txt","r");
-    arq=5;
-    while(fscanf(fp,"%s",&palavra_atual)>0){
-        p=insere(p,palavra_atual,arq);
-        aux_tam_global++;
-    }
-    if(aux_tam_global<tam_global)
-        tam_global=aux_tam_global;
+        fclose(fp);
+        aux_tam_global=0;
+    }else{printf("\nerro ao carregar doc4.txt.\n");exit(-1);}
 
-    fclose(fp);
-    aux_tam_global=0;
+    fp=fopen("content/doc5.txt","r"); if(fp){
+        arq=5;
+        while(fscanf(fp,"%s",palavra_atual)>0){
+            p=insere(p,palavra_atual,arq);
+            aux_tam_global++;
+        }
+        if(aux_tam_global<tam_global)
+            tam_global=aux_tam_global;
 
-    fp=fopen("doc6.txt","r");
-    arq=6;
-    while(fscanf(fp,"%s",&palavra_atual)>0){
-        p=insere(p,palavra_atual,arq);
-        aux_tam_global++;
-    }
-    if(aux_tam_global<tam_global)
-        tam_global=aux_tam_global;
+        fclose(fp);
+        aux_tam_global=0;
+    }else{printf("\nerro ao carregar doc5.txt.\n");exit(-1);}        
 
-    fclose(fp);
-    aux_tam_global=0;
+    fp=fopen("content/doc6.txt","r"); if(fp){
+        arq=6;
+        while(fscanf(fp,"%s",palavra_atual)>0){
+            p=insere(p,palavra_atual,arq);
+            aux_tam_global++;
+        }
+        if(aux_tam_global<tam_global)
+            tam_global=aux_tam_global;
 
-    fp=fopen("doc7.txt","r");
-    arq=7;
-    while(fscanf(fp,"%s",&palavra_atual)>0){
-        p=insere(p,palavra_atual,arq);
-        aux_tam_global++;
-    }
-    if(aux_tam_global<tam_global)
-        tam_global=aux_tam_global;
+        fclose(fp);
+        aux_tam_global=0;
+    }else{printf("\nerro ao carregar doc6.txt.\n");exit(-1);}
 
-    fclose(fp);
-    aux_tam_global=0;
+    fp=fopen("content/doc7.txt","r"); if(fp){
+        arq=7;
+        while(fscanf(fp,"%s",palavra_atual)>0){
+            p=insere(p,palavra_atual,arq);
+            aux_tam_global++;
+        }
+        if(aux_tam_global<tam_global)
+            tam_global=aux_tam_global;
 
-    fp=fopen("doc8.txt","r");
-    arq=8;
-    while(fscanf(fp,"%s",&palavra_atual)>0){
-        p=insere(p,palavra_atual,arq);
-        aux_tam_global++;
-    }
-    if(aux_tam_global<tam_global)
-        tam_global=aux_tam_global;
+        fclose(fp);
+        aux_tam_global=0;
+    }else{printf("\nerro ao carregar doc7.txt.\n");exit(-1);}
 
-    fclose(fp);
-    aux_tam_global=0;
+    fp=fopen("content/doc8.txt","r"); if(fp){
+        arq=8;
+        while(fscanf(fp,"%s",palavra_atual)>0){
+            p=insere(p,palavra_atual,arq);
+            aux_tam_global++;
+        }
+        if(aux_tam_global<tam_global)
+            tam_global=aux_tam_global;
 
-    fp=fopen("doc9.txt","r");
-    arq=9;
-    while(fscanf(fp,"%s",&palavra_atual)>0){
-        p=insere(p,palavra_atual,arq);
-        aux_tam_global++;
-    }
-    if(aux_tam_global<tam_global)
-        tam_global=aux_tam_global;
+        fclose(fp);
+        aux_tam_global=0;
+    }else{printf("\nerro ao carregar doc8.txt.\n");exit(-1);}
 
-    fclose(fp);
-    aux_tam_global=0;
+    fp=fopen("content/doc9.txt","r"); if(fp){
+        arq=9;
+        while(fscanf(fp,"%s",palavra_atual)>0){
+            p=insere(p,palavra_atual,arq);
+            aux_tam_global++;
+        }
+        if(aux_tam_global<tam_global)
+            tam_global=aux_tam_global;
 
-    fp=fopen("doc10.txt","r");
-    arq=10;
-    while(fscanf(fp,"%s",&palavra_atual)>0){
-        p=insere(p,palavra_atual,arq);
-        aux_tam_global++;
-    }
-    if(aux_tam_global<tam_global)
-        tam_global=aux_tam_global;
+        fclose(fp);
+        aux_tam_global=0;
+    }else{printf("\nerro ao carregar doc9.txt.\n");exit(-1);}
 
-    fclose(fp);
-    aux_tam_global=0;
+    fp=fopen("content/doc10.txt","r"); if(fp){
+        arq=10;
+        while(fscanf(fp,"%s",palavra_atual)>0){
+            p=insere(p,palavra_atual,arq);
+            aux_tam_global++;
+        }
+        if(aux_tam_global<tam_global)
+            tam_global=aux_tam_global;
+
+        fclose(fp);
+        aux_tam_global=0;
+    }else{printf("\nerro ao carregar doc10.txt.\n");exit(-1);}
 
     return p;
 
@@ -253,7 +264,7 @@ void cria_texto_indice(LISTA* p){
     FILE* fp;
     int i;
 
-    fp=fopen("IndInvert.txt","w");
+    fp=fopen("content/IndInvert.txt","w");
 
     while(p!=NULL){
         fprintf(fp,"%s -> ",p->info);
@@ -292,7 +303,7 @@ int hash(char* atual, int tipo){
 }
 
 void espalhamento(LISTA* p){
-    hdoc= fopen("HashDocs.txt","w");
+    hdoc= fopen("content/HashDocs.txt","w");
     int indice,i,maior;
     int n_colisoes[tam_global];
     LISTA* aux = p;
@@ -345,7 +356,7 @@ void interagir_usuario(){
 
     while(resposta=='s'|| resposta=='S'){
         printf("Entre com um nome para busca:\n");
-        scanf("%s",&palavra);
+        scanf("%s",palavra);
         getchar();
         indice=hash(palavra,0);
         LISTA* aux =VETOR_HASH[indice];

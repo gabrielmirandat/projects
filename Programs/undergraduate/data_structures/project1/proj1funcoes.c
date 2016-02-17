@@ -12,12 +12,7 @@
     que entre 45 e 90 indicam nao-plagio. */
 
     	/*Arquivo de implementacao das funcoes da interface do programa*/
-    
-    
-#include<stdio.h>
-#include<stdlib.h>  /*biblioteca para alocacao dinamica*/
-#include<string.h>
-#include<math.h>
+	
 #include"proj1biblioteca.h" /*interface da TAD*/
 
 char string[15];	/*variavel que guarda a informacao tirada dos textos*/

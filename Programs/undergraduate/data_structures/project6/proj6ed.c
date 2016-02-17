@@ -124,7 +124,12 @@ void le_arquivo(){ /*le do arquivo e monta lista*/
     char segunda[25];
     char terceira[10];
 
-    fp=fopen("entradaProj6.txt","r");
+    fp=fopen("content/entradaProj6.txt","r");
+    if(!fp){
+      printf("\nentradaProj6.txt nao encontrado.\n");
+      exit(-1);
+    }
+    
     while((fgets(frase,sizeof(frase),fp))!=NULL){
         atual =0;
         ind1=0;

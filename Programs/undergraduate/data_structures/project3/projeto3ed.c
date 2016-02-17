@@ -11,6 +11,7 @@
 
 
 #include<stdio.h>   /*bibliotecas*/
+#include<stdlib.h>
 
 
 /*para limpar a tela do terminal*/
@@ -200,7 +201,7 @@ void constroi_texto(int mat[][n]){  /*constroi o arquivo texto se houver solucao
     int i,j;
     FILE* fp;
 
-    fp= fopen("solucaoProj3.txt","w");
+    fp= fopen("content/solucaoProj3.txt","w");
 
     fprintf(fp,"%d\n",tam_mat_ori);
 
@@ -219,7 +220,7 @@ int main(){
     int coluna=0;
     int i,j;
 
-    fp=fopen("entradaProj3.txt","r");
+    fp=fopen("content/entradaProj3.txt","r");
 
     fscanf(fp,"%d",&tam_mat_ori);
 

@@ -57,7 +57,7 @@ void criador_nos(){
         no2->prox = NULL;
 
         printf("Informe o nome do %d° vertice.\n",i+1);
-        scanf("%s",&nome);
+        scanf("%s",nome);
         getchar();
 
         strcpy(no->nome,nome);
@@ -80,7 +80,7 @@ void constroi_amizade(){
 
         while(add=='s' || add=='S'){
             printf("Informe o amigo:\n");
-            scanf("%s",&nome);
+            scanf("%s",nome);
             getchar();
 
             j=0;
@@ -114,9 +114,7 @@ void constroi_amizade(){
 
             printar_amizade_invertida();*/
 
-
-
-            printf("Adicionar mais amigos para %s ?\n",lista_adjacencia[i]->nome);
+	    printf("Adicionar mais amigos para %s ?\n",lista_adjacencia[i]->nome);
             scanf("%c",&add);
             getchar();
         }
@@ -176,7 +174,7 @@ void printar_amizade(){
     int i;
     Vertice* aux;
 
-    fp=fopen("amigosED20141.txt","w");
+    fp=fopen("content/amigosED20141.txt","w");
 
     printf("-Lista de adjacencia- \n");
     fprintf(fp,"-Lista de adjacencia- \n");

@@ -12,8 +12,7 @@
     que entre 45 e 90 indicam nao-plagio. */
 
     			/*arquivo principal : representa a main do programa*/
-    
-#include<stdio.h>
+			
 #include"proj1biblioteca.h"  /*aqui eh incluida a biblioteca de funcoes criadas*/
 
 
@@ -33,6 +32,16 @@ int main(){
     scanf("%s",arquivo2);
     getchar();
 
+    FILE* temp1;FILE* temp2;
+    temp1=fopen(arquivo1,"r");
+    temp2=fopen(arquivo2,"r");
+    if(!temp1 || !temp2){
+      printf("\nImpossivel abrir algum dos arquivos.\n");
+      exit(-1);
+    }else{
+      fclose(temp1);fclose(temp2);
+    }
+    
     pal_txt_1=inicializa();			/*inicializa cada variavel tipo LISTA com NULL*/
     pal_txt_2=inicializa();
     pont_txt_1=inicializa();

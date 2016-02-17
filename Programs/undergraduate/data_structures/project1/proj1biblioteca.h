@@ -12,7 +12,15 @@
     que entre 45 e 90 indicam nao-plagio. */
 
     			/*interface da TAD */
+			
+#ifndef _BIBLIOTECA_H_
+#define _BIBLIOTECA_H_
+
     
+#include<stdio.h>
+#include<stdlib.h>  /*biblioteca para alocacao dinamica*/
+#include<string.h>
+#include<math.h>
     
 #define PI 3.141592654  /*constante PI definida para calculo do angulo em graus*/
 			/*usado na funcao metrica_angulo*/
@@ -44,4 +52,4 @@ void plagio(float ang_tot);
 
 void libera(LISTA* l);
 
-
+#endif //_BIBLIOTECA_H_
