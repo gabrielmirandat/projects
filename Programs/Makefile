@@ -1,4 +1,4 @@
-#to use: make type prog='program_name'
+#to use: make {c/cpp} prog='program_name'
 INC= -I '/include'
 SRC= include
 

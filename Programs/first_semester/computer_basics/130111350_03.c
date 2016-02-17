@@ -194,45 +194,50 @@ void matriz_arquivo(char *arquivo){
     int n,i,aux_pontos;
     
     fp=fopen(arquivo,"r"); /*arquivo aberto para leitura*/
-    
-    m=0;
-    n=0;
-    i=0;
-    while(!feof (fp)){
-        while (fgetc(fp)!=(char) 32) {
+    if(fp) {
+        
+        m=0;
+        n=0;
+        i=0;
+        while(!feof (fp)){
+            while (fgetc(fp)!=(char) 32) {
+                i++;
+            }
+            fscanf(fp,"%d",&aux_pontos);
+            if (i>n) {
+                n=i;
+            }
+            m++;
+        }
+
+       fclose(fp);
+   
+       fp=fopen(arquivo,"r"); /*arquivo aberto para leitura*/
+
+
+        palavras = (char**) malloc(sizeof(char*)*m);
+        for(i=0;i<m;i++){
+            palavras[i] = (char*) malloc(sizeof(char)*(n+1));
+        }
+
+        pontos = (int*) malloc(sizeof(int)*m);
+        
+
+
+        palavra_decifrada = (char*) malloc(sizeof(char)*(n+1));
+        
+
+        i=0;
+        while ((fscanf(fp,"%s",palavras[i])> 0)){
+            fscanf(fp,"%d",&pontos[i]);
             i++;
         }
-        fscanf(fp,"%d",&aux_pontos);
-        if (i>n) {
-            n=i;
-        }
-        m++;
+
+        fclose(fp);
+    }else{
+        printf("\nArquivo nao encontrado.\n");
+        exit(-1);
     }
-
-   fclose(fp);
-   
-   fp=fopen(arquivo,"r"); /*arquivo aberto para leitura*/
-
-
-    palavras = (char**) malloc(sizeof(char*)*m);
-    for(i=0;i<m;i++){
-        palavras[i] = (char*) malloc(sizeof(char)*(n+1));
-    }
-
-    pontos = (int*) malloc(sizeof(int)*m);
-    
-
-
-    palavra_decifrada = (char*) malloc(sizeof(char)*(n+1));
-    
-
-    i=0;
-    while ((fscanf(fp,"%s",palavras[i])> 0)){
-        fscanf(fp,"%d",&pontos[i]);
-        i++;
-    }
-
-    fclose(fp);
 }
 
 void mostra_tela(int *cont_forca,int *achou){
@@ -297,7 +302,7 @@ void letra_alfabeto(char *letra){
     i=0;
     /*loop para testar a consistencia da resposta do jogador,
     que nao pode ser barra de espaco e nem enter*/
-    while((*letra==' ') || (*letra=='\n')){    
+    while((*letra==' ') || (*letra=='\n') || (*letra<65) || (*letra>90)){     
         printf("ERRO!Informe uma letra valida:\n");
         scanf("%c",letra);
         getchar();
@@ -374,7 +379,7 @@ void compara(char *continua,int *respondeu){
 
 int main (void) {
     /*arquivo de onde serao retiradas as palavras do jogo*/
-    char arquivo[40] = "theme/palavras.txt";  
+    char arquivo[40] = "content/palavras.txt";  
     char letra,continua;
     /*"achou" representa se o jogador escolheu uma letra que pertence a "palavra_alvo"*/
     /*"perdeu" representa as chances do jogador, que no caso sao 6*/

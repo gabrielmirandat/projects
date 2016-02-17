@@ -1,7 +1,7 @@
 /*  Universidade de Brasilia
     Instituto de Ciencias Exatas
     Departamento de Ciencia da Computacao
-    Computacao Basica – 02/2013
+    Computacao Basica - 02/2013
     Aluno(a): <Gabriel Martins de Miranda>
     Matricula: <130111350>
     Turma: E
@@ -11,6 +11,7 @@ palavras decifradas e seus respectivos pontos.A cada erro, a variavel "perdeu" d
 usuario possui 6 chances para decifrar cada palavra. */
 
 #include<stdio.h>
+#include <stdlib.h>
 
 void mostra_tela(int *pontos_total,int *pontos,int *forca,char *palavra_decifrada,char *alfabeto,int *cont_forca,int *achou){
     int i;
@@ -49,7 +50,7 @@ void letra_alfabeto(char *letra,char *alfabeto){
     i=0;
     /*loop para testar a consistencia da resposta do jogador,
     que nao pode ser barra de espaco e nem enter*/
-    while((*letra==' ') || (*letra=='\n')){    
+    while((*letra==' ') || (*letra=='\n') || (*letra<65) || (*letra>90)){    
         printf("ERRO!Informe uma letra valida:\n");
         scanf("%c",letra);
         getchar();
@@ -130,7 +131,7 @@ int main () {
     /*ponteiro para o arquivo tipo texto*/
     FILE *fp;  
     /*arquivo de onde serao retiradas as palavras do jogo*/
-    char palavras[50] = "theme/palavras.txt";  
+    char palavras[50] = "content/palavras.txt";  
     char palavra_alvo[21],palavra_decifrada[21],letra,continua;
     char alfabeto[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     /*"achou" representa se o jogador escolheu uma letra que pertence a "palavra_alvo"*/
@@ -143,64 +144,69 @@ int main () {
 
     /*arquivo aberto para leitura*/
     fp=fopen(palavras,"r"); 
-    pontos_total=0;
-    /*"continua" recebe 'sim' para entrar no loop principal*/
-    continua='s'; 
-    /*para entrar no loop, "perdeu" recebe um valor maior que zero.
-     Como sao 6 as chances, resolvi colocar 6*/
-    perdeu=6;     
-    while ((fscanf(fp,"%s",palavra_alvo)> 0) && (perdeu>0) && (continua=='S'|| continua=='s')) {
-        fscanf(fp,"%d",&pontos);
-        /*a cada nova rodada,"respondeu" eh reinicidada*/
-        respondeu=0; 
-        /*a cada nova rodada,as chances do jogador sao reinicidas*/
-        perdeu=6;    
-        achou=1;
-        /*a contagem para a forca tambem eh reiniciada*/
-        cont_forca=0;
-        i=0;
-        /*a cada rodada, uma nova palavra eh buscada*/
-        while(palavra_alvo[i]!='\0'){ 
-            i++;
-        }
-        tam_palavra_alvo=i;
-        preenchimento(palavra_decifrada,&tam_palavra_alvo);
-        /*a cada nova rodada,o alfabeto eh reiniciado*/
-        for (i=0;i<26;i++) {           
-            alfabeto[i] = (char) i+ (char) 65;
-        }
-        alfabeto[i] = '\0';
-        while(respondeu==0 && perdeu>0){
-            mostra_tela(&pontos_total,&pontos,forca,palavra_decifrada,alfabeto,&cont_forca,&achou);
-            printf("Escolha uma das letras acima para decifrar a palavra:\n");
-            scanf("%c",&letra);
-            getchar();
-            letra_alfabeto(&letra,alfabeto);
-            letra_palavra(&achou,palavra_alvo,palavra_decifrada,&letra);
-            /*caso o jogador tenha errado a letra*/
-            if(achou==0){             
-                perdeu=perdeu-1;
-                if(perdeu>0){
-                printf("Letra incorreta!!! Voce ainda tem %d chance-s-!",perdeu);
-                }else{
-                    printf("Letra incorreta!!! Voce nao possui mais chances.\n");
-                    pontos_total=pontos_total+pontos;
-                    printf("SUA PONTUACAO FINAL FOI DE: %d. \n",pontos_total);
-                }
-                cont_forca++;
-                pontos=pontos-5;
-                printf(" Tecle enter para prosseguir!");
-                getchar();
-            /*caso o jogador acerte a letra*/
-            }else {                  
-                printf("ACERTOU! Tecle enter para prosseguir!");
-                getchar();
+    if(fp) {
+        pontos_total=0;
+        /*"continua" recebe 'sim' para entrar no loop principal*/
+        continua='s'; 
+        /*para entrar no loop, "perdeu" recebe um valor maior que zero.
+         Como sao 6 as chances, resolvi colocar 6*/
+        perdeu=6;     
+        while ((fscanf(fp,"%s",palavra_alvo)> 0) && (perdeu>0) && (continua=='S'|| continua=='s')) {
+            fscanf(fp,"%d",&pontos);
+            /*a cada nova rodada,"respondeu" eh reinicidada*/
+            respondeu=0; 
+            /*a cada nova rodada,as chances do jogador sao reinicidas*/
+            perdeu=6;    
+            achou=1;
+            /*a contagem para a forca tambem eh reiniciada*/
+            cont_forca=0;
+            i=0;
+            /*a cada rodada, uma nova palavra eh buscada*/
+            while(palavra_alvo[i]!='\0'){ 
+                i++;
             }
-            compacta_alfabeto(alfabeto,&letra);
-            compara(palavra_decifrada,palavra_alvo,&continua,&pontos,&pontos_total,&respondeu);
+            tam_palavra_alvo=i;
+            preenchimento(palavra_decifrada,&tam_palavra_alvo);
+            /*a cada nova rodada,o alfabeto eh reiniciado*/
+            for (i=0;i<26;i++) {           
+                alfabeto[i] = (char) i+ (char) 65;
+            }
+            alfabeto[i] = '\0';
+            while(respondeu==0 && perdeu>0){
+                mostra_tela(&pontos_total,&pontos,forca,palavra_decifrada,alfabeto,&cont_forca,&achou);
+                printf("Escolha uma das letras acima para decifrar a palavra:\n");
+                scanf("%c",&letra);
+                getchar();
+                letra_alfabeto(&letra,alfabeto);
+                letra_palavra(&achou,palavra_alvo,palavra_decifrada,&letra);
+                /*caso o jogador tenha errado a letra*/
+                if(achou==0){             
+                    perdeu=perdeu-1;
+                    if(perdeu>0){
+                    printf("Letra incorreta!!! Voce ainda tem %d chance-s-!",perdeu);
+                    }else{
+                        printf("Letra incorreta!!! Voce nao possui mais chances.\n");
+                        pontos_total=pontos_total+pontos;
+                        printf("SUA PONTUACAO FINAL FOI DE: %d. \n",pontos_total);
+                    }
+                    cont_forca++;
+                    pontos=pontos-5;
+                    printf(" Tecle enter para prosseguir!");
+                    getchar();
+                /*caso o jogador acerte a letra*/
+                }else {                  
+                    printf("ACERTOU! Tecle enter para prosseguir!");
+                    getchar();
+                }
+                compacta_alfabeto(alfabeto,&letra);
+                compara(palavra_decifrada,palavra_alvo,&continua,&pontos,&pontos_total,&respondeu);
+            }
         }
+        fclose(fp);
+    }else{
+        printf("\nArquivo nao encontrado.\n");
+        exit(-1);
     }
-    fclose(fp);
     getchar();
     return 0;
 }

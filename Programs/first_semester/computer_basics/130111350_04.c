@@ -527,7 +527,7 @@ void letra_alfabeto(char *letra){
     i=0;
     /*loop para testar a consistencia da resposta do jogador,
     que nao pode ser barra de espaco e nem enter*/
-    while((*letra==' ') || (*letra=='\n')){    
+    while((*letra==' ') || (*letra=='\n') || (*letra<65) || (*letra>90)){    
         printf("ERRO!Informe uma letra valida:\n");
         scanf("%c",letra);
         getchar();
