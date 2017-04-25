@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <signal.h>
 
 void funcao_sigsegv()
@@ -12,5 +14,5 @@ main()
    signal(SIGSEGV, funcao_sigsegv);
    
    /* vou forcar um segment fault */
-   printf("%s", *p);
+   printf("%d", *p);
 }
