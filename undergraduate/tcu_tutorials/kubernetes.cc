@@ -11,6 +11,8 @@ A Node is a worker machine in Kubernetes and may be a VM or a physical machine, 
 On a Node you can have multiple pods.
 The scheduling of Pods is performed automatically by the Master.
 Kubelet, that acts as a bridge between the Kubernetes Master and the Nodes; it manages the Pods and the containers running on a machine.
+A Kubernetes Service is an abstraction layer which defines a logical set of Pods and enables external traffic exposure, load balancing and service discovery for those Pods.
+Scaling is accomplished by changing the number of replicas in a Deployment
 
 $ kubectl get - list resources
 $ kubectl describe - show detailed information about a resource
@@ -65,4 +67,56 @@ $ curl localhost:8080
 // to close container
 $ exit
 
+// look for existing pods
+$ kubectl get pods
 
+// list services
+$ kubectl get services
+
+// create new service and expose to external traffic
+$ kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080
+
+// discover external port
+$ kubectl describe services/kubernetes-bootcamp
+
+// create environment variable which value is the Node port
+$ export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')
+echo NODE_PORT=$NODE_PORT
+$ curl host01:$NODE_PORT
+
+// to see name of labels
+$ kubectl describe deployment
+
+// use label to query list of pods
+$ kubectl get pods -l run=kubernetes-bootcamp
+
+// use label to list existing services
+$ kubectl get services -l run=kubernetes-bootcamp
+
+// store name of pod as POD_NAME
+$ export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')
+echo Name of the Pod: $POD_NAME
+
+// apply new label
+$ kubectl label pod $POD_NAME app=v1
+
+// describe lalelled pod
+$ kubectl describe pods $POD_NAME
+
+// delete service by label
+$ kubectl delete service -l run=kubernetes-bootcamp
+
+// scale to four pods
+$ kubectl scale deployments/kubernetes-bootcamp --replicas=4
+
+// scale down to two replicas
+$ kubectl scale deployments/kubernetes-bootcamp --replicas=2
+
+// view current image version of the app
+$ kubectl describe pods
+
+// update image version
+$ kubectl set image deployments/kubernetes-bootcamp kubernetes-bootcamp=jocatalin/kubernetes-bootcamp:v2
+
+// back to previous version
+$ kubectl rollout undo deployments/kubernetes-bootcamp
