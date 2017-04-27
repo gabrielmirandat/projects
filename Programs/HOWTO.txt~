@@ -1,8 +1,0 @@
-#undergraduate/computer_basics
-make c prog='undergraduate/computer_basics/130111350_01'
-make c prog='undergraduate/computer_basics/130111350_02'
-make c prog='undergraduate/computer_basics/130111350_03'
-make c prog='undergraduate/computer_basics/130111350_04'
-
-make c_dir prog='/home/gabriel/Documentos/projects/Programs/undergraduate/data_structures/project1' 
-

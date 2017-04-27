@@ -1,8 +1,0 @@
-#to use: make comp='compiler' ext='program_extension' prog='program_name'
-INC= -I 'include'
-SRC= include
-all:
-	clear
-	${comp} -o ${prog} ${prog}.${ext} ${SRC}/*.cpp $(INC) -g -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_stitching
-
-	
