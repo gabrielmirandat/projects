@@ -15,7 +15,7 @@ main()
    else
    {
      printf("sou o processo pai\n");
-     sleep(20);
+     sleep(30);
    }
 }
      
