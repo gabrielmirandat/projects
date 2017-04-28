@@ -134,13 +134,12 @@ for m = 1:3
   endfor
 endfor
 
-# P_TdL0L1L2??
-# P_TL0L1L2
+# Perguntar 
+# Calculo de P(T|L0L1L2)
+# P(T|L0L1L2) =  P(TL0L1L2)/P(L0L1L2)
+# Em P(MTL0L1L2) / Emt P(MTL0L1L2)
+P_TL0L1L2 = sum(P_MTL0L1L2, 1);
+P_L0L1L2 =  sum(P_MTL0L1L2, 2);
 
+P_TdL0L1L2 = P_TL0L1L2 ./ P_L0L1L2;
 
-
-
-
-
-
- 
