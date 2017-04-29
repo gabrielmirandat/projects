@@ -191,3 +191,120 @@ SINAIS DO UNIX
 	int sleep( unsigned seconds)
 	suspende a execução do processo por no mínimo seconds segundos.
 	retorna num de segundos que o processo deixou de dormir
+
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\//
+prob_classicos.pdf
+
+• Os filósofos glutões
+• O problema dos leitores/escritores
+• O barbeiro dorminhoco
+
+#Questão: Resolver algoritmicamente este
+problema de maneira que não haja 'deadlock' nem
+'starvation' e que seja permitida a máxima
+concorrência possível.
+
+• Os filósofos glutões
+	- 5 filosofos em torno de mesa redonda
+	- 1 prato na frente e 1 garfo entre cada dois pratos
+	- cada filosofo necessita 2 garfos para comer
+	- 2 açoes: pensar e comer
+	- comer: pegar 1 garfo, pegar outro garfo, comer
+
+1ª solucao - imediata
+	'deadlock' se todos os filosofos pegarem ao mesmo tempo
+2ª solucao - checa se segundo garfo ocupado
+	'starvation' facilmente
+3º solucao - com  estados ('pensando', 'comfome', 'comendo'), só come se vizinhos não estão comendo, monitores e var de condição
+			 com procedures pega(i), larga(i) e testa(i)
+
+			 // codigo
+			 estado[0..4] of 'pensando'
+			 condicao[0..4] of 'signaled'
+
+			 pega(i)
+			 	estado[i] = 'comfome'
+			 	testa(i)
+			 	if (estado[i] != 'comendo') condicao[i] = 'wait'
+
+			 larga(i)
+				estado[i] = 'pensando'
+				testa ((i-1) % 5)  // TODO: pra que?
+				testa ((i+1) % 5)  // 
+
+			testa(i)
+				if ((estado[(i-1) % 5] != 'comendo') && (estado[i] == 'comfome') && (estado[(i+1) % 5] != 'comendo'))
+					estado[i] = 'comendo'
+					condicao[i] = 'signal'
+
+			// chamada
+			filosofos_glutoes.pega(i);
+			/* come */
+			filosofos_glutoes.larga(i);
+	'starvation' pode ocorrer, livre de deadlock, com exclusão mútua e concorrência máxima
+
+• O problema dos leitores/escritores
+	- vários 'leitores' simultâneos 
+	- um 'escritor' com acesso exclusivo
+
+1ª solucao - 2 semáforos mutex
+
+			// codigo
+			sem mutex = db = 1
+			int num_leitores = 0
+
+			reader()
+				while(TRUE)
+					P(&mutex)
+						num_leitores++;
+						if(num_leitores==1) P(&db)
+					V(&mutex)
+					le_dados()
+					P(&mutex)
+						num_leitores--;
+						if(num_leitores==0) V(&db)
+					V(&mutex)
+
+			writer()
+				while(TRUE)
+					P(&db)
+						escreve_dados()
+					V(&db)
+	'boa', mas favorece leitores: escritor não escreve enquanto há leitor lendo
+
+• O barbeiro dorminhoco
+	- um barbeiro, uma cadeira de barbeiro
+	- várias cadeiras de cliente
+	- se não há cliente, barbeiro dorme
+	- se chega cliente e barbeiro já está cortando, cliente espera na cadeira
+	- se não houver cadeiras, clientes vão embora
+
+1ª solucao - 2 semáforos
+
+			// codigo
+			sem clientes = barbeiro = 0
+			sem mutex = 1
+			int esperando = 0
+			int CADEIRAS = 5
+
+			barbeiro()
+				while(TRUE)
+					P(&clientes)
+					p(&mutex)
+						esperando--;
+					V(&barbeiro)
+					V(&mutex)
+					corta_cabelo()
+
+			cliente()
+				while(TRUE)
+					P(&mutex)
+						if(esperando<CADEIRAS)
+							esperando++;
+							V(&clientes)
+							V(&mutex)
+							P(&barbeiro)
+							tem_cabelo_cortado()
+						else
+							V(&mutex)
