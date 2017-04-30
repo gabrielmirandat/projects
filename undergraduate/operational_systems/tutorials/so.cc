@@ -1,15 +1,41 @@
-// mostra os proc em background
-$ps -l 
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\//
+unix.pdf
 
+$ proc &   // roda processos em brackground
+$ ps -l    // mostra os processos em background
 
-COMUNICACAO
-•  Pipes;
-•  Filas de mensagens;
-•  Memória compartilhada;
-•  Semáforos;
-•  Sinais
+CRIAÇÃO
+- cópia da maioria dos campos contidos na tabela na tabela de processos
+- cópia dos segmentos de código, dados e pilha do processo pai
+	- filho com cópia dos descritores abertos do pai;
+	- semáforos zerados
+	- parâmetros de escalonamento zerados
+	- locks não são herdados
+	- sinais pendentes descartados
+retorna 0 para filho
+pid do filho pro pai
+-1 se erro
 
+int execl(char *path, char *argv[0], char *argv[1],..., (char *) 0);
+	- mantém PID, PPID, parâmetros do processo filho dado pelo fork
 
+- quando um processo pai morre, filhos passam a ser filhos do init	
+- wait serve para avisar o pai da morte de um filho
+- se filho morre mas não avisa o pai, é um processo em estado "morrendo", ou um "zombie", ou "defunct"
+
+int nice(incr)
+	- reduz prioridade de um processo
+
+TÉRMINO
+- através de "wait" e "exit"
+- no "exit", todos os descritores de arquivos abertos são fechados.
+- no "wait", pai fica bloqueado até que um de seus filhos termine
+	- -1 se processo não tem filhos
+	- filho parado
+	- filho terminou por sinal
+	- filho terminou por exit
+
+TABELA DE PROCESSOS
 FLAGS DE ESTADO: descrevem o estado de execução do processo.
 •  UID: 			grupo do usuário que startou o processo
 •  pid: 			identificador único do processo
@@ -25,12 +51,21 @@ FLAGS DE ESTADO: descrevem o estado de execução do processo.
 •  TIME: 			tempo de CPU (user+system)
 •  COMMAND: 		arquivo executável que gerou o processo
 
+ESTADOS DE PROCESSOS
 MOTIVOS DE BLOQUEIO:
 •  P:  esperando que a página corrente seja carregada
 •  D:  esperando I/O
 •  T:  parado por um utilitário de debug
 •  S:  dormindo por poucos segundos
 •  I:  dormindo por muitos segundos
+
+
+COMUNICACAO
+•  Pipes;
+•  Filas de mensagens;
+•  Memória compartilhada;
+•  Semáforos;
+•  Sinais
 
 SINAIS DO UNIX
 •  SIGHUP		1 hangup
@@ -308,3 +343,5 @@ concorrência possível.
 							tem_cabelo_cortado()
 						else
 							V(&mutex)
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\//						
