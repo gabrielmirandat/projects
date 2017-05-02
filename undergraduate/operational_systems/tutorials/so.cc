@@ -350,3 +350,38 @@ concorrência possível.
 							tem_cabelo_cortado()
 						else
 							V(&mutex)
+							
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\//
+threads.pdf
+
+processos quanto à custo de troca de contexto
+	
+	
+	'heavyweight' 
+		ambiente = espaço de endereçamento, (código, dados, pilha), arquivos abertos
+		execução = conjunto de registradores, (PC, SP, Uso geral, etc), estado de execução
+		
+		- processo= ambiente + estado de execução = contexto
+		- única thread de controle
+	
+	
+	
+	'lightweight' 
+		ambiente(tabela de processos) = espaço de endereçamento, (código, dados, pilha), arquivos abertos
+		execução(tabela de threads) = conjunto de registradores, (PC, SP, Uso geral, etc), estado de execução
+		
+		- maior concorrência na execução dos processos
+		- processo= processo/tafera(ambiente) + thread(estado de execução)
+		- as threads do processo compartilham o ambiente(memória, descritores de arquivos, etc)	
+		- cada processo possui uma tabela de threads associada
+		- troca de contexto somente em respeito à execução
+		
+		'thread'
+			- estados: ready, running, blocked
+			- compartilham vars globais, descritores abertos
+			- necessita sincronização
+			
+			'Modelo dispecher/worker' - slide 9
+							
+							
+							
