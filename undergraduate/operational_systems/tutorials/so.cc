@@ -1,15 +1,6 @@
 // mostra os proc em background
 $ps -l 
 
-
-COMUNICACAO
-•  Pipes;
-•  Filas de mensagens;
-•  Memória compartilhada;
-•  Semáforos;
-•  Sinais
-
-
 FLAGS DE ESTADO: descrevem o estado de execução do processo.
 •  UID: 			grupo do usuário que startou o processo
 •  pid: 			identificador único do processo
@@ -25,46 +16,50 @@ FLAGS DE ESTADO: descrevem o estado de execução do processo.
 •  TIME: 			tempo de CPU (user+system)
 •  COMMAND: 		arquivo executável que gerou o processo
 
+// novas modificacoes pc biblioteca
+EXECUÇÃO DE EXECUTÁVEL
+int execl(char *path, char *argv[0], char *argv[1],..., (char *) 0);
+	- mantem o pid, o ppid, os parâmetros do escalonador, o real uid, os descritores de arquivos abertos
+	- são alteradas a imagem do processo na memória, o conjunto de registradores e o uid efetivo
+
+TERMINO DE PROCESSOS
+"sempre que um filho termina, o pai deve ser avisado"
+
+se o pai morre, filhos passam a ser filhos do init
+se filho morre sem avisar, fica no estado morrendo <zombie> ou <defunct>
+
+exit
+	- fecha todos os descritores de arquivos
+	- status salvo até pai executar um wait
+	- não retorna, causa término do programa
+	
+wait
+	- bloqueia pai até que um dos filhos termine
+	- retorna -1 se o pai não tem filhos, se filho parado, se filho terminou por sinal, senão terminou por exit
+
+ESCALONAMENTO DE PROCESSOS
+- prioridades dinâmicas
+- política round-robin por fila
+- favorece I/O bound
+- 'aging': impedir starvation de forma que processos que há muito esperam tem prioridade decrementada
+	- int nice(incr) = substitui fator base por incr
+
+// 	
+
 MOTIVOS DE BLOQUEIO:
 •  P:  esperando que a página corrente seja carregada
 •  D:  esperando I/O
 •  T:  parado por um utilitário de debug
 •  S:  dormindo por poucos segundos
 •  I:  dormindo por muitos segundos
-
-SINAIS DO UNIX
-•  SIGHUP		1 hangup
-•  SIGINT		2 interrupt
-•  SIGQUIT		3
-•  SIGILL 		4
-•  SIGTRAP 		5
-•  SIGABRT 		6
-•  SIGEMT 		7
-•  SIGFPE 		8
-•  SIGKILL 		9
-•  SIGBUS 		10
-•  SIGSEGV 		11
-•  SIGSYS 		12
-•  SIGPIPE 		13
-•  SIGALRM 		14
-•  SIGTERM 		15
-•  SIGURG 		16
-•  SIGSTOP 		17
-•  SIGTSTP 		18
-•  SIGCONT 		19
-•  SIGCHLD 		20
-•  SIGTTIN 		21
-•  SIGTTOU 		22
-•  SIGIO 		23
-•  SIGXCPU 		24
-•  SIGXFSZ 		25
-•  SIGVTALRM 	26
-•  SIGPROF 		27
-•  SIGWINCH 	28
-•  SIGLOST 		29
-•  SIGUSR1 		30
-•  SIGUSR2 		31
-
+	
+COMUNICACAO
+•  Pipes;
+•  Filas de mensagens;
+•  Memória compartilhada;
+•  Semáforos;
+•  Sinais
+	
 'Pipes'
 - buffers protegidos em memória, acessados segundo a política FIFO
 - Cria pipe, cria processo(fork duplica os descritores de arquivos), 
@@ -101,10 +96,14 @@ SINAIS DO UNIX
 - 'envia'
 	int msgsnd(int msgid, struct msgbuf *msgp, int msgsize, int msgflg);
 	envia mensagem em 'msgp' de tamanho 'msgsize' para a fila 'msgid' com flags de bloqueio 'msgflg'
+		msgp = {long mtype; char mtext[1];}
+		msgflg = IPC_NOWAIT(sem bloqueio) ou 0(com bloqueio)
 	retorna 0, senão -1
 - 'recebe'
 	int msgrcv(int msgid, struct msgbuf *msgp, int msgsize, long msgtyp, int msgflg);
 	recebe mensagem de tipo 'msgtyp' de tamanho 'msgsize' da fila 'msgid' com flags de bloqueio 'msgflg' em 'msgbuf'
+		msgp->mtype deve ser igual a msgtyp
+		msgflg = IPC_NOWAIT(sem bloqueio) ou 0(com bloqueio)
 	retorna num de bytes recebidos, senão -1
 - 'deletar'
 	int msgctl(int msgid, IPC_RMID, struct msqid_ds *buf); 
@@ -130,9 +129,10 @@ SINAIS DO UNIX
 	retorna id da mem 'shmid', senão -1
 - 'attach'
 	char *shmat(int shmid, char *shmaddr, int shmflg);
-	mapeia segmento 'shmid' no endereço 'shmaddr' escolhido pelo sistema ou programador
-	com modo de acesso 'shmflg'
-	retorna endereço do segmento, senão -1
+	mapeia segmento 'shmid' no endereço 'shmaddr' escolhido pelo sistema ou programador com modo de acesso 'shmflg'
+		shmaddr = 0(end. de mapeamento escolhido pelo sistema)
+		shmflg = read_only ou read/write
+	retorna endereço do segmento de memória, senão -1
 - 'detach'
 	int shmdt(int shmid);
 	desfaz mapeamento do segmento de mem
@@ -144,7 +144,9 @@ SINAIS DO UNIX
 
 'Semaforos'
 - delimitar seção critica, ordem na execução
+- operações no semáforo são indivisíveis
 - cria conjunto de sems (semid), obtém id, executa operações, remove identificador
+- remoção explicita
 - 'includes'
 	#include <sys/types.h>
 	#include <sys/ipc.h>
@@ -154,8 +156,12 @@ SINAIS DO UNIX
 	cria conjunto de 'nsems' com chave 'key' e permissoes 'semflg'
 - 'operacoes'
 	int semop(int semid, struct sembuf *sops, int nsops);
-	executa conjunto de operacoes descritas em 'sembuf' sobre semaforos 'semid' 
-	pelo numero de vezes 'nsops'
+	executa conjunto de operacoes descritas em 'sembuf' sobre semaforos 'semid' pelo numero de vezes 'nsops'
+			sembuf = {short sem_num;/* numero do semáforo */
+				  short sem_op;/* tipo da operação */
+				  short sem_flg; /*flags */}
+
+			// entender depois
 	retorna 0, senão -1
 - 'obtem'
 	int semget(key_t key, int nsems, int shmflg);
@@ -168,29 +174,65 @@ SINAIS DO UNIX
 
 'Sinais'
 - são interrupções que chegam assincronamente aos processos
-- ocorre desvio de execução para a rotina de tratamento
+- ocorre desvio de execução para a rotina de tratamento e posterior volta à execução anterior seguinte 
 - a interrupção pode chegar a qualquer momento
+
+SINAIS DO UNIX
+•  SIGHUP		1 hangup
+•  SIGINT		2 interrupt
+•  SIGQUIT		3
+•  SIGILL 		4
+•  SIGTRAP 		5
+•  SIGABRT 		6
+•  SIGEMT 		7
+•  SIGFPE 		8
+•  SIGKILL 		9
+•  SIGBUS 		10
+•  SIGSEGV 		11
+•  SIGSYS 		12
+•  SIGPIPE 		13
+•  SIGALRM 		14
+•  SIGTERM 		15
+•  SIGURG 		16
+•  SIGSTOP 		17
+•  SIGTSTP 		18
+•  SIGCONT 		19
+•  SIGCHLD 		20
+•  SIGTTIN 		21
+•  SIGTTOU 		22
+•  SIGIO 		23
+•  SIGXCPU 		24
+•  SIGXFSZ 		25
+•  SIGVTALRM 	        26
+•  SIGPROF 		27
+•  SIGWINCH 	        28
+•  SIGLOST 		29
+•  SIGUSR1 		30
+•  SIGUSR2 		31
 - 'includes'
 	#include <signal.h>
 	void (*signal(sig, func))()		// apenas associa sinal a uma funcao
-	void (*func)(); 				// define funcao de tratamento
+	void (*func)(); 			// define funcao de tratamento
 	retorna a ação tomada anteriormente, senão -1
 - 'envio'
 	int kill (pid_t pid, int sig);
 	envia sinal 'sig' ao processo 'pid'
+			sig=0(somente testa a existência do processo pid)
+			pid=-1(enviado a todos os processo de uid de usuário ou do sistema)
 	retorna 0, senão -1
 - 'alarm'
 	unsigned int alarm(unsigned int seconds)
 	envia SIGALARM ao processo que o chamou depois de 'seconds' segundos
+		seconds=0(cancela alarms pendentes)
 	retorna o tempo que faltava para o 'alarm' anterior
 - 'pause'
 	int pause( )
 	pára o processo até que um sinal seja recebido
-	retorna 0, senão -1
+	retorna nada, senão -1
 - 'sleep'
 	int sleep( unsigned seconds)
-	suspende a execução do processo por no mínimo seconds segundos.
-	retorna num de segundos que o processo deixou de dormir
+	suspende a execução do processo por no mínimo 'seconds' segundos.
+	retorna 0, senão número de segundos que o processo deixou de dormir se houve recepção de sinal
 
 
 //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\//
