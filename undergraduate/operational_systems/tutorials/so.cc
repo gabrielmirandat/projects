@@ -1,3 +1,40 @@
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\//
+unix.pdf
+
+$ proc &   // roda processos em brackground
+$ ps -l    // mostra os processos em background
+
+CRIAÇÃO
+- cópia da maioria dos campos contidos na tabela na tabela de processos
+- cópia dos segmentos de código, dados e pilha do processo pai
+	- filho com cópia dos descritores abertos do pai;
+	- semáforos zerados
+	- parâmetros de escalonamento zerados
+	- locks não são herdados
+	- sinais pendentes descartados
+retorna 0 para filho
+pid do filho pro pai
+-1 se erro
+
+int execl(char *path, char *argv[0], char *argv[1],..., (char *) 0);
+	- mantém PID, PPID, parâmetros do processo filho dado pelo fork
+
+- quando um processo pai morre, filhos passam a ser filhos do init	
+- wait serve para avisar o pai da morte de um filho
+- se filho morre mas não avisa o pai, é um processo em estado "morrendo", ou um "zombie", ou "defunct"
+
+int nice(incr)
+	- reduz prioridade de um processo
+
+TÉRMINO
+- através de "wait" e "exit"
+- no "exit", todos os descritores de arquivos abertos são fechados.
+- no "wait", pai fica bloqueado até que um de seus filhos termine
+	- -1 se processo não tem filhos
+	- filho parado
+	- filho terminou por sinal
+	- filho terminou por exit
+
 // mostra os proc em background
 $ps -l 
 
@@ -16,7 +53,6 @@ FLAGS DE ESTADO: descrevem o estado de execução do processo.
 •  TIME: 			tempo de CPU (user+system)
 •  COMMAND: 		arquivo executável que gerou o processo
 
-// novas modificacoes pc biblioteca
 EXECUÇÃO DE EXECUTÁVEL
 int execl(char *path, char *argv[0], char *argv[1],..., (char *) 0);
 	- mantem o pid, o ppid, os parâmetros do escalonador, o real uid, os descritores de arquivos abertos
@@ -44,22 +80,20 @@ ESCALONAMENTO DE PROCESSOS
 - 'aging': impedir starvation de forma que processos que há muito esperam tem prioridade decrementada
 	- int nice(incr) = substitui fator base por incr
 
-// 	
-
 MOTIVOS DE BLOQUEIO:
 •  P:  esperando que a página corrente seja carregada
 •  D:  esperando I/O
 •  T:  parado por um utilitário de debug
 •  S:  dormindo por poucos segundos
 •  I:  dormindo por muitos segundos
-	
+
 COMUNICACAO
 •  Pipes;
 •  Filas de mensagens;
 •  Memória compartilhada;
 •  Semáforos;
 •  Sinais
-	
+
 'Pipes'
 - buffers protegidos em memória, acessados segundo a política FIFO
 - Cria pipe, cria processo(fork duplica os descritores de arquivos), 
@@ -350,7 +384,7 @@ concorrência possível.
 							tem_cabelo_cortado()
 						else
 							V(&mutex)
-							
+
 //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\//
 threads.pdf
 
@@ -381,7 +415,65 @@ processos quanto à custo de troca de contexto
 			- compartilham vars globais, descritores abertos
 			- necessita sincronização
 			
-			'Modelo dispecher/worker' - slide 9
+Modelo de execução de threads
+- como threads se organizam para resolver problema
+- depende do problema
+
+Em servidores
+- Threads dinamicas: uma thread criada para tratar cada requisição
+- Threads estáticas: numero de threads é fixo
+	'Dispatcher/worker', 'team' e 'pipeline'
+
+
+'A seguir: Uma thread trata uma requisição'
+'Dispatcher/worker'
+thread dispatcher recebe todas as requisições
+escolhe uma thread worker e a acorda para tratar a requisição
+a thread worker executa a solicitação e quando termina sinaliza o dispatcher
+
+#consumo rápido de mensagens 
+#boa distribuição das requisições
+#flexibilidade: pode-se facilmente mudar o numero de threads
+#IMAGEM
+
+'Team'
+cada thread inteiramente autônoma
+todas as threads acessam a caixa postal diretamente
+obtem requisições e as executam
+
+#consumo rápido de mensagens
+#boa distribuição das requisições
+#flexibilidade: pode-se facilmente mudar o numero de threads
+#IMAGEM
+
+'Pipeline'
+cada thread tem uma tarefa específica
+dados de entrada de uma thread produzidos pela thread anterior
+
+#consumo rápido de mensagens
+#aplicações produtor consumidor
+#menos flexível
+#IMAGEM
+
+'Modelos': processos tradicionais, processos+threads, máquina de estados finitos
+'Processos tradicionais'
+	Não há concorrência no interior do processo
+	Existem chamadas de sistema bloqueadas
+	#programados de maneira simples 
+	#não permitem grande concorrência
+
+'Processos+threads'
+	Há concorrência no interior do processo
+	Existem chamadas de sistema bloqueadas
+	#facilidade de programação
+	#permite concorrência 
+
+'Máquina de estados finitos'
+	São guardados os estados parciais de execução de solicitações
+	Não há chamadas de sistema bloqueadas
+	#programação completa
+	#permitem concorrência no tratamento de requisições
+
+
 							
-							
-							
+	
