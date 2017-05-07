@@ -4,6 +4,11 @@
 # L1 - sensor 2
 # L2 - sensor 3  
 
+# REPRESENTACAO USADA
+# NUM LINHAS => NUM DE COMBINACOES POS BARRA
+# NUM COLUNAS => NUM DE COMBINACOES PRE BARRA
+# DESSA FORMA, O SOMATORIO EM CADA LINHA DEVE SER 1
+
 # Objetivo: achar a conjunta P_MTL0L1L2
 # P(M,T,L0,L1,L2) = P(T).P(L0|T).P(L1|T).P(L2|T).P(M|T)
 # P_MTL0L1L2 = P_T.P_L0dT.P_L1dT.P_L2dT.P_MdT
@@ -134,12 +139,120 @@ for m = 1:3
   endfor
 endfor
 
-# Perguntar 
+# Pergunta
 # Calculo de P(T|L0L1L2)
 # P(T|L0L1L2) =  P(TL0L1L2)/P(L0L1L2)
 # Em P(MTL0L1L2) / Emt P(MTL0L1L2)
-P_TL0L1L2 = sum(P_MTL0L1L2, 1);
-P_L0L1L2 =  sum(P_MTL0L1L2, 2);
+# ~ Em P(MTL0L1L2)
 
-P_TdL0L1L2 = P_TL0L1L2 ./ P_L0L1L2;
+# motor ir esquerda, reto, direita
+# [P_M] = 3 = [-1,0,1]
+
+# angulos da luz
+# [P_T] = 8 = [-135,-90, -45, 0, 45, 90, 135, 180]
+
+# sensor não viu, acha que viu, viu
+# [P_L0] = 3 = [0,1,2]; = FRENTE DO ROBO
+# [P_L1] = 3 = [0,1,2]; = DIREITA DO ROBO
+# [P_L2] = 3 = [0,1,2]; = ESQUERDA DO ROBO
+
+# se assumi valores 0 ou 1, base 2
+# numero de algarismos, expoente
+# se assumi valores 0,1 ou 2, base 3
+# numero de algarismos , expoente
+
+# combinacoes possiveis de L0L1L2 -> 3^3 = 27 valores
+# 000 100 200
+# 001 101 201
+# 002 102 202
+# 010 110 201
+# 011 111 211
+# 012 112 212
+# 020 120 220
+# 021 121 221
+# 022 122 222
+
+# P(T=-135|L0=0,L1=0,L2=0) = P(M=-1,T=-135,L0=0,L1=0,L2=0) + P(M=0,T=-135,L0=0,L1=0,L2=0) + P(M=1,T=-135,L0=0,L1=0,L2=0)
+# P(T=- 90|L0=0,L1=0,L2=0) = ...
+# P(T=- 45|L0=0,L1=0,L2=0) = 
+# P(T=   0|L0=0,L1=0,L2=0) = 
+# P(T=  45|L0=0,L1=0,L2=0) = 
+# P(T=  90|L0=0,L1=0,L2=0) = 
+# P(T= 135|L0=0,L1=0,L2=0) = 
+# P(T= 180|L0=0,L1=0,L2=0) = 
+# ...
+# P(T=-135|L0=2,L1=2,L2=2) = P(M=-1,T=-135,L0=2,L1=2,L2=2) + P(M=0,T=-135,L0=2,L1=2,L2=2) + P(M=1,T=-135,L0=2,L1=2,L2=2)
+# P(T=- 90|L0=2,L1=2,L2=2) = 
+# P(T=- 45|L0=2,L1=2,L2=2) = 
+# P(T=   0|L0=2,L1=2,L2=2) = 
+# P(T=  45|L0=2,L1=2,L2=2) = 
+# P(T=  90|L0=2,L1=2,L2=2) = 
+# P(T= 135|L0=2,L1=2,L2=2) = 
+# P(T= 180|L0=2,L1=2,L2=2) =
+
+# Representacao usada em P_TdL0L1L2_r1
+# num linhas = num de combinacoes pos barra = 27 linhas
+# num colunas = num de combinacoes pre barra = 8 colunas
+
+P_TdL0L1L2_r1 = zeros(27,8);
+P_TdL0L1L2_aux = zeros(3,3,3,8);
+P_TdL0L1L2_r2 = zeros(3,3,3,8);
+line = 1;
+
+for l0 = 1:3
+  for l1 = 1:3
+    for l2 = 1:3
+      for t = 1:8
+        for m = 1:3
+          P_TdL0L1L2_r1(line,t) += P_MTL0L1L2(m,t,l0,l1,l2);
+          P_TdL0L1L2_aux(l0,l1,l2,t) += P_MTL0L1L2(m,t,l0,l1,l2);
+        endfor
+      endfor
+      line++;
+    endfor
+  endfor
+endfor
+
+for line = 1:27
+  normalization = sum(P_TdL0L1L2_r1(line,:));
+  for col = 1:8
+    P_TdL0L1L2_r1(line,col) /= normalization;
+  endfor
+endfor
+  
+# sum(P_TdL0L1L2, 2)
+
+for l0 = 1:3
+  for l1 = 1:3
+    for l2 = 1:3
+      for t = 1:8
+          normalization = sum(P_TdL0L1L2_aux(l0,l1,l2,:));
+          P_TdL0L1L2_r2(l0,l1,l2,t) = P_TdL0L1L2_aux(l0,l1,l2,t)/normalization;
+      endfor
+    endfor
+  endfor
+endfor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
