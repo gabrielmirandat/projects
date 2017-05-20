@@ -12,7 +12,7 @@ PKGCONFIG += dlib-1 opencv
 
 TARGET = dlib
 
-SOURCES +=  dlib.cc
+SOURCES +=  dlib_total.cc
 
 LIBS += -lpthread -lX11 -lblas -llapack -O3 -mavx
 		   		   
