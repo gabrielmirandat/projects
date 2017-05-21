@@ -100,6 +100,7 @@ P_XAdm = ones(1, 100);
 P_XAdmz = ones(1, 100); 
 
 bar(P_XP, "hist");
+input("click here and press enter!");
 pause();       
 
 for it = 1:iterations
@@ -114,8 +115,8 @@ for it = 1:iterations
     endfor
     
     P_XP(1,:) = P_XAdmz(1,:)/sum(P_XAdmz(1,:));
-    sum(P_XP)
     
     bar(P_XP, "hist");
+    input("click here and press enter!");
     pause();
 endfor
