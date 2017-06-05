@@ -64,5 +64,12 @@ Configure a core task and use a plugin
 	./gradlew clean
 
 Add a "Hello, World!" task
+	task hello {
+	    doLast {
+	        println 'Hello, World!'
+	    }
+	}
+
+	./gradlew hello
 
 
