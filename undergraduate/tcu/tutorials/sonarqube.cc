@@ -24,3 +24,16 @@ sonar.sources=.
 #sonar.sourceEncoding=UTF-8
 
 '$ sonar-scanner'
+
+Jenkins in raw configuration 
+            steps {
+                sh '/etc/sonarqube-5.6.6/bin/linux-x86-64/sonar.sh console'
+            }
+            steps {
+                sh '/etc/sonar-scanner-3.0.3.778-linux/bin/sonar-scanner'
+            }
+
+Jenkins as plugin
+            steps {
+                sh './gradlew sonarqube'
+            }           
