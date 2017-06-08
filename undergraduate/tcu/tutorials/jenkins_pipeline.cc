@@ -29,4 +29,3 @@ stage describes a stage of this Pipeline.
 steps describes the steps to be run in this stage
 sh executes the given shell command
 junit is a Pipeline step provided by the JUnit plugin for aggregating test reports.
-
