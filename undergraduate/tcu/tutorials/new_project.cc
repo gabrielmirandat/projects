@@ -12,11 +12,11 @@ Gitlab:
       spring-boot: 
         Entra em https://start.spring.io/
         Escolhe gradle project
-Escolhe linguagem: groovy/java/kotlin
-Escolhe versão do spring boot (última release)
+        Escolhe linguagem: groovy/java/kotlin
+        Escolhe versão do spring boot (última release)
         Coloca group, artifact, e dependências*
-Clica em Generate Project
-Faz unzip do download no diretório do git
+        Clica em Generate Project
+        Faz unzip do download no diretório do git
 
   Git local:
     git remote add origin <url-do-REPOSITORIO-git-criado-em-new-project>
