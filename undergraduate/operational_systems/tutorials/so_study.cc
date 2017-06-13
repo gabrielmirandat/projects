@@ -126,6 +126,23 @@ Gerente de Memória
                            Cada segmento tem uma entrada na tabela de segmentos
                            A tabela de segmentos aponta para a tabela de páginas do segmento em questão
     
+Gerente de arquivos
+  Para simplificar o tratamento dos vários dispositivos, o SO fornece uma visão lógica e uniforme 
+    do sistema de armazenamento, o arquivo.
+  Arquivo é uma entidade lógica mapeada em dispositivos físicos.
+  Sistema de arquivos abstrai e gerencia arquivos
+  
+  Estruturação interna do arquivo
+      Sequência de bytes: sem estrutura. SO sem noção dos campos.
+                          acesso não otimizado, mas livre (MS/DOS e Unix)
+      Sequência de registros: com registros de tamanho fixo
+                              leitura e escrita retornam um registro
+                              acesso otimizado por registros, perda de flexibilidade (CP/M)
+      Árvore de registros: arquivo é árvore de registros de tamanho variável
+                           árvore ordenada pelo campo chave do registro
+                           acesso randômico otimizado, complexo,  sistema grande porte (MUMPS)
+                             
+  Tipos de arquivos suportados no UNIX e DOS
   
 
 
