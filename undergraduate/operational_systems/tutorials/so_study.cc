@@ -143,6 +143,109 @@ Gerente de arquivos
                            acesso randômico otimizado, complexo,  sistema grande porte (MUMPS)
                              
   Tipos de arquivos suportados no UNIX e DOS
+      Arquivos regulares: contém dados do usuário
+      Arquivos diretório: utilizados na manutenção do sistema de arquivos
+      Arquivos especiais: ligados a dispositivos de E/S
+      
+  Métodos de acesso ao arquivo: como os dados serão recuperados pelo usuário
+      Acesso sequencial: fita magnética
+      Acesso direto (aleatório): disco
+      
+  Atributos contidos na TABELA DE ARQUIVOS
+      proteção: indica permissões de acesso ao arquivo
+      password: para acessar o arquivo
+      
+  Tabela de arquivos
+      Possui uma entrada para cada arquivo. Contem info referente ao arquivo
+      
+      CREATE: cria entrada para novo arquivo no diretório e na tabela de arquivos do diretorio em que se encontra.
+              com nome do criador, data de criação e permissões de acesso.
+
+      DELETE: libera espaço ocupado pelo arquivo, deleta entrada do diretório e deleta entrada na tabela de arquivos.
+
+      OPEN: cria mapeamento entre entrada na tabela de arquivos para a tabela de processos do processo que executou o open.
+            este passo é feito por meio da tabela de descritores de arquivos. Retorna um descritor de arquivo, que será 
+            utilizado em todas as operações subsequentes sobre o arquivo.
+
+      CLOSE: desfaz o mapeamento entre a entrada da tabela de arquivos referente ao arquivo da entrada da tabela de processos
+             do processo.
+
+      RENAME: simplesmente altera o nome do arquivo na tabela de arquivos.
+    
+  Arquivos mapeados em memória
+      Colocar arquivo no espaço de endereçamento do processo
+      MAP como OPEN - em vez de usar descritor de arquivos, retorna um ponteiro para o início do arquivo
+      Leituras e escritas são feitas através de acessos à memória
+      
+  Organização dos arquivos
+      Diretório único: -
+      Árvore arbitrária de diretórios: -
+      Um diretório por usuário: -
+        
+  Armazenamento de arquivos
+      Alocação contígua: reserva espaço contíguo em disco
+      Alocação com lista encadeada e índice
+      i-Nodos: cada arquivo possui uma pequena tabela chamada i-nodos
+                 a tabela i-nodos de cada arquivo possui atributos e 
+                 endereços dos blocos físicos alocados ao arquivos
+               Os primeiros endereços de disco são armazenados no próprio i-nodo, 
+               que é transferido do disco para a memória no momento da abertura do arquivo.
+      UNIX organiza diretórios em árvore por i-nodos
+      
+  Gerência de espaço em disco
+      Lista encadeada: guarda somente blocos livres
+      Mapa de bits
+      
+  Consistência do SA
+      Lê-se todos os i-nodos. Cada vez que um número de bloco for lido, seu contador de utilização é incrementado.
+      Lê-se a lista de blocos livres. Cada vez que um número de bloco for lido, seu contador de presença nos blocos lidos é incrementado.
+        
+      Inconstência 1 - Bloco perdido
+      BL = 0; BU = 0
+      Solução: Neste caso, o bloco é simplesmente adicionado à lista de blocos livres
+      
+      Inconsistência 2 - Duplicação do bloco livre
+      BL = 2; BU = 0
+      Solução: retira-se a duplicação da lista de blocos livres
+      
+      Inconstência 3 - Bloco duplicado
+      BL = 0; BU = 2
+      O sistema de arquivos fica consistente mas provavelmente houve corrupção da informação. O erro deve ser
+      apresentado na console
+      
+      Inconstência 4 - Bloco usado e livre
+      BL = 1; BU = 1
+      Solução: remove-se o bloco da lista de blocos livres
+      
+  Desempenho do SA
+      buffer cache: Área em memória que armazena temporariamente os blocos de disco mais utilizados
+      A gerência precisa prever o que fazer quando a área reservada estiver cheia
+      Da mesma forma que as páginas, devemos escolher um bloco para ser retirado da buffer cache
+      
+      Neste sistema:..
+        Retorno de sucesso em escrita indica que dado foi escrito na buffer cache, e não no disco
+        Blocos são divididos em blocos críticos e blocos de dados.
+        Os críticos são sempre escritos na buffer cache e no disco
+        Um daemon periodicamente escreve os dados da buffer cache em disco
+        
+        
+Clocks
+  Clocks so acessados por um driver de dispositivo
+  data: DDMMYY = nro de insterrupcoes desde 1/1/70
+        a cada nova interrupção este valor é incrementado
+        O time-of-day é geralmente armazenado em um registrador especial alimentado por uma bateria.
+    
+  Funções do driver do clock
+    •  Manter o tempo real
+    •  Implementar o quantum do escalonador
+    •  Contabilizar o uso do processador
+    •  Gerenciar a chamada ALARM
+    •  Fornecer watch-dogs
+    •  Monitorar o sistema
+
+  Quantum
+  - A cada transição ready-running, o escalonador inicializa um contador com o valor do quantum.
+      
   
 
 
