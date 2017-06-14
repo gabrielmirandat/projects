@@ -14,7 +14,10 @@ pipeline {
         }
         stage('Launch Sonar'){
             steps {
-                sh './gradlew sonarqube'
+                sh '/etc/sonarqube-5.6.6/bin/linux-x86-64/sonar.sh console'
+            }
+            steps {
+                sh '/etc/sonar-scanner-3.0.3.778-linux/bin/sonar-scanner'
             }
         }
     }
