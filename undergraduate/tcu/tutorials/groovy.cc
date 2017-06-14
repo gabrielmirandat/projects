@@ -67,3 +67,39 @@ ou
 //     }
 // }, 0)
 6.3. Creating Instances of Non-Static Inner Classes
+// public class Y {
+//     public class X {}
+//     public X foo() {
+//         return new X()
+//     }
+//     public static X createX(Y y) {
+//         return new X(y)
+//     }
+// }
+// Groovy doesn’t support the y.new X() syntax. Instead, you have to write new X(y)
+
+7. Lambdas
+// Runnable run = { println 'run' }
+// list.each { println it } // or list.each(this.&println)
+
+8. GStrings
+Com "", é GString, diferente de '' String
+
+9. String and Character literals
+// assert 'c'.getClass()==String
+// assert "c${1}".getClass() in GString
+// assert ((char) "c").class==Character
+// assert ("c" as char).class==Character
+
+10. Primitives and wrappers
+// Because Groovy uses Objects for everything, it autowraps references to primitives.
+// int i
+// m(i)
+// void m(Integer i) {        
+//   println "in m(Integer)"
+// }
+
+11. Behaviour of ==
+// In Groovy == translates to a.compareTo(b)==0, 
+// if they are Comparable, and a.equals(b) otherwise. 
+// To check for identity, there is is. E.g. a.is(b).
