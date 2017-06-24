@@ -45,6 +45,20 @@ O Direito como integridade e a teoria da única resposta correta de Ronald Dwork
     - integridade é uma virtude que exige compromisso com outros ideais
     - integridade está relacionada à ideia de comunidade de princípios
     - O direito como integridade seria uma via alternativa entre a corrente convencionalista e a pragmática
+    - o convencionalismo consiste em dizer que "o direito é o direito"
+    - Não é o que os juízes pensam ser, mas aquilo que realmente é
+    - Direito é apenas visto como a mera aceitação de decisões das autoridades legislativas
+    - O pragmatismo ou realismo possui como cerne as decisões preferidas pelos juízes
+    - sendo o direito apenas o que os juízes dizem que é
+    - As normas prescritas pelo legislador seriam apenas profecias sobre futuras decisões judiciais
+    - Direito como integridade é uma crítica a ambos
+    - Juízes devem levar em consideração a história dos outros juizes e adicionar á história a justiça de sua época
+    - Seguir a história dos personagens e não criar novas histórias com os mesmo personagens
+    - Os princípios jurídicos ocupam um espaço intermediário entre as regras jurídicas e os princípios morais
+    - Segundo o direito como integridade, as proposições jurídicas são verdadeiras se derivam dos princípios de justiça,
+      equidade e devido processo legal que oferecem a melhor interpretação construtiva da prática jurídica da comunidade
+      
+    pag 11
     
     
 
