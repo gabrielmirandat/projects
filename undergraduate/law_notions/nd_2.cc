@@ -57,11 +57,54 @@ O Direito como integridade e a teoria da única resposta correta de Ronald Dwork
     - Os princípios jurídicos ocupam um espaço intermediário entre as regras jurídicas e os princípios morais
     - Segundo o direito como integridade, as proposições jurídicas são verdadeiras se derivam dos princípios de justiça,
       equidade e devido processo legal que oferecem a melhor interpretação construtiva da prática jurídica da comunidade
-      
-    pag 11
-    
-    
+    - teoria de interpretação com ordem moral
+    - é fática e valorativa
+    - não é permitido discricionaridade do interprete
+    - o direito nunca pode ser incompleto
+    - uma visão holística dos princípios jurídicos permitiria ao juiz encontrar a única resposta correta
+    - Em outras palavras, a própria cientificidade da tese da única resposta correta é colocada em dúvida, 
+      já que não observaria o necessário racionalismo crítico de Karl Popper e seu critério da refutabilidade 
+      ou testabilidade.
 
+Jurisprudência dos valores
+  Evolução teórica da jurisprudência dos interesses
+    - Procura auxiliar o intérprete a identificar os valores subjacentes às normas jurídicas em conflito
+    - A Constituição, portanto, passa a ser vista como uma ordem concreta de valores
+    - transformação de direitos fundamentais em cláusulas pétreas
+    - Constituição como ordem concreta e objetiva de valores
+    - Este sistema de valores, que se centra na dignidade da pessoa humana, em livre desenvolvimento dentro da 
+      comunidade social, deve ser considerado como uma decisão constitucional fundamental
+    - “ponderação de bens ou valores” como forma de solução de lacunas do direito em virtude da “tensão entre normas”
+    
+Tipos de interpretação
+  a) Quanto ao sujeito ou agente
+    - Autêntica: É a interpretação realizada pelo próprio órgão que cria a lei (poder Legislativo)
+    - Jurisprudencial: É aquela realizada pelos juízes e tribunais (órgãos do Poder Judiciário)
+    - Doutrinária: É a interpretação realizada por estudiosos do tema, que demanda pesquisa científica.
+  b) Quanto à espécie
+    - Gramatical ou literal: exame do significado e alcance de cada uma das palavras do preceito legal, ou
+      seja, o próprio significado das palavras. Insuficiente para conduzir o intérprete, ambígua
+    - Teleológica ou finalística: Deve-se levar em conta a finalidade da norma jurídica
+    - Histórica: relativa à pesquisa do processo evolutivo da lei. Indaga as condições de meio e momento 
+      da elaboração do texto legal
+    - Sistemática: A partir da análise sistemática de todo o ordenamento jurídico (Constituição e outras normas).
+  c) Quanto à extensão
+    - Declarativa: chega ao mesmo resultado da lei, ou seja, aquilo que está escrito na norma.
+    - Progressiva: observando que a expressão contida na norma sofreu alteração no correr dos anos, procura 
+      adaptar-lhe o sentido ao conceito atual.
+    - Extensiva: amplia o sentido da norma, pois, a norma disse menos do que ela queria.
+    - Restritiva: restringe o sentido e alcance do texto legal.
+    - Analógica: generalizar casos pois é impossível citar todas as situações na lei
+
+Da integração do direito
+  o Direito como um ordenamento. E se é um “ordenamento” (“ordem”), deve ser coerente, uno e completo. 
+  Pode existir lacunas na lei, mas não no Direito.
+    - Os costumes, a jurisprudência e a doutrina são formas de manifestação do Direito
+    - A analogia é um processo lógico de preenchimento de lacunas normativas.
+    - a analogia vale para investigar por procedimentos aproximativos o desconhecido, mas não para negar o evidente.
+    - não é cabível, por exemplo, para definir infrações penais, estabelecer penas ou fatores de agravamento destas
+    
+Exemplo de pedido de aplicação (indevida) da analogia na seara penal    
 
 
 
