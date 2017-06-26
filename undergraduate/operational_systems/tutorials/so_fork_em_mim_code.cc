@@ -125,9 +125,13 @@ int semId = semget(semaphore_key, 1, 0700);
 -- realiza operacao em semaforo
 int semop(int semid, struct sembuf *sops, int nsops);
 result = semop(lock, &operation, 1);
+// lock - id do sem
+// operation - estrutura da operaçao
+// dois tipos, acquireLock(lock) seta operation.sem_op -1 e releaseLock(lock) seta operation.sem_op 1
 -- remove semaforo
 int semctl(int shmid, int semnum, int IPC_RMID, union semun{ val; struct semid_ds *buf; ushort *array;} arg; shmid_ds *buf);
 else if (semctl(semId, 0, SETVAL, semVal) == -1)
+// SETVAL - seta o valor de um sem individual com o set ao membro val da union
 if (semctl(lock, 0, IPC_RMID) == -1)	
 ```
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- - -- -- -- - -- -- -- - - ---- - -- -- - -- -- - -- -- - -- - -- -- - -
