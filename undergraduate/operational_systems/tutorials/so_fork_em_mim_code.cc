@@ -54,6 +54,28 @@ execution_manager:// um nodo da arvore
 int kill (pid_t pid, int sig);
 kill(manager->childProcesses[i], SIGKILL);
 // manager->childProcesses[i] - ids de todos os processos filhos do gerenciador caso exista mais de um
+-- waitpid
+pid_t waitpid(pid_t pid, int *stat_loc, int options);
+pid = waitpid(-1, &status, blocking ? 0 : WNOHANG);
+// pid - pid do filho que passou
+// -1  - espera qualquer filho
+// status - status de execução desse filho
+// 0 - bloqueia ate status pronto
+// WNOHANG - no bloqueia
+// se -1 e 0 vira um wait normal
+-- wait comum
+pid_t wait(int *wstatus);
+while (wait(NULL) == -1 && errno == EINTR);
+// NULL - ignora status do filho
+// retorna pid do filho, -1 se erro
+// EINTR - chegou sinal
+-- execl
+int execl(const char *path, const char *arg, ...);
+if (execl(job->programPath, getFilenameFromPath(job->programPath), (char*)NULL) == -1)
+// job->programPath - caminho do executavel
+// getFilenameFromPath(job->programPath) - primeiro argumento é o proprio nome
+// (char*)NULL) - indica fim do parametros
+// so retorna se houve erro
 ```
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- - -- -- -- - -- -- -- - - ---- - -- -- - -- -- - -- -- - -- - -- -- - -
 fat_tree:// estrutura da fat tree
@@ -128,11 +150,12 @@ result = semop(lock, &operation, 1);
 // lock - id do sem
 // operation - estrutura da operaçao
 // dois tipos, acquireLock(lock) seta operation.sem_op -1 e releaseLock(lock) seta operation.sem_op 1
--- remove semaforo
+-- configura semaforo
 int semctl(int shmid, int semnum, int IPC_RMID, union semun{ val; struct semid_ds *buf; ushort *array;} arg; shmid_ds *buf);
 else if (semctl(semId, 0, SETVAL, semVal) == -1)
-// SETVAL - seta o valor de um sem individual com o set ao membro val da union
+// SETVAL - seta o valor do semaforo pra 1
 if (semctl(lock, 0, IPC_RMID) == -1)	
+// IPC_RMID - remove semaforo
 ```
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- - -- -- -- - -- -- -- - - ---- - -- -- - -- -- - -- -- - -- - -- -- - -
 priority_queue:// jobs a serem mandados executar de acordo com prioridade/ jobs nunca executados
@@ -162,6 +185,12 @@ if (shmdt(jrp) == -1)
 int shmctl(int shmid, IPC_RMID, struct shmid_ds *buf);
 if (shmctl(shmId, IPC_RMID, NULL) == -1)
 // IPC_RMID - para remover segmento
+-- waitpid
+pid_t waitpid(pid_t pid, int *stat_loc, int options);
+if (waitpid(-1, NULL, WNOHANG) == -1 && errno != EINTR)
+// retorno -1 indica que foi interrompido por sinal
+// WNOHANG - passa sem esperar status pronto
+// errno != EINTR - não foi interrupção
 ```
 -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- - -- -- -- - -- -- -- - - ---- - -- -- - -- -- - -- -- - -- - -- -- - -
 utils:// funcoes utilitarias
