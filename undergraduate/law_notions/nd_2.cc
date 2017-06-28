@@ -104,8 +104,26 @@ Da integração do direito
     - a analogia vale para investigar por procedimentos aproximativos o desconhecido, mas não para negar o evidente.
     - não é cabível, por exemplo, para definir infrações penais, estabelecer penas ou fatores de agravamento destas
     
-Exemplo de pedido de aplicação (indevida) da analogia na seara penal    
+Poder judiciário
+    Poder independente
+    Exerce último controle da atividade estatal, seja da administração ou do próprio judiciário
+    Resolver conflitos, buscando paz e justiça social
+    Funções de legislar e administrar
+    Estrutura:
+       a) Supremo Tribunal Federal (STF);
+       b) Conselho Nacional de Justiça (CNJ);
+       c) Superior Tribunal de Justiça (STJ);
+       d) Tribunais Regionais Federais e Juízes Federais;
+       e) Tribunais e Juízes do Trabalho;
+       f) Tribunais e Juízes Eleitorais;
+       g) Tribunais e Juízes Militares; e
+       h) Tribunais e Juízes dos Estados e do Distrito Federal e Território
 
+       Os Tribunais Superiores têm jurisdição em todo o território nacional.
+       CNJ sem função jurisdicional, só administrativa
+       CNJ é órgão interno de controle administrativo, financeiro e disciplinar da magistratura
+       
+    
 
 
 
