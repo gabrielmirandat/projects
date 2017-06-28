@@ -119,10 +119,33 @@ Poder judiciário
        g) Tribunais e Juízes Militares; e
        h) Tribunais e Juízes dos Estados e do Distrito Federal e Território
 
-       Os Tribunais Superiores têm jurisdição em todo o território nacional.
-       CNJ sem função jurisdicional, só administrativa
-       CNJ é órgão interno de controle administrativo, financeiro e disciplinar da magistratura
+    Os Tribunais Superiores têm jurisdição em todo o território nacional.
+    CNJ sem função jurisdicional, só administrativa
+    CNJ é órgão interno de controle administrativo, financeiro e disciplinar da magistratura
        
+    Órgãos de superposição - STF e STJ
+        Decisões se sobrepoem aos órgãos inferiores
+        STJ se sobrepõem àquelas da Justiça Federal comum, da Estadual e daquela do Distrito Federal e Territórios
+        STF se sobrepõem a todas as Justiças (comuns e especiais) e Tribunais”
+        STJ possui a finalidade de unificar a interpretação de normas federais, recebendo recursos 
+        relativos às causas federais e estaduais,
+        STF tem a função de guardar a Constituição conferindo a última e definitiva interpretação 
+        das normas constitucionais.
+           
+     Justiça comum
+         a) justiça estadual
+         b) justiça federal
+         
+         nas causas em que a União, entidade autárquica ou empresa
+pública federal forem interessadas na condição de autoras, rés, assistentes
+ou oponentes, exceto as de falência, as de acidente de trabalho e as
+sujeitas à Justiça Eleitoral e à Justiça do Trabalho, a competência para
+processamento e julgamento é da Justiça Federal.
+  
+         
+         
+         
+           
     
 
 
