@@ -256,9 +256,89 @@ Poder judiciário
             
         Superior Tribunal de Justiça (STJ)  
               Composição:
+                  no mínimo, 33 Ministros
+                  nomeados pelo Presidente da República
+                  aprovada a escolha pela maioria absoluta do Senado Federal
+                  brasileiros com mais de 35 anos e menos de 65 anos de idade
+                  notável saber jurídico e reputação ilibada
+                  um terço de Desembargadores dos Tribunais Regionais Federais
+                  um terço de Desembargadores dos Tribunais de Justiça Estaduais
+                  um terço divididos entre advogados e membros do Ministério Público
+                  lista tríplice será elaborada pelo próprio STJ
               
               Competência:
-             
+                  garantir a uniformização da interpretação do direito federal no país
+                  processar e julgar nos crimes comuns, os Governadores dos Estados e do Distrito Federal
+                  os desembargadores dos Tribunais de Justiça dos Estados e do Distrito Federal
+                  membros dos Tribunais de Contas dos Estados e do Distrito Federal
+                  dos Tribunais Regionais Federais, dos Tribunais Regionais Eleitorais e do Trabalho
+                  membros dos Conselhos ou Tribunais de Contas dos Municípios
+                  Ministério Público da União que oficiem perante tribunais
+                  mandados de segurança e os habeas data contra ato de Ministro de Estado, dos Comandantes 
+                  da Marinha, do Exército e da Aeronáutica ou do próprio Tribunal
+                  
+        
+        Justiça do Trabalho
+            Composição:
+                TST – Tribunal Superior do Trabalho
+                    + Escola Nacional de Formação e Aperfeiçoamento do Trabalho e o Conselho Superior da Justiça do Trabalho
+                TRT – Tribunais Regionais do Trabalho
+                juízes do trabalho
+                
+                27 Ministros
+                mais de 35 e menos de 65 anos de idade
+                nomeados pelo Presidente da República após aprovação pela maioria absoluta do Senado Federal
+                um quinto dentre advogados com mais de dez anos de efetiva atividade profissional 
+                    e membros do Ministério Público do Trabalho com mais de dez anos de efetivo exercício
+                demais serão escolhidos dentre juízes dos Tribunais Regionais do Trabalho
+                TRT’s compõem-se de sete juízes nomeados pelo Presidente da República
+                
+        Justiça Eleitoral
+            Composição:
+                TSE – Tribunal Superior Eleitoral
+                TRE’s – Tribunais Regionais Eleitorais
+                Juízes eleitorais
+                Juntas eleitorais
+                
+                sete integrantes
+                Ministros do TSE são escolhidos mediante eleição, pelo voto secreto
+                três Ministros dentre os membros do STF
+                dois Ministros dentre os integrantes do STJ
+                dois Ministros por nomeação do Presidente da República
+                seis advogados de notável saber jurídico e idoneidade moral, indicados pelo STF
+                magistrados eleitorais, salvo motivo justificado, servirão por dois anos, no
+                    mínimo, e nunca por mais de dois biênios consecutivos
+                    
+        Justiça Militar
+            Composição:
+                Superior Tribunal Militar (STM)
+                Tribunais e Juízes militares
+                
+                15 Ministros,
+                nomeados pelo Presidente da República
+                depois de aprovadas as indicações pelo Senado Federal
+                três são oficiais-generais da Marinha
+                quatro oficiais-generais do Exército
+                três oficiais-generais da Aeronáutica
+                todos da ativa e do posto mais elevado da carreira, e cinco dentre civis
+                Os Ministros civis
+                maiores de 35 (trinta e cinco) anos
+                três deles advogados de notório saber jurídico e reputação ilibada
+                com mais de dez anos de efetiva atividade profissional
+                e dois
+                dentre juízes auditores e membros do Ministério Público da Justiça Militar
+                À Justiça Militar compete processar e julgar os crimes militares definidos em lei
+                
+        Conselho Nacional de Justiça (CNJ)
+            Composição:
+                15 membros com mais de 35 anos e menos de 66 anos de idade,
+                mandato de dois anos
+                efetuar o controle da atuação administrativa e financeira do Poder Judiciário e do 
+                      cumprimento dos deveres funcionais dos juízes.
+                não é dotado de qualquer competência jurisdicional, mas apenas administrativa
+                STF declarou válida a Resolução 7 do CNJ, que proíbe o nepotismo no serviço público
+        
+        
             
             
           
