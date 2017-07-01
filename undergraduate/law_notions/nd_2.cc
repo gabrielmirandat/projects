@@ -104,8 +104,251 @@ Da integração do direito
     - a analogia vale para investigar por procedimentos aproximativos o desconhecido, mas não para negar o evidente.
     - não é cabível, por exemplo, para definir infrações penais, estabelecer penas ou fatores de agravamento destas
     
-Exemplo de pedido de aplicação (indevida) da analogia na seara penal    
+Poder judiciário
+    Poder independente
+    Exerce último controle da atividade estatal, seja da administração ou do próprio judiciário
+    Resolver conflitos, buscando paz e justiça social
+    Funções de legislar e administrar
+    Estrutura:
+       a) Supremo Tribunal Federal (STF);
+       b) Conselho Nacional de Justiça (CNJ);
+       c) Superior Tribunal de Justiça (STJ);
+       d) Tribunais Regionais Federais e Juízes Federais;
+       e) Tribunais e Juízes do Trabalho;
+       f) Tribunais e Juízes Eleitorais;
+       g) Tribunais e Juízes Militares; e
+       h) Tribunais e Juízes dos Estados e do Distrito Federal e Território
 
+    Os Tribunais Superiores têm jurisdição em todo o território nacional.
+    CNJ sem função jurisdicional, só administrativa
+    CNJ é órgão interno de controle administrativo, financeiro e disciplinar da magistratura
+       
+    Órgãos de superposição - STF e STJ
+        Decisões se sobrepoem aos órgãos inferiores
+        STJ se sobrepõem àquelas da Justiça Federal comum, da Estadual e daquela do Distrito Federal e Territórios
+        STF se sobrepõem a todas as Justiças (comuns e especiais) e Tribunais
+        STJ possui a finalidade de unificar a interpretação de normas federais, recebendo recursos 
+        relativos às causas federais e estaduais,
+        STF tem a função de guardar a Constituição conferindo a última e definitiva interpretação 
+        das normas constitucionais.
+           
+     Justiça comum
+         a) justiça estadual
+         b) justiça federal
+         
+         a) nas causas em que a União, entidade autárquica ou empresa
+        pública federal forem interessadas na condição de autoras, rés, assistentes
+        ou oponentes, exceto as de falência, as de acidente de trabalho e as
+        sujeitas à Justiça Eleitoral e à Justiça do Trabalho, a competência para
+        processamento e julgamento é da Justiça Federal.
+            - análise de causas
+            fundadas em tratado ou contrato da União com Estado Estrangeiro ou
+            organismo internacional
+            - causas envolvendo disputas sobre direitos indígenas; 
+            - de causas relativas à nacionalidade e naturalização; 
+            - de execução de sentenças estrangeiras devidamente homologadas e 
+            - de causas relativas a direitos humanos em que houver prévia procedência do incidente de
+            deslocamento de competência, instaurado perante o Superior Tribunal de Justiça
+
+        b) os “juízes” de paz, que são cidadãos eleitos pelo voto direto, universal e
+        secreto, com mandato de quatro anos e competência para, na forma da
+        lei, 
+            - celebrar casamentos, 
+            - apreciar e analisar processos de habilitação e
+            - exercer atribuições conciliatórias sem conteúdo jurisdicional. 
+        Trata-se de juiz leigo, não togado, podendo ser qualquer pessoa capaz. Não se faz mister
+        conhecimento jurídico ou escolaridade superior.
+              
+    Justiça especial
+        a) Justiça do Trabalho: juízes do trabalho (os juízes de direito
+        estaduais poderão atuar em causas trabalhistas, nos termos do art.
+        668 da CLT), Tribunais Regionais do Trabalho e Tribunal Superior do
+        Trabalho;
+
+        b) Justiça Militar: juízes militares, Tribunais Militares e Superior
+        Tribunal Militar
+        
+        c) Justiça Eleitoral: juntas eleitorais, juízes eleitorais, Tribunais
+        Regionais Eleitorais e Tribunal Superior Eleitoral.
+          
+    FUNÇÕES E ATRIBUIÇÕES DO PODER JUDICIÁRIO
+        Jurisdicional
+        Atípicas: Administrativo e legislativo
+        
+        Administrativo: conceder férias a magistrados e provimento dos cargos
+        Legislativa: leis de organização judiciária
+        
+    GARANTIAS DO PODER JUDICIÁRIO
+        a) garantias institucionais
+        b) garantias funcionais dos magistrados
+        
+        Institucionais
+          - autonomia orgânica, administrativa e financeira dos órgaos judiciários
+          - eleição dos órgãos diretivos dos tribunais de forma autonoma, sem intervenção de outros poderes
+          - regimento interno
+          - prover cargos de magistrados
+          - cargos necessários à administração da Justiça
+          - criação e extinção de cargos
+          - remuneração dos serviços auxiliares
+          - Organização do poder no Estatuto da Magistratura do STF
+          - Normas const:
+              a) Ingresso na carreira: inicial de juiz substituto, concurso público, participação na OAB em 
+              todas as fases, bacharel em direito, mínimo de 3 anos na atividade, ordem de classificação.
+              b) Promoção por antiguidade e merecimento: 3 a 5 vezes em lista de merecimento, dois anos de 
+              exercício, merecimento por produtividade e presteza e aproveitamento em cursos oficiais ou 
+              reconhecidos de aperfeiçoamento.
+              c) decisões judiciais e administrativas motivadas e proferidas em sessão pública
+              d) atividade jurisdicional deve ser ininterrupta, vedadas férias coletivas
+              e) autonomia financeira
+              
+        Garantias funcionais dos magistrados
+            a) vitaliciedade: somente perderá o cargo mediante sentença judicial transitada em julgado
+            b) inamovibilidade: garante que o juiz não seja removido do cargo ex officio.
+            c) irredutibilidade de subsidios: afastando qualquer ingerência legislativa com o escopo de
+            reduzir os subsídios pagos aos magistrados
+            
+        Limitações e vedações funcionais dos magistrados 
+            a) Exercer, ainda que em disponibilidade, outro cargo ou função, salvo uma de magistério.
+            b) Receber, a qualquer título ou pretexto, custas ou participação em processo
+            c) Dedicar-se à atividade político-partidária.
+            d) Receber, a qualquer título ou pretexto, auxílios ou contribuições de
+            pessoas físicas, entidades públicas ou privadas, ressalvadas as exceções previstas em lei.
+            e) Exercer a advocacia no juízo ou tribunal do qual se afastou, antes
+            de decorridos três anos do afastamento do cargo por aposentadoria ou exoneração.
+            f) O juiz titular residirá na respectiva comarca, salvo autorização do tribunal.  
+            g) O ato de remoção, disponibilidade e aposentadoria do magistrado,
+            por interesse público, fundar-se-á em decisão por voto da maioria
+            absoluta do respectivo tribunal ou do Conselho Nacional de Justiça,
+            assegurada a ampla defesa.
+              
+   ÓRGÃOS DO PODER JUDICIÁRIO: COMPOSIÇÃO E COMPETÊNCIA
+       Supremo Tribunal Federal (STF)
+          Composição:
+              O órgão máximo da estrutura judiciária brasileira,
+              11 ministros
+              nomeados pelo Presidente da República
+              depois de aprovada a escolha pela maioria absoluta do Senado Federal
+              cidadãos com mais de 35 e menos de 65anos de idade
+              de notável saber jurídico e reputação ilibada
+              Com a nomeação e posse, ocorre a imediata aquisição da vitaliciedade
+              além do Plenário, de duas turmas, integradas por cinco ministros cada.
+              O Presidente do STF não atua perante as turmas, mas apenas no Tribunal Pleno
+              As competências das turmas são idênticas, sendoos processos distribuídos 
+                  aleatoriamente para um ministro relator
+              devem estar presentes, no mínimo, oito ministros, sendo que a decisão sobre 
+                  a constitucionalidade ou não das leis necessita de uma maioria de seis votos
+          Competência:
+              complexo de atribuições é previsto taxativamente na Constituição
+              não comportando possibilidade de interpretação extensiva ou analógica
+              processar e julgar a ação direta de inconstitucionalidade de lei ou ato normativo
+                  federal ou estadual
+              Nas infrações penais comuns, o Presidente da República, o Vice-Presidente, membros 
+                  do Congresso Nacional, seus próprios Ministros e o Procurador-Geral da República
+              Nas infrações penais comuns e nos crimes de responsabilidade, os Ministros de Estado 
+                  e os Comandantes da Marinha, do Exército e da Aeronáutica
+              membros dos Tribunais Superiores, os do Tribunal de Contas da União e os chefes
+                  de missão diplomática de caráter permanente
+              O habeas corpus, sendo paciente qualquer das pessoas referidas nas alíneas anteriores
+              O litígio entre Estado estrangeiro ou organismo internacional e a União, o Estado, o 
+                  Distrito Federal ou o Território
+              As causas e os conflitos entre a União e os Estados, a União e o Distrito Federal
+              A extradição solicitada por Estado estrangeiro
+            
+        Superior Tribunal de Justiça (STJ)  
+              Composição:
+                  no mínimo, 33 Ministros
+                  nomeados pelo Presidente da República
+                  aprovada a escolha pela maioria absoluta do Senado Federal
+                  brasileiros com mais de 35 anos e menos de 65 anos de idade
+                  notável saber jurídico e reputação ilibada
+                  um terço de Desembargadores dos Tribunais Regionais Federais
+                  um terço de Desembargadores dos Tribunais de Justiça Estaduais
+                  um terço divididos entre advogados e membros do Ministério Público
+                  lista tríplice será elaborada pelo próprio STJ
+              
+              Competência:
+                  garantir a uniformização da interpretação do direito federal no país
+                  processar e julgar nos crimes comuns, os Governadores dos Estados e do Distrito Federal
+                  os desembargadores dos Tribunais de Justiça dos Estados e do Distrito Federal
+                  membros dos Tribunais de Contas dos Estados e do Distrito Federal
+                  dos Tribunais Regionais Federais, dos Tribunais Regionais Eleitorais e do Trabalho
+                  membros dos Conselhos ou Tribunais de Contas dos Municípios
+                  Ministério Público da União que oficiem perante tribunais
+                  mandados de segurança e os habeas data contra ato de Ministro de Estado, dos Comandantes 
+                  da Marinha, do Exército e da Aeronáutica ou do próprio Tribunal
+                  
+        
+        Justiça do Trabalho
+            Composição:
+                TST – Tribunal Superior do Trabalho
+                    + Escola Nacional de Formação e Aperfeiçoamento do Trabalho e o Conselho Superior da Justiça do Trabalho
+                TRT – Tribunais Regionais do Trabalho
+                juízes do trabalho
+                
+                27 Ministros
+                mais de 35 e menos de 65 anos de idade
+                nomeados pelo Presidente da República após aprovação pela maioria absoluta do Senado Federal
+                um quinto dentre advogados com mais de dez anos de efetiva atividade profissional 
+                    e membros do Ministério Público do Trabalho com mais de dez anos de efetivo exercício
+                demais serão escolhidos dentre juízes dos Tribunais Regionais do Trabalho
+                TRT’s compõem-se de sete juízes nomeados pelo Presidente da República
+                
+        Justiça Eleitoral
+            Composição:
+                TSE – Tribunal Superior Eleitoral
+                TRE’s – Tribunais Regionais Eleitorais
+                Juízes eleitorais
+                Juntas eleitorais
+                
+                sete integrantes
+                Ministros do TSE são escolhidos mediante eleição, pelo voto secreto
+                três Ministros dentre os membros do STF
+                dois Ministros dentre os integrantes do STJ
+                dois Ministros por nomeação do Presidente da República
+                seis advogados de notável saber jurídico e idoneidade moral, indicados pelo STF
+                magistrados eleitorais, salvo motivo justificado, servirão por dois anos, no
+                    mínimo, e nunca por mais de dois biênios consecutivos
+                    
+        Justiça Militar
+            Composição:
+                Superior Tribunal Militar (STM)
+                Tribunais e Juízes militares
+                
+                15 Ministros,
+                nomeados pelo Presidente da República
+                depois de aprovadas as indicações pelo Senado Federal
+                três são oficiais-generais da Marinha
+                quatro oficiais-generais do Exército
+                três oficiais-generais da Aeronáutica
+                todos da ativa e do posto mais elevado da carreira, e cinco dentre civis
+                Os Ministros civis
+                maiores de 35 (trinta e cinco) anos
+                três deles advogados de notório saber jurídico e reputação ilibada
+                com mais de dez anos de efetiva atividade profissional
+                e dois
+                dentre juízes auditores e membros do Ministério Público da Justiça Militar
+                À Justiça Militar compete processar e julgar os crimes militares definidos em lei
+                
+        Conselho Nacional de Justiça (CNJ)
+            Composição:
+                15 membros com mais de 35 anos e menos de 66 anos de idade,
+                mandato de dois anos
+                efetuar o controle da atuação administrativa e financeira do Poder Judiciário e do 
+                      cumprimento dos deveres funcionais dos juízes.
+                não é dotado de qualquer competência jurisdicional, mas apenas administrativa
+                STF declarou válida a Resolução 7 do CNJ, que proíbe o nepotismo no serviço público
+        
+        
+            
+            
+          
+        
+  
+         
+         
+         
+           
+    
 
 
 
