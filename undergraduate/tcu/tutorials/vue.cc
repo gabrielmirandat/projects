@@ -418,4 +418,32 @@ data: {
 // usar sempre com v-for
 ":key="item.id""
 
-## ARRAY CHANGE DETECTION
+Mutadores no array
+- push()
+- pop()
+- shift()
+- unshift()
+- splice()
+- sort()
+- reverse()
+
+Não-mutadores (sempre retornam um array novo)
+- filter()
+- concat()
+- slice()
+
+Prob1 - Alterar valor de array ou tamanho não é detectado pelo Vue
+vm.items[indexOfItem] = newValue
+vm.items.length = newLength
+
+Sol- necessário usar Vue.set(example1.items, indexOfItem, newValue)
+
+
+## TIPS
+
+- computed vs methods
+Computed é como um método, mas coloca atributos em cache
+Usado como getter de atributos
+Só é chamado quando o atributo muda
+Usado para remover complexidade de operações in-template
+
