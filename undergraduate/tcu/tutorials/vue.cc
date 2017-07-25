@@ -447,3 +447,22 @@ Usado como getter de atributos
 Só é chamado quando o atributo muda
 Usado para remover complexidade de operações in-template
 
+- chamada ao filho
+
+<seletor ref='seletorOpcoesQualificacao' @seletorSelecionado="atualizarTipoQualificacaoSelecionada($event)"
+         :opcoes-seletor="opcoesQualificacaoAutor" label-seletor="Qualificação do autor">
+
+- comunicação do pai para filho
+	- no pai
+		:opcoes-seletor="opcoesQualificacaoAutor"
+	- no filho
+		props: ['opcoesSeletor', 'labelSeletor'],
+		v-bind:items="opcoesSeletor"
+
+
+- comunicação do filho para pai
+	- no pai
+		@seletorSelecionado="atualizarTipoQualificacaoSelecionada($event)"
+	- no filho
+		@input="$emit('seletorSelecionado', $event)"
+
