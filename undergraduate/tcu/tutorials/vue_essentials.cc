@@ -2,6 +2,8 @@ https://jsfiddle.net/chrisvfritz/50wL7mdz/
 https://yesno.wtf/api
 camelCase or kebab-case
 
+@ESSENTIALS
+
 https://vuejs.org/v2/guide/installation.html
 ## INSTALLATION
 
