@@ -476,6 +476,42 @@ $event:
 
 ##FORM INPUT BINDINGS
 
+v-model:
+  is essentially syntax sugar for updating data on user input events
+
+##COMPONENTS 
+
+Relation between parent child
+  props down, events up
+  The parent passes data down to the child via props, and the child sends messages to the parent via events
+  Data can be passed down to child components using props.
+
+camelCase vs. kebab-case
+  Vue.component('child', {
+    // camelCase in JavaScript
+    props: ['myMessage'],
+    template: '<span>{{ myMessage }}</span>'
+  })
+
+  <!-- kebab-case in HTML -->
+  <child my-message="hello!"></child>
+
+Dynamic Props
+   <child v-bind:my-message="parentMsg"></child>
+   <child :my-message="parentMsg"></child>
+
+Non Parent-Child Communication
+  Sometimes two components may need to communicate with one-another but they are not parent/child to each other
+
+  var bus = new Vue()
+
+  // in component A's method
+  bus.$emit('id-selected', 1)
+
+  // in component B's created hook
+  bus.$on('id-selected', function (id) {
+    // ...
+  })
 
 
 
