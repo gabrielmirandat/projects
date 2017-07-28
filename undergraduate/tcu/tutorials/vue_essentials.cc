@@ -441,6 +441,44 @@ vm.items.length = newLength
 Sol- necessário usar Vue.set(example1.items, indexOfItem, newValue)
 
 
+
+##EVENT HANDLING
+
+v-on: 
+	directive to listen to DOM events and run some JavaScript when they’re triggered
+	modifiers:
+		.stop
+		.prevent
+		.capture
+		.self
+		.once
+	key modifiers:
+		.enter
+		.tab
+		.delete (captures both “Delete” and “Backspace” keys)
+		.esc
+		.space
+		.up
+		.down
+		.left
+		.right
+		.ctrl
+		.alt
+		.shift
+		.meta
+	mouse modifiers:
+		.left
+		.right
+		.middle
+$event: 
+	Sometimes we also need to access the original DOM event in an inline statement handler. 
+	You can pass it into a method using the special $event
+
+##FORM INPUT BINDINGS
+
+
+
+
 ## TIPS
 
 - computed vs methods
