@@ -1,0 +1,312 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\begin_preamble
+\usepackage{algpseudocode}
+\end_preamble
+\options journal
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding default
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\float_placement tbh
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Your Title"
+\pdf_author "Your Name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Corrida revezamento 4x100 metros
+\end_layout
+
+\begin_layout Author
+G.
+ M.
+ Miranda - 13/0111350
+\begin_inset Newline newline
+\end_inset
+
+Departamento de Ciência da Computação, 
+\begin_inset Newline newline
+\end_inset
+
+Universidade de Brasília 
+\begin_inset Newline newline
+\end_inset
+
+Email: gabrielmirandatt@gmail.com
+\end_layout
+
+\begin_layout Peer Review Title
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Don't add text here!
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+required if you use the document class option 
+\family sans
+peerreview
+\family default
+, must otherwise not be used
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introdução
+\end_layout
+
+\begin_layout Standard
+Este relatório refere-se ao trabalho computacional da disciplicana de Tópicos
+ Avançados em Computadores - Programação Concorrente - Turma E - 2016/2,
+ professor Eduardo Alchieri.
+ Foi desenvolvido um modelo do atletismo disputado nas olímpíadas, na modalidade
+ de revezamento 4 x 100 metros rasos.
+ Foram utilizados mecanismos presentes na biblioteca POSIX Pthreads, semáforos
+ para decisão do atleta atual em determinada pista e mutex para cruzamento
+ da linha de chegada, sendo que não é possível que dois ou mais atletas
+ cheguem na mesma colocação.
+ 
+\end_layout
+
+\begin_layout Section
+Formalização do Problema Proposto
+\end_layout
+
+\begin_layout Standard
+O revezamento 4 x 100 metros rasos é uma modalidade do atletismo disputada
+ mundialmente nos jogos olímpicos.
+ A prova é constituída por quatro percursos iguais de cem metros, percorridos
+ por quatro atletas alternadamente e em sequência, na mesma raia, completando
+ uma volta inteira na pista padrão de quatrocentos metros, carregando um
+ bastão que deve ser passado entre eles [1].
+ Existe ainda a regra de que o bastão deve ser passado ao próximo corredor
+ dentro de uma faixa de troca de vinte metros marcada no chão, dez metros
+ antes e dez metros depois da linha de partida de cada "perna" subsequente.
+ Esta regra não foi levada em consideração no modelo computacional por motivos
+ de simplificação, sendo que o bastão é passado sempre que o corredor atinge
+ seus cem metros.
+ A figura a seguir exemplifica como é distribuída a pista de atletismo nos
+ cem metros rasos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename atletismo.gif
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Pista usada no atletismo.
+ São 4 raias, com 4 atletas em cada.
+ São 16 atletas ao todo.
+ Em cinza a posição de saída de cada atleta, em azul as trocas de bastão,
+ sendo 3 ao todo.
+ Linha de chegada representada em branco.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Descrição do Algoritmo Desenvolvido para Solução do Problema Proposto
+\end_layout
+
+\begin_layout Standard
+Para o trabalho computacional, cada atleta foi modelado como uma thread,
+ sendo usadas dezesseis threads.
+ Foi usado um vetor de semáforos binários com dezesseis posições,
+\begin_inset space ~
+\end_inset
+
+sem_corredor, para decidir quais atletas estariam correndo em sua pista,
+ sendo que no máximo quatro dos semáforos possuem permissão por vez.
+ O número de passos dado por cada atleta em cada iteração foi aleatório
+ entre um e dez.
+ A troca de bastão foi modelada de forma que o atleta coloca uma permissão
+ no semáforo do atleta subsequente na mesma pista.
+ Caso ainda o atleta não tenha atingido os seus cem metros, não faz a troca
+ de bastão, colocando uma permissão em seu próprio semáforo para correr
+ novamente em mais uma iteração.
+ A ordem de chegada foi modelada como um vetor de índice de posição compartilhad
+o, permitindo que não seja possível que dois atletas cruzem a linha de chegada
+ ao mesmo tempo.
+ Cada posição do vetor indica a ordem de chegada, sendo a posição zero indicada
+ pelo primeiro lugar.
+ Para que um atleta cruze a linha de chegada, deve obter exclusão mútua
+ do índice para incrementá-lo, indicar sua pista no vetor e liberar a exclusão
+ mútua, sendo que o índice começa com -1.
+ Se um corredor atinge seus cem metros, sua thread é desligada[2], permitindo
+ que a thread principal mostre os resultados na tela e o programa seja finalizad
+o.
+ Um exemplo do código é mostrado na figura a seguir.
+ Cada pista é indicada pelas tabulações na tela, cada thread printa o corredor
+ da pista seguido de quantos passos ele deu.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename codigo.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Parte final do código.
+ Momento que mostra quando cada corredor atravessa a linha de chegada e
+ os resultados da corrida.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusão
+\end_layout
+
+\begin_layout Standard
+A corrida foi modelada de forma satisfatória, porém não se levou em consideração
+ o fato de o atleta subsequente começar a correr dez metros antes de o anterior
+ chegar para haver a troca de bastão.
+ Esta regra poderia ser incluída em trabalhos futuros.
+\end_layout
+
+\begin_layout Standard
+[1] https://pt.wikipedia.org/wiki/4_x_100_metros_estafetas
+\end_layout
+
+\begin_layout Standard
+[2] http://pubs.opengroup.org/onlinepubs/7908799/xsh/pthread_exit.html
+\end_layout
+
+\end_body
+\end_document
