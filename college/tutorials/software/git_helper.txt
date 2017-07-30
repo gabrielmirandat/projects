@@ -1,0 +1,34 @@
+Tutorial Básico de Git
+-------------------------------------------------------------------------------------------
+1) Para baixar o repositório pela primeira vez:
+	$ git clone [URL DO REPOSITÓRIO].git
+
+por exemplo:
+	$ git clone https://gitlab.com/unbeatables-unb/unbeatablesGoleiroLARC.git
+
+Todos os comandos a seguir devem ser executados dentro da pasta local do repositório
+2) Para atualizar o seu repositório local (execute sempre antes de começar a trabalhar):
+	$ git pull
+
+3) Após ter modificado algum arquivo é preciso adicioná-lo à fila de submissão:
+	$ git add [NOME DO ARQUIVO MODIFICADO]
+
+	ou para adicionar todos os arquivos modificados
+
+	$ git add .
+
+4) Caso deseje remover algum arquivo
+	$ git rm [NOME DO ARQUIVO A SER REMOVIDO]
+
+5) Com os arquivos adicionados e/ou removidos é necessário formalizar as alterações:
+	$ git commit -m "[BREVE DESCRIÇÃO DAS ALTERAÇÕES]"
+
+6) Para submeter as suas alterações:
+	$ git push
+
+----------------------------------------------------------------------------------------------
+Guia de boas maneiras no git:
+
+1) Sempre atualize o seu repositório antes de começar a modificar;
+2) Antes de fazer um commit assegure-se de que o código compila e executa;
+3) Faça uma breve descrição da sua alteração em cada arquivo para facilitar o controle de versão.

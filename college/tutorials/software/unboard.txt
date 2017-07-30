@@ -1,0 +1,36 @@
+Exemplo:
+
+---- common/motionData.hpp -----
+	Neste arquivo cria-se uma struct para salvar todos os dados necessários à compartilhar pelo módulo motion.
+
+---- motion/src/motion.cpp -----
+
+	* linha 2:
+		#include <unBoard.hpp>
+	Aqui inclue-se no módulo desejado a interface pra salvar os dados.
+
+	* linha 3:
+		#include <motionData.hpp>
+	Aqui inclue-se a struct criada anteriormente.
+
+	* linha 39:
+		motionData persistence;
+	Instância-se uma unidade da struct de dados.
+
+	* linha 40:
+		unBoard<motionData> dataSaver;
+	Instância-se uma unidade da classe pra salvar os dados.
+
+	* linhas 863 - 866:
+	    persistence.x_vel = x_vel;
+	    persistence.y_vel = y_vel;
+	    persistence.theta = theta;
+	    persistence.turn_time = turn_time;
+	As váriaveis utilizadas na thread livremente são salvas, ao fim de cada loop, na struct de dados permanente instanciada.
+
+	* linha 868:
+		dataSaver.save(persistence);
+	Chama-se o método da interface de save para escrever na memória compartilhada os dados salvos na struct de permanência.
+
+DONE!
+Estes dados já estarão disponíveis para uso na memória compartilhada. No próximo tutorial ensino como acessar esses dados de forma segura.

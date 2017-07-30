@@ -1,0 +1,55 @@
+Verdadeiro negativo : diagnóstico negativo ausência de patologia
+Verdadeiro positivo : diagnóstico positivo presença de patologia
+False negativo	    : diagnóstico negativo presença de patologia
+Falso positivo	    : diagnóstico presente ausência de patologia
+
+-É um classificador (supervisionado)!!
+
+INTRODUÇÃO
+- Nova representaçao de imagens chamada Imagens Integrais que permite rápido calculo de features.
+- Filtros Harr
+- Para calcular estas features muito rápido em várias escalas, introduzimos o conceito de representação de imagens com imagens integrais. A 
+imagem integral pode ser calculada de uma imagem usando algumas operações por pixel. Uma vez calculadas, qualquer uma dessas características 
+Harr podem ser evaluadas em qualquer escala ou localização em tempo constante.
+- Usar AdaBoost para construir um método classificador através de um pequeno número de features importantes.
+- O número total de Haar features numa sub-janela da imagem é muito grande(maior que o próprio número de pixels), assim, para classificação 
+rápida, o processo de aprendizagem deve excluir a grande maioria de features disponíveis e focar num set de features críticas.
+- Essa escolha de feature é conseguida com uma simples modificação no AdaBoost = restringir learner fraco! Assim cada estágio do processo de 
+boosting, que seleciona um novo classificador fraco, pode ser visto como um processo de selecionados de features.
+- AdaBoost provê um efetivo algoritmo de aprendizagem e desempenho.
+-Outra contribuição é um método para combinar sucessivamente classificadores mas complexos em uma estrutura em cascata que melhora a velocidade
+do detector dando atenção a regiões promissoras da imagem. Onde provavelmente um objeto deve ocorrer.
+-Achar sub-janelas de maior probabilidade de ocorrer o objeto (não descartá-la).
+-As sub-janelas não descartadas pelo classificador, são passadas por uma sequencia de classificadores, sendo o próximo mais complexo que o 
+anterior. Se qualquer um dos classificadores rejeitar a sub-janela, o processo é interrompido.
+-A cascata é uma árvore de decisão degenerada.
+
+FEATURES
+- Nas features retangulas presentes nas sub-janelas, fazemos pixels da parte branca menos pixels da parte preta.
+- As features foram tiradas das função haar usadas em 
+      "C.Papageorgiou, M.Oren,and T.Poggio. A general framework for object detection.In International Conference on Computer Vision ,1998."
+
+IMAGENS INTEGRAIS
+- A imagem integral na posição x,y contém a soma dos pixels acima e a esquerda daquela posição, inclusivamente.
+- Permite rápido cálculo de features retangulares.
+
+FEATURE DISCUSSION
+- O set de features retangulares provê uma rica representação da imagem que suporta aprendizagem efetiva. Em conjunto com a imagem integral, a 
+eficiências das features retangulares provê ampla compensação à sua limitada flexibilidade.
+
+LEARNING CLASSIFICARION FUNCTIONS
+- Uma variação do AdaBoost é usada tanto para selecionar um pequeno set de features quanto para treinar o classificador.
+- Na forma original, AdaBoost é usada para dar força à performance de um simples(fraco) algoritmo de aprendizagem.
+
+LEARNING DISCUSSION
+- Propostas de seleção de features: esquema baseado na variância da feature;
+				    processo de aprendizagem exponencial do perceptron
+				    
+LEARNING RESULTS
+- a primeira feature encontrada pelo classificador AdaBoost para detectar face diz que a região dos olhos é mais escura que a região do nariz com 
+bochechas, enquanto a segunda diz que a região dos olhos é mais escura que a ponte do nariz.
+
+THE ATTENTIONAL CASCADE
+- Um resultado negativo do atual classificador (em um ponto) leva à rejeição imediata da sub- janela.
+- Estágios na cascata são construídos por classificadores de treinamento usando AdaBoost e , em seguida, ajusta-se o limiar para minimizar falsos
+negativos

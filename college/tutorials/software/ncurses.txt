@@ -1,0 +1,309 @@
+#initscr() = inicia terminal no modo curses. Limpa terminal e apresenta um em branco.
+QUalquer manipulação de tela precisa dela.Esta função inicializa o sistema curses e 
+aloca memória para a nossa janela atual (chamado stdscr) e algumas outras estruturas de dados.
+As variáveis COLS e LINES são inicializadas para os tamanhos de tela após initscr().
+
+#printw("") = Esta função é análoga a printf normal em todos os aspectos, exceto que ele
+imprime os dados em uma janela chamada stdscr na atual coordenada(y,x). Desde que os nossos
+atuais coordenadas estão em 0,0 a string é impresso no canto esquerdo da janela.
+
+#refresh() = Bem, quando chamamos printw os dados são realmente escritos para uma janela imaginária,
+que não é atualizada na tela ainda. O trabalho de printw é atualizar algumas bandeiras e estruturas
+de dados e gravar os dados em um buffer correspondente ao stdscr. A fim de mostrá-lo na tela, 
+precisamos chamar refresh () e dizer ao sistema curses para despejar o conteúdo na tela real.
+
+>>>A filosofia é permitir o programador fazer vários updates na tela imaginaria (ou janelas) e
+fazer um refresh apenas quando todos os updates estiverem prontos. refresh() checa a janela e faz
+update apenas nas porçoes que foram mudadas.<<<
+
+#endwin() = sai do modo curses. Caso contrário, o terminal pode se comportar estranhamente após o
+programa terminar. endwin () libera a memória ocupada pelo sub-sistema curses e suas estruturas
+de dados e coloca o terminal em modo normal. Esta função deve ser chamada depois que você acaba
+de usar o modo curses.
+
+#raw() and cbreak() = Normalmente, o controlador do terminal armazena os caracteres que o usuário
+digita até que uma nova linha ou retorno é encontrado. Mas a maioria dos programas exigem que os 
+caracteres estarão disponíveis assim que o usuário digita-los. As duas funções acima são usadas 
+para desativar linha buffering. A diferença entre essas duas funções é nos caracteres de controle
+como forma de suspensão (CTRL-Z), interromper e Sair (Ctrl-C) são passados ​​ao programa. 
+No modo raw(), estes caracteres são diretamente transferidos para o programa sem gerar um sinal.
+No modo cbreak () esses caracteres de controle são interpretados como qualquer outro caracter
+pelo terminal. Eu, pessoalmente, prefiro usar raw(), como eu posso exercer maior controle sobre 
+o que o usuário faz.
+
+#echo() and noecho() = Estas funções controlam o eco(repercutir) de caracteres digitados pelo 
+usuário para o terminal.noecho () desliga o eco. A razão pela qual você pode querer fazer isso
+é para ganhar mais controle sobre eco ou para suprimir eco desnecessário, tendo a entrada do 
+usuário através do getch () etc. funções. A maioria dos programas interactivos chamam noecho()
+na inicialização e permitem o eco de caracteres de uma forma controlada. Ela dá ao programador
+a flexibilidade de caracteres ecoando em qualquer lugar na janela sem atualizar atuais (Y, X) coordenadas.
+
+#keypad(stdsrc, TRUE)  = Esta é a minha função de inicialização favorita. Ela permite a leitura de teclas de função
+como F1, F2, setas etc. Quase todos os programas interativos permitem isso, como teclas de seta são uma
+parte importante de qualquer interface com o usuário. Faça keypad(stdsrc, TRUE) para ativar esse recurso
+para a tela regular (stdscr). Você vai aprender mais sobre o gerenciamento de chaves em seções posteriores
+deste documento.
+
+#halfdelay() = Esta função, embora não muito utilizada, muitas vezes,pode ser útil. halfdelay () é chamado para
+permitir o modo half_delay, o que é similar ao modo cbreak () em que os caracteres escritos estão imediatamente
+disponíveis para o programa. No entanto, ele aguarda 'X' décimos de um segundo para entrada e, em seguida, 
+retorna ERR, se nenhuma entrada for dada. 'X' é o valor de tempo limite transmitido para o halfdelay () função.
+Esta função é útil quando você quer perguntar ao usuário a entrada, e se ele não responder com em determinado
+período de tempo, nós podemos fazer alguma coisa. Um exemplo possível é um tempo de espera no prompt de senha.
+
+#getch() = O getch () é usado para obter um caractere de usuário. É equivalente a getchar()normal, exceto que
+pode desativar o buffer de linha para evitar <enter> após entrada. Retorna um número inteiro correspondente
+a tecla pressionada.Isto pode ser verificado usando o KEY_F macro () definido na curses.h.
+      if(ch == KEY_LEFT)
+        printw("Left arrow is pressed\n");
+
+#attron() and attroff() = As funções attron e attroff são usadas ​​para trocar alguns atributos(estados) como 
+ligado(ativo) ou desligado, respectivamente. No exemplo eu usei-los para imprimir o caractere em negrito.
+
+#wprintw(win, "") = Digamos que você tenha criado uma janela. Esta função escreve o que está entre aspas na janela
+win na posição atual do cursor.
+
+#wrefresh(win) = Escreve o que foi chamado na wprintw, na janela criada chamada win.
+
+#mvprintw(y, x, string) = Move para (y,x) e depois printa string.
+
+#mvwprintw(win, y, x, string) = Move para (y,x) na janela win e depois printa string.
+
+>>>Normalmente as funções w-less são macros que se expandem a correspondente w-função 
+com stdsrc como parâmetro janela.<<<
+
+>>>Existem três classes de funções que você pode usar para fazer a saída na tela.
+
+    #addch() = Imprimir único caractere com atributos e avança cursor.Para combinar caractere com atributos:
+
+    1) (Ou) com as macros de atributos desejados. Macros no ncurses.h arquivo de cabeçalho.Por exemplo,negrito e sublinhado:
+
+        addch(cap | A_BOLD | A_UNDERLINE);
+
+    2)Usando funções como attrset (), attron (), attroff ().Eles manipulam os atributos atuais da janela dada.
+    Uma vez definido, o caractere impresso na janela está associado com o atributo até que ele seja desligado.
+
+Além disso, curses fornece alguns caracteres especiais para gráficos baseados em caracteres. Você pode desenhar
+tabelas, linhas horizontais ou verticais, etc. Todos os caracteres no ncurses.h arquivo de cabeçalho.
+Tente procurar por macros que começam com ACS_ neste arquivo.
+
+    #printw() = Print formatado saída semelhante a printf ().
+
+    #addstr() = Imprimir strings.É usado para colocar uma cadeia de caracteres em uma determinada janela.
+
+Essas funções podem ser usados ​​intercambeável e é uma questão de estilo como a que classe é usada.<<<
+
+#mvaddch(row,col,ch) = move o cursor para um determinado ponto(n-ésima linha e n-ésima coluna), e depois imprime.
+
+#move(row,col) = move o cursor para um determinado ponto(n-ésima linha e n-ésima coluna);
+
+#vwprintw() = Esta função é semelhante à vprintf (). Isto pode ser utilizado quando o número
+de argumentos variável estão a ser impresso.
+
+#getmaxyx(stdscr,row,col) = geta o número de linhas e colunas da janela stdscr.
+
+#getyx(stdscr, y, x) = geta a posição atual do cursor.
+
+#getparyx()= obtém o início das coordenadas da sub janela em relação à janela principal. Esta é 
+algumas vezes útil para atualizar um sub janela. Ao projetar coisas extravagantes como a escrita de
+vários menus, torna-se difícil para armazenar as posições de menu, suas coordenadas da 1æ opção,
+etc. Uma solução simples para este problema, é a criação de menus em sub janelas e depois encontrar
+as a partir coordenadas do menus usando getparyx ().
+
+#getbegyx() and getmaxyx() = armazena as coordenadas de início e fim da janela.
+
+
+
+
+
+
+
+#addnstr() = que leva um parâmetro inteiro (dizem n) adicionalmente. Esta função coloca no máximo n caracteres na tela.
+Se n for negativo, então toda a cadeia será adicionado.
+
+>>>Vamos ver as funções que nos permitem obter a entrada de usuário.Divididos em três categorias.
+
+    #getch() = Obter um caractere. Mas existem vários fatos sutis a considerar. Por exemplo, se você não usar o
+    cbreak(), curses não vai ler os seus caracteres de entrada de forma contígua, mas vai começar a lê-los 
+    somente após uma nova linha ou um EOF é encontrado. Para evitar isso, o cbreak() deve ser utilizado para
+    que os caracteres estejam imediatamente disponíveis para o seu programa. Outra função que é amplamente 
+    utilizada é noecho (). Como o nome sugere, quando esta função está definida (usado), os caracteres que são
+    digitados pelo usuário não irão aparecer na tela.
+
+    #scanw() and #mvscanw() = Obter entrada formatada.O uso destas funções é semelhante ao do sscanf(),
+    em que a linha a ser digitalizado é fornecido por wgetstr(). Isto é, estas funções chamam a função 
+    wgetstr() (explicado a seguir) e usa a linha resultante para scan.
+
+    #getstr() = Recebe strings.A cadeia resultante de caracteres são apontados por str, que é um ponteiro
+    de caracteres fornecido pelo usuário.
+
+<<<
+
+#vwscanw() = Esta função é semelhante à vscanf (). Isso pode ser usado quando um número variável de argumentos
+que devem ser verificados.
+
+
+>>>atributos=
+******************************************************************
+*    A_NORMAL        Exibição normal(sem destaque)               *
+*    A_STANDOUT      Melhor modo de destaque do terminal.        *
+*    A_UNDERLINE     Sublinhado                                  *
+*    A_REVERSE       Tela ao contrário                           *
+*    A_BLINK         Piscando                                    *
+*    A_DIM           Metade brilhante                            *
+*    A_BOLD          Brilho extra ou negrito                     *
+*    A_PROTECT       Modo de proteção                            *
+*    A_INVIS         Modo invisível ou em branco                 *
+*    A_ALTCHARSET    Caracteres se alternando                    *
+*    A_CHARTEXT      Máscara de bits para extrair um caractere   *
+*    COLOR_PAIR(n)   Par de cor número n 			 *
+******************************************************************
+
+#attrset() = Define os atributos da janela, enquanto attron() apenas liga o atributo que lhe é dado e attroff() desliga
+o atributo que lhe é dado como argumento. Totalmente substitui os atributos antigos e define os novos.Você sempre pode
+usar standend(), que é equivalente a attrset (A_NORMAL) que desliga todos os atributos e traz para o modo normal.
+
+#attr_get() = obtém os atributos atuais e o par de cor da janela.Digamos que queremos faz updates complexos na tela
+e não temos muita certeza de qual atributo cada caractere está associado. Então esta função pode ser usada junto com
+attrset() ou attron() para produzir o efeito desejado.
+
+#chgat() = está listada no final da página principal curs_attr. Esta realmente é um útil. Esta
+função pode ser usada para definir atributos para um grupo de personagens sem se mover. Quero dizer !!! sem mover
+o cursor:-) Ele muda os atributos de um determinado número de caracteres a partir da posição atual do cursor. Podemos
+dar -1 como contador de caractere para atualizar até o fim da linha. Se você quiser alterar os atributos de caracteres
+a partir da posição atual para o fim da linha, é só usar chgat (-1, A_REVERSE, 0, NULL); Esta função é útil quando se
+muda atributos para os caracteres que já estão na tela. Mova para o caractere a partir da qual você quer mudar o atributo.
+Outras funções wchgat (), mvchgat (), wchgat () comportam-se de forma semelhante, excepto que as funções w operam na
+janela particular. As funções mv primeiro mover o cursor, em seguida, executar o trabalho dado a eles. Na verdade chgat()
+é uma macro que é substituído por um wchgat () stdsrc como com a janela. A maioria das funções 'w-menos' são macros. 
+
+#start_color() =  Inicia a funcionabilidade de cores.
+
+#init_pair(1, COLOR_RED, COLOR_BLACK) = Agora, para realmente começar a usar cores, você tem que definir pares.
+As cores são sempre usados ​​em pares. Isso significa que você tem que usar o init_pair function () para definir
+o primeiro e segundo plano para os dois números que você dá. Depois disso o número pair pode ser usado como um 
+atributo normal com a função COLOR_PAIR ().Como attron(COLOR_PAIR(1));
+	COLOR_BLACK   0
+        COLOR_RED     1
+        COLOR_GREEN   2
+        COLOR_YELLOW  3
+        COLOR_BLUE    4
+        COLOR_MAGENTA 5
+        COLOR_CYAN    6
+        COLOR_WHITE   7
+
+# init_color() = pode ser utilizada para alterar os valores rgb para as cores definidas inicialmente por curses.
+Digamos que você queria aliviar a intensidade da cor vermelha por um minúsculo. Então você pode usar essa função como
+ init_color(COLOR_RED, 700, 0, 0); COLOR_RED é inicialmente definida como 1000(r), 0(g), 0(b). 
+
+#color_content() and #pair_content() = pode ser usado para encontrar o conteúdo de cor de primeiro plano e segundo plano
+para a combinação do par.       
+        
+        
+#has_colors() == FALSE = Para saber se um terminal tem recursos de cores ou não, você pode usar has_colors função (),
+que retorna FALSE se o terminal não suporta cor.
+
+
+#WINDOW *local_win = = newwin(height, width, starty, startx) = Criaa uma janela. Ele não cria nada na tela, na verdade.
+Isso atribui memória para uma estrutura para manipular a janela e atualiza a estrutura com os dados da janela como o 
+seu tamanho, Beginy, BeginX etc .. Por isso, no curses, uma janela é apenas uma abstração de uma janela imaginária,
+que pode ser manipulada independentemente de outras partes da tela. newwin() retorna um ponteiro para estrutura de 
+janela, que pode ser passado para as funções relacionadas com janela como wprintw () etc ..
+
+#delwin(local_win) = Finalmente, a janela poderá ser destruído com delwin().Ela desaloqua a memória associada com 
+a estrutura de janela.
+
+#box(local_win, 0 , 0) = 0, 0 nos dá os caracteres padrão para mostrar linhas e colunas. Pode ser usado para 
+desenhar uma borda ao redor da janela. 
+
+#wborder(local_win, ' ', ' ', ' ',' ',' ',' ',' ',' ') = pode ser usada para apagar a box da janela sendo mostrada na tela.
+wborder() = desenha uma borda ao redor da janela com os caracteres que lhe são dadas como os 4 pontos de canto e as 4 linhas.
+Os parâmetros são: 
+	 * 1. win: the window on which to operate
+	 * 2. ls: character to be used for the left side of the window 
+	 * 3. rs: character to be used for the right side of the window 
+	 * 4. ts: character to be used for the top side of the window 
+	 * 5. bs: character to be used for the bottom side of the window 
+	 * 6. tl: character to be used for the top left corner of the window 
+	 * 7. tr: character to be used for the top right corner of the window 
+	 * 8. bl: character to be used for the bottom left corner of the window 
+	 * 9. br: character to be used for the bottom right corner of the window
+	 
+#clear() = LIMPAR O TERMINAL!
+
+#mousemask(  mmask_t newmask,mmask_t *oldmask) = newmask =>eventos que se quer receber e oldmask =>
+máscara de eventos antigos.A máscara de bits ALL_MOUSE_EVENTS pode ser usado para obter todos os eventos.
+  Name            Description
+       ---------------------------------------------------------------------
+       BUTTON1_PRESSED          mouse button 1 down
+       BUTTON1_RELEASED         mouse button 1 up
+       BUTTON1_CLICKED          mouse button 1 clicked
+       BUTTON1_DOUBLE_CLICKED   mouse button 1 double clicked
+       BUTTON1_TRIPLE_CLICKED   mouse button 1 triple clicked
+       BUTTON2_PRESSED          mouse button 2 down
+       BUTTON2_RELEASED         mouse button 2 up
+       BUTTON2_CLICKED          mouse button 2 clicked
+       BUTTON2_DOUBLE_CLICKED   mouse button 2 double clicked
+       BUTTON2_TRIPLE_CLICKED   mouse button 2 triple clicked
+       BUTTON3_PRESSED          mouse button 3 down
+       BUTTON3_RELEASED         mouse button 3 up
+       BUTTON3_CLICKED          mouse button 3 clicked
+       BUTTON3_DOUBLE_CLICKED   mouse button 3 double clicked
+       BUTTON3_TRIPLE_CLICKED   mouse button 3 triple clicked
+       BUTTON4_PRESSED          mouse button 4 down
+       BUTTON4_RELEASED         mouse button 4 up
+       BUTTON4_CLICKED          mouse button 4 clicked
+       BUTTON4_DOUBLE_CLICKED   mouse button 4 double clicked
+       BUTTON4_TRIPLE_CLICKED   mouse button 4 triple clicked
+       BUTTON_SHIFT             shift was down during button state change
+       BUTTON_CTRL              control was down during button state change
+       BUTTON_ALT               alt was down during button state change
+       ALL_MOUSE_EVENTS         report all button state changes
+       REPORT_MOUSE_POSITION    report mouse movement
+
+MEVENT event;
+    ch = getch();
+    if(ch == KEY_MOUSE) -->cte KEY_MOUSE é acionada quando o mouse é clicado
+        if(getmouse(&event) == OK)  
+
+#GetMouse() = Em seguida, o evento de mouse podem ser recuperados com GetMouse () .
+Retorna o evento para o ponteiro que lhe é dado. É uma estrutura que contém
+    typedef struct
+    {
+        short id;         /* ID para distinguir vários dispositivos */
+        int x, y, z;      /* coordenadas do evento */
+        mmask_t bstate;   /* estado do botão de bits */ 
+    }    
+bstate é a principal variável que nos interessa. Ele conta o estado do botão do mouse.
+  if(event.bstate & BUTTON1_PRESSED)
+        printw("Left Button Pressed"); -->para saber o que aconteceu
+
+---SALVANDO E RESTORANDO TELA---
+#scr_dump() = pode ser usado para despejar o conteúdo da tela para um arquivo dado como um argumento.
+algumas vezes torna-se necessário para armazenar o estado da tela e restaurá-lo de volta para o 
+mesmo estado.
+
+#scr_restore() = Mais tarde, ele pode ser restaurado por função scr_restore.
+
+---SALVANDO JANELAS---
+#putwin() = coloca o estado atual da janela em um arquivo.
+
+#getwin() = que pode ser restaurado mais tarde por getwin().
+
+#copywin() = O copywin function () pode ser usado para copiar uma janela completamente para outra
+janela. Leva as janelas de origem e de destino como parâmetros e de acordo com o retângulo especificado,
+ele copia a região retangular de fonte para a janela de destino. É o último parâmetro especifica
+se deseja substituir ou apenas sobrepor o conteúdo sobre a janela de destino. Se este argumento
+é verdadeiro, então a cópia é não-destrutivo.
+
+---FUNÇÔES DIVERSAS
+#curs_set() = Esta função pode ser utilizada para fazer o cursor invisível. 0 : invisible 1 : normal    or
+    2 : very visible.
+    
+#def_prog_mode() = voltar para o terminal normal(modalidade da linha de buffer normal) temporariamente.
+Nesse caso, você primeiro terá que salvar os modos TTY com uma chamada para def_prog_mode () e, 
+em seguida, chamar endwin () para terminar o modo de curses.
+
+#reset_prog_mode() = Para voltar ao curses, uma vez que salvou-se seu estado,chamada reset_prog_mode().
+Esta função retorna o tty para o estado armazenado por def_prog_mode ().
+

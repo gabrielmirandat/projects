@@ -1,0 +1,32 @@
+-g to include debugging information so that Memcheck's error messages include exact line numbers.
+Using -O0 is also a good idea, if you can tolerate the slowdown.
+With -O1 line numbers in error messages can be inaccurate, but speed improvement compared to running -O0 is quite significant.
+Use of -O2 and above is not recommended.
+
+valgrind --leak-check=yes ./myprog arg1 arg2
+
+example 1
+  ==19182== Invalid write of size 4
+  ==19182==    at 0x804838F: f (example.c:6)
+  ==19182==    by 0x80483AB: main (example.c:11)
+  ==19182==  Address 0x1BA45050 is 0 bytes after a block of size 40 alloc'd
+  ==19182==    at 0x1B8FF5CD: malloc (vg_replace_malloc.c:130)
+  ==19182==    by 0x8048385: f (example.c:5)
+  ==19182==    by 0x80483AB: main (example.c:11)
+
+-> 19182 is the process ID
+-> The first line ("Invalid write...") tells you what kind of error it is.
+-> Below the first line is a stack trace telling you where the problem occurred.
+-> Below the first line is a stack trace telling you where the problem occurred.
+
+example 2
+  ==19182== 40 bytes in 1 blocks are definitely lost in loss record 1 of 1
+  ==19182==    at 0x1B8FF5CD: malloc (vg_replace_malloc.c:130)
+  ==19182==    by 0x8048385: f (a.c:5)
+  ==19182==    by 0x80483AB: main (a.c:11)
+
+-> It's a memory leak
+-> Types of leak:
+	- "definitely lost": your program is leaking memory -- fix it!
+	- "probably lost": your program is leaking memory, unless you're doing funny things with pointers (such as moving them to point to the middle of a heap block).
+

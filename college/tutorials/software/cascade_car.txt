@@ -1,0 +1,6 @@
+opencv_createsamples -info cars.info -num 550 -w 48 -h 24 -vec cars.vec
+opencv_createsamples -vec cars.vec -w 48 -h 24
+opencv_traincascade -data data -vec cars.vec -bg bg.txt -numPos 500 -numNeg 500 -numStages 2 -w 48 -h 24 -featureType LBP
+
+createsamples -info samples.dat -vec samples.vec -w 20 -h 20
+haartraining -data data -vec inst.vec -bg  bg.txt  -nstages 12  -minhitrate 0.992 -maxfalsealarm 0.5 -npos 250 -nneg 500 -w 20 -h 20 -nonsym -mem 1024

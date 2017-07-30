@@ -1,0 +1,38 @@
+*** Instalação UnBeatables 2016 ***
+
+- Requirements:
+	> sudo apt-get update
+	> sudo apt-get install gcc cmake python
+	> sudo apt-get install qtcreator
+	> sudo apt-get install python-pip
+
+- Install Qibuild:
+	> sudo apt-get update
+	> sudo pip install qibuild
+	> qibuild config --wizard :
+		1) Unix Makefiles
+		2) QtCreator
+		Yes
+	
+- Download: 
+	naoqi-sdk-x.x.x-[OS].tar.gz [no nosso caso: C++ SDK 2.1.4 Linux 64 ]
+	https://community.aldebaran.com/en/resources/software/language/en-gb
+
+- Pastas:
+	> mkdir -p ~/nao/{devtools,workspace}
+	Extrair sdk em devtools (~/nao/devtools/naoqi-sdk-2.1.4.13-linux64)
+
+- Navegue até a pasta do código: (~/nao/unbeatablesGoleiroLARC/):
+	> qibuild init
+	> qitoolchain create atom ~/nao/devtools/naoqi-sdk-2.1.4.13-linux64/toolchain.xml
+	> qibuild add-config atom -t atom --default
+
+- Executar os scripts:
+	> ./build_all.sh
+	> ./send_all.sh
+	
+OBS.: build_all.sh executa os scripts build.sh de cada subpasta. Estes scripts contém os seguintes
+códigos:
+	qibuild configure -c atom
+	qibuild make -c atom
+Estes são os códigos que o qibuild utiliza para compilar cada projeto.
