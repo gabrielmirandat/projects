@@ -1,0 +1,59 @@
+- base MNIST (28x28 em nivel de cinza)
+- centralizadas por centro de gravidade
+- 60000 para treinamento e 10000 para teste
+- pré-processamento adicional é permitido
+- normalizar imagens de 0~255 para -127~127
+- certificar-se que features na mesma escala
+- numero variável de neurônios na camada escondida
+- relatório com:
+	- verificar evolução da taxa de erro quadrático,
+	- o erro no arquivo de teste, 
+	- dificuldades encontradas,
+	- soluções propostas, 
+	- valores usados para parâmetros de treino,
+	- comparar resultados com outras funções de ativação e número de neurônios
+
+notações:
+
+Romariz
+x - entradas
+y - saida obtida
+d - saida desejada
+w - pesos
+E ou g - função de ativação
+nabla - taxa de aprendizado
+
+Ml
+x - entradas
+h(theta) - saida obtida
+y - saida desejada
+theta - pesos
+J(theta) - ativação ou custo (deve ser minimizada)? 
+alfa - taxa de aprendizado
+m - numero de exemplos de treino
+n - numero de features
+
+
+report
+Para as imagens das variaveis
+taxa = 0.1
+iterações = 15
+neuronios = 25
+logistica
+Training Set Accuracy: 83.535000
+Test Set Accuracy: 84.470000
+
+P/ a imagem de custo
+taxa = 0.1
+iterações = 500
+neuronios = 45
+logistica
+Training Set Accuracy: 99.885000
+Test Set Accuracy: 96.930000
+
+taxa = 0.32
+iterações = 100
+neuronios = 25
+logistica
+Training Set Accuracy: 95.646667
+Test Set Accuracy: 94.830000
