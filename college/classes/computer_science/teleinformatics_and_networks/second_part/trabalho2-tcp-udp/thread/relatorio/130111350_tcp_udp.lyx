@@ -1,0 +1,439 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass IEEEtran
+\begin_preamble
+\usepackage{algpseudocode}
+\end_preamble
+\options journal
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package none
+\inputencoding default
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command bibtex
+\index_command default
+\float_placement tbh
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "Your Title"
+\pdf_author "Your Name"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 0
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 0
+\use_package mhchem 1
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 2
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Servidor TCP/UDP
+\end_layout
+
+\begin_layout Author
+G.
+ M.
+ Miranda - 13/0111350
+\begin_inset Newline newline
+\end_inset
+
+Departamento de Ciência da Computação, 
+\begin_inset Newline newline
+\end_inset
+
+Universidade de Brasília 
+\begin_inset Newline newline
+\end_inset
+
+Email: gabrielmirandatt@gmail.com
+\end_layout
+
+\begin_layout Abstract
+Trabalho computacional envolvendo comunicação entre servidor e cliente TCP
+ e UDP.
+\end_layout
+
+\begin_layout Keywords
+socket, TCP, UDP.
+\end_layout
+
+\begin_layout Peer Review Title
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Don't add text here!
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+required if you use the document class option 
+\family sans
+peerreview
+\family default
+, must otherwise not be used
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introdução
+\end_layout
+
+\begin_layout Standard
+TCP e UDP são protocolos da camada de transporte do modelo TCP/IP.
+ O primeiro provê serviços de controle de fluxo, controle de congestionamento
+ e ordenamento garantido, enquanto o UDP não provê nenhum destes serviços.
+ O modelo computacional foi programado em python, sendo que para o modelo
+ UDP foi usado o exemplo disponibilizado no moodle como exemplo de servidor
+ em thread, e para o TCP foi abordado o modelo apresentado em [1] e adaptado
+ para se enquadrar ao modelo UDP.
+ 
+\end_layout
+
+\begin_layout Section
+Discussão
+\end_layout
+
+\begin_layout Paragraph
+Modelo TCP
+\end_layout
+
+\begin_layout Itemize
+MultiThreadedTCPServer.py
+\begin_inset Newline newline
+\end_inset
+
+Para rodar o servidor TCP, deve-se executar em linha de comando 
+\begin_inset Quotes eld
+\end_inset
+
+python MultiThreadedTCPServer.py
+\begin_inset Quotes erd
+\end_inset
+
+.
+ O servidor recebe dados de um cliente e retorna a thread aberta devido
+ ao cliente concatenada com os dados recebidos dele em caixa alta.
+\end_layout
+
+\begin_layout Itemize
+MultiThreadedTCPClient.py
+\begin_inset Newline newline
+\end_inset
+
+Para fazer uma requisição com o cliente, deve-se executar 
+\begin_inset Quotes eld
+\end_inset
+
+python MultiThreadedTCPClient.py <dados_de_envio>
+\begin_inset Quotes erd
+\end_inset
+
+, em que dados_de_envio são os dados enviados ao servidor.
+ Um exemplo de comunicação é mostrado nas figuras abaixo.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename tcp.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Lado servidor TCP.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename tcp2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Lado cliente TCP.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Modelo UDP
+\end_layout
+
+\begin_layout Itemize
+MultiThreadedUDPServer.py
+\begin_inset Newline newline
+\end_inset
+
+Para rodar o servidor UDP, deve-se executar em linha de comando 
+\begin_inset Quotes eld
+\end_inset
+
+python MultiThreadedUDPServer.py
+\begin_inset Quotes erd
+\end_inset
+
+.
+ O servidor recebe dados de um cliente e retorna a thread aberta devido
+ ao cliente concatenada com os dados recebidos dele em caixa alta, assim
+ como no modelo TCP.
+\end_layout
+
+\begin_layout Itemize
+MultiThreadedUDPClient.py
+\begin_inset Newline newline
+\end_inset
+
+Para fazer uma requisição com o cliente, deve-se executar 
+\begin_inset Quotes eld
+\end_inset
+
+python MultiThreadedUDPClient.py <dados_de_envio>
+\begin_inset Quotes erd
+\end_inset
+
+, em que dados_de_envio são os dados enviados ao servidor.
+ Um exemplo de comunicação é mostrado nas figuras abaixo.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename udp.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Lado servidor UDP.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename udp2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Lado cliente UDP.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Perguntas propostas
+\end_layout
+
+\begin_layout Itemize
+Em que situações eu devo utilizar (ou é indicado o uso) de threads? 
+\begin_inset Newline newline
+\end_inset
+
+As threads são indicadas nos servidores para permitir que vários clientes
+ possam se comunicador ao servidor no mesmo serviço/processo.
+\end_layout
+
+\begin_layout Itemize
+Faz algum sentido usar threads para o servidor UDP? Justifique sua resposta.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Depende da situação.
+ O UDP por si só pode conseguir gerenciar requisições de vários clientes,
+ já que não precisa se preocupar com um retorno.
+ Porém em casos onde possa ocorrer atraso na comunicação o uso de threads
+ pode ser aconselhável.
+\end_layout
+
+\begin_layout Section
+Conclusão
+\end_layout
+
+\begin_layout Standard
+Foi possível realizar testes de comunicação usando servidor TCP e servidor
+ UDP.
+ O problema computacional é modelado de forma similar em ambos os casos,
+ sendo necessárias poucas mudanças na plataforma python.
+ 
+\end_layout
+
+\begin_layout Standard
+[1] https://docs.python.org/2/library/socketserver.html
+\end_layout
+
+\begin_layout Standard
+[2] http://stackoverflow.com/questions/14041291/problems-implementing-a-multi-thr
+eaded-udp-server-threadpool
+\end_layout
+
+\end_body
+\end_document
