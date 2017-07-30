@@ -1,0 +1,1 @@
+./proj ../../../../../opencv5/opencv-2.4.9/samples/cpp/tutorial_code/HighGUI/video-input-psnr-ssim/video/Megamind.avi ../../../../../opencv5/opencv-2.4.9/samples/cpp/tutorial_code/HighGUI/video-input-psnr-ssim/video/Megamind_bugy.avi 35 10 
