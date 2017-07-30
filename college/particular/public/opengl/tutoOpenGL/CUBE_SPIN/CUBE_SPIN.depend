@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1418746630 source:c:\users\admin\downloads\ferias\opengl\projeto\cube_spin\color_cube.cpp
+	<stdlib.h>
+	<windows.h>
+	<GL/glut.h>
+
+1385316878 source:c:\users\admin\downloads\ferias\opengl\projeto\cube_spin\main.cpp
+	<tchar.h>
+	<windows.h>
+
