@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>JVM - Cruzeiro: Referência ao ficheiro checker.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">JVM - Cruzeiro
+   &#160;<span id="projectnumber">Versão Básica Funcional</span>
+   </div>
+   <div id="projectbrief">Trabalho de Software Básico - Turma do Professor Marcelo Ladeira</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&#160;membro</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('checker_8c.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tudo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Ficheiros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definições de tipos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência ao ficheiro checker.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="checker_8h_source.html">checker.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Diagrama de dependências de inclusão para checker.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c__incl.png" border="0" usemap="#checker_8c" alt=""/></div>
+<map name="checker_8c" id="checker_8c">
+<area shape="rect" id="node2" href="checker_8h.html" title="checker.h" alt="" coords="399,80,477,107"/><area shape="rect" id="node3" href="core_8h.html" title="core.h" alt="" coords="409,155,467,181"/><area shape="rect" id="node4" href="_leit_exib_8h.html" title="LeitExib.h" alt="" coords="399,229,477,256"/></map>
+</div>
+</div>
+<p><a href="checker_8c_source.html">Ir para o código fonte deste ficheiro.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:ac5b6a6c9fa38ec400a3d15f1421089d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="checker_8c.html#ac5b6a6c9fa38ec400a3d15f1421089d8">isFieldDescriptor</a> (<a class="el" href="structconst_pool_inf.html">constPoolInf</a> *cp, uint16_t index)</td></tr>
+<tr class="separator:ac5b6a6c9fa38ec400a3d15f1421089d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9022e1fcb1064556f8df87f06b5babd2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="checker_8c.html#a9022e1fcb1064556f8df87f06b5babd2">isMethodDescriptor</a> (<a class="el" href="structconst_pool_inf.html">constPoolInf</a> *cp, uint16_t index)</td></tr>
+<tr class="separator:a9022e1fcb1064556f8df87f06b5babd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ecc7358598704e5b4e9d77f06495482"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="checker_8c.html#a6ecc7358598704e5b4e9d77f06495482">verifyConstantPool</a> (<a class="el" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *cf)</td></tr>
+<tr class="separator:a6ecc7358598704e5b4e9d77f06495482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e295f32f754594e38f31297afebca97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="checker_8c.html#a3e295f32f754594e38f31297afebca97">verifyAccessFlags</a> (<a class="el" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *cf)</td></tr>
+<tr class="separator:a3e295f32f754594e38f31297afebca97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c524d6b071cd201765ed95b10b9eedd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="checker_8c.html#a5c524d6b071cd201765ed95b10b9eedd">verifyBytecode</a> (<a class="el" href="structattribute__info.html">attribute_info</a> *attr, <a class="el" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *cf)</td></tr>
+<tr class="separator:a5c524d6b071cd201765ed95b10b9eedd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dcac7578c8c1cf7ef0f7b6fffe5ae24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="checker_8c.html#a0dcac7578c8c1cf7ef0f7b6fffe5ae24">verifyClassfile</a> (<a class="el" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *cf)</td></tr>
+<tr class="separator:a0dcac7578c8c1cf7ef0f7b6fffe5ae24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b952615631393d4b96a3eafe88cb3e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="checker_8c.html#a7b952615631393d4b96a3eafe88cb3e7">verifySuperFinal</a> (<a class="el" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *cf, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *<a class="el" href="structjvm.html">jvm</a>)</td></tr>
+<tr class="separator:a7b952615631393d4b96a3eafe88cb3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bbffc69c6cd821aebc4c480ffd3aec1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="checker_8c.html#a4bbffc69c6cd821aebc4c480ffd3aec1">verifyOverrideMethodFinal</a> (<a class="el" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *cf, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *<a class="el" href="structjvm.html">jvm</a>)</td></tr>
+<tr class="separator:a4bbffc69c6cd821aebc4c480ffd3aec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentação das funções</h2>
+<a class="anchor" id="ac5b6a6c9fa38ec400a3d15f1421089d8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isFieldDescriptor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structconst_pool_inf.html">constPoolInf</a> *&#160;</td>
+          <td class="paramname"><em>cp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="checker_8c_source.html#l00005">5</a> do ficheiro <a class="el" href="checker_8c_source.html">checker.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_ac5b6a6c9fa38ec400a3d15f1421089d8_cgraph.png" border="0" usemap="#checker_8c_ac5b6a6c9fa38ec400a3d15f1421089d8_cgraph" alt=""/></div>
+</div>
+</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_ac5b6a6c9fa38ec400a3d15f1421089d8_icgraph.png" border="0" usemap="#checker_8c_ac5b6a6c9fa38ec400a3d15f1421089d8_icgraph" alt=""/></div>
+<map name="checker_8c_ac5b6a6c9fa38ec400a3d15f1421089d8_icgraph" id="checker_8c_ac5b6a6c9fa38ec400a3d15f1421089d8_icgraph">
+<area shape="rect" id="node2" href="checker_8h.html#ae4f49d8a761fb2b65dd772afd027c3d6" title="isFieldDescriptor" alt="" coords="173,107,293,133"/><area shape="rect" id="node3" href="checker_8h.html#ad1feb70bcfb835f9472fda62313ffbb6" title="verifyConstantPool" alt="" coords="341,157,475,184"/><area shape="rect" id="node4" href="checker_8h.html#a496eaab3cf87436d88f45f408fcc7b54" title="verifyClassfile" alt="" coords="523,145,629,172"/><area shape="rect" id="node12" href="cruzeiro_8c.html#a044f22337572729fe6a256eac0ff4820" title="carregarClasse_01" alt="" coords="885,56,1016,83"/><area shape="rect" id="node5" href="cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="678,132,837,159"/><area shape="rect" id="node6" href="cruzeiro_8c.html#aa6c77c38ce0e50b4e897fa2470abfca7" title="ligadorDeClasse" alt="" coords="891,107,1010,133"/><area shape="rect" id="node7" href="cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="1071,5,1155,32"/><area shape="rect" id="node9" href="interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08" title="accessField" alt="" coords="1067,56,1159,83"/><area shape="rect" id="node10" href="interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa" title="invoke" alt="" coords="1083,107,1143,133"/><area shape="rect" id="node11" href="interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="1064,157,1163,184"/><area shape="rect" id="node8" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1211,5,1261,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9022e1fcb1064556f8df87f06b5babd2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool isMethodDescriptor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structconst_pool_inf.html">constPoolInf</a> *&#160;</td>
+          <td class="paramname"><em>cp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="checker_8c_source.html#l00042">42</a> do ficheiro <a class="el" href="checker_8c_source.html">checker.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_a9022e1fcb1064556f8df87f06b5babd2_cgraph.png" border="0" usemap="#checker_8c_a9022e1fcb1064556f8df87f06b5babd2_cgraph" alt=""/></div>
+<map name="checker_8c_a9022e1fcb1064556f8df87f06b5babd2_cgraph" id="checker_8c_a9022e1fcb1064556f8df87f06b5babd2_cgraph">
+<area shape="rect" id="node2" href="_leit_exib_8h.html#a345c5213063b16760fc936583f24d536" title="ImprimeConstUtf8" alt="" coords="190,29,319,56"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_a9022e1fcb1064556f8df87f06b5babd2_icgraph.png" border="0" usemap="#checker_8c_a9022e1fcb1064556f8df87f06b5babd2_icgraph" alt=""/></div>
+<map name="checker_8c_a9022e1fcb1064556f8df87f06b5babd2_icgraph" id="checker_8c_a9022e1fcb1064556f8df87f06b5babd2_icgraph">
+<area shape="rect" id="node2" href="checker_8h.html#affb083bf8031f48e5c478f976fcce70f" title="isMethodDescriptor" alt="" coords="190,107,325,133"/><area shape="rect" id="node3" href="checker_8h.html#ad1feb70bcfb835f9472fda62313ffbb6" title="verifyConstantPool" alt="" coords="373,56,507,83"/><area shape="rect" id="node12" href="cruzeiro_8c.html#a044f22337572729fe6a256eac0ff4820" title="carregarClasse_01" alt="" coords="917,107,1048,133"/><area shape="rect" id="node4" href="checker_8h.html#a496eaab3cf87436d88f45f408fcc7b54" title="verifyClassfile" alt="" coords="555,56,661,83"/><area shape="rect" id="node5" href="cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="710,56,869,83"/><area shape="rect" id="node6" href="cruzeiro_8c.html#aa6c77c38ce0e50b4e897fa2470abfca7" title="ligadorDeClasse" alt="" coords="923,56,1042,83"/><area shape="rect" id="node7" href="cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="1103,56,1187,83"/><area shape="rect" id="node9" href="interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08" title="accessField" alt="" coords="1099,107,1191,133"/><area shape="rect" id="node10" href="interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa" title="invoke" alt="" coords="1115,157,1175,184"/><area shape="rect" id="node11" href="interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="1096,5,1195,32"/><area shape="rect" id="node8" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1243,56,1293,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3e295f32f754594e38f31297afebca97"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verifyAccessFlags </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *&#160;</td>
+          <td class="paramname"><em>cf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="checker_8c_source.html#l00268">268</a> do ficheiro <a class="el" href="checker_8c_source.html">checker.c</a>.</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_a3e295f32f754594e38f31297afebca97_icgraph.png" border="0" usemap="#checker_8c_a3e295f32f754594e38f31297afebca97_icgraph" alt=""/></div>
+<map name="checker_8c_a3e295f32f754594e38f31297afebca97_icgraph" id="checker_8c_a3e295f32f754594e38f31297afebca97_icgraph">
+<area shape="rect" id="node2" href="checker_8h.html#a496eaab3cf87436d88f45f408fcc7b54" title="verifyClassfile" alt="" coords="185,81,290,108"/><area shape="rect" id="node3" href="cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="339,81,498,108"/><area shape="rect" id="node4" href="cruzeiro_8c.html#aa6c77c38ce0e50b4e897fa2470abfca7" title="ligadorDeClasse" alt="" coords="547,81,666,108"/><area shape="rect" id="node5" href="cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="722,5,806,32"/><area shape="rect" id="node7" href="interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08" title="accessField" alt="" coords="718,56,810,83"/><area shape="rect" id="node8" href="interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa" title="invoke" alt="" coords="734,107,794,133"/><area shape="rect" id="node9" href="interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="715,157,813,184"/><area shape="rect" id="node6" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="861,5,912,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5c524d6b071cd201765ed95b10b9eedd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verifyBytecode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structattribute__info.html">attribute_info</a> *&#160;</td>
+          <td class="paramname"><em>attr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *&#160;</td>
+          <td class="paramname"><em>cf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="checker_8c_source.html#l00299">299</a> do ficheiro <a class="el" href="checker_8c_source.html">checker.c</a>.</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_a5c524d6b071cd201765ed95b10b9eedd_icgraph.png" border="0" usemap="#checker_8c_a5c524d6b071cd201765ed95b10b9eedd_icgraph" alt=""/></div>
+<map name="checker_8c_a5c524d6b071cd201765ed95b10b9eedd_icgraph" id="checker_8c_a5c524d6b071cd201765ed95b10b9eedd_icgraph">
+<area shape="rect" id="node2" href="checker_8h.html#a496eaab3cf87436d88f45f408fcc7b54" title="verifyClassfile" alt="" coords="163,81,269,108"/><area shape="rect" id="node3" href="cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="318,81,477,108"/><area shape="rect" id="node4" href="cruzeiro_8c.html#aa6c77c38ce0e50b4e897fa2470abfca7" title="ligadorDeClasse" alt="" coords="526,81,645,108"/><area shape="rect" id="node5" href="cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="701,5,785,32"/><area shape="rect" id="node7" href="interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08" title="accessField" alt="" coords="697,56,789,83"/><area shape="rect" id="node8" href="interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa" title="invoke" alt="" coords="713,107,773,133"/><area shape="rect" id="node9" href="interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="693,157,792,184"/><area shape="rect" id="node6" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="840,5,891,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0dcac7578c8c1cf7ef0f7b6fffe5ae24"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verifyClassfile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *&#160;</td>
+          <td class="paramname"><em>cf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="checker_8c_source.html#l00330">330</a> do ficheiro <a class="el" href="checker_8c_source.html">checker.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_a0dcac7578c8c1cf7ef0f7b6fffe5ae24_cgraph.png" border="0" usemap="#checker_8c_a0dcac7578c8c1cf7ef0f7b6fffe5ae24_cgraph" alt=""/></div>
+<map name="checker_8c_a0dcac7578c8c1cf7ef0f7b6fffe5ae24_cgraph" id="checker_8c_a0dcac7578c8c1cf7ef0f7b6fffe5ae24_cgraph">
+<area shape="rect" id="node2" href="checker_8c.html#a6ecc7358598704e5b4e9d77f06495482" title="verifyConstantPool" alt="" coords="160,80,293,107"/><area shape="rect" id="node3" href="checker_8c.html#ac5b6a6c9fa38ec400a3d15f1421089d8" title="isFieldDescriptor" alt="" coords="349,29,469,56"/><area shape="rect" id="node6" href="checker_8c.html#a3e295f32f754594e38f31297afebca97" title="verifyAccessFlags" alt="" coords="161,131,292,157"/><area shape="rect" id="node7" href="_leit_exib_8h.html#a3fe75659fbce73494617d80f3a705a67" title="getTipoAtributo" alt="" coords="171,181,282,208"/><area shape="rect" id="node8" href="checker_8c.html#a5c524d6b071cd201765ed95b10b9eedd" title="verifyBytecode" alt="" coords="172,232,281,259"/><area shape="rect" id="node4" href="checker_8c.html#a9022e1fcb1064556f8df87f06b5babd2" title="isMethodDescriptor" alt="" coords="342,104,477,131"/><area shape="rect" id="node5" href="_leit_exib_8h.html#a345c5213063b16760fc936583f24d536" title="ImprimeConstUtf8" alt="" coords="526,104,655,131"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_a0dcac7578c8c1cf7ef0f7b6fffe5ae24_icgraph.png" border="0" usemap="#checker_8c_a0dcac7578c8c1cf7ef0f7b6fffe5ae24_icgraph" alt=""/></div>
+<map name="checker_8c_a0dcac7578c8c1cf7ef0f7b6fffe5ae24_icgraph" id="checker_8c_a0dcac7578c8c1cf7ef0f7b6fffe5ae24_icgraph">
+<area shape="rect" id="node2" href="cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="161,81,319,108"/><area shape="rect" id="node3" href="cruzeiro_8c.html#aa6c77c38ce0e50b4e897fa2470abfca7" title="ligadorDeClasse" alt="" coords="369,81,487,108"/><area shape="rect" id="node4" href="cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="543,5,627,32"/><area shape="rect" id="node6" href="interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08" title="accessField" alt="" coords="539,56,631,83"/><area shape="rect" id="node7" href="interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa" title="invoke" alt="" coords="555,107,615,133"/><area shape="rect" id="node8" href="interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="536,157,635,184"/><area shape="rect" id="node5" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="683,5,733,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6ecc7358598704e5b4e9d77f06495482"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verifyConstantPool </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *&#160;</td>
+          <td class="paramname"><em>cf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="checker_8c_source.html#l00130">130</a> do ficheiro <a class="el" href="checker_8c_source.html">checker.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_a6ecc7358598704e5b4e9d77f06495482_cgraph.png" border="0" usemap="#checker_8c_a6ecc7358598704e5b4e9d77f06495482_cgraph" alt=""/></div>
+<map name="checker_8c_a6ecc7358598704e5b4e9d77f06495482_cgraph" id="checker_8c_a6ecc7358598704e5b4e9d77f06495482_cgraph">
+<area shape="rect" id="node2" href="checker_8c.html#ac5b6a6c9fa38ec400a3d15f1421089d8" title="isFieldDescriptor" alt="" coords="195,29,315,56"/><area shape="rect" id="node3" href="checker_8c.html#a9022e1fcb1064556f8df87f06b5babd2" title="isMethodDescriptor" alt="" coords="187,104,322,131"/><area shape="rect" id="node4" href="_leit_exib_8h.html#a345c5213063b16760fc936583f24d536" title="ImprimeConstUtf8" alt="" coords="371,104,501,131"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_a6ecc7358598704e5b4e9d77f06495482_icgraph.png" border="0" usemap="#checker_8c_a6ecc7358598704e5b4e9d77f06495482_icgraph" alt=""/></div>
+<map name="checker_8c_a6ecc7358598704e5b4e9d77f06495482_icgraph" id="checker_8c_a6ecc7358598704e5b4e9d77f06495482_icgraph">
+<area shape="rect" id="node2" href="checker_8h.html#a496eaab3cf87436d88f45f408fcc7b54" title="verifyClassfile" alt="" coords="187,81,293,108"/><area shape="rect" id="node3" href="cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="342,81,501,108"/><area shape="rect" id="node4" href="cruzeiro_8c.html#aa6c77c38ce0e50b4e897fa2470abfca7" title="ligadorDeClasse" alt="" coords="550,81,669,108"/><area shape="rect" id="node5" href="cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="725,5,809,32"/><area shape="rect" id="node7" href="interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08" title="accessField" alt="" coords="721,56,813,83"/><area shape="rect" id="node8" href="interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa" title="invoke" alt="" coords="737,107,797,133"/><area shape="rect" id="node9" href="interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="717,157,816,184"/><area shape="rect" id="node6" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="864,5,915,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4bbffc69c6cd821aebc4c480ffd3aec1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verifyOverrideMethodFinal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *&#160;</td>
+          <td class="paramname"><em>cf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname"><em>jvm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="checker_8c_source.html#l00638">638</a> do ficheiro <a class="el" href="checker_8c_source.html">checker.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_a4bbffc69c6cd821aebc4c480ffd3aec1_cgraph.png" border="0" usemap="#checker_8c_a4bbffc69c6cd821aebc4c480ffd3aec1_cgraph" alt=""/></div>
+<map name="checker_8c_a4bbffc69c6cd821aebc4c480ffd3aec1_cgraph" id="checker_8c_a4bbffc69c6cd821aebc4c480ffd3aec1_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#aaa52a592057a81d501ee49d8d1c81301" title="getSuperClass" alt="" coords="230,5,338,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_a4bbffc69c6cd821aebc4c480ffd3aec1_icgraph.png" border="0" usemap="#checker_8c_a4bbffc69c6cd821aebc4c480ffd3aec1_icgraph" alt=""/></div>
+<map name="checker_8c_a4bbffc69c6cd821aebc4c480ffd3aec1_icgraph" id="checker_8c_a4bbffc69c6cd821aebc4c480ffd3aec1_icgraph">
+<area shape="rect" id="node2" href="cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="230,81,389,108"/><area shape="rect" id="node3" href="cruzeiro_8c.html#aa6c77c38ce0e50b4e897fa2470abfca7" title="ligadorDeClasse" alt="" coords="438,81,557,108"/><area shape="rect" id="node4" href="cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="613,5,697,32"/><area shape="rect" id="node6" href="interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08" title="accessField" alt="" coords="609,56,701,83"/><area shape="rect" id="node7" href="interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa" title="invoke" alt="" coords="625,107,685,133"/><area shape="rect" id="node8" href="interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="605,157,704,184"/><area shape="rect" id="node5" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="752,5,803,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b952615631393d4b96a3eafe88cb3e7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void verifySuperFinal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *&#160;</td>
+          <td class="paramname"><em>cf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname"><em>jvm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="checker_8c_source.html#l00625">625</a> do ficheiro <a class="el" href="checker_8c_source.html">checker.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_a7b952615631393d4b96a3eafe88cb3e7_cgraph.png" border="0" usemap="#checker_8c_a7b952615631393d4b96a3eafe88cb3e7_cgraph" alt=""/></div>
+<map name="checker_8c_a7b952615631393d4b96a3eafe88cb3e7_cgraph" id="checker_8c_a7b952615631393d4b96a3eafe88cb3e7_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#aaa52a592057a81d501ee49d8d1c81301" title="getSuperClass" alt="" coords="171,5,279,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="checker_8c_a7b952615631393d4b96a3eafe88cb3e7_icgraph.png" border="0" usemap="#checker_8c_a7b952615631393d4b96a3eafe88cb3e7_icgraph" alt=""/></div>
+<map name="checker_8c_a7b952615631393d4b96a3eafe88cb3e7_icgraph" id="checker_8c_a7b952615631393d4b96a3eafe88cb3e7_icgraph">
+<area shape="rect" id="node2" href="cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="171,81,330,108"/><area shape="rect" id="node3" href="cruzeiro_8c.html#aa6c77c38ce0e50b4e897fa2470abfca7" title="ligadorDeClasse" alt="" coords="379,81,498,108"/><area shape="rect" id="node4" href="cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="554,5,638,32"/><area shape="rect" id="node6" href="interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08" title="accessField" alt="" coords="550,56,642,83"/><area shape="rect" id="node7" href="interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa" title="invoke" alt="" coords="566,107,626,133"/><area shape="rect" id="node8" href="interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="547,157,645,184"/><area shape="rect" id="node5" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="693,5,744,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="checker_8c.html">checker.c</a></li>
+    <li class="footer">Gerado em Terça, 5 de Julho de 2016 00:01:39 para JVM - Cruzeiro por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

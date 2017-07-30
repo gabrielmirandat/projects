@@ -1,0 +1,37 @@
+Para pegar os arquivos do repositorio
+git pull
+
+Quando voce criou arquivos novos e quer enviar ao servidor 
+git add nomeDoArquivo
+git commit -m "mensagem para o historico do repositorio"
+git pull -> só por precaução
+git push 
+
+Fiz alteracoes e gostaria de enviar ao servidor 
+git commit -m "mensagem para os amigos"
+git pull -> so por desencargo de consciencia
+git push
+
+lina 10 aaaaaa
+linha 11 bbbbb
+
+Resolvendo conflitos
+HEAD ======
+COISAS ANTIGAS
+=========
+COISAS NOVAS
+------------
+git commit -m "mensagem para os amigos"
+git pull
+git push
+
+Deu merda e gostaria de voltar pra versao que esta no servidor
+git checkout hashDaversao
+https://bitbucket.org/yantrindade/jvm/commits/branch/master
+
+OBS: nao consigo resolver de jeito nenhum e quero voltar ao ultimo commit do servidor
+git reset --HARD
+
+git status -> ver estado do git
+git log
+git diff -> mostra as diferencas entre suas versao

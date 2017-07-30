@@ -1,0 +1,11 @@
+<map id="getSuperClass" name="getSuperClass">
+<area shape="rect" id="node2" href="$checker_8h.html#aed60e642c76864b5b3b00950a8296a2d" title="verifySuperFinal" alt="" coords="193,5,309,32"/>
+<area shape="rect" id="node8" href="$interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa" title="invoke" alt="" coords="782,107,842,133"/>
+<area shape="rect" id="node9" href="$interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="763,157,861,184"/>
+<area shape="rect" id="node10" href="$checker_8h.html#aeeaf21856554a50ea68bb1a9fcd69c2b" title="verifyOverrideMethodFinal" alt="" coords="163,56,338,83"/>
+<area shape="rect" id="node3" href="$cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="387,56,546,83"/>
+<area shape="rect" id="node4" href="$cruzeiro_8c.html#aa6c77c38ce0e50b4e897fa2470abfca7" title="ligadorDeClasse" alt="" coords="595,56,714,83"/>
+<area shape="rect" id="node5" href="$cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="770,5,854,32"/>
+<area shape="rect" id="node7" href="$interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08" title="accessField" alt="" coords="766,56,858,83"/>
+<area shape="rect" id="node6" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="909,5,960,32"/>
+</map>

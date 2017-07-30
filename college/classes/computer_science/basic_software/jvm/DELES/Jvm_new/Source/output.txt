@@ -1,0 +1,251 @@
+			Leitor/Exibidor Cruzeiro - Software Basico 1/2016
+
+Magic: 				0xcafebabe
+Versao Min: 			0
+Principal versao: 		46	[1.2]
+Tamanho do CONSTANTE Pool: 	35
+Flags de acesso: 		0x0021	[super public ]
+Classe carregada: 			cp_info #8	<javaTeste/PrintTeste>
+Super class: 			cp_info #9	<java/lang/Object>
+Quantidade de Interfaces: 	0
+Quantidade de Campos: 		0
+Quantidade de Metodos: 		2
+Quantidade de Atributos: 	1
+CONSTANTE Pool:
+[1]	CONSTANTEe_metodo_referencia
+	Nome da classe:		cp_info #9	<java/lang/Object>
+	Nome e tipo:		cp_info #18	<<init>()V>
+
+[2]	CONSTANTE_Double_info
+	High bytes:		0x40080000
+	Low bytes:		0x00000000
+	Double:			3,000000
+
+[3]	(large numeric continued)
+
+[4]	CONSTANTEe_campo_referencia
+	Nome da classe:		cp_info #19	<java/lang/System>
+	Nome e tipo:		cp_info #20	<outLjava/io/PrintStream;>
+
+[5]	CONSTANTEe_metodo_referencia
+	Nome da classe:		cp_info #21	<java/io/PrintStream>
+	Nome e tipo:		cp_info #22	<println(Z)V>
+
+[6]	CONSTANTEe_metodo_referencia
+	Nome da classe:		cp_info #21	<java/io/PrintStream>
+	Nome e tipo:		cp_info #23	<print(D)V>
+
+[7]	CONSTANTEe_metodo_referencia
+	Nome da classe:		cp_info #21	<java/io/PrintStream>
+	Nome e tipo:		cp_info #24	<println()V>
+
+[8]	CONSTANTE_Class_info
+	Nome da Classe:		cp_info #25	<javaTeste/PrintTeste>
+
+[9]	CONSTANTE_Class_info
+	Nome da Classe:		cp_info #26	<java/lang/Object>
+
+[10]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	6
+	String:			<init>
+
+[11]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	3
+	String:			()V
+
+[12]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	4
+	String:			Code
+
+[13]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	15
+	String:			LineNumberTable
+
+[14]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	4
+	String:			main
+
+[15]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	22
+	String:			([Ljava/lang/String;)V
+
+[16]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	10
+	String:			SourceFile
+
+[17]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	15
+	String:			PrintTeste.java
+
+[18]	CONSTANTE_NameAndType_info
+	Nome:			cp_info #10	<<init>>
+	Descritor:		cp_info #11	<()V>
+
+[19]	CONSTANTE_Class_info
+	Nome da Classe:		cp_info #27	<java/lang/System>
+
+[20]	CONSTANTE_NameAndType_info
+	Nome:			cp_info #28	<out>
+	Descritor:		cp_info #29	<Ljava/io/PrintStream;>
+
+[21]	CONSTANTE_Class_info
+	Nome da Classe:		cp_info #30	<java/io/PrintStream>
+
+[22]	CONSTANTE_NameAndType_info
+	Nome:			cp_info #31	<println>
+	Descritor:		cp_info #32	<(Z)V>
+
+[23]	CONSTANTE_NameAndType_info
+	Nome:			cp_info #33	<print>
+	Descritor:		cp_info #34	<(D)V>
+
+[24]	CONSTANTE_NameAndType_info
+	Nome:			cp_info #31	<println>
+	Descritor:		cp_info #11	<()V>
+
+[25]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	20
+	String:			javaTeste/PrintTeste
+
+[26]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	16
+	String:			java/lang/Object
+
+[27]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	16
+	String:			java/lang/System
+
+[28]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	3
+	String:			out
+
+[29]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	21
+	String:			Ljava/io/PrintStream;
+
+[30]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	19
+	String:			java/io/PrintStream
+
+[31]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	7
+	String:			println
+
+[32]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	4
+	String:			(Z)V
+
+[33]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	5
+	String:			print
+
+[34]	CONSTANTE_Utf8_info
+	Tamanho do array de byte:	4
+	String:			(D)V
+
+Interfaces:
+	Quantidade de interfaces:	0
+
+Fields:
+Quantidade de fields:		0
+
+Metodos:
+Quantidade de metodos:		2
+
+[0]	<init>
+Nome:			cp_info #10	<<init>>
+Descritor:		cp_info #11	<()V>
+Flags de Acesso:		0x0001		[public]
+
+Contador de atributos do metodo:	1
+
+[0]	Code
+	Informacoes gerais:
+		Indice do nome do atributo:	cp_info #12	Code
+		Tamanho do atributo:	29
+	Informacoes especificas:
+		Bytecode:
+			linha
+			1	aload_0
+			2	invokespecial	#1	<java/lang/Object.<init>>
+			3	return
+
+			Tamanho da Tabela de Excecoes:		0
+
+		Miscellaneous:
+				Profundidade Maxima da Pilha:		1
+				Variaveis locais maximas:	1
+				Tamanho do Code:			5
+
+		Quantidade de atributos de Code:	1
+
+	[0]	LineNumberTable
+		Informacoes gerais:
+			Indice do nome do atributo:	cp_info #13	LineNumberTable
+			Tamanho do atributo:	6
+		Informacoes especificas:
+				Tamanho da Tabela de Numero de Linha:	1
+				Tabela de Numero de Linha:
+				Nr.	start_pc	line_number
+				0	0	3
+
+[1]	main
+Nome:			cp_info #14	<main>
+Descritor:		cp_info #15	<([Ljava/lang/String;)V>
+Flags de Acesso:		0x0009		[static public]
+
+Contador de atributos do metodo:	1
+
+[0]	Code
+	Informacoes gerais:
+		Indice do nome do atributo:	cp_info #12	Code
+		Tamanho do atributo:	71
+	Informacoes especificas:
+		Bytecode:
+			linha
+			1	ldc2_w	#2	<3,000000>
+			2	dstore_1
+			3	iconst_1
+			4	istore_3
+			5	getstatic	#4	<java/lang/System.out>
+			6	iload_3
+			7	invokevirtual	#5	<java/io/PrintStream.println>
+			8	getstatic	#4	<java/lang/System.out>
+			9	dload_1
+			10	invokevirtual	#6	<java/io/PrintStream.print>
+			11	getstatic	#4	<java/lang/System.out>
+			12	invokevirtual	#7	<java/io/PrintStream.println>
+			13	return
+
+			Tamanho da Tabela de Excecoes:		0
+
+		Miscellaneous:
+				Profundidade Maxima da Pilha:		3
+				Variaveis locais maximas:	4
+				Tamanho do Code:			27
+
+		Quantidade de atributos de Code:	1
+
+	[0]	LineNumberTable
+		Informacoes gerais:
+			Indice do nome do atributo:	cp_info #13	LineNumberTable
+			Tamanho do atributo:	26
+		Informacoes especificas:
+				Tamanho da Tabela de Numero de Linha:	6
+				Tabela de Numero de Linha:
+				Nr.	start_pc	line_number
+				0	0	6
+				1	4	7
+				2	6	8
+				3	13	9
+				4	20	10
+				5	26	18
+Atributos da Classe:
+Quantidade de atributos da classe:	1
+
+[0]	SourceFile
+Informacoes gerais:
+	Indice do nome do atributo:	cp_info #16	SourceFile
+	Tamanho do atributo:	2
+Informacoes especificas:
+		Indice do nome do arquivo fonte:	cp_info #17	PrintTeste.java

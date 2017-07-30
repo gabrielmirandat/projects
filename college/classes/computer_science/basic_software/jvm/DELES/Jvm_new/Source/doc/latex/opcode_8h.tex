@@ -1,0 +1,1861 @@
+\hypertarget{opcode_8h}{\section{Referência ao ficheiro opcode.\-h}
+\label{opcode_8h}\index{opcode.\-h@{opcode.\-h}}
+}
+Este grafo mostra quais são os ficheiros que incluem directamente ou indirectamente este ficheiro\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{opcode_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{opcode_8h_a51158539d4d6022c9a445e78b0abfa94}{nop}~0x00
+\item 
+\#define \hyperlink{opcode_8h_a7fd12a18bd563222924a258e5ca310a1}{aconst\-\_\-null}~0x01
+\item 
+\#define \hyperlink{opcode_8h_a0acdc57b39dba02a01e01a00488d17d4}{iconst\-\_\-m1}~0x02
+\item 
+\#define \hyperlink{opcode_8h_a4cfbaede32fab69878101cba8dd466df}{iconst\-\_\-0}~0x03
+\item 
+\#define \hyperlink{opcode_8h_a3f7aa6acd914576563b0fb2f245c25be}{iconst\-\_\-1}~0x04
+\item 
+\#define \hyperlink{opcode_8h_af6f6b6189b6beb380ef05334e4aaef3e}{iconst\-\_\-2}~0x05
+\item 
+\#define \hyperlink{opcode_8h_a183bc4f0efd9ae42453eefd798829e11}{iconst\-\_\-3}~0x06
+\item 
+\#define \hyperlink{opcode_8h_a5a371cce9d9c5e75e3023f6f72a5c213}{iconst\-\_\-4}~0x07
+\item 
+\#define \hyperlink{opcode_8h_a7f8f94601a5efe2de574907a8389a40d}{iconst\-\_\-5}~0x08
+\item 
+\#define \hyperlink{opcode_8h_a7f77bb403ded660eb57f52a066872de8}{lconst\-\_\-0}~0x09
+\item 
+\#define \hyperlink{opcode_8h_a578642be54c9a7f107c5c9c884d1d4ac}{lconst\-\_\-1}~0x0\-A
+\item 
+\#define \hyperlink{opcode_8h_aa367d7b04786b4acad818d6b0158f7bf}{fconst\-\_\-0}~0x0\-B
+\item 
+\#define \hyperlink{opcode_8h_a98a6f1f240ad5fc889bb3990ee80145f}{fconst\-\_\-1}~0x0\-C
+\item 
+\#define \hyperlink{opcode_8h_a24f222ee22044fc1df09160a2dc3ccd8}{fconst\-\_\-2}~0x0\-D
+\item 
+\#define \hyperlink{opcode_8h_ac4c8fdcc66307ff2ce5ef604525696c8}{dconst\-\_\-0}~0x0\-E
+\item 
+\#define \hyperlink{opcode_8h_a7ed12e4998d2a3359e769d5b2a6b4fa1}{dconst\-\_\-1}~0x0\-F
+\item 
+\#define \hyperlink{opcode_8h_af6439bc031fdbc17b20a8c5c1a3d6c36}{bipush}~\hyperlink{_leit_exib_8h_ad79c7e3d54217f2c016a7726beb433f2}{F\-L\-A\-G\-\_\-\-F\-I\-N\-A\-L}
+\item 
+\#define \hyperlink{opcode_8h_a3dc635b550b6a83051c608590ecf7edd}{sipush}~0x11
+\item 
+\#define \hyperlink{opcode_8h_aa5d997194c1c9ea941b1690edddf5937}{ldc}~0x12
+\item 
+\#define \hyperlink{opcode_8h_a26e9e5ac43c5d7d35aee0f97221524cf}{ldc\-\_\-w}~0x13
+\item 
+\#define \hyperlink{opcode_8h_a9fb6076137de49037dc098fd9cc62313}{ldc2\-\_\-w}~0x14
+\item 
+\#define \hyperlink{opcode_8h_a5af30fd9c0e4d9d348e759afdb4c0f83}{iload}~0x15
+\item 
+\#define \hyperlink{opcode_8h_aa53d82d3dfe837d8cc9d24fcfdffe7e3}{lload}~0x16
+\item 
+\#define \hyperlink{opcode_8h_aab36c2f5cac6af3e79559c19f4f7de0d}{fload}~0x17
+\item 
+\#define \hyperlink{opcode_8h_af65d10433126ad1a779b4ca27d6fa653}{dload}~0x18
+\item 
+\#define \hyperlink{opcode_8h_ae6371b30f10792115cb3ac649af46a48}{aload}~0x19
+\item 
+\#define \hyperlink{opcode_8h_afaddc63668b3f300dd2901b0a28e837f}{iload\-\_\-0}~0x1\-A
+\item 
+\#define \hyperlink{opcode_8h_adefe31780affd6d606be9cd5e4aff5f5}{iload\-\_\-1}~0x1\-B
+\item 
+\#define \hyperlink{opcode_8h_a8547159f416180754707dc01fb778109}{iload\-\_\-2}~0x1\-C
+\item 
+\#define \hyperlink{opcode_8h_ad4a320b4b90ae1fc08d2ec7d0c8fe2d5}{iload\-\_\-3}~0x1\-D
+\item 
+\#define \hyperlink{opcode_8h_ad938e5c6b18accc9eab26ce0684ec513}{lload\-\_\-0}~0x1\-E
+\item 
+\#define \hyperlink{opcode_8h_a3a304ac4ae1179d335a58fe2c3538261}{lload\-\_\-1}~0x1\-F
+\item 
+\#define \hyperlink{opcode_8h_a078bbbaf4593ce3573ff97edd3986156}{lload\-\_\-2}~\hyperlink{_leit_exib_8h_ae9e588cab11f6c5dba0a52d364379632}{F\-L\-A\-G\-\_\-\-S\-U\-P\-E\-R}
+\item 
+\#define \hyperlink{opcode_8h_a6e0dfe774257b57e8a02c5ad951f9135}{lload\-\_\-3}~0x21
+\item 
+\#define \hyperlink{opcode_8h_adb02c18f894469df772424a8f3a0c6c7}{fload\-\_\-0}~0x22
+\item 
+\#define \hyperlink{opcode_8h_a80c9c6f65fb57fc1427020bc59fb0a53}{fload\-\_\-1}~0x23
+\item 
+\#define \hyperlink{opcode_8h_a7c5c19b9769b1a571d4b111272bd6003}{fload\-\_\-2}~0x24
+\item 
+\#define \hyperlink{opcode_8h_ade8e4eac8f60f21b692140dba20fec92}{fload\-\_\-3}~0x25
+\item 
+\#define \hyperlink{opcode_8h_acd99702c259cb51dd0a8228eb54aa3d1}{dload\-\_\-0}~0x26
+\item 
+\#define \hyperlink{opcode_8h_af9416a276f15cfdc7fd33cf94183be34}{dload\-\_\-1}~0x27
+\item 
+\#define \hyperlink{opcode_8h_a0ee62ac46dbd54a573b9a7e756f3c730}{dload\-\_\-2}~0x28
+\item 
+\#define \hyperlink{opcode_8h_a7599911c3ade482d4ccf5189a664611b}{dload\-\_\-3}~0x29
+\item 
+\#define \hyperlink{opcode_8h_a73d81a6cfe274e49a600742e1d4e1e34}{aload\-\_\-0}~0x2\-A
+\item 
+\#define \hyperlink{opcode_8h_a3aa07ab7d810d444add7cf709774083b}{aload\-\_\-1}~0x2\-B
+\item 
+\#define \hyperlink{opcode_8h_aca9939157a3e158b1bfbb4ca29f7e67b}{aload\-\_\-2}~0x2\-C
+\item 
+\#define \hyperlink{opcode_8h_a5612b16ab586b34126689cd4fbe0704f}{aload\-\_\-3}~0x2\-D
+\item 
+\#define \hyperlink{opcode_8h_a1b2ac49602540837bd5b34a42cc3b50b}{iaload}~0x2\-E
+\item 
+\#define \hyperlink{opcode_8h_a23a1786c56e9fc9d5202c0e34caab820}{laload}~0x2\-F
+\item 
+\#define \hyperlink{opcode_8h_aec1a1d9782fab538ea0a52ab16a96f24}{faload}~0x30
+\item 
+\#define \hyperlink{opcode_8h_a7f5facc280562c2e659f1b1bfb2602fe}{daload}~0x31
+\item 
+\#define \hyperlink{opcode_8h_a8bf25d3a37fd380f4f4c5f8cb1821d9b}{aaload}~0x32
+\item 
+\#define \hyperlink{opcode_8h_a36b9f7376e19f01f4e27e22ac590bc21}{baload}~0x33
+\item 
+\#define \hyperlink{opcode_8h_aac214c36c60f788f5b6ae6084c35606f}{caload}~0x34
+\item 
+\#define \hyperlink{opcode_8h_a8a13d1603bad0e00de02a90d95fbd456}{saload}~0x35
+\item 
+\#define \hyperlink{opcode_8h_ae93d8211e39712320e9aab28dea6109a}{istore}~0x36
+\item 
+\#define \hyperlink{opcode_8h_a478fcb34cc5a0f6f4bd0e7c334ca2dd0}{lstore}~0x37
+\item 
+\#define \hyperlink{opcode_8h_a21f7164a6438254252f38d154edb1480}{fstore}~0x38
+\item 
+\#define \hyperlink{opcode_8h_a93911a2b074cab5030ae7b9c442db43b}{dstore}~0x39
+\item 
+\#define \hyperlink{opcode_8h_abafe47e6f1e021ab01fbde1659a27628}{astore}~0x3\-A
+\item 
+\#define \hyperlink{opcode_8h_a813700ef95cda3bc6b9189506a7829be}{istore\-\_\-0}~0x3\-B
+\item 
+\#define \hyperlink{opcode_8h_a5e4b49c7468f714d50d8e1825c864e90}{istore\-\_\-1}~0x3\-C
+\item 
+\#define \hyperlink{opcode_8h_a61f871fa3e1fb8ab78b9c3d20ed2799e}{istore\-\_\-2}~0x3\-D
+\item 
+\#define \hyperlink{opcode_8h_aa531cc7ebcf0844d1bd33f7359fbc68c}{istore\-\_\-3}~0x3\-E
+\item 
+\#define \hyperlink{opcode_8h_ae579e23da97ef0585254fc82db99c136}{lstore\-\_\-0}~0x3\-F
+\item 
+\#define \hyperlink{opcode_8h_a745310b7b51668f138b721a7d4094a23}{lstore\-\_\-1}~0x40
+\item 
+\#define \hyperlink{opcode_8h_a01fe88bcbfa104ec12eecd68d32e64be}{lstore\-\_\-2}~0x41
+\item 
+\#define \hyperlink{opcode_8h_a0972ce2305c293ab985ffcc3f3178f6d}{lstore\-\_\-3}~0x42
+\item 
+\#define \hyperlink{opcode_8h_a7f390b1894ee53ae139b5bfe1796b227}{fstore\-\_\-0}~0x43
+\item 
+\#define \hyperlink{opcode_8h_aba0e117eafb7e57b2ce3f7cfbc672424}{fstore\-\_\-1}~0x44
+\item 
+\#define \hyperlink{opcode_8h_a2297d43ae982f6969abe2582b9fe5605}{fstore\-\_\-2}~0x45
+\item 
+\#define \hyperlink{opcode_8h_a60908be2af4f4b38d171310a7d0f883b}{fstore\-\_\-3}~0x46
+\item 
+\#define \hyperlink{opcode_8h_a4dd6f59660273abf83f4323894d553fa}{dstore\-\_\-0}~0x47
+\item 
+\#define \hyperlink{opcode_8h_ad6b66a3c7ada4db575db8bba43d92740}{dstore\-\_\-1}~0x48
+\item 
+\#define \hyperlink{opcode_8h_a45c076746288cb5aabdea4fb3b3fc937}{dstore\-\_\-2}~0x49
+\item 
+\#define \hyperlink{opcode_8h_abb43acbd3ebcd8121f6e773747848ac9}{dstore\-\_\-3}~0x4\-A
+\item 
+\#define \hyperlink{opcode_8h_a0f051ccd5ed1d98de62b362db5f5efb4}{astore\-\_\-0}~0x4\-B
+\item 
+\#define \hyperlink{opcode_8h_a3c6d07d14bb7e18d5473af517686e12d}{astore\-\_\-1}~0x4\-C
+\item 
+\#define \hyperlink{opcode_8h_a140c857c38ba5cc8f320695174963d8f}{astore\-\_\-2}~0x4\-D
+\item 
+\#define \hyperlink{opcode_8h_a51f422df923d7c9aa71b19cd91966078}{astore\-\_\-3}~0x4\-E
+\item 
+\#define \hyperlink{opcode_8h_a54e16323e3f70975a7dc4ca1ea739b33}{iastore}~0x4\-F
+\item 
+\#define \hyperlink{opcode_8h_a8f2c940f6a689ee97ede38311a071b6d}{lastore}~0x50
+\item 
+\#define \hyperlink{opcode_8h_a132b78aa675a076c4192bd221a8ae37b}{fastore}~0x51
+\item 
+\#define \hyperlink{opcode_8h_a130b6c4f8cbd110d58c9489b2ec3e025}{dastore}~0x52
+\item 
+\#define \hyperlink{opcode_8h_a8fc174ad23d92181e081158c8d50f3dc}{aastore}~0x53
+\item 
+\#define \hyperlink{opcode_8h_a0f10dea3bdca8dd51517881ca837b090}{bastore}~0x54
+\item 
+\#define \hyperlink{opcode_8h_a1409755537d8c7d2570d25a04899f0f9}{castore}~0x55
+\item 
+\#define \hyperlink{opcode_8h_af5b292b89971147e1ba0c20653eef21c}{sastore}~0x56
+\item 
+\#define \hyperlink{opcode_8h_a6a13234722161c83fd6467afed65b209}{pop}~0x57
+\item 
+\#define \hyperlink{opcode_8h_a1e3b7fde917eb7f7f293ccd97cd99f2b}{pop2}~0x58
+\item 
+\#define \hyperlink{opcode_8h_a8c99c7473eafa3c76bec2d3acc829fe8}{dup}~0x59
+\item 
+\#define \hyperlink{opcode_8h_a9da47907892f8edc8a1d4c574493b5c6}{dup\-\_\-x1}~0x5\-A
+\item 
+\#define \hyperlink{opcode_8h_a3c1d396c28f55033d1fc36160149cb98}{dup\-\_\-x2}~0x5\-B
+\item 
+\#define \hyperlink{opcode_8h_a616506d603527708b2bab92b1240f56f}{dup2}~0x5\-C
+\item 
+\#define \hyperlink{opcode_8h_a0527050ae99acc68c14a134622de3034}{dup2\-\_\-x1}~0x5\-D
+\item 
+\#define \hyperlink{opcode_8h_a6da536de76a55dfafc5412771ba41f2b}{dup2\-\_\-x2}~0x5\-E
+\item 
+\#define \hyperlink{opcode_8h_a16e95c6dac9f95627fb9dbb7e9b2537b}{swap}~0x5\-F
+\item 
+\#define \hyperlink{opcode_8h_a454aded56355685f9d1ba211f149b358}{iadd}~0x60
+\item 
+\#define \hyperlink{opcode_8h_a35d1f78d718247be9578008d3a90f891}{ladd}~0x61
+\item 
+\#define \hyperlink{opcode_8h_a93579fad2d114588de1baae1aa031b39}{fadd}~0x62
+\item 
+\#define \hyperlink{opcode_8h_a954451d8d1eb3534a22c918c7eba3f31}{dadd}~0x63
+\item 
+\#define \hyperlink{opcode_8h_a0d23b6d61c40090519c85873d65b78bd}{isub}~0x64
+\item 
+\#define \hyperlink{opcode_8h_a77f3a45a7694df2848fa3bc04380014d}{lsub}~0x65
+\item 
+\#define \hyperlink{opcode_8h_a68cc9495a660d4abce3e84e35e8e61ab}{fsub}~0x66
+\item 
+\#define \hyperlink{opcode_8h_a59ae5401c7650a23a859b06d79ee9751}{dsub}~0x67
+\item 
+\#define \hyperlink{opcode_8h_ab3b8d2216fbbf116f42778e1a71a1e22}{imul}~0x68
+\item 
+\#define \hyperlink{opcode_8h_a59989acb4429f7252175e8f6187000d0}{lmul}~0x69
+\item 
+\#define \hyperlink{opcode_8h_a4fdee448b87e5129c5325afdedd44e62}{fmul}~0x6\-A
+\item 
+\#define \hyperlink{opcode_8h_a2f9aa9959dec9eb4efbb6cd6f11e0700}{dmul}~0x6\-B
+\item 
+\#define \hyperlink{opcode_8h_af2dec382fbd6207a971750a2f64132a7}{idiv}~0x6\-C
+\item 
+\#define \hyperlink{opcode_8h_a6d949ad624d68865da2e6bf569162463}{ldiv\-\_\-}~0x6\-D
+\item 
+\#define \hyperlink{opcode_8h_a19d518435a950f17a1f0a4479049b0c7}{fdiv}~0x6\-E
+\item 
+\#define \hyperlink{opcode_8h_a88c4e813246677fc14195820a8df8a51}{ddiv}~0x6\-F
+\item 
+\#define \hyperlink{opcode_8h_a14a7544ec0c18683f171e7e9aab00385}{irem}~0x70
+\item 
+\#define \hyperlink{opcode_8h_a7d0e55dc85db36a830f05c703873b73f}{lrem}~0x71
+\item 
+\#define \hyperlink{opcode_8h_a78dc6c236662b6267ba26b02fbc62d9d}{frem}~0x72
+\item 
+\#define \hyperlink{opcode_8h_a8918415981583b8e434b60df8eb031be}{drem}~0x73
+\item 
+\#define \hyperlink{opcode_8h_a70e81f796bc29bdc3f7a9d77684ac91d}{ineg}~0x74
+\item 
+\#define \hyperlink{opcode_8h_acc063c83549cdaa0e83ae41d79e22921}{lneg}~0x75
+\item 
+\#define \hyperlink{opcode_8h_a397ed5982fe98cec55bcb4de9913096b}{fneg}~0x76
+\item 
+\#define \hyperlink{opcode_8h_a64d1f7a489268a78847e4539f88b16c4}{dneg}~0x77
+\item 
+\#define \hyperlink{opcode_8h_a1eaf900c9d628e8e02f2451eb2c5bfca}{ishl}~0x78
+\item 
+\#define \hyperlink{opcode_8h_a38f798786d9744776dfb441dcc6dd8c9}{lshl}~0x79
+\item 
+\#define \hyperlink{opcode_8h_a3ded611266985a854b80ede2c99ffa4f}{ishr}~0x7\-A
+\item 
+\#define \hyperlink{opcode_8h_a9a71fc9d7f71b6aa006f0cab1a18da69}{lshr}~0x7\-B
+\item 
+\#define \hyperlink{opcode_8h_aa7f69cd0ce35cab46f90b53ff27c57c9}{iushr}~0x7\-C
+\item 
+\#define \hyperlink{opcode_8h_a4aa23b74f85d1abffc35e5f5ef59b3e5}{lushr}~0x7\-D
+\item 
+\#define \hyperlink{opcode_8h_a1dd4d92b6b0ecd5e3b4c28a437ed80a9}{iand}~0x7\-E
+\item 
+\#define \hyperlink{opcode_8h_a1a03c9336bd5ecf4845d8694bb2c610b}{land}~0x7\-F
+\item 
+\#define \hyperlink{opcode_8h_ae0ca2a91b54e8f333dc965180dbe7dad}{ior}~0x80
+\item 
+\#define \hyperlink{opcode_8h_aef6e8f47f746a36d2b24833c6809bec6}{lor}~0x81
+\item 
+\#define \hyperlink{opcode_8h_aff1478ac4ea001656abfe1c63d7a373c}{ixor}~0x82
+\item 
+\#define \hyperlink{opcode_8h_a5952429e830227aa7062a2df5d304ccb}{lxor}~0x83
+\item 
+\#define \hyperlink{opcode_8h_a674f4328d6b99ba16b89ee10c24a9ab1}{iinc}~0x84
+\item 
+\#define \hyperlink{opcode_8h_aa5e8f0d03b27785b06b2fc8ce3596afd}{i2l}~0x85
+\item 
+\#define \hyperlink{opcode_8h_a5862c056b89da43297c3e44f45d8b01c}{i2f}~0x86
+\item 
+\#define \hyperlink{opcode_8h_a51bc7ecb4ce4458933678e29410bf4d6}{i2d}~0x87
+\item 
+\#define \hyperlink{opcode_8h_aa57a735c9863ad0366c9bab0c95f03a5}{l2i}~0x88
+\item 
+\#define \hyperlink{opcode_8h_a15d1106530e14761cabe6d453100b601}{l2f}~0x89
+\item 
+\#define \hyperlink{opcode_8h_a91f9d0c0d3fa1118247eddbcad04c1a3}{l2d}~0x8\-A
+\item 
+\#define \hyperlink{opcode_8h_a6000796d76281e3d42c21e9004c7aded}{f2i}~0x8\-B
+\item 
+\#define \hyperlink{opcode_8h_a9bcc46dfd78a2001a6fa07ca6e0cf470}{f2l}~0x8\-C
+\item 
+\#define \hyperlink{opcode_8h_a8af45f23ab16b9d28792f2dfa77a5ca4}{f2d}~0x8\-D
+\item 
+\#define \hyperlink{opcode_8h_a0c709816779b512169a22e90b3dc48ce}{d2i}~0x8\-E
+\item 
+\#define \hyperlink{opcode_8h_ae5b51b842d2a8dbb5ffcdad4dffec617}{d2l}~0x8\-F
+\item 
+\#define \hyperlink{opcode_8h_a5cb2e911193996377a10db5e208c3961}{d2f}~0x90
+\item 
+\#define \hyperlink{opcode_8h_af96a15826a71dc62f352f9a9aa8e80ed}{i2b}~0x91
+\item 
+\#define \hyperlink{opcode_8h_a9a1df50b57b384447de662e8b6b34805}{i2c}~0x92
+\item 
+\#define \hyperlink{opcode_8h_af94034985aa4d9718f02d0dc6d15f9f0}{i2s}~0x93
+\item 
+\#define \hyperlink{opcode_8h_ae90c08171b6199ed152e506ac2b0da72}{lcmp}~0x94
+\item 
+\#define \hyperlink{opcode_8h_abd02694d463bb0add12660d40199f779}{fcmpl}~0x95
+\item 
+\#define \hyperlink{opcode_8h_a4894bc9a3d105cc336a5727987a73af2}{fcmpg}~0x96
+\item 
+\#define \hyperlink{opcode_8h_a2338226a70e808ce358ac0a14e55f5e6}{dcmpl}~0x97
+\item 
+\#define \hyperlink{opcode_8h_a00d9b9eba4616f824361d55d6b36277e}{dcmpg}~0x98
+\item 
+\#define \hyperlink{opcode_8h_aae36a9ffd7f4fba0b5acb272820b1965}{ifeq}~0x99
+\item 
+\#define \hyperlink{opcode_8h_afdc3f0cb2be91ecabd268daa84fd4427}{ifne}~0x9\-A
+\item 
+\#define \hyperlink{opcode_8h_af542b8cd41b5d779db2e7c34a4088e98}{iflt}~0x9\-B
+\item 
+\#define \hyperlink{opcode_8h_a4412482e7edad872de4955fce0b81e98}{ifge}~0x9\-C
+\item 
+\#define \hyperlink{opcode_8h_a377c9b9a071fc3b326517e9625058ec3}{ifgt}~0x9\-D
+\item 
+\#define \hyperlink{opcode_8h_aca4f19580b2aee712338a3e0fcec09f5}{ifle}~0x9\-E
+\item 
+\#define \hyperlink{opcode_8h_af3d35457a83eb90675c8052c573b0050}{if\-\_\-icmpeq}~0x9\-F
+\item 
+\#define \hyperlink{opcode_8h_ae2dff8dd4ea8fce9bc85e8c378542c5d}{if\-\_\-icmpne}~0x\-A0
+\item 
+\#define \hyperlink{opcode_8h_aab6fbae855fbdc4731e5fd9dddbc4ef7}{if\-\_\-icmplt}~0x\-A1
+\item 
+\#define \hyperlink{opcode_8h_a500f46e12974da7a5667bb5c29d5fdbe}{if\-\_\-icmpge}~0x\-A2
+\item 
+\#define \hyperlink{opcode_8h_ae4835b6a6d0a1fd302de12626eed81e2}{if\-\_\-icmpgt}~0x\-A3
+\item 
+\#define \hyperlink{opcode_8h_a8fcf5c2b5b1c931389462d0cbf70e9d6}{if\-\_\-icmple}~0x\-A4
+\item 
+\#define \hyperlink{opcode_8h_ad73022c10e0ff858fd77e94efaca281d}{if\-\_\-acmpeq}~0x\-A5
+\item 
+\#define \hyperlink{opcode_8h_a46a7518d2b792ab99e585d254a80a1bc}{if\-\_\-acmpne}~0x\-A6
+\item 
+\#define \hyperlink{opcode_8h_a1ad697eea7480965e6a8f5a00c8b9654}{goto\-\_\-}~0x\-A7
+\item 
+\#define \hyperlink{opcode_8h_ace2b7bfa1fca2da2f7ad25d02a8bbc86}{jsr}~0x\-A8
+\item 
+\#define \hyperlink{opcode_8h_ae7b1d18a435dcca5e1837205e5fc909d}{ret}~0x\-A9
+\item 
+\#define \hyperlink{opcode_8h_a41f4bc97b7d7d5852f47f222f0d3843f}{tableswitch}~0x\-A\-A
+\item 
+\#define \hyperlink{opcode_8h_a8e97b2775ecd6af72944be3260d46efc}{lookupswitch}~0x\-A\-B
+\item 
+\#define \hyperlink{opcode_8h_a39ee1ecb5a3d69802ea39ac9d0e25064}{ireturn}~0x\-A\-C
+\item 
+\#define \hyperlink{opcode_8h_a78d7d755c7ed27c124404714ed4e44bd}{lreturn}~0x\-A\-D
+\item 
+\#define \hyperlink{opcode_8h_a9f18ef3fcf124127f1687315f21c20f6}{freturn}~0x\-A\-E
+\item 
+\#define \hyperlink{opcode_8h_a96a99e0c738b54c02f520468024ca141}{dreturn}~0x\-A\-F
+\item 
+\#define \hyperlink{opcode_8h_a3c5ddbf6cfbfa740941259bb15581bfc}{areturn}~0x\-B0
+\item 
+\#define \hyperlink{opcode_8h_a638cccdcb1ce7ec07018daf98815c9c7}{return\-\_\-}~0x\-B1
+\item 
+\#define \hyperlink{opcode_8h_ad50d7df6505a183c7ce0b42071052af3}{getstatic}~0x\-B2
+\item 
+\#define \hyperlink{opcode_8h_a8fcfdcfe7225d59ba405d724f623d588}{putstatic}~0x\-B3
+\item 
+\#define \hyperlink{opcode_8h_a3f6dbd4c9f72ebe0a723b91d90aa77df}{getfield}~0x\-B4
+\item 
+\#define \hyperlink{opcode_8h_a173f3f625ebcafcd523aa0faa4cc8e79}{putfield}~0x\-B5
+\item 
+\#define \hyperlink{opcode_8h_a6c0f6662c2746c24648ef9ca90c4e832}{invokevirtual}~0x\-B6
+\item 
+\#define \hyperlink{opcode_8h_adcc076659dc116f56128ac6ab97871cd}{invokespecial}~0x\-B7
+\item 
+\#define \hyperlink{opcode_8h_af35f3ca79d1c5dcae067a1821b38578f}{invokestatic}~0x\-B8
+\item 
+\#define \hyperlink{opcode_8h_aaa6ddacda936b180e066883725303c7a}{invokeinterface}~0x\-B9
+\item 
+\#define \hyperlink{opcode_8h_a534fa6bfc54ecb5c984951c3ef154c23}{invokedynamic}~0x\-B\-A
+\item 
+\#define \hyperlink{opcode_8h_a1ac41480eb2e4aadd52252ee550b630a}{new}~0x\-B\-B
+\item 
+\#define \hyperlink{opcode_8h_a3f4be3ddbdb1d091212a149a0b728e83}{newarray}~0x\-B\-C
+\item 
+\#define \hyperlink{opcode_8h_ae080311460e5f4498e29502e46698d65}{anewarray}~0x\-B\-D
+\item 
+\#define \hyperlink{opcode_8h_ab31b6e0dbe5751758329571f2b2d0dd7}{arraylength}~0x\-B\-E
+\item 
+\#define \hyperlink{opcode_8h_a7d9507e64aac6f8374ceb8873df9ad49}{athrow}~0x\-B\-F
+\item 
+\#define \hyperlink{opcode_8h_a9b7ad2c61bfb09fe4c8edaa2f7729114}{checkcast}~0x\-C0
+\item 
+\#define \hyperlink{opcode_8h_a1036431faf49b85dc8977f67565c6b56}{instanceof}~0x\-C1
+\item 
+\#define \hyperlink{opcode_8h_aa0eb2500f21414a5060715c76fb8f6ca}{monitorenter}~0x\-C2
+\item 
+\#define \hyperlink{opcode_8h_a7c926c406aebf297a6fec0a71f6f5991}{monitorexit}~0x\-C3
+\item 
+\#define \hyperlink{opcode_8h_a20c48cc7bb301134c9da955ae6c1f823}{wide}~0x\-C4
+\item 
+\#define \hyperlink{opcode_8h_a45bbaee02ba9a17cb0d00c7f8577a162}{multianewarray}~0x\-C5
+\item 
+\#define \hyperlink{opcode_8h_aa5f3b6f21277a9bca948a416513d2ed3}{ifnull}~0x\-C6
+\item 
+\#define \hyperlink{opcode_8h_ae90d44b0ac49e73f568151950e1c4fbc}{ifnonnull}~0x\-C7
+\item 
+\#define \hyperlink{opcode_8h_a21127fabc330ca29762cbab8ba24b47d}{goto\-\_\-w}~0x\-C8
+\item 
+\#define \hyperlink{opcode_8h_a22559f2194f9d11acdfcbe251b324695}{jsr\-\_\-w}~0x\-C9
+\item 
+\#define \hyperlink{opcode_8h_a7e3982f712c42ac0cd098881dd2bcc03}{breakpoint}~0x\-C\-A
+\item 
+\#define \hyperlink{opcode_8h_a07897917b9f3882d6dac93f197e96602}{impdep1}~0x\-F\-E
+\item 
+\#define \hyperlink{opcode_8h_a7ae7cd9530f39fb96cef215480f628a4}{impdep2}~0x\-F\-F
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentação das macros}
+\hypertarget{opcode_8h_a8bf25d3a37fd380f4f4c5f8cb1821d9b}{\index{opcode.\-h@{opcode.\-h}!aaload@{aaload}}
+\index{aaload@{aaload}!opcode.h@{opcode.\-h}}
+\subsubsection[{aaload}]{\setlength{\rightskip}{0pt plus 5cm}\#define aaload~0x32}}\label{opcode_8h_a8bf25d3a37fd380f4f4c5f8cb1821d9b}
+
+
+Definido na linha 85 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a8fc174ad23d92181e081158c8d50f3dc}{\index{opcode.\-h@{opcode.\-h}!aastore@{aastore}}
+\index{aastore@{aastore}!opcode.h@{opcode.\-h}}
+\subsubsection[{aastore}]{\setlength{\rightskip}{0pt plus 5cm}\#define aastore~0x53}}\label{opcode_8h_a8fc174ad23d92181e081158c8d50f3dc}
+
+
+Definido na linha 122 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a7fd12a18bd563222924a258e5ca310a1}{\index{opcode.\-h@{opcode.\-h}!aconst\-\_\-null@{aconst\-\_\-null}}
+\index{aconst\-\_\-null@{aconst\-\_\-null}!opcode.h@{opcode.\-h}}
+\subsubsection[{aconst\-\_\-null}]{\setlength{\rightskip}{0pt plus 5cm}\#define aconst\-\_\-null~0x01}}\label{opcode_8h_a7fd12a18bd563222924a258e5ca310a1}
+
+
+Definido na linha 22 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ae6371b30f10792115cb3ac649af46a48}{\index{opcode.\-h@{opcode.\-h}!aload@{aload}}
+\index{aload@{aload}!opcode.h@{opcode.\-h}}
+\subsubsection[{aload}]{\setlength{\rightskip}{0pt plus 5cm}\#define aload~0x19}}\label{opcode_8h_ae6371b30f10792115cb3ac649af46a48}
+
+
+Definido na linha 60 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a73d81a6cfe274e49a600742e1d4e1e34}{\index{opcode.\-h@{opcode.\-h}!aload\-\_\-0@{aload\-\_\-0}}
+\index{aload\-\_\-0@{aload\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{aload\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define aload\-\_\-0~0x2\-A}}\label{opcode_8h_a73d81a6cfe274e49a600742e1d4e1e34}
+
+
+Definido na linha 77 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a3aa07ab7d810d444add7cf709774083b}{\index{opcode.\-h@{opcode.\-h}!aload\-\_\-1@{aload\-\_\-1}}
+\index{aload\-\_\-1@{aload\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{aload\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define aload\-\_\-1~0x2\-B}}\label{opcode_8h_a3aa07ab7d810d444add7cf709774083b}
+
+
+Definido na linha 78 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aca9939157a3e158b1bfbb4ca29f7e67b}{\index{opcode.\-h@{opcode.\-h}!aload\-\_\-2@{aload\-\_\-2}}
+\index{aload\-\_\-2@{aload\-\_\-2}!opcode.h@{opcode.\-h}}
+\subsubsection[{aload\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define aload\-\_\-2~0x2\-C}}\label{opcode_8h_aca9939157a3e158b1bfbb4ca29f7e67b}
+
+
+Definido na linha 79 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a5612b16ab586b34126689cd4fbe0704f}{\index{opcode.\-h@{opcode.\-h}!aload\-\_\-3@{aload\-\_\-3}}
+\index{aload\-\_\-3@{aload\-\_\-3}!opcode.h@{opcode.\-h}}
+\subsubsection[{aload\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define aload\-\_\-3~0x2\-D}}\label{opcode_8h_a5612b16ab586b34126689cd4fbe0704f}
+
+
+Definido na linha 80 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ae080311460e5f4498e29502e46698d65}{\index{opcode.\-h@{opcode.\-h}!anewarray@{anewarray}}
+\index{anewarray@{anewarray}!opcode.h@{opcode.\-h}}
+\subsubsection[{anewarray}]{\setlength{\rightskip}{0pt plus 5cm}\#define anewarray~0x\-B\-D}}\label{opcode_8h_ae080311460e5f4498e29502e46698d65}
+
+
+Definido na linha 280 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a3c5ddbf6cfbfa740941259bb15581bfc}{\index{opcode.\-h@{opcode.\-h}!areturn@{areturn}}
+\index{areturn@{areturn}!opcode.h@{opcode.\-h}}
+\subsubsection[{areturn}]{\setlength{\rightskip}{0pt plus 5cm}\#define areturn~0x\-B0}}\label{opcode_8h_a3c5ddbf6cfbfa740941259bb15581bfc}
+
+
+Definido na linha 261 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ab31b6e0dbe5751758329571f2b2d0dd7}{\index{opcode.\-h@{opcode.\-h}!arraylength@{arraylength}}
+\index{arraylength@{arraylength}!opcode.h@{opcode.\-h}}
+\subsubsection[{arraylength}]{\setlength{\rightskip}{0pt plus 5cm}\#define arraylength~0x\-B\-E}}\label{opcode_8h_ab31b6e0dbe5751758329571f2b2d0dd7}
+
+
+Definido na linha 281 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_abafe47e6f1e021ab01fbde1659a27628}{\index{opcode.\-h@{opcode.\-h}!astore@{astore}}
+\index{astore@{astore}!opcode.h@{opcode.\-h}}
+\subsubsection[{astore}]{\setlength{\rightskip}{0pt plus 5cm}\#define astore~0x3\-A}}\label{opcode_8h_abafe47e6f1e021ab01fbde1659a27628}
+
+
+Definido na linha 97 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a0f051ccd5ed1d98de62b362db5f5efb4}{\index{opcode.\-h@{opcode.\-h}!astore\-\_\-0@{astore\-\_\-0}}
+\index{astore\-\_\-0@{astore\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{astore\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define astore\-\_\-0~0x4\-B}}\label{opcode_8h_a0f051ccd5ed1d98de62b362db5f5efb4}
+
+
+Definido na linha 114 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a3c6d07d14bb7e18d5473af517686e12d}{\index{opcode.\-h@{opcode.\-h}!astore\-\_\-1@{astore\-\_\-1}}
+\index{astore\-\_\-1@{astore\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{astore\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define astore\-\_\-1~0x4\-C}}\label{opcode_8h_a3c6d07d14bb7e18d5473af517686e12d}
+
+
+Definido na linha 115 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a140c857c38ba5cc8f320695174963d8f}{\index{opcode.\-h@{opcode.\-h}!astore\-\_\-2@{astore\-\_\-2}}
+\index{astore\-\_\-2@{astore\-\_\-2}!opcode.h@{opcode.\-h}}
+\subsubsection[{astore\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define astore\-\_\-2~0x4\-D}}\label{opcode_8h_a140c857c38ba5cc8f320695174963d8f}
+
+
+Definido na linha 116 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a51f422df923d7c9aa71b19cd91966078}{\index{opcode.\-h@{opcode.\-h}!astore\-\_\-3@{astore\-\_\-3}}
+\index{astore\-\_\-3@{astore\-\_\-3}!opcode.h@{opcode.\-h}}
+\subsubsection[{astore\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define astore\-\_\-3~0x4\-E}}\label{opcode_8h_a51f422df923d7c9aa71b19cd91966078}
+
+
+Definido na linha 117 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a7d9507e64aac6f8374ceb8873df9ad49}{\index{opcode.\-h@{opcode.\-h}!athrow@{athrow}}
+\index{athrow@{athrow}!opcode.h@{opcode.\-h}}
+\subsubsection[{athrow}]{\setlength{\rightskip}{0pt plus 5cm}\#define athrow~0x\-B\-F}}\label{opcode_8h_a7d9507e64aac6f8374ceb8873df9ad49}
+
+
+Definido na linha 284 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a36b9f7376e19f01f4e27e22ac590bc21}{\index{opcode.\-h@{opcode.\-h}!baload@{baload}}
+\index{baload@{baload}!opcode.h@{opcode.\-h}}
+\subsubsection[{baload}]{\setlength{\rightskip}{0pt plus 5cm}\#define baload~0x33}}\label{opcode_8h_a36b9f7376e19f01f4e27e22ac590bc21}
+
+
+Definido na linha 86 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a0f10dea3bdca8dd51517881ca837b090}{\index{opcode.\-h@{opcode.\-h}!bastore@{bastore}}
+\index{bastore@{bastore}!opcode.h@{opcode.\-h}}
+\subsubsection[{bastore}]{\setlength{\rightskip}{0pt plus 5cm}\#define bastore~0x54}}\label{opcode_8h_a0f10dea3bdca8dd51517881ca837b090}
+
+
+Definido na linha 123 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_af6439bc031fdbc17b20a8c5c1a3d6c36}{\index{opcode.\-h@{opcode.\-h}!bipush@{bipush}}
+\index{bipush@{bipush}!opcode.h@{opcode.\-h}}
+\subsubsection[{bipush}]{\setlength{\rightskip}{0pt plus 5cm}\#define bipush~{\bf F\-L\-A\-G\-\_\-\-F\-I\-N\-A\-L}}}\label{opcode_8h_af6439bc031fdbc17b20a8c5c1a3d6c36}
+
+
+Definido na linha 40 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a7e3982f712c42ac0cd098881dd2bcc03}{\index{opcode.\-h@{opcode.\-h}!breakpoint@{breakpoint}}
+\index{breakpoint@{breakpoint}!opcode.h@{opcode.\-h}}
+\subsubsection[{breakpoint}]{\setlength{\rightskip}{0pt plus 5cm}\#define breakpoint~0x\-C\-A}}\label{opcode_8h_a7e3982f712c42ac0cd098881dd2bcc03}
+
+
+Definido na linha 304 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aac214c36c60f788f5b6ae6084c35606f}{\index{opcode.\-h@{opcode.\-h}!caload@{caload}}
+\index{caload@{caload}!opcode.h@{opcode.\-h}}
+\subsubsection[{caload}]{\setlength{\rightskip}{0pt plus 5cm}\#define caload~0x34}}\label{opcode_8h_aac214c36c60f788f5b6ae6084c35606f}
+
+
+Definido na linha 87 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a1409755537d8c7d2570d25a04899f0f9}{\index{opcode.\-h@{opcode.\-h}!castore@{castore}}
+\index{castore@{castore}!opcode.h@{opcode.\-h}}
+\subsubsection[{castore}]{\setlength{\rightskip}{0pt plus 5cm}\#define castore~0x55}}\label{opcode_8h_a1409755537d8c7d2570d25a04899f0f9}
+
+
+Definido na linha 124 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a9b7ad2c61bfb09fe4c8edaa2f7729114}{\index{opcode.\-h@{opcode.\-h}!checkcast@{checkcast}}
+\index{checkcast@{checkcast}!opcode.h@{opcode.\-h}}
+\subsubsection[{checkcast}]{\setlength{\rightskip}{0pt plus 5cm}\#define checkcast~0x\-C0}}\label{opcode_8h_a9b7ad2c61bfb09fe4c8edaa2f7729114}
+
+
+Definido na linha 287 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a5cb2e911193996377a10db5e208c3961}{\index{opcode.\-h@{opcode.\-h}!d2f@{d2f}}
+\index{d2f@{d2f}!opcode.h@{opcode.\-h}}
+\subsubsection[{d2f}]{\setlength{\rightskip}{0pt plus 5cm}\#define d2f~0x90}}\label{opcode_8h_a5cb2e911193996377a10db5e208c3961}
+
+
+Definido na linha 218 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a0c709816779b512169a22e90b3dc48ce}{\index{opcode.\-h@{opcode.\-h}!d2i@{d2i}}
+\index{d2i@{d2i}!opcode.h@{opcode.\-h}}
+\subsubsection[{d2i}]{\setlength{\rightskip}{0pt plus 5cm}\#define d2i~0x8\-E}}\label{opcode_8h_a0c709816779b512169a22e90b3dc48ce}
+
+
+Definido na linha 216 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ae5b51b842d2a8dbb5ffcdad4dffec617}{\index{opcode.\-h@{opcode.\-h}!d2l@{d2l}}
+\index{d2l@{d2l}!opcode.h@{opcode.\-h}}
+\subsubsection[{d2l}]{\setlength{\rightskip}{0pt plus 5cm}\#define d2l~0x8\-F}}\label{opcode_8h_ae5b51b842d2a8dbb5ffcdad4dffec617}
+
+
+Definido na linha 217 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a954451d8d1eb3534a22c918c7eba3f31}{\index{opcode.\-h@{opcode.\-h}!dadd@{dadd}}
+\index{dadd@{dadd}!opcode.h@{opcode.\-h}}
+\subsubsection[{dadd}]{\setlength{\rightskip}{0pt plus 5cm}\#define dadd~0x63}}\label{opcode_8h_a954451d8d1eb3534a22c918c7eba3f31}
+
+
+Definido na linha 146 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a7f5facc280562c2e659f1b1bfb2602fe}{\index{opcode.\-h@{opcode.\-h}!daload@{daload}}
+\index{daload@{daload}!opcode.h@{opcode.\-h}}
+\subsubsection[{daload}]{\setlength{\rightskip}{0pt plus 5cm}\#define daload~0x31}}\label{opcode_8h_a7f5facc280562c2e659f1b1bfb2602fe}
+
+
+Definido na linha 84 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a130b6c4f8cbd110d58c9489b2ec3e025}{\index{opcode.\-h@{opcode.\-h}!dastore@{dastore}}
+\index{dastore@{dastore}!opcode.h@{opcode.\-h}}
+\subsubsection[{dastore}]{\setlength{\rightskip}{0pt plus 5cm}\#define dastore~0x52}}\label{opcode_8h_a130b6c4f8cbd110d58c9489b2ec3e025}
+
+
+Definido na linha 121 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a00d9b9eba4616f824361d55d6b36277e}{\index{opcode.\-h@{opcode.\-h}!dcmpg@{dcmpg}}
+\index{dcmpg@{dcmpg}!opcode.h@{opcode.\-h}}
+\subsubsection[{dcmpg}]{\setlength{\rightskip}{0pt plus 5cm}\#define dcmpg~0x98}}\label{opcode_8h_a00d9b9eba4616f824361d55d6b36277e}
+
+
+Definido na linha 228 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a2338226a70e808ce358ac0a14e55f5e6}{\index{opcode.\-h@{opcode.\-h}!dcmpl@{dcmpl}}
+\index{dcmpl@{dcmpl}!opcode.h@{opcode.\-h}}
+\subsubsection[{dcmpl}]{\setlength{\rightskip}{0pt plus 5cm}\#define dcmpl~0x97}}\label{opcode_8h_a2338226a70e808ce358ac0a14e55f5e6}
+
+
+Definido na linha 227 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ac4c8fdcc66307ff2ce5ef604525696c8}{\index{opcode.\-h@{opcode.\-h}!dconst\-\_\-0@{dconst\-\_\-0}}
+\index{dconst\-\_\-0@{dconst\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{dconst\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define dconst\-\_\-0~0x0\-E}}\label{opcode_8h_ac4c8fdcc66307ff2ce5ef604525696c8}
+
+
+Definido na linha 35 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a7ed12e4998d2a3359e769d5b2a6b4fa1}{\index{opcode.\-h@{opcode.\-h}!dconst\-\_\-1@{dconst\-\_\-1}}
+\index{dconst\-\_\-1@{dconst\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{dconst\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define dconst\-\_\-1~0x0\-F}}\label{opcode_8h_a7ed12e4998d2a3359e769d5b2a6b4fa1}
+
+
+Definido na linha 36 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a88c4e813246677fc14195820a8df8a51}{\index{opcode.\-h@{opcode.\-h}!ddiv@{ddiv}}
+\index{ddiv@{ddiv}!opcode.h@{opcode.\-h}}
+\subsubsection[{ddiv}]{\setlength{\rightskip}{0pt plus 5cm}\#define ddiv~0x6\-F}}\label{opcode_8h_a88c4e813246677fc14195820a8df8a51}
+
+
+Definido na linha 164 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_af65d10433126ad1a779b4ca27d6fa653}{\index{opcode.\-h@{opcode.\-h}!dload@{dload}}
+\index{dload@{dload}!opcode.h@{opcode.\-h}}
+\subsubsection[{dload}]{\setlength{\rightskip}{0pt plus 5cm}\#define dload~0x18}}\label{opcode_8h_af65d10433126ad1a779b4ca27d6fa653}
+
+
+Definido na linha 59 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_acd99702c259cb51dd0a8228eb54aa3d1}{\index{opcode.\-h@{opcode.\-h}!dload\-\_\-0@{dload\-\_\-0}}
+\index{dload\-\_\-0@{dload\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{dload\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define dload\-\_\-0~0x26}}\label{opcode_8h_acd99702c259cb51dd0a8228eb54aa3d1}
+
+
+Definido na linha 73 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_af9416a276f15cfdc7fd33cf94183be34}{\index{opcode.\-h@{opcode.\-h}!dload\-\_\-1@{dload\-\_\-1}}
+\index{dload\-\_\-1@{dload\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{dload\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define dload\-\_\-1~0x27}}\label{opcode_8h_af9416a276f15cfdc7fd33cf94183be34}
+
+
+Definido na linha 74 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a0ee62ac46dbd54a573b9a7e756f3c730}{\index{opcode.\-h@{opcode.\-h}!dload\-\_\-2@{dload\-\_\-2}}
+\index{dload\-\_\-2@{dload\-\_\-2}!opcode.h@{opcode.\-h}}
+\subsubsection[{dload\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define dload\-\_\-2~0x28}}\label{opcode_8h_a0ee62ac46dbd54a573b9a7e756f3c730}
+
+
+Definido na linha 75 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a7599911c3ade482d4ccf5189a664611b}{\index{opcode.\-h@{opcode.\-h}!dload\-\_\-3@{dload\-\_\-3}}
+\index{dload\-\_\-3@{dload\-\_\-3}!opcode.h@{opcode.\-h}}
+\subsubsection[{dload\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define dload\-\_\-3~0x29}}\label{opcode_8h_a7599911c3ade482d4ccf5189a664611b}
+
+
+Definido na linha 76 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a2f9aa9959dec9eb4efbb6cd6f11e0700}{\index{opcode.\-h@{opcode.\-h}!dmul@{dmul}}
+\index{dmul@{dmul}!opcode.h@{opcode.\-h}}
+\subsubsection[{dmul}]{\setlength{\rightskip}{0pt plus 5cm}\#define dmul~0x6\-B}}\label{opcode_8h_a2f9aa9959dec9eb4efbb6cd6f11e0700}
+
+
+Definido na linha 158 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a64d1f7a489268a78847e4539f88b16c4}{\index{opcode.\-h@{opcode.\-h}!dneg@{dneg}}
+\index{dneg@{dneg}!opcode.h@{opcode.\-h}}
+\subsubsection[{dneg}]{\setlength{\rightskip}{0pt plus 5cm}\#define dneg~0x77}}\label{opcode_8h_a64d1f7a489268a78847e4539f88b16c4}
+
+
+Definido na linha 176 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a8918415981583b8e434b60df8eb031be}{\index{opcode.\-h@{opcode.\-h}!drem@{drem}}
+\index{drem@{drem}!opcode.h@{opcode.\-h}}
+\subsubsection[{drem}]{\setlength{\rightskip}{0pt plus 5cm}\#define drem~0x73}}\label{opcode_8h_a8918415981583b8e434b60df8eb031be}
+
+
+Definido na linha 170 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a96a99e0c738b54c02f520468024ca141}{\index{opcode.\-h@{opcode.\-h}!dreturn@{dreturn}}
+\index{dreturn@{dreturn}!opcode.h@{opcode.\-h}}
+\subsubsection[{dreturn}]{\setlength{\rightskip}{0pt plus 5cm}\#define dreturn~0x\-A\-F}}\label{opcode_8h_a96a99e0c738b54c02f520468024ca141}
+
+
+Definido na linha 260 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a93911a2b074cab5030ae7b9c442db43b}{\index{opcode.\-h@{opcode.\-h}!dstore@{dstore}}
+\index{dstore@{dstore}!opcode.h@{opcode.\-h}}
+\subsubsection[{dstore}]{\setlength{\rightskip}{0pt plus 5cm}\#define dstore~0x39}}\label{opcode_8h_a93911a2b074cab5030ae7b9c442db43b}
+
+
+Definido na linha 96 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a4dd6f59660273abf83f4323894d553fa}{\index{opcode.\-h@{opcode.\-h}!dstore\-\_\-0@{dstore\-\_\-0}}
+\index{dstore\-\_\-0@{dstore\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{dstore\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define dstore\-\_\-0~0x47}}\label{opcode_8h_a4dd6f59660273abf83f4323894d553fa}
+
+
+Definido na linha 110 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ad6b66a3c7ada4db575db8bba43d92740}{\index{opcode.\-h@{opcode.\-h}!dstore\-\_\-1@{dstore\-\_\-1}}
+\index{dstore\-\_\-1@{dstore\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{dstore\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define dstore\-\_\-1~0x48}}\label{opcode_8h_ad6b66a3c7ada4db575db8bba43d92740}
+
+
+Definido na linha 111 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a45c076746288cb5aabdea4fb3b3fc937}{\index{opcode.\-h@{opcode.\-h}!dstore\-\_\-2@{dstore\-\_\-2}}
+\index{dstore\-\_\-2@{dstore\-\_\-2}!opcode.h@{opcode.\-h}}
+\subsubsection[{dstore\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define dstore\-\_\-2~0x49}}\label{opcode_8h_a45c076746288cb5aabdea4fb3b3fc937}
+
+
+Definido na linha 112 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_abb43acbd3ebcd8121f6e773747848ac9}{\index{opcode.\-h@{opcode.\-h}!dstore\-\_\-3@{dstore\-\_\-3}}
+\index{dstore\-\_\-3@{dstore\-\_\-3}!opcode.h@{opcode.\-h}}
+\subsubsection[{dstore\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define dstore\-\_\-3~0x4\-A}}\label{opcode_8h_abb43acbd3ebcd8121f6e773747848ac9}
+
+
+Definido na linha 113 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a59ae5401c7650a23a859b06d79ee9751}{\index{opcode.\-h@{opcode.\-h}!dsub@{dsub}}
+\index{dsub@{dsub}!opcode.h@{opcode.\-h}}
+\subsubsection[{dsub}]{\setlength{\rightskip}{0pt plus 5cm}\#define dsub~0x67}}\label{opcode_8h_a59ae5401c7650a23a859b06d79ee9751}
+
+
+Definido na linha 152 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a8c99c7473eafa3c76bec2d3acc829fe8}{\index{opcode.\-h@{opcode.\-h}!dup@{dup}}
+\index{dup@{dup}!opcode.h@{opcode.\-h}}
+\subsubsection[{dup}]{\setlength{\rightskip}{0pt plus 5cm}\#define dup~0x59}}\label{opcode_8h_a8c99c7473eafa3c76bec2d3acc829fe8}
+
+
+Definido na linha 132 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a616506d603527708b2bab92b1240f56f}{\index{opcode.\-h@{opcode.\-h}!dup2@{dup2}}
+\index{dup2@{dup2}!opcode.h@{opcode.\-h}}
+\subsubsection[{dup2}]{\setlength{\rightskip}{0pt plus 5cm}\#define dup2~0x5\-C}}\label{opcode_8h_a616506d603527708b2bab92b1240f56f}
+
+
+Definido na linha 135 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a0527050ae99acc68c14a134622de3034}{\index{opcode.\-h@{opcode.\-h}!dup2\-\_\-x1@{dup2\-\_\-x1}}
+\index{dup2\-\_\-x1@{dup2\-\_\-x1}!opcode.h@{opcode.\-h}}
+\subsubsection[{dup2\-\_\-x1}]{\setlength{\rightskip}{0pt plus 5cm}\#define dup2\-\_\-x1~0x5\-D}}\label{opcode_8h_a0527050ae99acc68c14a134622de3034}
+
+
+Definido na linha 136 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a6da536de76a55dfafc5412771ba41f2b}{\index{opcode.\-h@{opcode.\-h}!dup2\-\_\-x2@{dup2\-\_\-x2}}
+\index{dup2\-\_\-x2@{dup2\-\_\-x2}!opcode.h@{opcode.\-h}}
+\subsubsection[{dup2\-\_\-x2}]{\setlength{\rightskip}{0pt plus 5cm}\#define dup2\-\_\-x2~0x5\-E}}\label{opcode_8h_a6da536de76a55dfafc5412771ba41f2b}
+
+
+Definido na linha 137 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a9da47907892f8edc8a1d4c574493b5c6}{\index{opcode.\-h@{opcode.\-h}!dup\-\_\-x1@{dup\-\_\-x1}}
+\index{dup\-\_\-x1@{dup\-\_\-x1}!opcode.h@{opcode.\-h}}
+\subsubsection[{dup\-\_\-x1}]{\setlength{\rightskip}{0pt plus 5cm}\#define dup\-\_\-x1~0x5\-A}}\label{opcode_8h_a9da47907892f8edc8a1d4c574493b5c6}
+
+
+Definido na linha 133 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a3c1d396c28f55033d1fc36160149cb98}{\index{opcode.\-h@{opcode.\-h}!dup\-\_\-x2@{dup\-\_\-x2}}
+\index{dup\-\_\-x2@{dup\-\_\-x2}!opcode.h@{opcode.\-h}}
+\subsubsection[{dup\-\_\-x2}]{\setlength{\rightskip}{0pt plus 5cm}\#define dup\-\_\-x2~0x5\-B}}\label{opcode_8h_a3c1d396c28f55033d1fc36160149cb98}
+
+
+Definido na linha 134 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a8af45f23ab16b9d28792f2dfa77a5ca4}{\index{opcode.\-h@{opcode.\-h}!f2d@{f2d}}
+\index{f2d@{f2d}!opcode.h@{opcode.\-h}}
+\subsubsection[{f2d}]{\setlength{\rightskip}{0pt plus 5cm}\#define f2d~0x8\-D}}\label{opcode_8h_a8af45f23ab16b9d28792f2dfa77a5ca4}
+
+
+Definido na linha 215 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a6000796d76281e3d42c21e9004c7aded}{\index{opcode.\-h@{opcode.\-h}!f2i@{f2i}}
+\index{f2i@{f2i}!opcode.h@{opcode.\-h}}
+\subsubsection[{f2i}]{\setlength{\rightskip}{0pt plus 5cm}\#define f2i~0x8\-B}}\label{opcode_8h_a6000796d76281e3d42c21e9004c7aded}
+
+
+Definido na linha 213 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a9bcc46dfd78a2001a6fa07ca6e0cf470}{\index{opcode.\-h@{opcode.\-h}!f2l@{f2l}}
+\index{f2l@{f2l}!opcode.h@{opcode.\-h}}
+\subsubsection[{f2l}]{\setlength{\rightskip}{0pt plus 5cm}\#define f2l~0x8\-C}}\label{opcode_8h_a9bcc46dfd78a2001a6fa07ca6e0cf470}
+
+
+Definido na linha 214 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a93579fad2d114588de1baae1aa031b39}{\index{opcode.\-h@{opcode.\-h}!fadd@{fadd}}
+\index{fadd@{fadd}!opcode.h@{opcode.\-h}}
+\subsubsection[{fadd}]{\setlength{\rightskip}{0pt plus 5cm}\#define fadd~0x62}}\label{opcode_8h_a93579fad2d114588de1baae1aa031b39}
+
+
+Definido na linha 145 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aec1a1d9782fab538ea0a52ab16a96f24}{\index{opcode.\-h@{opcode.\-h}!faload@{faload}}
+\index{faload@{faload}!opcode.h@{opcode.\-h}}
+\subsubsection[{faload}]{\setlength{\rightskip}{0pt plus 5cm}\#define faload~0x30}}\label{opcode_8h_aec1a1d9782fab538ea0a52ab16a96f24}
+
+
+Definido na linha 83 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a132b78aa675a076c4192bd221a8ae37b}{\index{opcode.\-h@{opcode.\-h}!fastore@{fastore}}
+\index{fastore@{fastore}!opcode.h@{opcode.\-h}}
+\subsubsection[{fastore}]{\setlength{\rightskip}{0pt plus 5cm}\#define fastore~0x51}}\label{opcode_8h_a132b78aa675a076c4192bd221a8ae37b}
+
+
+Definido na linha 120 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a4894bc9a3d105cc336a5727987a73af2}{\index{opcode.\-h@{opcode.\-h}!fcmpg@{fcmpg}}
+\index{fcmpg@{fcmpg}!opcode.h@{opcode.\-h}}
+\subsubsection[{fcmpg}]{\setlength{\rightskip}{0pt plus 5cm}\#define fcmpg~0x96}}\label{opcode_8h_a4894bc9a3d105cc336a5727987a73af2}
+
+
+Definido na linha 226 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_abd02694d463bb0add12660d40199f779}{\index{opcode.\-h@{opcode.\-h}!fcmpl@{fcmpl}}
+\index{fcmpl@{fcmpl}!opcode.h@{opcode.\-h}}
+\subsubsection[{fcmpl}]{\setlength{\rightskip}{0pt plus 5cm}\#define fcmpl~0x95}}\label{opcode_8h_abd02694d463bb0add12660d40199f779}
+
+
+Definido na linha 225 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aa367d7b04786b4acad818d6b0158f7bf}{\index{opcode.\-h@{opcode.\-h}!fconst\-\_\-0@{fconst\-\_\-0}}
+\index{fconst\-\_\-0@{fconst\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{fconst\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define fconst\-\_\-0~0x0\-B}}\label{opcode_8h_aa367d7b04786b4acad818d6b0158f7bf}
+
+
+Definido na linha 32 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a98a6f1f240ad5fc889bb3990ee80145f}{\index{opcode.\-h@{opcode.\-h}!fconst\-\_\-1@{fconst\-\_\-1}}
+\index{fconst\-\_\-1@{fconst\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{fconst\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define fconst\-\_\-1~0x0\-C}}\label{opcode_8h_a98a6f1f240ad5fc889bb3990ee80145f}
+
+
+Definido na linha 33 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a24f222ee22044fc1df09160a2dc3ccd8}{\index{opcode.\-h@{opcode.\-h}!fconst\-\_\-2@{fconst\-\_\-2}}
+\index{fconst\-\_\-2@{fconst\-\_\-2}!opcode.h@{opcode.\-h}}
+\subsubsection[{fconst\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define fconst\-\_\-2~0x0\-D}}\label{opcode_8h_a24f222ee22044fc1df09160a2dc3ccd8}
+
+
+Definido na linha 34 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a19d518435a950f17a1f0a4479049b0c7}{\index{opcode.\-h@{opcode.\-h}!fdiv@{fdiv}}
+\index{fdiv@{fdiv}!opcode.h@{opcode.\-h}}
+\subsubsection[{fdiv}]{\setlength{\rightskip}{0pt plus 5cm}\#define fdiv~0x6\-E}}\label{opcode_8h_a19d518435a950f17a1f0a4479049b0c7}
+
+
+Definido na linha 163 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aab36c2f5cac6af3e79559c19f4f7de0d}{\index{opcode.\-h@{opcode.\-h}!fload@{fload}}
+\index{fload@{fload}!opcode.h@{opcode.\-h}}
+\subsubsection[{fload}]{\setlength{\rightskip}{0pt plus 5cm}\#define fload~0x17}}\label{opcode_8h_aab36c2f5cac6af3e79559c19f4f7de0d}
+
+
+Definido na linha 58 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_adb02c18f894469df772424a8f3a0c6c7}{\index{opcode.\-h@{opcode.\-h}!fload\-\_\-0@{fload\-\_\-0}}
+\index{fload\-\_\-0@{fload\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{fload\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define fload\-\_\-0~0x22}}\label{opcode_8h_adb02c18f894469df772424a8f3a0c6c7}
+
+
+Definido na linha 69 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a80c9c6f65fb57fc1427020bc59fb0a53}{\index{opcode.\-h@{opcode.\-h}!fload\-\_\-1@{fload\-\_\-1}}
+\index{fload\-\_\-1@{fload\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{fload\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define fload\-\_\-1~0x23}}\label{opcode_8h_a80c9c6f65fb57fc1427020bc59fb0a53}
+
+
+Definido na linha 70 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a7c5c19b9769b1a571d4b111272bd6003}{\index{opcode.\-h@{opcode.\-h}!fload\-\_\-2@{fload\-\_\-2}}
+\index{fload\-\_\-2@{fload\-\_\-2}!opcode.h@{opcode.\-h}}
+\subsubsection[{fload\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define fload\-\_\-2~0x24}}\label{opcode_8h_a7c5c19b9769b1a571d4b111272bd6003}
+
+
+Definido na linha 71 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ade8e4eac8f60f21b692140dba20fec92}{\index{opcode.\-h@{opcode.\-h}!fload\-\_\-3@{fload\-\_\-3}}
+\index{fload\-\_\-3@{fload\-\_\-3}!opcode.h@{opcode.\-h}}
+\subsubsection[{fload\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define fload\-\_\-3~0x25}}\label{opcode_8h_ade8e4eac8f60f21b692140dba20fec92}
+
+
+Definido na linha 72 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a4fdee448b87e5129c5325afdedd44e62}{\index{opcode.\-h@{opcode.\-h}!fmul@{fmul}}
+\index{fmul@{fmul}!opcode.h@{opcode.\-h}}
+\subsubsection[{fmul}]{\setlength{\rightskip}{0pt plus 5cm}\#define fmul~0x6\-A}}\label{opcode_8h_a4fdee448b87e5129c5325afdedd44e62}
+
+
+Definido na linha 157 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a397ed5982fe98cec55bcb4de9913096b}{\index{opcode.\-h@{opcode.\-h}!fneg@{fneg}}
+\index{fneg@{fneg}!opcode.h@{opcode.\-h}}
+\subsubsection[{fneg}]{\setlength{\rightskip}{0pt plus 5cm}\#define fneg~0x76}}\label{opcode_8h_a397ed5982fe98cec55bcb4de9913096b}
+
+
+Definido na linha 175 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a78dc6c236662b6267ba26b02fbc62d9d}{\index{opcode.\-h@{opcode.\-h}!frem@{frem}}
+\index{frem@{frem}!opcode.h@{opcode.\-h}}
+\subsubsection[{frem}]{\setlength{\rightskip}{0pt plus 5cm}\#define frem~0x72}}\label{opcode_8h_a78dc6c236662b6267ba26b02fbc62d9d}
+
+
+Definido na linha 169 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a9f18ef3fcf124127f1687315f21c20f6}{\index{opcode.\-h@{opcode.\-h}!freturn@{freturn}}
+\index{freturn@{freturn}!opcode.h@{opcode.\-h}}
+\subsubsection[{freturn}]{\setlength{\rightskip}{0pt plus 5cm}\#define freturn~0x\-A\-E}}\label{opcode_8h_a9f18ef3fcf124127f1687315f21c20f6}
+
+
+Definido na linha 259 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a21f7164a6438254252f38d154edb1480}{\index{opcode.\-h@{opcode.\-h}!fstore@{fstore}}
+\index{fstore@{fstore}!opcode.h@{opcode.\-h}}
+\subsubsection[{fstore}]{\setlength{\rightskip}{0pt plus 5cm}\#define fstore~0x38}}\label{opcode_8h_a21f7164a6438254252f38d154edb1480}
+
+
+Definido na linha 95 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a7f390b1894ee53ae139b5bfe1796b227}{\index{opcode.\-h@{opcode.\-h}!fstore\-\_\-0@{fstore\-\_\-0}}
+\index{fstore\-\_\-0@{fstore\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{fstore\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define fstore\-\_\-0~0x43}}\label{opcode_8h_a7f390b1894ee53ae139b5bfe1796b227}
+
+
+Definido na linha 106 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aba0e117eafb7e57b2ce3f7cfbc672424}{\index{opcode.\-h@{opcode.\-h}!fstore\-\_\-1@{fstore\-\_\-1}}
+\index{fstore\-\_\-1@{fstore\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{fstore\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define fstore\-\_\-1~0x44}}\label{opcode_8h_aba0e117eafb7e57b2ce3f7cfbc672424}
+
+
+Definido na linha 107 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a2297d43ae982f6969abe2582b9fe5605}{\index{opcode.\-h@{opcode.\-h}!fstore\-\_\-2@{fstore\-\_\-2}}
+\index{fstore\-\_\-2@{fstore\-\_\-2}!opcode.h@{opcode.\-h}}
+\subsubsection[{fstore\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define fstore\-\_\-2~0x45}}\label{opcode_8h_a2297d43ae982f6969abe2582b9fe5605}
+
+
+Definido na linha 108 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a60908be2af4f4b38d171310a7d0f883b}{\index{opcode.\-h@{opcode.\-h}!fstore\-\_\-3@{fstore\-\_\-3}}
+\index{fstore\-\_\-3@{fstore\-\_\-3}!opcode.h@{opcode.\-h}}
+\subsubsection[{fstore\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define fstore\-\_\-3~0x46}}\label{opcode_8h_a60908be2af4f4b38d171310a7d0f883b}
+
+
+Definido na linha 109 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a68cc9495a660d4abce3e84e35e8e61ab}{\index{opcode.\-h@{opcode.\-h}!fsub@{fsub}}
+\index{fsub@{fsub}!opcode.h@{opcode.\-h}}
+\subsubsection[{fsub}]{\setlength{\rightskip}{0pt plus 5cm}\#define fsub~0x66}}\label{opcode_8h_a68cc9495a660d4abce3e84e35e8e61ab}
+
+
+Definido na linha 151 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a3f6dbd4c9f72ebe0a723b91d90aa77df}{\index{opcode.\-h@{opcode.\-h}!getfield@{getfield}}
+\index{getfield@{getfield}!opcode.h@{opcode.\-h}}
+\subsubsection[{getfield}]{\setlength{\rightskip}{0pt plus 5cm}\#define getfield~0x\-B4}}\label{opcode_8h_a3f6dbd4c9f72ebe0a723b91d90aa77df}
+
+
+Definido na linha 267 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ad50d7df6505a183c7ce0b42071052af3}{\index{opcode.\-h@{opcode.\-h}!getstatic@{getstatic}}
+\index{getstatic@{getstatic}!opcode.h@{opcode.\-h}}
+\subsubsection[{getstatic}]{\setlength{\rightskip}{0pt plus 5cm}\#define getstatic~0x\-B2}}\label{opcode_8h_ad50d7df6505a183c7ce0b42071052af3}
+
+
+Definido na linha 265 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a1ad697eea7480965e6a8f5a00c8b9654}{\index{opcode.\-h@{opcode.\-h}!goto\-\_\-@{goto\-\_\-}}
+\index{goto\-\_\-@{goto\-\_\-}!opcode.h@{opcode.\-h}}
+\subsubsection[{goto\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define goto\-\_\-~0x\-A7}}\label{opcode_8h_a1ad697eea7480965e6a8f5a00c8b9654}
+
+
+Definido na linha 248 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a21127fabc330ca29762cbab8ba24b47d}{\index{opcode.\-h@{opcode.\-h}!goto\-\_\-w@{goto\-\_\-w}}
+\index{goto\-\_\-w@{goto\-\_\-w}!opcode.h@{opcode.\-h}}
+\subsubsection[{goto\-\_\-w}]{\setlength{\rightskip}{0pt plus 5cm}\#define goto\-\_\-w~0x\-C8}}\label{opcode_8h_a21127fabc330ca29762cbab8ba24b47d}
+
+
+Definido na linha 301 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_af96a15826a71dc62f352f9a9aa8e80ed}{\index{opcode.\-h@{opcode.\-h}!i2b@{i2b}}
+\index{i2b@{i2b}!opcode.h@{opcode.\-h}}
+\subsubsection[{i2b}]{\setlength{\rightskip}{0pt plus 5cm}\#define i2b~0x91}}\label{opcode_8h_af96a15826a71dc62f352f9a9aa8e80ed}
+
+
+Definido na linha 219 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a9a1df50b57b384447de662e8b6b34805}{\index{opcode.\-h@{opcode.\-h}!i2c@{i2c}}
+\index{i2c@{i2c}!opcode.h@{opcode.\-h}}
+\subsubsection[{i2c}]{\setlength{\rightskip}{0pt plus 5cm}\#define i2c~0x92}}\label{opcode_8h_a9a1df50b57b384447de662e8b6b34805}
+
+
+Definido na linha 220 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a51bc7ecb4ce4458933678e29410bf4d6}{\index{opcode.\-h@{opcode.\-h}!i2d@{i2d}}
+\index{i2d@{i2d}!opcode.h@{opcode.\-h}}
+\subsubsection[{i2d}]{\setlength{\rightskip}{0pt plus 5cm}\#define i2d~0x87}}\label{opcode_8h_a51bc7ecb4ce4458933678e29410bf4d6}
+
+
+Definido na linha 209 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a5862c056b89da43297c3e44f45d8b01c}{\index{opcode.\-h@{opcode.\-h}!i2f@{i2f}}
+\index{i2f@{i2f}!opcode.h@{opcode.\-h}}
+\subsubsection[{i2f}]{\setlength{\rightskip}{0pt plus 5cm}\#define i2f~0x86}}\label{opcode_8h_a5862c056b89da43297c3e44f45d8b01c}
+
+
+Definido na linha 208 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aa5e8f0d03b27785b06b2fc8ce3596afd}{\index{opcode.\-h@{opcode.\-h}!i2l@{i2l}}
+\index{i2l@{i2l}!opcode.h@{opcode.\-h}}
+\subsubsection[{i2l}]{\setlength{\rightskip}{0pt plus 5cm}\#define i2l~0x85}}\label{opcode_8h_aa5e8f0d03b27785b06b2fc8ce3596afd}
+
+
+Definido na linha 207 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_af94034985aa4d9718f02d0dc6d15f9f0}{\index{opcode.\-h@{opcode.\-h}!i2s@{i2s}}
+\index{i2s@{i2s}!opcode.h@{opcode.\-h}}
+\subsubsection[{i2s}]{\setlength{\rightskip}{0pt plus 5cm}\#define i2s~0x93}}\label{opcode_8h_af94034985aa4d9718f02d0dc6d15f9f0}
+
+
+Definido na linha 221 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a454aded56355685f9d1ba211f149b358}{\index{opcode.\-h@{opcode.\-h}!iadd@{iadd}}
+\index{iadd@{iadd}!opcode.h@{opcode.\-h}}
+\subsubsection[{iadd}]{\setlength{\rightskip}{0pt plus 5cm}\#define iadd~0x60}}\label{opcode_8h_a454aded56355685f9d1ba211f149b358}
+
+
+Definido na linha 143 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a1b2ac49602540837bd5b34a42cc3b50b}{\index{opcode.\-h@{opcode.\-h}!iaload@{iaload}}
+\index{iaload@{iaload}!opcode.h@{opcode.\-h}}
+\subsubsection[{iaload}]{\setlength{\rightskip}{0pt plus 5cm}\#define iaload~0x2\-E}}\label{opcode_8h_a1b2ac49602540837bd5b34a42cc3b50b}
+
+
+Definido na linha 81 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a1dd4d92b6b0ecd5e3b4c28a437ed80a9}{\index{opcode.\-h@{opcode.\-h}!iand@{iand}}
+\index{iand@{iand}!opcode.h@{opcode.\-h}}
+\subsubsection[{iand}]{\setlength{\rightskip}{0pt plus 5cm}\#define iand~0x7\-E}}\label{opcode_8h_a1dd4d92b6b0ecd5e3b4c28a437ed80a9}
+
+
+Definido na linha 191 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a54e16323e3f70975a7dc4ca1ea739b33}{\index{opcode.\-h@{opcode.\-h}!iastore@{iastore}}
+\index{iastore@{iastore}!opcode.h@{opcode.\-h}}
+\subsubsection[{iastore}]{\setlength{\rightskip}{0pt plus 5cm}\#define iastore~0x4\-F}}\label{opcode_8h_a54e16323e3f70975a7dc4ca1ea739b33}
+
+
+Definido na linha 118 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a4cfbaede32fab69878101cba8dd466df}{\index{opcode.\-h@{opcode.\-h}!iconst\-\_\-0@{iconst\-\_\-0}}
+\index{iconst\-\_\-0@{iconst\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{iconst\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define iconst\-\_\-0~0x03}}\label{opcode_8h_a4cfbaede32fab69878101cba8dd466df}
+
+
+Definido na linha 24 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a3f7aa6acd914576563b0fb2f245c25be}{\index{opcode.\-h@{opcode.\-h}!iconst\-\_\-1@{iconst\-\_\-1}}
+\index{iconst\-\_\-1@{iconst\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{iconst\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define iconst\-\_\-1~0x04}}\label{opcode_8h_a3f7aa6acd914576563b0fb2f245c25be}
+
+
+Definido na linha 25 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_af6f6b6189b6beb380ef05334e4aaef3e}{\index{opcode.\-h@{opcode.\-h}!iconst\-\_\-2@{iconst\-\_\-2}}
+\index{iconst\-\_\-2@{iconst\-\_\-2}!opcode.h@{opcode.\-h}}
+\subsubsection[{iconst\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define iconst\-\_\-2~0x05}}\label{opcode_8h_af6f6b6189b6beb380ef05334e4aaef3e}
+
+
+Definido na linha 26 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a183bc4f0efd9ae42453eefd798829e11}{\index{opcode.\-h@{opcode.\-h}!iconst\-\_\-3@{iconst\-\_\-3}}
+\index{iconst\-\_\-3@{iconst\-\_\-3}!opcode.h@{opcode.\-h}}
+\subsubsection[{iconst\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define iconst\-\_\-3~0x06}}\label{opcode_8h_a183bc4f0efd9ae42453eefd798829e11}
+
+
+Definido na linha 27 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a5a371cce9d9c5e75e3023f6f72a5c213}{\index{opcode.\-h@{opcode.\-h}!iconst\-\_\-4@{iconst\-\_\-4}}
+\index{iconst\-\_\-4@{iconst\-\_\-4}!opcode.h@{opcode.\-h}}
+\subsubsection[{iconst\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}\#define iconst\-\_\-4~0x07}}\label{opcode_8h_a5a371cce9d9c5e75e3023f6f72a5c213}
+
+
+Definido na linha 28 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a7f8f94601a5efe2de574907a8389a40d}{\index{opcode.\-h@{opcode.\-h}!iconst\-\_\-5@{iconst\-\_\-5}}
+\index{iconst\-\_\-5@{iconst\-\_\-5}!opcode.h@{opcode.\-h}}
+\subsubsection[{iconst\-\_\-5}]{\setlength{\rightskip}{0pt plus 5cm}\#define iconst\-\_\-5~0x08}}\label{opcode_8h_a7f8f94601a5efe2de574907a8389a40d}
+
+
+Definido na linha 29 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a0acdc57b39dba02a01e01a00488d17d4}{\index{opcode.\-h@{opcode.\-h}!iconst\-\_\-m1@{iconst\-\_\-m1}}
+\index{iconst\-\_\-m1@{iconst\-\_\-m1}!opcode.h@{opcode.\-h}}
+\subsubsection[{iconst\-\_\-m1}]{\setlength{\rightskip}{0pt plus 5cm}\#define iconst\-\_\-m1~0x02}}\label{opcode_8h_a0acdc57b39dba02a01e01a00488d17d4}
+
+
+Definido na linha 23 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_af2dec382fbd6207a971750a2f64132a7}{\index{opcode.\-h@{opcode.\-h}!idiv@{idiv}}
+\index{idiv@{idiv}!opcode.h@{opcode.\-h}}
+\subsubsection[{idiv}]{\setlength{\rightskip}{0pt plus 5cm}\#define idiv~0x6\-C}}\label{opcode_8h_af2dec382fbd6207a971750a2f64132a7}
+
+
+Definido na linha 161 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ad73022c10e0ff858fd77e94efaca281d}{\index{opcode.\-h@{opcode.\-h}!if\-\_\-acmpeq@{if\-\_\-acmpeq}}
+\index{if\-\_\-acmpeq@{if\-\_\-acmpeq}!opcode.h@{opcode.\-h}}
+\subsubsection[{if\-\_\-acmpeq}]{\setlength{\rightskip}{0pt plus 5cm}\#define if\-\_\-acmpeq~0x\-A5}}\label{opcode_8h_ad73022c10e0ff858fd77e94efaca281d}
+
+
+Definido na linha 244 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a46a7518d2b792ab99e585d254a80a1bc}{\index{opcode.\-h@{opcode.\-h}!if\-\_\-acmpne@{if\-\_\-acmpne}}
+\index{if\-\_\-acmpne@{if\-\_\-acmpne}!opcode.h@{opcode.\-h}}
+\subsubsection[{if\-\_\-acmpne}]{\setlength{\rightskip}{0pt plus 5cm}\#define if\-\_\-acmpne~0x\-A6}}\label{opcode_8h_a46a7518d2b792ab99e585d254a80a1bc}
+
+
+Definido na linha 245 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_af3d35457a83eb90675c8052c573b0050}{\index{opcode.\-h@{opcode.\-h}!if\-\_\-icmpeq@{if\-\_\-icmpeq}}
+\index{if\-\_\-icmpeq@{if\-\_\-icmpeq}!opcode.h@{opcode.\-h}}
+\subsubsection[{if\-\_\-icmpeq}]{\setlength{\rightskip}{0pt plus 5cm}\#define if\-\_\-icmpeq~0x9\-F}}\label{opcode_8h_af3d35457a83eb90675c8052c573b0050}
+
+
+Definido na linha 238 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a500f46e12974da7a5667bb5c29d5fdbe}{\index{opcode.\-h@{opcode.\-h}!if\-\_\-icmpge@{if\-\_\-icmpge}}
+\index{if\-\_\-icmpge@{if\-\_\-icmpge}!opcode.h@{opcode.\-h}}
+\subsubsection[{if\-\_\-icmpge}]{\setlength{\rightskip}{0pt plus 5cm}\#define if\-\_\-icmpge~0x\-A2}}\label{opcode_8h_a500f46e12974da7a5667bb5c29d5fdbe}
+
+
+Definido na linha 241 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ae4835b6a6d0a1fd302de12626eed81e2}{\index{opcode.\-h@{opcode.\-h}!if\-\_\-icmpgt@{if\-\_\-icmpgt}}
+\index{if\-\_\-icmpgt@{if\-\_\-icmpgt}!opcode.h@{opcode.\-h}}
+\subsubsection[{if\-\_\-icmpgt}]{\setlength{\rightskip}{0pt plus 5cm}\#define if\-\_\-icmpgt~0x\-A3}}\label{opcode_8h_ae4835b6a6d0a1fd302de12626eed81e2}
+
+
+Definido na linha 242 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a8fcf5c2b5b1c931389462d0cbf70e9d6}{\index{opcode.\-h@{opcode.\-h}!if\-\_\-icmple@{if\-\_\-icmple}}
+\index{if\-\_\-icmple@{if\-\_\-icmple}!opcode.h@{opcode.\-h}}
+\subsubsection[{if\-\_\-icmple}]{\setlength{\rightskip}{0pt plus 5cm}\#define if\-\_\-icmple~0x\-A4}}\label{opcode_8h_a8fcf5c2b5b1c931389462d0cbf70e9d6}
+
+
+Definido na linha 243 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aab6fbae855fbdc4731e5fd9dddbc4ef7}{\index{opcode.\-h@{opcode.\-h}!if\-\_\-icmplt@{if\-\_\-icmplt}}
+\index{if\-\_\-icmplt@{if\-\_\-icmplt}!opcode.h@{opcode.\-h}}
+\subsubsection[{if\-\_\-icmplt}]{\setlength{\rightskip}{0pt plus 5cm}\#define if\-\_\-icmplt~0x\-A1}}\label{opcode_8h_aab6fbae855fbdc4731e5fd9dddbc4ef7}
+
+
+Definido na linha 240 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ae2dff8dd4ea8fce9bc85e8c378542c5d}{\index{opcode.\-h@{opcode.\-h}!if\-\_\-icmpne@{if\-\_\-icmpne}}
+\index{if\-\_\-icmpne@{if\-\_\-icmpne}!opcode.h@{opcode.\-h}}
+\subsubsection[{if\-\_\-icmpne}]{\setlength{\rightskip}{0pt plus 5cm}\#define if\-\_\-icmpne~0x\-A0}}\label{opcode_8h_ae2dff8dd4ea8fce9bc85e8c378542c5d}
+
+
+Definido na linha 239 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aae36a9ffd7f4fba0b5acb272820b1965}{\index{opcode.\-h@{opcode.\-h}!ifeq@{ifeq}}
+\index{ifeq@{ifeq}!opcode.h@{opcode.\-h}}
+\subsubsection[{ifeq}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifeq~0x99}}\label{opcode_8h_aae36a9ffd7f4fba0b5acb272820b1965}
+
+
+Definido na linha 232 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a4412482e7edad872de4955fce0b81e98}{\index{opcode.\-h@{opcode.\-h}!ifge@{ifge}}
+\index{ifge@{ifge}!opcode.h@{opcode.\-h}}
+\subsubsection[{ifge}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifge~0x9\-C}}\label{opcode_8h_a4412482e7edad872de4955fce0b81e98}
+
+
+Definido na linha 235 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a377c9b9a071fc3b326517e9625058ec3}{\index{opcode.\-h@{opcode.\-h}!ifgt@{ifgt}}
+\index{ifgt@{ifgt}!opcode.h@{opcode.\-h}}
+\subsubsection[{ifgt}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifgt~0x9\-D}}\label{opcode_8h_a377c9b9a071fc3b326517e9625058ec3}
+
+
+Definido na linha 236 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aca4f19580b2aee712338a3e0fcec09f5}{\index{opcode.\-h@{opcode.\-h}!ifle@{ifle}}
+\index{ifle@{ifle}!opcode.h@{opcode.\-h}}
+\subsubsection[{ifle}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifle~0x9\-E}}\label{opcode_8h_aca4f19580b2aee712338a3e0fcec09f5}
+
+
+Definido na linha 237 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_af542b8cd41b5d779db2e7c34a4088e98}{\index{opcode.\-h@{opcode.\-h}!iflt@{iflt}}
+\index{iflt@{iflt}!opcode.h@{opcode.\-h}}
+\subsubsection[{iflt}]{\setlength{\rightskip}{0pt plus 5cm}\#define iflt~0x9\-B}}\label{opcode_8h_af542b8cd41b5d779db2e7c34a4088e98}
+
+
+Definido na linha 234 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_afdc3f0cb2be91ecabd268daa84fd4427}{\index{opcode.\-h@{opcode.\-h}!ifne@{ifne}}
+\index{ifne@{ifne}!opcode.h@{opcode.\-h}}
+\subsubsection[{ifne}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifne~0x9\-A}}\label{opcode_8h_afdc3f0cb2be91ecabd268daa84fd4427}
+
+
+Definido na linha 233 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ae90d44b0ac49e73f568151950e1c4fbc}{\index{opcode.\-h@{opcode.\-h}!ifnonnull@{ifnonnull}}
+\index{ifnonnull@{ifnonnull}!opcode.h@{opcode.\-h}}
+\subsubsection[{ifnonnull}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifnonnull~0x\-C7}}\label{opcode_8h_ae90d44b0ac49e73f568151950e1c4fbc}
+
+
+Definido na linha 299 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aa5f3b6f21277a9bca948a416513d2ed3}{\index{opcode.\-h@{opcode.\-h}!ifnull@{ifnull}}
+\index{ifnull@{ifnull}!opcode.h@{opcode.\-h}}
+\subsubsection[{ifnull}]{\setlength{\rightskip}{0pt plus 5cm}\#define ifnull~0x\-C6}}\label{opcode_8h_aa5f3b6f21277a9bca948a416513d2ed3}
+
+
+Definido na linha 298 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a674f4328d6b99ba16b89ee10c24a9ab1}{\index{opcode.\-h@{opcode.\-h}!iinc@{iinc}}
+\index{iinc@{iinc}!opcode.h@{opcode.\-h}}
+\subsubsection[{iinc}]{\setlength{\rightskip}{0pt plus 5cm}\#define iinc~0x84}}\label{opcode_8h_a674f4328d6b99ba16b89ee10c24a9ab1}
+
+
+Definido na linha 203 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a5af30fd9c0e4d9d348e759afdb4c0f83}{\index{opcode.\-h@{opcode.\-h}!iload@{iload}}
+\index{iload@{iload}!opcode.h@{opcode.\-h}}
+\subsubsection[{iload}]{\setlength{\rightskip}{0pt plus 5cm}\#define iload~0x15}}\label{opcode_8h_a5af30fd9c0e4d9d348e759afdb4c0f83}
+
+
+Definido na linha 56 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_afaddc63668b3f300dd2901b0a28e837f}{\index{opcode.\-h@{opcode.\-h}!iload\-\_\-0@{iload\-\_\-0}}
+\index{iload\-\_\-0@{iload\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{iload\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define iload\-\_\-0~0x1\-A}}\label{opcode_8h_afaddc63668b3f300dd2901b0a28e837f}
+
+
+Definido na linha 61 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_adefe31780affd6d606be9cd5e4aff5f5}{\index{opcode.\-h@{opcode.\-h}!iload\-\_\-1@{iload\-\_\-1}}
+\index{iload\-\_\-1@{iload\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{iload\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define iload\-\_\-1~0x1\-B}}\label{opcode_8h_adefe31780affd6d606be9cd5e4aff5f5}
+
+
+Definido na linha 62 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a8547159f416180754707dc01fb778109}{\index{opcode.\-h@{opcode.\-h}!iload\-\_\-2@{iload\-\_\-2}}
+\index{iload\-\_\-2@{iload\-\_\-2}!opcode.h@{opcode.\-h}}
+\subsubsection[{iload\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define iload\-\_\-2~0x1\-C}}\label{opcode_8h_a8547159f416180754707dc01fb778109}
+
+
+Definido na linha 63 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ad4a320b4b90ae1fc08d2ec7d0c8fe2d5}{\index{opcode.\-h@{opcode.\-h}!iload\-\_\-3@{iload\-\_\-3}}
+\index{iload\-\_\-3@{iload\-\_\-3}!opcode.h@{opcode.\-h}}
+\subsubsection[{iload\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define iload\-\_\-3~0x1\-D}}\label{opcode_8h_ad4a320b4b90ae1fc08d2ec7d0c8fe2d5}
+
+
+Definido na linha 64 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a07897917b9f3882d6dac93f197e96602}{\index{opcode.\-h@{opcode.\-h}!impdep1@{impdep1}}
+\index{impdep1@{impdep1}!opcode.h@{opcode.\-h}}
+\subsubsection[{impdep1}]{\setlength{\rightskip}{0pt plus 5cm}\#define impdep1~0x\-F\-E}}\label{opcode_8h_a07897917b9f3882d6dac93f197e96602}
+
+
+Definido na linha 306 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a7ae7cd9530f39fb96cef215480f628a4}{\index{opcode.\-h@{opcode.\-h}!impdep2@{impdep2}}
+\index{impdep2@{impdep2}!opcode.h@{opcode.\-h}}
+\subsubsection[{impdep2}]{\setlength{\rightskip}{0pt plus 5cm}\#define impdep2~0x\-F\-F}}\label{opcode_8h_a7ae7cd9530f39fb96cef215480f628a4}
+
+
+Definido na linha 307 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ab3b8d2216fbbf116f42778e1a71a1e22}{\index{opcode.\-h@{opcode.\-h}!imul@{imul}}
+\index{imul@{imul}!opcode.h@{opcode.\-h}}
+\subsubsection[{imul}]{\setlength{\rightskip}{0pt plus 5cm}\#define imul~0x68}}\label{opcode_8h_ab3b8d2216fbbf116f42778e1a71a1e22}
+
+
+Definido na linha 155 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a70e81f796bc29bdc3f7a9d77684ac91d}{\index{opcode.\-h@{opcode.\-h}!ineg@{ineg}}
+\index{ineg@{ineg}!opcode.h@{opcode.\-h}}
+\subsubsection[{ineg}]{\setlength{\rightskip}{0pt plus 5cm}\#define ineg~0x74}}\label{opcode_8h_a70e81f796bc29bdc3f7a9d77684ac91d}
+
+
+Definido na linha 173 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a1036431faf49b85dc8977f67565c6b56}{\index{opcode.\-h@{opcode.\-h}!instanceof@{instanceof}}
+\index{instanceof@{instanceof}!opcode.h@{opcode.\-h}}
+\subsubsection[{instanceof}]{\setlength{\rightskip}{0pt plus 5cm}\#define instanceof~0x\-C1}}\label{opcode_8h_a1036431faf49b85dc8977f67565c6b56}
+
+
+Definido na linha 288 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a534fa6bfc54ecb5c984951c3ef154c23}{\index{opcode.\-h@{opcode.\-h}!invokedynamic@{invokedynamic}}
+\index{invokedynamic@{invokedynamic}!opcode.h@{opcode.\-h}}
+\subsubsection[{invokedynamic}]{\setlength{\rightskip}{0pt plus 5cm}\#define invokedynamic~0x\-B\-A}}\label{opcode_8h_a534fa6bfc54ecb5c984951c3ef154c23}
+
+
+Definido na linha 275 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aaa6ddacda936b180e066883725303c7a}{\index{opcode.\-h@{opcode.\-h}!invokeinterface@{invokeinterface}}
+\index{invokeinterface@{invokeinterface}!opcode.h@{opcode.\-h}}
+\subsubsection[{invokeinterface}]{\setlength{\rightskip}{0pt plus 5cm}\#define invokeinterface~0x\-B9}}\label{opcode_8h_aaa6ddacda936b180e066883725303c7a}
+
+
+Definido na linha 274 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_adcc076659dc116f56128ac6ab97871cd}{\index{opcode.\-h@{opcode.\-h}!invokespecial@{invokespecial}}
+\index{invokespecial@{invokespecial}!opcode.h@{opcode.\-h}}
+\subsubsection[{invokespecial}]{\setlength{\rightskip}{0pt plus 5cm}\#define invokespecial~0x\-B7}}\label{opcode_8h_adcc076659dc116f56128ac6ab97871cd}
+
+
+Definido na linha 272 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_af35f3ca79d1c5dcae067a1821b38578f}{\index{opcode.\-h@{opcode.\-h}!invokestatic@{invokestatic}}
+\index{invokestatic@{invokestatic}!opcode.h@{opcode.\-h}}
+\subsubsection[{invokestatic}]{\setlength{\rightskip}{0pt plus 5cm}\#define invokestatic~0x\-B8}}\label{opcode_8h_af35f3ca79d1c5dcae067a1821b38578f}
+
+
+Definido na linha 273 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a6c0f6662c2746c24648ef9ca90c4e832}{\index{opcode.\-h@{opcode.\-h}!invokevirtual@{invokevirtual}}
+\index{invokevirtual@{invokevirtual}!opcode.h@{opcode.\-h}}
+\subsubsection[{invokevirtual}]{\setlength{\rightskip}{0pt plus 5cm}\#define invokevirtual~0x\-B6}}\label{opcode_8h_a6c0f6662c2746c24648ef9ca90c4e832}
+
+
+Definido na linha 271 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ae0ca2a91b54e8f333dc965180dbe7dad}{\index{opcode.\-h@{opcode.\-h}!ior@{ior}}
+\index{ior@{ior}!opcode.h@{opcode.\-h}}
+\subsubsection[{ior}]{\setlength{\rightskip}{0pt plus 5cm}\#define ior~0x80}}\label{opcode_8h_ae0ca2a91b54e8f333dc965180dbe7dad}
+
+
+Definido na linha 195 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a14a7544ec0c18683f171e7e9aab00385}{\index{opcode.\-h@{opcode.\-h}!irem@{irem}}
+\index{irem@{irem}!opcode.h@{opcode.\-h}}
+\subsubsection[{irem}]{\setlength{\rightskip}{0pt plus 5cm}\#define irem~0x70}}\label{opcode_8h_a14a7544ec0c18683f171e7e9aab00385}
+
+
+Definido na linha 167 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a39ee1ecb5a3d69802ea39ac9d0e25064}{\index{opcode.\-h@{opcode.\-h}!ireturn@{ireturn}}
+\index{ireturn@{ireturn}!opcode.h@{opcode.\-h}}
+\subsubsection[{ireturn}]{\setlength{\rightskip}{0pt plus 5cm}\#define ireturn~0x\-A\-C}}\label{opcode_8h_a39ee1ecb5a3d69802ea39ac9d0e25064}
+
+
+Definido na linha 257 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a1eaf900c9d628e8e02f2451eb2c5bfca}{\index{opcode.\-h@{opcode.\-h}!ishl@{ishl}}
+\index{ishl@{ishl}!opcode.h@{opcode.\-h}}
+\subsubsection[{ishl}]{\setlength{\rightskip}{0pt plus 5cm}\#define ishl~0x78}}\label{opcode_8h_a1eaf900c9d628e8e02f2451eb2c5bfca}
+
+
+Definido na linha 179 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a3ded611266985a854b80ede2c99ffa4f}{\index{opcode.\-h@{opcode.\-h}!ishr@{ishr}}
+\index{ishr@{ishr}!opcode.h@{opcode.\-h}}
+\subsubsection[{ishr}]{\setlength{\rightskip}{0pt plus 5cm}\#define ishr~0x7\-A}}\label{opcode_8h_a3ded611266985a854b80ede2c99ffa4f}
+
+
+Definido na linha 183 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ae93d8211e39712320e9aab28dea6109a}{\index{opcode.\-h@{opcode.\-h}!istore@{istore}}
+\index{istore@{istore}!opcode.h@{opcode.\-h}}
+\subsubsection[{istore}]{\setlength{\rightskip}{0pt plus 5cm}\#define istore~0x36}}\label{opcode_8h_ae93d8211e39712320e9aab28dea6109a}
+
+
+Definido na linha 93 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a813700ef95cda3bc6b9189506a7829be}{\index{opcode.\-h@{opcode.\-h}!istore\-\_\-0@{istore\-\_\-0}}
+\index{istore\-\_\-0@{istore\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{istore\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define istore\-\_\-0~0x3\-B}}\label{opcode_8h_a813700ef95cda3bc6b9189506a7829be}
+
+
+Definido na linha 98 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a5e4b49c7468f714d50d8e1825c864e90}{\index{opcode.\-h@{opcode.\-h}!istore\-\_\-1@{istore\-\_\-1}}
+\index{istore\-\_\-1@{istore\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{istore\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define istore\-\_\-1~0x3\-C}}\label{opcode_8h_a5e4b49c7468f714d50d8e1825c864e90}
+
+
+Definido na linha 99 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a61f871fa3e1fb8ab78b9c3d20ed2799e}{\index{opcode.\-h@{opcode.\-h}!istore\-\_\-2@{istore\-\_\-2}}
+\index{istore\-\_\-2@{istore\-\_\-2}!opcode.h@{opcode.\-h}}
+\subsubsection[{istore\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define istore\-\_\-2~0x3\-D}}\label{opcode_8h_a61f871fa3e1fb8ab78b9c3d20ed2799e}
+
+
+Definido na linha 100 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aa531cc7ebcf0844d1bd33f7359fbc68c}{\index{opcode.\-h@{opcode.\-h}!istore\-\_\-3@{istore\-\_\-3}}
+\index{istore\-\_\-3@{istore\-\_\-3}!opcode.h@{opcode.\-h}}
+\subsubsection[{istore\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define istore\-\_\-3~0x3\-E}}\label{opcode_8h_aa531cc7ebcf0844d1bd33f7359fbc68c}
+
+
+Definido na linha 101 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a0d23b6d61c40090519c85873d65b78bd}{\index{opcode.\-h@{opcode.\-h}!isub@{isub}}
+\index{isub@{isub}!opcode.h@{opcode.\-h}}
+\subsubsection[{isub}]{\setlength{\rightskip}{0pt plus 5cm}\#define isub~0x64}}\label{opcode_8h_a0d23b6d61c40090519c85873d65b78bd}
+
+
+Definido na linha 149 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aa7f69cd0ce35cab46f90b53ff27c57c9}{\index{opcode.\-h@{opcode.\-h}!iushr@{iushr}}
+\index{iushr@{iushr}!opcode.h@{opcode.\-h}}
+\subsubsection[{iushr}]{\setlength{\rightskip}{0pt plus 5cm}\#define iushr~0x7\-C}}\label{opcode_8h_aa7f69cd0ce35cab46f90b53ff27c57c9}
+
+
+Definido na linha 187 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aff1478ac4ea001656abfe1c63d7a373c}{\index{opcode.\-h@{opcode.\-h}!ixor@{ixor}}
+\index{ixor@{ixor}!opcode.h@{opcode.\-h}}
+\subsubsection[{ixor}]{\setlength{\rightskip}{0pt plus 5cm}\#define ixor~0x82}}\label{opcode_8h_aff1478ac4ea001656abfe1c63d7a373c}
+
+
+Definido na linha 199 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ace2b7bfa1fca2da2f7ad25d02a8bbc86}{\index{opcode.\-h@{opcode.\-h}!jsr@{jsr}}
+\index{jsr@{jsr}!opcode.h@{opcode.\-h}}
+\subsubsection[{jsr}]{\setlength{\rightskip}{0pt plus 5cm}\#define jsr~0x\-A8}}\label{opcode_8h_ace2b7bfa1fca2da2f7ad25d02a8bbc86}
+
+
+Definido na linha 249 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a22559f2194f9d11acdfcbe251b324695}{\index{opcode.\-h@{opcode.\-h}!jsr\-\_\-w@{jsr\-\_\-w}}
+\index{jsr\-\_\-w@{jsr\-\_\-w}!opcode.h@{opcode.\-h}}
+\subsubsection[{jsr\-\_\-w}]{\setlength{\rightskip}{0pt plus 5cm}\#define jsr\-\_\-w~0x\-C9}}\label{opcode_8h_a22559f2194f9d11acdfcbe251b324695}
+
+
+Definido na linha 302 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a91f9d0c0d3fa1118247eddbcad04c1a3}{\index{opcode.\-h@{opcode.\-h}!l2d@{l2d}}
+\index{l2d@{l2d}!opcode.h@{opcode.\-h}}
+\subsubsection[{l2d}]{\setlength{\rightskip}{0pt plus 5cm}\#define l2d~0x8\-A}}\label{opcode_8h_a91f9d0c0d3fa1118247eddbcad04c1a3}
+
+
+Definido na linha 212 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a15d1106530e14761cabe6d453100b601}{\index{opcode.\-h@{opcode.\-h}!l2f@{l2f}}
+\index{l2f@{l2f}!opcode.h@{opcode.\-h}}
+\subsubsection[{l2f}]{\setlength{\rightskip}{0pt plus 5cm}\#define l2f~0x89}}\label{opcode_8h_a15d1106530e14761cabe6d453100b601}
+
+
+Definido na linha 211 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aa57a735c9863ad0366c9bab0c95f03a5}{\index{opcode.\-h@{opcode.\-h}!l2i@{l2i}}
+\index{l2i@{l2i}!opcode.h@{opcode.\-h}}
+\subsubsection[{l2i}]{\setlength{\rightskip}{0pt plus 5cm}\#define l2i~0x88}}\label{opcode_8h_aa57a735c9863ad0366c9bab0c95f03a5}
+
+
+Definido na linha 210 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a35d1f78d718247be9578008d3a90f891}{\index{opcode.\-h@{opcode.\-h}!ladd@{ladd}}
+\index{ladd@{ladd}!opcode.h@{opcode.\-h}}
+\subsubsection[{ladd}]{\setlength{\rightskip}{0pt plus 5cm}\#define ladd~0x61}}\label{opcode_8h_a35d1f78d718247be9578008d3a90f891}
+
+
+Definido na linha 144 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a23a1786c56e9fc9d5202c0e34caab820}{\index{opcode.\-h@{opcode.\-h}!laload@{laload}}
+\index{laload@{laload}!opcode.h@{opcode.\-h}}
+\subsubsection[{laload}]{\setlength{\rightskip}{0pt plus 5cm}\#define laload~0x2\-F}}\label{opcode_8h_a23a1786c56e9fc9d5202c0e34caab820}
+
+
+Definido na linha 82 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a1a03c9336bd5ecf4845d8694bb2c610b}{\index{opcode.\-h@{opcode.\-h}!land@{land}}
+\index{land@{land}!opcode.h@{opcode.\-h}}
+\subsubsection[{land}]{\setlength{\rightskip}{0pt plus 5cm}\#define land~0x7\-F}}\label{opcode_8h_a1a03c9336bd5ecf4845d8694bb2c610b}
+
+
+Definido na linha 192 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a8f2c940f6a689ee97ede38311a071b6d}{\index{opcode.\-h@{opcode.\-h}!lastore@{lastore}}
+\index{lastore@{lastore}!opcode.h@{opcode.\-h}}
+\subsubsection[{lastore}]{\setlength{\rightskip}{0pt plus 5cm}\#define lastore~0x50}}\label{opcode_8h_a8f2c940f6a689ee97ede38311a071b6d}
+
+
+Definido na linha 119 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ae90c08171b6199ed152e506ac2b0da72}{\index{opcode.\-h@{opcode.\-h}!lcmp@{lcmp}}
+\index{lcmp@{lcmp}!opcode.h@{opcode.\-h}}
+\subsubsection[{lcmp}]{\setlength{\rightskip}{0pt plus 5cm}\#define lcmp~0x94}}\label{opcode_8h_ae90c08171b6199ed152e506ac2b0da72}
+
+
+Definido na linha 224 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a7f77bb403ded660eb57f52a066872de8}{\index{opcode.\-h@{opcode.\-h}!lconst\-\_\-0@{lconst\-\_\-0}}
+\index{lconst\-\_\-0@{lconst\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{lconst\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define lconst\-\_\-0~0x09}}\label{opcode_8h_a7f77bb403ded660eb57f52a066872de8}
+
+
+Definido na linha 30 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a578642be54c9a7f107c5c9c884d1d4ac}{\index{opcode.\-h@{opcode.\-h}!lconst\-\_\-1@{lconst\-\_\-1}}
+\index{lconst\-\_\-1@{lconst\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{lconst\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define lconst\-\_\-1~0x0\-A}}\label{opcode_8h_a578642be54c9a7f107c5c9c884d1d4ac}
+
+
+Definido na linha 31 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aa5d997194c1c9ea941b1690edddf5937}{\index{opcode.\-h@{opcode.\-h}!ldc@{ldc}}
+\index{ldc@{ldc}!opcode.h@{opcode.\-h}}
+\subsubsection[{ldc}]{\setlength{\rightskip}{0pt plus 5cm}\#define ldc~0x12}}\label{opcode_8h_aa5d997194c1c9ea941b1690edddf5937}
+
+
+Definido na linha 48 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a9fb6076137de49037dc098fd9cc62313}{\index{opcode.\-h@{opcode.\-h}!ldc2\-\_\-w@{ldc2\-\_\-w}}
+\index{ldc2\-\_\-w@{ldc2\-\_\-w}!opcode.h@{opcode.\-h}}
+\subsubsection[{ldc2\-\_\-w}]{\setlength{\rightskip}{0pt plus 5cm}\#define ldc2\-\_\-w~0x14}}\label{opcode_8h_a9fb6076137de49037dc098fd9cc62313}
+
+
+Definido na linha 50 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a26e9e5ac43c5d7d35aee0f97221524cf}{\index{opcode.\-h@{opcode.\-h}!ldc\-\_\-w@{ldc\-\_\-w}}
+\index{ldc\-\_\-w@{ldc\-\_\-w}!opcode.h@{opcode.\-h}}
+\subsubsection[{ldc\-\_\-w}]{\setlength{\rightskip}{0pt plus 5cm}\#define ldc\-\_\-w~0x13}}\label{opcode_8h_a26e9e5ac43c5d7d35aee0f97221524cf}
+
+
+Definido na linha 49 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a6d949ad624d68865da2e6bf569162463}{\index{opcode.\-h@{opcode.\-h}!ldiv\-\_\-@{ldiv\-\_\-}}
+\index{ldiv\-\_\-@{ldiv\-\_\-}!opcode.h@{opcode.\-h}}
+\subsubsection[{ldiv\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define ldiv\-\_\-~0x6\-D}}\label{opcode_8h_a6d949ad624d68865da2e6bf569162463}
+
+
+Definido na linha 162 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aa53d82d3dfe837d8cc9d24fcfdffe7e3}{\index{opcode.\-h@{opcode.\-h}!lload@{lload}}
+\index{lload@{lload}!opcode.h@{opcode.\-h}}
+\subsubsection[{lload}]{\setlength{\rightskip}{0pt plus 5cm}\#define lload~0x16}}\label{opcode_8h_aa53d82d3dfe837d8cc9d24fcfdffe7e3}
+
+
+Definido na linha 57 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ad938e5c6b18accc9eab26ce0684ec513}{\index{opcode.\-h@{opcode.\-h}!lload\-\_\-0@{lload\-\_\-0}}
+\index{lload\-\_\-0@{lload\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{lload\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define lload\-\_\-0~0x1\-E}}\label{opcode_8h_ad938e5c6b18accc9eab26ce0684ec513}
+
+
+Definido na linha 65 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a3a304ac4ae1179d335a58fe2c3538261}{\index{opcode.\-h@{opcode.\-h}!lload\-\_\-1@{lload\-\_\-1}}
+\index{lload\-\_\-1@{lload\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{lload\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define lload\-\_\-1~0x1\-F}}\label{opcode_8h_a3a304ac4ae1179d335a58fe2c3538261}
+
+
+Definido na linha 66 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a078bbbaf4593ce3573ff97edd3986156}{\index{opcode.\-h@{opcode.\-h}!lload\-\_\-2@{lload\-\_\-2}}
+\index{lload\-\_\-2@{lload\-\_\-2}!opcode.h@{opcode.\-h}}
+\subsubsection[{lload\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define lload\-\_\-2~{\bf F\-L\-A\-G\-\_\-\-S\-U\-P\-E\-R}}}\label{opcode_8h_a078bbbaf4593ce3573ff97edd3986156}
+
+
+Definido na linha 67 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a6e0dfe774257b57e8a02c5ad951f9135}{\index{opcode.\-h@{opcode.\-h}!lload\-\_\-3@{lload\-\_\-3}}
+\index{lload\-\_\-3@{lload\-\_\-3}!opcode.h@{opcode.\-h}}
+\subsubsection[{lload\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define lload\-\_\-3~0x21}}\label{opcode_8h_a6e0dfe774257b57e8a02c5ad951f9135}
+
+
+Definido na linha 68 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a59989acb4429f7252175e8f6187000d0}{\index{opcode.\-h@{opcode.\-h}!lmul@{lmul}}
+\index{lmul@{lmul}!opcode.h@{opcode.\-h}}
+\subsubsection[{lmul}]{\setlength{\rightskip}{0pt plus 5cm}\#define lmul~0x69}}\label{opcode_8h_a59989acb4429f7252175e8f6187000d0}
+
+
+Definido na linha 156 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_acc063c83549cdaa0e83ae41d79e22921}{\index{opcode.\-h@{opcode.\-h}!lneg@{lneg}}
+\index{lneg@{lneg}!opcode.h@{opcode.\-h}}
+\subsubsection[{lneg}]{\setlength{\rightskip}{0pt plus 5cm}\#define lneg~0x75}}\label{opcode_8h_acc063c83549cdaa0e83ae41d79e22921}
+
+
+Definido na linha 174 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a8e97b2775ecd6af72944be3260d46efc}{\index{opcode.\-h@{opcode.\-h}!lookupswitch@{lookupswitch}}
+\index{lookupswitch@{lookupswitch}!opcode.h@{opcode.\-h}}
+\subsubsection[{lookupswitch}]{\setlength{\rightskip}{0pt plus 5cm}\#define lookupswitch~0x\-A\-B}}\label{opcode_8h_a8e97b2775ecd6af72944be3260d46efc}
+
+
+Definido na linha 254 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aef6e8f47f746a36d2b24833c6809bec6}{\index{opcode.\-h@{opcode.\-h}!lor@{lor}}
+\index{lor@{lor}!opcode.h@{opcode.\-h}}
+\subsubsection[{lor}]{\setlength{\rightskip}{0pt plus 5cm}\#define lor~0x81}}\label{opcode_8h_aef6e8f47f746a36d2b24833c6809bec6}
+
+
+Definido na linha 196 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a7d0e55dc85db36a830f05c703873b73f}{\index{opcode.\-h@{opcode.\-h}!lrem@{lrem}}
+\index{lrem@{lrem}!opcode.h@{opcode.\-h}}
+\subsubsection[{lrem}]{\setlength{\rightskip}{0pt plus 5cm}\#define lrem~0x71}}\label{opcode_8h_a7d0e55dc85db36a830f05c703873b73f}
+
+
+Definido na linha 168 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a78d7d755c7ed27c124404714ed4e44bd}{\index{opcode.\-h@{opcode.\-h}!lreturn@{lreturn}}
+\index{lreturn@{lreturn}!opcode.h@{opcode.\-h}}
+\subsubsection[{lreturn}]{\setlength{\rightskip}{0pt plus 5cm}\#define lreturn~0x\-A\-D}}\label{opcode_8h_a78d7d755c7ed27c124404714ed4e44bd}
+
+
+Definido na linha 258 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a38f798786d9744776dfb441dcc6dd8c9}{\index{opcode.\-h@{opcode.\-h}!lshl@{lshl}}
+\index{lshl@{lshl}!opcode.h@{opcode.\-h}}
+\subsubsection[{lshl}]{\setlength{\rightskip}{0pt plus 5cm}\#define lshl~0x79}}\label{opcode_8h_a38f798786d9744776dfb441dcc6dd8c9}
+
+
+Definido na linha 180 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a9a71fc9d7f71b6aa006f0cab1a18da69}{\index{opcode.\-h@{opcode.\-h}!lshr@{lshr}}
+\index{lshr@{lshr}!opcode.h@{opcode.\-h}}
+\subsubsection[{lshr}]{\setlength{\rightskip}{0pt plus 5cm}\#define lshr~0x7\-B}}\label{opcode_8h_a9a71fc9d7f71b6aa006f0cab1a18da69}
+
+
+Definido na linha 184 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a478fcb34cc5a0f6f4bd0e7c334ca2dd0}{\index{opcode.\-h@{opcode.\-h}!lstore@{lstore}}
+\index{lstore@{lstore}!opcode.h@{opcode.\-h}}
+\subsubsection[{lstore}]{\setlength{\rightskip}{0pt plus 5cm}\#define lstore~0x37}}\label{opcode_8h_a478fcb34cc5a0f6f4bd0e7c334ca2dd0}
+
+
+Definido na linha 94 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ae579e23da97ef0585254fc82db99c136}{\index{opcode.\-h@{opcode.\-h}!lstore\-\_\-0@{lstore\-\_\-0}}
+\index{lstore\-\_\-0@{lstore\-\_\-0}!opcode.h@{opcode.\-h}}
+\subsubsection[{lstore\-\_\-0}]{\setlength{\rightskip}{0pt plus 5cm}\#define lstore\-\_\-0~0x3\-F}}\label{opcode_8h_ae579e23da97ef0585254fc82db99c136}
+
+
+Definido na linha 102 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a745310b7b51668f138b721a7d4094a23}{\index{opcode.\-h@{opcode.\-h}!lstore\-\_\-1@{lstore\-\_\-1}}
+\index{lstore\-\_\-1@{lstore\-\_\-1}!opcode.h@{opcode.\-h}}
+\subsubsection[{lstore\-\_\-1}]{\setlength{\rightskip}{0pt plus 5cm}\#define lstore\-\_\-1~0x40}}\label{opcode_8h_a745310b7b51668f138b721a7d4094a23}
+
+
+Definido na linha 103 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a01fe88bcbfa104ec12eecd68d32e64be}{\index{opcode.\-h@{opcode.\-h}!lstore\-\_\-2@{lstore\-\_\-2}}
+\index{lstore\-\_\-2@{lstore\-\_\-2}!opcode.h@{opcode.\-h}}
+\subsubsection[{lstore\-\_\-2}]{\setlength{\rightskip}{0pt plus 5cm}\#define lstore\-\_\-2~0x41}}\label{opcode_8h_a01fe88bcbfa104ec12eecd68d32e64be}
+
+
+Definido na linha 104 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a0972ce2305c293ab985ffcc3f3178f6d}{\index{opcode.\-h@{opcode.\-h}!lstore\-\_\-3@{lstore\-\_\-3}}
+\index{lstore\-\_\-3@{lstore\-\_\-3}!opcode.h@{opcode.\-h}}
+\subsubsection[{lstore\-\_\-3}]{\setlength{\rightskip}{0pt plus 5cm}\#define lstore\-\_\-3~0x42}}\label{opcode_8h_a0972ce2305c293ab985ffcc3f3178f6d}
+
+
+Definido na linha 105 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a77f3a45a7694df2848fa3bc04380014d}{\index{opcode.\-h@{opcode.\-h}!lsub@{lsub}}
+\index{lsub@{lsub}!opcode.h@{opcode.\-h}}
+\subsubsection[{lsub}]{\setlength{\rightskip}{0pt plus 5cm}\#define lsub~0x65}}\label{opcode_8h_a77f3a45a7694df2848fa3bc04380014d}
+
+
+Definido na linha 150 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a4aa23b74f85d1abffc35e5f5ef59b3e5}{\index{opcode.\-h@{opcode.\-h}!lushr@{lushr}}
+\index{lushr@{lushr}!opcode.h@{opcode.\-h}}
+\subsubsection[{lushr}]{\setlength{\rightskip}{0pt plus 5cm}\#define lushr~0x7\-D}}\label{opcode_8h_a4aa23b74f85d1abffc35e5f5ef59b3e5}
+
+
+Definido na linha 188 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a5952429e830227aa7062a2df5d304ccb}{\index{opcode.\-h@{opcode.\-h}!lxor@{lxor}}
+\index{lxor@{lxor}!opcode.h@{opcode.\-h}}
+\subsubsection[{lxor}]{\setlength{\rightskip}{0pt plus 5cm}\#define lxor~0x83}}\label{opcode_8h_a5952429e830227aa7062a2df5d304ccb}
+
+
+Definido na linha 200 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_aa0eb2500f21414a5060715c76fb8f6ca}{\index{opcode.\-h@{opcode.\-h}!monitorenter@{monitorenter}}
+\index{monitorenter@{monitorenter}!opcode.h@{opcode.\-h}}
+\subsubsection[{monitorenter}]{\setlength{\rightskip}{0pt plus 5cm}\#define monitorenter~0x\-C2}}\label{opcode_8h_aa0eb2500f21414a5060715c76fb8f6ca}
+
+
+Definido na linha 291 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a7c926c406aebf297a6fec0a71f6f5991}{\index{opcode.\-h@{opcode.\-h}!monitorexit@{monitorexit}}
+\index{monitorexit@{monitorexit}!opcode.h@{opcode.\-h}}
+\subsubsection[{monitorexit}]{\setlength{\rightskip}{0pt plus 5cm}\#define monitorexit~0x\-C3}}\label{opcode_8h_a7c926c406aebf297a6fec0a71f6f5991}
+
+
+Definido na linha 292 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a45bbaee02ba9a17cb0d00c7f8577a162}{\index{opcode.\-h@{opcode.\-h}!multianewarray@{multianewarray}}
+\index{multianewarray@{multianewarray}!opcode.h@{opcode.\-h}}
+\subsubsection[{multianewarray}]{\setlength{\rightskip}{0pt plus 5cm}\#define multianewarray~0x\-C5}}\label{opcode_8h_a45bbaee02ba9a17cb0d00c7f8577a162}
+
+
+Definido na linha 296 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a1ac41480eb2e4aadd52252ee550b630a}{\index{opcode.\-h@{opcode.\-h}!new@{new}}
+\index{new@{new}!opcode.h@{opcode.\-h}}
+\subsubsection[{new}]{\setlength{\rightskip}{0pt plus 5cm}\#define new~0x\-B\-B}}\label{opcode_8h_a1ac41480eb2e4aadd52252ee550b630a}
+
+
+Definido na linha 278 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a3f4be3ddbdb1d091212a149a0b728e83}{\index{opcode.\-h@{opcode.\-h}!newarray@{newarray}}
+\index{newarray@{newarray}!opcode.h@{opcode.\-h}}
+\subsubsection[{newarray}]{\setlength{\rightskip}{0pt plus 5cm}\#define newarray~0x\-B\-C}}\label{opcode_8h_a3f4be3ddbdb1d091212a149a0b728e83}
+
+
+Definido na linha 279 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a51158539d4d6022c9a445e78b0abfa94}{\index{opcode.\-h@{opcode.\-h}!nop@{nop}}
+\index{nop@{nop}!opcode.h@{opcode.\-h}}
+\subsubsection[{nop}]{\setlength{\rightskip}{0pt plus 5cm}\#define nop~0x00}}\label{opcode_8h_a51158539d4d6022c9a445e78b0abfa94}
+
+
+Definido na linha 15 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a6a13234722161c83fd6467afed65b209}{\index{opcode.\-h@{opcode.\-h}!pop@{pop}}
+\index{pop@{pop}!opcode.h@{opcode.\-h}}
+\subsubsection[{pop}]{\setlength{\rightskip}{0pt plus 5cm}\#define pop~0x57}}\label{opcode_8h_a6a13234722161c83fd6467afed65b209}
+
+
+Definido na linha 130 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a1e3b7fde917eb7f7f293ccd97cd99f2b}{\index{opcode.\-h@{opcode.\-h}!pop2@{pop2}}
+\index{pop2@{pop2}!opcode.h@{opcode.\-h}}
+\subsubsection[{pop2}]{\setlength{\rightskip}{0pt plus 5cm}\#define pop2~0x58}}\label{opcode_8h_a1e3b7fde917eb7f7f293ccd97cd99f2b}
+
+
+Definido na linha 131 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a173f3f625ebcafcd523aa0faa4cc8e79}{\index{opcode.\-h@{opcode.\-h}!putfield@{putfield}}
+\index{putfield@{putfield}!opcode.h@{opcode.\-h}}
+\subsubsection[{putfield}]{\setlength{\rightskip}{0pt plus 5cm}\#define putfield~0x\-B5}}\label{opcode_8h_a173f3f625ebcafcd523aa0faa4cc8e79}
+
+
+Definido na linha 268 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a8fcfdcfe7225d59ba405d724f623d588}{\index{opcode.\-h@{opcode.\-h}!putstatic@{putstatic}}
+\index{putstatic@{putstatic}!opcode.h@{opcode.\-h}}
+\subsubsection[{putstatic}]{\setlength{\rightskip}{0pt plus 5cm}\#define putstatic~0x\-B3}}\label{opcode_8h_a8fcfdcfe7225d59ba405d724f623d588}
+
+
+Definido na linha 266 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_ae7b1d18a435dcca5e1837205e5fc909d}{\index{opcode.\-h@{opcode.\-h}!ret@{ret}}
+\index{ret@{ret}!opcode.h@{opcode.\-h}}
+\subsubsection[{ret}]{\setlength{\rightskip}{0pt plus 5cm}\#define ret~0x\-A9}}\label{opcode_8h_ae7b1d18a435dcca5e1837205e5fc909d}
+
+
+Definido na linha 250 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a638cccdcb1ce7ec07018daf98815c9c7}{\index{opcode.\-h@{opcode.\-h}!return\-\_\-@{return\-\_\-}}
+\index{return\-\_\-@{return\-\_\-}!opcode.h@{opcode.\-h}}
+\subsubsection[{return\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define return\-\_\-~0x\-B1}}\label{opcode_8h_a638cccdcb1ce7ec07018daf98815c9c7}
+
+
+Definido na linha 262 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a8a13d1603bad0e00de02a90d95fbd456}{\index{opcode.\-h@{opcode.\-h}!saload@{saload}}
+\index{saload@{saload}!opcode.h@{opcode.\-h}}
+\subsubsection[{saload}]{\setlength{\rightskip}{0pt plus 5cm}\#define saload~0x35}}\label{opcode_8h_a8a13d1603bad0e00de02a90d95fbd456}
+
+
+Definido na linha 88 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_af5b292b89971147e1ba0c20653eef21c}{\index{opcode.\-h@{opcode.\-h}!sastore@{sastore}}
+\index{sastore@{sastore}!opcode.h@{opcode.\-h}}
+\subsubsection[{sastore}]{\setlength{\rightskip}{0pt plus 5cm}\#define sastore~0x56}}\label{opcode_8h_af5b292b89971147e1ba0c20653eef21c}
+
+
+Definido na linha 125 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a3dc635b550b6a83051c608590ecf7edd}{\index{opcode.\-h@{opcode.\-h}!sipush@{sipush}}
+\index{sipush@{sipush}!opcode.h@{opcode.\-h}}
+\subsubsection[{sipush}]{\setlength{\rightskip}{0pt plus 5cm}\#define sipush~0x11}}\label{opcode_8h_a3dc635b550b6a83051c608590ecf7edd}
+
+
+Definido na linha 41 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a16e95c6dac9f95627fb9dbb7e9b2537b}{\index{opcode.\-h@{opcode.\-h}!swap@{swap}}
+\index{swap@{swap}!opcode.h@{opcode.\-h}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}\#define swap~0x5\-F}}\label{opcode_8h_a16e95c6dac9f95627fb9dbb7e9b2537b}
+
+
+Definido na linha 138 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a41f4bc97b7d7d5852f47f222f0d3843f}{\index{opcode.\-h@{opcode.\-h}!tableswitch@{tableswitch}}
+\index{tableswitch@{tableswitch}!opcode.h@{opcode.\-h}}
+\subsubsection[{tableswitch}]{\setlength{\rightskip}{0pt plus 5cm}\#define tableswitch~0x\-A\-A}}\label{opcode_8h_a41f4bc97b7d7d5852f47f222f0d3843f}
+
+
+Definido na linha 253 do ficheiro opcode.\-h.
+
+\hypertarget{opcode_8h_a20c48cc7bb301134c9da955ae6c1f823}{\index{opcode.\-h@{opcode.\-h}!wide@{wide}}
+\index{wide@{wide}!opcode.h@{opcode.\-h}}
+\subsubsection[{wide}]{\setlength{\rightskip}{0pt plus 5cm}\#define wide~0x\-C4}}\label{opcode_8h_a20c48cc7bb301134c9da955ae6c1f823}
+
+
+Definido na linha 294 do ficheiro opcode.\-h.
+

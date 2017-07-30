@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>JVM - Cruzeiro: Código-Fonte de cruzeiro.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">JVM - Cruzeiro
+   &#160;<span id="projectnumber">Versão Básica Funcional</span>
+   </div>
+   <div id="projectbrief">Trabalho de Software Básico - Turma do Professor Marcelo Ladeira</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&#160;membro</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('cruzeiro_8h_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tudo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Ficheiros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definições de tipos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">cruzeiro.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="cruzeiro_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// jvm.h</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*==========================================*/</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  DESCRIÇÃO</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Define os tipos e métodos utilizados pela JVM.</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/*==========================================*/</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//  INCLUDES</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_leit_exib_8h.html">LeitExib.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">/*==========================================*/</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//  TIPOS</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#ab34056db44556fbb28ffa6aff4873b4c">   17</a></span>&#160;<span class="keyword">typedef</span> uint8_t <a class="code" href="cruzeiro_8h.html#ab34056db44556fbb28ffa6aff4873b4c">OPCODE</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#a96376f31c362e2a289072478449290f8">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">char</span> <a class="code" href="cruzeiro_8h.html#a96376f31c362e2a289072478449290f8">TYPE</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#aeeb4b41434914a6809f3448b40f818de">   19</a></span>&#160;<span class="keyword">typedef</span> uint32_t <a class="code" href="cruzeiro_8h.html#aeeb4b41434914a6809f3448b40f818de">ARRAY_TYPE</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Descritores de Fields</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#aec93e83855ac17c3c25c55c37ca186dd">   22</a></span>&#160;<span class="preprocessor">#define BYTE &#39;B&#39;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#a35cd67ba7bb0db8105eb6267467535d7">   23</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define CHAR &#39;C&#39;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#a8747af38b86aa2bbcda2f1b1aa0888c2">   24</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define DOUBLE &#39;D&#39;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#ae8690abbffa85934d64d545920e2b108">   25</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define FLOAT &#39;F&#39;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#afeeffe52c8fd59db7c61cf8b02042dbf">   26</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define INT &#39;I&#39;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#acaa7b8a7167a8214f499c71c413ddcca">   27</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define LONG &#39;J&#39;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#abc89a525f57ec2bfb44ee9e48660154f">   28</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define REF_INST &#39;L&#39;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#a9fbb14850a9f176447733a089071cd70">   29</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define SHORT &#39;S&#39;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#a50168fdbaa52d4a0b1c287d476050f12">   30</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define BOOLEAN &#39;Z&#39;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#a0fe85cdfdc6ac54e3d35b46683608dc4">   31</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define REF_ARRAY &#39;[&#39;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// OBJECT</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#a75cf109ba9d4518221445697fdbfc933">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structobject.html">object</a> <a class="code" href="structobject.html">obj</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="cruzeiro_8h.html#a96c64553ad75dd4c717e10b23fafaf1b">   35</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structarray.html">array</a> <a class="code" href="structarray.html">ar</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">// VALUE</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structvalue.html">value</a> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="core_8h.html#a96376f31c362e2a289072478449290f8">TYPE</a> <a class="code" href="structvalue.html#a8193b2471a420d07d6273ea3c9653155">type</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">union </span>{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">struct </span>{  <span class="comment">// BYTE</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            int8_t <a class="code" href="structvalue.html#a5827febe7b21adba8ddb86bbf0996e8c">byte</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        } <a class="code" href="structvalue.html#af2bea3c5b60d0a36c10e297af2bbb80f">Byte</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">struct </span>{  <span class="comment">// SHORT</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            int16_t <a class="code" href="structvalue.html#a083e8a03606d5b79029794b3d575c021">short_</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        } <a class="code" href="structvalue.html#ac6f6c8288a2314221cd061b264fa25e1">Short</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">struct </span>{  <span class="comment">// INTEGER</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            int32_t <a class="code" href="structvalue.html#a58a1dfb88538dd68c4ccd5d6c7f571d2">integer</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        } <a class="code" href="structvalue.html#a8f62817042c944120cd6099cc5ec9654">Integer</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">struct </span>{  <span class="comment">// LONG</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            uint32_t <a class="code" href="structvalue.html#a670628f51376fadc6cd3c7aa2076dd95">high_bytes</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            uint32_t <a class="code" href="structvalue.html#a8f7d961af70bd80fe990c31ff3db48fa">low_bytes</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        } <a class="code" href="structvalue.html#a525db6e48cfe9e5303f30ba1dde3cb7f">Long</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">struct </span>{  <span class="comment">// FLOAT</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            uint32_t <a class="code" href="structvalue.html#af597140f73eb1550b593c1b98557f6b8">float_</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        } <a class="code" href="structvalue.html#a7a1d7fe0031e83219851bd64b2835ded">Float</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">struct </span>{  <span class="comment">// DOUBLE</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            uint32_t <a class="code" href="structvalue.html#a670628f51376fadc6cd3c7aa2076dd95">high_bytes</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            uint32_t <a class="code" href="structvalue.html#a8f7d961af70bd80fe990c31ff3db48fa">low_bytes</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        } <a class="code" href="structvalue.html#af463045e46ef998b3c1e017651e04411">Double</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">struct </span>{  <span class="comment">// CHAR</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            uint16_t <a class="code" href="structvalue.html#aabf3d6c1e51cee9d6bec48077f36d1c4">char_</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        } <a class="code" href="structvalue.html#a730511b073f9ef902b73f72b08f97ad4">Char</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">struct </span>{  <span class="comment">// boolean</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            uint8_t <a class="code" href="structvalue.html#accc539dfc5234b1ff83f084dfeedab4e">boolean</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        } <a class="code" href="structvalue.html#a3daafd6e88c6428a0be01e1a4002eb96">Boolean</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">struct </span>{  <span class="comment">// INSTANCE REFERENCE</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keyword">struct </span><a class="code" href="structobject.html">object</a> *<a class="code" href="structvalue.html#ab277933041ff972104180fda5190a425">reference</a>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        } <a class="code" href="structvalue.html#acfcc12390036cb37f60fa22e0900ef8d">InstanceReference</a>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">struct </span>{  <span class="comment">// ARRAY REFERENCE</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keyword">struct </span><a class="code" href="structarray.html">array</a> *<a class="code" href="structvalue.html#ab277933041ff972104180fda5190a425">reference</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        } <a class="code" href="structvalue.html#a09d361f523397d57aa1589c63fddb429">ArrayReference</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">struct </span>{  <span class="comment">// RETURN ADDRESS</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="core_8h.html#ab34056db44556fbb28ffa6aff4873b4c">OPCODE</a> *<a class="code" href="structvalue.html#ae154453352d31839cbe33fca89fc98aa">return_address</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        } <a class="code" href="structvalue.html#a264ea0eb8eca9c9698c66c7412e8ca88">ReturnAddress</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    } <a class="code" href="structvalue.html#acee60f59572f5488da8ac5748e80e9cc">u</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;} <a class="code" href="cruzeiro_8h.html#ad5d0e2bb91a9e28f920452e088b6462b">VALUE</a>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">// OPERAND</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structoperand.html">operand</a> {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    uint32_t <a class="code" href="structoperand.html#a4112f16b41c272f45499c809391b17a2">value</a>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="core_8h.html#a96376f31c362e2a289072478449290f8">TYPE</a> <a class="code" href="structoperand.html#a8af3746223d14253f5b287d236f59ce4">type</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">struct </span><a class="code" href="structoperand.html">operand</a> *<a class="code" href="structoperand.html#a5fafd6fa6b26bed8a29013570c881285">prox</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;} <a class="code" href="cruzeiro_8h.html#a57370c151bf2eefc3bd6e2d13b70e7c9">OPERAND</a>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">// FRAME</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structframe.html">frame</a> {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    uint32_t *<a class="code" href="structframe.html#a056cdce8d980a00e78e558a81add1779">local_variables</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="structoperand.html">OPERAND</a> *<a class="code" href="structframe.html#ae1de7bc075bf06c24555a4b716d8f681">operand_stack</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="structconst_pool_inf.html">constPoolInf</a> *<a class="code" href="structframe.html#a3acb55c85b6e2bbe2cc26c17e9d9d6e5">current_constant_pool</a>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">struct </span><a class="code" href="structframe.html">frame</a> *<a class="code" href="structframe.html#aac1374d21a07cfd859135c28c7f42e32">prox</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;} <a class="code" href="cruzeiro_8h.html#ad2c7f62ece09f452ea1a5285adcc503c">FRAME</a>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="comment">// THREAD</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structthread.html">thread</a> {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="core_8h.html#ab34056db44556fbb28ffa6aff4873b4c">OPCODE</a> *</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="structthread.html#a6ac44ddf69dea175dacf2b2253e49b09">program_counter</a>;  <span class="comment">// https://docs.oracle.com/javase/specs/jvms/se6/html/Overview.doc.html#6648</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="structframe.html">FRAME</a> *</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="structthread.html#a70ff403a3a4548c8c64ab9760aa38355">jvm_stack</a>;  <span class="comment">// https://docs.oracle.com/javase/specs/jvms/se6/html/Overview.doc.html#6654</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">struct </span><a class="code" href="structthread.html">thread</a> *<a class="code" href="structthread.html#ad3e651d8effbb6301558e49979a1bee4">prox</a>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;} <a class="code" href="cruzeiro_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="comment">// HEAP_AREA</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structheap__area.html">heap_area</a> {  <span class="comment">// https://docs.oracle.com/javase/specs/jvms/se6/html/Overview.doc.html#15730</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">struct </span><a class="code" href="structobject.html">object</a> *<a class="code" href="structheap__area.html#ae7a59bd769da0eea5c87397e0d669e4b">objects</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">struct </span><a class="code" href="structarray.html">array</a> *<a class="code" href="structheap__area.html#a9b7f01ddd56ad53eb74a6c6064bc7092">arrays</a>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;} <a class="code" href="cruzeiro_8h.html#a8aa4d8af3cc19c82a17fa714d533cb8f">HEAP_AREA</a>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="comment">// FIELD_DATA</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structfield__data.html">field_data</a> {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="structconst_pool_inf.html">constPoolInf</a> *<a class="code" href="structfield__data.html#aa95bccbd245864937b9ffc56655a02c5">field_name</a>;        <span class="comment">// CONSTANTE_Utf8</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="structconst_pool_inf.html">constPoolInf</a> *<a class="code" href="structfield__data.html#a97080783a0fd457dba6d9efdf2ff95b1">field_descriptor</a>;  <span class="comment">// CONSTANTE_Utf8</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="core_8h.html#a96376f31c362e2a289072478449290f8">TYPE</a> <a class="code" href="structfield__data.html#a5cf199a1fe02916e0b0e4d27b8d3646f">field_type</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    uint16_t <a class="code" href="structfield__data.html#a5d98375dcb4b589355eaf0c96a15eb12">modifiers</a>;  <span class="comment">// access_flags</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="structfield__info.html">field_info</a> *<a class="code" href="structfield__data.html#ad90ec224475998c445f5ff8da8ad80e6">info</a>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keyword">struct </span><a class="code" href="structvariable.html">variable</a> *<a class="code" href="structfield__data.html#a2856592877e3e5de4a863ea2886a1c66">var</a>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;} <a class="code" href="cruzeiro_8h.html#ad5537b62ac62d6b7f34e2303f2b84982">FIELD_DATA</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="comment">// VARIABLE</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structvariable.html">variable</a> {</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="structfield__data.html">FIELD_DATA</a> *<a class="code" href="structvariable.html#a5a20f88a1d9886b1f13f952d3e975696">field_reference</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="structvalue.html">VALUE</a> <a class="code" href="structvariable.html#a163435f346185d4f2d8d05a78dde5bef">value</a>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">struct </span><a class="code" href="structvariable.html">variable</a> *<a class="code" href="structvariable.html#a725319c845b7ceb9683bb9a9e69fe726">prox</a>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;} <a class="code" href="cruzeiro_8h.html#a85b40991452ad00efae1784148c94402">VARIABLE</a>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="comment">// METHOD_DATA</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structmethod__data.html">method_data</a> {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="structconst_pool_inf.html">constPoolInf</a> *<a class="code" href="structmethod__data.html#a24aaf24ee2a41c21c4bd1ae237db4273">method_name</a>;        <span class="comment">// CONSTANTE_Utf8</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="structconst_pool_inf.html">constPoolInf</a> *<a class="code" href="structmethod__data.html#ae9c89303589da45e2ea16b57911cc9b1">method_descriptor</a>;  <span class="comment">// CONSTANTE_Utf8</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    uint16_t <a class="code" href="structmethod__data.html#a2abb22d9f683ff1163f58d9b071902bd">modifiers</a>;               <span class="comment">// access_flags</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *<a class="code" href="structmethod__data.html#a32232ec5ac3420ee8581492523c5995e">DADOS_CLASSE</a>;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="comment">// se o método não é abstrato.</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    uint32_t <a class="code" href="structmethod__data.html#a9c6035e8b389eea9bc15f380cffefe8b">code_length</a>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    uint8_t *<a class="code" href="structmethod__data.html#a20e53aa218c4280bf4e10dfa4a93e8c2">bytecodes</a>; <span class="comment">// instruções da jvm</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    uint16_t <a class="code" href="structmethod__data.html#a0c23eae5e5fe3302c9c1b7f8e5543e3c">stack_size</a>;   <span class="comment">// tamanho da pilha de operandos</span></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    uint16_t <a class="code" href="structmethod__data.html#a09b30df4053904e1ebe666ae1ccc45d4">locals_size</a>;  <span class="comment">// tamanho do vetor de variaveis locais</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    uint16_t <a class="code" href="structmethod__data.html#ac5f08aab5ad351365c25e550c4a0bfb3">exception_table_length</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="structexception__table__type.html">exception_table_type</a> *<a class="code" href="structmethod__data.html#a733781e4f597c5f7eb3835449fa48ce1">exception_table</a>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="structmethod__info.html">method_info</a> *<a class="code" href="structmethod__data.html#ade15573700dab5507c973bb8c9a32d63">info</a>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;} <a class="code" href="cruzeiro_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="comment">// DADOS_CLASSE</span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="structconst_pool_inf.html">constPoolInf</a> *<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html#abf1620a2df5edf9317bc2541f9dab5cd">nomeClasse</a>;  <span class="comment">// CONSTANTE_Utf8</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a4224e96e22e131d17bc803e704c5b3ce">classfile</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    uint16_t <a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a49b8ef228c1e9116fa30acb28a3b6402">modifiers</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a57299b2ac1658c8b308f08fabc9038e2">referencia_carregadorClasse</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="structconst_pool_inf.html">constPoolInf</a> *<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a69a5601b201df3e8e07e0d8d0958e7b9">runtime_constant_pool</a>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="structfield__data.html">FIELD_DATA</a> *<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a0e1e05243d7410fc7d744ccd592ee130">field_data</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="structmethod__data.html">METHOD_DATA</a> *<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a4dd365a4cc59132a79df5f6e5c2889fc">method_data</a>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="structvariable.html">VARIABLE</a> *<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a7f846777ec078d35b6a4c7b384ad2adb">variaveisClasse</a>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">struct </span><a class="code" href="structobject.html">object</a> *<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a8dd0e2aeb31faff828d102dd020496bf">instanceClasse</a>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html#af58a589e9546e3ff01837b4401278c4f">prox</a>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;} <a class="code" href="cruzeiro_8h.html#a116ede3eb3d97f03336302025379d1c7">DADOS_CLASSE</a>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structobject.html">object</a> {</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *<a class="code" href="structobject.html#a7bd05d66db33c629b0fbb37b877a401d">class_data_reference</a>;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <a class="code" href="structvariable.html">VARIABLE</a> *<a class="code" href="structobject.html#a50edcd1e2474f96f517a628eab9dc6f9">instance_variables</a>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keyword">struct </span><a class="code" href="structobject.html">object</a> *<a class="code" href="structobject.html#a25c59e365b98ceabd6d422a078c9d559">prox</a>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;} <a class="code" href="cruzeiro_8h.html#ae612e57be74359cf1e07ade2d61a86a0">OBJECT</a>;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structarray.html">array</a> {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *<a class="code" href="structarray.html#a491e580dcc3649ff1e325c5ed8c2c392">class_data_reference</a>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    int32_t <a class="code" href="structarray.html#ac87b36a4ba31b9d2a2bf77af4c136428">count</a>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <a class="code" href="structvalue.html">VALUE</a> *<a class="code" href="structarray.html#a5bff156bde09268b5e64df64769c0234">entry</a>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="core_8h.html#aeeb4b41434914a6809f3448b40f818de">ARRAY_TYPE</a> <a class="code" href="structarray.html#af7ebd5860861c4c445eea16d8385bee6">atype</a>;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keyword">struct </span><a class="code" href="structarray.html">array</a> *<a class="code" href="structarray.html#a5ed9c45f98ef28c51dd1a0470e856952">prox</a>;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;} <a class="code" href="cruzeiro_8h.html#a9c07c3330f66f4018e49ee90e58f0f39">ARRAY</a>;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">// JVM</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structjvm.html">jvm</a> {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="structthread.html">THREAD</a> *<a class="code" href="structjvm.html#a199a56e20c9aa4badcad5b1634d7eddc">thread_jvm</a>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="structheap__area.html">HEAP_AREA</a> *<a class="code" href="structjvm.html#a6c15f69c302bf166f626036428e602b3">heap_jvm</a>;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <a class="code" href="structjvm.html#a9547245c8ab2be87a7d186ad85fdc931">method_area_jvm</a>;  <span class="comment">// https://docs.oracle.com/javase/specs/jvms/se6/html/Overview.doc.html#6656</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;} <a class="code" href="cruzeiro_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">/*==========================================*/</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#aa2f1283af56df2749e5702e0b569c5d7">iniciar_jvm</a>(<span class="keywordtype">char</span> *, <span class="keywordtype">int</span>, <span class="keywordtype">char</span> **);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#a7c9daf914ef558b41a9d0b2d617dab86">carregarClasse_01</a>(<span class="keywordtype">char</span> *, <a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> **, <a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *, <a class="code" href="structjvm.html">JVM</a> *);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#a92753a3e4a70b1837b498b2821b1c478">ligadorDeClasse</a>(<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *, <a class="code" href="structjvm.html">JVM</a> *);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#a253fa443bfd7f2b86cee348ce7233035">classLinkingVerification</a>(<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *, <a class="code" href="structjvm.html">JVM</a> *);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#a91b4929cb828eb0548542c7a3decf478">classLinkingPreparation</a>(<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *, <a class="code" href="structjvm.html">JVM</a> *);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#af99bc13e312e4a07ce2532d2331d2fe3">classLinkingResolution</a>(<a class="code" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *, <a class="code" href="structjvm.html">JVM</a> *);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#a1c9426d6a17b70527ebee8b467688fa5">classInitialization</a>(<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *, <a class="code" href="structjvm.html">JVM</a> *, <a class="code" href="structthread.html">THREAD</a> *);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#a898cb628ddd2a974d8989a13d9323459">executeMethod</a>(<span class="keywordtype">char</span> *, <span class="keywordtype">char</span> *, <a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *, <a class="code" href="structjvm.html">JVM</a> *, <a class="code" href="structthread.html">THREAD</a> *, <span class="keywordtype">void</span> *,</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                   uint16_t, uint32_t *);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#a8c96cdaa4bfb0049ed9c2ee068803961">classUnloading</a>(<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *, <a class="code" href="structjvm.html">JVM</a> *);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<a class="code" href="structattribute__info.html">attribute_info</a> *<a class="code" href="cruzeiro_8h.html#a853d382621b6e22797ee41cc0af6e38f">getCodeAttribute</a>(<a class="code" href="structmethod__data.html">METHOD_DATA</a> *, <a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="keywordtype">char</span> *<a class="code" href="cruzeiro_8h.html#a4f9e90c40bb4308abdd0c48f6d7086cc">getClassName</a>(<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *<a class="code" href="cruzeiro_8h.html#aaa52a592057a81d501ee49d8d1c81301">getSuperClass</a>(<a class="code" href="struct_classe_de_arquivo.html">ClasseDeArquivo</a> *, <a class="code" href="structjvm.html">JVM</a> *);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *<a class="code" href="cruzeiro_8h.html#a467c17ad6f6b14784f8e861342b1d0e1">getClass</a>(<a class="code" href="structconst_pool_inf.html">constPoolInf</a> *, <a class="code" href="structjvm.html">JVM</a> *);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#a65309fe2f949999b73fa78000ffec3c4">jvmExit</a>(<a class="code" href="structjvm.html">JVM</a> *);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<a class="code" href="structvariable.html">VARIABLE</a> *<a class="code" href="cruzeiro_8h.html#aa49c64914922c2156b4b03feabf50257">getClassVariable</a>(<a class="code" href="structconst_pool_inf.html">constPoolInf</a> *, <a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<a class="code" href="structvariable.html">VARIABLE</a> *<a class="code" href="cruzeiro_8h.html#a1e9d1e52d8528a1003cd9c699bb87ab9">getInstanceVariable</a>(<a class="code" href="structconst_pool_inf.html">constPoolInf</a> *, <a class="code" href="structobject.html">OBJECT</a> *);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<a class="code" href="structmethod__data.html">METHOD_DATA</a> *<a class="code" href="cruzeiro_8h.html#a2c5411b2b86a128776b99b1310a29bc2">getMethod</a>(<span class="keywordtype">char</span> *, <span class="keywordtype">char</span> *, <a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *, <a class="code" href="structjvm.html">JVM</a> *);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="cruzeiro_8h.html#a18b8702b615b635f6b52e95c60ed73b1">isSuperClass</a>(<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *, <a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *, <a class="code" href="structjvm.html">JVM</a> *);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#abbc22effef4dba84ae83d5e6d1e3da4b">freeFrame</a>(<a class="code" href="structframe.html">FRAME</a> *);</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#a360c5e8ed32f1b8c1222fe180f02f3cc">freeOperandStack</a>(<a class="code" href="structframe.html">FRAME</a> *);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#ae038c26bdcbf2be5dca8839cd6c6b5f4">freeThreads</a>(<a class="code" href="structthread.html">THREAD</a> *);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#a135eacb54215249d2fb634c920c16d99">freeJvmStack</a>(<a class="code" href="structframe.html">FRAME</a> *);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#a4074439f529db8ac5c67c1064e0b1b37">freeMethodArea</a>(<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#ab34a58b2e6a6901430c3c6c025c5c5c6">freeClassData</a>(<a class="code" href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a> *);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#ab6c8ef9f9ac6072962115bd3085d4b4b">freeVariables</a>(<a class="code" href="structvariable.html">VARIABLE</a> *);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#a4bfc9fc3dd56d8ad9327db10219d2ae3">freeHeap</a>(<a class="code" href="structheap__area.html">HEAP_AREA</a> *);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#a769094478f2fd98914bfb300f04982f6">freeObjects</a>(<a class="code" href="structobject.html">OBJECT</a> *);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#afa9de2a389a6ad80bf97ffa0a5eef402">freeArrays</a>(<a class="code" href="structarray.html">ARRAY</a> *);</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keywordtype">void</span> <a class="code" href="cruzeiro_8h.html#ada292ff1b4724c764f4cc6ff992cce06">pushOperand</a>(uint32_t, <a class="code" href="structframe.html">FRAME</a> *);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;uint32_t <a class="code" href="cruzeiro_8h.html#a01ea050bc682333139b2b64e89008893">popOperand</a>(<a class="code" href="structframe.html">FRAME</a> *);</div>
+<div class="ttc" id="structfield__data_html_a5cf199a1fe02916e0b0e4d27b8d3646f"><div class="ttname"><a href="structfield__data.html#a5cf199a1fe02916e0b0e4d27b8d3646f">field_data::field_type</a></div><div class="ttdeci">TYPE field_type</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00127">core.h:127</a></div></div>
+<div class="ttc" id="struct_d_a_d_o_s___c_l_a_s_s_e_html_a4dd365a4cc59132a79df5f6e5c2889fc"><div class="ttname"><a href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a4dd365a4cc59132a79df5f6e5c2889fc">DADOS_CLASSE::method_data</a></div><div class="ttdeci">METHOD_DATA * method_data</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00165">core.h:165</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_af99bc13e312e4a07ce2532d2331d2fe3"><div class="ttname"><a href="cruzeiro_8h.html#af99bc13e312e4a07ce2532d2331d2fe3">classLinkingResolution</a></div><div class="ttdeci">void classLinkingResolution(ClasseDeArquivo *, JVM *)</div></div>
+<div class="ttc" id="structoperand_html_a8af3746223d14253f5b287d236f59ce4"><div class="ttname"><a href="structoperand.html#a8af3746223d14253f5b287d236f59ce4">operand::type</a></div><div class="ttdeci">TYPE type</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00094">core.h:94</a></div></div>
+<div class="ttc" id="structmethod__data_html_a32232ec5ac3420ee8581492523c5995e"><div class="ttname"><a href="structmethod__data.html#a32232ec5ac3420ee8581492523c5995e">method_data::DADOS_CLASSE</a></div><div class="ttdeci">struct DADOS_CLASSE * DADOS_CLASSE</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00146">core.h:146</a></div></div>
+<div class="ttc" id="structmethod__data_html_a09b30df4053904e1ebe666ae1ccc45d4"><div class="ttname"><a href="structmethod__data.html#a09b30df4053904e1ebe666ae1ccc45d4">method_data::locals_size</a></div><div class="ttdeci">uint16_t locals_size</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00151">core.h:151</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a18b8702b615b635f6b52e95c60ed73b1"><div class="ttname"><a href="cruzeiro_8h.html#a18b8702b615b635f6b52e95c60ed73b1">isSuperClass</a></div><div class="ttdeci">bool isSuperClass(DADOS_CLASSE *, DADOS_CLASSE *, JVM *)</div></div>
+<div class="ttc" id="struct_classe_de_arquivo_html"><div class="ttname"><a href="struct_classe_de_arquivo.html">ClasseDeArquivo</a></div><div class="ttdef"><b>Definition:</b> <a href="_leit_exib_8h_source.html#l00245">LeitExib.h:245</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_ad5537b62ac62d6b7f34e2303f2b84982"><div class="ttname"><a href="cruzeiro_8h.html#ad5537b62ac62d6b7f34e2303f2b84982">FIELD_DATA</a></div><div class="ttdeci">struct field_data FIELD_DATA</div></div>
+<div class="ttc" id="cruzeiro_8h_html_ad5d0e2bb91a9e28f920452e088b6462b"><div class="ttname"><a href="cruzeiro_8h.html#ad5d0e2bb91a9e28f920452e088b6462b">VALUE</a></div><div class="ttdeci">struct value VALUE</div></div>
+<div class="ttc" id="structthread_html_a6ac44ddf69dea175dacf2b2253e49b09"><div class="ttname"><a href="structthread.html#a6ac44ddf69dea175dacf2b2253e49b09">thread::program_counter</a></div><div class="ttdeci">OPCODE * program_counter</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00110">core.h:110</a></div></div>
+<div class="ttc" id="structvariable_html_a725319c845b7ceb9683bb9a9e69fe726"><div class="ttname"><a href="structvariable.html#a725319c845b7ceb9683bb9a9e69fe726">variable::prox</a></div><div class="ttdeci">struct variable * prox</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00137">core.h:137</a></div></div>
+<div class="ttc" id="structfield__data_html_a2856592877e3e5de4a863ea2886a1c66"><div class="ttname"><a href="structfield__data.html#a2856592877e3e5de4a863ea2886a1c66">field_data::var</a></div><div class="ttdeci">struct variable * var</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00130">core.h:130</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_ae038c26bdcbf2be5dca8839cd6c6b5f4"><div class="ttname"><a href="cruzeiro_8h.html#ae038c26bdcbf2be5dca8839cd6c6b5f4">freeThreads</a></div><div class="ttdeci">void freeThreads(THREAD *)</div></div>
+<div class="ttc" id="cruzeiro_8h_html_a91b4929cb828eb0548542c7a3decf478"><div class="ttname"><a href="cruzeiro_8h.html#a91b4929cb828eb0548542c7a3decf478">classLinkingPreparation</a></div><div class="ttdeci">void classLinkingPreparation(DADOS_CLASSE *, JVM *)</div><div class="ttdef"><b>Definition:</b> <a href="cruzeiro_8c_source.html#l00281">cruzeiro.c:281</a></div></div>
+<div class="ttc" id="structframe_html"><div class="ttname"><a href="structframe.html">frame</a></div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00099">core.h:99</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a898cb628ddd2a974d8989a13d9323459"><div class="ttname"><a href="cruzeiro_8h.html#a898cb628ddd2a974d8989a13d9323459">executeMethod</a></div><div class="ttdeci">void executeMethod(char *, char *, DADOS_CLASSE *, JVM *, THREAD *, void *, uint16_t, uint32_t *)</div></div>
+<div class="ttc" id="structheap__area_html_ae7a59bd769da0eea5c87397e0d669e4b"><div class="ttname"><a href="structheap__area.html#ae7a59bd769da0eea5c87397e0d669e4b">heap_area::objects</a></div><div class="ttdeci">struct object * objects</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00119">core.h:119</a></div></div>
+<div class="ttc" id="structmethod__data_html_a24aaf24ee2a41c21c4bd1ae237db4273"><div class="ttname"><a href="structmethod__data.html#a24aaf24ee2a41c21c4bd1ae237db4273">method_data::method_name</a></div><div class="ttdeci">constPoolInf * method_name</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00143">core.h:143</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_afa9de2a389a6ad80bf97ffa0a5eef402"><div class="ttname"><a href="cruzeiro_8h.html#afa9de2a389a6ad80bf97ffa0a5eef402">freeArrays</a></div><div class="ttdeci">void freeArrays(ARRAY *)</div></div>
+<div class="ttc" id="structvalue_html_acfcc12390036cb37f60fa22e0900ef8d"><div class="ttname"><a href="structvalue.html#acfcc12390036cb37f60fa22e0900ef8d">value::InstanceReference</a></div><div class="ttdeci">struct value::@0::@9 InstanceReference</div></div>
+<div class="ttc" id="struct_d_a_d_o_s___c_l_a_s_s_e_html_abf1620a2df5edf9317bc2541f9dab5cd"><div class="ttname"><a href="struct_d_a_d_o_s___c_l_a_s_s_e.html#abf1620a2df5edf9317bc2541f9dab5cd">DADOS_CLASSE::nomeClasse</a></div><div class="ttdeci">constPoolInf * nomeClasse</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00159">core.h:159</a></div></div>
+<div class="ttc" id="structheap__area_html_a9b7f01ddd56ad53eb74a6c6064bc7092"><div class="ttname"><a href="structheap__area.html#a9b7f01ddd56ad53eb74a6c6064bc7092">heap_area::arrays</a></div><div class="ttdeci">struct array * arrays</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00120">core.h:120</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a135eacb54215249d2fb634c920c16d99"><div class="ttname"><a href="cruzeiro_8h.html#a135eacb54215249d2fb634c920c16d99">freeJvmStack</a></div><div class="ttdeci">void freeJvmStack(FRAME *)</div></div>
+<div class="ttc" id="structvalue_html_ae154453352d31839cbe33fca89fc98aa"><div class="ttname"><a href="structvalue.html#ae154453352d31839cbe33fca89fc98aa">value::return_address</a></div><div class="ttdeci">OPCODE * return_address</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00086">core.h:86</a></div></div>
+<div class="ttc" id="structvalue_html_a670628f51376fadc6cd3c7aa2076dd95"><div class="ttname"><a href="structvalue.html#a670628f51376fadc6cd3c7aa2076dd95">value::high_bytes</a></div><div class="ttdeci">uint32_t high_bytes</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00056">core.h:56</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a85b40991452ad00efae1784148c94402"><div class="ttname"><a href="cruzeiro_8h.html#a85b40991452ad00efae1784148c94402">VARIABLE</a></div><div class="ttdeci">struct variable VARIABLE</div></div>
+<div class="ttc" id="structobject_html_a7bd05d66db33c629b0fbb37b877a401d"><div class="ttname"><a href="structobject.html#a7bd05d66db33c629b0fbb37b877a401d">object::class_data_reference</a></div><div class="ttdeci">DADOS_CLASSE * class_data_reference</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00172">core.h:172</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_ad43b7ffe97b146f9dce917ae2a0fd181"><div class="ttname"><a href="cruzeiro_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a></div><div class="ttdeci">struct thread THREAD</div></div>
+<div class="ttc" id="cruzeiro_8h_html_a360c5e8ed32f1b8c1222fe180f02f3cc"><div class="ttname"><a href="cruzeiro_8h.html#a360c5e8ed32f1b8c1222fe180f02f3cc">freeOperandStack</a></div><div class="ttdeci">void freeOperandStack(FRAME *)</div></div>
+<div class="ttc" id="struct_d_a_d_o_s___c_l_a_s_s_e_html_a57299b2ac1658c8b308f08fabc9038e2"><div class="ttname"><a href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a57299b2ac1658c8b308f08fabc9038e2">DADOS_CLASSE::referencia_carregadorClasse</a></div><div class="ttdeci">struct DADOS_CLASSE * referencia_carregadorClasse</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00162">core.h:162</a></div></div>
+<div class="ttc" id="structfield__data_html"><div class="ttname"><a href="structfield__data.html">field_data</a></div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00124">core.h:124</a></div></div>
+<div class="ttc" id="structattribute__info_html"><div class="ttname"><a href="structattribute__info.html">attribute_info</a></div><div class="ttdef"><b>Definition:</b> <a href="_leit_exib_8h_source.html#l00164">LeitExib.h:164</a></div></div>
+<div class="ttc" id="structmethod__data_html_a733781e4f597c5f7eb3835449fa48ce1"><div class="ttname"><a href="structmethod__data.html#a733781e4f597c5f7eb3835449fa48ce1">method_data::exception_table</a></div><div class="ttdeci">exception_table_type * exception_table</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00153">core.h:153</a></div></div>
+<div class="ttc" id="structvalue_html_a09d361f523397d57aa1589c63fddb429"><div class="ttname"><a href="structvalue.html#a09d361f523397d57aa1589c63fddb429">value::ArrayReference</a></div><div class="ttdeci">struct value::@0::@10 ArrayReference</div></div>
+<div class="ttc" id="cruzeiro_8h_html_a853d382621b6e22797ee41cc0af6e38f"><div class="ttname"><a href="cruzeiro_8h.html#a853d382621b6e22797ee41cc0af6e38f">getCodeAttribute</a></div><div class="ttdeci">attribute_info * getCodeAttribute(METHOD_DATA *, DADOS_CLASSE *)</div></div>
+<div class="ttc" id="cruzeiro_8h_html_a467c17ad6f6b14784f8e861342b1d0e1"><div class="ttname"><a href="cruzeiro_8h.html#a467c17ad6f6b14784f8e861342b1d0e1">getClass</a></div><div class="ttdeci">DADOS_CLASSE * getClass(constPoolInf *, JVM *)</div></div>
+<div class="ttc" id="structvalue_html_a525db6e48cfe9e5303f30ba1dde3cb7f"><div class="ttname"><a href="structvalue.html#a525db6e48cfe9e5303f30ba1dde3cb7f">value::Long</a></div><div class="ttdeci">struct value::@0::@4 Long</div></div>
+<div class="ttc" id="structvalue_html_a8f62817042c944120cd6099cc5ec9654"><div class="ttname"><a href="structvalue.html#a8f62817042c944120cd6099cc5ec9654">value::Integer</a></div><div class="ttdeci">struct value::@0::@3 Integer</div></div>
+<div class="ttc" id="structvariable_html_a5a20f88a1d9886b1f13f952d3e975696"><div class="ttname"><a href="structvariable.html#a5a20f88a1d9886b1f13f952d3e975696">variable::field_reference</a></div><div class="ttdeci">FIELD_DATA * field_reference</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00135">core.h:135</a></div></div>
+<div class="ttc" id="structframe_html_a3acb55c85b6e2bbe2cc26c17e9d9d6e5"><div class="ttname"><a href="structframe.html#a3acb55c85b6e2bbe2cc26c17e9d9d6e5">frame::current_constant_pool</a></div><div class="ttdeci">constPoolInf * current_constant_pool</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00102">core.h:102</a></div></div>
+<div class="ttc" id="struct_d_a_d_o_s___c_l_a_s_s_e_html_a4224e96e22e131d17bc803e704c5b3ce"><div class="ttname"><a href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a4224e96e22e131d17bc803e704c5b3ce">DADOS_CLASSE::classfile</a></div><div class="ttdeci">ClasseDeArquivo * classfile</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00160">core.h:160</a></div></div>
+<div class="ttc" id="_leit_exib_8h_html"><div class="ttname"><a href="_leit_exib_8h.html">LeitExib.h</a></div></div>
+<div class="ttc" id="structfield__data_html_a97080783a0fd457dba6d9efdf2ff95b1"><div class="ttname"><a href="structfield__data.html#a97080783a0fd457dba6d9efdf2ff95b1">field_data::field_descriptor</a></div><div class="ttdeci">constPoolInf * field_descriptor</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00126">core.h:126</a></div></div>
+<div class="ttc" id="structvariable_html_a163435f346185d4f2d8d05a78dde5bef"><div class="ttname"><a href="structvariable.html#a163435f346185d4f2d8d05a78dde5bef">variable::value</a></div><div class="ttdeci">VALUE value</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00136">core.h:136</a></div></div>
+<div class="ttc" id="structobject_html"><div class="ttname"><a href="structobject.html">object</a></div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00171">core.h:171</a></div></div>
+<div class="ttc" id="structmethod__data_html_ade15573700dab5507c973bb8c9a32d63"><div class="ttname"><a href="structmethod__data.html#ade15573700dab5507c973bb8c9a32d63">method_data::info</a></div><div class="ttdeci">method_info * info</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00154">core.h:154</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a96376f31c362e2a289072478449290f8"><div class="ttname"><a href="cruzeiro_8h.html#a96376f31c362e2a289072478449290f8">TYPE</a></div><div class="ttdeci">char TYPE</div><div class="ttdef"><b>Definition:</b> <a href="cruzeiro_8h_source.html#l00018">cruzeiro.h:18</a></div></div>
+<div class="ttc" id="structthread_html"><div class="ttname"><a href="structthread.html">thread</a></div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00108">core.h:108</a></div></div>
+<div class="ttc" id="structvalue_html_a730511b073f9ef902b73f72b08f97ad4"><div class="ttname"><a href="structvalue.html#a730511b073f9ef902b73f72b08f97ad4">value::Char</a></div><div class="ttdeci">struct value::@0::@7 Char</div></div>
+<div class="ttc" id="structfield__info_html"><div class="ttname"><a href="structfield__info.html">field_info</a></div><div class="ttdef"><b>Definition:</b> <a href="_leit_exib_8h_source.html#l00217">LeitExib.h:217</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a1e9d1e52d8528a1003cd9c699bb87ab9"><div class="ttname"><a href="cruzeiro_8h.html#a1e9d1e52d8528a1003cd9c699bb87ab9">getInstanceVariable</a></div><div class="ttdeci">VARIABLE * getInstanceVariable(constPoolInf *, OBJECT *)</div></div>
+<div class="ttc" id="cruzeiro_8h_html_aeeb4b41434914a6809f3448b40f818de"><div class="ttname"><a href="cruzeiro_8h.html#aeeb4b41434914a6809f3448b40f818de">ARRAY_TYPE</a></div><div class="ttdeci">uint32_t ARRAY_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="cruzeiro_8h_source.html#l00019">cruzeiro.h:19</a></div></div>
+<div class="ttc" id="structvalue_html_a8193b2471a420d07d6273ea3c9653155"><div class="ttname"><a href="structvalue.html#a8193b2471a420d07d6273ea3c9653155">value::type</a></div><div class="ttdeci">TYPE type</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00041">core.h:41</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_aaa52a592057a81d501ee49d8d1c81301"><div class="ttname"><a href="cruzeiro_8h.html#aaa52a592057a81d501ee49d8d1c81301">getSuperClass</a></div><div class="ttdeci">DADOS_CLASSE * getSuperClass(ClasseDeArquivo *, JVM *)</div></div>
+<div class="ttc" id="cruzeiro_8h_html_a65309fe2f949999b73fa78000ffec3c4"><div class="ttname"><a href="cruzeiro_8h.html#a65309fe2f949999b73fa78000ffec3c4">jvmExit</a></div><div class="ttdeci">void jvmExit(JVM *)</div></div>
+<div class="ttc" id="structvalue_html_ac6f6c8288a2314221cd061b264fa25e1"><div class="ttname"><a href="structvalue.html#ac6f6c8288a2314221cd061b264fa25e1">value::Short</a></div><div class="ttdeci">struct value::@0::@2 Short</div></div>
+<div class="ttc" id="cruzeiro_8h_html_a8aa4d8af3cc19c82a17fa714d533cb8f"><div class="ttname"><a href="cruzeiro_8h.html#a8aa4d8af3cc19c82a17fa714d533cb8f">HEAP_AREA</a></div><div class="ttdeci">struct heap_area HEAP_AREA</div></div>
+<div class="ttc" id="core_8h_html_a96376f31c362e2a289072478449290f8"><div class="ttname"><a href="core_8h.html#a96376f31c362e2a289072478449290f8">TYPE</a></div><div class="ttdeci">char TYPE</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00019">core.h:19</a></div></div>
+<div class="ttc" id="structvalue_html_a083e8a03606d5b79029794b3d575c021"><div class="ttname"><a href="structvalue.html#a083e8a03606d5b79029794b3d575c021">value::short_</a></div><div class="ttdeci">int16_t short_</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00048">core.h:48</a></div></div>
+<div class="ttc" id="structvalue_html_a264ea0eb8eca9c9698c66c7412e8ca88"><div class="ttname"><a href="structvalue.html#a264ea0eb8eca9c9698c66c7412e8ca88">value::ReturnAddress</a></div><div class="ttdeci">struct value::@0::@11 ReturnAddress</div></div>
+<div class="ttc" id="structarray_html"><div class="ttname"><a href="structarray.html">array</a></div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00177">core.h:177</a></div></div>
+<div class="ttc" id="structvalue_html_af2bea3c5b60d0a36c10e297af2bbb80f"><div class="ttname"><a href="structvalue.html#af2bea3c5b60d0a36c10e297af2bbb80f">value::Byte</a></div><div class="ttdeci">struct value::@0::@1 Byte</div></div>
+<div class="ttc" id="structmethod__data_html_ac5f08aab5ad351365c25e550c4a0bfb3"><div class="ttname"><a href="structmethod__data.html#ac5f08aab5ad351365c25e550c4a0bfb3">method_data::exception_table_length</a></div><div class="ttdeci">uint16_t exception_table_length</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00152">core.h:152</a></div></div>
+<div class="ttc" id="structobject_html_a50edcd1e2474f96f517a628eab9dc6f9"><div class="ttname"><a href="structobject.html#a50edcd1e2474f96f517a628eab9dc6f9">object::instance_variables</a></div><div class="ttdeci">VARIABLE * instance_variables</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00173">core.h:173</a></div></div>
+<div class="ttc" id="structarray_html_a5bff156bde09268b5e64df64769c0234"><div class="ttname"><a href="structarray.html#a5bff156bde09268b5e64df64769c0234">array::entry</a></div><div class="ttdeci">VALUE * entry</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00180">core.h:180</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_ab34056db44556fbb28ffa6aff4873b4c"><div class="ttname"><a href="cruzeiro_8h.html#ab34056db44556fbb28ffa6aff4873b4c">OPCODE</a></div><div class="ttdeci">uint8_t OPCODE</div><div class="ttdef"><b>Definition:</b> <a href="cruzeiro_8h_source.html#l00017">cruzeiro.h:17</a></div></div>
+<div class="ttc" id="structmethod__data_html_ae9c89303589da45e2ea16b57911cc9b1"><div class="ttname"><a href="structmethod__data.html#ae9c89303589da45e2ea16b57911cc9b1">method_data::method_descriptor</a></div><div class="ttdeci">constPoolInf * method_descriptor</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00144">core.h:144</a></div></div>
+<div class="ttc" id="struct_d_a_d_o_s___c_l_a_s_s_e_html"><div class="ttname"><a href="struct_d_a_d_o_s___c_l_a_s_s_e.html">DADOS_CLASSE</a></div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00158">core.h:158</a></div></div>
+<div class="ttc" id="structjvm_html_a9547245c8ab2be87a7d186ad85fdc931"><div class="ttname"><a href="structjvm.html#a9547245c8ab2be87a7d186ad85fdc931">jvm::method_area_jvm</a></div><div class="ttdeci">DADOS_CLASSE * method_area_jvm</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00190">core.h:190</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a1c9426d6a17b70527ebee8b467688fa5"><div class="ttname"><a href="cruzeiro_8h.html#a1c9426d6a17b70527ebee8b467688fa5">classInitialization</a></div><div class="ttdeci">void classInitialization(DADOS_CLASSE *, JVM *, THREAD *)</div></div>
+<div class="ttc" id="cruzeiro_8h_html_a253fa443bfd7f2b86cee348ce7233035"><div class="ttname"><a href="cruzeiro_8h.html#a253fa443bfd7f2b86cee348ce7233035">classLinkingVerification</a></div><div class="ttdeci">void classLinkingVerification(DADOS_CLASSE *, JVM *)</div><div class="ttdef"><b>Definition:</b> <a href="cruzeiro_8c_source.html#l00250">cruzeiro.c:250</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_ad2c7f62ece09f452ea1a5285adcc503c"><div class="ttname"><a href="cruzeiro_8h.html#ad2c7f62ece09f452ea1a5285adcc503c">FRAME</a></div><div class="ttdeci">struct frame FRAME</div></div>
+<div class="ttc" id="cruzeiro_8h_html_ab6c8ef9f9ac6072962115bd3085d4b4b"><div class="ttname"><a href="cruzeiro_8h.html#ab6c8ef9f9ac6072962115bd3085d4b4b">freeVariables</a></div><div class="ttdeci">void freeVariables(VARIABLE *)</div></div>
+<div class="ttc" id="core_8h_html_aeeb4b41434914a6809f3448b40f818de"><div class="ttname"><a href="core_8h.html#aeeb4b41434914a6809f3448b40f818de">ARRAY_TYPE</a></div><div class="ttdeci">uint32_t ARRAY_TYPE</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00020">core.h:20</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a4074439f529db8ac5c67c1064e0b1b37"><div class="ttname"><a href="cruzeiro_8h.html#a4074439f529db8ac5c67c1064e0b1b37">freeMethodArea</a></div><div class="ttdeci">void freeMethodArea(DADOS_CLASSE *)</div></div>
+<div class="ttc" id="structmethod__data_html_a2abb22d9f683ff1163f58d9b071902bd"><div class="ttname"><a href="structmethod__data.html#a2abb22d9f683ff1163f58d9b071902bd">method_data::modifiers</a></div><div class="ttdeci">uint16_t modifiers</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00145">core.h:145</a></div></div>
+<div class="ttc" id="struct_d_a_d_o_s___c_l_a_s_s_e_html_a7f846777ec078d35b6a4c7b384ad2adb"><div class="ttname"><a href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a7f846777ec078d35b6a4c7b384ad2adb">DADOS_CLASSE::variaveisClasse</a></div><div class="ttdeci">VARIABLE * variaveisClasse</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00166">core.h:166</a></div></div>
+<div class="ttc" id="struct_d_a_d_o_s___c_l_a_s_s_e_html_a0e1e05243d7410fc7d744ccd592ee130"><div class="ttname"><a href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a0e1e05243d7410fc7d744ccd592ee130">DADOS_CLASSE::field_data</a></div><div class="ttdeci">FIELD_DATA * field_data</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00164">core.h:164</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a92753a3e4a70b1837b498b2821b1c478"><div class="ttname"><a href="cruzeiro_8h.html#a92753a3e4a70b1837b498b2821b1c478">ligadorDeClasse</a></div><div class="ttdeci">void ligadorDeClasse(DADOS_CLASSE *, JVM *)</div><div class="ttdef"><b>Definition:</b> <a href="cruzeiro_8c_source.html#l00243">cruzeiro.c:243</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a769094478f2fd98914bfb300f04982f6"><div class="ttname"><a href="cruzeiro_8h.html#a769094478f2fd98914bfb300f04982f6">freeObjects</a></div><div class="ttdeci">void freeObjects(OBJECT *)</div></div>
+<div class="ttc" id="structmethod__data_html_a20e53aa218c4280bf4e10dfa4a93e8c2"><div class="ttname"><a href="structmethod__data.html#a20e53aa218c4280bf4e10dfa4a93e8c2">method_data::bytecodes</a></div><div class="ttdeci">uint8_t * bytecodes</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00149">core.h:149</a></div></div>
+<div class="ttc" id="structvalue_html"><div class="ttname"><a href="structvalue.html">value</a></div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00040">core.h:40</a></div></div>
+<div class="ttc" id="structframe_html_ae1de7bc075bf06c24555a4b716d8f681"><div class="ttname"><a href="structframe.html#ae1de7bc075bf06c24555a4b716d8f681">frame::operand_stack</a></div><div class="ttdeci">OPERAND * operand_stack</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00101">core.h:101</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_ada292ff1b4724c764f4cc6ff992cce06"><div class="ttname"><a href="cruzeiro_8h.html#ada292ff1b4724c764f4cc6ff992cce06">pushOperand</a></div><div class="ttdeci">void pushOperand(uint32_t, FRAME *)</div></div>
+<div class="ttc" id="structvalue_html_a7a1d7fe0031e83219851bd64b2835ded"><div class="ttname"><a href="structvalue.html#a7a1d7fe0031e83219851bd64b2835ded">value::Float</a></div><div class="ttdeci">struct value::@0::@5 Float</div></div>
+<div class="ttc" id="cruzeiro_8h_html_ae612e57be74359cf1e07ade2d61a86a0"><div class="ttname"><a href="cruzeiro_8h.html#ae612e57be74359cf1e07ade2d61a86a0">OBJECT</a></div><div class="ttdeci">struct object OBJECT</div></div>
+<div class="ttc" id="cruzeiro_8h_html_a9c07c3330f66f4018e49ee90e58f0f39"><div class="ttname"><a href="cruzeiro_8h.html#a9c07c3330f66f4018e49ee90e58f0f39">ARRAY</a></div><div class="ttdeci">struct array ARRAY</div></div>
+<div class="ttc" id="structjvm_html"><div class="ttname"><a href="structjvm.html">jvm</a></div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00186">core.h:186</a></div></div>
+<div class="ttc" id="structmethod__data_html_a0c23eae5e5fe3302c9c1b7f8e5543e3c"><div class="ttname"><a href="structmethod__data.html#a0c23eae5e5fe3302c9c1b7f8e5543e3c">method_data::stack_size</a></div><div class="ttdeci">uint16_t stack_size</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00150">core.h:150</a></div></div>
+<div class="ttc" id="structvalue_html_acee60f59572f5488da8ac5748e80e9cc"><div class="ttname"><a href="structvalue.html#acee60f59572f5488da8ac5748e80e9cc">value::u</a></div><div class="ttdeci">union value::@0 u</div></div>
+<div class="ttc" id="structvalue_html_ab277933041ff972104180fda5190a425"><div class="ttname"><a href="structvalue.html#ab277933041ff972104180fda5190a425">value::reference</a></div><div class="ttdeci">struct object * reference</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00078">core.h:78</a></div></div>
+<div class="ttc" id="structframe_html_a056cdce8d980a00e78e558a81add1779"><div class="ttname"><a href="structframe.html#a056cdce8d980a00e78e558a81add1779">frame::local_variables</a></div><div class="ttdeci">uint32_t * local_variables</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00100">core.h:100</a></div></div>
+<div class="ttc" id="structfield__data_html_aa95bccbd245864937b9ffc56655a02c5"><div class="ttname"><a href="structfield__data.html#aa95bccbd245864937b9ffc56655a02c5">field_data::field_name</a></div><div class="ttdeci">constPoolInf * field_name</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00125">core.h:125</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a2c5411b2b86a128776b99b1310a29bc2"><div class="ttname"><a href="cruzeiro_8h.html#a2c5411b2b86a128776b99b1310a29bc2">getMethod</a></div><div class="ttdeci">METHOD_DATA * getMethod(char *, char *, DADOS_CLASSE *, JVM *)</div></div>
+<div class="ttc" id="structframe_html_aac1374d21a07cfd859135c28c7f42e32"><div class="ttname"><a href="structframe.html#aac1374d21a07cfd859135c28c7f42e32">frame::prox</a></div><div class="ttdeci">struct frame * prox</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00103">core.h:103</a></div></div>
+<div class="ttc" id="structjvm_html_a6c15f69c302bf166f626036428e602b3"><div class="ttname"><a href="structjvm.html#a6c15f69c302bf166f626036428e602b3">jvm::heap_jvm</a></div><div class="ttdeci">HEAP_AREA * heap_jvm</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00188">core.h:188</a></div></div>
+<div class="ttc" id="structvalue_html_a8f7d961af70bd80fe990c31ff3db48fa"><div class="ttname"><a href="structvalue.html#a8f7d961af70bd80fe990c31ff3db48fa">value::low_bytes</a></div><div class="ttdeci">uint32_t low_bytes</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00057">core.h:57</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a7c9daf914ef558b41a9d0b2d617dab86"><div class="ttname"><a href="cruzeiro_8h.html#a7c9daf914ef558b41a9d0b2d617dab86">carregarClasse_01</a></div><div class="ttdeci">void carregarClasse_01(char *, DADOS_CLASSE **, DADOS_CLASSE *, JVM *)</div><div class="ttdef"><b>Definition:</b> <a href="cruzeiro_8c_source.html#l00113">cruzeiro.c:113</a></div></div>
+<div class="ttc" id="struct_d_a_d_o_s___c_l_a_s_s_e_html_a69a5601b201df3e8e07e0d8d0958e7b9"><div class="ttname"><a href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a69a5601b201df3e8e07e0d8d0958e7b9">DADOS_CLASSE::runtime_constant_pool</a></div><div class="ttdeci">constPoolInf * runtime_constant_pool</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00163">core.h:163</a></div></div>
+<div class="ttc" id="structvalue_html_a3daafd6e88c6428a0be01e1a4002eb96"><div class="ttname"><a href="structvalue.html#a3daafd6e88c6428a0be01e1a4002eb96">value::Boolean</a></div><div class="ttdeci">struct value::@0::@8 Boolean</div></div>
+<div class="ttc" id="struct_d_a_d_o_s___c_l_a_s_s_e_html_a8dd0e2aeb31faff828d102dd020496bf"><div class="ttname"><a href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a8dd0e2aeb31faff828d102dd020496bf">DADOS_CLASSE::instanceClasse</a></div><div class="ttdeci">struct object * instanceClasse</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00167">core.h:167</a></div></div>
+<div class="ttc" id="structfield__data_html_a5d98375dcb4b589355eaf0c96a15eb12"><div class="ttname"><a href="structfield__data.html#a5d98375dcb4b589355eaf0c96a15eb12">field_data::modifiers</a></div><div class="ttdeci">uint16_t modifiers</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00128">core.h:128</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a98bdb4b2c8aa49ba6bcd37df96469137"><div class="ttname"><a href="cruzeiro_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a></div><div class="ttdeci">struct jvm JVM</div></div>
+<div class="ttc" id="structthread_html_ad3e651d8effbb6301558e49979a1bee4"><div class="ttname"><a href="structthread.html#ad3e651d8effbb6301558e49979a1bee4">thread::prox</a></div><div class="ttdeci">struct thread * prox</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00113">core.h:113</a></div></div>
+<div class="ttc" id="structjvm_html_a199a56e20c9aa4badcad5b1634d7eddc"><div class="ttname"><a href="structjvm.html#a199a56e20c9aa4badcad5b1634d7eddc">jvm::thread_jvm</a></div><div class="ttdeci">THREAD * thread_jvm</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00187">core.h:187</a></div></div>
+<div class="ttc" id="structmethod__data_html_a9c6035e8b389eea9bc15f380cffefe8b"><div class="ttname"><a href="structmethod__data.html#a9c6035e8b389eea9bc15f380cffefe8b">method_data::code_length</a></div><div class="ttdeci">uint32_t code_length</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00148">core.h:148</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_ab34a58b2e6a6901430c3c6c025c5c5c6"><div class="ttname"><a href="cruzeiro_8h.html#ab34a58b2e6a6901430c3c6c025c5c5c6">freeClassData</a></div><div class="ttdeci">void freeClassData(DADOS_CLASSE *)</div></div>
+<div class="ttc" id="structarray_html_a5ed9c45f98ef28c51dd1a0470e856952"><div class="ttname"><a href="structarray.html#a5ed9c45f98ef28c51dd1a0470e856952">array::prox</a></div><div class="ttdeci">struct array * prox</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00182">core.h:182</a></div></div>
+<div class="ttc" id="struct_d_a_d_o_s___c_l_a_s_s_e_html_af58a589e9546e3ff01837b4401278c4f"><div class="ttname"><a href="struct_d_a_d_o_s___c_l_a_s_s_e.html#af58a589e9546e3ff01837b4401278c4f">DADOS_CLASSE::prox</a></div><div class="ttdeci">struct DADOS_CLASSE * prox</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00168">core.h:168</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a01ea050bc682333139b2b64e89008893"><div class="ttname"><a href="cruzeiro_8h.html#a01ea050bc682333139b2b64e89008893">popOperand</a></div><div class="ttdeci">uint32_t popOperand(FRAME *)</div></div>
+<div class="ttc" id="cruzeiro_8h_html_a4bfc9fc3dd56d8ad9327db10219d2ae3"><div class="ttname"><a href="cruzeiro_8h.html#a4bfc9fc3dd56d8ad9327db10219d2ae3">freeHeap</a></div><div class="ttdeci">void freeHeap(HEAP_AREA *)</div></div>
+<div class="ttc" id="cruzeiro_8h_html_aa2f1283af56df2749e5702e0b569c5d7"><div class="ttname"><a href="cruzeiro_8h.html#aa2f1283af56df2749e5702e0b569c5d7">iniciar_jvm</a></div><div class="ttdeci">void iniciar_jvm(char *, int, char **)</div><div class="ttdef"><b>Definition:</b> <a href="cruzeiro_8c_source.html#l00010">cruzeiro.c:10</a></div></div>
+<div class="ttc" id="structvalue_html_a58a1dfb88538dd68c4ccd5d6c7f571d2"><div class="ttname"><a href="structvalue.html#a58a1dfb88538dd68c4ccd5d6c7f571d2">value::integer</a></div><div class="ttdeci">int32_t integer</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00052">core.h:52</a></div></div>
+<div class="ttc" id="structvalue_html_aabf3d6c1e51cee9d6bec48077f36d1c4"><div class="ttname"><a href="structvalue.html#aabf3d6c1e51cee9d6bec48077f36d1c4">value::char_</a></div><div class="ttdeci">uint16_t char_</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00070">core.h:70</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_abbc22effef4dba84ae83d5e6d1e3da4b"><div class="ttname"><a href="cruzeiro_8h.html#abbc22effef4dba84ae83d5e6d1e3da4b">freeFrame</a></div><div class="ttdeci">void freeFrame(FRAME *)</div></div>
+<div class="ttc" id="structarray_html_a491e580dcc3649ff1e325c5ed8c2c392"><div class="ttname"><a href="structarray.html#a491e580dcc3649ff1e325c5ed8c2c392">array::class_data_reference</a></div><div class="ttdeci">DADOS_CLASSE * class_data_reference</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00178">core.h:178</a></div></div>
+<div class="ttc" id="structarray_html_ac87b36a4ba31b9d2a2bf77af4c136428"><div class="ttname"><a href="structarray.html#ac87b36a4ba31b9d2a2bf77af4c136428">array::count</a></div><div class="ttdeci">int32_t count</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00179">core.h:179</a></div></div>
+<div class="ttc" id="structthread_html_a70ff403a3a4548c8c64ab9760aa38355"><div class="ttname"><a href="structthread.html#a70ff403a3a4548c8c64ab9760aa38355">thread::jvm_stack</a></div><div class="ttdeci">FRAME * jvm_stack</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00112">core.h:112</a></div></div>
+<div class="ttc" id="structvalue_html_a5827febe7b21adba8ddb86bbf0996e8c"><div class="ttname"><a href="structvalue.html#a5827febe7b21adba8ddb86bbf0996e8c">value::byte</a></div><div class="ttdeci">int8_t byte</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00044">core.h:44</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a8c96cdaa4bfb0049ed9c2ee068803961"><div class="ttname"><a href="cruzeiro_8h.html#a8c96cdaa4bfb0049ed9c2ee068803961">classUnloading</a></div><div class="ttdeci">void classUnloading(DADOS_CLASSE *, JVM *)</div></div>
+<div class="ttc" id="structobject_html_a25c59e365b98ceabd6d422a078c9d559"><div class="ttname"><a href="structobject.html#a25c59e365b98ceabd6d422a078c9d559">object::prox</a></div><div class="ttdeci">struct object * prox</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00174">core.h:174</a></div></div>
+<div class="ttc" id="structheap__area_html"><div class="ttname"><a href="structheap__area.html">heap_area</a></div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00118">core.h:118</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_aa49c64914922c2156b4b03feabf50257"><div class="ttname"><a href="cruzeiro_8h.html#aa49c64914922c2156b4b03feabf50257">getClassVariable</a></div><div class="ttdeci">VARIABLE * getClassVariable(constPoolInf *, DADOS_CLASSE *)</div></div>
+<div class="ttc" id="cruzeiro_8h_html_af2592f49e52b0675aaca5850571f3999"><div class="ttname"><a href="cruzeiro_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a></div><div class="ttdeci">struct method_data METHOD_DATA</div></div>
+<div class="ttc" id="struct_d_a_d_o_s___c_l_a_s_s_e_html_a49b8ef228c1e9116fa30acb28a3b6402"><div class="ttname"><a href="struct_d_a_d_o_s___c_l_a_s_s_e.html#a49b8ef228c1e9116fa30acb28a3b6402">DADOS_CLASSE::modifiers</a></div><div class="ttdeci">uint16_t modifiers</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00161">core.h:161</a></div></div>
+<div class="ttc" id="structvalue_html_af597140f73eb1550b593c1b98557f6b8"><div class="ttname"><a href="structvalue.html#af597140f73eb1550b593c1b98557f6b8">value::float_</a></div><div class="ttdeci">uint32_t float_</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00061">core.h:61</a></div></div>
+<div class="ttc" id="structconst_pool_inf_html"><div class="ttname"><a href="structconst_pool_inf.html">constPoolInf</a></div><div class="ttdef"><b>Definition:</b> <a href="_leit_exib_8h_source.html#l00098">LeitExib.h:98</a></div></div>
+<div class="ttc" id="structoperand_html_a5fafd6fa6b26bed8a29013570c881285"><div class="ttname"><a href="structoperand.html#a5fafd6fa6b26bed8a29013570c881285">operand::prox</a></div><div class="ttdeci">struct operand * prox</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00095">core.h:95</a></div></div>
+<div class="ttc" id="structoperand_html_a4112f16b41c272f45499c809391b17a2"><div class="ttname"><a href="structoperand.html#a4112f16b41c272f45499c809391b17a2">operand::value</a></div><div class="ttdeci">uint32_t value</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00093">core.h:93</a></div></div>
+<div class="ttc" id="structexception__table__type_html"><div class="ttname"><a href="structexception__table__type.html">exception_table_type</a></div><div class="ttdef"><b>Definition:</b> <a href="_leit_exib_8h_source.html#l00136">LeitExib.h:136</a></div></div>
+<div class="ttc" id="structarray_html_af7ebd5860861c4c445eea16d8385bee6"><div class="ttname"><a href="structarray.html#af7ebd5860861c4c445eea16d8385bee6">array::atype</a></div><div class="ttdeci">ARRAY_TYPE atype</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00181">core.h:181</a></div></div>
+<div class="ttc" id="structvariable_html"><div class="ttname"><a href="structvariable.html">variable</a></div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00134">core.h:134</a></div></div>
+<div class="ttc" id="structoperand_html"><div class="ttname"><a href="structoperand.html">operand</a></div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00092">core.h:92</a></div></div>
+<div class="ttc" id="structmethod__info_html"><div class="ttname"><a href="structmethod__info.html">method_info</a></div><div class="ttdef"><b>Definition:</b> <a href="_leit_exib_8h_source.html#l00230">LeitExib.h:230</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a57370c151bf2eefc3bd6e2d13b70e7c9"><div class="ttname"><a href="cruzeiro_8h.html#a57370c151bf2eefc3bd6e2d13b70e7c9">OPERAND</a></div><div class="ttdeci">struct operand OPERAND</div></div>
+<div class="ttc" id="structfield__data_html_ad90ec224475998c445f5ff8da8ad80e6"><div class="ttname"><a href="structfield__data.html#ad90ec224475998c445f5ff8da8ad80e6">field_data::info</a></div><div class="ttdeci">field_info * info</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00129">core.h:129</a></div></div>
+<div class="ttc" id="structvalue_html_af463045e46ef998b3c1e017651e04411"><div class="ttname"><a href="structvalue.html#af463045e46ef998b3c1e017651e04411">value::Double</a></div><div class="ttdeci">struct value::@0::@6 Double</div></div>
+<div class="ttc" id="cruzeiro_8h_html_a4f9e90c40bb4308abdd0c48f6d7086cc"><div class="ttname"><a href="cruzeiro_8h.html#a4f9e90c40bb4308abdd0c48f6d7086cc">getClassName</a></div><div class="ttdeci">char * getClassName(DADOS_CLASSE *)</div></div>
+<div class="ttc" id="structvalue_html_accc539dfc5234b1ff83f084dfeedab4e"><div class="ttname"><a href="structvalue.html#accc539dfc5234b1ff83f084dfeedab4e">value::boolean</a></div><div class="ttdeci">uint8_t boolean</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00074">core.h:74</a></div></div>
+<div class="ttc" id="structmethod__data_html"><div class="ttname"><a href="structmethod__data.html">method_data</a></div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00142">core.h:142</a></div></div>
+<div class="ttc" id="cruzeiro_8h_html_a116ede3eb3d97f03336302025379d1c7"><div class="ttname"><a href="cruzeiro_8h.html#a116ede3eb3d97f03336302025379d1c7">DADOS_CLASSE</a></div><div class="ttdeci">struct DADOS_CLASSE DADOS_CLASSE</div></div>
+<div class="ttc" id="core_8h_html_ab34056db44556fbb28ffa6aff4873b4c"><div class="ttname"><a href="core_8h.html#ab34056db44556fbb28ffa6aff4873b4c">OPCODE</a></div><div class="ttdeci">uint8_t OPCODE</div><div class="ttdef"><b>Definition:</b> <a href="core_8h_source.html#l00018">core.h:18</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="cruzeiro_8h.html">cruzeiro.h</a></li>
+    <li class="footer">Gerado em Segunda, 4 de Julho de 2016 23:59:49 para JVM - Cruzeiro por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

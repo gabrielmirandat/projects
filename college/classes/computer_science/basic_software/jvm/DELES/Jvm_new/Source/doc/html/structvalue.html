@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>JVM - Cruzeiro: Referência à estrutura value</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">JVM - Cruzeiro
+   &#160;<span id="projectnumber">Versão Básica Funcional</span>
+   </div>
+   <div id="projectbrief">Trabalho de Software Básico - Turma do Professor Marcelo Ladeira</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;de&#160;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&#160;dos&#160;componentes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&#160;membro</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('structvalue.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tudo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Ficheiros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definições de tipos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Atributos Públicos</a> &#124;
+<a href="structvalue-members.html">Mostrar lista completa dos membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência à estrutura value</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="core_8h_source.html">core.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboração para value:</div>
+<div class="dyncontent">
+<div class="center"><img src="structvalue__coll__graph.png" border="0" usemap="#value_coll__map" alt="Collaboration graph"/></div>
+<map name="value_coll__map" id="value_coll__map">
+<area shape="rect" id="node2" href="structarray.html" title="array" alt="" coords="61,491,112,517"/><area shape="rect" id="node14" href="structvariable.html" title="variable" alt="" coords="303,187,369,213"/><area shape="rect" id="node3" href="struct_d_a_d_o_s___c_l_a_s_s_e.html" title="DADOS_CLASSE" alt="" coords="545,399,675,425"/><area shape="rect" id="node5" href="structmethod__data.html" title="method_data" alt="" coords="966,491,1063,517"/><area shape="rect" id="node15" href="structobject.html" title="object" alt="" coords="354,491,411,517"/><area shape="rect" id="node4" href="structconst_pool_inf.html" title="constPoolInf" alt="" coords="782,187,876,213"/><area shape="rect" id="node12" href="structfield__data.html" title="field_data" alt="" coords="514,292,592,319"/><area shape="rect" id="node16" href="struct_classe_de_arquivo.html" title="ClasseDeArquivo" alt="" coords="853,292,976,319"/><area shape="rect" id="node6" href="structmethod__info.html" title="method_info" alt="" coords="1057,187,1151,213"/><area shape="rect" id="node7" href="structattribute__info.html" title="attribute_info" alt="" coords="918,96,1015,123"/><area shape="rect" id="node13" href="structfield__info.html" title="field_info" alt="" coords="683,187,756,213"/><area shape="rect" id="node8" href="structexception__table__type.html" title="exception_table_type" alt="" coords="1119,5,1264,32"/><area shape="rect" id="node9" href="structclasses__type.html" title="classes_type" alt="" coords="592,5,691,32"/><area shape="rect" id="node10" href="structlocal__variable__table__type.html" title="local_variable_table_type" alt="" coords="715,5,883,32"/><area shape="rect" id="node11" href="structline__number__table__type.html" title="line_number_table_type" alt="" coords="907,5,1065,32"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atributos Públicos</h2></td></tr>
+<tr class="memitem:a8193b2471a420d07d6273ea3c9653155"><td class="memItemLeft" align="right" valign="top"><a class="el" href="core_8h.html#a96376f31c362e2a289072478449290f8">TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvalue.html#a8193b2471a420d07d6273ea3c9653155">type</a></td></tr>
+<tr class="separator:a8193b2471a420d07d6273ea3c9653155"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acee60f59572f5488da8ac5748e80e9cc"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a8d5726ea639a17e4af44b33044c6e721"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a0e08557d8b3875b0c184ef1d1627f9b2"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;int8_t&#160;&#160;&#160;<a class="el" href="structvalue.html#a5827febe7b21adba8ddb86bbf0996e8c">byte</a></td></tr>
+<tr class="separator:a0e08557d8b3875b0c184ef1d1627f9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d5726ea639a17e4af44b33044c6e721"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="structvalue.html#af2bea3c5b60d0a36c10e297af2bbb80f">Byte</a></td></tr>
+<tr class="separator:a8d5726ea639a17e4af44b33044c6e721"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a51d31753524b9508709c3be59a893"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a66dfb67365b198be79076d76b09220f6"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;int16_t&#160;&#160;&#160;<a class="el" href="structvalue.html#a083e8a03606d5b79029794b3d575c021">short_</a></td></tr>
+<tr class="separator:a66dfb67365b198be79076d76b09220f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a51d31753524b9508709c3be59a893"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="structvalue.html#ac6f6c8288a2314221cd061b264fa25e1">Short</a></td></tr>
+<tr class="separator:a39a51d31753524b9508709c3be59a893"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb341341f34b7ecfa5cd9a15fe56bbba"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a1aa1f358ee757093159dddaef5418b4a"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;int32_t&#160;&#160;&#160;<a class="el" href="structvalue.html#a58a1dfb88538dd68c4ccd5d6c7f571d2">integer</a></td></tr>
+<tr class="separator:a1aa1f358ee757093159dddaef5418b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb341341f34b7ecfa5cd9a15fe56bbba"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="structvalue.html#a8f62817042c944120cd6099cc5ec9654">Integer</a></td></tr>
+<tr class="separator:afb341341f34b7ecfa5cd9a15fe56bbba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeced21d5ce4cef5a2faadda3a24689e8"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:aa1a2ab16687806a6a68c65ddcc81c4ea"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="structvalue.html#a670628f51376fadc6cd3c7aa2076dd95">high_bytes</a></td></tr>
+<tr class="separator:aa1a2ab16687806a6a68c65ddcc81c4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af940c36e1c71f16dd0c9d047ffbd6d20"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="structvalue.html#a8f7d961af70bd80fe990c31ff3db48fa">low_bytes</a></td></tr>
+<tr class="separator:af940c36e1c71f16dd0c9d047ffbd6d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeced21d5ce4cef5a2faadda3a24689e8"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="structvalue.html#a525db6e48cfe9e5303f30ba1dde3cb7f">Long</a></td></tr>
+<tr class="separator:aeced21d5ce4cef5a2faadda3a24689e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b28f3a6a770ce3b832b99b3aef83b1a"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:ad3ba2d6fd342575c3b5ae53e75be36c6"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="structvalue.html#af597140f73eb1550b593c1b98557f6b8">float_</a></td></tr>
+<tr class="separator:ad3ba2d6fd342575c3b5ae53e75be36c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b28f3a6a770ce3b832b99b3aef83b1a"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="structvalue.html#a7a1d7fe0031e83219851bd64b2835ded">Float</a></td></tr>
+<tr class="separator:a1b28f3a6a770ce3b832b99b3aef83b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821ff1486a718847ead60d64d3cfd9d8"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:aab00301f8d2f953cd1ca7e7475392ca9"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="structvalue.html#a670628f51376fadc6cd3c7aa2076dd95">high_bytes</a></td></tr>
+<tr class="separator:aab00301f8d2f953cd1ca7e7475392ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba97641d842f38df2a82fce989bb6faf"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;uint32_t&#160;&#160;&#160;<a class="el" href="structvalue.html#a8f7d961af70bd80fe990c31ff3db48fa">low_bytes</a></td></tr>
+<tr class="separator:aba97641d842f38df2a82fce989bb6faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821ff1486a718847ead60d64d3cfd9d8"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="structvalue.html#af463045e46ef998b3c1e017651e04411">Double</a></td></tr>
+<tr class="separator:a821ff1486a718847ead60d64d3cfd9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43fce35577bf15a54bafd632a723a085"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:af0d566137f69c0287a54234035e80068"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;uint16_t&#160;&#160;&#160;<a class="el" href="structvalue.html#aabf3d6c1e51cee9d6bec48077f36d1c4">char_</a></td></tr>
+<tr class="separator:af0d566137f69c0287a54234035e80068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43fce35577bf15a54bafd632a723a085"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="structvalue.html#a730511b073f9ef902b73f72b08f97ad4">Char</a></td></tr>
+<tr class="separator:a43fce35577bf15a54bafd632a723a085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78d426cdfb9239b7fd342a422425fda2"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a599da7055853c1354480780663d964e4"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;uint8_t&#160;&#160;&#160;<a class="el" href="structvalue.html#accc539dfc5234b1ff83f084dfeedab4e">boolean</a></td></tr>
+<tr class="separator:a599da7055853c1354480780663d964e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78d426cdfb9239b7fd342a422425fda2"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="structvalue.html#a3daafd6e88c6428a0be01e1a4002eb96">Boolean</a></td></tr>
+<tr class="separator:a78d426cdfb9239b7fd342a422425fda2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d0351f99d137cf37968674c9c4413d"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:aaa7e5afa8a89010cbee780c87c583501"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;struct <a class="el" href="structobject.html">object</a> *&#160;&#160;&#160;<a class="el" href="structvalue.html#ab277933041ff972104180fda5190a425">reference</a></td></tr>
+<tr class="separator:aaa7e5afa8a89010cbee780c87c583501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d0351f99d137cf37968674c9c4413d"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="structvalue.html#acfcc12390036cb37f60fa22e0900ef8d">InstanceReference</a></td></tr>
+<tr class="separator:af2d0351f99d137cf37968674c9c4413d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f6ba1db9b93dabb58222730928446a"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:ac8eb7a0279e23184e1f17de152e48d9c"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;struct <a class="el" href="structarray.html">array</a> *&#160;&#160;&#160;<a class="el" href="structvalue.html#a97a92c9e274a9166f7ae32164a06fe1d">reference</a></td></tr>
+<tr class="separator:ac8eb7a0279e23184e1f17de152e48d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f6ba1db9b93dabb58222730928446a"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="structvalue.html#a09d361f523397d57aa1589c63fddb429">ArrayReference</a></td></tr>
+<tr class="separator:ae7f6ba1db9b93dabb58222730928446a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8352579dd61f792c98728081c9d1ad3"><td class="memItemLeft" >&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:a49b998197c3e21899e8459dcea8b0c29"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;<a class="el" href="core_8h.html#ab34056db44556fbb28ffa6aff4873b4c">OPCODE</a> *&#160;&#160;&#160;<a class="el" href="structvalue.html#ae154453352d31839cbe33fca89fc98aa">return_address</a></td></tr>
+<tr class="separator:a49b998197c3e21899e8459dcea8b0c29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8352579dd61f792c98728081c9d1ad3"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;&#160;&#160;<a class="el" href="structvalue.html#a264ea0eb8eca9c9698c66c7412e8ca88">ReturnAddress</a></td></tr>
+<tr class="separator:ac8352579dd61f792c98728081c9d1ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acee60f59572f5488da8ac5748e80e9cc"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structvalue.html#acee60f59572f5488da8ac5748e80e9cc">u</a></td></tr>
+<tr class="separator:acee60f59572f5488da8ac5748e80e9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock">
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00039">39</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+</div><h2 class="groupheader">Documentação dos dados membro</h2>
+<a class="anchor" id="a09d361f523397d57aa1589c63fddb429"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   value::ArrayReference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="accc539dfc5234b1ff83f084dfeedab4e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t value::boolean</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00073">73</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3daafd6e88c6428a0be01e1a4002eb96"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   value::Boolean</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5827febe7b21adba8ddb86bbf0996e8c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t value::byte</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00043">43</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af2bea3c5b60d0a36c10e297af2bbb80f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   value::Byte</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a730511b073f9ef902b73f72b08f97ad4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   value::Char</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aabf3d6c1e51cee9d6bec48077f36d1c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t value::char_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00069">69</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af463045e46ef998b3c1e017651e04411"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   value::Double</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a7a1d7fe0031e83219851bd64b2835ded"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   value::Float</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af597140f73eb1550b593c1b98557f6b8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t value::float_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00060">60</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a670628f51376fadc6cd3c7aa2076dd95"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t value::high_bytes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00055">55</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acfcc12390036cb37f60fa22e0900ef8d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   value::InstanceReference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a58a1dfb88538dd68c4ccd5d6c7f571d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int32_t value::integer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00051">51</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f62817042c944120cd6099cc5ec9654"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   value::Integer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a525db6e48cfe9e5303f30ba1dde3cb7f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   value::Long</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8f7d961af70bd80fe990c31ff3db48fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t value::low_bytes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00056">56</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab277933041ff972104180fda5190a425"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structobject.html">object</a>* value::reference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00077">77</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a97a92c9e274a9166f7ae32164a06fe1d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structarray.html">array</a>* value::reference</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00081">81</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae154453352d31839cbe33fca89fc98aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="core_8h.html#ab34056db44556fbb28ffa6aff4873b4c">OPCODE</a>* value::return_address</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00085">85</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a264ea0eb8eca9c9698c66c7412e8ca88"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   value::ReturnAddress</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac6f6c8288a2314221cd061b264fa25e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   value::Short</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a083e8a03606d5b79029794b3d575c021"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t value::short_</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00047">47</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8193b2471a420d07d6273ea3c9653155"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="core_8h.html#a96376f31c362e2a289072478449290f8">TYPE</a> value::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00040">40</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acee60f59572f5488da8ac5748e80e9cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... }   value::u</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>A documentação para esta estrutura foi gerada a partir do seguinte ficheiro:<ul>
+<li><a class="el" href="core_8h_source.html">core.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structvalue.html">value</a></li>
+    <li class="footer">Gerado em Terça, 5 de Julho de 2016 00:01:39 para JVM - Cruzeiro por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

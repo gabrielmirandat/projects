@@ -1,0 +1,33 @@
+Main
+Iniciar_JVM (arquivo.class, numero argumentos, NULL ou t/a ou parametros)
+	-Se for para ler/exibir-
+	loadClasseDeArquivo(arquivoBinario)
+	mostrarClasseDeArquivo(cf, arquivoSaidaJVM);
+	
+	-Se for para executar-
+	carregarClasse_01(nomeDoArquivoDeClasse, DADOS_CLASSE ** cd, null, JVM * jvm)
+		Exp: essa funcao carrega todo o arquivo na memoria (buffer) e vai 			lendo preenchendo os campos cafebabe minversion majorversion alem da 		constant pool.
+	
+	ligadorDeClasse(dados_classe_principal, jvm);
+		Exp: chama 2 funcoes que verificam se os campos iniciais foram 			preenchidos e estao corretos, classlinking verification verifica os 			headers dos arquivos e classlinkingpreparation carrega as variaveis de 		classe para memoria
+
+	(Cria thread vazia)
+	
+	classInitialization(dados_classe_principal, jvm, main_thread);
+		LOOP{
+			carregarClasse_01
+			ligadorDeClasse
+			classInitialization
+		}
+		executeMethod("<clinit>", "()V", cd, jvm, thread, NULL, 0, NULL)
+		
+		executeMethod(char * method_name, char * method_descriptor, DADOS_CLASSE * 		cd, JVM * jvm, THREAD * thread, void * this, uint16_t nargs, uint32_t * args
+	
+			method_data = GetMethod - entra em um laço até encontrar ou não um 			method
+		
+			verifica se é abstract ( illegalacesserror
+		
+			executeMethod nao trata string, se o method descriptor receber String e devolver Void ou ser main, ignora os argumentos 
+	
+			interpreter(method, thread, jvm);
+		

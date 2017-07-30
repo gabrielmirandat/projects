@@ -1,0 +1,21 @@
+<map id="ImprimeConstUtf8" name="ImprimeConstUtf8">
+<area shape="rect" id="node2" href="$checker_8h.html#affb083bf8031f48e5c478f976fcce70f" title="isMethodDescriptor" alt="" coords="214,107,349,133"/>
+<area shape="rect" id="node13" href="$_leitor_exibidor_8c.html#ac1218fde6502dc809d4cb1b3dd2dd23a" title="mostrarInfo" alt="" coords="449,208,537,235"/>
+<area shape="rect" id="node15" href="$_leitor_exibidor_8c.html#a4a027d50c11bb44a55c3f66908bfaacc" title="ImprimeCONSTANTEeString" alt="" coords="185,360,378,387"/>
+<area shape="rect" id="node16" href="$_leitor_exibidor_8c.html#a743d0361605f70fb063c4d2ad9f62e02" title="mostrarConstPool" alt="" coords="430,309,557,336"/>
+<area shape="rect" id="node17" href="$_leitor_exibidor_8c.html#a496c0e9c85d5c884f9f0e09a43ffe5f5" title="mostrarAtributos" alt="" coords="434,360,553,387"/>
+<area shape="rect" id="node18" href="$_leitor_exibidor_8c.html#a3912e5e728225ab9081d3852664afacf" title="mostrarCampos" alt="" coords="609,411,724,437"/>
+<area shape="rect" id="node19" href="$_leitor_exibidor_8c.html#a738c6cc4a33c6162fa96dd13ae502fe1" title="mostrarMetodos" alt="" coords="609,309,725,336"/>
+<area shape="rect" id="node20" href="$_leitor_exibidor_8c.html#a22bc5348fc8981164aae181507435ff5" title="mostrarInterfaces" alt="" coords="219,157,343,184"/>
+<area shape="rect" id="node3" href="$checker_8h.html#ad1feb70bcfb835f9472fda62313ffbb6" title="verifyConstantPool" alt="" coords="427,107,560,133"/>
+<area shape="rect" id="node12" href="$cruzeiro_8c.html#a044f22337572729fe6a256eac0ff4820" title="carregarClasse_01" alt="" coords="989,56,1120,83"/>
+<area shape="rect" id="node4" href="$checker_8h.html#a496eaab3cf87436d88f45f408fcc7b54" title="verifyClassfile" alt="" coords="614,107,719,133"/>
+<area shape="rect" id="node5" href="$cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="778,107,937,133"/>
+<area shape="rect" id="node6" href="$cruzeiro_8c.html#aa6c77c38ce0e50b4e897fa2470abfca7" title="ligadorDeClasse" alt="" coords="995,107,1114,133"/>
+<area shape="rect" id="node7" href="$cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="1175,157,1259,184"/>
+<area shape="rect" id="node9" href="$interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08" title="accessField" alt="" coords="1171,56,1263,83"/>
+<area shape="rect" id="node10" href="$interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa" title="invoke" alt="" coords="1187,107,1247,133"/>
+<area shape="rect" id="node11" href="$interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="1168,5,1267,32"/>
+<area shape="rect" id="node8" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1315,157,1365,184"/>
+<area shape="rect" id="node14" href="$_leitor_exibidor_8c.html#a64728d9fd9718be64a2577905fa55e73" title="mostrarClasseDeArquivo" alt="" coords="773,259,941,285"/>
+</map>

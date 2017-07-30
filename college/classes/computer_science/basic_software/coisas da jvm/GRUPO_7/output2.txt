@@ -1,0 +1,703 @@
+ByteCode viewer
+
+#General Information
+Magic:						0xCAFEBABE
+Minor version:				0
+Major version:				46	[1.2]
+Constant pool count:		68
+Access flags:				0x0021	[super public ]
+This class:					cp_info #18	<javaTeste/HelloWorldObject>
+Super class:				cp_info #19	<java/lang/Object>
+Interfaces count:			1
+Fields count:				11
+Methods count:				5
+Attributes count:			1
+
+#Constant Pool
+[1] CONSTANT_Methodref_info
+	Class name:				cp_info #19	<java/lang/Object>
+	Name and type:			cp_info #53	<<init>()V>
+[2] CONSTANT_Fieldref_info
+	Class name:				cp_info #18	<javaTeste/HelloWorldObject>
+	Name and type:			cp_info #54	<field2F>
+[3] CONSTANT_Double_info
+	High bytes:		0xc084d7fe
+	Low bytes:		0x2e152262
+	Double:		-666.999111
+[4]	(large numeric continued)
+[5] CONSTANT_Fieldref_info
+	Class name:				cp_info #18	<javaTeste/HelloWorldObject>
+	Name and type:			cp_info #55	<field3D>
+[6] CONSTANT_Long_info
+	High bytes:				0x0011c379
+	Low bytes:				0x37e0806f
+	Long:					5000000000000111
+[7]	(large numeric continued)
+[8] CONSTANT_Fieldref_info
+	Class name:				cp_info #18	<javaTeste/HelloWorldObject>
+	Name and type:			cp_info #56	<field4J>
+[9] CONSTANT_Fieldref_info
+	Class name:				cp_info #18	<javaTeste/HelloWorldObject>
+	Name and type:			cp_info #57	<field5Z>
+[10] CONSTANT_Fieldref_info
+	Class name:				cp_info #18	<javaTeste/HelloWorldObject>
+	Name and type:			cp_info #58	<field6C>
+[11] CONSTANT_Fieldref_info
+	Class name:				cp_info #18	<javaTeste/HelloWorldObject>
+	Name and type:			cp_info #59	<field7B>
+[12] CONSTANT_Fieldref_info
+	Class name:				cp_info #18	<javaTeste/HelloWorldObject>
+	Name and type:			cp_info #60	<field8C>
+[13] CONSTANT_Class_info
+	Class name:				cp_info #61	<java/lang/String>
+[14] CONSTANT_Methodref_info
+	Class name:				cp_info #13	<java/lang/String>
+	Name and type:			cp_info #53	<<init>()V>
+[15] CONSTANT_Fieldref_info
+	Class name:				cp_info #18	<javaTeste/HelloWorldObject>
+	Name and type:			cp_info #62	<field11Ljava/lang/String;>
+[16] CONSTANT_Fieldref_info
+	Class name:				cp_info #18	<javaTeste/HelloWorldObject>
+	Name and type:			cp_info #63	<fieldI>
+[17] CONSTANT_Methodref_info
+	Class name:				cp_info #18	<javaTeste/HelloWorldObject>
+	Name and type:			cp_info #64	<privateMethod()J>
+[18] CONSTANT_Class_info
+	Class name:				cp_info #65	<javaTeste/HelloWorldObject>
+[19] CONSTANT_Class_info
+	Class name:				cp_info #66	<java/lang/Object>
+[20] CONSTANT_Class_info
+	Class name:				cp_info #67	<javaTeste/HelloWorldInterface>
+[21] CONSTANT_Utf8_info
+	Length of byte array:	5
+	Length of string:		5
+	String:					field
+[22] CONSTANT_Utf8_info
+	Length of byte array:	1
+	Length of string:		1
+	String:					I
+[23] CONSTANT_Utf8_info
+	Length of byte array:	6
+	Length of string:		6
+	String:					field2
+[24] CONSTANT_Utf8_info
+	Length of byte array:	1
+	Length of string:		1
+	String:					F
+[25] CONSTANT_Utf8_info
+	Length of byte array:	6
+	Length of string:		6
+	String:					field3
+[26] CONSTANT_Utf8_info
+	Length of byte array:	1
+	Length of string:		1
+	String:					D
+[27] CONSTANT_Utf8_info
+	Length of byte array:	6
+	Length of string:		6
+	String:					field4
+[28] CONSTANT_Utf8_info
+	Length of byte array:	1
+	Length of string:		1
+	String:					J
+[29] CONSTANT_Utf8_info
+	Length of byte array:	6
+	Length of string:		6
+	String:					field5
+[30] CONSTANT_Utf8_info
+	Length of byte array:	1
+	Length of string:		1
+	String:					Z
+[31] CONSTANT_Utf8_info
+	Length of byte array:	6
+	Length of string:		6
+	String:					field6
+[32] CONSTANT_Utf8_info
+	Length of byte array:	1
+	Length of string:		1
+	String:					C
+[33] CONSTANT_Utf8_info
+	Length of byte array:	6
+	Length of string:		6
+	String:					field7
+[34] CONSTANT_Utf8_info
+	Length of byte array:	1
+	Length of string:		1
+	String:					B
+[35] CONSTANT_Utf8_info
+	Length of byte array:	6
+	Length of string:		6
+	String:					field8
+[36] CONSTANT_Utf8_info
+	Length of byte array:	7
+	Length of string:		7
+	String:					field11
+[37] CONSTANT_Utf8_info
+	Length of byte array:	18
+	Length of string:		18
+	String:					Ljava/lang/String;
+[38] CONSTANT_Utf8_info
+	Length of byte array:	6
+	Length of string:		6
+	String:					field9
+[39] CONSTANT_Utf8_info
+	Length of byte array:	7
+	Length of string:		7
+	String:					field10
+[40] CONSTANT_Utf8_info
+	Length of byte array:	2
+	Length of string:		2
+	String:					[B
+[41] CONSTANT_Utf8_info
+	Length of byte array:	6
+	Length of string:		6
+	String:					<init>
+[42] CONSTANT_Utf8_info
+	Length of byte array:	3
+	Length of string:		3
+	String:					()V
+[43] CONSTANT_Utf8_info
+	Length of byte array:	4
+	Length of string:		4
+	String:					Code
+[44] CONSTANT_Utf8_info
+	Length of byte array:	15
+	Length of string:		15
+	String:					LineNumberTable
+[45] CONSTANT_Utf8_info
+	Length of byte array:	4
+	Length of string:		4
+	String:					(I)V
+[46] CONSTANT_Utf8_info
+	Length of byte array:	13
+	Length of string:		13
+	String:					executeMethod
+[47] CONSTANT_Utf8_info
+	Length of byte array:	6
+	Length of string:		6
+	String:					(IFJ)V
+[48] CONSTANT_Utf8_info
+	Length of byte array:	13
+	Length of string:		13
+	String:					privateMethod
+[49] CONSTANT_Utf8_info
+	Length of byte array:	3
+	Length of string:		3
+	String:					()J
+[50] CONSTANT_Utf8_info
+	Length of byte array:	8
+	Length of string:		8
+	String:					<clinit>
+[51] CONSTANT_Utf8_info
+	Length of byte array:	10
+	Length of string:		10
+	String:					SourceFile
+[52] CONSTANT_Utf8_info
+	Length of byte array:	21
+	Length of string:		21
+	String:					HelloWorldObject.java
+[53] CONSTANT_NameAndType_info
+	Name:					cp_info #41	<<init>>
+	Descriptor:				cp_info #42	<()V>
+[54] CONSTANT_NameAndType_info
+	Name:					cp_info #23	<field2>
+	Descriptor:				cp_info #24	<F>
+[55] CONSTANT_NameAndType_info
+	Name:					cp_info #25	<field3>
+	Descriptor:				cp_info #26	<D>
+[56] CONSTANT_NameAndType_info
+	Name:					cp_info #27	<field4>
+	Descriptor:				cp_info #28	<J>
+[57] CONSTANT_NameAndType_info
+	Name:					cp_info #29	<field5>
+	Descriptor:				cp_info #30	<Z>
+[58] CONSTANT_NameAndType_info
+	Name:					cp_info #31	<field6>
+	Descriptor:				cp_info #32	<C>
+[59] CONSTANT_NameAndType_info
+	Name:					cp_info #33	<field7>
+	Descriptor:				cp_info #34	<B>
+[60] CONSTANT_NameAndType_info
+	Name:					cp_info #35	<field8>
+	Descriptor:				cp_info #32	<C>
+[61] CONSTANT_Utf8_info
+	Length of byte array:	16
+	Length of string:		16
+	String:					java/lang/String
+[62] CONSTANT_NameAndType_info
+	Name:					cp_info #36	<field11>
+	Descriptor:				cp_info #37	<Ljava/lang/String;>
+[63] CONSTANT_NameAndType_info
+	Name:					cp_info #21	<field>
+	Descriptor:				cp_info #22	<I>
+[64] CONSTANT_NameAndType_info
+	Name:					cp_info #48	<privateMethod>
+	Descriptor:				cp_info #49	<()J>
+[65] CONSTANT_Utf8_info
+	Length of byte array:	26
+	Length of string:		26
+	String:					javaTeste/HelloWorldObject
+[66] CONSTANT_Utf8_info
+	Length of byte array:	16
+	Length of string:		16
+	String:					java/lang/Object
+[67] CONSTANT_Utf8_info
+	Length of byte array:	29
+	Length of string:		29
+	String:					javaTeste/HelloWorldInterface
+
+#Interfaces
+Interface 0	cp_info #20	<javaTeste/HelloWorldInterface>
+
+
+#Fields
+Member count:				11
+
+[0]	field
+	Name:		cp_info #21	<field>
+	Descriptor:		cp_info #22	<I>
+	Access Flags:		0x0008		[static ]
+
+	Field's attributes count:	0
+
+	Fields Attributes
+
+[1]	field2
+	Name:		cp_info #23	<field2>
+	Descriptor:		cp_info #24	<F>
+	Access Flags:		0x0000		[]
+
+	Field's attributes count:	0
+
+	Fields Attributes
+
+[2]	field3
+	Name:		cp_info #25	<field3>
+	Descriptor:		cp_info #26	<D>
+	Access Flags:		0x0000		[]
+
+	Field's attributes count:	0
+
+	Fields Attributes
+
+[3]	field4
+	Name:		cp_info #27	<field4>
+	Descriptor:		cp_info #28	<J>
+	Access Flags:		0x0000		[]
+
+	Field's attributes count:	0
+
+	Fields Attributes
+
+[4]	field5
+	Name:		cp_info #29	<field5>
+	Descriptor:		cp_info #30	<Z>
+	Access Flags:		0x0000		[]
+
+	Field's attributes count:	0
+
+	Fields Attributes
+
+[5]	field6
+	Name:		cp_info #31	<field6>
+	Descriptor:		cp_info #32	<C>
+	Access Flags:		0x0000		[]
+
+	Field's attributes count:	0
+
+	Fields Attributes
+
+[6]	field7
+	Name:		cp_info #33	<field7>
+	Descriptor:		cp_info #34	<B>
+	Access Flags:		0x0000		[]
+
+	Field's attributes count:	0
+
+	Fields Attributes
+
+[7]	field8
+	Name:		cp_info #35	<field8>
+	Descriptor:		cp_info #32	<C>
+	Access Flags:		0x0000		[]
+
+	Field's attributes count:	0
+
+	Fields Attributes
+
+[8]	field11
+	Name:		cp_info #36	<field11>
+	Descriptor:		cp_info #37	<Ljava/lang/String;>
+	Access Flags:		0x0000		[]
+
+	Field's attributes count:	0
+
+	Fields Attributes
+
+[9]	field9
+	Name:		cp_info #38	<field9>
+	Descriptor:		cp_info #28	<J>
+	Access Flags:		0x0002		[private ]
+
+	Field's attributes count:	0
+
+	Fields Attributes
+
+[10]	field10
+	Name:		cp_info #39	<field10>
+	Descriptor:		cp_info #40	<[B>
+	Access Flags:		0x0004		[protected ]
+
+	Field's attributes count:	0
+
+	Fields Attributes
+
+
+#Methods
+Member count:				5
+
+[0]	<init>
+Name:						cp_info #41	<<init>>
+Descriptor:					cp_info #42	<()V>
+Access flags:				0x0000		[]
+
+Methods's attr count:		1
+
+	Methods Attributes
+
+[0]	Code
+	Informacoes gerais:
+		Indice do nome do atributo:	cp_info #43	Code
+		Tamanho do atributo:	117
+	Informacoes especificas:
+		Bytecode:
+			line	offobtain
+			1	0	aload_0
+			2	1	invokespecial	#1	<java/lang/Object.<init>>
+			3	4	aload_0
+			4	5	fconst_1
+			5	6	putfield	#2	<javaTeste/HelloWorldObject.field2>
+			6	9	aload_0
+			7	10	ldc2_w	#3	<-666.999111>
+			8	13	putfield	#5	<javaTeste/HelloWorldObject.field3>
+			9	16	aload_0
+			10	17	ldc2_w	#6	<5000000000000111>
+			11	20	putfield	#8	<javaTeste/HelloWorldObject.field4>
+			12	23	aload_0
+			13	24	iconst_1
+			14	25	putfield	#9	<javaTeste/HelloWorldObject.field5>
+			15	28	aload_0
+			16	29	bipush	97
+			17	31	putfield	#10	<javaTeste/HelloWorldObject.field6>
+			18	34	aload_0
+			19	35	iconst_1
+			20	36	putfield	#11	<javaTeste/HelloWorldObject.field7>
+			21	39	aload_0
+			22	40	bipush	65
+			23	42	putfield	#12	<javaTeste/HelloWorldObject.field8>
+			24	45	aload_0
+			25	46	new	#13	<java/lang/String>
+			26	49	dup
+			27	50	invokespecial	#14	<java/lang/String.<init>>
+			28	53	putfield	#15	<javaTeste/HelloWorldObject.field11>
+			29	56	return
+
+			Exception Table Length:		0
+
+		Miscellaneous:
+				Max Stack:		3
+				Max locals:	1
+				Code length:			57
+
+		Code attributes count:	1
+
+	Attribute's Code Attributes
+
+	[0]	LineNumberTable
+		Informacoes gerais:
+			Indice do nome do atributo:	cp_info #44	LineNumberTable
+			Tamanho do atributo:	42
+		Informacoes especificas:
+				Line Number Table length:	10
+				Line Number Table:
+				Nr.	start_pc	line_number
+				0	0	29
+				1	4	16
+				2	9	17
+				3	16	18
+				4	23	19
+				5	28	20
+				6	34	21
+				7	39	22
+				8	45	24
+				9	56	30
+
+[1]	<init>
+Name:						cp_info #41	<<init>>
+Descriptor:					cp_info #45	<(I)V>
+Access flags:				0x0000		[]
+
+Methods's attr count:		1
+
+	Methods Attributes
+
+[0]	Code
+	Informacoes gerais:
+		Indice do nome do atributo:	cp_info #43	Code
+		Tamanho do atributo:	127
+	Informacoes especificas:
+		Bytecode:
+			line	offobtain
+			1	0	aload_0
+			2	1	invokespecial	#1	<java/lang/Object.<init>>
+			3	4	aload_0
+			4	5	fconst_1
+			5	6	putfield	#2	<javaTeste/HelloWorldObject.field2>
+			6	9	aload_0
+			7	10	ldc2_w	#3	<-666.999111>
+			8	13	putfield	#5	<javaTeste/HelloWorldObject.field3>
+			9	16	aload_0
+			10	17	ldc2_w	#6	<5000000000000111>
+			11	20	putfield	#8	<javaTeste/HelloWorldObject.field4>
+			12	23	aload_0
+			13	24	iconst_1
+			14	25	putfield	#9	<javaTeste/HelloWorldObject.field5>
+			15	28	aload_0
+			16	29	bipush	97
+			17	31	putfield	#10	<javaTeste/HelloWorldObject.field6>
+			18	34	aload_0
+			19	35	iconst_1
+			20	36	putfield	#11	<javaTeste/HelloWorldObject.field7>
+			21	39	aload_0
+			22	40	bipush	65
+			23	42	putfield	#12	<javaTeste/HelloWorldObject.field8>
+			24	45	aload_0
+			25	46	new	#13	<java/lang/String>
+			26	49	dup
+			27	50	invokespecial	#14	<java/lang/String.<init>>
+			28	53	putfield	#15	<javaTeste/HelloWorldObject.field11>
+			29	56	aload_0
+			30	57	pop
+			31	58	iload_1
+			32	59	putstatic	#16	<javaTeste/HelloWorldObject.field>
+			33	62	return
+
+			Exception Table Length:		0
+
+		Miscellaneous:
+				Max Stack:		3
+				Max locals:	2
+				Code length:			63
+
+		Code attributes count:	1
+
+	Attribute's Code Attributes
+
+	[0]	LineNumberTable
+		Informacoes gerais:
+			Indice do nome do atributo:	cp_info #44	LineNumberTable
+			Tamanho do atributo:	46
+		Informacoes especificas:
+				Line Number Table length:	11
+				Line Number Table:
+				Nr.	start_pc	line_number
+				0	0	32
+				1	4	16
+				2	9	17
+				3	16	18
+				4	23	19
+				5	28	20
+				6	34	21
+				7	39	22
+				8	45	24
+				9	56	33
+				10	62	34
+
+[2]	executeMethod
+Name:						cp_info #46	<executeMethod>
+Descriptor:					cp_info #47	<(IFJ)V>
+Access flags:				0x0001		[public]
+
+Methods's attr count:		1
+
+	Methods Attributes
+
+[0]	Code
+	Informacoes gerais:
+		Indice do nome do atributo:	cp_info #43	Code
+		Tamanho do atributo:	118
+	Informacoes especificas:
+		Bytecode:
+			line	offobtain
+			1	0	iload_1
+			2	1	iload_1
+			3	2	iadd
+			4	3	istore	5
+			5	5	iload_1
+			6	6	iload_1
+			7	7	imul
+			8	8	istore	5
+			9	10	iload	5
+			10	12	iload_1
+			11	13	idiv
+			12	14	istore	5
+			13	16	fload_2
+			14	17	fload_2
+			15	18	fadd
+			16	19	fstore	6
+			17	21	fload_2
+			18	22	fload_2
+			19	23	fmul
+			20	24	fstore	6
+			21	26	fload	6
+			22	28	fload_2
+			23	29	fdiv
+			24	30	fstore	6
+			25	32	lload_3
+			26	33	lload_3
+			27	34	ladd
+			28	35	lstore	7
+			29	37	lload_3
+			30	38	lload_3
+			31	39	lmul
+			32	40	lstore	7
+			33	42	lload	7
+			34	44	lload_3
+			35	45	ldiv
+			36	46	lstore	7
+			37	48	aload_0
+			38	49	invokespecial	#17	<javaTeste/HelloWorldObject.privateMethod>
+			39	52	pop2
+			40	53	return
+
+			Exception Table Length:		0
+
+		Miscellaneous:
+				Max Stack:		4
+				Max locals:	9
+				Code length:			54
+
+		Code attributes count:	1
+
+	Attribute's Code Attributes
+
+	[0]	LineNumberTable
+		Informacoes gerais:
+			Indice do nome do atributo:	cp_info #44	LineNumberTable
+			Tamanho do atributo:	46
+		Informacoes especificas:
+				Line Number Table length:	11
+				Line Number Table:
+				Nr.	start_pc	line_number
+				0	0	42
+				1	5	43
+				2	10	44
+				3	16	47
+				4	21	48
+				5	26	49
+				6	32	52
+				7	37	53
+				8	42	54
+				9	48	56
+				10	53	57
+
+[3]	privateMethod
+Name:						cp_info #48	<privateMethod>
+Descriptor:					cp_info #49	<()J>
+Access flags:				0x0002		[private ]
+
+Methods's attr count:		1
+
+	Methods Attributes
+
+[0]	Code
+	Informacoes gerais:
+		Indice do nome do atributo:	cp_info #43	Code
+		Tamanho do atributo:	47
+	Informacoes especificas:
+		Bytecode:
+			line	offobtain
+			1	0	bipush	11
+			2	2	istore_1
+			3	3	aload_0
+			4	4	pop
+			5	5	bipush	10
+			6	7	putstatic	#16	<javaTeste/HelloWorldObject.field>
+			7	10	aload_0
+			8	11	getfield	#8	<javaTeste/HelloWorldObject.field4>
+			9	14	lreturn
+
+			Exception Table Length:		0
+
+		Miscellaneous:
+				Max Stack:		2
+				Max locals:	2
+				Code length:			15
+
+		Code attributes count:	1
+
+	Attribute's Code Attributes
+
+	[0]	LineNumberTable
+		Informacoes gerais:
+			Indice do nome do atributo:	cp_info #44	LineNumberTable
+			Tamanho do atributo:	14
+		Informacoes especificas:
+				Line Number Table length:	3
+				Line Number Table:
+				Nr.	start_pc	line_number
+				0	0	60
+				1	3	61
+				2	10	63
+
+[4]	<clinit>
+Name:						cp_info #50	<<clinit>>
+Descriptor:					cp_info #42	<()V>
+Access flags:				0x0008		[static ]
+
+Methods's attr count:		1
+
+	Methods Attributes
+
+[0]	Code
+	Informacoes gerais:
+		Indice do nome do atributo:	cp_info #43	Code
+		Tamanho do atributo:	30
+	Informacoes especificas:
+		Bytecode:
+			line	offobtain
+			1	0	bipush	10
+			2	2	putstatic	#16	<javaTeste/HelloWorldObject.field>
+			3	5	return
+
+			Exception Table Length:		0
+
+		Miscellaneous:
+				Max Stack:		1
+				Max locals:	0
+				Code length:			6
+
+		Code attributes count:	1
+
+	Attribute's Code Attributes
+
+	[0]	LineNumberTable
+		Informacoes gerais:
+			Indice do nome do atributo:	cp_info #44	LineNumberTable
+			Tamanho do atributo:	6
+		Informacoes especificas:
+				Line Number Table length:	1
+				Line Number Table:
+				Nr.	start_pc	line_number
+				0	0	15
+
+#Attributes
+
+Class Attributes Count:			1
+
+[0]	SourceFile
+Informacoes gerais:
+	Indice do nome do atributo:	cp_info #51	SourceFile
+	Tamanho do atributo:	2
+Informacoes especificas:
+		Source file index:	cp_info #52	HelloWorldObject.java

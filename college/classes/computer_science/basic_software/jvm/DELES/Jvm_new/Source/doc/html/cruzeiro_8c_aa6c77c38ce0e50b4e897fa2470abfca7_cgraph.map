@@ -1,0 +1,16 @@
+<map id="ligadorDeClasse" name="ligadorDeClasse">
+<area shape="rect" id="node2" href="$cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="174,245,333,272"/>
+<area shape="rect" id="node14" href="$cruzeiro_8c.html#a5a186301f1f3a10e62e93674c07c2fcc" title="classLinkingPreparation" alt="" coords="173,308,333,335"/>
+<area shape="rect" id="node3" href="$checker_8c.html#a0dcac7578c8c1cf7ef0f7b6fffe5ae24" title="verifyClassfile" alt="" coords="417,156,522,183"/>
+<area shape="rect" id="node11" href="$checker_8c.html#a7b952615631393d4b96a3eafe88cb3e7" title="verifySuperFinal" alt="" coords="411,232,527,259"/>
+<area shape="rect" id="node13" href="$checker_8c.html#a4bbffc69c6cd821aebc4c480ffd3aec1" title="verifyOverrideMethodFinal" alt="" coords="382,283,557,309"/>
+<area shape="rect" id="node4" href="$checker_8c.html#a6ecc7358598704e5b4e9d77f06495482" title="verifyConstantPool" alt="" coords="605,80,739,107"/>
+<area shape="rect" id="node5" href="$checker_8c.html#ac5b6a6c9fa38ec400a3d15f1421089d8" title="isFieldDescriptor" alt="" coords="795,29,915,56"/>
+<area shape="rect" id="node8" href="$checker_8c.html#a3e295f32f754594e38f31297afebca97" title="verifyAccessFlags" alt="" coords="607,131,737,157"/>
+<area shape="rect" id="node9" href="$_leit_exib_8h.html#a3fe75659fbce73494617d80f3a705a67" title="getTipoAtributo" alt="" coords="617,181,727,208"/>
+<area shape="rect" id="node10" href="$checker_8c.html#a5c524d6b071cd201765ed95b10b9eedd" title="verifyBytecode" alt="" coords="617,232,727,259"/>
+<area shape="rect" id="node6" href="$checker_8c.html#a9022e1fcb1064556f8df87f06b5babd2" title="isMethodDescriptor" alt="" coords="787,104,922,131"/>
+<area shape="rect" id="node7" href="$_leit_exib_8h.html#a345c5213063b16760fc936583f24d536" title="ImprimeConstUtf8" alt="" coords="971,104,1101,131"/>
+<area shape="rect" id="node12" href="$core_8h.html#aaa52a592057a81d501ee49d8d1c81301" title="getSuperClass" alt="" coords="618,283,726,309"/>
+<area shape="rect" id="node15" href="$core_8h.html#a65309fe2f949999b73fa78000ffec3c4" title="jvmExit" alt="" coords="436,333,503,360"/>
+</map>

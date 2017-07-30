@@ -1,0 +1,1 @@
+gcc -std=c99 LeitorExibidor.c -o Cruzeiro

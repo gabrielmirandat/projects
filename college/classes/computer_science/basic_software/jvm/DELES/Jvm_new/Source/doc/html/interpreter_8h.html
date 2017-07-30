@@ -1,0 +1,2294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>JVM - Cruzeiro: Referência ao ficheiro interpreter.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">JVM - Cruzeiro
+   &#160;<span id="projectnumber">Versão Básica Funcional</span>
+   </div>
+   <div id="projectbrief">Trabalho de Software Básico - Turma do Professor Marcelo Ladeira</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Ficheiros</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;ficheiros</span></a></li>
+      <li><a href="globals.html"><span>Ficheiros&#160;membro</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('interpreter_8h.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tudo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Ficheiros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definições de tipos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Definições de tipos</a> &#124;
+<a href="#func-members">Funções</a> &#124;
+<a href="#var-members">Variáveis</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência ao ficheiro interpreter.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="checker_8h_source.html">checker.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Diagrama de dependências de inclusão para interpreter.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h__incl.png" border="0" usemap="#interpreter_8h" alt=""/></div>
+<map name="interpreter_8h" id="interpreter_8h">
+<area shape="rect" id="node2" href="checker_8h.html" title="checker.h" alt="" coords="399,80,477,107"/><area shape="rect" id="node3" href="core_8h.html" title="core.h" alt="" coords="409,155,467,181"/><area shape="rect" id="node4" href="_leit_exib_8h.html" title="LeitExib.h" alt="" coords="399,229,477,256"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Este grafo mostra quais são os ficheiros que incluem directamente ou indirectamente este ficheiro:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h__dep__incl.png" border="0" usemap="#interpreter_8hdep" alt=""/></div>
+<map name="interpreter_8hdep" id="interpreter_8hdep">
+<area shape="rect" id="node2" href="cruzeiro_8c.html" title="cruzeiro.c" alt="" coords="5,80,83,107"/><area shape="rect" id="node3" href="interpreter_8c.html" title="interpreter.c" alt="" coords="108,80,199,107"/><area shape="rect" id="node4" href="main_8c.html" title="main.c" alt="" coords="223,80,284,107"/></map>
+</div>
+</div>
+<p><a href="interpreter_8h_source.html">Ir para o código fonte deste ficheiro.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Definições de tipos</h2></td></tr>
+<tr class="memitem:a8861e8ff3f8d80c5805372aed9c2b6ab"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a8861e8ff3f8d80c5805372aed9c2b6ab">INSTRUCTION</a> )(<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a8861e8ff3f8d80c5805372aed9c2b6ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a7b631b817dcd0b258c4cf1ccb1711875"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a7b631b817dcd0b258c4cf1ccb1711875">interpreter</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *<a class="el" href="structjvm.html">jvm</a>)</td></tr>
+<tr class="separator:a7b631b817dcd0b258c4cf1ccb1711875"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acba86e5c11b99c8e1c429ca387c43b63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#acba86e5c11b99c8e1c429ca387c43b63">nop_</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:acba86e5c11b99c8e1c429ca387c43b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80dbcd6a48dc886a97834364ade8be34"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a80dbcd6a48dc886a97834364ade8be34">Tconst</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a80dbcd6a48dc886a97834364ade8be34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a056d944a1c6332ebac080ea64b1d265b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a056d944a1c6332ebac080ea64b1d265b">Tipush</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a056d944a1c6332ebac080ea64b1d265b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42f2652de9824d1a582f9e883288eb30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a42f2652de9824d1a582f9e883288eb30">ldc_</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a42f2652de9824d1a582f9e883288eb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bc9526a72adf767bce398f8f834595a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a6bc9526a72adf767bce398f8f834595a">Tload</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a6bc9526a72adf767bce398f8f834595a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a529e759bd6c88b2d46445a3e6f913039"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a529e759bd6c88b2d46445a3e6f913039">Taload</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a529e759bd6c88b2d46445a3e6f913039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf6ea365c7b8f0fad22c522b6154e418"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#abf6ea365c7b8f0fad22c522b6154e418">Tstore</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:abf6ea365c7b8f0fad22c522b6154e418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad09ed42cb99c94ca7b7d51d0935f4826"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#ad09ed42cb99c94ca7b7d51d0935f4826">Tastore</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:ad09ed42cb99c94ca7b7d51d0935f4826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0464f031ce20c82df647d659529e3cbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a0464f031ce20c82df647d659529e3cbb">handleStack</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a0464f031ce20c82df647d659529e3cbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fa003c938cb85f8e95c586b40f3fef5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a5fa003c938cb85f8e95c586b40f3fef5">Tadd</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a5fa003c938cb85f8e95c586b40f3fef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af28019a697fa192b2eff60f0fe5638c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#af28019a697fa192b2eff60f0fe5638c2">Tsub</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:af28019a697fa192b2eff60f0fe5638c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb5427d43b5b37920af311635f48c5ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#abb5427d43b5b37920af311635f48c5ff">Tmul</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:abb5427d43b5b37920af311635f48c5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f46610c24651a72be0a6ba8b918da51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a8f46610c24651a72be0a6ba8b918da51">Tdiv</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a8f46610c24651a72be0a6ba8b918da51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c31a8488448a7a77913f38844f4f7e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a0c31a8488448a7a77913f38844f4f7e1">Trem</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a0c31a8488448a7a77913f38844f4f7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a725fe276b231d458a6ce6b61679fb0f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a725fe276b231d458a6ce6b61679fb0f9">Tneg</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a725fe276b231d458a6ce6b61679fb0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6766ac811b268ed1b47997bfdc4afc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#ac6766ac811b268ed1b47997bfdc4afc5">Tshl</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:ac6766ac811b268ed1b47997bfdc4afc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd63501d572dbe6859766c703e86a5c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#abd63501d572dbe6859766c703e86a5c4">Tshr</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:abd63501d572dbe6859766c703e86a5c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1942a994018168e2976a6552aeb2ba8f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a1942a994018168e2976a6552aeb2ba8f">Tushr</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a1942a994018168e2976a6552aeb2ba8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad421b269c62c75abba9060f9f90e761e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#ad421b269c62c75abba9060f9f90e761e">Tand</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:ad421b269c62c75abba9060f9f90e761e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e8e6c643411c7335cd676539a00b9e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a1e8e6c643411c7335cd676539a00b9e4">Tor</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a1e8e6c643411c7335cd676539a00b9e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4482df538c0ac9cc560e634977cd56d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a4482df538c0ac9cc560e634977cd56d3">Txor</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a4482df538c0ac9cc560e634977cd56d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fde2dc89562c7ff434d6e8238247759"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a5fde2dc89562c7ff434d6e8238247759">Tinc</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a5fde2dc89562c7ff434d6e8238247759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3f6580d2506431a1c9d77903b6a7919"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#ad3f6580d2506431a1c9d77903b6a7919">i2T</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:ad3f6580d2506431a1c9d77903b6a7919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c31e4f02eb9dc3884df24df16c3b178"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a9c31e4f02eb9dc3884df24df16c3b178">l2T</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a9c31e4f02eb9dc3884df24df16c3b178"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9dfab8fc6dd72ad8368fa5224937535"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#ae9dfab8fc6dd72ad8368fa5224937535">f2T</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:ae9dfab8fc6dd72ad8368fa5224937535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66442e680b4aa2b68bcd6ea84fd10d62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a66442e680b4aa2b68bcd6ea84fd10d62">d2T</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a66442e680b4aa2b68bcd6ea84fd10d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe17bd7c18890e7f6843c3bbfc270051"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#afe17bd7c18890e7f6843c3bbfc270051">Tcmp</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:afe17bd7c18890e7f6843c3bbfc270051"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a751a03f12cb21ee349afdefbbd6291e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a751a03f12cb21ee349afdefbbd6291e4">TcmpOP</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a751a03f12cb21ee349afdefbbd6291e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7378fdb70f4d735efc22ccec7dd98084"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a7378fdb70f4d735efc22ccec7dd98084">ifOP</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a7378fdb70f4d735efc22ccec7dd98084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64df2e5e30a1937d9db1f5035b6f4c71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a64df2e5e30a1937d9db1f5035b6f4c71">if_icmOP</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a64df2e5e30a1937d9db1f5035b6f4c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba50f8beb9e9ea67529b3ae9bb3662f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#aba50f8beb9e9ea67529b3ae9bb3662f1">if_acmOP</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:aba50f8beb9e9ea67529b3ae9bb3662f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa93dc3c70b899ef2967bf00942e45b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#aaa93dc3c70b899ef2967bf00942e45b4">jump</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:aaa93dc3c70b899ef2967bf00942e45b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae744794c40b46f1ec2ec5822fcf789b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#ae744794c40b46f1ec2ec5822fcf789b3">switch_</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:ae744794c40b46f1ec2ec5822fcf789b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af88fc705bb824416c448240ca62ae218"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#af88fc705bb824416c448240ca62ae218">Treturn</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:af88fc705bb824416c448240ca62ae218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54502836ddf2d43bd74e607cade9fb08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08">accessField</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a54502836ddf2d43bd74e607cade9fb08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab804e07f31fd89fef7cd8022278a27fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa">invoke</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:ab804e07f31fd89fef7cd8022278a27fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71f70628eeae78d6f63ae10b87a0a8bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf">handleObject</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a71f70628eeae78d6f63ae10b87a0a8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48a6bd040e3ef57a64f57f44a5458eb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a48a6bd040e3ef57a64f57f44a5458eb5">createMultiArray</a> (<a class="el" href="core_8h.html#a9c07c3330f66f4018e49ee90e58f0f39">ARRAY</a> *, int32_t *, uint8_t, uint8_t, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a48a6bd040e3ef57a64f57f44a5458eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c4c29e44fc0ac1d4967ebec994da435"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a2c4c29e44fc0ac1d4967ebec994da435">athrow</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a2c4c29e44fc0ac1d4967ebec994da435"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a053dbc7a36e682aaf6f202bf095ecfb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a053dbc7a36e682aaf6f202bf095ecfb1">properties</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a053dbc7a36e682aaf6f202bf095ecfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e83a788d0d71bfc7819addd34eac71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a35e83a788d0d71bfc7819addd34eac71">monitor</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a35e83a788d0d71bfc7819addd34eac71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33e392041d4c22854ca1b937c8fc58a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a33e392041d4c22854ca1b937c8fc58a8">wide_</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a33e392041d4c22854ca1b937c8fc58a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d373e29057a3e304e5d57913156f94b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a3d373e29057a3e304e5d57913156f94b">ifNull</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a3d373e29057a3e304e5d57913156f94b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d5c86f88efdae786cac16e33cc3834"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a27d5c86f88efdae786cac16e33cc3834">widejump</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a27d5c86f88efdae786cac16e33cc3834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5abf36e11296c1c34a51625c52e9a69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#aa5abf36e11296c1c34a51625c52e9a69">breakpoint_</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:aa5abf36e11296c1c34a51625c52e9a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a715c7fd53124f82988012e4f72cd1c7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a715c7fd53124f82988012e4f72cd1c7a">nonDefined</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a715c7fd53124f82988012e4f72cd1c7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a660ac5be5441d8fcfa846a669b497a05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a660ac5be5441d8fcfa846a669b497a05">impdep</a> (<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td></tr>
+<tr class="separator:a660ac5be5441d8fcfa846a669b497a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:a92e41b446c5961ac28375c13970abcd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="interpreter_8h.html#a8861e8ff3f8d80c5805372aed9c2b6ab">INSTRUCTION</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interpreter_8h.html#a92e41b446c5961ac28375c13970abcd4">func</a> []</td></tr>
+<tr class="separator:a92e41b446c5961ac28375c13970abcd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentação dos tipos</h2>
+<a class="anchor" id="a8861e8ff3f8d80c5805372aed9c2b6ab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* INSTRUCTION)(<a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *, <a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *, <a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8h_source.html#l00019">19</a> do ficheiro <a class="el" href="interpreter_8h_source.html">interpreter.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das funções</h2>
+<a class="anchor" id="a54502836ddf2d43bd74e607cade9fb08"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void accessField </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l02373">2373</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a54502836ddf2d43bd74e607cade9fb08_cgraph.png" border="0" usemap="#interpreter_8h_a54502836ddf2d43bd74e607cade9fb08_cgraph" alt=""/></div>
+<map name="interpreter_8h_a54502836ddf2d43bd74e607cade9fb08_cgraph" id="interpreter_8h_a54502836ddf2d43bd74e607cade9fb08_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a65309fe2f949999b73fa78000ffec3c4" title="jvmExit" alt="" coords="596,537,663,564"/><area shape="rect" id="node3" href="core_8h.html#a467c17ad6f6b14784f8e861342b1d0e1" title="getClass" alt="" coords="179,627,253,653"/><area shape="rect" id="node4" href="core_8h.html#a7c9daf914ef558b41a9d0b2d617dab86" title="carregarClasse_01" alt="" coords="348,461,479,488"/><area shape="rect" id="node19" href="core_8h.html#a92753a3e4a70b1837b498b2821b1c478" title="ligadorDeClasse" alt="" coords="157,576,275,603"/><area shape="rect" id="node30" href="core_8h.html#a1c9426d6a17b70527ebee8b467688fa5" title="classInitialization" alt="" coords="155,677,277,704"/><area shape="rect" id="node31" href="core_8h.html#aa49c64914922c2156b4b03feabf50257" title="getClassVariable" alt="" coords="155,728,277,755"/><area shape="rect" id="node32" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="167,779,265,805"/><area shape="rect" id="node33" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="170,829,262,856"/><area shape="rect" id="node34" href="core_8h.html#a1e9d1e52d8528a1003cd9c699bb87ab9" title="getInstanceVariable" alt="" coords="147,880,285,907"/><area shape="rect" id="node35" href="core_8h.html#a18b8702b615b635f6b52e95c60ed73b1" title="isSuperClass" alt="" coords="166,931,266,957"/><area shape="rect" id="node5" href="_leit_exib_8h.html#a7722536746d54d82b3b46d5eb409f3da" title="loadClasseDeArquivo" alt="" coords="555,208,703,235"/><area shape="rect" id="node15" href="checker_8c.html#ac5b6a6c9fa38ec400a3d15f1421089d8" title="isFieldDescriptor" alt="" coords="961,537,1081,564"/><area shape="rect" id="node16" href="checker_8c.html#a9022e1fcb1064556f8df87f06b5babd2" title="isMethodDescriptor" alt="" coords="954,436,1089,463"/><area shape="rect" id="node18" href="core_8h.html#a853d382621b6e22797ee41cc0af6e38f" title="getCodeAttribute" alt="" coords="569,436,689,463"/><area shape="rect" id="node6" href="_leitor_exibidor_8c.html#ac7ed0b8a152d4327637b603c9bbce4cb" title="read4Byte" alt="" coords="1169,56,1250,83"/><area shape="rect" id="node8" href="_leitor_exibidor_8c.html#a41ed338d041f0f3808f5c0fcc3f29da6" title="read2Byte" alt="" coords="1169,208,1250,235"/><area shape="rect" id="node9" href="_leitor_exibidor_8c.html#afa34d6279f74e16c9251ea71ba45aebb" title="setCONSTANTEPool" alt="" coords="947,132,1096,159"/><area shape="rect" id="node10" href="_leitor_exibidor_8c.html#a41c0875ffc034eda023a69294b81fc8e" title="setInterfaces" alt="" coords="972,284,1071,311"/><area shape="rect" id="node11" href="_leitor_exibidor_8c.html#a6f9c7c07e7af4935e667c111d34bf8aa" title="setFields" alt="" coords="795,233,869,260"/><area shape="rect" id="node12" href="_leitor_exibidor_8c.html#a393e540651164597ee93603b0a713923" title="setAttributes" alt="" coords="973,81,1069,108"/><area shape="rect" id="node14" href="_leitor_exibidor_8c.html#aa6ca56635beec104216b589d65622938" title="setMethods" alt="" coords="787,132,877,159"/><area shape="rect" id="node7" href="_leitor_exibidor_8c.html#acd178396959c009ec7b849c928299d29" title="read1Byte" alt="" coords="1323,132,1405,159"/><area shape="rect" id="node13" href="_leitor_exibidor_8c.html#a4a853c531bfe942dda78ef5ce77078b9" title="getTipoAtributo" alt="" coords="1154,5,1265,32"/><area shape="rect" id="node17" href="_leit_exib_8h.html#a345c5213063b16760fc936583f24d536" title="ImprimeConstUtf8" alt="" coords="1145,436,1274,463"/><area shape="rect" id="node20" href="cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="334,684,493,711"/><area shape="rect" id="node29" href="cruzeiro_8c.html#a5a186301f1f3a10e62e93674c07c2fcc" title="classLinkingPreparation" alt="" coords="333,576,493,603"/><area shape="rect" id="node21" href="checker_8c.html#a0dcac7578c8c1cf7ef0f7b6fffe5ae24" title="verifyClassfile" alt="" coords="577,645,682,672"/><area shape="rect" id="node26" href="checker_8c.html#a7b952615631393d4b96a3eafe88cb3e7" title="verifySuperFinal" alt="" coords="571,784,687,811"/><area shape="rect" id="node28" href="checker_8c.html#a4bbffc69c6cd821aebc4c480ffd3aec1" title="verifyOverrideMethodFinal" alt="" coords="542,721,717,748"/><area shape="rect" id="node22" href="checker_8c.html#a6ecc7358598704e5b4e9d77f06495482" title="verifyConstantPool" alt="" coords="765,537,899,564"/><area shape="rect" id="node23" href="checker_8c.html#a3e295f32f754594e38f31297afebca97" title="verifyAccessFlags" alt="" coords="767,588,897,615"/><area shape="rect" id="node24" href="_leit_exib_8h.html#a3fe75659fbce73494617d80f3a705a67" title="getTipoAtributo" alt="" coords="777,639,887,665"/><area shape="rect" id="node25" href="checker_8c.html#a5c524d6b071cd201765ed95b10b9eedd" title="verifyBytecode" alt="" coords="777,740,887,767"/><area shape="rect" id="node27" href="core_8h.html#aaa52a592057a81d501ee49d8d1c81301" title="getSuperClass" alt="" coords="778,791,886,817"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a2c4c29e44fc0ac1d4967ebec994da435"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void athrow </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a2c4c29e44fc0ac1d4967ebec994da435_icgraph.png" border="0" usemap="#interpreter_8h_a2c4c29e44fc0ac1d4967ebec994da435_icgraph" alt=""/></div>
+<map name="interpreter_8h_a2c4c29e44fc0ac1d4967ebec994da435_icgraph" id="interpreter_8h_a2c4c29e44fc0ac1d4967ebec994da435_icgraph">
+<area shape="rect" id="node2" href="_leitor_exibidor_8c.html#a496c0e9c85d5c884f9f0e09a43ffe5f5" title="mostrarAtributos" alt="" coords="115,22,234,48"/><area shape="rect" id="node3" href="_leitor_exibidor_8c.html#a64728d9fd9718be64a2577905fa55e73" title="mostrarClasseDeArquivo" alt="" coords="448,22,616,48"/><area shape="rect" id="node6" href="_leitor_exibidor_8c.html#a3912e5e728225ab9081d3852664afacf" title="mostrarCampos" alt="" coords="284,22,399,48"/><area shape="rect" id="node7" href="_leitor_exibidor_8c.html#a738c6cc4a33c6162fa96dd13ae502fe1" title="mostrarMetodos" alt="" coords="283,72,399,99"/><area shape="rect" id="node4" href="cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="665,22,749,48"/><area shape="rect" id="node5" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="797,22,848,48"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa5abf36e11296c1c34a51625c52e9a69"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void breakpoint_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l04154">4154</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a48a6bd040e3ef57a64f57f44a5458eb5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void createMultiArray </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a9c07c3330f66f4018e49ee90e58f0f39">ARRAY</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int32_t *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l04030">4030</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a48a6bd040e3ef57a64f57f44a5458eb5_cgraph.png" border="0" usemap="#interpreter_8h_a48a6bd040e3ef57a64f57f44a5458eb5_cgraph" alt=""/></div>
+<map name="interpreter_8h_a48a6bd040e3ef57a64f57f44a5458eb5_cgraph" id="interpreter_8h_a48a6bd040e3ef57a64f57f44a5458eb5_cgraph">
+<area shape="rect" id="node2" href="interpreter_8c.html#a1d0e06d16d097e40de348c6815dab9d4" title="createMultiArray" alt="" coords="171,29,288,56"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a48a6bd040e3ef57a64f57f44a5458eb5_icgraph.png" border="0" usemap="#interpreter_8h_a48a6bd040e3ef57a64f57f44a5458eb5_icgraph" alt=""/></div>
+<map name="interpreter_8h_a48a6bd040e3ef57a64f57f44a5458eb5_icgraph" id="interpreter_8h_a48a6bd040e3ef57a64f57f44a5458eb5_icgraph">
+<area shape="rect" id="node2" href="interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="171,29,269,56"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a66442e680b4aa2b68bcd6ea84fd10d62"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void d2T </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01825">1825</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a66442e680b4aa2b68bcd6ea84fd10d62_cgraph.png" border="0" usemap="#interpreter_8h_a66442e680b4aa2b68bcd6ea84fd10d62_cgraph" alt=""/></div>
+<map name="interpreter_8h_a66442e680b4aa2b68bcd6ea84fd10d62_cgraph" id="interpreter_8h_a66442e680b4aa2b68bcd6ea84fd10d62_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="102,5,194,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="99,56,197,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae9dfab8fc6dd72ad8368fa5224937535"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void f2T </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01766">1766</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_ae9dfab8fc6dd72ad8368fa5224937535_cgraph.png" border="0" usemap="#interpreter_8h_ae9dfab8fc6dd72ad8368fa5224937535_cgraph" alt=""/></div>
+<map name="interpreter_8h_ae9dfab8fc6dd72ad8368fa5224937535_cgraph" id="interpreter_8h_ae9dfab8fc6dd72ad8368fa5224937535_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="99,5,191,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="96,56,195,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a71f70628eeae78d6f63ae10b87a0a8bf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handleObject </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l03598">3598</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a71f70628eeae78d6f63ae10b87a0a8bf_cgraph.png" border="0" usemap="#interpreter_8h_a71f70628eeae78d6f63ae10b87a0a8bf_cgraph" alt=""/></div>
+<map name="interpreter_8h_a71f70628eeae78d6f63ae10b87a0a8bf_cgraph" id="interpreter_8h_a71f70628eeae78d6f63ae10b87a0a8bf_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a65309fe2f949999b73fa78000ffec3c4" title="jvmExit" alt="" coords="585,516,652,543"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="164,770,263,796"/><area shape="rect" id="node4" href="core_8h.html#a467c17ad6f6b14784f8e861342b1d0e1" title="getClass" alt="" coords="176,820,251,847"/><area shape="rect" id="node5" href="core_8h.html#a7c9daf914ef558b41a9d0b2d617dab86" title="carregarClasse_01" alt="" coords="337,390,468,416"/><area shape="rect" id="node20" href="core_8h.html#a92753a3e4a70b1837b498b2821b1c478" title="ligadorDeClasse" alt="" coords="154,618,273,644"/><area shape="rect" id="node28" href="core_8h.html#aaa52a592057a81d501ee49d8d1c81301" title="getSuperClass" alt="" coords="767,719,875,746"/><area shape="rect" id="node31" href="core_8h.html#a1c9426d6a17b70527ebee8b467688fa5" title="classInitialization" alt="" coords="152,871,275,898"/><area shape="rect" id="node32" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="167,922,259,948"/><area shape="rect" id="node33" href="interpreter_8c.html#a1d0e06d16d097e40de348c6815dab9d4" title="createMultiArray" alt="" coords="155,996,272,1023"/><area shape="rect" id="node6" href="_leit_exib_8h.html#a7722536746d54d82b3b46d5eb409f3da" title="loadClasseDeArquivo" alt="" coords="545,212,693,239"/><area shape="rect" id="node16" href="checker_8c.html#ac5b6a6c9fa38ec400a3d15f1421089d8" title="isFieldDescriptor" alt="" coords="951,466,1071,492"/><area shape="rect" id="node17" href="checker_8c.html#a9022e1fcb1064556f8df87f06b5babd2" title="isMethodDescriptor" alt="" coords="943,390,1078,416"/><area shape="rect" id="node19" href="core_8h.html#a853d382621b6e22797ee41cc0af6e38f" title="getCodeAttribute" alt="" coords="559,162,679,188"/><area shape="rect" id="node7" href="_leitor_exibidor_8c.html#ac7ed0b8a152d4327637b603c9bbce4cb" title="read4Byte" alt="" coords="1158,263,1239,290"/><area shape="rect" id="node9" href="_leitor_exibidor_8c.html#a41ed338d041f0f3808f5c0fcc3f29da6" title="read2Byte" alt="" coords="1158,111,1239,138"/><area shape="rect" id="node10" href="_leitor_exibidor_8c.html#afa34d6279f74e16c9251ea71ba45aebb" title="setCONSTANTEPool" alt="" coords="936,263,1085,290"/><area shape="rect" id="node11" href="_leitor_exibidor_8c.html#a41c0875ffc034eda023a69294b81fc8e" title="setInterfaces" alt="" coords="961,60,1060,87"/><area shape="rect" id="node12" href="_leitor_exibidor_8c.html#a6f9c7c07e7af4935e667c111d34bf8aa" title="setFields" alt="" coords="784,111,859,138"/><area shape="rect" id="node13" href="_leitor_exibidor_8c.html#a393e540651164597ee93603b0a713923" title="setAttributes" alt="" coords="963,212,1059,239"/><area shape="rect" id="node15" href="_leitor_exibidor_8c.html#aa6ca56635beec104216b589d65622938" title="setMethods" alt="" coords="776,162,867,188"/><area shape="rect" id="node8" href="_leitor_exibidor_8c.html#acd178396959c009ec7b849c928299d29" title="read1Byte" alt="" coords="1313,212,1394,239"/><area shape="rect" id="node14" href="_leitor_exibidor_8c.html#a4a853c531bfe942dda78ef5ce77078b9" title="getTipoAtributo" alt="" coords="1143,212,1254,239"/><area shape="rect" id="node18" href="_leit_exib_8h.html#a345c5213063b16760fc936583f24d536" title="ImprimeConstUtf8" alt="" coords="1134,390,1263,416"/><area shape="rect" id="node21" href="cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="323,618,482,644"/><area shape="rect" id="node30" href="cruzeiro_8c.html#a5a186301f1f3a10e62e93674c07c2fcc" title="classLinkingPreparation" alt="" coords="323,567,483,594"/><area shape="rect" id="node22" href="checker_8c.html#a0dcac7578c8c1cf7ef0f7b6fffe5ae24" title="verifyClassfile" alt="" coords="566,567,671,594"/><area shape="rect" id="node27" href="checker_8c.html#a7b952615631393d4b96a3eafe88cb3e7" title="verifySuperFinal" alt="" coords="561,618,677,644"/><area shape="rect" id="node29" href="checker_8c.html#a4bbffc69c6cd821aebc4c480ffd3aec1" title="verifyOverrideMethodFinal" alt="" coords="531,668,706,695"/><area shape="rect" id="node23" href="checker_8c.html#a6ecc7358598704e5b4e9d77f06495482" title="verifyConstantPool" alt="" coords="755,466,888,492"/><area shape="rect" id="node24" href="checker_8c.html#a3e295f32f754594e38f31297afebca97" title="verifyAccessFlags" alt="" coords="756,618,887,644"/><area shape="rect" id="node25" href="_leit_exib_8h.html#a3fe75659fbce73494617d80f3a705a67" title="getTipoAtributo" alt="" coords="766,668,877,695"/><area shape="rect" id="node26" href="checker_8c.html#a5c524d6b071cd201765ed95b10b9eedd" title="verifyBytecode" alt="" coords="767,567,876,594"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0464f031ce20c82df647d659529e3cbb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void handleStack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l00632">632</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a0464f031ce20c82df647d659529e3cbb_cgraph.png" border="0" usemap="#interpreter_8h_a0464f031ce20c82df647d659529e3cbb_cgraph" alt=""/></div>
+<map name="interpreter_8h_a0464f031ce20c82df647d659529e3cbb_cgraph" id="interpreter_8h_a0464f031ce20c82df647d659529e3cbb_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="153,5,245,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="149,56,248,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad3f6580d2506431a1c9d77903b6a7919"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void i2T </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01614">1614</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_ad3f6580d2506431a1c9d77903b6a7919_cgraph.png" border="0" usemap="#interpreter_8h_ad3f6580d2506431a1c9d77903b6a7919_cgraph" alt=""/></div>
+<map name="interpreter_8h_ad3f6580d2506431a1c9d77903b6a7919_cgraph" id="interpreter_8h_ad3f6580d2506431a1c9d77903b6a7919_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="97,5,189,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="93,56,192,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aba50f8beb9e9ea67529b3ae9bb3662f1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void if_acmOP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l02133">2133</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_aba50f8beb9e9ea67529b3ae9bb3662f1_cgraph.png" border="0" usemap="#interpreter_8h_aba50f8beb9e9ea67529b3ae9bb3662f1_cgraph" alt=""/></div>
+<map name="interpreter_8h_aba50f8beb9e9ea67529b3ae9bb3662f1_cgraph" id="interpreter_8h_aba50f8beb9e9ea67529b3ae9bb3662f1_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="134,5,226,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a64df2e5e30a1937d9db1f5035b6f4c71"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void if_icmOP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l02067">2067</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a64df2e5e30a1937d9db1f5035b6f4c71_cgraph.png" border="0" usemap="#interpreter_8h_a64df2e5e30a1937d9db1f5035b6f4c71_cgraph" alt=""/></div>
+<map name="interpreter_8h_a64df2e5e30a1937d9db1f5035b6f4c71_cgraph" id="interpreter_8h_a64df2e5e30a1937d9db1f5035b6f4c71_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="131,5,223,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3d373e29057a3e304e5d57913156f94b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ifNull </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l04103">4103</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a3d373e29057a3e304e5d57913156f94b_cgraph.png" border="0" usemap="#interpreter_8h_a3d373e29057a3e304e5d57913156f94b_cgraph" alt=""/></div>
+<map name="interpreter_8h_a3d373e29057a3e304e5d57913156f94b_cgraph" id="interpreter_8h_a3d373e29057a3e304e5d57913156f94b_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="107,5,199,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7378fdb70f4d735efc22ccec7dd98084"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ifOP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l02001">2001</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a7378fdb70f4d735efc22ccec7dd98084_cgraph.png" border="0" usemap="#interpreter_8h_a7378fdb70f4d735efc22ccec7dd98084_cgraph" alt=""/></div>
+<map name="interpreter_8h_a7378fdb70f4d735efc22ccec7dd98084_cgraph" id="interpreter_8h_a7378fdb70f4d735efc22ccec7dd98084_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="102,5,194,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a660ac5be5441d8fcfa846a669b497a05"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void impdep </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l04168">4168</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7b631b817dcd0b258c4cf1ccb1711875"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void interpreter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname"><em>jvm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l00027">27</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab804e07f31fd89fef7cd8022278a27fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void invoke </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l02713">2713</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_ab804e07f31fd89fef7cd8022278a27fa_cgraph.png" border="0" usemap="#interpreter_8h_ab804e07f31fd89fef7cd8022278a27fa_cgraph" alt=""/></div>
+<map name="interpreter_8h_ab804e07f31fd89fef7cd8022278a27fa_cgraph" id="interpreter_8h_ab804e07f31fd89fef7cd8022278a27fa_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a467c17ad6f6b14784f8e861342b1d0e1" title="getClass" alt="" coords="139,422,213,448"/><area shape="rect" id="node3" href="core_8h.html#a7c9daf914ef558b41a9d0b2d617dab86" title="carregarClasse_01" alt="" coords="300,390,431,416"/><area shape="rect" id="node4" href="core_8h.html#a65309fe2f949999b73fa78000ffec3c4" title="jvmExit" alt="" coords="548,516,615,543"/><area shape="rect" id="node19" href="core_8h.html#a92753a3e4a70b1837b498b2821b1c478" title="ligadorDeClasse" alt="" coords="117,624,235,651"/><area shape="rect" id="node27" href="core_8h.html#aaa52a592057a81d501ee49d8d1c81301" title="getSuperClass" alt="" coords="730,719,838,746"/><area shape="rect" id="node30" href="core_8h.html#a1c9426d6a17b70527ebee8b467688fa5" title="classInitialization" alt="" coords="115,732,237,759"/><area shape="rect" id="node31" href="core_8h.html#a2c5411b2b86a128776b99b1310a29bc2" title="getMethod" alt="" coords="135,783,217,810"/><area shape="rect" id="node32" href="core_8h.html#a18b8702b615b635f6b52e95c60ed73b1" title="isSuperClass" alt="" coords="126,834,226,860"/><area shape="rect" id="node33" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="130,884,222,911"/><area shape="rect" id="node34" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="127,935,225,962"/><area shape="rect" id="node35" href="core_8h.html#a898cb628ddd2a974d8989a13d9323459" title="executeMethod" alt="" coords="121,986,231,1012"/><area shape="rect" id="node5" href="_leit_exib_8h.html#a7722536746d54d82b3b46d5eb409f3da" title="loadClasseDeArquivo" alt="" coords="507,212,655,239"/><area shape="rect" id="node15" href="checker_8c.html#ac5b6a6c9fa38ec400a3d15f1421089d8" title="isFieldDescriptor" alt="" coords="913,466,1033,492"/><area shape="rect" id="node16" href="checker_8c.html#a9022e1fcb1064556f8df87f06b5babd2" title="isMethodDescriptor" alt="" coords="906,390,1041,416"/><area shape="rect" id="node18" href="core_8h.html#a853d382621b6e22797ee41cc0af6e38f" title="getCodeAttribute" alt="" coords="521,162,641,188"/><area shape="rect" id="node6" href="_leitor_exibidor_8c.html#ac7ed0b8a152d4327637b603c9bbce4cb" title="read4Byte" alt="" coords="1121,263,1202,290"/><area shape="rect" id="node8" href="_leitor_exibidor_8c.html#a41ed338d041f0f3808f5c0fcc3f29da6" title="read2Byte" alt="" coords="1121,111,1202,138"/><area shape="rect" id="node9" href="_leitor_exibidor_8c.html#afa34d6279f74e16c9251ea71ba45aebb" title="setCONSTANTEPool" alt="" coords="899,263,1048,290"/><area shape="rect" id="node10" href="_leitor_exibidor_8c.html#a41c0875ffc034eda023a69294b81fc8e" title="setInterfaces" alt="" coords="924,60,1023,87"/><area shape="rect" id="node11" href="_leitor_exibidor_8c.html#a6f9c7c07e7af4935e667c111d34bf8aa" title="setFields" alt="" coords="747,111,821,138"/><area shape="rect" id="node12" href="_leitor_exibidor_8c.html#a393e540651164597ee93603b0a713923" title="setAttributes" alt="" coords="925,212,1021,239"/><area shape="rect" id="node14" href="_leitor_exibidor_8c.html#aa6ca56635beec104216b589d65622938" title="setMethods" alt="" coords="739,162,829,188"/><area shape="rect" id="node7" href="_leitor_exibidor_8c.html#acd178396959c009ec7b849c928299d29" title="read1Byte" alt="" coords="1275,212,1357,239"/><area shape="rect" id="node13" href="_leitor_exibidor_8c.html#a4a853c531bfe942dda78ef5ce77078b9" title="getTipoAtributo" alt="" coords="1106,212,1217,239"/><area shape="rect" id="node17" href="_leit_exib_8h.html#a345c5213063b16760fc936583f24d536" title="ImprimeConstUtf8" alt="" coords="1097,390,1226,416"/><area shape="rect" id="node20" href="cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="286,624,445,651"/><area shape="rect" id="node29" href="cruzeiro_8c.html#a5a186301f1f3a10e62e93674c07c2fcc" title="classLinkingPreparation" alt="" coords="285,574,445,600"/><area shape="rect" id="node21" href="checker_8c.html#a0dcac7578c8c1cf7ef0f7b6fffe5ae24" title="verifyClassfile" alt="" coords="529,567,634,594"/><area shape="rect" id="node26" href="checker_8c.html#a7b952615631393d4b96a3eafe88cb3e7" title="verifySuperFinal" alt="" coords="523,668,639,695"/><area shape="rect" id="node28" href="checker_8c.html#a4bbffc69c6cd821aebc4c480ffd3aec1" title="verifyOverrideMethodFinal" alt="" coords="494,618,669,644"/><area shape="rect" id="node22" href="checker_8c.html#a6ecc7358598704e5b4e9d77f06495482" title="verifyConstantPool" alt="" coords="717,466,851,492"/><area shape="rect" id="node23" href="checker_8c.html#a3e295f32f754594e38f31297afebca97" title="verifyAccessFlags" alt="" coords="719,516,849,543"/><area shape="rect" id="node24" href="_leit_exib_8h.html#a3fe75659fbce73494617d80f3a705a67" title="getTipoAtributo" alt="" coords="729,567,839,594"/><area shape="rect" id="node25" href="checker_8c.html#a5c524d6b071cd201765ed95b10b9eedd" title="verifyBytecode" alt="" coords="729,668,839,695"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa93dc3c70b899ef2967bf00942e45b4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l02167">2167</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_aaa93dc3c70b899ef2967bf00942e45b4_cgraph.png" border="0" usemap="#interpreter_8h_aaa93dc3c70b899ef2967bf00942e45b4_cgraph" alt=""/></div>
+<map name="interpreter_8h_aaa93dc3c70b899ef2967bf00942e45b4_cgraph" id="interpreter_8h_aaa93dc3c70b899ef2967bf00942e45b4_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="104,5,203,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9c31e4f02eb9dc3884df24df16c3b178"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void l2T </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01702">1702</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a9c31e4f02eb9dc3884df24df16c3b178_cgraph.png" border="0" usemap="#interpreter_8h_a9c31e4f02eb9dc3884df24df16c3b178_cgraph" alt=""/></div>
+<map name="interpreter_8h_a9c31e4f02eb9dc3884df24df16c3b178_cgraph" id="interpreter_8h_a9c31e4f02eb9dc3884df24df16c3b178_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="97,5,189,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="93,56,192,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a42f2652de9824d1a582f9e883288eb30"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ldc_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l00189">189</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a42f2652de9824d1a582f9e883288eb30_cgraph.png" border="0" usemap="#interpreter_8h_a42f2652de9824d1a582f9e883288eb30_cgraph" alt=""/></div>
+<map name="interpreter_8h_a42f2652de9824d1a582f9e883288eb30_cgraph" id="interpreter_8h_a42f2652de9824d1a582f9e883288eb30_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="101,5,200,32"/><area shape="rect" id="node3" href="core_8h.html#a65309fe2f949999b73fa78000ffec3c4" title="jvmExit" alt="" coords="117,56,184,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a35e83a788d0d71bfc7819addd34eac71"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void monitor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l04087">4087</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a715c7fd53124f82988012e4f72cd1c7a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nonDefined </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l04160">4160</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a715c7fd53124f82988012e4f72cd1c7a_cgraph.png" border="0" usemap="#interpreter_8h_a715c7fd53124f82988012e4f72cd1c7a_cgraph" alt=""/></div>
+<map name="interpreter_8h_a715c7fd53124f82988012e4f72cd1c7a_cgraph" id="interpreter_8h_a715c7fd53124f82988012e4f72cd1c7a_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a65309fe2f949999b73fa78000ffec3c4" title="jvmExit" alt="" coords="141,5,208,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="acba86e5c11b99c8e1c429ca387c43b63"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nop_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l00052">52</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a053dbc7a36e682aaf6f202bf095ecfb1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void properties </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l04055">4055</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae744794c40b46f1ec2ec5822fcf789b3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void switch_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l02201">2201</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_ae744794c40b46f1ec2ec5822fcf789b3_cgraph.png" border="0" usemap="#interpreter_8h_ae744794c40b46f1ec2ec5822fcf789b3_cgraph" alt=""/></div>
+<map name="interpreter_8h_ae744794c40b46f1ec2ec5822fcf789b3_cgraph" id="interpreter_8h_ae744794c40b46f1ec2ec5822fcf789b3_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a65309fe2f949999b73fa78000ffec3c4" title="jvmExit" alt="" coords="133,5,200,32"/><area shape="rect" id="node3" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="121,56,213,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5fa003c938cb85f8e95c586b40f3fef5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tadd </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l00738">738</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a5fa003c938cb85f8e95c586b40f3fef5_cgraph.png" border="0" usemap="#interpreter_8h_a5fa003c938cb85f8e95c586b40f3fef5_cgraph" alt=""/></div>
+<map name="interpreter_8h_a5fa003c938cb85f8e95c586b40f3fef5_cgraph" id="interpreter_8h_a5fa003c938cb85f8e95c586b40f3fef5_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="107,5,199,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="104,56,203,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a529e759bd6c88b2d46445a3e6f913039"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Taload </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l00404">404</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a529e759bd6c88b2d46445a3e6f913039_cgraph.png" border="0" usemap="#interpreter_8h_a529e759bd6c88b2d46445a3e6f913039_cgraph" alt=""/></div>
+<map name="interpreter_8h_a529e759bd6c88b2d46445a3e6f913039_cgraph" id="interpreter_8h_a529e759bd6c88b2d46445a3e6f913039_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="118,5,210,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="115,56,213,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad421b269c62c75abba9060f9f90e761e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01497">1497</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_ad421b269c62c75abba9060f9f90e761e_cgraph.png" border="0" usemap="#interpreter_8h_ad421b269c62c75abba9060f9f90e761e_cgraph" alt=""/></div>
+<map name="interpreter_8h_ad421b269c62c75abba9060f9f90e761e_cgraph" id="interpreter_8h_ad421b269c62c75abba9060f9f90e761e_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="107,5,199,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="104,56,203,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad09ed42cb99c94ca7b7d51d0935f4826"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tastore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l00572">572</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_ad09ed42cb99c94ca7b7d51d0935f4826_cgraph.png" border="0" usemap="#interpreter_8h_ad09ed42cb99c94ca7b7d51d0935f4826_cgraph" alt=""/></div>
+<map name="interpreter_8h_ad09ed42cb99c94ca7b7d51d0935f4826_cgraph" id="interpreter_8h_ad09ed42cb99c94ca7b7d51d0935f4826_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="121,5,213,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afe17bd7c18890e7f6843c3bbfc270051"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tcmp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01899">1899</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_afe17bd7c18890e7f6843c3bbfc270051_cgraph.png" border="0" usemap="#interpreter_8h_afe17bd7c18890e7f6843c3bbfc270051_cgraph" alt=""/></div>
+<map name="interpreter_8h_afe17bd7c18890e7f6843c3bbfc270051_cgraph" id="interpreter_8h_afe17bd7c18890e7f6843c3bbfc270051_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="113,5,205,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="109,56,208,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a751a03f12cb21ee349afdefbbd6291e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TcmpOP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01931">1931</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a751a03f12cb21ee349afdefbbd6291e4_cgraph.png" border="0" usemap="#interpreter_8h_a751a03f12cb21ee349afdefbbd6291e4_cgraph" alt=""/></div>
+<map name="interpreter_8h_a751a03f12cb21ee349afdefbbd6291e4_cgraph" id="interpreter_8h_a751a03f12cb21ee349afdefbbd6291e4_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="131,5,223,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="128,56,227,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a80dbcd6a48dc886a97834364ade8be34"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tconst </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l00060">60</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a80dbcd6a48dc886a97834364ade8be34_cgraph.png" border="0" usemap="#interpreter_8h_a80dbcd6a48dc886a97834364ade8be34_cgraph" alt=""/></div>
+<map name="interpreter_8h_a80dbcd6a48dc886a97834364ade8be34_cgraph" id="interpreter_8h_a80dbcd6a48dc886a97834364ade8be34_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="117,5,216,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f46610c24651a72be0a6ba8b918da51"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tdiv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01103">1103</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a8f46610c24651a72be0a6ba8b918da51_cgraph.png" border="0" usemap="#interpreter_8h_a8f46610c24651a72be0a6ba8b918da51_cgraph" alt=""/></div>
+<map name="interpreter_8h_a8f46610c24651a72be0a6ba8b918da51_cgraph" id="interpreter_8h_a8f46610c24651a72be0a6ba8b918da51_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="105,5,197,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="101,56,200,83"/><area shape="rect" id="node4" href="core_8h.html#a65309fe2f949999b73fa78000ffec3c4" title="jvmExit" alt="" coords="117,107,184,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a5fde2dc89562c7ff434d6e8238247759"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tinc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01599">1599</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a056d944a1c6332ebac080ea64b1d265b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tipush </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l00152">152</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a056d944a1c6332ebac080ea64b1d265b_cgraph.png" border="0" usemap="#interpreter_8h_a056d944a1c6332ebac080ea64b1d265b_cgraph" alt=""/></div>
+<map name="interpreter_8h_a056d944a1c6332ebac080ea64b1d265b_cgraph" id="interpreter_8h_a056d944a1c6332ebac080ea64b1d265b_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="115,5,213,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6bc9526a72adf767bce398f8f834595a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tload </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l00289">289</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a6bc9526a72adf767bce398f8f834595a_cgraph.png" border="0" usemap="#interpreter_8h_a6bc9526a72adf767bce398f8f834595a_cgraph" alt=""/></div>
+<map name="interpreter_8h_a6bc9526a72adf767bce398f8f834595a_cgraph" id="interpreter_8h_a6bc9526a72adf767bce398f8f834595a_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="109,5,208,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abb5427d43b5b37920af311635f48c5ff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tmul </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l00957">957</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_abb5427d43b5b37920af311635f48c5ff_cgraph.png" border="0" usemap="#interpreter_8h_abb5427d43b5b37920af311635f48c5ff_cgraph" alt=""/></div>
+<map name="interpreter_8h_abb5427d43b5b37920af311635f48c5ff_cgraph" id="interpreter_8h_abb5427d43b5b37920af311635f48c5ff_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="107,5,199,32"/><area shape="rect" id="node3" href="core_8h.html#a65309fe2f949999b73fa78000ffec3c4" title="jvmExit" alt="" coords="120,56,187,83"/><area shape="rect" id="node4" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="104,107,203,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a725fe276b231d458a6ce6b61679fb0f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tneg </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01314">1314</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a725fe276b231d458a6ce6b61679fb0f9_cgraph.png" border="0" usemap="#interpreter_8h_a725fe276b231d458a6ce6b61679fb0f9_cgraph" alt=""/></div>
+<map name="interpreter_8h_a725fe276b231d458a6ce6b61679fb0f9_cgraph" id="interpreter_8h_a725fe276b231d458a6ce6b61679fb0f9_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="107,5,199,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="104,56,203,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1e8e6c643411c7335cd676539a00b9e4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01537">1537</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a1e8e6c643411c7335cd676539a00b9e4_cgraph.png" border="0" usemap="#interpreter_8h_a1e8e6c643411c7335cd676539a00b9e4_cgraph" alt=""/></div>
+<map name="interpreter_8h_a1e8e6c643411c7335cd676539a00b9e4_cgraph" id="interpreter_8h_a1e8e6c643411c7335cd676539a00b9e4_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="99,5,191,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="96,56,195,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0c31a8488448a7a77913f38844f4f7e1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Trem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01214">1214</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a0c31a8488448a7a77913f38844f4f7e1_cgraph.png" border="0" usemap="#interpreter_8h_a0c31a8488448a7a77913f38844f4f7e1_cgraph" alt=""/></div>
+<map name="interpreter_8h_a0c31a8488448a7a77913f38844f4f7e1_cgraph" id="interpreter_8h_a0c31a8488448a7a77913f38844f4f7e1_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="110,5,202,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="107,56,205,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af88fc705bb824416c448240ca62ae218"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Treturn </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l02332">2332</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_af88fc705bb824416c448240ca62ae218_cgraph.png" border="0" usemap="#interpreter_8h_af88fc705bb824416c448240ca62ae218_cgraph" alt=""/></div>
+<map name="interpreter_8h_af88fc705bb824416c448240ca62ae218_cgraph" id="interpreter_8h_af88fc705bb824416c448240ca62ae218_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="121,5,213,32"/><area shape="rect" id="node3" href="core_8h.html#abbc22effef4dba84ae83d5e6d1e3da4b" title="freeFrame" alt="" coords="126,56,207,83"/><area shape="rect" id="node4" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="117,107,216,133"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac6766ac811b268ed1b47997bfdc4afc5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tshl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01393">1393</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_ac6766ac811b268ed1b47997bfdc4afc5_cgraph.png" border="0" usemap="#interpreter_8h_ac6766ac811b268ed1b47997bfdc4afc5_cgraph" alt=""/></div>
+<map name="interpreter_8h_ac6766ac811b268ed1b47997bfdc4afc5_cgraph" id="interpreter_8h_ac6766ac811b268ed1b47997bfdc4afc5_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="105,5,197,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="101,56,200,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abd63501d572dbe6859766c703e86a5c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tshr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01428">1428</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_abd63501d572dbe6859766c703e86a5c4_cgraph.png" border="0" usemap="#interpreter_8h_abd63501d572dbe6859766c703e86a5c4_cgraph" alt=""/></div>
+<map name="interpreter_8h_abd63501d572dbe6859766c703e86a5c4_cgraph" id="interpreter_8h_abd63501d572dbe6859766c703e86a5c4_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="105,5,197,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="101,56,200,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="abf6ea365c7b8f0fad22c522b6154e418"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tstore </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l00461">461</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_abf6ea365c7b8f0fad22c522b6154e418_cgraph.png" border="0" usemap="#interpreter_8h_abf6ea365c7b8f0fad22c522b6154e418_cgraph" alt=""/></div>
+<map name="interpreter_8h_abf6ea365c7b8f0fad22c522b6154e418_cgraph" id="interpreter_8h_abf6ea365c7b8f0fad22c522b6154e418_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="113,5,205,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af28019a697fa192b2eff60f0fe5638c2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tsub </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l00845">845</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_af28019a697fa192b2eff60f0fe5638c2_cgraph.png" border="0" usemap="#interpreter_8h_af28019a697fa192b2eff60f0fe5638c2_cgraph" alt=""/></div>
+<map name="interpreter_8h_af28019a697fa192b2eff60f0fe5638c2_cgraph" id="interpreter_8h_af28019a697fa192b2eff60f0fe5638c2_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="107,5,199,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="104,56,203,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1942a994018168e2976a6552aeb2ba8f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Tushr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01462">1462</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a1942a994018168e2976a6552aeb2ba8f_cgraph.png" border="0" usemap="#interpreter_8h_a1942a994018168e2976a6552aeb2ba8f_cgraph" alt=""/></div>
+<map name="interpreter_8h_a1942a994018168e2976a6552aeb2ba8f_cgraph" id="interpreter_8h_a1942a994018168e2976a6552aeb2ba8f_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="113,5,205,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="109,56,208,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4482df538c0ac9cc560e634977cd56d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Txor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l01567">1567</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a4482df538c0ac9cc560e634977cd56d3_cgraph.png" border="0" usemap="#interpreter_8h_a4482df538c0ac9cc560e634977cd56d3_cgraph" alt=""/></div>
+<map name="interpreter_8h_a4482df538c0ac9cc560e634977cd56d3_cgraph" id="interpreter_8h_a4482df538c0ac9cc560e634977cd56d3_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="105,5,197,32"/><area shape="rect" id="node3" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="101,56,200,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a33e392041d4c22854ca1b937c8fc58a8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wide_ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l04094">4094</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a27d5c86f88efdae786cac16e33cc3834"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void widejump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="core_8h.html#af2592f49e52b0675aaca5850571f3999">METHOD_DATA</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#ad43b7ffe97b146f9dce917ae2a0fd181">THREAD</a> *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="core_8h.html#a98bdb4b2c8aa49ba6bcd37df96469137">JVM</a> *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l04131">4131</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+<p><div class="dynheader">
+Grafo de chamadas desta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="interpreter_8h_a27d5c86f88efdae786cac16e33cc3834_cgraph.png" border="0" usemap="#interpreter_8h_a27d5c86f88efdae786cac16e33cc3834_cgraph" alt=""/></div>
+<map name="interpreter_8h_a27d5c86f88efdae786cac16e33cc3834_cgraph" id="interpreter_8h_a27d5c86f88efdae786cac16e33cc3834_cgraph">
+<area shape="rect" id="node2" href="core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="131,5,229,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação das variáveis</h2>
+<a class="anchor" id="a92e41b446c5961ac28375c13970abcd4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="interpreter_8h.html#a8861e8ff3f8d80c5805372aed9c2b6ab">INSTRUCTION</a> func[]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="interpreter_8c_source.html#l04174">4174</a> do ficheiro <a class="el" href="interpreter_8c_source.html">interpreter.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="interpreter_8h.html">interpreter.h</a></li>
+    <li class="footer">Gerado em Terça, 5 de Julho de 2016 00:01:39 para JVM - Cruzeiro por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

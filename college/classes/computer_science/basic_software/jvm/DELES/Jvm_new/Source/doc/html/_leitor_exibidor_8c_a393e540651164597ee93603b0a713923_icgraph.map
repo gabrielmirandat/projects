@@ -1,0 +1,11 @@
+<map id="setAttributes" name="setAttributes">
+<area shape="rect" id="node2" href="$_leitor_exibidor_8c.html#a6c4682d4fef1b0f8a2313c7ed36b7064" title="loadClasseDeArquivo" alt="" coords="289,31,437,57"/>
+<area shape="rect" id="node9" href="$_leitor_exibidor_8c.html#a6f9c7c07e7af4935e667c111d34bf8aa" title="setFields" alt="" coords="157,31,232,57"/>
+<area shape="rect" id="node10" href="$_leitor_exibidor_8c.html#aa6ca56635beec104216b589d65622938" title="setMethods" alt="" coords="149,81,240,108"/>
+<area shape="rect" id="node3" href="$cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="671,5,755,32"/>
+<area shape="rect" id="node5" href="$cruzeiro_8c.html#a044f22337572729fe6a256eac0ff4820" title="carregarClasse_01" alt="" coords="485,56,616,83"/>
+<area shape="rect" id="node4" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="811,5,861,32"/>
+<area shape="rect" id="node6" href="$interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08" title="accessField" alt="" coords="667,56,759,83"/>
+<area shape="rect" id="node7" href="$interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa" title="invoke" alt="" coords="683,107,743,133"/>
+<area shape="rect" id="node8" href="$interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="664,157,763,184"/>
+</map>

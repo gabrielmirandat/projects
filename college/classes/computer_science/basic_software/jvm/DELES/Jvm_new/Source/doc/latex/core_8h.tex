@@ -1,0 +1,838 @@
+\hypertarget{core_8h}{\section{Referência ao ficheiro core.\-h}
+\label{core_8h}\index{core.\-h@{core.\-h}}
+}
+{\ttfamily \#include \char`\"{}Leit\-Exib.\-h\char`\"{}}\\*
+Diagrama de dependências de inclusão para core.\-h\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais são os ficheiros que incluem directamente ou indirectamente este ficheiro\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{core_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structvalue}{value}
+\item 
+struct \hyperlink{structoperand}{operand}
+\item 
+struct \hyperlink{structframe}{frame}
+\item 
+struct \hyperlink{structthread}{thread}
+\item 
+struct \hyperlink{structheap__area}{heap\-\_\-area}
+\item 
+struct \hyperlink{structfield__data}{field\-\_\-data}
+\item 
+struct \hyperlink{structvariable}{variable}
+\item 
+struct \hyperlink{structmethod__data}{method\-\_\-data}
+\item 
+struct \hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}
+\item 
+struct \hyperlink{structobject}{object}
+\item 
+struct \hyperlink{structarray}{array}
+\item 
+struct \hyperlink{structjvm}{jvm}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{core_8h_aec93e83855ac17c3c25c55c37ca186dd}{B\-Y\-T\-E}~'B'
+\item 
+\#define \hyperlink{core_8h_a35cd67ba7bb0db8105eb6267467535d7}{C\-H\-A\-R}~'C'
+\item 
+\#define \hyperlink{core_8h_a8747af38b86aa2bbcda2f1b1aa0888c2}{D\-O\-U\-B\-L\-E}~'D'
+\item 
+\#define \hyperlink{core_8h_ae8690abbffa85934d64d545920e2b108}{F\-L\-O\-A\-T}~'F'
+\item 
+\#define \hyperlink{core_8h_afeeffe52c8fd59db7c61cf8b02042dbf}{I\-N\-T}~'I'
+\item 
+\#define \hyperlink{core_8h_acaa7b8a7167a8214f499c71c413ddcca}{L\-O\-N\-G}~'J'
+\item 
+\#define \hyperlink{core_8h_abc89a525f57ec2bfb44ee9e48660154f}{R\-E\-F\-\_\-\-I\-N\-S\-T}~'L'
+\item 
+\#define \hyperlink{core_8h_a9fbb14850a9f176447733a089071cd70}{S\-H\-O\-R\-T}~'S'
+\item 
+\#define \hyperlink{core_8h_a50168fdbaa52d4a0b1c287d476050f12}{B\-O\-O\-L\-E\-A\-N}~'Z'
+\item 
+\#define \hyperlink{core_8h_a0fe85cdfdc6ac54e3d35b46683608dc4}{R\-E\-F\-\_\-\-A\-R\-R\-A\-Y}~'\mbox{[}'
+\end{DoxyCompactItemize}
+\subsection*{Definições de tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint8\-\_\-t \hyperlink{core_8h_ab34056db44556fbb28ffa6aff4873b4c}{O\-P\-C\-O\-D\-E}
+\item 
+typedef char \hyperlink{core_8h_a96376f31c362e2a289072478449290f8}{T\-Y\-P\-E}
+\item 
+typedef uint32\-\_\-t \hyperlink{core_8h_aeeb4b41434914a6809f3448b40f818de}{A\-R\-R\-A\-Y\-\_\-\-T\-Y\-P\-E}
+\item 
+typedef struct \hyperlink{structobject}{object} \hyperlink{core_8h_a75cf109ba9d4518221445697fdbfc933}{obj}
+\item 
+typedef struct \hyperlink{structarray}{array} \hyperlink{core_8h_a96c64553ad75dd4c717e10b23fafaf1b}{ar}
+\item 
+typedef struct \hyperlink{structvalue}{value} \hyperlink{core_8h_ad5d0e2bb91a9e28f920452e088b6462b}{V\-A\-L\-U\-E}
+\item 
+typedef struct \hyperlink{structoperand}{operand} \hyperlink{core_8h_a57370c151bf2eefc3bd6e2d13b70e7c9}{O\-P\-E\-R\-A\-N\-D}
+\item 
+typedef struct \hyperlink{structframe}{frame} \hyperlink{core_8h_ad2c7f62ece09f452ea1a5285adcc503c}{F\-R\-A\-M\-E}
+\item 
+typedef struct \hyperlink{structthread}{thread} \hyperlink{core_8h_ad43b7ffe97b146f9dce917ae2a0fd181}{T\-H\-R\-E\-A\-D}
+\item 
+typedef struct \hyperlink{structheap__area}{heap\-\_\-area} \hyperlink{core_8h_a8aa4d8af3cc19c82a17fa714d533cb8f}{H\-E\-A\-P\-\_\-\-A\-R\-E\-A}
+\item 
+typedef struct \hyperlink{structfield__data}{field\-\_\-data} \hyperlink{core_8h_ad5537b62ac62d6b7f34e2303f2b84982}{F\-I\-E\-L\-D\-\_\-\-D\-A\-T\-A}
+\item 
+typedef struct \hyperlink{structvariable}{variable} \hyperlink{core_8h_a85b40991452ad00efae1784148c94402}{V\-A\-R\-I\-A\-B\-L\-E}
+\item 
+typedef struct \hyperlink{structmethod__data}{method\-\_\-data} \hyperlink{core_8h_af2592f49e52b0675aaca5850571f3999}{M\-E\-T\-H\-O\-D\-\_\-\-D\-A\-T\-A}
+\item 
+typedef struct \hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} \hyperlink{core_8h_a116ede3eb3d97f03336302025379d1c7}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}
+\item 
+typedef struct \hyperlink{structobject}{object} \hyperlink{core_8h_ae612e57be74359cf1e07ade2d61a86a0}{O\-B\-J\-E\-C\-T}
+\item 
+typedef struct \hyperlink{structarray}{array} \hyperlink{core_8h_a9c07c3330f66f4018e49ee90e58f0f39}{A\-R\-R\-A\-Y}
+\item 
+typedef struct \hyperlink{structjvm}{jvm} \hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{core_8h_aa2f1283af56df2749e5702e0b569c5d7}{iniciar\-\_\-jvm} (char $\ast$, int, char $\ast$$\ast$)
+\item 
+void \hyperlink{core_8h_a7c9daf914ef558b41a9d0b2d617dab86}{carregar\-Classe\-\_\-01} (char $\ast$, \hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$$\ast$, \hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$, \hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M} $\ast$)
+\item 
+void \hyperlink{core_8h_a92753a3e4a70b1837b498b2821b1c478}{ligador\-De\-Classe} (\hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$, \hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M} $\ast$)
+\item 
+void \hyperlink{core_8h_a253fa443bfd7f2b86cee348ce7233035}{class\-Linking\-Verification} (\hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$, \hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M} $\ast$)
+\item 
+void \hyperlink{core_8h_a91b4929cb828eb0548542c7a3decf478}{class\-Linking\-Preparation} (\hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$, \hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M} $\ast$)
+\item 
+void \hyperlink{core_8h_af99bc13e312e4a07ce2532d2331d2fe3}{class\-Linking\-Resolution} (\hyperlink{struct_classe_de_arquivo}{Classe\-De\-Arquivo} $\ast$, \hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M} $\ast$)
+\item 
+void \hyperlink{core_8h_a1c9426d6a17b70527ebee8b467688fa5}{class\-Initialization} (\hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$, \hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M} $\ast$, \hyperlink{core_8h_ad43b7ffe97b146f9dce917ae2a0fd181}{T\-H\-R\-E\-A\-D} $\ast$)
+\item 
+void \hyperlink{core_8h_a898cb628ddd2a974d8989a13d9323459}{execute\-Method} (char $\ast$, char $\ast$, \hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$, \hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M} $\ast$, \hyperlink{core_8h_ad43b7ffe97b146f9dce917ae2a0fd181}{T\-H\-R\-E\-A\-D} $\ast$, void $\ast$, uint16\-\_\-t, uint32\-\_\-t $\ast$)
+\item 
+void \hyperlink{core_8h_a8c96cdaa4bfb0049ed9c2ee068803961}{class\-Unloading} (\hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$, \hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M} $\ast$)
+\item 
+\hyperlink{structattribute__info}{attribute\-\_\-info} $\ast$ \hyperlink{core_8h_a853d382621b6e22797ee41cc0af6e38f}{get\-Code\-Attribute} (\hyperlink{core_8h_af2592f49e52b0675aaca5850571f3999}{M\-E\-T\-H\-O\-D\-\_\-\-D\-A\-T\-A} $\ast$, \hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$)
+\item 
+char $\ast$ \hyperlink{core_8h_a4f9e90c40bb4308abdd0c48f6d7086cc}{get\-Class\-Name} (\hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$)
+\item 
+\hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$ \hyperlink{core_8h_aaa52a592057a81d501ee49d8d1c81301}{get\-Super\-Class} (\hyperlink{struct_classe_de_arquivo}{Classe\-De\-Arquivo} $\ast$, \hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M} $\ast$)
+\item 
+\hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$ \hyperlink{core_8h_a467c17ad6f6b14784f8e861342b1d0e1}{get\-Class} (\hyperlink{structconst_pool_inf}{const\-Pool\-Inf} $\ast$, \hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M} $\ast$)
+\item 
+void \hyperlink{core_8h_a65309fe2f949999b73fa78000ffec3c4}{jvm\-Exit} (\hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M} $\ast$)
+\item 
+\hyperlink{core_8h_a85b40991452ad00efae1784148c94402}{V\-A\-R\-I\-A\-B\-L\-E} $\ast$ \hyperlink{core_8h_aa49c64914922c2156b4b03feabf50257}{get\-Class\-Variable} (\hyperlink{structconst_pool_inf}{const\-Pool\-Inf} $\ast$, \hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$)
+\item 
+\hyperlink{core_8h_a85b40991452ad00efae1784148c94402}{V\-A\-R\-I\-A\-B\-L\-E} $\ast$ \hyperlink{core_8h_a1e9d1e52d8528a1003cd9c699bb87ab9}{get\-Instance\-Variable} (\hyperlink{structconst_pool_inf}{const\-Pool\-Inf} $\ast$, \hyperlink{core_8h_ae612e57be74359cf1e07ade2d61a86a0}{O\-B\-J\-E\-C\-T} $\ast$)
+\item 
+\hyperlink{core_8h_af2592f49e52b0675aaca5850571f3999}{M\-E\-T\-H\-O\-D\-\_\-\-D\-A\-T\-A} $\ast$ \hyperlink{core_8h_a2c5411b2b86a128776b99b1310a29bc2}{get\-Method} (char $\ast$, char $\ast$, \hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$, \hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M} $\ast$)
+\item 
+bool \hyperlink{core_8h_a18b8702b615b635f6b52e95c60ed73b1}{is\-Super\-Class} (\hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$, \hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$, \hyperlink{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{J\-V\-M} $\ast$)
+\item 
+void \hyperlink{core_8h_abbc22effef4dba84ae83d5e6d1e3da4b}{free\-Frame} (\hyperlink{core_8h_ad2c7f62ece09f452ea1a5285adcc503c}{F\-R\-A\-M\-E} $\ast$)
+\item 
+void \hyperlink{core_8h_a360c5e8ed32f1b8c1222fe180f02f3cc}{free\-Operand\-Stack} (\hyperlink{core_8h_ad2c7f62ece09f452ea1a5285adcc503c}{F\-R\-A\-M\-E} $\ast$)
+\item 
+void \hyperlink{core_8h_ae038c26bdcbf2be5dca8839cd6c6b5f4}{free\-Threads} (\hyperlink{core_8h_ad43b7ffe97b146f9dce917ae2a0fd181}{T\-H\-R\-E\-A\-D} $\ast$)
+\item 
+void \hyperlink{core_8h_a135eacb54215249d2fb634c920c16d99}{free\-Jvm\-Stack} (\hyperlink{core_8h_ad2c7f62ece09f452ea1a5285adcc503c}{F\-R\-A\-M\-E} $\ast$)
+\item 
+void \hyperlink{core_8h_a4074439f529db8ac5c67c1064e0b1b37}{free\-Method\-Area} (\hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$)
+\item 
+void \hyperlink{core_8h_ab34a58b2e6a6901430c3c6c025c5c5c6}{free\-Class\-Data} (\hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$)
+\item 
+void \hyperlink{core_8h_ab6c8ef9f9ac6072962115bd3085d4b4b}{free\-Variables} (\hyperlink{core_8h_a85b40991452ad00efae1784148c94402}{V\-A\-R\-I\-A\-B\-L\-E} $\ast$)
+\item 
+void \hyperlink{core_8h_a4bfc9fc3dd56d8ad9327db10219d2ae3}{free\-Heap} (\hyperlink{core_8h_a8aa4d8af3cc19c82a17fa714d533cb8f}{H\-E\-A\-P\-\_\-\-A\-R\-E\-A} $\ast$)
+\item 
+void \hyperlink{core_8h_a769094478f2fd98914bfb300f04982f6}{free\-Objects} (\hyperlink{core_8h_ae612e57be74359cf1e07ade2d61a86a0}{O\-B\-J\-E\-C\-T} $\ast$)
+\item 
+void \hyperlink{core_8h_afa9de2a389a6ad80bf97ffa0a5eef402}{free\-Arrays} (\hyperlink{core_8h_a9c07c3330f66f4018e49ee90e58f0f39}{A\-R\-R\-A\-Y} $\ast$)
+\item 
+void \hyperlink{core_8h_ada292ff1b4724c764f4cc6ff992cce06}{push\-Operand} (uint32\-\_\-t, \hyperlink{core_8h_ad2c7f62ece09f452ea1a5285adcc503c}{F\-R\-A\-M\-E} $\ast$)
+\item 
+uint32\-\_\-t \hyperlink{core_8h_a01ea050bc682333139b2b64e89008893}{pop\-Operand} (\hyperlink{core_8h_ad2c7f62ece09f452ea1a5285adcc503c}{F\-R\-A\-M\-E} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentação das macros}
+\hypertarget{core_8h_a50168fdbaa52d4a0b1c287d476050f12}{\index{core.\-h@{core.\-h}!B\-O\-O\-L\-E\-A\-N@{B\-O\-O\-L\-E\-A\-N}}
+\index{B\-O\-O\-L\-E\-A\-N@{B\-O\-O\-L\-E\-A\-N}!core.h@{core.\-h}}
+\subsubsection[{B\-O\-O\-L\-E\-A\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-O\-O\-L\-E\-A\-N~'Z'}}\label{core_8h_a50168fdbaa52d4a0b1c287d476050f12}
+
+
+Definido na linha 30 do ficheiro core.\-h.
+
+\hypertarget{core_8h_aec93e83855ac17c3c25c55c37ca186dd}{\index{core.\-h@{core.\-h}!B\-Y\-T\-E@{B\-Y\-T\-E}}
+\index{B\-Y\-T\-E@{B\-Y\-T\-E}!core.h@{core.\-h}}
+\subsubsection[{B\-Y\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\-Y\-T\-E~'B'}}\label{core_8h_aec93e83855ac17c3c25c55c37ca186dd}
+
+
+Definido na linha 22 do ficheiro core.\-h.
+
+\hypertarget{core_8h_a35cd67ba7bb0db8105eb6267467535d7}{\index{core.\-h@{core.\-h}!C\-H\-A\-R@{C\-H\-A\-R}}
+\index{C\-H\-A\-R@{C\-H\-A\-R}!core.h@{core.\-h}}
+\subsubsection[{C\-H\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-H\-A\-R~'C'}}\label{core_8h_a35cd67ba7bb0db8105eb6267467535d7}
+
+
+Definido na linha 23 do ficheiro core.\-h.
+
+\hypertarget{core_8h_a8747af38b86aa2bbcda2f1b1aa0888c2}{\index{core.\-h@{core.\-h}!D\-O\-U\-B\-L\-E@{D\-O\-U\-B\-L\-E}}
+\index{D\-O\-U\-B\-L\-E@{D\-O\-U\-B\-L\-E}!core.h@{core.\-h}}
+\subsubsection[{D\-O\-U\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-O\-U\-B\-L\-E~'D'}}\label{core_8h_a8747af38b86aa2bbcda2f1b1aa0888c2}
+
+
+Definido na linha 24 do ficheiro core.\-h.
+
+\hypertarget{core_8h_ae8690abbffa85934d64d545920e2b108}{\index{core.\-h@{core.\-h}!F\-L\-O\-A\-T@{F\-L\-O\-A\-T}}
+\index{F\-L\-O\-A\-T@{F\-L\-O\-A\-T}!core.h@{core.\-h}}
+\subsubsection[{F\-L\-O\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\-L\-O\-A\-T~'F'}}\label{core_8h_ae8690abbffa85934d64d545920e2b108}
+
+
+Definido na linha 25 do ficheiro core.\-h.
+
+\hypertarget{core_8h_afeeffe52c8fd59db7c61cf8b02042dbf}{\index{core.\-h@{core.\-h}!I\-N\-T@{I\-N\-T}}
+\index{I\-N\-T@{I\-N\-T}!core.h@{core.\-h}}
+\subsubsection[{I\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\-N\-T~'I'}}\label{core_8h_afeeffe52c8fd59db7c61cf8b02042dbf}
+
+
+Definido na linha 26 do ficheiro core.\-h.
+
+\hypertarget{core_8h_acaa7b8a7167a8214f499c71c413ddcca}{\index{core.\-h@{core.\-h}!L\-O\-N\-G@{L\-O\-N\-G}}
+\index{L\-O\-N\-G@{L\-O\-N\-G}!core.h@{core.\-h}}
+\subsubsection[{L\-O\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-N\-G~'J'}}\label{core_8h_acaa7b8a7167a8214f499c71c413ddcca}
+
+
+Definido na linha 27 do ficheiro core.\-h.
+
+\hypertarget{core_8h_a0fe85cdfdc6ac54e3d35b46683608dc4}{\index{core.\-h@{core.\-h}!R\-E\-F\-\_\-\-A\-R\-R\-A\-Y@{R\-E\-F\-\_\-\-A\-R\-R\-A\-Y}}
+\index{R\-E\-F\-\_\-\-A\-R\-R\-A\-Y@{R\-E\-F\-\_\-\-A\-R\-R\-A\-Y}!core.h@{core.\-h}}
+\subsubsection[{R\-E\-F\-\_\-\-A\-R\-R\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-F\-\_\-\-A\-R\-R\-A\-Y~'\mbox{[}'}}\label{core_8h_a0fe85cdfdc6ac54e3d35b46683608dc4}
+
+
+Definido na linha 31 do ficheiro core.\-h.
+
+\hypertarget{core_8h_abc89a525f57ec2bfb44ee9e48660154f}{\index{core.\-h@{core.\-h}!R\-E\-F\-\_\-\-I\-N\-S\-T@{R\-E\-F\-\_\-\-I\-N\-S\-T}}
+\index{R\-E\-F\-\_\-\-I\-N\-S\-T@{R\-E\-F\-\_\-\-I\-N\-S\-T}!core.h@{core.\-h}}
+\subsubsection[{R\-E\-F\-\_\-\-I\-N\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\-E\-F\-\_\-\-I\-N\-S\-T~'L'}}\label{core_8h_abc89a525f57ec2bfb44ee9e48660154f}
+
+
+Definido na linha 28 do ficheiro core.\-h.
+
+\hypertarget{core_8h_a9fbb14850a9f176447733a089071cd70}{\index{core.\-h@{core.\-h}!S\-H\-O\-R\-T@{S\-H\-O\-R\-T}}
+\index{S\-H\-O\-R\-T@{S\-H\-O\-R\-T}!core.h@{core.\-h}}
+\subsubsection[{S\-H\-O\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-H\-O\-R\-T~'S'}}\label{core_8h_a9fbb14850a9f176447733a089071cd70}
+
+
+Definido na linha 29 do ficheiro core.\-h.
+
+
+
+\subsection{Documentação dos tipos}
+\hypertarget{core_8h_a96c64553ad75dd4c717e10b23fafaf1b}{\index{core.\-h@{core.\-h}!ar@{ar}}
+\index{ar@{ar}!core.h@{core.\-h}}
+\subsubsection[{ar}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf array} {\bf ar}}}\label{core_8h_a96c64553ad75dd4c717e10b23fafaf1b}
+
+
+Definido na linha 35 do ficheiro core.\-h.
+
+\hypertarget{core_8h_a9c07c3330f66f4018e49ee90e58f0f39}{\index{core.\-h@{core.\-h}!A\-R\-R\-A\-Y@{A\-R\-R\-A\-Y}}
+\index{A\-R\-R\-A\-Y@{A\-R\-R\-A\-Y}!core.h@{core.\-h}}
+\subsubsection[{A\-R\-R\-A\-Y}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf array}  {\bf A\-R\-R\-A\-Y}}}\label{core_8h_a9c07c3330f66f4018e49ee90e58f0f39}
+\hypertarget{core_8h_aeeb4b41434914a6809f3448b40f818de}{\index{core.\-h@{core.\-h}!A\-R\-R\-A\-Y\-\_\-\-T\-Y\-P\-E@{A\-R\-R\-A\-Y\-\_\-\-T\-Y\-P\-E}}
+\index{A\-R\-R\-A\-Y\-\_\-\-T\-Y\-P\-E@{A\-R\-R\-A\-Y\-\_\-\-T\-Y\-P\-E}!core.h@{core.\-h}}
+\subsubsection[{A\-R\-R\-A\-Y\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint32\-\_\-t {\bf A\-R\-R\-A\-Y\-\_\-\-T\-Y\-P\-E}}}\label{core_8h_aeeb4b41434914a6809f3448b40f818de}
+
+
+Definido na linha 19 do ficheiro core.\-h.
+
+\hypertarget{core_8h_a116ede3eb3d97f03336302025379d1c7}{\index{core.\-h@{core.\-h}!D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E@{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}}
+\index{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E@{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}!core.h@{core.\-h}}
+\subsubsection[{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}  {\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}}}\label{core_8h_a116ede3eb3d97f03336302025379d1c7}
+\hypertarget{core_8h_ad5537b62ac62d6b7f34e2303f2b84982}{\index{core.\-h@{core.\-h}!F\-I\-E\-L\-D\-\_\-\-D\-A\-T\-A@{F\-I\-E\-L\-D\-\_\-\-D\-A\-T\-A}}
+\index{F\-I\-E\-L\-D\-\_\-\-D\-A\-T\-A@{F\-I\-E\-L\-D\-\_\-\-D\-A\-T\-A}!core.h@{core.\-h}}
+\subsubsection[{F\-I\-E\-L\-D\-\_\-\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf field\-\_\-data}  {\bf F\-I\-E\-L\-D\-\_\-\-D\-A\-T\-A}}}\label{core_8h_ad5537b62ac62d6b7f34e2303f2b84982}
+\hypertarget{core_8h_ad2c7f62ece09f452ea1a5285adcc503c}{\index{core.\-h@{core.\-h}!F\-R\-A\-M\-E@{F\-R\-A\-M\-E}}
+\index{F\-R\-A\-M\-E@{F\-R\-A\-M\-E}!core.h@{core.\-h}}
+\subsubsection[{F\-R\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf frame}  {\bf F\-R\-A\-M\-E}}}\label{core_8h_ad2c7f62ece09f452ea1a5285adcc503c}
+\hypertarget{core_8h_a8aa4d8af3cc19c82a17fa714d533cb8f}{\index{core.\-h@{core.\-h}!H\-E\-A\-P\-\_\-\-A\-R\-E\-A@{H\-E\-A\-P\-\_\-\-A\-R\-E\-A}}
+\index{H\-E\-A\-P\-\_\-\-A\-R\-E\-A@{H\-E\-A\-P\-\_\-\-A\-R\-E\-A}!core.h@{core.\-h}}
+\subsubsection[{H\-E\-A\-P\-\_\-\-A\-R\-E\-A}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf heap\-\_\-area}  {\bf H\-E\-A\-P\-\_\-\-A\-R\-E\-A}}}\label{core_8h_a8aa4d8af3cc19c82a17fa714d533cb8f}
+\hypertarget{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}{\index{core.\-h@{core.\-h}!J\-V\-M@{J\-V\-M}}
+\index{J\-V\-M@{J\-V\-M}!core.h@{core.\-h}}
+\subsubsection[{J\-V\-M}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf jvm}  {\bf J\-V\-M}}}\label{core_8h_a98bdb4b2c8aa49ba6bcd37df96469137}
+\hypertarget{core_8h_af2592f49e52b0675aaca5850571f3999}{\index{core.\-h@{core.\-h}!M\-E\-T\-H\-O\-D\-\_\-\-D\-A\-T\-A@{M\-E\-T\-H\-O\-D\-\_\-\-D\-A\-T\-A}}
+\index{M\-E\-T\-H\-O\-D\-\_\-\-D\-A\-T\-A@{M\-E\-T\-H\-O\-D\-\_\-\-D\-A\-T\-A}!core.h@{core.\-h}}
+\subsubsection[{M\-E\-T\-H\-O\-D\-\_\-\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf method\-\_\-data}  {\bf M\-E\-T\-H\-O\-D\-\_\-\-D\-A\-T\-A}}}\label{core_8h_af2592f49e52b0675aaca5850571f3999}
+\hypertarget{core_8h_a75cf109ba9d4518221445697fdbfc933}{\index{core.\-h@{core.\-h}!obj@{obj}}
+\index{obj@{obj}!core.h@{core.\-h}}
+\subsubsection[{obj}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf object} {\bf obj}}}\label{core_8h_a75cf109ba9d4518221445697fdbfc933}
+
+
+Definido na linha 34 do ficheiro core.\-h.
+
+\hypertarget{core_8h_ae612e57be74359cf1e07ade2d61a86a0}{\index{core.\-h@{core.\-h}!O\-B\-J\-E\-C\-T@{O\-B\-J\-E\-C\-T}}
+\index{O\-B\-J\-E\-C\-T@{O\-B\-J\-E\-C\-T}!core.h@{core.\-h}}
+\subsubsection[{O\-B\-J\-E\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf object}  {\bf O\-B\-J\-E\-C\-T}}}\label{core_8h_ae612e57be74359cf1e07ade2d61a86a0}
+\hypertarget{core_8h_ab34056db44556fbb28ffa6aff4873b4c}{\index{core.\-h@{core.\-h}!O\-P\-C\-O\-D\-E@{O\-P\-C\-O\-D\-E}}
+\index{O\-P\-C\-O\-D\-E@{O\-P\-C\-O\-D\-E}!core.h@{core.\-h}}
+\subsubsection[{O\-P\-C\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint8\-\_\-t {\bf O\-P\-C\-O\-D\-E}}}\label{core_8h_ab34056db44556fbb28ffa6aff4873b4c}
+
+
+Definido na linha 17 do ficheiro core.\-h.
+
+\hypertarget{core_8h_a57370c151bf2eefc3bd6e2d13b70e7c9}{\index{core.\-h@{core.\-h}!O\-P\-E\-R\-A\-N\-D@{O\-P\-E\-R\-A\-N\-D}}
+\index{O\-P\-E\-R\-A\-N\-D@{O\-P\-E\-R\-A\-N\-D}!core.h@{core.\-h}}
+\subsubsection[{O\-P\-E\-R\-A\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf operand}  {\bf O\-P\-E\-R\-A\-N\-D}}}\label{core_8h_a57370c151bf2eefc3bd6e2d13b70e7c9}
+\hypertarget{core_8h_ad43b7ffe97b146f9dce917ae2a0fd181}{\index{core.\-h@{core.\-h}!T\-H\-R\-E\-A\-D@{T\-H\-R\-E\-A\-D}}
+\index{T\-H\-R\-E\-A\-D@{T\-H\-R\-E\-A\-D}!core.h@{core.\-h}}
+\subsubsection[{T\-H\-R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf thread}  {\bf T\-H\-R\-E\-A\-D}}}\label{core_8h_ad43b7ffe97b146f9dce917ae2a0fd181}
+\hypertarget{core_8h_a96376f31c362e2a289072478449290f8}{\index{core.\-h@{core.\-h}!T\-Y\-P\-E@{T\-Y\-P\-E}}
+\index{T\-Y\-P\-E@{T\-Y\-P\-E}!core.h@{core.\-h}}
+\subsubsection[{T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef char {\bf T\-Y\-P\-E}}}\label{core_8h_a96376f31c362e2a289072478449290f8}
+
+
+Definido na linha 18 do ficheiro core.\-h.
+
+\hypertarget{core_8h_ad5d0e2bb91a9e28f920452e088b6462b}{\index{core.\-h@{core.\-h}!V\-A\-L\-U\-E@{V\-A\-L\-U\-E}}
+\index{V\-A\-L\-U\-E@{V\-A\-L\-U\-E}!core.h@{core.\-h}}
+\subsubsection[{V\-A\-L\-U\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf value}  {\bf V\-A\-L\-U\-E}}}\label{core_8h_ad5d0e2bb91a9e28f920452e088b6462b}
+\hypertarget{core_8h_a85b40991452ad00efae1784148c94402}{\index{core.\-h@{core.\-h}!V\-A\-R\-I\-A\-B\-L\-E@{V\-A\-R\-I\-A\-B\-L\-E}}
+\index{V\-A\-R\-I\-A\-B\-L\-E@{V\-A\-R\-I\-A\-B\-L\-E}!core.h@{core.\-h}}
+\subsubsection[{V\-A\-R\-I\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf variable}  {\bf V\-A\-R\-I\-A\-B\-L\-E}}}\label{core_8h_a85b40991452ad00efae1784148c94402}
+
+
+\subsection{Documentação das funções}
+\hypertarget{core_8h_a7c9daf914ef558b41a9d0b2d617dab86}{\index{core.\-h@{core.\-h}!carregar\-Classe\-\_\-01@{carregar\-Classe\-\_\-01}}
+\index{carregar\-Classe\-\_\-01@{carregar\-Classe\-\_\-01}!core.h@{core.\-h}}
+\subsubsection[{carregar\-Classe\-\_\-01}]{\setlength{\rightskip}{0pt plus 5cm}void carregar\-Classe\-\_\-01 (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$$\ast$}]{, }
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{, }
+\item[{{\bf J\-V\-M} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a7c9daf914ef558b41a9d0b2d617dab86}
+
+
+Definido na linha 113 do ficheiro cruzeiro.\-c.
+
+
+
+Grafo de chamadas desta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8h_a7c9daf914ef558b41a9d0b2d617dab86_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Este é o diagrama das funções que utilizam esta função\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8h_a7c9daf914ef558b41a9d0b2d617dab86_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_a1c9426d6a17b70527ebee8b467688fa5}{\index{core.\-h@{core.\-h}!class\-Initialization@{class\-Initialization}}
+\index{class\-Initialization@{class\-Initialization}!core.h@{core.\-h}}
+\subsubsection[{class\-Initialization}]{\setlength{\rightskip}{0pt plus 5cm}void class\-Initialization (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{, }
+\item[{{\bf J\-V\-M} $\ast$}]{, }
+\item[{{\bf T\-H\-R\-E\-A\-D} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a1c9426d6a17b70527ebee8b467688fa5}
+
+
+Este é o diagrama das funções que utilizam esta função\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8h_a1c9426d6a17b70527ebee8b467688fa5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_a91b4929cb828eb0548542c7a3decf478}{\index{core.\-h@{core.\-h}!class\-Linking\-Preparation@{class\-Linking\-Preparation}}
+\index{class\-Linking\-Preparation@{class\-Linking\-Preparation}!core.h@{core.\-h}}
+\subsubsection[{class\-Linking\-Preparation}]{\setlength{\rightskip}{0pt plus 5cm}void class\-Linking\-Preparation (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{, }
+\item[{{\bf J\-V\-M} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a91b4929cb828eb0548542c7a3decf478}
+
+
+Definido na linha 281 do ficheiro cruzeiro.\-c.
+
+
+
+Grafo de chamadas desta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{core_8h_a91b4929cb828eb0548542c7a3decf478_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Este é o diagrama das funções que utilizam esta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8h_a91b4929cb828eb0548542c7a3decf478_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_af99bc13e312e4a07ce2532d2331d2fe3}{\index{core.\-h@{core.\-h}!class\-Linking\-Resolution@{class\-Linking\-Resolution}}
+\index{class\-Linking\-Resolution@{class\-Linking\-Resolution}!core.h@{core.\-h}}
+\subsubsection[{class\-Linking\-Resolution}]{\setlength{\rightskip}{0pt plus 5cm}void class\-Linking\-Resolution (
+\begin{DoxyParamCaption}
+\item[{{\bf Classe\-De\-Arquivo} $\ast$}]{, }
+\item[{{\bf J\-V\-M} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_af99bc13e312e4a07ce2532d2331d2fe3}
+\hypertarget{core_8h_a253fa443bfd7f2b86cee348ce7233035}{\index{core.\-h@{core.\-h}!class\-Linking\-Verification@{class\-Linking\-Verification}}
+\index{class\-Linking\-Verification@{class\-Linking\-Verification}!core.h@{core.\-h}}
+\subsubsection[{class\-Linking\-Verification}]{\setlength{\rightskip}{0pt plus 5cm}void class\-Linking\-Verification (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{, }
+\item[{{\bf J\-V\-M} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a253fa443bfd7f2b86cee348ce7233035}
+
+
+Definido na linha 250 do ficheiro cruzeiro.\-c.
+
+
+
+Grafo de chamadas desta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8h_a253fa443bfd7f2b86cee348ce7233035_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Este é o diagrama das funções que utilizam esta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8h_a253fa443bfd7f2b86cee348ce7233035_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_a8c96cdaa4bfb0049ed9c2ee068803961}{\index{core.\-h@{core.\-h}!class\-Unloading@{class\-Unloading}}
+\index{class\-Unloading@{class\-Unloading}!core.h@{core.\-h}}
+\subsubsection[{class\-Unloading}]{\setlength{\rightskip}{0pt plus 5cm}void class\-Unloading (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{, }
+\item[{{\bf J\-V\-M} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a8c96cdaa4bfb0049ed9c2ee068803961}
+\hypertarget{core_8h_a898cb628ddd2a974d8989a13d9323459}{\index{core.\-h@{core.\-h}!execute\-Method@{execute\-Method}}
+\index{execute\-Method@{execute\-Method}!core.h@{core.\-h}}
+\subsubsection[{execute\-Method}]{\setlength{\rightskip}{0pt plus 5cm}void execute\-Method (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{char $\ast$}]{, }
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{, }
+\item[{{\bf J\-V\-M} $\ast$}]{, }
+\item[{{\bf T\-H\-R\-E\-A\-D} $\ast$}]{, }
+\item[{void $\ast$}]{, }
+\item[{uint16\-\_\-t}]{, }
+\item[{uint32\-\_\-t $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a898cb628ddd2a974d8989a13d9323459}
+
+
+Este é o diagrama das funções que utilizam esta função\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{core_8h_a898cb628ddd2a974d8989a13d9323459_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_afa9de2a389a6ad80bf97ffa0a5eef402}{\index{core.\-h@{core.\-h}!free\-Arrays@{free\-Arrays}}
+\index{free\-Arrays@{free\-Arrays}!core.h@{core.\-h}}
+\subsubsection[{free\-Arrays}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Arrays (
+\begin{DoxyParamCaption}
+\item[{{\bf A\-R\-R\-A\-Y} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_afa9de2a389a6ad80bf97ffa0a5eef402}
+\hypertarget{core_8h_ab34a58b2e6a6901430c3c6c025c5c5c6}{\index{core.\-h@{core.\-h}!free\-Class\-Data@{free\-Class\-Data}}
+\index{free\-Class\-Data@{free\-Class\-Data}!core.h@{core.\-h}}
+\subsubsection[{free\-Class\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Class\-Data (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_ab34a58b2e6a6901430c3c6c025c5c5c6}
+\hypertarget{core_8h_abbc22effef4dba84ae83d5e6d1e3da4b}{\index{core.\-h@{core.\-h}!free\-Frame@{free\-Frame}}
+\index{free\-Frame@{free\-Frame}!core.h@{core.\-h}}
+\subsubsection[{free\-Frame}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-R\-A\-M\-E} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_abbc22effef4dba84ae83d5e6d1e3da4b}
+
+
+Este é o diagrama das funções que utilizam esta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{core_8h_abbc22effef4dba84ae83d5e6d1e3da4b_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_a4bfc9fc3dd56d8ad9327db10219d2ae3}{\index{core.\-h@{core.\-h}!free\-Heap@{free\-Heap}}
+\index{free\-Heap@{free\-Heap}!core.h@{core.\-h}}
+\subsubsection[{free\-Heap}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Heap (
+\begin{DoxyParamCaption}
+\item[{{\bf H\-E\-A\-P\-\_\-\-A\-R\-E\-A} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a4bfc9fc3dd56d8ad9327db10219d2ae3}
+\hypertarget{core_8h_a135eacb54215249d2fb634c920c16d99}{\index{core.\-h@{core.\-h}!free\-Jvm\-Stack@{free\-Jvm\-Stack}}
+\index{free\-Jvm\-Stack@{free\-Jvm\-Stack}!core.h@{core.\-h}}
+\subsubsection[{free\-Jvm\-Stack}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Jvm\-Stack (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-R\-A\-M\-E} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a135eacb54215249d2fb634c920c16d99}
+\hypertarget{core_8h_a4074439f529db8ac5c67c1064e0b1b37}{\index{core.\-h@{core.\-h}!free\-Method\-Area@{free\-Method\-Area}}
+\index{free\-Method\-Area@{free\-Method\-Area}!core.h@{core.\-h}}
+\subsubsection[{free\-Method\-Area}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Method\-Area (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a4074439f529db8ac5c67c1064e0b1b37}
+\hypertarget{core_8h_a769094478f2fd98914bfb300f04982f6}{\index{core.\-h@{core.\-h}!free\-Objects@{free\-Objects}}
+\index{free\-Objects@{free\-Objects}!core.h@{core.\-h}}
+\subsubsection[{free\-Objects}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Objects (
+\begin{DoxyParamCaption}
+\item[{{\bf O\-B\-J\-E\-C\-T} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a769094478f2fd98914bfb300f04982f6}
+\hypertarget{core_8h_a360c5e8ed32f1b8c1222fe180f02f3cc}{\index{core.\-h@{core.\-h}!free\-Operand\-Stack@{free\-Operand\-Stack}}
+\index{free\-Operand\-Stack@{free\-Operand\-Stack}!core.h@{core.\-h}}
+\subsubsection[{free\-Operand\-Stack}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Operand\-Stack (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-R\-A\-M\-E} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a360c5e8ed32f1b8c1222fe180f02f3cc}
+\hypertarget{core_8h_ae038c26bdcbf2be5dca8839cd6c6b5f4}{\index{core.\-h@{core.\-h}!free\-Threads@{free\-Threads}}
+\index{free\-Threads@{free\-Threads}!core.h@{core.\-h}}
+\subsubsection[{free\-Threads}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Threads (
+\begin{DoxyParamCaption}
+\item[{{\bf T\-H\-R\-E\-A\-D} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_ae038c26bdcbf2be5dca8839cd6c6b5f4}
+\hypertarget{core_8h_ab6c8ef9f9ac6072962115bd3085d4b4b}{\index{core.\-h@{core.\-h}!free\-Variables@{free\-Variables}}
+\index{free\-Variables@{free\-Variables}!core.h@{core.\-h}}
+\subsubsection[{free\-Variables}]{\setlength{\rightskip}{0pt plus 5cm}void free\-Variables (
+\begin{DoxyParamCaption}
+\item[{{\bf V\-A\-R\-I\-A\-B\-L\-E} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_ab6c8ef9f9ac6072962115bd3085d4b4b}
+\hypertarget{core_8h_a467c17ad6f6b14784f8e861342b1d0e1}{\index{core.\-h@{core.\-h}!get\-Class@{get\-Class}}
+\index{get\-Class@{get\-Class}!core.h@{core.\-h}}
+\subsubsection[{get\-Class}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}$\ast$ get\-Class (
+\begin{DoxyParamCaption}
+\item[{{\bf const\-Pool\-Inf} $\ast$}]{, }
+\item[{{\bf J\-V\-M} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a467c17ad6f6b14784f8e861342b1d0e1}
+
+
+Este é o diagrama das funções que utilizam esta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{core_8h_a467c17ad6f6b14784f8e861342b1d0e1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_a4f9e90c40bb4308abdd0c48f6d7086cc}{\index{core.\-h@{core.\-h}!get\-Class\-Name@{get\-Class\-Name}}
+\index{get\-Class\-Name@{get\-Class\-Name}!core.h@{core.\-h}}
+\subsubsection[{get\-Class\-Name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ get\-Class\-Name (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a4f9e90c40bb4308abdd0c48f6d7086cc}
+\hypertarget{core_8h_aa49c64914922c2156b4b03feabf50257}{\index{core.\-h@{core.\-h}!get\-Class\-Variable@{get\-Class\-Variable}}
+\index{get\-Class\-Variable@{get\-Class\-Variable}!core.h@{core.\-h}}
+\subsubsection[{get\-Class\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf V\-A\-R\-I\-A\-B\-L\-E}$\ast$ get\-Class\-Variable (
+\begin{DoxyParamCaption}
+\item[{{\bf const\-Pool\-Inf} $\ast$}]{, }
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_aa49c64914922c2156b4b03feabf50257}
+
+
+Este é o diagrama das funções que utilizam esta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{core_8h_aa49c64914922c2156b4b03feabf50257_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_a853d382621b6e22797ee41cc0af6e38f}{\index{core.\-h@{core.\-h}!get\-Code\-Attribute@{get\-Code\-Attribute}}
+\index{get\-Code\-Attribute@{get\-Code\-Attribute}!core.h@{core.\-h}}
+\subsubsection[{get\-Code\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}{\bf attribute\-\_\-info}$\ast$ get\-Code\-Attribute (
+\begin{DoxyParamCaption}
+\item[{{\bf M\-E\-T\-H\-O\-D\-\_\-\-D\-A\-T\-A} $\ast$}]{, }
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a853d382621b6e22797ee41cc0af6e38f}
+
+
+Este é o diagrama das funções que utilizam esta função\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8h_a853d382621b6e22797ee41cc0af6e38f_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_a1e9d1e52d8528a1003cd9c699bb87ab9}{\index{core.\-h@{core.\-h}!get\-Instance\-Variable@{get\-Instance\-Variable}}
+\index{get\-Instance\-Variable@{get\-Instance\-Variable}!core.h@{core.\-h}}
+\subsubsection[{get\-Instance\-Variable}]{\setlength{\rightskip}{0pt plus 5cm}{\bf V\-A\-R\-I\-A\-B\-L\-E}$\ast$ get\-Instance\-Variable (
+\begin{DoxyParamCaption}
+\item[{{\bf const\-Pool\-Inf} $\ast$}]{, }
+\item[{{\bf O\-B\-J\-E\-C\-T} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a1e9d1e52d8528a1003cd9c699bb87ab9}
+
+
+Este é o diagrama das funções que utilizam esta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{core_8h_a1e9d1e52d8528a1003cd9c699bb87ab9_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_a2c5411b2b86a128776b99b1310a29bc2}{\index{core.\-h@{core.\-h}!get\-Method@{get\-Method}}
+\index{get\-Method@{get\-Method}!core.h@{core.\-h}}
+\subsubsection[{get\-Method}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\-E\-T\-H\-O\-D\-\_\-\-D\-A\-T\-A}$\ast$ get\-Method (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{char $\ast$}]{, }
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{, }
+\item[{{\bf J\-V\-M} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a2c5411b2b86a128776b99b1310a29bc2}
+
+
+Este é o diagrama das funções que utilizam esta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{core_8h_a2c5411b2b86a128776b99b1310a29bc2_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_aaa52a592057a81d501ee49d8d1c81301}{\index{core.\-h@{core.\-h}!get\-Super\-Class@{get\-Super\-Class}}
+\index{get\-Super\-Class@{get\-Super\-Class}!core.h@{core.\-h}}
+\subsubsection[{get\-Super\-Class}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}$\ast$ get\-Super\-Class (
+\begin{DoxyParamCaption}
+\item[{{\bf Classe\-De\-Arquivo} $\ast$}]{, }
+\item[{{\bf J\-V\-M} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_aaa52a592057a81d501ee49d8d1c81301}
+
+
+Este é o diagrama das funções que utilizam esta função\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8h_aaa52a592057a81d501ee49d8d1c81301_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_aa2f1283af56df2749e5702e0b569c5d7}{\index{core.\-h@{core.\-h}!iniciar\-\_\-jvm@{iniciar\-\_\-jvm}}
+\index{iniciar\-\_\-jvm@{iniciar\-\_\-jvm}!core.h@{core.\-h}}
+\subsubsection[{iniciar\-\_\-jvm}]{\setlength{\rightskip}{0pt plus 5cm}void iniciar\-\_\-jvm (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{int}]{, }
+\item[{char $\ast$$\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_aa2f1283af56df2749e5702e0b569c5d7}
+
+
+Definido na linha 10 do ficheiro cruzeiro.\-c.
+
+
+
+Grafo de chamadas desta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8h_aa2f1283af56df2749e5702e0b569c5d7_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Este é o diagrama das funções que utilizam esta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{core_8h_aa2f1283af56df2749e5702e0b569c5d7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_a18b8702b615b635f6b52e95c60ed73b1}{\index{core.\-h@{core.\-h}!is\-Super\-Class@{is\-Super\-Class}}
+\index{is\-Super\-Class@{is\-Super\-Class}!core.h@{core.\-h}}
+\subsubsection[{is\-Super\-Class}]{\setlength{\rightskip}{0pt plus 5cm}bool is\-Super\-Class (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{, }
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{, }
+\item[{{\bf J\-V\-M} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a18b8702b615b635f6b52e95c60ed73b1}
+
+
+Este é o diagrama das funções que utilizam esta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{core_8h_a18b8702b615b635f6b52e95c60ed73b1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_a65309fe2f949999b73fa78000ffec3c4}{\index{core.\-h@{core.\-h}!jvm\-Exit@{jvm\-Exit}}
+\index{jvm\-Exit@{jvm\-Exit}!core.h@{core.\-h}}
+\subsubsection[{jvm\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}void jvm\-Exit (
+\begin{DoxyParamCaption}
+\item[{{\bf J\-V\-M} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a65309fe2f949999b73fa78000ffec3c4}
+
+
+Este é o diagrama das funções que utilizam esta função\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8h_a65309fe2f949999b73fa78000ffec3c4_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_a92753a3e4a70b1837b498b2821b1c478}{\index{core.\-h@{core.\-h}!ligador\-De\-Classe@{ligador\-De\-Classe}}
+\index{ligador\-De\-Classe@{ligador\-De\-Classe}!core.h@{core.\-h}}
+\subsubsection[{ligador\-De\-Classe}]{\setlength{\rightskip}{0pt plus 5cm}void ligador\-De\-Classe (
+\begin{DoxyParamCaption}
+\item[{{\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$}]{, }
+\item[{{\bf J\-V\-M} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a92753a3e4a70b1837b498b2821b1c478}
+
+
+Definido na linha 243 do ficheiro cruzeiro.\-c.
+
+
+
+Grafo de chamadas desta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8h_a92753a3e4a70b1837b498b2821b1c478_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Este é o diagrama das funções que utilizam esta função\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core_8h_a92753a3e4a70b1837b498b2821b1c478_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_a01ea050bc682333139b2b64e89008893}{\index{core.\-h@{core.\-h}!pop\-Operand@{pop\-Operand}}
+\index{pop\-Operand@{pop\-Operand}!core.h@{core.\-h}}
+\subsubsection[{pop\-Operand}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t pop\-Operand (
+\begin{DoxyParamCaption}
+\item[{{\bf F\-R\-A\-M\-E} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_a01ea050bc682333139b2b64e89008893}
+
+
+Este é o diagrama das funções que utilizam esta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{core_8h_a01ea050bc682333139b2b64e89008893_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{core_8h_ada292ff1b4724c764f4cc6ff992cce06}{\index{core.\-h@{core.\-h}!push\-Operand@{push\-Operand}}
+\index{push\-Operand@{push\-Operand}!core.h@{core.\-h}}
+\subsubsection[{push\-Operand}]{\setlength{\rightskip}{0pt plus 5cm}void push\-Operand (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{, }
+\item[{{\bf F\-R\-A\-M\-E} $\ast$}]{}
+\end{DoxyParamCaption}
+)}}\label{core_8h_ada292ff1b4724c764f4cc6ff992cce06}
+
+
+Este é o diagrama das funções que utilizam esta função\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{core_8h_ada292ff1b4724c764f4cc6ff992cce06_icgraph}
+\end{center}
+\end{figure}
+
+

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['f2t',['f2T',['../interpreter_8h.html#ae9dfab8fc6dd72ad8368fa5224937535',1,'interpreter.h']]],
+  ['freearrays',['freeArrays',['../jvm_8h.html#afa9de2a389a6ad80bf97ffa0a5eef402',1,'jvm.h']]],
+  ['freeattribute',['freeAttribute',['../leitor__exibidor_8h.html#a17fff2cb4bcc1b3f15f156f9ba86951c',1,'leitor_exibidor.h']]],
+  ['freeclassdata',['freeClassData',['../jvm_8h.html#a19377323d16f1630fbff65baf7f12c7f',1,'jvm.h']]],
+  ['freeclassfile',['freeClassFile',['../leitor__exibidor_8h.html#a12211270b2d70025f244a334a2de5329',1,'leitor_exibidor.h']]],
+  ['freeconstantpool',['freeConstantPool',['../leitor__exibidor_8h.html#a95bd77dd4b17b748fa024262ce8ea309',1,'leitor_exibidor.h']]],
+  ['freefields',['freeFields',['../leitor__exibidor_8h.html#a6b710d11fc45132eed05b51d31c0d5e4',1,'leitor_exibidor.h']]],
+  ['freeframe',['freeFrame',['../jvm_8h.html#abbc22effef4dba84ae83d5e6d1e3da4b',1,'jvm.h']]],
+  ['freeheap',['freeHeap',['../jvm_8h.html#ad34124ac1e4a0d94911af74ee0066bcb',1,'jvm.h']]],
+  ['freejvmstack',['freeJvmStack',['../jvm_8h.html#a135eacb54215249d2fb634c920c16d99',1,'jvm.h']]],
+  ['freemethodarea',['freeMethodArea',['../jvm_8h.html#a4c6ebe7c86aa0608c7073001ead3b46e',1,'jvm.h']]],
+  ['freemethods',['freeMethods',['../leitor__exibidor_8h.html#acca19271c41a404ef92f8933900b5d13',1,'leitor_exibidor.h']]],
+  ['freeobjects',['freeObjects',['../jvm_8h.html#a769094478f2fd98914bfb300f04982f6',1,'jvm.h']]],
+  ['freeoperandstack',['freeOperandStack',['../jvm_8h.html#a360c5e8ed32f1b8c1222fe180f02f3cc',1,'jvm.h']]],
+  ['freethreads',['freeThreads',['../jvm_8h.html#ae038c26bdcbf2be5dca8839cd6c6b5f4',1,'jvm.h']]],
+  ['freevariables',['freeVariables',['../jvm_8h.html#ab6c8ef9f9ac6072962115bd3085d4b4b',1,'jvm.h']]]
+];

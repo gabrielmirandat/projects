@@ -1,0 +1,34 @@
+<map id="handleObject" name="handleObject">
+<area shape="rect" id="node2" href="$core_8h.html#a65309fe2f949999b73fa78000ffec3c4" title="jvmExit" alt="" coords="585,516,652,543"/>
+<area shape="rect" id="node3" href="$core_8h.html#ada292ff1b4724c764f4cc6ff992cce06" title="pushOperand" alt="" coords="164,770,263,796"/>
+<area shape="rect" id="node4" href="$core_8h.html#a467c17ad6f6b14784f8e861342b1d0e1" title="getClass" alt="" coords="176,820,251,847"/>
+<area shape="rect" id="node5" href="$core_8h.html#a7c9daf914ef558b41a9d0b2d617dab86" title="carregarClasse_01" alt="" coords="337,390,468,416"/>
+<area shape="rect" id="node20" href="$core_8h.html#a92753a3e4a70b1837b498b2821b1c478" title="ligadorDeClasse" alt="" coords="154,618,273,644"/>
+<area shape="rect" id="node28" href="$core_8h.html#aaa52a592057a81d501ee49d8d1c81301" title="getSuperClass" alt="" coords="767,719,875,746"/>
+<area shape="rect" id="node31" href="$core_8h.html#a1c9426d6a17b70527ebee8b467688fa5" title="classInitialization" alt="" coords="152,871,275,898"/>
+<area shape="rect" id="node32" href="$core_8h.html#a01ea050bc682333139b2b64e89008893" title="popOperand" alt="" coords="167,922,259,948"/>
+<area shape="rect" id="node33" href="$interpreter_8c.html#a1d0e06d16d097e40de348c6815dab9d4" title="createMultiArray" alt="" coords="155,996,272,1023"/>
+<area shape="rect" id="node6" href="$_leit_exib_8h.html#a7722536746d54d82b3b46d5eb409f3da" title="loadClasseDeArquivo" alt="" coords="545,212,693,239"/>
+<area shape="rect" id="node16" href="$checker_8c.html#ac5b6a6c9fa38ec400a3d15f1421089d8" title="isFieldDescriptor" alt="" coords="951,466,1071,492"/>
+<area shape="rect" id="node17" href="$checker_8c.html#a9022e1fcb1064556f8df87f06b5babd2" title="isMethodDescriptor" alt="" coords="943,390,1078,416"/>
+<area shape="rect" id="node19" href="$core_8h.html#a853d382621b6e22797ee41cc0af6e38f" title="getCodeAttribute" alt="" coords="559,162,679,188"/>
+<area shape="rect" id="node7" href="$_leitor_exibidor_8c.html#ac7ed0b8a152d4327637b603c9bbce4cb" title="read4Byte" alt="" coords="1158,263,1239,290"/>
+<area shape="rect" id="node9" href="$_leitor_exibidor_8c.html#a41ed338d041f0f3808f5c0fcc3f29da6" title="read2Byte" alt="" coords="1158,111,1239,138"/>
+<area shape="rect" id="node10" href="$_leitor_exibidor_8c.html#afa34d6279f74e16c9251ea71ba45aebb" title="setCONSTANTEPool" alt="" coords="936,263,1085,290"/>
+<area shape="rect" id="node11" href="$_leitor_exibidor_8c.html#a41c0875ffc034eda023a69294b81fc8e" title="setInterfaces" alt="" coords="961,60,1060,87"/>
+<area shape="rect" id="node12" href="$_leitor_exibidor_8c.html#a6f9c7c07e7af4935e667c111d34bf8aa" title="setFields" alt="" coords="784,111,859,138"/>
+<area shape="rect" id="node13" href="$_leitor_exibidor_8c.html#a393e540651164597ee93603b0a713923" title="setAttributes" alt="" coords="963,212,1059,239"/>
+<area shape="rect" id="node15" href="$_leitor_exibidor_8c.html#aa6ca56635beec104216b589d65622938" title="setMethods" alt="" coords="776,162,867,188"/>
+<area shape="rect" id="node8" href="$_leitor_exibidor_8c.html#acd178396959c009ec7b849c928299d29" title="read1Byte" alt="" coords="1313,212,1394,239"/>
+<area shape="rect" id="node14" href="$_leitor_exibidor_8c.html#a4a853c531bfe942dda78ef5ce77078b9" title="getTipoAtributo" alt="" coords="1143,212,1254,239"/>
+<area shape="rect" id="node18" href="$_leit_exib_8h.html#a345c5213063b16760fc936583f24d536" title="ImprimeConstUtf8" alt="" coords="1134,390,1263,416"/>
+<area shape="rect" id="node21" href="$cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="323,618,482,644"/>
+<area shape="rect" id="node30" href="$cruzeiro_8c.html#a5a186301f1f3a10e62e93674c07c2fcc" title="classLinkingPreparation" alt="" coords="323,567,483,594"/>
+<area shape="rect" id="node22" href="$checker_8c.html#a0dcac7578c8c1cf7ef0f7b6fffe5ae24" title="verifyClassfile" alt="" coords="566,567,671,594"/>
+<area shape="rect" id="node27" href="$checker_8c.html#a7b952615631393d4b96a3eafe88cb3e7" title="verifySuperFinal" alt="" coords="561,618,677,644"/>
+<area shape="rect" id="node29" href="$checker_8c.html#a4bbffc69c6cd821aebc4c480ffd3aec1" title="verifyOverrideMethodFinal" alt="" coords="531,668,706,695"/>
+<area shape="rect" id="node23" href="$checker_8c.html#a6ecc7358598704e5b4e9d77f06495482" title="verifyConstantPool" alt="" coords="755,466,888,492"/>
+<area shape="rect" id="node24" href="$checker_8c.html#a3e295f32f754594e38f31297afebca97" title="verifyAccessFlags" alt="" coords="756,618,887,644"/>
+<area shape="rect" id="node25" href="$_leit_exib_8h.html#a3fe75659fbce73494617d80f3a705a67" title="getTipoAtributo" alt="" coords="766,668,877,695"/>
+<area shape="rect" id="node26" href="$checker_8c.html#a5c524d6b071cd201765ed95b10b9eedd" title="verifyBytecode" alt="" coords="767,567,876,594"/>
+</map>

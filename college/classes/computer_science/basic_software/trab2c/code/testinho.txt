@@ -1,0 +1,140 @@
+import md5
+print md5.new('4dc968ff0ee35c209572d4777b721587d36fa7b21bdc56b74a3dc0783e7b9518afbfa200a8284bf36e8e4b55b35f427593d849676da0d1555d8360fb5f07fea2').hexdigest()
+
+c3
+MD5("The quick brown fox jumps over the lazy dog") = 9e107d9d372bb6826bd81d3542a419d6
+MD5("Thequickbrownfoxjumpsoverthelazydog") = 645a2c842335d4b53c68c6f7efc10ab6
+
+e0714c8ace3511265f08287ae7779ff
+87f14c8ab4635112d70828755f779ff
+
+4d:c9:68:ff:0e:e3:5c:20:95:72:d4:77:7b:72:15:87:d3:6f:a7:b2:1b:dc:56:b7:4a:3d:c0:78:3e:7b:95:18:af:bf:a2:00:a8:28:4b:f3:6e:8e:4b:55:b3:5f:42:75:93:d8:49:67:6d:a0:d1:55:5d:83:60:fb:5f:07:fe:a2
+
+
+// copia bloco i em X
+     	for(int j=0; j<16;j++)
+     	{
+     		X[j] = M[i*16+j];
+     	}
+
+     	// salva A como AA, B como BB, C como CC e D como DD
+     	AA = bmd5.A;
+     	BB = bmd5.B;
+		CC = bmd5.C;
+	    DD = bmd5.D;
+
+	    mostraResultado();
+
+	    // passo 1
+	    /* Let [abcd k s i] denote the operation a = b + ((a + F(b,c,d) + X[k] + T[i]) <<< s). */
+	    /* Do the following 16 operations. */
+	    /* [ABCD  0  7  1]  [DABC  1 12  2]  [CDAB  2 17  3]  [BCDA  3 22  4] */
+	    /* [ABCD  4  7  5]  [DABC  5 12  6]  [CDAB  6 17  7]  [BCDA  7 22  8] */
+	    /* [ABCD  8  7  9]  [DABC  9 12 10]  [CDAB 10 17 11]  [BCDA 11 22 12] */
+	    /* [ABCD 12  7 13]  [DABC 13 12 14]  [CDAB 14 17 15]  [BCDA 15 22 16] */
+		bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + F(bmd5.B,bmd5.C,bmd5.D) + X[0]  + T[0]) , 7 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + F(bmd5.B,bmd5.C,bmd5.D) + X[4]  + T[4]) , 7 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + F(bmd5.B,bmd5.C,bmd5.D) + X[8]  + T[8]) , 7 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + F(bmd5.B,bmd5.C,bmd5.D) + X[12] + T[12]), 7 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.D = bmd5.A + SHIFT_ESQ_CIRC((bmd5.D + F(bmd5.A,bmd5.B,bmd5.C) + X[1]  + T[1]) , 12);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.D = bmd5.A + SHIFT_ESQ_CIRC((bmd5.D + F(bmd5.A,bmd5.B,bmd5.C) + X[5]  + T[5]) , 12);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.D = bmd5.A + SHIFT_ESQ_CIRC((bmd5.D + F(bmd5.A,bmd5.B,bmd5.C) + X[9]  + T[9]) , 12);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.D = bmd5.A + SHIFT_ESQ_CIRC((bmd5.D + F(bmd5.A,bmd5.B,bmd5.C) + X[13] + T[13]), 12);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.C = bmd5.D + SHIFT_ESQ_CIRC((bmd5.C + F(bmd5.D,bmd5.A,bmd5.B) + X[2]  + T[2]) , 17);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.C = bmd5.D + SHIFT_ESQ_CIRC((bmd5.C + F(bmd5.D,bmd5.A,bmd5.B) + X[6]  + T[6]) , 17);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.C = bmd5.D + SHIFT_ESQ_CIRC((bmd5.C + F(bmd5.D,bmd5.A,bmd5.B) + X[10] + T[10]), 17);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.C = bmd5.D + SHIFT_ESQ_CIRC((bmd5.C + F(bmd5.D,bmd5.A,bmd5.B) + X[14] + T[14]), 17);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.B = bmd5.C + SHIFT_ESQ_CIRC((bmd5.B + F(bmd5.C,bmd5.D,bmd5.A) + X[3]  + T[3]) , 22);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.B = bmd5.C + SHIFT_ESQ_CIRC((bmd5.B + F(bmd5.C,bmd5.D,bmd5.A) + X[7]  + T[7]) , 22);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.B = bmd5.C + SHIFT_ESQ_CIRC((bmd5.B + F(bmd5.C,bmd5.D,bmd5.A) + X[11] + T[11]), 22);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.B = bmd5.C + SHIFT_ESQ_CIRC((bmd5.B + F(bmd5.C,bmd5.D,bmd5.A) + X[15] + T[15]), 22);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		
+		mostraResultado();
+
+	    // passo 2
+	    /* Let [abcd k s i] denote the operation a = b + ((a + G(b,c,d) + X[k] + T[i]) <<< s). */
+	    /* Do the following 16 operations. */
+	    /* [ABCD  1  5 17]  [DABC  6  9 18]  [CDAB 11 14 19]  [BCDA  0 20 20] */
+	    /* [ABCD  5  5 21]  [DABC 10  9 22]  [CDAB 15 14 23]  [BCDA  4 20 24] */
+	    /* [ABCD  9  5 25]  [DABC 14  9 26]  [CDAB  3 14 27]  [BCDA  8 20 28] */
+	    /* [ABCD 13  5 29]  [DABC  2  9 30]  [CDAB  7 14 31]  [BCDA 12 20 32] */
+	    bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + G(bmd5.B,bmd5.C,bmd5.D) + X[1]  + T[16]), 5 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+	    bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + G(bmd5.B,bmd5.C,bmd5.D) + X[5]  + T[20]), 5 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+	    bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + G(bmd5.B,bmd5.C,bmd5.D) + X[9]  + T[24]), 5 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+	    bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + G(bmd5.B,bmd5.C,bmd5.D) + X[13] + T[28]), 5 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.D = bmd5.A + SHIFT_ESQ_CIRC((bmd5.D + G(bmd5.A,bmd5.B,bmd5.C) + X[6]  + T[17]), 9 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.D = bmd5.A + SHIFT_ESQ_CIRC((bmd5.D + G(bmd5.A,bmd5.B,bmd5.C) + X[10] + T[21]), 9 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.D = bmd5.A + SHIFT_ESQ_CIRC((bmd5.D + G(bmd5.A,bmd5.B,bmd5.C) + X[14] + T[25]), 9 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.D = bmd5.A + SHIFT_ESQ_CIRC((bmd5.D + G(bmd5.A,bmd5.B,bmd5.C) + X[2]  + T[39]), 9 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.C = bmd5.D + SHIFT_ESQ_CIRC((bmd5.C + G(bmd5.D,bmd5.A,bmd5.B) + X[11] + T[18]), 14);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.C = bmd5.D + SHIFT_ESQ_CIRC((bmd5.C + G(bmd5.D,bmd5.A,bmd5.B) + X[15] + T[22]), 14);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.C = bmd5.D + SHIFT_ESQ_CIRC((bmd5.C + G(bmd5.D,bmd5.A,bmd5.B) + X[3]  + T[26]), 14);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.C = bmd5.D + SHIFT_ESQ_CIRC((bmd5.C + G(bmd5.D,bmd5.A,bmd5.B) + X[7]  + T[30]), 14);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.B = bmd5.C + SHIFT_ESQ_CIRC((bmd5.B + G(bmd5.C,bmd5.D,bmd5.A) + X[0]  + T[19]), 20);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.B = bmd5.C + SHIFT_ESQ_CIRC((bmd5.B + G(bmd5.C,bmd5.D,bmd5.A) + X[4]  + T[23]), 20);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.B = bmd5.C + SHIFT_ESQ_CIRC((bmd5.B + G(bmd5.C,bmd5.D,bmd5.A) + X[8]  + T[27]), 20);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.B = bmd5.C + SHIFT_ESQ_CIRC((bmd5.B + G(bmd5.C,bmd5.D,bmd5.A) + X[12] + T[31]), 20);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+
+	    mostraResultado();
+
+	    // passo 3
+	    /* Let [abcd k s t] denote the operation a = b + ((a + H(b,c,d) + X[k] + T[i]) <<< s). */
+	    /* Do the following 16 operations. */
+	    /* [ABCD  5  4 33]  [DABC  8 11 34]  [CDAB 11 16 35]  [BCDA 14 23 36] */
+	    /* [ABCD  1  4 37]  [DABC  4 11 38]  [CDAB  7 16 39]  [BCDA 10 23 40] */
+	    /* [ABCD 13  4 41]  [DABC  0 11 42]  [CDAB  3 16 43]  [BCDA  6 23 44] */
+	    /* [ABCD  9  4 45]  [DABC 12 11 46]  [CDAB 15 16 47]  [BCDA  2 23 48] */
+	    bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + H(bmd5.B,bmd5.C,bmd5.D) + X[5]  + T[32]), 4 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+	    bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + H(bmd5.B,bmd5.C,bmd5.D) + X[1]  + T[36]), 4 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+	    bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + H(bmd5.B,bmd5.C,bmd5.D) + X[13] + T[40]), 4 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+	    bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + H(bmd5.B,bmd5.C,bmd5.D) + X[9]  + T[44]), 4 );	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.D = bmd5.A + SHIFT_ESQ_CIRC((bmd5.D + H(bmd5.A,bmd5.B,bmd5.C) + X[8]  + T[33]), 11);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.D = bmd5.A + SHIFT_ESQ_CIRC((bmd5.D + H(bmd5.A,bmd5.B,bmd5.C) + X[4]  + T[37]), 11);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.D = bmd5.A + SHIFT_ESQ_CIRC((bmd5.D + H(bmd5.A,bmd5.B,bmd5.C) + X[0]  + T[41]), 11);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.D = bmd5.A + SHIFT_ESQ_CIRC((bmd5.D + H(bmd5.A,bmd5.B,bmd5.C) + X[12] + T[45]), 11);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.C = bmd5.D + SHIFT_ESQ_CIRC((bmd5.C + H(bmd5.D,bmd5.A,bmd5.B) + X[11] + T[34]), 16);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.C = bmd5.D + SHIFT_ESQ_CIRC((bmd5.C + H(bmd5.D,bmd5.A,bmd5.B) + X[7]  + T[38]), 16);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.C = bmd5.D + SHIFT_ESQ_CIRC((bmd5.C + H(bmd5.D,bmd5.A,bmd5.B) + X[3]  + T[42]), 16);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.C = bmd5.D + SHIFT_ESQ_CIRC((bmd5.C + H(bmd5.D,bmd5.A,bmd5.B) + X[15] + T[46]), 16);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.B = bmd5.C + SHIFT_ESQ_CIRC((bmd5.B + H(bmd5.C,bmd5.D,bmd5.A) + X[14] + T[35]), 23);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.B = bmd5.C + SHIFT_ESQ_CIRC((bmd5.B + H(bmd5.C,bmd5.D,bmd5.A) + X[10] + T[39]), 23);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.B = bmd5.C + SHIFT_ESQ_CIRC((bmd5.B + H(bmd5.C,bmd5.D,bmd5.A) + X[6]  + T[43]), 23);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+		bmd5.B = bmd5.C + SHIFT_ESQ_CIRC((bmd5.B + H(bmd5.C,bmd5.D,bmd5.A) + X[2]  + T[47]), 23);	printf("bmd5.A:%x bmd5.B:%x bmd5.C:%x bmd5.D:%x\n", bmd5.A, bmd5.B, bmd5.C, bmd5.D);
+
+	    mostraResultado();
+
+	    // passo 4
+	    /* Let [abcd k s t] denote the operation a = b + ((a + I(b,c,d) + X[k] + T[i]) <<< s). */
+	    /* Do the following 16 operations. */
+	    /* [ABCD  0  6 49]  [DABC  7 10 50]  [CDAB 14 15 51]  [BCDA  5 21 52] */
+	    /* [ABCD 12  6 53]  [DABC  3 10 54]  [CDAB 10 15 55]  [BCDA  1 21 56] */
+	    /* [ABCD  8  6 57]  [DABC 15 10 58]  [CDAB  6 15 59]  [BCDA 13 21 60] */
+	    /* [ABCD  4  6 61]  [DABC 11 10 62]  [CDAB  2 15 63]  [BCDA  9 21 64] */
+	    bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + I(bmd5.B,CC,DD) + X[0]  + T[48]), 6 );	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+	    bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + I(bmd5.B,CC,DD) + X[12] + T[52]), 6 );	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+	    bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + I(bmd5.B,CC,DD) + X[8]  + T[56]), 6 );	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+	    bmd5.A = bmd5.B + SHIFT_ESQ_CIRC((bmd5.A + I(bmd5.B,CC,DD) + X[4]  + T[60]), 6 );	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+		DD = bmd5.A + SHIFT_ESQ_CIRC((DD + I(bmd5.A,bmd5.B,CC) + X[7]  + T[49]), 10);	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+		DD = bmd5.A + SHIFT_ESQ_CIRC((DD + I(bmd5.A,bmd5.B,CC) + X[3]  + T[53]), 10);	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+		DD = bmd5.A + SHIFT_ESQ_CIRC((DD + I(bmd5.A,bmd5.B,CC) + X[15] + T[57]), 10);	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+		DD = bmd5.A + SHIFT_ESQ_CIRC((DD + I(bmd5.A,bmd5.B,CC) + X[11] + T[61]), 10);	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+		CC = DD + SHIFT_ESQ_CIRC((CC + I(DD,bmd5.A,bmd5.B) + X[14] + T[50]), 15);	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+		CC = DD + SHIFT_ESQ_CIRC((CC + I(DD,bmd5.A,bmd5.B) + X[10] + T[54]), 15);	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+		CC = DD + SHIFT_ESQ_CIRC((CC + I(DD,bmd5.A,bmd5.B) + X[6]  + T[58]), 15);	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+		CC = DD + SHIFT_ESQ_CIRC((CC + I(DD,bmd5.A,bmd5.B) + X[2]  + T[62]), 15);	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+		bmd5.B = CC + SHIFT_ESQ_CIRC((bmd5.B + I(CC,DD,bmd5.A) + X[5]  + T[51]), 21);	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+		bmd5.B = CC + SHIFT_ESQ_CIRC((bmd5.B + I(CC,DD,bmd5.A) + X[1]  + T[55]), 21);	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+		bmd5.B = CC + SHIFT_ESQ_CIRC((bmd5.B + I(CC,DD,bmd5.A) + X[13] + T[59]), 21);	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+		bmd5.B = CC + SHIFT_ESQ_CIRC((bmd5.B + I(CC,DD,bmd5.A) + X[9]  + T[63]), 21);	printf("bmd5.A:%x bmd5.B:%x CC:%x DD:%x\n", bmd5.A, bmd5.B, CC, DD);
+
+		mostraResultado();
+
+	    /* Then perform the following additions. (That is increment each
+	       of the four registers by the value it had before this block
+	       was started.) */
+		bmd5.A = bmd5.A + AA;
+	    bmd5.B = bmd5.B + BB;
+	    bmd5.C = bmd5.C + CC;
+	    bmd5.D = bmd5.D + DD;
+
+	    mostraResultado();

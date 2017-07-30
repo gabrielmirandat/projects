@@ -1,0 +1,1 @@
+gcc -std=c99 base91.c -lm -o base91

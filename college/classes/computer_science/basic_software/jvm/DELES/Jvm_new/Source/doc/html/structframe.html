@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>JVM - Cruzeiro: Referência à estrutura frame</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">JVM - Cruzeiro
+   &#160;<span id="projectnumber">Versão Básica Funcional</span>
+   </div>
+   <div id="projectbrief">Trabalho de Software Básico - Turma do Professor Marcelo Ladeira</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Ficheiros</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Localizar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Lista&#160;de&#160;componentes</span></a></li>
+      <li><a href="classes.html"><span>Índice&#160;dos&#160;componentes</span></a></li>
+      <li><a href="functions.html"><span>Componentes&#160;membro</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('structframe.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tudo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Ficheiros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Definições de tipos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Atributos Públicos</a> &#124;
+<a href="structframe-members.html">Mostrar lista completa dos membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência à estrutura frame</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="core_8h_source.html">core.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboração para frame:</div>
+<div class="dyncontent">
+<div class="center"><img src="structframe__coll__graph.png" border="0" usemap="#frame_coll__map" alt="Collaboration graph"/></div>
+<map name="frame_coll__map" id="frame_coll__map">
+<area shape="rect" id="node2" href="structconst_pool_inf.html" title="constPoolInf" alt="" coords="5,5,99,32"/><area shape="rect" id="node3" href="structoperand.html" title="operand" alt="" coords="182,5,249,32"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Atributos Públicos</h2></td></tr>
+<tr class="memitem:afb48efe21a0642a382ef875628272cfd"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structframe.html#afb48efe21a0642a382ef875628272cfd">local_variables</a></td></tr>
+<tr class="separator:afb48efe21a0642a382ef875628272cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e69123161d7ee38be16d922f09dc320"><td class="memItemLeft" align="right" valign="top"><a class="el" href="core_8h.html#a57370c151bf2eefc3bd6e2d13b70e7c9">OPERAND</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structframe.html#a0e69123161d7ee38be16d922f09dc320">operand_stack</a></td></tr>
+<tr class="separator:a0e69123161d7ee38be16d922f09dc320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44e706fb58a455a533afd748c097c9d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structconst_pool_inf.html">constPoolInf</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structframe.html#a44e706fb58a455a533afd748c097c9d0">current_constant_pool</a></td></tr>
+<tr class="separator:a44e706fb58a455a533afd748c097c9d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5c645b97d4a17c7352bf29e7396cea4"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structframe.html">frame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structframe.html#ad5c645b97d4a17c7352bf29e7396cea4">prox</a></td></tr>
+<tr class="separator:ad5c645b97d4a17c7352bf29e7396cea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock">
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00098">98</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+</div><h2 class="groupheader">Documentação dos dados membro</h2>
+<a class="anchor" id="a44e706fb58a455a533afd748c097c9d0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structconst_pool_inf.html">constPoolInf</a>* frame::current_constant_pool</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00101">101</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afb48efe21a0642a382ef875628272cfd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t* frame::local_variables</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00099">99</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0e69123161d7ee38be16d922f09dc320"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="core_8h.html#a57370c151bf2eefc3bd6e2d13b70e7c9">OPERAND</a>* frame::operand_stack</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00100">100</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad5c645b97d4a17c7352bf29e7396cea4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structframe.html">frame</a>* frame::prox</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definido na linha <a class="el" href="core_8h_source.html#l00102">102</a> do ficheiro <a class="el" href="core_8h_source.html">core.h</a>.</p>
+
+</div>
+</div>
+<hr/>A documentação para esta estrutura foi gerada a partir do seguinte ficheiro:<ul>
+<li><a class="el" href="core_8h_source.html">core.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structframe.html">frame</a></li>
+    <li class="footer">Gerado em Terça, 5 de Julho de 2016 00:01:39 para JVM - Cruzeiro por
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+  </ul>
+</div>
+</body>
+</html>

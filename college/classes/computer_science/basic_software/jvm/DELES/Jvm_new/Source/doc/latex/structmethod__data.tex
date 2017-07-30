@@ -1,0 +1,133 @@
+\hypertarget{structmethod__data}{\section{Referência à estrutura method\-\_\-data}
+\label{structmethod__data}\index{method\-\_\-data@{method\-\_\-data}}
+}
+
+
+{\ttfamily \#include $<$core.\-h$>$}
+
+
+
+Diagrama de colaboração para method\-\_\-data\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structmethod__data__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structconst_pool_inf}{const\-Pool\-Inf} $\ast$ \hyperlink{structmethod__data_acc4747daee0a91ee73f94422c8b833ab}{method\-\_\-name}
+\item 
+\hyperlink{structconst_pool_inf}{const\-Pool\-Inf} $\ast$ \hyperlink{structmethod__data_ae4a01197c105855d2e337fb8875358a8}{method\-\_\-descriptor}
+\item 
+uint16\-\_\-t \hyperlink{structmethod__data_a2abb22d9f683ff1163f58d9b071902bd}{modifiers}
+\item 
+struct \hyperlink{struct_d_a_d_o_s___c_l_a_s_s_e}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E} $\ast$ \hyperlink{structmethod__data_a2a372a889aabaea0e0b4a08be11cbfa3}{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}
+\item 
+uint32\-\_\-t \hyperlink{structmethod__data_a9c6035e8b389eea9bc15f380cffefe8b}{code\-\_\-length}
+\item 
+uint8\-\_\-t $\ast$ \hyperlink{structmethod__data_a602f386ab76983d72ba48488f8c309a9}{bytecodes}
+\item 
+uint16\-\_\-t \hyperlink{structmethod__data_a0c23eae5e5fe3302c9c1b7f8e5543e3c}{stack\-\_\-size}
+\item 
+uint16\-\_\-t \hyperlink{structmethod__data_a09b30df4053904e1ebe666ae1ccc45d4}{locals\-\_\-size}
+\item 
+uint16\-\_\-t \hyperlink{structmethod__data_ac5f08aab5ad351365c25e550c4a0bfb3}{exception\-\_\-table\-\_\-length}
+\item 
+\hyperlink{structexception__table__type}{exception\-\_\-table\-\_\-type} $\ast$ \hyperlink{structmethod__data_ad9179cc8edbe4688c2f97359cc05ccd0}{exception\-\_\-table}
+\item 
+\hyperlink{structmethod__info}{method\-\_\-info} $\ast$ \hyperlink{structmethod__data_ae433725619fdadbb915ae3f51198208b}{info}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+
+
+Definido na linha 141 do ficheiro core.\-h.
+
+
+
+\subsection{Documentação dos dados membro}
+\hypertarget{structmethod__data_a602f386ab76983d72ba48488f8c309a9}{\index{method\-\_\-data@{method\-\_\-data}!bytecodes@{bytecodes}}
+\index{bytecodes@{bytecodes}!method_data@{method\-\_\-data}}
+\subsubsection[{bytecodes}]{\setlength{\rightskip}{0pt plus 5cm}uint8\-\_\-t$\ast$ method\-\_\-data\-::bytecodes}}\label{structmethod__data_a602f386ab76983d72ba48488f8c309a9}
+
+
+Definido na linha 148 do ficheiro core.\-h.
+
+\hypertarget{structmethod__data_a9c6035e8b389eea9bc15f380cffefe8b}{\index{method\-\_\-data@{method\-\_\-data}!code\-\_\-length@{code\-\_\-length}}
+\index{code\-\_\-length@{code\-\_\-length}!method_data@{method\-\_\-data}}
+\subsubsection[{code\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t method\-\_\-data\-::code\-\_\-length}}\label{structmethod__data_a9c6035e8b389eea9bc15f380cffefe8b}
+
+
+Definido na linha 147 do ficheiro core.\-h.
+
+\hypertarget{structmethod__data_a2a372a889aabaea0e0b4a08be11cbfa3}{\index{method\-\_\-data@{method\-\_\-data}!D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E@{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}}
+\index{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E@{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}!method_data@{method\-\_\-data}}
+\subsubsection[{D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}$\ast$ method\-\_\-data\-::\-D\-A\-D\-O\-S\-\_\-\-C\-L\-A\-S\-S\-E}}\label{structmethod__data_a2a372a889aabaea0e0b4a08be11cbfa3}
+
+
+Definido na linha 145 do ficheiro core.\-h.
+
+\hypertarget{structmethod__data_ad9179cc8edbe4688c2f97359cc05ccd0}{\index{method\-\_\-data@{method\-\_\-data}!exception\-\_\-table@{exception\-\_\-table}}
+\index{exception\-\_\-table@{exception\-\_\-table}!method_data@{method\-\_\-data}}
+\subsubsection[{exception\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf exception\-\_\-table\-\_\-type}$\ast$ method\-\_\-data\-::exception\-\_\-table}}\label{structmethod__data_ad9179cc8edbe4688c2f97359cc05ccd0}
+
+
+Definido na linha 152 do ficheiro core.\-h.
+
+\hypertarget{structmethod__data_ac5f08aab5ad351365c25e550c4a0bfb3}{\index{method\-\_\-data@{method\-\_\-data}!exception\-\_\-table\-\_\-length@{exception\-\_\-table\-\_\-length}}
+\index{exception\-\_\-table\-\_\-length@{exception\-\_\-table\-\_\-length}!method_data@{method\-\_\-data}}
+\subsubsection[{exception\-\_\-table\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t method\-\_\-data\-::exception\-\_\-table\-\_\-length}}\label{structmethod__data_ac5f08aab5ad351365c25e550c4a0bfb3}
+
+
+Definido na linha 151 do ficheiro core.\-h.
+
+\hypertarget{structmethod__data_ae433725619fdadbb915ae3f51198208b}{\index{method\-\_\-data@{method\-\_\-data}!info@{info}}
+\index{info@{info}!method_data@{method\-\_\-data}}
+\subsubsection[{info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf method\-\_\-info}$\ast$ method\-\_\-data\-::info}}\label{structmethod__data_ae433725619fdadbb915ae3f51198208b}
+
+
+Definido na linha 153 do ficheiro core.\-h.
+
+\hypertarget{structmethod__data_a09b30df4053904e1ebe666ae1ccc45d4}{\index{method\-\_\-data@{method\-\_\-data}!locals\-\_\-size@{locals\-\_\-size}}
+\index{locals\-\_\-size@{locals\-\_\-size}!method_data@{method\-\_\-data}}
+\subsubsection[{locals\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t method\-\_\-data\-::locals\-\_\-size}}\label{structmethod__data_a09b30df4053904e1ebe666ae1ccc45d4}
+
+
+Definido na linha 150 do ficheiro core.\-h.
+
+\hypertarget{structmethod__data_ae4a01197c105855d2e337fb8875358a8}{\index{method\-\_\-data@{method\-\_\-data}!method\-\_\-descriptor@{method\-\_\-descriptor}}
+\index{method\-\_\-descriptor@{method\-\_\-descriptor}!method_data@{method\-\_\-data}}
+\subsubsection[{method\-\_\-descriptor}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const\-Pool\-Inf}$\ast$ method\-\_\-data\-::method\-\_\-descriptor}}\label{structmethod__data_ae4a01197c105855d2e337fb8875358a8}
+
+
+Definido na linha 143 do ficheiro core.\-h.
+
+\hypertarget{structmethod__data_acc4747daee0a91ee73f94422c8b833ab}{\index{method\-\_\-data@{method\-\_\-data}!method\-\_\-name@{method\-\_\-name}}
+\index{method\-\_\-name@{method\-\_\-name}!method_data@{method\-\_\-data}}
+\subsubsection[{method\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const\-Pool\-Inf}$\ast$ method\-\_\-data\-::method\-\_\-name}}\label{structmethod__data_acc4747daee0a91ee73f94422c8b833ab}
+
+
+Definido na linha 142 do ficheiro core.\-h.
+
+\hypertarget{structmethod__data_a2abb22d9f683ff1163f58d9b071902bd}{\index{method\-\_\-data@{method\-\_\-data}!modifiers@{modifiers}}
+\index{modifiers@{modifiers}!method_data@{method\-\_\-data}}
+\subsubsection[{modifiers}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t method\-\_\-data\-::modifiers}}\label{structmethod__data_a2abb22d9f683ff1163f58d9b071902bd}
+
+
+Definido na linha 144 do ficheiro core.\-h.
+
+\hypertarget{structmethod__data_a0c23eae5e5fe3302c9c1b7f8e5543e3c}{\index{method\-\_\-data@{method\-\_\-data}!stack\-\_\-size@{stack\-\_\-size}}
+\index{stack\-\_\-size@{stack\-\_\-size}!method_data@{method\-\_\-data}}
+\subsubsection[{stack\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}uint16\-\_\-t method\-\_\-data\-::stack\-\_\-size}}\label{structmethod__data_a0c23eae5e5fe3302c9c1b7f8e5543e3c}
+
+
+Definido na linha 149 do ficheiro core.\-h.
+
+
+
+A documentação para esta estrutura foi gerada a partir do seguinte ficheiro\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{core_8h}{core.\-h}\end{DoxyCompactItemize}

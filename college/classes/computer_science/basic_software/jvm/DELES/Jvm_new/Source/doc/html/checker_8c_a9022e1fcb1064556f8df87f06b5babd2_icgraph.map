@@ -1,0 +1,13 @@
+<map id="isMethodDescriptor" name="isMethodDescriptor">
+<area shape="rect" id="node2" href="$checker_8h.html#affb083bf8031f48e5c478f976fcce70f" title="isMethodDescriptor" alt="" coords="190,107,325,133"/>
+<area shape="rect" id="node3" href="$checker_8h.html#ad1feb70bcfb835f9472fda62313ffbb6" title="verifyConstantPool" alt="" coords="373,56,507,83"/>
+<area shape="rect" id="node12" href="$cruzeiro_8c.html#a044f22337572729fe6a256eac0ff4820" title="carregarClasse_01" alt="" coords="917,107,1048,133"/>
+<area shape="rect" id="node4" href="$checker_8h.html#a496eaab3cf87436d88f45f408fcc7b54" title="verifyClassfile" alt="" coords="555,56,661,83"/>
+<area shape="rect" id="node5" href="$cruzeiro_8c.html#a63268a53fa4c29f6663370e343c7a610" title="classLinkingVerification" alt="" coords="710,56,869,83"/>
+<area shape="rect" id="node6" href="$cruzeiro_8c.html#aa6c77c38ce0e50b4e897fa2470abfca7" title="ligadorDeClasse" alt="" coords="923,56,1042,83"/>
+<area shape="rect" id="node7" href="$cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="1103,56,1187,83"/>
+<area shape="rect" id="node9" href="$interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08" title="accessField" alt="" coords="1099,107,1191,133"/>
+<area shape="rect" id="node10" href="$interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa" title="invoke" alt="" coords="1115,157,1175,184"/>
+<area shape="rect" id="node11" href="$interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="1096,5,1195,32"/>
+<area shape="rect" id="node8" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1243,56,1293,83"/>
+</map>

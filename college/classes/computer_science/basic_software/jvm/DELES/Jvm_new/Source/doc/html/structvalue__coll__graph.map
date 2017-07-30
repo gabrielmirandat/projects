@@ -1,0 +1,17 @@
+<map id="value" name="value">
+<area shape="rect" id="node2" href="$structarray.html" title="array" alt="" coords="61,491,112,517"/>
+<area shape="rect" id="node14" href="$structvariable.html" title="variable" alt="" coords="303,187,369,213"/>
+<area shape="rect" id="node3" href="$struct_d_a_d_o_s___c_l_a_s_s_e.html" title="DADOS_CLASSE" alt="" coords="545,399,675,425"/>
+<area shape="rect" id="node5" href="$structmethod__data.html" title="method_data" alt="" coords="966,491,1063,517"/>
+<area shape="rect" id="node15" href="$structobject.html" title="object" alt="" coords="354,491,411,517"/>
+<area shape="rect" id="node4" href="$structconst_pool_inf.html" title="constPoolInf" alt="" coords="782,187,876,213"/>
+<area shape="rect" id="node12" href="$structfield__data.html" title="field_data" alt="" coords="514,292,592,319"/>
+<area shape="rect" id="node16" href="$struct_classe_de_arquivo.html" title="ClasseDeArquivo" alt="" coords="853,292,976,319"/>
+<area shape="rect" id="node6" href="$structmethod__info.html" title="method_info" alt="" coords="1057,187,1151,213"/>
+<area shape="rect" id="node7" href="$structattribute__info.html" title="attribute_info" alt="" coords="918,96,1015,123"/>
+<area shape="rect" id="node13" href="$structfield__info.html" title="field_info" alt="" coords="683,187,756,213"/>
+<area shape="rect" id="node8" href="$structexception__table__type.html" title="exception_table_type" alt="" coords="1119,5,1264,32"/>
+<area shape="rect" id="node9" href="$structclasses__type.html" title="classes_type" alt="" coords="592,5,691,32"/>
+<area shape="rect" id="node10" href="$structlocal__variable__table__type.html" title="local_variable_table_type" alt="" coords="715,5,883,32"/>
+<area shape="rect" id="node11" href="$structline__number__table__type.html" title="line_number_table_type" alt="" coords="907,5,1065,32"/>
+</map>

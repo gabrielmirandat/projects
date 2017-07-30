@@ -1,0 +1,9 @@
+<map id="verifyClassfile" name="verifyClassfile">
+<area shape="rect" id="node2" href="$checker_8c.html#a6ecc7358598704e5b4e9d77f06495482" title="verifyConstantPool" alt="" coords="160,80,293,107"/>
+<area shape="rect" id="node3" href="$checker_8c.html#ac5b6a6c9fa38ec400a3d15f1421089d8" title="isFieldDescriptor" alt="" coords="349,29,469,56"/>
+<area shape="rect" id="node6" href="$checker_8c.html#a3e295f32f754594e38f31297afebca97" title="verifyAccessFlags" alt="" coords="161,131,292,157"/>
+<area shape="rect" id="node7" href="$_leit_exib_8h.html#a3fe75659fbce73494617d80f3a705a67" title="getTipoAtributo" alt="" coords="171,181,282,208"/>
+<area shape="rect" id="node8" href="$checker_8c.html#a5c524d6b071cd201765ed95b10b9eedd" title="verifyBytecode" alt="" coords="172,232,281,259"/>
+<area shape="rect" id="node4" href="$checker_8c.html#a9022e1fcb1064556f8df87f06b5babd2" title="isMethodDescriptor" alt="" coords="342,104,477,131"/>
+<area shape="rect" id="node5" href="$_leit_exib_8h.html#a345c5213063b16760fc936583f24d536" title="ImprimeConstUtf8" alt="" coords="526,104,655,131"/>
+</map>
