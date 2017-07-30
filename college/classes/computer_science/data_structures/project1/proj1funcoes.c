@@ -13,7 +13,7 @@
 
     	/*Arquivo de implementacao das funcoes da interface do programa*/
 	
-#include"proj1biblioteca.h" /*interface da TAD*/
+#include "include/proj1biblioteca.h" /*interface da TAD*/
 
 char string[15];	/*variavel que guarda a informacao tirada dos textos*/
 int tamanho;		/*tamanho da variavel "string"*/

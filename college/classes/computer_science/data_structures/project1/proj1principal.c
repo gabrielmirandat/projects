@@ -13,7 +13,7 @@
 
     			/*arquivo principal : representa a main do programa*/
 			
-#include"proj1biblioteca.h"  /*aqui eh incluida a biblioteca de funcoes criadas*/
+#include "include/proj1biblioteca.h"  /*aqui eh incluida a biblioteca de funcoes criadas*/
 
 
 int main(){
