@@ -1,0 +1,341 @@
+ library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.mips_pkg.all;
+
+entity processador_mips_tb is
+end processador_mips_tb;
+
+architecture arch of processador_mips_tb is 
+	signal rst,clk : std_logic;
+	signal regi,reg_saidaula,reg_pc: std_logic_vector (31 downto 0);
+	
+	component processador_mips is 
+		port(
+			rst : in std_logic;
+			clk : in std_logic;
+			regi: out std_logic_vector(31 downto 0);
+			reg_saidaula,reg_pc: buffer std_logic_vector(31 downto 0)
+			);
+	end component;
+	begin 
+		i1: processador_mips
+		port map (
+			rst => rst,
+			clk => clk,
+			regi => regi,
+			reg_saidaula => reg_saidaula,
+			reg_pc => reg_pc
+			
+		);
+		
+		init: process
+		begin
+			rst <= '1';
+			clk <= '0';
+			wait for 4 ps;
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			rst <= '0'; 
+			
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+			
+			clk <= '1';
+			wait for 4 ps;
+			clk <= '0';
+			wait for 4 ps;
+		end process init;
+end arch; 

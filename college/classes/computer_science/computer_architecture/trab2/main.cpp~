@@ -1,0 +1,109 @@
+#include "funcoes.hpp"
+
+extern int32_t mem[256];           															//array que representa memoria
+extern int32_t s0, s1, t0, t1;       															//variaveis que representam regs
+
+extern int32_t mascara_byte;
+extern int32_t mascara_half ;
+extern int opcao;
+
+int main() {
+    uint32_t address;
+    uint16_t kte;
+    //int8_t dado8;							//ERRO! O próprio compilador trata isto como um char. Ler como int e casting para int8_t
+    int dado8;
+    int16_t dado16;
+    int32_t dado32;
+
+
+    cout << "1. lb\n2. lh\n3. lw\n4. sb\n5. sh\n6. sw\n7. sair" << endl;
+    cout << "selecione opcao:";
+    cin >> opcao;
+    getchar();
+
+    while(opcao != 7){
+        switch(opcao){
+            case 1:
+               cout << "insira o endereco:";
+               cin >> address;
+               getchar();
+               cout << "insira o offset em bytes:";
+               cin >> kte;
+               getchar();
+               //carrega byte
+               system("clear");
+	       lb(address, kte);
+               break;
+            case 2:
+               cout << "insira o endereco:";
+               cin >> address;
+               getchar();
+               cout << "insira o offset em bytes:";
+               cin >> kte;
+               getchar();
+               //carrega half
+               system("clear");
+               lh(address, kte);
+               break;
+            case 3:
+               cout << "insira o endereco:";
+               cin >> address;
+               getchar();
+               cout << "insira o offset em bytes:";
+               cin >> kte;
+               getchar();
+               //carrega word
+               system("clear");
+               lw(address, kte);
+               break;
+            case 4:
+               cout << "insira o endereco:";
+               cin >> address;
+               getchar();										
+               cout << "insira o offset em bytes:";
+               cin >> kte;
+               getchar();
+               cout << "insira dado a ser armazenado:";
+               cin >> dado8;
+               getchar();
+               //armazena byte
+               system("clear");
+               sb(address, kte, dado8);
+               break;
+            case 5:
+               cout << "insira o endereco:";
+               cin >> address;
+               getchar();
+               cout << "insira o offset em bytes:";
+               cin >> kte;
+               getchar();
+               cout << "insira dado a ser armazenado:";
+               cin >> dado16;
+               getchar();
+               //armazena half
+               system("clear");
+               sh(address, kte, dado16);
+               break;
+            case 6:
+               cout << "insira o endereco:";
+               cin >> address;
+               getchar();
+               cout << "insira o offset em bytes:";
+               cin >> kte;
+               getchar();
+               cout << "insira dado a ser armazenado:";
+               cin >> dado32;
+               getchar();
+               //armazena word
+               sw(address, kte, dado32);
+        }
+        getchar();;
+        system("clear");
+        cout << "1. lb\n2. lh\n3. lw\n4. sb\n5. sh\n6. sw\n7. sair" << endl;
+        cout << "selecione opcao:";
+        cin >> opcao;
+        getchar();
+    }
+
+    return 1;
+}

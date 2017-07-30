@@ -1,0 +1,204 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0\ula\simulation\modelsim
+Cconf_ulamips_case
+aulaMIPS_case
+Z1 eulaMIPS
+DAx4 work 7 ulamips 12 ulamips_case 22 z[1[HX>c7B8Cf5V?Ja1SD3
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z4 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 DEx4 work 7 ulamips 0 22 dJkWL][Km?^:O1bhcV92f0
+Z8 w1447695143
+Z9 dC:\altera\13.0\ula\simulation\modelsim
+Z10 8C:/altera/13.0/ula/ulaMIPS.vhdl
+Z11 FC:/altera/13.0/ula/ulaMIPS.vhdl
+l0
+L193
+VKJT3_13<n<eLZk]9nGQ083
+Z12 OV;C;10.1d;51
+31
+Z13 !s108 1447695256.112000
+Z14 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0/ula/ulaMIPS.vhdl|
+Z15 !s107 C:/altera/13.0/ula/ulaMIPS.vhdl|
+Z16 o-93 -work work -O0
+Z17 tExplicit 1
+!s100 i1S3Q5zEBMnoGlQH>Dbom2
+!i10b 0
+Cconf_ulamips_concorrente
+aulaMIPS_concorrente
+R1
+DAx4 work 7 ulamips 19 ulamips_concorrente 22 Pe8H1RBhZ`;YbilfF;Ce41
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+l0
+L186
+V0_10N52:Ad<DIoA]3QHGJ0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 i<jzcR^Ogc6DD6fdo65];0
+!i10b 0
+Cconf_ulamips_if_then_else
+aulaMIPS_if_then_else
+R1
+DAx4 work 7 ulamips 20 ulamips_if_then_else 22 k4KU1Ld=XFkgN83LCzV_f3
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R11
+l0
+L179
+VJ59T2FV67cLPSO?Q7O24n0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 ;5V=hUzdZR>:kLeI07a7C3
+!i10b 0
+Eulamips
+R8
+R2
+R3
+R4
+R5
+R6
+R9
+R10
+R11
+l0
+L17
+VdJkWL][Km?^:O1bhcV92f0
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 WF0VQ1?NXIaE?I2iL51jP0
+!i10b 1
+Aulamips_case
+R2
+R3
+R4
+R5
+R6
+R7
+l125
+L124
+Vz[1[HX>c7B8Cf5V?Ja1SD3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 DSlKJ^N1J1Qcka@jPAnaE2
+!i10b 1
+Aulamips_concorrente
+R2
+R3
+R4
+R5
+R6
+R7
+l90
+L84
+VPe8H1RBhZ`;YbilfF;Ce41
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 R6feNg9P`:>DlaOZ<V1?a2
+!i10b 1
+Aulamips_if_then_else
+R2
+R3
+R4
+R5
+R6
+R7
+l28
+L27
+Vk4KU1Ld=XFkgN83LCzV_f3
+R12
+31
+R13
+R14
+R15
+R16
+R17
+!s100 DSz^OnUei[n=SGg7WHTNd0
+!i10b 1
+Eulamips_tb
+Z18 w1447695236
+R2
+R3
+R4
+R5
+R6
+R9
+Z19 8C:/altera/13.0/ula/ulaMIPS_tb.vhdl
+Z20 FC:/altera/13.0/ula/ulaMIPS_tb.vhdl
+l0
+L7
+VT`gHCALA`mJ]RKZzBzf^m0
+!s100 _^d45;e<5db:H]LPKAo@H3
+R12
+31
+!i10b 1
+Z21 !s108 1447695257.064000
+Z22 !s90 -reportprogress|300|-93|-work|work|C:/altera/13.0/ula/ulaMIPS_tb.vhdl|
+Z23 !s107 C:/altera/13.0/ula/ulaMIPS_tb.vhdl|
+R16
+R17
+Aulamips_tb_arch
+DCx4 work 17 conf_ulamips_case 0 22 KJT3_13<n<eLZk]9nGQ083
+R2
+R3
+R4
+R5
+R6
+DEx4 work 10 ulamips_tb 0 22 T`gHCALA`mJ]RKZzBzf^m0
+l25
+L10
+VCCKi:^FYl@DPdS2;RWo311
+!s100 b;1aiZUHA]2cPS8ZSfgcd3
+R12
+31
+!i10b 1
+R21
+R22
+R23
+R16
+R17

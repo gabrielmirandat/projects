@@ -1,0 +1,12 @@
+ieeevarstd_logic_signedieee.sym/std_logic_signed/prim.var
+ieeesrcstd_logic_signedstdlogicsigned.vhd
+ieeevarnumeric_stdieee.sym/numeric_std/prim.var
+ieeesrcnumeric_stdnumstd.vhd
+ieeevarstd_logic_1164ieee.sym/std_logic_1164/prim.var
+ieeesrcstd_logic_1164stdlogic.vhd
+ieeevarstd_logic_arithieee.sym/std_logic_arith/prim.var
+ieeesrcstd_logic_arithstdlogicarith.vhd
+.varulamips(ulamips_if_then_else)ula.sym/ulamips/_ulamips_if_then_else.var
+.srculamips(ulamips_if_then_else)ulamips.vhdl
+.varconf_ulamips_if_then_elseula.sym/conf_ulamips_if_then_else/prim.var
+.srcconf_ulamips_if_then_elseulamips.vhdl

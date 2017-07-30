@@ -1,0 +1,5 @@
+ieeevarstd_logic_1164ieee.sym/std_logic_1164/prim.var
+ieeesrcstd_logic_1164stdlogic.vhd
+.varseteseg(arc1)seteseg.sym/seteseg/_arc1.var
+.srcseteseg(arc1)c:/altera/13.0/3.seteseg/seteseg.vhd
+.varsetesegseteseg.sym/seteseg/prim.var

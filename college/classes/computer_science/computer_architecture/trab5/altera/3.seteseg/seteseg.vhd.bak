@@ -1,0 +1,6 @@
+entity seteseg is
+port (
+codigo : in std_logic_vector (2 downto 0);
+segs : out std_logic_vector (6 downto 0)
+);
+end seteseg;

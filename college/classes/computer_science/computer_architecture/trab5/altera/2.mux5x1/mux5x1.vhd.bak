@@ -1,0 +1,11 @@
+entity mux5x1 is
+	port (
+		i0 : in std_logic_vector(2 downto 0);
+		i1 : in std_logic_vector(2 downto 0);
+		i2 : in std_logic_vector(2 downto 0);
+		i3 : in std_logic_vector(2 downto 0);
+		i4 : in std_logic_vector(2 downto 0);
+		sel : in std_logic_vector(2 downto 0);
+		sai : out std_logic_vector(2 downto 0)
+	);
+end entity;

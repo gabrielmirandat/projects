@@ -1,0 +1,21 @@
+//g++ -std=c++11 trab_v3.cpp -o trab3
+//endereco maximo = (256*4) - 1 = 1023
+
+#include <iostream>
+#include<cstdint>
+
+using namespace std;
+
+int32_t mem[256];           															//array que representa memoria
+int32_t s0, s1, t0, t1;       															//variaveis que representam regs
+
+int32_t mascara_byte = 0x000000FF;
+int32_t mascara_half = 0x0000FFFF;
+int opcao;
+
+int lb(uint32_t, uint16_t);
+int16_t lh(uint32_t, uint16_t);
+int32_t lw(uint32_t, uint16_t);
+void sb(uint32_t, uint16_t, int);
+void sh(uint32_t, uint16_t, int16_t);
+void sw(uint32_t, uint16_t, int32_t);

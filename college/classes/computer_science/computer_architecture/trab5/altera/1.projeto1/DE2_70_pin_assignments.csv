@@ -1,0 +1,59 @@
+# Copyright (C) 1991-2007 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+# Quartus II Version 7.2 Build 151 09/26/2007 SJ Full Version
+# File: D:\v1.21\DE2_70_TOP.csv
+# Generated on: Wed Nov 14 23:36:20 2007
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus II software.
+
+From,To,Assignment Name,Value,Enabled
+,iSW[0],Location,PIN_AA23,Yes
+,iSW[1],Location,PIN_AB26,Yes
+,iSW[2],Location,PIN_AB25,Yes
+,iSW[3],Location,PIN_AC27,Yes
+,iSW[4],Location,PIN_AC26,Yes
+,iSW[5],Location,PIN_AC24,Yes
+,iSW[6],Location,PIN_AC23,Yes
+,iSW[7],Location,PIN_AD25,Yes
+,iSW[8],Location,PIN_AD24,Yes
+,iSW[9],Location,PIN_AE27,Yes
+,iSW[10],Location,PIN_W5,Yes
+,iSW[11],Location,PIN_V10,Yes
+,iSW[12],Location,PIN_U9,Yes
+,iSW[13],Location,PIN_T9,Yes
+,iSW[14],Location,PIN_L5,Yes
+,iSW[15],Location,PIN_L4,Yes
+,iSW[16],Location,PIN_L7,Yes
+,iSW[17],Location,PIN_L8,Yes
+
+,oLEDR[0],Location,PIN_AJ6,Yes
+,oLEDR[1],Location,PIN_AK5,Yes
+,oLEDR[2],Location,PIN_AJ5,Yes
+,oLEDR[3],Location,PIN_AJ4,Yes
+,oLEDR[4],Location,PIN_AK3,Yes
+,oLEDR[5],Location,PIN_AH4,Yes
+,oLEDR[6],Location,PIN_AJ3,Yes
+,oLEDR[7],Location,PIN_AJ2,Yes
+,oLEDR[8],Location,PIN_AH3,Yes
+,oLEDR[9],Location,PIN_AD14,Yes
+,oLEDR[10],Location,PIN_AC13,Yes
+,oLEDR[11],Location,PIN_AB13,Yes
+,oLEDR[12],Location,PIN_AC12,Yes
+,oLEDR[13],Location,PIN_AB12,Yes
+,oLEDR[14],Location,PIN_AC11,Yes
+,oLEDR[15],Location,PIN_AD9,Yes
+,oLEDR[16],Location,PIN_AD8,Yes
+,oLEDR[17],Location,PIN_AJ7,Yes
+,|,Partition Hierarchy,no_file_for_top_partition,Yes

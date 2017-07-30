@@ -1,0 +1,12 @@
+Aluno: Gabriel Martins de Miranda
+Matricula: 13/0111350
+
+-> Entidade principal: mips_multi do arquivo mips_multi.vhd
+-> Entidade de teste: mips_multi_tb do arquivo mips_multi_tb.vhd
+
+-> O teste foi realizado através da variável clk que muda de valor a cada 10ns e 
+clk_rom que representa not(clk).
+
+-> O sinal rst começa em '0', muda para '1' por 15ns e depois volta para '0'.
+
+A simulação foi ajustada para durar até 2000ns no modelsim.

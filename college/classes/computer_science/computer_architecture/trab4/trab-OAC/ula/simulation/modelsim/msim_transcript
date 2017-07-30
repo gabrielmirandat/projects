@@ -1,0 +1,71 @@
+# Reading C:/altera/13.0/modelsim_ase/tcl/vsim/pref.tcl 
+# do ula_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/altera/13.0/ula/ulaMIPS.vhdl}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ulaMIPS
+# -- Compiling architecture ulaMIPS_if_then_else of ulaMIPS
+# -- Compiling architecture ulaMIPS_concorrente of ulaMIPS
+# -- Loading entity ulaMIPS
+# -- Compiling architecture ulaMIPS_case of ulaMIPS
+# -- Loading entity ulaMIPS
+# -- Compiling configuration conf_ulaMIPS_if_then_else
+# -- Loading entity ulaMIPS
+# -- Loading architecture ulaMIPS_if_then_else of ulaMIPS
+# -- Compiling configuration conf_ulaMIPS_concorrente
+# -- Loading entity ulaMIPS
+# -- Loading architecture ulaMIPS_concorrente of ulaMIPS
+# -- Compiling configuration conf_ulaMIPS_case
+# -- Loading entity ulaMIPS
+# -- Loading architecture ulaMIPS_case of ulaMIPS
+# 
+# vcom -93 -work work {C:/altera/13.0/ula/ulaMIPS_tb.vhdl}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ulaMIPS_tb
+# -- Compiling architecture ulaMIPS_tb_arch of ulaMIPS_tb
+# -- Loading configuration conf_ulamips_case
+# -- Loading entity ulaMIPS
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  ulaMIPS_tb
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps ulaMIPS_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_signed(body)
+# Loading ieee.numeric_std(body)
+# Loading work.ulamips_tb(ulamips_tb_arch)
+# Loading work.conf_ulamips_case
+# Loading work.ulamips(ulamips_case)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 60 ps
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /ulamips_tb/U3
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /ulamips_tb/U3

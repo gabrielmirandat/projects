@@ -1,0 +1,29 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/regbuf.vhd}
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/reg.vhd}
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/mips_pkg.vhd}
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/ulamips.vhd}
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/processador_mips.vhd}
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/mux_4.vhd}
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/mux_3.vhd}
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/mux_2.vhd}
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/mips_mem.vhd}
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/mips_control.vhd}
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/extsgn.vhd}
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/breg.vhd}
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/alu_ctr.vhd}
+
+vcom -93 -work work {C:/altera/13.0/Amanda_130100391/processador_mips_tb.vhd}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  processador_mips_tb
+
+add wave *
+view structure
+view signals
+run 1000 ps
