@@ -1,0 +1,40 @@
+compilador = microC
+simulador =  Proteus (tem de arduino também)
+
+microcontoladores: 8051
+Estamos vendo ATMEL2051  -  AT89C2051(ATMEGA)
+
+- I/O
+- Timer
+- Interrupção
+- PWM - modulação por largura de pulso
+- ADC - conversão analógico-digital
+- Comunicação serial
+	-> UART/USART
+	-> outros
+	
+simulador contrução de placas = Proteus tbm(botão vermelho - roteamento)
+É necessário um capacitor entre o VCC e o GND
+-> simples face (necessita fios - as mesmas vias -trilhas- dos dois lados da placa),
+-> dupla face (trilhas diferentes de cada lado)..
+-> placa-mãe tem 10 layers, FPGAs tem 12!!
+Não fazer placa com trilhas 90º = atrapalha corrente (indutores e capacitores parasitas).
+Tentar reduzir qtd de jumpers
+linhas vermelhas = camada top
+aterrar entre componentes analógicos e digitais.
+layers-> camada digital -> camada de cobre -> camada digital -> camada de cobre ->...
+
+imprimir em papel vegatal (revelação é a parte não escura)
+drimel, pintar, girar, revelar com ultravioleta(luz negra), agua, limpa, perfura.
+
+1. Limpar a placa (bom bril)
+2. Preparar a barrilha (=> barrilha + água)
+3. Preparar a tinta (=> tinta + oleo de banana)
+4. Pintar a placa e girar na maquininha dremel com durex
+5. Colocar no forno (30min)
+6. Revelar a placa (coloca o papel vegetal com o circuito impresso em cima da placa - virada- entre vidros e deixa a luz negra por 5 min)
+7. Passar o circuito na água com barrilha preparada e depois apenas limpar com água
+8. Corroer a placa
+9. Furar a placa
+10. Soldar e colocar os componentes
+
