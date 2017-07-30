@@ -1,0 +1,165 @@
+html{
+  max-width: 985px;
+}
+
+a{
+	font-size: 20px;
+	font-family: sans-serif;
+	text-align: left;
+	color: red;
+	text-decoration: none;
+}
+
+div{
+	text-align: justify;
+}
+
+.startbutton{
+	position: absolute;
+	top: 350px;
+	left: 350px;
+	width: 200px;
+	height: 50px;
+	font-size: 35px;
+	font-family: sans-serif;
+	text-align: center;
+	background-color: #07FF05;
+}
+
+.game{
+	position: relative;
+	width: 985px;
+	height: 900px;
+	border-top: 10px solid;
+	border-left: 10px solid;
+	border-right: 10px solid;
+	border-bottom: 10px solid;
+	border-width: 10px;
+	border-color: #000000;
+}
+
+.eye{
+	background-color: #000000;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	position: absolute;
+}
+
+.mouth{
+	background-color: #FF847A;
+	border-radius: 20px;
+	position: absolute;
+}
+
+#eye1{
+	width:20px;
+	height: 20px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+#eye2{
+	width:20px;
+	height: 20px;
+	position: absolute;
+	top: 20px;
+	left: 60px;
+}
+
+#mouthplayer{
+	width: 60px;
+	height: 10px;
+	top: 60px;
+	left: 20px;
+}
+
+.round{
+	border-radius: 100%;
+}
+
+.player{
+	background-color: #FFEF20;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 650px;
+	left: 400px;
+	overflow: auto;
+}
+
+.enemy{
+	background-color: #5C5C5C;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	display: inline;
+}
+
+#eye3{
+	width:10px;
+	height: 10px;
+	position: absolute;
+	top: 20px;
+	left: 15px;
+}
+
+#eye4{
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 20px;
+	left: 45px;
+}
+
+#mouthenemy{
+	width: 30px;
+	height: 8px;
+	top: 45px;
+	left: 20px;
+	background-color: #FF0000;
+}
+
+.ground{
+	background-image: linear-gradient(#CC9C39,#CC8031);
+	width: 985px;
+	height: 200px;
+}
+
+.sky{
+	background-image: linear-gradient(#00E0FF,#FFFFFF);
+	width:985px;
+	height:700px;
+}
+
+#resetbutton{
+	font-size: 15px;
+	font-family: sans-serif;
+	text-align: center;
+	width: 50px;
+	height: 20px;
+	border-color: #000000;
+	border-top: 2px solid;
+	border-left: 2px solid;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+	top: 500px;
+	left: 460px;
+	display: none;
+	position: absolute;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  display: inline-block;
+  font-size: 15px;
+  margin-left: -15px;
+  margin-right: 15px;
+}
+
+.container_12{
+}

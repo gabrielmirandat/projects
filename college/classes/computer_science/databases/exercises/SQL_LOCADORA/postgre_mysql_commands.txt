@@ -1,0 +1,59 @@
+#postgree
+
+$ pgadmin3 - start
+
+(sai com \q)
+sudo -u postgres psql postgres 
+
+(sai com \q para o usuário (postgre) e sai com exit para usuário (gabriel))
+sudo -i -u postgres			   
+psql
+
+\q : sai do postgreSQL
+createuser : create a new user or role
+
+Clique no database criado
+Tools -> Query Tools para acessar o editor SQL
+
+The pair that you want is PG_Dump and PG_Restore... (salvar e carregar)
+
+I use PG_Dump on a scheduled task to backup our PostGIS databases in a 
+format that can be restored easily - and more importantly will work!
+
+
+    Custom format
+    Z9 compression (to save space)
+    Include objectIDs
+
+and then to restore on the other end..
+
+Create a new empty database with the correct name and run:
+
+pg_restore -c -Fc -d DatabaseName c:\Your\path\BACKUP_Name.Backup
+
+    clean the database first
+    Custom format
+
+Works for me... but as with anything TEST IT FIRST, just because it works for me in PostGIS/SDE on this version doesn't guarantee it will work for you in your environment.
+
+pg_tblspc/16384/PG_9.3_201306121/16385" is missing.
+
+$ cd tmp/
+$ mkdir locadora
+$ cd locadora/
+$ ls -lart /tmp/locadora/
+$ sudo chown -c -R postgres: /tmp/locadora 
+$ pgadmin3 - start
+
+
+
+
+
+
+#mysql
+
+mysql -u root -p
+show databases;
+
+mysql -u root -p mysql < ddl_tables_creation.sql 
+show tables from mysql;
