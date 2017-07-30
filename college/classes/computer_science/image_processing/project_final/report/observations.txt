@@ -1,0 +1,11 @@
+Processador a 1.4 Ghz;
+
+Performance sem MEX: 3.0
+Performance com MEX: 9.7
+Performance máxima: 15.1
+
+Processador a 0.58 Ghz;
+
+Performance sem MEX: 1.3
+Performance com MEX: 3.5
+Performance máxima: 12.9
