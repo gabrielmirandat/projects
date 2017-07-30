@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: egpaper_for_review.aux
+The style file: ieee.bst
+Database file #1: egbib.bib
+Warning--I didn't find a database entry for "Authors06"
+Warning--I didn't find a database entry for "Authors06b"
+Warning--I didn't find a database entry for "Alpher03"
+Warning--I didn't find a database entry for "Alpher04"
+Name 1 in "B. Epshtein, E. Ofek, and Y. Wexler" has a comma at the end for entry Swtboris
+while executing---line 2145 of file ieee.bst
+Name 1 in "B. Epshtein, E. Ofek, and Y. Wexler" has a comma at the end for entry Swtboris
+while executing---line 2231 of file ieee.bst
+Warning--empty journal in Swtboris
+You've used 1 entry,
+            2120 wiz_defined-function locations,
+            512 strings with 3937 characters,
+and the built_in function-call counts, 482 in all, are:
+= -- 51
+> -- 13
+< -- 1
++ -- 5
+- -- 4
+* -- 28
+:= -- 72
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 5
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 22
+empty$ -- 36
+format.name$ -- 4
+if$ -- 107
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 8
+num.names$ -- 2
+pop$ -- 7
+preamble$ -- 1
+purify$ -- 4
+quote$ -- 0
+skip$ -- 23
+stack$ -- 0
+substring$ -- 45
+swap$ -- 11
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 4
+warning$ -- 1
+while$ -- 5
+width$ -- 2
+write$ -- 12
+(There were 2 error messages)

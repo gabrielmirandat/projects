@@ -1,0 +1,471 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage{cvpr}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfig}
+\usepackage[font={small}]{caption}
+\usepackage{subcaption} 
+
+
+
+% Include other packages here, before hyperref.
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+%\usepackage[pagebackref=true,breaklinks=true,letterpaper=true,colorlinks,bookmarks=false]{hyperref}
+
+\cvprfinalcopy % *** Uncomment this line for the final submission
+
+\def\cvprPaperID{****} % *** Enter the CVPR Paper ID here
+\def\httilde{\mbox{\tt\raisebox{-.5ex}{\symbol{126}}}}
+
+% Pages are numbered in submission mode, and unnumbered in camera-ready
+\ifcvprfinal\pagestyle{empty}\fi
+\begin{document}
+
+%%%%%%%%% TITLE
+\title{A SWT para detectar RBNs em corridas de rua}
+
+\author{Gabriel Martins de Miranda\\
+Universidade de Bras\'ilia\\
+www.unb.br\\
+{\tt\small gabrielmirandat@hotmail.com}
+% For a paper whose authors are all at the same institution,
+% omit the following lines up until the closing ``}''.
+% Additional authors and addresses can be added with ``\and'',
+% just like the second author.
+% To save space, use either the email address or home page, not both
+%\and
+%Second Author\\
+%Institution2\\
+%irst line of institution2 address\\
+%\small\url{http://www.author.org/~second}}
+}
+
+\maketitle
+\thispagestyle{empty}
+
+%\graphicspath{{'/home/gabriel/Downloads/1.DetectText-master/RELATORIO/1.THRESHOLD/'}}
+
+%%%%%%%%% ABSTRACT
+\begin{abstract}
+   Automatizar o processo de reconhecimento de RBNs em corridas de rua ainda \'e um processo n\~ao resolvido. Grande parte 
+   do tempo gasto por empresas de fotografias est\'a em etiquetar estas imagens, feito hoje manualmente. Apresentamos o poder 
+   de uma SWT diferenciada capaz de detectar com precis\~ao larguras de tra\c{c}ados em imagens com caracteres de bordas finas
+   (tags de corredores em corridas de rua). Do algoritmo temos um ponto de partida para poupar estas pessoas deste trabalho 
+   manual cansativo e ma\c{c}ante.
+\end{abstract}
+
+%%%%%%%%% BODY TEXT
+\section{Introdu\c{c}\~ao}
+
+%B. Epshtein, E. Ofek, and Y. Wexler, “Detecting text in natural scenes with stroke width transform,” in Proc. Comput. Vision Pattern Recognit. ,2010, pp. 2963–2970.
+%Ben-Ami, I., Basha, T. and Avidan, S., 2012. Racing Bib Numbers Recognition. In Proc of British Machine Vision Conference 2012. 19.1--19.10. 
+
+
+Fot\'ografos (ou empresas ) que lidam com corridas de rua possuem a tarefa de etiquetar suas imagens para 
+permitir acesso r\'apido a um determinado corredor. Automatizar este processo poderia poupar horas e horas de pobres pessoas
+que trabalham de forma ma\c{c}ante num movimento estressante e repetitivo. Autores como Boris Epshtein \etal. proporam um 
+brilhante ponto de partida em~\cite{Swtboris} para solucionar, de forma geral, problemas deste tipo, ou melhor, qualquer 
+tipo de problema que envolva caracteres em imagens com cen\'arios naturais. Apesar deste grandioso ponto de partida, ainda 
+hoje n\~ao \'e uma quest\~ao completamente resolvida. Em vez de propor uma solu\c{c}\~ao geral, n\'os pensamos de forma 
+segmentada, ou seja, dirigir o que foi proposto em~\cite{Swtboris} para solucionar problemas deste tipo. Usaremos o termo proposto 
+por Ben\-Ami \etal em seu trabalho descrito em~\cite{Rbniban}, Racing Bib Number Recognition (RBN) para nos dirigirmos \`as 
+etiquetas utilizadas pelos corredores, cujo prop\'osito primeiro do artigo ser\'a detect\'a-las no maior n\'umero poss\'ivel destas 
+fotografias. Observando imagens de corrida de rua, pudemos concluir algumas situa\c{c}\~oes que frequentemente ocorrem e da\'i 
+formular nosso algoritmo com base nestes fatos: a RBN pode possuir algarismos falhados. As magnitudes das larguras dos 
+algarismos numa RBN n\~ao s\~ao elevadas. H\'a grandes varia\c{c}\~oes de ilumina\c{c}\~ao presente numa mesma RBN. As RBNs 
+podem estar dispostas em v\'arias orienta\c{c}\~oes. Podem haver RBNs de apenas 2 algarismos.
+
+Diferente de~\cite{Rbniban}, que prop\~oe encontrar poss\'iveis regi\~oes em que h\'a maior probabilidade de se encontrar 
+uma RBN para s\'o ent\~ao aplicar a SWT, nosso algoritmo \'e focado em direcionar a SWT para ganhar precis\~ao e velocidade 
+de forma inovadora.
+
+%------------------------------------------------------------------------
+\section{Metodologia}
+
+Para lidar com o problema de reconhecer RBNs e tentar alcan\c{c}ar o estado da arte, as seguintes decis\~oes foram tomadas:
+
+1) Threshold para o detector de bordas
+
+Os limites para o algoritmo de Canny, proposto em~\cite{Canny}, passaram de 175 para 300 no limite inferior, e de 320 para 
+600 no limite superior. A mudan\c{c}a possui o objetivo principal de remover o ru\'ido caracter\'istico de RBNs falhadas.
+Os valores SW nos algarismos com muitos detalhes/ru\'idos caracter\'isticos destas falhas acabam tornando-se muito variados 
+o que ocasiona o descarte destes pelo processo. Como as RBNs possuem fundos bem destacados, como preto no branco, este mudan\c{c}a 
+mant\'em apenas bordas relevantes.
+
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{0.9}{\includegraphics[width=0.8\linewidth]{"../1.THRESHOLD/nat"}}
+ \captionof{figure}{Observe esta RBN. Em tags de corridas de rua \'e normal este tipo de falhas.}
+ \end{minipage}
+
+
+\vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../1.THRESHOLD/img11"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas, com thresholds entre 175 e 320. Perceba a quantidade de ru\'ido presente dentro dos algarismos
+    (b) A transformada SW aplicada em (a). As falhas atrapalham consideravelmente o resultado da transformada.
+    (c) Ap\'os descarte das BBs. Podemos ver que pedacos do algarismo foram descartados j\'a na etapa anterior.
+    (d) Resultado final, ap\'os descarte de BBs e chaining. Veja que grande parte do algarismo foi descartado.
+ }
+ \end{minipage}
+ 
+\vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../1.THRESHOLD/img22"}}
+ \captionof{figure}{(a) Utilizando a mesma imagem, por\'em com os thresholds setados para 300 e 600. Observe que grande parte do ru\'ido que 
+   estava presente dentro dos algarismos desapareceu.
+    (b) A transformada SW aplicada em (a). Uma continuidade maior dos algarismos \'e obtida.
+    (c) Mesmo ap\'os o descarte das BBs, vemos que o algarismo como um todo \'e mantido.
+    (d) Resultado final, ap\'os descarte de BBs e chaining. Grande parte da RBN foi mantida.
+ }
+ \end{minipage}
+
+%------------------------------------------------------------------------
+2) Precis\~ao multiplicada pelas imagens gradiente.
+
+A precis\~ao proposta, por ter um valor relativo elevado, adiciona elementos desnecess\'arios que posteriormente ser\~ao 
+utilizadados pela SWT como ponto de partida, podendo ocasionar ru\'idos pr\'oximos \`as RBNs. O que fizemos foi diminuir esta 
+constante de 0.5 para 0.2.
+
+  \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{0.9}{\includegraphics[width=0.8\linewidth]{"../2.PRECISAO/nat"}}
+ \captionof{figure}{Uma RBN comum.}
+ \end{minipage}
+ 
+ 
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../2.PRECISAO/img11"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas com Canny.
+    (b) A transformada SW aplicada em (a). Observe que um falso valor de tracado surge devido \'a constante de 0.5.
+    (c) Ap\'os descarte das BBs. Vemos que o algarismo que apresenta aquela falso tracado foi descartado.
+    (d) Resultado final, ap\'os descarte de BBs e chaining. 
+ }
+ \end{minipage}
+ 
+\vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../2.PRECISAO/img22"}}
+ \captionof{figure}{(a) Bordas atrav\'es de Canny.
+    (b) A transformada SW aplicada em (a). Observe que aquele falso tracado desaparece quando utilizamos a constante de 0.2.
+    (c) Mesmo ap\'os o descarte das BBs, vemos que todos os algarismo da RBN sao mantidos.
+    (d) Resultado final, bastante satisfat\'orio.
+ }
+ \end{minipage}
+
+%------------------------------------------------------------------------
+3) Dist\^ancia das cores das CCs
+
+Numa mesma RBN \'e comum que exista grandes varia\c{c}\~oes de luz, j\'a que grande parte das corridas ocorre \`a luz 
+do dia e o local da tag reflete bastante pois frequentemente possui fundo branco. Pode acontecer tamb\'em que parte da 
+tag fique sombreada, dificultando o reconhecimento se a restri\c{c}\~ao de cores para o chaining for muito elevado. Com 
+isto, alteramos este valor de 1600 para 5000.
+ 
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{0.9}{\includegraphics[width=0.8\linewidth]{"../5.COR/nat2"}}
+ \captionof{figure}{Uma RBN comum. Perceba que o algarismo 5 se encontra mais sombreado que os outros.}
+ \end{minipage}
+ 
+ 
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../5.COR/img11"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas com Canny.
+    (b) A transformada SW aplicada em (a).
+    (c) Ap\'os descarte das BBs.
+    (d) Resultado final. Podemos ver aqui que o algarismo 5 foi descartado do n\'umero encontrado. Isto acontece pois este 
+    algarismo est\'a mais sombreado que os outros da mesma RBN.
+ }
+ \end{minipage}
+ 
+  
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../5.COR/img22"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas com Canny.
+    (b) A transformada SW aplicada em (a).
+    (c) Ap\'os descarte das BBs.
+    (d) Resultado final, ap\'os descarte de BBs e chaining. Aqui, gracas a suavizac\~ao das dist\^ancias de cores, foi poss\'ivel 
+    identificar o algarismo 5 como algarismo pertencente \`a RBN como um todo.
+ }
+ \end{minipage}
+ 
+%-------------------------------------------------------------------------
+4) \^Angulo entre CCs para chaining
+
+Durante a corrida, muitas RBNs podem rotacionar no corpo do corredor. Com isto, o \^angulo entre os algarismos pode variar 
+bastante. Pensando nisto, mudamos a restri\c{c}\~ao de que para se formar um chaining entre as BBs seria permitido no 
+m\'aximo um \^angulo de 30 graus e passamos este \^angulo para 60 graus.
+
+ \vspace{5.75\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{0.9}{\includegraphics[width=0.8\linewidth]{"../6.ANGULO/nat2"}}
+ \captionof{figure}{Uma RBN comum. Perceba que ela se encontra rotacionada.}
+ \end{minipage}
+ 
+ 
+ \vspace{5.75\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../6.ANGULO/img11"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas com Canny.
+    (b) A transformada SW aplicada em (a).
+    (c) Ap\'os descarte das BBs.
+    (d) Resultado final. Como o algarismo 3 possui um certo \^angulo com os algarismo zeros, ele foi descartado.
+ }
+ \end{minipage}
+ 
+  
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../6.ANGULO/img22"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas com Canny.
+    (b) A transformada SW aplicada em (a).
+    (c) Ap\'os descarte das BBs.
+    (d) Resultado final, ap\'os descarte de BBs e chaining. Por permitir \^angulos de at\'e 60 graus, consegue-se unir o 
+    algarismo 3 \'a sua RBN.
+ }
+ \end{minipage}
+ 
+%-------------------------------------------------------------------------
+5) N\'umero m\'inimo de BBs para que se forme uma chain
+
+RBNs frequentemente possuem de 2 a 5 algarismos. Para tentar identificar a maioria das tags, mudamos a restri\c{c}\~ao 
+para que seja necess\'ario um m\'inimo de duas BBs para que se forme uma chain. 
+
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{0.9}{\includegraphics[width=0.8\linewidth]{"../7.COMPONENTS/nat2"}}
+ \captionof{figure}{Uma RBN comum. Note que ela s\'o \'e formada por dois algarismos.}
+ \end{minipage}
+ 
+ 
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../7.COMPONENTS/img11"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas com Canny.
+    (b) A transformada SW aplicada em (a).
+    (c) Ap\'os descarte das BBs.
+    (d) Resultado final. Nada aparece, j\'a que n\~ao aconteceu chaining.
+ }
+ \end{minipage}
+ 
+  
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../7.COMPONENTS/img22"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas com Canny.
+    (b) A transformada SW aplicada em (a).
+    (c) Ap\'os descarte das BBs.
+    (d) Resultado final, ap\'os descarte de BBs e chaining. Por permitir um m\'inimo de duas BBs, o chaining ocorre e a 
+    RBN n\~ao \'e descartada.
+ }
+ \end{minipage}
+ 
+%------------------------------------------------------------------------- 
+6) Valor mediano para o raio na segunda passada
+
+Aqui escolhemos um valor menor que a mediana como SW para compor o raio. 
+Isto homogeniza os valores dos tra\c{c}ados (caracter\'istica tamb\'em adquirida com a suaviza\c{c}\~ao na 
+detec\c{c}\~ao de bordas) num mesmo algarismo e assim dificulta que ele seja rejeitado. Em vez de usarmos a mediana como valor SW 
+de todo o raio, utilizamos o valor tamanho\_do\_vetor/12. Isto faz com que um valor SW menor em magnitude seja escolhido como 
+o SW de todo o raio.
+Esta mudan\c{c}a \'e interessante quando analizamos o algarismo 4. Por ter um cruzamento perpendicular, possui tanto 
+larguras horizontais quanto verticais identificadas pela SWT original. O que acontece \'e que a segunda passada do algoritmo 
+para homogeneizar estes valores encontra dificuldades no processo, e frequentemente este algarismo \'e rejeitado. Observe 
+as imagens que se seguem:
+
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{0.9}{\includegraphics[width=0.8\linewidth]{"../4.MEDIAN/numeros/nat"}}
+ \captionof{figure}{Algarismos de 0 a 9.}
+ \end{minipage}
+ 
+ 
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../4.MEDIAN/numeros/img11"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas com Canny.
+    (b) A transformada SW aplicada em (a). Note que algumas descontinuidades ocorreram nos algarismos 0 e 1 devido 
+    a falhas nas bordas. Por\'em, o algarismo 4 est\'a em perfeitas condicoes.
+    (c) Ap\'os descarte das BBs. O algarismo 4, mesmo estando em boas condicoes, foi rejeitado. Isto acontece devido \`a 
+    grandes diferencas dos valores SW nos raios que comp\~oem o 4.
+    (d) Resultado final. O 2 e o 3 foram rejeitados pois inicialmente n\~ao havia formac\~ao de chain com apenas dois algarismos.
+ }
+ \end{minipage}
+ 
+  
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../4.MEDIAN/numeros/img22"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas com Canny.
+    (b) A transformada SW aplicada em (a). Perceba que agora as cores no algarismo 4 est\~ao distribu\'idas de forma mais 
+    homog\^enea. 
+    (c) Ap\'os descarte das BBs. Nenhum algarismo foi rejeitado no processo de formac\~ao das BBs. Note que devido ao 
+    problema na detecc\~ao das bordas, os algarismos 0 e 1 ficaram unidos em uma s\'o BB.
+    (d) Resultado final, ap\'os descarte de BBs e chaining. Todos os algarismos foram mantidos.
+ }
+ \end{minipage}
+
+Vejamos na pr\'atica:
+
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{0.9}{\includegraphics[width=0.8\linewidth]{"../4.MEDIAN/nat2"}}
+ \captionof{figure}{Uma RBN com algarismos 4.}
+ \end{minipage}
+ 
+ 
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../4.MEDIAN/img11"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas com Canny.
+    (b) A transformada SW aplicada em (a).
+    (c) Ap\'os descarte das BBs. Um dos algarismos 4 foi descartado.
+    (d) Resultado final. Houve descarte de grande parte da tag.
+ }
+ \end{minipage}
+ 
+  
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../4.MEDIAN/img22"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas com Canny.
+    (b) A transformada SW aplicada em (a). Note que n\~ao se consegue perceber diferen\c{c}a com o caso em que se usa a 
+    mediana.
+    (c) Ap\'os descarte das BBs. Nenhum dos algarismos foi descartado.
+    (d) Resultado final, ap\'os descarte de BBs e chaining.
+ }
+ \end{minipage} 
+
+%-------------------------------------------------------------------------
+7) Limitando o tamanho m\'aximo dos tra\c{c}ados da SWT
+
+Os resultados apresentados na SWT original apresentam larguras de qualquer tamanho, dispostas de qualquer forma. Acontece que 
+os algarismos presentes numa RBN tem um tamanho de largura do tra\c{c}ado extremamente limitado. Se considerarmos que uma RBN 
+esteja disposta no peito de um corredor de forma que uma imagem tirada contenha o rosto dele na parte superior e a tag na inferior, 
+de forma totalmente preenchida, podemos estimar que a largura dos algarismos n\~ao passam de 30 pixels. Diante disto, cortamos do resultado 
+da SWT larguras acima de 30 pixels, e com isto obtivemos resultados interessant\'issimos. Al\'em de velocidade e remo\c{c}\~ao 
+de ru\'ido, conseguimos detectar em v\'arios casos em que larguras n\~ao interessantes tornavam-se ru\'ido e impediam a defini\c{c}\~ao 
+de BBs consistentes. Observe um exemplo:
+
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \includegraphics[width=0.8\linewidth]{"../3.POINTS_SIZE/natural2"}
+ \captionof{figure}{Uma imagem de uma corrida.}
+ \end{minipage}
+ 
+  \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \includegraphics[width=0.8\linewidth]{"../3.POINTS_SIZE/stroke11"}
+ \captionof{figure}{A SWT original aplicada na imagem. Observe a quantidade de informac\~ao que n\~ao nos \'e interessante. }
+ \end{minipage}
+ 
+  \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \includegraphics[width=0.8\linewidth]{"../3.POINTS_SIZE/stroke22"}
+ \captionof{figure}{A SWT com restric\~ao nos tracados. O que resta s\~ao apenas raios relevantes para a detecc\~ao de RBNs.}
+ \end{minipage}
+ 
+ Olhando mais de perto, temos:
+ 
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../3.POINTS_SIZE/img11"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas com Canny.
+    (b) A transformada SW aplicada em (a). Observe a proximidade de raios irrelevantes com os algarismos da RBN.
+    (c) Ap\'os descarte das BBs. O algarismo 1 foi rejeitado pois n\~ao foi poss\'ivel criar uma BB que o envolvesse.
+    (d) Resultado final, com a tag incompleta.
+ }
+ \end{minipage}
+ 
+  
+ \vspace{2\baselineskip}\vspace{-\parskip}
+ \begin{minipage}{\linewidth}
+ \centering
+ \scalebox{1.15}{\includegraphics[width=0.8\linewidth]{"../3.POINTS_SIZE/img22"}}
+ \captionof{figure}{(a) Ap\'os detecc\~ao de bordas com Canny.
+    (b) A transformada SW aplicada em (a). O raio irrelevante sumiu devido \`a restric\~ao da largura m\'axima.
+    (c) Ap\'os descarte das BBs. Vemos que aqui nenhum dos algarismos da tag \'e rejeitado.
+    (d) Resultado final, ap\'os descarte de BBs e chaining. Nada \'e perdido e obtemos um resultado satisfat\'orio.
+ }
+ \end{minipage}
+ 
+\section{Resultados}
+
+Num banco de 132 imagens de uma mesma corrida, obtivemos reconhecimento de todas as RBNs em 87.93\% das imagens, contra 65.52\% 
+utilizando a SWT original. Das 14 imagens n\~ao reconhecidas, tinhamos imagens borradas e RBNs de tamanho muito pequeno. 7 das 
+imagens eram irreconhec\'iveis devido \`a oclus\~ao de parte da RBN.
+
+Num banco de 125 imagens de corridas diferentes, obtivemos o resultado de 75.60\% , contra 47.15\% utilizando a SWT original.
+Das 30 n\~ao reconhecidas, uma estava relativamente borrada, 9 possu\'iam grande mudan\c{c}a de ilumina\c{c}\~ao na RBN e as outras 
+20 possuiam RBN com pouco contraste com o fundo. 
+
+O desempenho tamb\'em melhorou bastante. Contabilizando o tempo total para rodar ambos os algoritmos no banco de imagens completo 
+com 257 imagens, nossa abordagem levou 4 minutos e 40 segundos contra 20 minutos e 48 segundos com a SWT original. 
+
+\begin{table}[bp]
+\centering
+\scalebox{0.707}{
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+                & \multicolumn{4}{l|}{Banco 1 - 132 imagens}                    & \multicolumn{4}{l|}{Banco 2 - 125 imagens}                    & Banco total - 257 imagens \\ \hline
+                & Identificados & N\~ao identificados & Irreconhec\'iveis & Acerto  & Identificados & N\~ao identificados & Irreconhec\'iveis & Acerto  & Tempo gasto               \\ \hline
+Nosso algoritmo & 102           & 14                & 16              & 87.93\% & 93            & 30                & 2               & 75.60\% & 4 min 40 seg              \\ \hline
+SWT original    & 76            & 40                & 16              & 65.52\% & 58            & 65                & 2               & 47.15\% & 20 min 48 seg             \\ \hline
+\caption{Comparando nosso algoritmo com a SWT original.}
+\label{my-label}
+\end{tabular}}
+\end{table}
+
+\section{Conclus\~ao}
+
+Neste trabalho mostramos como utilizar a Stroke Width Transform numa abordagem em que n\~ao se possui interesse em caracteres 
+de tamanho de largura elevado, no caso, em RBNs de corridas de rua. Atrav\'es da restri\c{c}\~ao do tamanho m\'aximo de 
+largura, conseguimos melhorar os resultados da SWT original, assim como aumentar a velocidade do algoritmo.
+Das imagens n\~ao reconhecidas, tinhamos imagens borradas, tags de tamanho muito pequeno e baixo contraste dos algarismos 
+com o fundo. \'E importante salientar que este \'ultimo torna-se um problema maior devido \'a suaviza\c{c}\~ao dos filtros 
+de borda e da constante de precis\~ao multiplicada pelas imagens gradiente. Al\'em disto, apesar de termos minimizado a 
+quantidade de ru\'ido, ele surgiu de outras formas dadas as modifica\c{c}\~oes, constituindo um vi\'es do algoritmo. 
+Sugerimos que trabalhos futuros se empenhem em corrigir estes problemas.
+ 
+ 
+{\small
+\bibliographystyle{ieee}
+\bibliography{egbib}
+}
+
+\end{document}
