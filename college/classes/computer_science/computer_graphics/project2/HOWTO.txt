@@ -1,0 +1,14 @@
+Aluno: Gabriel Martins de Miranda
+Matricula: 13/0111350
+
+-No terminal:
+  -Vá até a pasta raiz (aquela que contém o Makefile) da árvore de diretórios do .zip enviado.
+  -Digite make, será criado o excutável na pasta responda.
+  -Execute.
+  
+-Resposta: Com glEnable(GL_CULL_FACE), o programa só vai renderizar a face que está visível para a câmera. Como a rotação no vertex shader
+ rotaciona todo o cenário de forma que vemos o topo e o fundo das pirâmides e a base quadrada da pirâmide foi definida de forma anti-horária, 
+ só conseguimos olhar a base quadrada por dentro da pirâmide. Aí como por fora a base não aparece (é a face traseira) e a câmera só renderiza
+ o que está na frente, a base quandrada fica na frente do resto da pirâmide sendo que ela é invisível, aí não vemos nada. Uma solução é desa-
+ bilitar glEnable(GL_CULL_FACE) para que tudo seja renderizado. 
+ 
