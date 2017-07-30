@@ -1,0 +1,44 @@
+Aluno: Gabriel Martins de Miranda 130111350
+
+*horários de aula de MP no laboratório, que o professor disponibiliza para fazermos o trabalho
+
+**No começo do trabalho, queríamos fazer o jogo com o ODE. Estudamos por um tempo, mas não conseguimos compilar direito qualquer arquivo. Algumas diretivas de compilação necessárias não foram encontradas  na internet e nem um motor gráfico necessário. Optamos, então, por mudar para o Ncurses, que parecia ser mais factível de fazer compilar os programas.
+
+
+Data   | Horas trabalhadas | Tipo Tarefa                  | Descrição da Tarefa Realizada
+19/10  |   09:00-13:00     | Estudar API do ODE**         |  Aprender principais funções
+22/10  |   16:00-18:00*    | Estudar exemplos do  ODE**   |  Estudar exemplos do ODE que vem quando         |                   |                              |  baixa a Engine
+26/10  |   09:00-13:00     | Estudar API do ODE**         |  Aprender principais funções
+26/10  |   15:00-18:30     | Estudar exemplos do  ODE**   |  Estudar exemplos
+26/10  |   09:00-13:00     | Estudar API do ODE**         |  Aprender principais funções
+26/10  |   15:00-18:30     | Estudar exemplos do  ODE**   |  Estudar exemplos que vem quando
+       |                   |                              |  baixa a Engine
+29/10  |   16:00-18:00*    | Estudar API do ODE**         |  Aprender principais funções
+01/11  |   09:00-13:00     | Estudar API do Ncurses       |  Ver principais funções
+01/11  |   14:00-16:00     | Estudar aulas e laboratórios |  Estudar diferentes tipos de makefile   
+       |                   | relacionados                 |
+02/11  |   09:00-10:00     | Projetar                     |  Tentar fazer os primeiros módulos
+02/11  |   10:00-12:00     | Codificar módulo             |  Tentar fazer os primeiros módulos
+02/11  |   12:00-13:00     | Especificar módulos          |  Fazer especificação de acordo com os    05/11  |                   |                              |  slides 
+05/11  |   16:00-18:00*    | Estudar API do Ncurses       |  Ver principais funções
+06/11  |   17:00-20:30     | Projetar                     |  Projetar funções do menu e de                  |                   |                              |  movimentação
+08/11  |   10:00-12:00     | Redigir casos de teste       |  Testes com o CUnit para as funções do          |                   |                              |  menu
+08/11  |   12:00-13:00     | Realizar  casos de teste     |  Testes com o CUnit para as funções do          |                   |                              |  menu
+09/11  |   11:00-13:30     | Codificar módulo             |  Tentar fazer os módulos de movimentação
+12/11  |   16:00-18:00*    | Estudar API do Ncurses       |  Ver principais funções
+14/11  |   17:00-22:30     | Codificar módulo             |  Estudar código para fazer o menu
+15/11  |   10:00-12:00     | Projetar                     |  Projetar funções do menu e de                  |                   |                              |  movimentação
+15/11  |   14:00-19:00     | Codificar módulo             |  Fazer funções do menu
+16/11  |   10:00-13:00     | Codificar módulo             |  Separar módulos
+16/11  |   14:30-22:30     | Codificar funções            |  Fazer funções do menu e iniciação do           |                   |                              |  jogo  
+17/11  |   07:00-10:00     | Documentar com Doxygen       |  Fazer a documentação em javascript
+17/11  |   10:00-11:00     | Especificar módulo           |  Especificar o módulo funcoes.h
+18/11  |   17:00-22:00     | Codificar módulo             |  Codificar as funções relacionadas à            |                   |                              |  ângulo
+18/11  |   22:00-23:00     | Rodar os splint e retirar    |  Rodar splint
+       |                   | warnings                     |
+19/11  |   16:00-18:00*    | Documentar com Doxygen       |  Arrumar o que faltava   
+21/11  |   14:00-21:00     | Codificar módulo             |  Fazer novas funções para atender à             |                   |                              |  distância máxima de tiro, vida, dano           |                   |                              |  por segundo e dano sofrido pela unidade
+       |                   |                              |  depende do ângulo de ataque e os               |                   |                              |  inimigos
+22/11  |   08:00-11:00     | Redigir casos de teste       |  Testes com o CUnit para novas funções 22/11  |   12:00-14:00     | Realizar  casos de teste     |  Testes com o CUnit para novas funções
+23/11  |   13:00-14:00     | Instrumentar via Gcov        |  Utilizar o Gcov
+23/11  |   16:00-18:00     | Documentar com Doxygen       |  Arrumar o que faltava   

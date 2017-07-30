@@ -1,0 +1,18 @@
+Aluno: Pedro Loubach Guedes 120132664
+
+Data		|	Horas trabalhadas	|	Tipo Tarefa										|	Descrição da tarefa realizada
+03/11		|	13:00 - 18:00			|	Estudar API do ODE						|	aprender a utilizar as principais funções
+03/11		|	21:00 - 23:30			|	Estudar API do ODE						|	aprender a utilizar as principais funções
+06/11		|	20:00 - 22:00			|	Estudar API do ODE						|	aprender a utilizar as principais funções
+06/11		|	22:00 - 00:00			|	Executar funções do ODE				|	tentar aplicar funções em código próprio
+08/11		|	10:00 - 12:00			|	Estudar API do ODE						|	aprender a utilizar as principais funções
+08/11		|	15:00 - 18:00			|	Estudar API do ODE						|	aprender a utilizar as principais funções
+11/11		|	08:00 - 10:00			|	Estudar API do ODE						|	aprender a utilizar as principais funções
+11/11		|	22:00 - 00:00			|	Executar funções do ODE				|	tentar aplicar funções em código próprio
+13/11		|	21:00 - 22:00			|	Estudar API do NCurses				|	aprender a utilizar as principais funções
+17/11		|	21:00 - 23:00			|	Estudar API do NCurses				|	aprender a utilizar as principais funções
+19/11		| 16:00 - 18:00			|	Verificar código fonte				|	verificar implementação das funções utilizadas
+19/11		|	21:30 -	22:00			|	Especificar módulo de teste		|	especificar o módulo de testes.h
+24/11		|	13:00 - 14:00			|	Verificar código fonte				|	verificar implementação das funções utilizadas
+25/11		|	17:00 - 17:30			|	Especificar módulo de teste		|	especificar o módulo teste.h
+25/11		|	17:30 - 18:00			|	Especificar módulo de funções	|	especificar o módulo funcoes.h
