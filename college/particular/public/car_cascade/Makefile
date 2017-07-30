@@ -1,0 +1,8 @@
+INC= -I '/home/gabriel/includes'
+SRC= /home/gabriel/includes
+
+all:
+	clear
+	g++ -o  proj $(SRC)/auxiliar.cpp ${proj}  $(INC) -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_video -lopencv_objdetect
+
+	
