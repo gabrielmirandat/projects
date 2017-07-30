@@ -1,0 +1,1 @@
+produt = foldl (*) 1
