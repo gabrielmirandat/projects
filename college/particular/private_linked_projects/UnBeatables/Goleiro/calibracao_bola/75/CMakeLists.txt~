@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( pvc_130111350_2 )
+find_package( OpenCV REQUIRED )
+add_executable( pvc_130111350_2 pvc_130111350_2.cpp )
+target_link_libraries( pvc_130111350_2 ${OpenCV_LIBS} )

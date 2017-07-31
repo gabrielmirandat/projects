@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="11.3">
+  <zoom_level>7</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>406</x>
+      <y>21</y>
+      <w>147</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>/FieldEntity/
+--
+- position_ : cv::Point2f
+--
++ virtual detectPosition() 
++ getPosition() : cv::Point2f
++ setPosition()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>182</x>
+      <y>154</y>
+      <w>161</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>/StaticInfieldEntity/
+--
+- lines_ : std::vector&lt;cv::Vec2f&gt;
+--
+void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>280</x>
+      <y>70</y>
+      <w>153</w>
+      <h>97</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>140;21;21;84</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>707</x>
+      <y>161</y>
+      <w>133</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>/DynamicInfieldEntity/
+--
+- pose_ : cv::Mat
+- velocity_ : float
+--
++ detectPose()
++ detectVelocity()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>511</x>
+      <y>70</y>
+      <w>251</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>21;21;238;91</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>14</x>
+      <y>364</y>
+      <w>126</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Post
+--
+- width_ : double
+- left_line_ : cv::Vec2f
+- right_line_ : cv::Point2f
+--
+detectPosition()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>154</x>
+      <y>364</y>
+      <w>126</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Goal
+--
+- left_line_ : cv::Point2f
+- right_line_ : cv::Point2f
+--
++ detectPosition()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>294</x>
+      <y>364</y>
+      <w>126</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Base
+--
+- top_distance_ : double
+- angle_balance_ : double
+--
++ detectPosition()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>434</x>
+      <y>364</y>
+      <w>133</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Center
+--
+void
+--
++ detectPosition()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>602</x>
+      <y>364</y>
+      <w>126</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Ball
+--
+- middle_xaxis_side_ : int
+- distance_ : float
+--
++ detectPosition()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>798</x>
+      <y>364</y>
+      <w>119</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>Enemie
+--
+void
+--
+detectPosition()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>49</x>
+      <y>175</y>
+      <w>167</w>
+      <h>202</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>154;21;21;189</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>196</x>
+      <y>175</y>
+      <w>55</w>
+      <h>202</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>42;21;21;189</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>252</x>
+      <y>175</y>
+      <w>118</w>
+      <h>202</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>21;21;105;189</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>301</x>
+      <y>175</y>
+      <w>216</w>
+      <h>202</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>21;21;203;189</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>644</x>
+      <y>210</y>
+      <w>111</w>
+      <h>167</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>98;21;21;154</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>784</x>
+      <y>210</y>
+      <w>90</w>
+      <h>167</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>21;21;77;154</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>420</x>
+      <y>483</y>
+      <w>161</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>InfieldDetection
+--
+is_running_ : bool
+--
++ isRunning()
++ start()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>21</x>
+      <y>42</y>
+      <w>112</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>images
+--
++ applyCanny()
++ applyHsv()
++ binaryIntersection()
++ removeBorders()
+bg=gray
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>21</x>
+      <y>182</y>
+      <w>98</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>contours
+--
++ applyContours()
++ applyRectangle()
++ filter()
+bg=gray
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>21</x>
+      <y>126</y>
+      <w>98</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lines
+--
++ applyHought()
++ filter()
+bg=gray
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Package</type>
+    <coordinates>
+      <x>21</x>
+      <y>245</y>
+      <w>98</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>ml
+--
++ applyOrb()
++ applyCascade()
+bg=gray
+fg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>154</x>
+      <y>35</y>
+      <w>91</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>Kalman
+--
+void
+--
+void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

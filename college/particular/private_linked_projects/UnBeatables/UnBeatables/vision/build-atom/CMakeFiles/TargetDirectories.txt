@@ -1,0 +1,2 @@
+/home/yuri/nao/workspace/UnBeatables/UnBeatables/robocupCode/vision/build-atom/CMakeFiles/vision.dir
+/home/yuri/nao/workspace/UnBeatables/UnBeatables/robocupCode/vision/build-atom/CMakeFiles/visionClient.dir

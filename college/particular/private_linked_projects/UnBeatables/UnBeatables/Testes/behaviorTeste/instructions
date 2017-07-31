@@ -1,0 +1,3 @@
+To create a New Behavior:
+* Call "python createBehavior.py className"
+* Insert the className.cpp file at CMakeList.txt Include Files

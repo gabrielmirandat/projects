@@ -1,0 +1,10 @@
+#to use: make prog='program_name'
+INC= -I 'include/'
+SRC= src/
+FLAGS = -D  REMOTE
+
+all:
+	clear
+	g++ -o  executable $(SRC)* $(INC) -g $(FLAGS) -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_video
+
+	

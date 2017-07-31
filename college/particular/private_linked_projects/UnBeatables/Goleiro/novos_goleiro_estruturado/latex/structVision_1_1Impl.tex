@@ -1,0 +1,160 @@
+\hypertarget{structVision_1_1Impl}{\section{Vision\-:\-:Impl Struct Reference}
+\label{structVision_1_1Impl}\index{Vision\-::\-Impl@{Vision\-::\-Impl}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structVision_1_1Impl_ac9c6eb4b27729ceab3539f69cbb25a20}{Impl} (Vision \&mod)
+\item 
+\hyperlink{structVision_1_1Impl_aa096fb20f6e7b5b18cb66d20eda13f7c}{$\sim$\-Impl} ()
+\item 
+void \hyperlink{structVision_1_1Impl_a56670c4b36d664ccf92bed30b3772b2b}{operator()} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vision \& \hyperlink{structVision_1_1Impl_a916a09eab67eb65bf7f74b7201f7b4cc}{module}
+\item 
+A\-L\-Video\-Device\-Proxy $\ast$ \hyperlink{structVision_1_1Impl_a374e531e8ef64f468bcb097be04a47aa}{cam\-Proxy}
+\item 
+std\-::string \hyperlink{structVision_1_1Impl_a2b57273c099bd98d822ccec7e016b3bf}{client\-Name}
+\item 
+cv\-::\-Mat \hyperlink{structVision_1_1Impl_ada6c7b0a5be75a35c669fbd3a6fe33a6}{img\-Top}
+\item 
+cv\-::\-Mat \hyperlink{structVision_1_1Impl_aea3e193d00e7befebb7950e72c1d1c8d}{img\-Bot}
+\item 
+cv\-::\-Mat \hyperlink{structVision_1_1Impl_a31a875539cb7409ca92b7585c47f8e65}{img\-Top\-Safe}
+\item 
+cv\-::\-Mat \hyperlink{structVision_1_1Impl_a6e50c2bdbecb2f07247dee6da0260442}{img\-Bot\-Safe}
+\item 
+boost\-::thread $\ast$ \hyperlink{structVision_1_1Impl_a5ba8732b2b281582f9de34f965bfee3e}{ptr\-\_\-t}
+\item 
+boost\-::posix\-\_\-time\-::time\-\_\-duration \hyperlink{structVision_1_1Impl_a23cdb2b1b65eb1e85bc907b9e346cb24}{sampling\-Period}
+\item 
+bool \hyperlink{structVision_1_1Impl_a4828ea459158bafada673bc973c4382a}{stop\-Thread}
+\item 
+boost\-::mutex \hyperlink{structVision_1_1Impl_a3056fc479dd9f109a0aa8741b604ce9f}{stop\-Thread\-Lock}
+\item 
+boost\-::condition\-\_\-variable \hyperlink{structVision_1_1Impl_abc067b6bea87f82e9b64196663f0ba4c}{cond\-Var}
+\item 
+boost\-::mutex \hyperlink{structVision_1_1Impl_a33fe92eb538bb740d834b26566911872}{vision\-\_\-lock}
+\item 
+bool \hyperlink{structVision_1_1Impl_aa2e2dd67f138262f08432932d82e6dc9}{copy\-\_\-lock\-\_\-p}
+\item 
+boost\-::mutex \hyperlink{structVision_1_1Impl_a0c2807f1c2054c0a365cbb40e17e1daa}{copy\-\_\-lock}
+\item 
+boost\-::mutex \hyperlink{structVision_1_1Impl_a26aee8f190339f2e9c77ed782caa4b91}{update\-\_\-lock}
+\item 
+bool \hyperlink{structVision_1_1Impl_a8bdb7c8f033a3e2b8fc5684e23aa5080}{is\-Ball\-Known}
+\item 
+bool \hyperlink{structVision_1_1Impl_aae5ebd92051fb2db1ffea23a5abff042}{is\-Line\-Known}
+\item 
+float \hyperlink{structVision_1_1Impl_ab294e440804f7b5a928c0562efa33d03}{ball\-X}
+\item 
+float \hyperlink{structVision_1_1Impl_a02cf2f4c251c351704465f4ce5319046}{ball\-Y}
+\item 
+float \hyperlink{structVision_1_1Impl_aa116986ba3631fbeeff381da51124341}{line\-Angle}
+\item 
+\hyperlink{classVS}{V\-S} \hyperlink{structVision_1_1Impl_a16f1c91fc04d6d1f1652d09921a8c78d}{vs}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structVision_1_1Impl_ac9c6eb4b27729ceab3539f69cbb25a20}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!Impl@{Impl}}
+\index{Impl@{Impl}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{Impl}]{\setlength{\rightskip}{0pt plus 5cm}Vision\-::\-Impl\-::\-Impl (
+\begin{DoxyParamCaption}
+\item[{Vision \&}]{mod}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structVision_1_1Impl_ac9c6eb4b27729ceab3539f69cbb25a20}
+\hypertarget{structVision_1_1Impl_aa096fb20f6e7b5b18cb66d20eda13f7c}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!$\sim$\-Impl@{$\sim$\-Impl}}
+\index{$\sim$\-Impl@{$\sim$\-Impl}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{$\sim$\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}Vision\-::\-Impl\-::$\sim$\-Impl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structVision_1_1Impl_aa096fb20f6e7b5b18cb66d20eda13f7c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{structVision_1_1Impl_a56670c4b36d664ccf92bed30b3772b2b}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!operator()@{operator()}}
+\index{operator()@{operator()}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}void Vision\-::\-Impl\-::operator() (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{structVision_1_1Impl_a56670c4b36d664ccf92bed30b3772b2b}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{structVision_1_1Impl_ab294e440804f7b5a928c0562efa33d03}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!ball\-X@{ball\-X}}
+\index{ball\-X@{ball\-X}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{ball\-X}]{\setlength{\rightskip}{0pt plus 5cm}float Vision\-::\-Impl\-::ball\-X}}\label{structVision_1_1Impl_ab294e440804f7b5a928c0562efa33d03}
+\hypertarget{structVision_1_1Impl_a02cf2f4c251c351704465f4ce5319046}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!ball\-Y@{ball\-Y}}
+\index{ball\-Y@{ball\-Y}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{ball\-Y}]{\setlength{\rightskip}{0pt plus 5cm}float Vision\-::\-Impl\-::ball\-Y}}\label{structVision_1_1Impl_a02cf2f4c251c351704465f4ce5319046}
+\hypertarget{structVision_1_1Impl_a374e531e8ef64f468bcb097be04a47aa}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!cam\-Proxy@{cam\-Proxy}}
+\index{cam\-Proxy@{cam\-Proxy}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{cam\-Proxy}]{\setlength{\rightskip}{0pt plus 5cm}A\-L\-Video\-Device\-Proxy$\ast$ Vision\-::\-Impl\-::cam\-Proxy}}\label{structVision_1_1Impl_a374e531e8ef64f468bcb097be04a47aa}
+\hypertarget{structVision_1_1Impl_a2b57273c099bd98d822ccec7e016b3bf}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!client\-Name@{client\-Name}}
+\index{client\-Name@{client\-Name}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{client\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Vision\-::\-Impl\-::client\-Name}}\label{structVision_1_1Impl_a2b57273c099bd98d822ccec7e016b3bf}
+\hypertarget{structVision_1_1Impl_abc067b6bea87f82e9b64196663f0ba4c}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!cond\-Var@{cond\-Var}}
+\index{cond\-Var@{cond\-Var}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{cond\-Var}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::condition\-\_\-variable Vision\-::\-Impl\-::cond\-Var}}\label{structVision_1_1Impl_abc067b6bea87f82e9b64196663f0ba4c}
+\hypertarget{structVision_1_1Impl_a0c2807f1c2054c0a365cbb40e17e1daa}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!copy\-\_\-lock@{copy\-\_\-lock}}
+\index{copy\-\_\-lock@{copy\-\_\-lock}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{copy\-\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::mutex Vision\-::\-Impl\-::copy\-\_\-lock}}\label{structVision_1_1Impl_a0c2807f1c2054c0a365cbb40e17e1daa}
+\hypertarget{structVision_1_1Impl_aa2e2dd67f138262f08432932d82e6dc9}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!copy\-\_\-lock\-\_\-p@{copy\-\_\-lock\-\_\-p}}
+\index{copy\-\_\-lock\-\_\-p@{copy\-\_\-lock\-\_\-p}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{copy\-\_\-lock\-\_\-p}]{\setlength{\rightskip}{0pt plus 5cm}bool Vision\-::\-Impl\-::copy\-\_\-lock\-\_\-p}}\label{structVision_1_1Impl_aa2e2dd67f138262f08432932d82e6dc9}
+\hypertarget{structVision_1_1Impl_aea3e193d00e7befebb7950e72c1d1c8d}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!img\-Bot@{img\-Bot}}
+\index{img\-Bot@{img\-Bot}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{img\-Bot}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Vision\-::\-Impl\-::img\-Bot}}\label{structVision_1_1Impl_aea3e193d00e7befebb7950e72c1d1c8d}
+\hypertarget{structVision_1_1Impl_a6e50c2bdbecb2f07247dee6da0260442}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!img\-Bot\-Safe@{img\-Bot\-Safe}}
+\index{img\-Bot\-Safe@{img\-Bot\-Safe}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{img\-Bot\-Safe}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Vision\-::\-Impl\-::img\-Bot\-Safe}}\label{structVision_1_1Impl_a6e50c2bdbecb2f07247dee6da0260442}
+\hypertarget{structVision_1_1Impl_ada6c7b0a5be75a35c669fbd3a6fe33a6}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!img\-Top@{img\-Top}}
+\index{img\-Top@{img\-Top}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{img\-Top}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Vision\-::\-Impl\-::img\-Top}}\label{structVision_1_1Impl_ada6c7b0a5be75a35c669fbd3a6fe33a6}
+\hypertarget{structVision_1_1Impl_a31a875539cb7409ca92b7585c47f8e65}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!img\-Top\-Safe@{img\-Top\-Safe}}
+\index{img\-Top\-Safe@{img\-Top\-Safe}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{img\-Top\-Safe}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Mat Vision\-::\-Impl\-::img\-Top\-Safe}}\label{structVision_1_1Impl_a31a875539cb7409ca92b7585c47f8e65}
+\hypertarget{structVision_1_1Impl_a8bdb7c8f033a3e2b8fc5684e23aa5080}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!is\-Ball\-Known@{is\-Ball\-Known}}
+\index{is\-Ball\-Known@{is\-Ball\-Known}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{is\-Ball\-Known}]{\setlength{\rightskip}{0pt plus 5cm}bool Vision\-::\-Impl\-::is\-Ball\-Known}}\label{structVision_1_1Impl_a8bdb7c8f033a3e2b8fc5684e23aa5080}
+\hypertarget{structVision_1_1Impl_aae5ebd92051fb2db1ffea23a5abff042}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!is\-Line\-Known@{is\-Line\-Known}}
+\index{is\-Line\-Known@{is\-Line\-Known}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{is\-Line\-Known}]{\setlength{\rightskip}{0pt plus 5cm}bool Vision\-::\-Impl\-::is\-Line\-Known}}\label{structVision_1_1Impl_aae5ebd92051fb2db1ffea23a5abff042}
+\hypertarget{structVision_1_1Impl_aa116986ba3631fbeeff381da51124341}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!line\-Angle@{line\-Angle}}
+\index{line\-Angle@{line\-Angle}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{line\-Angle}]{\setlength{\rightskip}{0pt plus 5cm}float Vision\-::\-Impl\-::line\-Angle}}\label{structVision_1_1Impl_aa116986ba3631fbeeff381da51124341}
+\hypertarget{structVision_1_1Impl_a916a09eab67eb65bf7f74b7201f7b4cc}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!module@{module}}
+\index{module@{module}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{module}]{\setlength{\rightskip}{0pt plus 5cm}Vision\& Vision\-::\-Impl\-::module}}\label{structVision_1_1Impl_a916a09eab67eb65bf7f74b7201f7b4cc}
+\hypertarget{structVision_1_1Impl_a5ba8732b2b281582f9de34f965bfee3e}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!ptr\-\_\-t@{ptr\-\_\-t}}
+\index{ptr\-\_\-t@{ptr\-\_\-t}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{ptr\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::thread$\ast$ Vision\-::\-Impl\-::ptr\-\_\-t}}\label{structVision_1_1Impl_a5ba8732b2b281582f9de34f965bfee3e}
+\hypertarget{structVision_1_1Impl_a23cdb2b1b65eb1e85bc907b9e346cb24}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!sampling\-Period@{sampling\-Period}}
+\index{sampling\-Period@{sampling\-Period}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{sampling\-Period}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::posix\-\_\-time\-::time\-\_\-duration Vision\-::\-Impl\-::sampling\-Period}}\label{structVision_1_1Impl_a23cdb2b1b65eb1e85bc907b9e346cb24}
+\hypertarget{structVision_1_1Impl_a4828ea459158bafada673bc973c4382a}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!stop\-Thread@{stop\-Thread}}
+\index{stop\-Thread@{stop\-Thread}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{stop\-Thread}]{\setlength{\rightskip}{0pt plus 5cm}bool Vision\-::\-Impl\-::stop\-Thread}}\label{structVision_1_1Impl_a4828ea459158bafada673bc973c4382a}
+\hypertarget{structVision_1_1Impl_a3056fc479dd9f109a0aa8741b604ce9f}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!stop\-Thread\-Lock@{stop\-Thread\-Lock}}
+\index{stop\-Thread\-Lock@{stop\-Thread\-Lock}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{stop\-Thread\-Lock}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::mutex Vision\-::\-Impl\-::stop\-Thread\-Lock}}\label{structVision_1_1Impl_a3056fc479dd9f109a0aa8741b604ce9f}
+\hypertarget{structVision_1_1Impl_a26aee8f190339f2e9c77ed782caa4b91}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!update\-\_\-lock@{update\-\_\-lock}}
+\index{update\-\_\-lock@{update\-\_\-lock}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{update\-\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::mutex Vision\-::\-Impl\-::update\-\_\-lock}}\label{structVision_1_1Impl_a26aee8f190339f2e9c77ed782caa4b91}
+\hypertarget{structVision_1_1Impl_a33fe92eb538bb740d834b26566911872}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!vision\-\_\-lock@{vision\-\_\-lock}}
+\index{vision\-\_\-lock@{vision\-\_\-lock}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{vision\-\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}boost\-::mutex Vision\-::\-Impl\-::vision\-\_\-lock}}\label{structVision_1_1Impl_a33fe92eb538bb740d834b26566911872}
+\hypertarget{structVision_1_1Impl_a16f1c91fc04d6d1f1652d09921a8c78d}{\index{Vision\-::\-Impl@{Vision\-::\-Impl}!vs@{vs}}
+\index{vs@{vs}!Vision::Impl@{Vision\-::\-Impl}}
+\subsubsection[{vs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf V\-S} Vision\-::\-Impl\-::vs}}\label{structVision_1_1Impl_a16f1c91fc04d6d1f1652d09921a8c78d}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{vision_8cpp}{vision.\-cpp}\end{DoxyCompactItemize}

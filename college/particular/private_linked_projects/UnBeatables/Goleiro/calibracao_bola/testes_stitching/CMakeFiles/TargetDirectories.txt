@@ -1,0 +1,1 @@
+/home/gabriel/Área de Trabalho/novos_goleiro/Calibracao_bola_novo/CMakeFiles/proj.dir

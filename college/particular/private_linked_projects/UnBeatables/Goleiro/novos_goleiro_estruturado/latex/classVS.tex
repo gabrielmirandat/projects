@@ -1,0 +1,768 @@
+\hypertarget{classVS}{\section{V\-S Class Reference}
+\label{classVS}\index{V\-S@{V\-S}}
+}
+
+
+\hyperlink{classVS}{V\-S}\-: vision class. Contains all vision functions and methods.  
+
+
+
+
+{\ttfamily \#include $<$vision\-\_\-implementation.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classVS_a84ea859f338a2da5a1392cf7fd8b7128}{detect\-Post} (Mat \&im)
+\begin{DoxyCompactList}\small\item\em detect\-Post\-: used by the goalkeeper to discover the size in pixels of a goal post. This way, the robot can align itself to the goal center. It calls set\-Diff\-Posts. \end{DoxyCompactList}\item 
+bool \hyperlink{classVS_a7bbb156618172c39ec330e7747f7d4fa}{detect\-Base} (Mat \&im)
+\begin{DoxyCompactList}\small\item\em detect\-Base\-: used by the goalkeeper to find it's goal base. This way, the robot can align itself in relation to the base. It calls set\-Rho\-Base and set\-Theta\-Base. \end{DoxyCompactList}\item 
+bool \hyperlink{classVS_a2f232abc906e9b112d24d6240e029f78}{detect\-Ball} (Mat \&im, int camera)
+\begin{DoxyCompactList}\small\item\em detect\-Ball\-: used by the goalkeeper to find the ball. It also defines the ball's distance to the robot. It calls set\-Ball\-Side and set\-Ball\-Dist. \end{DoxyCompactList}\item 
+bool \hyperlink{classVS_aee9246a9272045f73a40536e3aace627}{detect\-Goal} (Mat \&im)
+\begin{DoxyCompactList}\small\item\em detect\-Goal\-: used by the striker to find enemies goal. It calls set\-Goal\-Size, set\-Post1x and set\-Post2x. \end{DoxyCompactList}\item 
+float \hyperlink{classVS_a9b8e5c156f4fbeb89e07a80f2b900a05}{get\-Rho\-Base} ()
+\begin{DoxyCompactList}\small\item\em get\-Rho\-Base\-: used to get rho\-Base's value. \end{DoxyCompactList}\item 
+float \hyperlink{classVS_a4037f73e07517abd2ef702f77020a5d9}{get\-Theta\-Base} ()
+\begin{DoxyCompactList}\small\item\em get\-Theta\-Base\-: used to get theta\-Base's value. \end{DoxyCompactList}\item 
+float \hyperlink{classVS_a051485ededc5f0c90a341fb27db13918}{get\-Diff\-Posts} ()
+\begin{DoxyCompactList}\small\item\em get\-Diff\-Posts\-: used to get diff\-Posts's value. \end{DoxyCompactList}\item 
+float \hyperlink{classVS_a9bc32f35bce28e438277f25545582b43}{get\-Ball\-Side} ()
+\begin{DoxyCompactList}\small\item\em get\-Ball\-Side\-: used to get ball\-Side's value. \end{DoxyCompactList}\item 
+float \hyperlink{classVS_abe6a81f192c846bd22fdca4016a3c010}{get\-Ball\-Dist} ()
+\begin{DoxyCompactList}\small\item\em get\-Ball\-Dist\-: used to get ball\-Dist's value. \end{DoxyCompactList}\item 
+int \hyperlink{classVS_afe3373b47cafcb04953e19d67cf522bb}{get\-Goal\-Size} ()
+\begin{DoxyCompactList}\small\item\em get\-Goal\-Size\-: used to get goal\-Size's value. \end{DoxyCompactList}\item 
+int \hyperlink{classVS_a14047a1e866946e919533d24876659bd}{get\-Post1x} ()
+\begin{DoxyCompactList}\small\item\em get\-Post1x\-: used to get post1x's value. \end{DoxyCompactList}\item 
+int \hyperlink{classVS_aca4138ae40190b6ac6f6cf247e8e3413}{get\-Post2x} ()
+\begin{DoxyCompactList}\small\item\em get\-Post2x\-: used to get post2x's value. \end{DoxyCompactList}\item 
+\hyperlink{classVS_ad0db74d675b43fd5b41cca3c4aac141f}{V\-S} ()
+\begin{DoxyCompactList}\small\item\em constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classVS_a447bb207cf4b014a6bff5401ce2c45fc}{$\sim$\-V\-S} ()
+\begin{DoxyCompactList}\small\item\em destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classVS_a69b52afb6bdcdbb3bfee24f34175083a}{set\-Rho\-Base} (float value)
+\begin{DoxyCompactList}\small\item\em set\-Rho\-Base\-: used to set rho\-Base variable. Called in detect\-Base. \end{DoxyCompactList}\item 
+void \hyperlink{classVS_a1da28f96dac9cc9a93bfa7e0cf643bf1}{set\-Theta\-Base} (float value)
+\begin{DoxyCompactList}\small\item\em set\-Theta\-Base\-: used to set theta\-Base variable. Called in detect\-Base. \end{DoxyCompactList}\item 
+void \hyperlink{classVS_ab8e3c44456c3cf5717a5f585e48c2c36}{set\-Diff\-Posts} (float value)
+\begin{DoxyCompactList}\small\item\em set\-Diff\-Posts\-: used to set diff\-Posts variable. Called in detect\-Post. \end{DoxyCompactList}\item 
+void \hyperlink{classVS_a5cfd34929b678883b32cab5545a77854}{set\-Ball\-Side} (float value)
+\begin{DoxyCompactList}\small\item\em set\-Ball\-Side\-: used to set ball\-Side variable. Called in detect\-Ball. \end{DoxyCompactList}\item 
+void \hyperlink{classVS_a41147ecec9adc9ca509fae48892e0cec}{set\-Ball\-Dist} (float value)
+\begin{DoxyCompactList}\small\item\em set\-Ball\-Dist\-: used to set ball\-Dist variable. Called in detect\-Ball. \end{DoxyCompactList}\item 
+void \hyperlink{classVS_adde8213a7167ea6ce8632a3281d7f178}{set\-Goal\-Size} (int value)
+\begin{DoxyCompactList}\small\item\em set\-Goal\-Size\-: used to set goal\-Size variable. Called in detect\-Goal. \end{DoxyCompactList}\item 
+void \hyperlink{classVS_afa51a242306b4f0c08e20ad8c4ee3002}{set\-Post1x} (int value)
+\begin{DoxyCompactList}\small\item\em set\-Post1x\-: used to set post1x variable. Called in detect\-Goal. \end{DoxyCompactList}\item 
+void \hyperlink{classVS_a705ae497e632116f90c6d7cd23f94896}{set\-Post2x} (int value)
+\begin{DoxyCompactList}\small\item\em set\-Post2x\-: used to set post2x variable. Called in detect\-Goal. \end{DoxyCompactList}\item 
+float \hyperlink{classVS_a2436addae0923c419c900743310ab4bd}{pos\-Y2\-Distance\-Bottom} (int pos\-Y)
+\begin{DoxyCompactList}\small\item\em pos\-Y2\-Distance\-Bottom\-: used to let goalkeeper know the distance from ball in centimeters. It is measured by a mathematical function that maps the y-\/value of the ball in image pixels in it's real world value in centimeters. This function is relative to the bottom's robot camera. Called in detect\-Ball. \end{DoxyCompactList}\item 
+float \hyperlink{classVS_aff98c9a04df0e72e4be252321928e953}{pos\-Y2\-Distance\-Top} (int pos\-Y)
+\begin{DoxyCompactList}\small\item\em pos\-Y2\-Distance\-Top\-: used to let goalkeeper know the distance from ball in centimeters. It is measured by a mathematical function that maps the y-\/value of the ball in image pixels in it's real world value in centimeters. This function is relative to the top's robot camera. Called in detect\-Ball. \end{DoxyCompactList}\item 
+void \hyperlink{classVS_a99f6a56775cd4126079b56ad91822d08}{remove\-Bordes} (Mat \&im)
+\begin{DoxyCompactList}\small\item\em remove\-Bordes\-: used to remove the four image outside edges. It is needed due to the differences between nao's edge detector and the not embedded environment's version. Called in functions detect\-Goal, detect\-Base and detect\-Post. \end{DoxyCompactList}\item 
+void \hyperlink{classVS_a7c34a0e02cb351b9f23ac52ce6113fa3}{draw\-Line} (Mat \&im, float \&rho, float \&theta)
+\begin{DoxyCompactList}\small\item\em draw\-Line\-: used to draw a line in an image. This function is only used for debugging when using the remote mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classVS_a53922209c67146633aa44c253ddcf511}{rho\-Base}
+\begin{DoxyCompactList}\small\item\em perpendicular distance in pixels from image pixel (0,0) to goal base. \end{DoxyCompactList}\item 
+float \hyperlink{classVS_ae5681e223d5b1fec1e8cf7b8ebe29577}{theta\-Base}
+\begin{DoxyCompactList}\small\item\em angle in radians between top image x-\/axis and goal base minus 90 degrees. Meaning that base tilted to the right correspond to negative angles, while base tilted to the left correspond to positive angles. \end{DoxyCompactList}\item 
+float \hyperlink{classVS_ac744fb6e416a1d31e4385674712bb2ce}{diff\-Posts}
+\begin{DoxyCompactList}\small\item\em width in pixels of goal post. \end{DoxyCompactList}\item 
+float \hyperlink{classVS_a38b44df3e672879391fd65858bfac6ce}{ball\-Side}
+\begin{DoxyCompactList}\small\item\em ball distance in pixels relative to the middle column of image. If the ball is in the right side, it is positive. Otherwise, negative. \end{DoxyCompactList}\item 
+float \hyperlink{classVS_a29dad6f6e4e8b8c046782b4c2cefa70e}{ball\-Dist}
+\begin{DoxyCompactList}\small\item\em distance in centimeters from ball to goalkeeper. It is relative to the calibration phase. \end{DoxyCompactList}\item 
+int \hyperlink{classVS_a45943631ac252202008ae6c6d4a7d96e}{goal\-Size}
+\begin{DoxyCompactList}\small\item\em distance in pixels between the two goal posts. \end{DoxyCompactList}\item 
+int \hyperlink{classVS_afcfda457424fbedf3ecce12147824b9f}{post1x}
+\begin{DoxyCompactList}\small\item\em distance in pixels between image pixel (0,0) and line correspondent to the left goal's post. \end{DoxyCompactList}\item 
+int \hyperlink{classVS_a63d3c7e65529d389989435d277f3dbe5}{post2x}
+\begin{DoxyCompactList}\small\item\em distance in pixels between image pixel (0,0) and line correspondent to the left goal's post. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classVS}{V\-S}\-: vision class. Contains all vision functions and methods. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classVS_ad0db74d675b43fd5b41cca3c4aac141f}{\index{V\-S@{V\-S}!V\-S@{V\-S}}
+\index{V\-S@{V\-S}!VS@{V\-S}}
+\subsubsection[{V\-S}]{\setlength{\rightskip}{0pt plus 5cm}V\-S\-::\-V\-S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classVS_ad0db74d675b43fd5b41cca3c4aac141f}
+
+
+constructor. 
+
+\hypertarget{classVS_a447bb207cf4b014a6bff5401ce2c45fc}{\index{V\-S@{V\-S}!$\sim$\-V\-S@{$\sim$\-V\-S}}
+\index{$\sim$\-V\-S@{$\sim$\-V\-S}!VS@{V\-S}}
+\subsubsection[{$\sim$\-V\-S}]{\setlength{\rightskip}{0pt plus 5cm}V\-S\-::$\sim$\-V\-S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classVS_a447bb207cf4b014a6bff5401ce2c45fc}
+
+
+destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classVS_a2f232abc906e9b112d24d6240e029f78}{\index{V\-S@{V\-S}!detect\-Ball@{detect\-Ball}}
+\index{detect\-Ball@{detect\-Ball}!VS@{V\-S}}
+\subsubsection[{detect\-Ball}]{\setlength{\rightskip}{0pt plus 5cm}bool V\-S\-::detect\-Ball (
+\begin{DoxyParamCaption}
+\item[{Mat \&}]{im, }
+\item[{int}]{camera}
+\end{DoxyParamCaption}
+)}}\label{classVS_a2f232abc906e9b112d24d6240e029f78}
+
+
+detect\-Ball\-: used by the goalkeeper to find the ball. It also defines the ball's distance to the robot. It calls set\-Ball\-Side and set\-Ball\-Dist. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em im} & goalkeeper's up or down camera image. \\
+\hline
+{\em camera} & value that represents goalkeeper's up(1) or down(0) camera. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean value indicating if ball was found.
+\end{DoxyReturn}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item im must not be empty or null.
+\item camera must be 0 -\/ D\-O\-W\-N or 1 -\/ U\-P.
+\item void 
+\end{DoxyItemize}\hypertarget{classVS_a7bbb156618172c39ec330e7747f7d4fa}{\index{V\-S@{V\-S}!detect\-Base@{detect\-Base}}
+\index{detect\-Base@{detect\-Base}!VS@{V\-S}}
+\subsubsection[{detect\-Base}]{\setlength{\rightskip}{0pt plus 5cm}bool V\-S\-::detect\-Base (
+\begin{DoxyParamCaption}
+\item[{Mat \&}]{im}
+\end{DoxyParamCaption}
+)}}\label{classVS_a7bbb156618172c39ec330e7747f7d4fa}
+
+
+detect\-Base\-: used by the goalkeeper to find it's goal base. This way, the robot can align itself in relation to the base. It calls set\-Rho\-Base and set\-Theta\-Base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em im} & goalkeeper's down camera image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean value indicating if base was found.
+\end{DoxyReturn}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item im must not be empty or null.
+\item void 
+\end{DoxyItemize}\hypertarget{classVS_aee9246a9272045f73a40536e3aace627}{\index{V\-S@{V\-S}!detect\-Goal@{detect\-Goal}}
+\index{detect\-Goal@{detect\-Goal}!VS@{V\-S}}
+\subsubsection[{detect\-Goal}]{\setlength{\rightskip}{0pt plus 5cm}bool V\-S\-::detect\-Goal (
+\begin{DoxyParamCaption}
+\item[{Mat \&}]{im}
+\end{DoxyParamCaption}
+)}}\label{classVS_aee9246a9272045f73a40536e3aace627}
+
+
+detect\-Goal\-: used by the striker to find enemies goal. It calls set\-Goal\-Size, set\-Post1x and set\-Post2x. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em im} & goalkeeper's top camera image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean value indicating if goal was found.
+\end{DoxyReturn}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item im must not be empty or null.
+\item void 
+\end{DoxyItemize}\hypertarget{classVS_a84ea859f338a2da5a1392cf7fd8b7128}{\index{V\-S@{V\-S}!detect\-Post@{detect\-Post}}
+\index{detect\-Post@{detect\-Post}!VS@{V\-S}}
+\subsubsection[{detect\-Post}]{\setlength{\rightskip}{0pt plus 5cm}bool V\-S\-::detect\-Post (
+\begin{DoxyParamCaption}
+\item[{Mat \&}]{im}
+\end{DoxyParamCaption}
+)}}\label{classVS_a84ea859f338a2da5a1392cf7fd8b7128}
+
+
+detect\-Post\-: used by the goalkeeper to discover the size in pixels of a goal post. This way, the robot can align itself to the goal center. It calls set\-Diff\-Posts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em im} & goalkeeper's top camera image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean value indicating if a post was found.
+\end{DoxyReturn}
+input and output assertives\par
+\par
+
+\begin{DoxyItemize}
+\item im must not be empty or null.
+\item void 
+\end{DoxyItemize}\hypertarget{classVS_a7c34a0e02cb351b9f23ac52ce6113fa3}{\index{V\-S@{V\-S}!draw\-Line@{draw\-Line}}
+\index{draw\-Line@{draw\-Line}!VS@{V\-S}}
+\subsubsection[{draw\-Line}]{\setlength{\rightskip}{0pt plus 5cm}void V\-S\-::draw\-Line (
+\begin{DoxyParamCaption}
+\item[{Mat \&}]{im, }
+\item[{float \&}]{rho, }
+\item[{float \&}]{theta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_a7c34a0e02cb351b9f23ac52ce6113fa3}
+
+
+draw\-Line\-: used to draw a line in an image. This function is only used for debugging when using the remote mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em im} & image where the line will be drawn. \\
+\hline
+{\em rho} & float number corresponding to the line's distance from source. \\
+\hline
+{\em theta} & float number corresponding to the line's angle with the image x-\/axis in radians. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item im must not be empty or null.
+\item rho must be greater than zero and lesser than im's diagonal.
+\item theta must be between zero and C\-V\-\_\-\-P\-I.
+\item a line is drawn in the image im. 
+\end{DoxyItemize}\hypertarget{classVS_abe6a81f192c846bd22fdca4016a3c010}{\index{V\-S@{V\-S}!get\-Ball\-Dist@{get\-Ball\-Dist}}
+\index{get\-Ball\-Dist@{get\-Ball\-Dist}!VS@{V\-S}}
+\subsubsection[{get\-Ball\-Dist}]{\setlength{\rightskip}{0pt plus 5cm}float V\-S\-::get\-Ball\-Dist (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classVS_abe6a81f192c846bd22fdca4016a3c010}
+
+
+get\-Ball\-Dist\-: used to get ball\-Dist's value. 
+
+\begin{DoxyReturn}{Returns}
+float number corresponding to ball\-Dist.
+\end{DoxyReturn}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item void
+\item void 
+\end{DoxyItemize}\hypertarget{classVS_a9bc32f35bce28e438277f25545582b43}{\index{V\-S@{V\-S}!get\-Ball\-Side@{get\-Ball\-Side}}
+\index{get\-Ball\-Side@{get\-Ball\-Side}!VS@{V\-S}}
+\subsubsection[{get\-Ball\-Side}]{\setlength{\rightskip}{0pt plus 5cm}float V\-S\-::get\-Ball\-Side (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classVS_a9bc32f35bce28e438277f25545582b43}
+
+
+get\-Ball\-Side\-: used to get ball\-Side's value. 
+
+\begin{DoxyReturn}{Returns}
+float number corresponding to ball\-Side.
+\end{DoxyReturn}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item void
+\item void 
+\end{DoxyItemize}\hypertarget{classVS_a051485ededc5f0c90a341fb27db13918}{\index{V\-S@{V\-S}!get\-Diff\-Posts@{get\-Diff\-Posts}}
+\index{get\-Diff\-Posts@{get\-Diff\-Posts}!VS@{V\-S}}
+\subsubsection[{get\-Diff\-Posts}]{\setlength{\rightskip}{0pt plus 5cm}float V\-S\-::get\-Diff\-Posts (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classVS_a051485ededc5f0c90a341fb27db13918}
+
+
+get\-Diff\-Posts\-: used to get diff\-Posts's value. 
+
+\begin{DoxyReturn}{Returns}
+float number corresponding to diff\-Posts.
+\end{DoxyReturn}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item void
+\item void 
+\end{DoxyItemize}\hypertarget{classVS_afe3373b47cafcb04953e19d67cf522bb}{\index{V\-S@{V\-S}!get\-Goal\-Size@{get\-Goal\-Size}}
+\index{get\-Goal\-Size@{get\-Goal\-Size}!VS@{V\-S}}
+\subsubsection[{get\-Goal\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int V\-S\-::get\-Goal\-Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classVS_afe3373b47cafcb04953e19d67cf522bb}
+
+
+get\-Goal\-Size\-: used to get goal\-Size's value. 
+
+\begin{DoxyReturn}{Returns}
+integer corresponding to goal\-Size.
+\end{DoxyReturn}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item void
+\item void 
+\end{DoxyItemize}\hypertarget{classVS_a14047a1e866946e919533d24876659bd}{\index{V\-S@{V\-S}!get\-Post1x@{get\-Post1x}}
+\index{get\-Post1x@{get\-Post1x}!VS@{V\-S}}
+\subsubsection[{get\-Post1x}]{\setlength{\rightskip}{0pt plus 5cm}int V\-S\-::get\-Post1x (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classVS_a14047a1e866946e919533d24876659bd}
+
+
+get\-Post1x\-: used to get post1x's value. 
+
+\begin{DoxyReturn}{Returns}
+float number corresponding to post1x.
+\end{DoxyReturn}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item void
+\item void 
+\end{DoxyItemize}\hypertarget{classVS_aca4138ae40190b6ac6f6cf247e8e3413}{\index{V\-S@{V\-S}!get\-Post2x@{get\-Post2x}}
+\index{get\-Post2x@{get\-Post2x}!VS@{V\-S}}
+\subsubsection[{get\-Post2x}]{\setlength{\rightskip}{0pt plus 5cm}int V\-S\-::get\-Post2x (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classVS_aca4138ae40190b6ac6f6cf247e8e3413}
+
+
+get\-Post2x\-: used to get post2x's value. 
+
+\begin{DoxyReturn}{Returns}
+float number corresponding to post2x.
+\end{DoxyReturn}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item void
+\item void 
+\end{DoxyItemize}\hypertarget{classVS_a9b8e5c156f4fbeb89e07a80f2b900a05}{\index{V\-S@{V\-S}!get\-Rho\-Base@{get\-Rho\-Base}}
+\index{get\-Rho\-Base@{get\-Rho\-Base}!VS@{V\-S}}
+\subsubsection[{get\-Rho\-Base}]{\setlength{\rightskip}{0pt plus 5cm}float V\-S\-::get\-Rho\-Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classVS_a9b8e5c156f4fbeb89e07a80f2b900a05}
+
+
+get\-Rho\-Base\-: used to get rho\-Base's value. 
+
+\begin{DoxyReturn}{Returns}
+float number corresponding to rho\-Base.
+\end{DoxyReturn}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item void
+\item void 
+\end{DoxyItemize}\hypertarget{classVS_a4037f73e07517abd2ef702f77020a5d9}{\index{V\-S@{V\-S}!get\-Theta\-Base@{get\-Theta\-Base}}
+\index{get\-Theta\-Base@{get\-Theta\-Base}!VS@{V\-S}}
+\subsubsection[{get\-Theta\-Base}]{\setlength{\rightskip}{0pt plus 5cm}float V\-S\-::get\-Theta\-Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classVS_a4037f73e07517abd2ef702f77020a5d9}
+
+
+get\-Theta\-Base\-: used to get theta\-Base's value. 
+
+\begin{DoxyReturn}{Returns}
+float number corresponding to theta\-Base.
+\end{DoxyReturn}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item void
+\item void 
+\end{DoxyItemize}\hypertarget{classVS_a2436addae0923c419c900743310ab4bd}{\index{V\-S@{V\-S}!pos\-Y2\-Distance\-Bottom@{pos\-Y2\-Distance\-Bottom}}
+\index{pos\-Y2\-Distance\-Bottom@{pos\-Y2\-Distance\-Bottom}!VS@{V\-S}}
+\subsubsection[{pos\-Y2\-Distance\-Bottom}]{\setlength{\rightskip}{0pt plus 5cm}float V\-S\-::pos\-Y2\-Distance\-Bottom (
+\begin{DoxyParamCaption}
+\item[{int}]{pos\-Y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_a2436addae0923c419c900743310ab4bd}
+
+
+pos\-Y2\-Distance\-Bottom\-: used to let goalkeeper know the distance from ball in centimeters. It is measured by a mathematical function that maps the y-\/value of the ball in image pixels in it's real world value in centimeters. This function is relative to the bottom's robot camera. Called in detect\-Ball. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\-Y} & integer corresponding to the y-\/value of the ball in the frame image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float value corresponding to the ball's distance from goalkeeper in centimeters. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+function \hyperlink{classVS_a2f232abc906e9b112d24d6240e029f78}{detect\-Ball}.
+\end{DoxySeeAlso}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item pos\-Y must be greater than zero and lesser than image's height.
+\item output variable must be greater than zero. 
+\end{DoxyItemize}\hypertarget{classVS_aff98c9a04df0e72e4be252321928e953}{\index{V\-S@{V\-S}!pos\-Y2\-Distance\-Top@{pos\-Y2\-Distance\-Top}}
+\index{pos\-Y2\-Distance\-Top@{pos\-Y2\-Distance\-Top}!VS@{V\-S}}
+\subsubsection[{pos\-Y2\-Distance\-Top}]{\setlength{\rightskip}{0pt plus 5cm}float V\-S\-::pos\-Y2\-Distance\-Top (
+\begin{DoxyParamCaption}
+\item[{int}]{pos\-Y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_aff98c9a04df0e72e4be252321928e953}
+
+
+pos\-Y2\-Distance\-Top\-: used to let goalkeeper know the distance from ball in centimeters. It is measured by a mathematical function that maps the y-\/value of the ball in image pixels in it's real world value in centimeters. This function is relative to the top's robot camera. Called in detect\-Ball. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos\-Y} & integer corresponding to the y-\/value of the ball in the frame image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float value corresponding to the ball's distance from goalkeeper in centimeters. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+function \hyperlink{classVS_a2f232abc906e9b112d24d6240e029f78}{detect\-Ball}.
+\end{DoxySeeAlso}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item pos\-Y must be greater than zero and lesser than image's height.
+\item output variable must be greater than zero. 
+\end{DoxyItemize}\hypertarget{classVS_a99f6a56775cd4126079b56ad91822d08}{\index{V\-S@{V\-S}!remove\-Bordes@{remove\-Bordes}}
+\index{remove\-Bordes@{remove\-Bordes}!VS@{V\-S}}
+\subsubsection[{remove\-Bordes}]{\setlength{\rightskip}{0pt plus 5cm}void V\-S\-::remove\-Bordes (
+\begin{DoxyParamCaption}
+\item[{Mat \&}]{im}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_a99f6a56775cd4126079b56ad91822d08}
+
+
+remove\-Bordes\-: used to remove the four image outside edges. It is needed due to the differences between nao's edge detector and the not embedded environment's version. Called in functions detect\-Goal, detect\-Base and detect\-Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em im} & image obtained from nao's camera. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+functions \hyperlink{classVS_a2f232abc906e9b112d24d6240e029f78}{detect\-Ball}, \hyperlink{classVS_a7bbb156618172c39ec330e7747f7d4fa}{detect\-Base} and \hyperlink{classVS_a84ea859f338a2da5a1392cf7fd8b7128}{detect\-Post}.
+\end{DoxySeeAlso}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item im must not be empty or null.
+\item im has it's outside edges removed. No image copy is made. 
+\end{DoxyItemize}\hypertarget{classVS_a41147ecec9adc9ca509fae48892e0cec}{\index{V\-S@{V\-S}!set\-Ball\-Dist@{set\-Ball\-Dist}}
+\index{set\-Ball\-Dist@{set\-Ball\-Dist}!VS@{V\-S}}
+\subsubsection[{set\-Ball\-Dist}]{\setlength{\rightskip}{0pt plus 5cm}void V\-S\-::set\-Ball\-Dist (
+\begin{DoxyParamCaption}
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_a41147ecec9adc9ca509fae48892e0cec}
+
+
+set\-Ball\-Dist\-: used to set ball\-Dist variable. Called in detect\-Ball. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & float number corresponding to ball\-Dist's value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+function \hyperlink{classVS_a2f232abc906e9b112d24d6240e029f78}{detect\-Ball}, variable \hyperlink{classVS_a29dad6f6e4e8b8c046782b4c2cefa70e}{ball\-Dist}.
+\end{DoxySeeAlso}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item value must be positive.
+\item class variable ball\-Dist has its value changed. 
+\end{DoxyItemize}\hypertarget{classVS_a5cfd34929b678883b32cab5545a77854}{\index{V\-S@{V\-S}!set\-Ball\-Side@{set\-Ball\-Side}}
+\index{set\-Ball\-Side@{set\-Ball\-Side}!VS@{V\-S}}
+\subsubsection[{set\-Ball\-Side}]{\setlength{\rightskip}{0pt plus 5cm}void V\-S\-::set\-Ball\-Side (
+\begin{DoxyParamCaption}
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_a5cfd34929b678883b32cab5545a77854}
+
+
+set\-Ball\-Side\-: used to set ball\-Side variable. Called in detect\-Ball. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & float number corresponding to ball\-Side's value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+function \hyperlink{classVS_a2f232abc906e9b112d24d6240e029f78}{detect\-Ball}, variable \hyperlink{classVS_a38b44df3e672879391fd65858bfac6ce}{ball\-Side}.
+\end{DoxySeeAlso}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item value must be lesser than half image's width and greater than this same negative value.
+\item class variable ball\-Side has its value changed. 
+\end{DoxyItemize}\hypertarget{classVS_ab8e3c44456c3cf5717a5f585e48c2c36}{\index{V\-S@{V\-S}!set\-Diff\-Posts@{set\-Diff\-Posts}}
+\index{set\-Diff\-Posts@{set\-Diff\-Posts}!VS@{V\-S}}
+\subsubsection[{set\-Diff\-Posts}]{\setlength{\rightskip}{0pt plus 5cm}void V\-S\-::set\-Diff\-Posts (
+\begin{DoxyParamCaption}
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_ab8e3c44456c3cf5717a5f585e48c2c36}
+
+
+set\-Diff\-Posts\-: used to set diff\-Posts variable. Called in detect\-Post. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & float number corresponding to diff\-Posts's value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+function \hyperlink{classVS_a84ea859f338a2da5a1392cf7fd8b7128}{detect\-Post}, variable \hyperlink{classVS_ac744fb6e416a1d31e4385674712bb2ce}{diff\-Posts}.
+\end{DoxySeeAlso}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item value must be lesser than image's diagonal.
+\item class variable diff\-Posts has its value changed. 
+\end{DoxyItemize}\hypertarget{classVS_adde8213a7167ea6ce8632a3281d7f178}{\index{V\-S@{V\-S}!set\-Goal\-Size@{set\-Goal\-Size}}
+\index{set\-Goal\-Size@{set\-Goal\-Size}!VS@{V\-S}}
+\subsubsection[{set\-Goal\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void V\-S\-::set\-Goal\-Size (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_adde8213a7167ea6ce8632a3281d7f178}
+
+
+set\-Goal\-Size\-: used to set goal\-Size variable. Called in detect\-Goal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & integer corresponding to goal\-Size's value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+function \hyperlink{classVS_aee9246a9272045f73a40536e3aace627}{detect\-Goal}, variable \hyperlink{classVS_a45943631ac252202008ae6c6d4a7d96e}{goal\-Size}.
+\end{DoxySeeAlso}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item value must be lesser than image's diagonal.
+\item class variable goal\-Size has its value changed. 
+\end{DoxyItemize}\hypertarget{classVS_afa51a242306b4f0c08e20ad8c4ee3002}{\index{V\-S@{V\-S}!set\-Post1x@{set\-Post1x}}
+\index{set\-Post1x@{set\-Post1x}!VS@{V\-S}}
+\subsubsection[{set\-Post1x}]{\setlength{\rightskip}{0pt plus 5cm}void V\-S\-::set\-Post1x (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_afa51a242306b4f0c08e20ad8c4ee3002}
+
+
+set\-Post1x\-: used to set post1x variable. Called in detect\-Goal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & integer corresponding to post1x's value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+function \hyperlink{classVS_aee9246a9272045f73a40536e3aace627}{detect\-Goal}, variable \hyperlink{classVS_afcfda457424fbedf3ecce12147824b9f}{post1x}.
+\end{DoxySeeAlso}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item value must be lesser than image's diagonal.
+\item class variable post1x has its value changed. 
+\end{DoxyItemize}\hypertarget{classVS_a705ae497e632116f90c6d7cd23f94896}{\index{V\-S@{V\-S}!set\-Post2x@{set\-Post2x}}
+\index{set\-Post2x@{set\-Post2x}!VS@{V\-S}}
+\subsubsection[{set\-Post2x}]{\setlength{\rightskip}{0pt plus 5cm}void V\-S\-::set\-Post2x (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_a705ae497e632116f90c6d7cd23f94896}
+
+
+set\-Post2x\-: used to set post2x variable. Called in detect\-Goal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & integer corresponding to post2x's value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+function \hyperlink{classVS_aee9246a9272045f73a40536e3aace627}{detect\-Goal}, variable \hyperlink{classVS_a63d3c7e65529d389989435d277f3dbe5}{post2x}.
+\end{DoxySeeAlso}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item value must be lesser than image's diagonal.
+\item class variable post2x has its value changed. 
+\end{DoxyItemize}\hypertarget{classVS_a69b52afb6bdcdbb3bfee24f34175083a}{\index{V\-S@{V\-S}!set\-Rho\-Base@{set\-Rho\-Base}}
+\index{set\-Rho\-Base@{set\-Rho\-Base}!VS@{V\-S}}
+\subsubsection[{set\-Rho\-Base}]{\setlength{\rightskip}{0pt plus 5cm}void V\-S\-::set\-Rho\-Base (
+\begin{DoxyParamCaption}
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_a69b52afb6bdcdbb3bfee24f34175083a}
+
+
+set\-Rho\-Base\-: used to set rho\-Base variable. Called in detect\-Base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & float number corresponding to rho\-Base's value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+function \hyperlink{classVS_a7bbb156618172c39ec330e7747f7d4fa}{detect\-Base}, variable \hyperlink{classVS_a53922209c67146633aa44c253ddcf511}{rho\-Base}.
+\end{DoxySeeAlso}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item value must be lesser than image's diagonal.\par
+
+\item class variable rho\-Base has its value changed. 
+\end{DoxyItemize}\hypertarget{classVS_a1da28f96dac9cc9a93bfa7e0cf643bf1}{\index{V\-S@{V\-S}!set\-Theta\-Base@{set\-Theta\-Base}}
+\index{set\-Theta\-Base@{set\-Theta\-Base}!VS@{V\-S}}
+\subsubsection[{set\-Theta\-Base}]{\setlength{\rightskip}{0pt plus 5cm}void V\-S\-::set\-Theta\-Base (
+\begin{DoxyParamCaption}
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_a1da28f96dac9cc9a93bfa7e0cf643bf1}
+
+
+set\-Theta\-Base\-: used to set theta\-Base variable. Called in detect\-Base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & float number corresponding to theta\-Base's value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+function \hyperlink{classVS_a7bbb156618172c39ec330e7747f7d4fa}{detect\-Base}, variable \hyperlink{classVS_ae5681e223d5b1fec1e8cf7b8ebe29577}{theta\-Base}.
+\end{DoxySeeAlso}
+input and output assertives\par
+
+\begin{DoxyItemize}
+\item value must be lesser than C\-V\-\_\-\-P\-I$\ast$90/180 and greater than -\/\-C\-V\-\_\-\-P\-I$\ast$90/180.
+\item class variable theta\-Base has its value changed. 
+\end{DoxyItemize}
+
+\subsection{Member Data Documentation}
+\hypertarget{classVS_a29dad6f6e4e8b8c046782b4c2cefa70e}{\index{V\-S@{V\-S}!ball\-Dist@{ball\-Dist}}
+\index{ball\-Dist@{ball\-Dist}!VS@{V\-S}}
+\subsubsection[{ball\-Dist}]{\setlength{\rightskip}{0pt plus 5cm}float V\-S\-::ball\-Dist\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_a29dad6f6e4e8b8c046782b4c2cefa70e}
+
+
+distance in centimeters from ball to goalkeeper. It is relative to the calibration phase. 
+
+\hypertarget{classVS_a38b44df3e672879391fd65858bfac6ce}{\index{V\-S@{V\-S}!ball\-Side@{ball\-Side}}
+\index{ball\-Side@{ball\-Side}!VS@{V\-S}}
+\subsubsection[{ball\-Side}]{\setlength{\rightskip}{0pt plus 5cm}float V\-S\-::ball\-Side\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_a38b44df3e672879391fd65858bfac6ce}
+
+
+ball distance in pixels relative to the middle column of image. If the ball is in the right side, it is positive. Otherwise, negative. 
+
+\hypertarget{classVS_ac744fb6e416a1d31e4385674712bb2ce}{\index{V\-S@{V\-S}!diff\-Posts@{diff\-Posts}}
+\index{diff\-Posts@{diff\-Posts}!VS@{V\-S}}
+\subsubsection[{diff\-Posts}]{\setlength{\rightskip}{0pt plus 5cm}float V\-S\-::diff\-Posts\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_ac744fb6e416a1d31e4385674712bb2ce}
+
+
+width in pixels of goal post. 
+
+\hypertarget{classVS_a45943631ac252202008ae6c6d4a7d96e}{\index{V\-S@{V\-S}!goal\-Size@{goal\-Size}}
+\index{goal\-Size@{goal\-Size}!VS@{V\-S}}
+\subsubsection[{goal\-Size}]{\setlength{\rightskip}{0pt plus 5cm}int V\-S\-::goal\-Size\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_a45943631ac252202008ae6c6d4a7d96e}
+
+
+distance in pixels between the two goal posts. 
+
+\hypertarget{classVS_afcfda457424fbedf3ecce12147824b9f}{\index{V\-S@{V\-S}!post1x@{post1x}}
+\index{post1x@{post1x}!VS@{V\-S}}
+\subsubsection[{post1x}]{\setlength{\rightskip}{0pt plus 5cm}int V\-S\-::post1x\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_afcfda457424fbedf3ecce12147824b9f}
+
+
+distance in pixels between image pixel (0,0) and line correspondent to the left goal's post. 
+
+\hypertarget{classVS_a63d3c7e65529d389989435d277f3dbe5}{\index{V\-S@{V\-S}!post2x@{post2x}}
+\index{post2x@{post2x}!VS@{V\-S}}
+\subsubsection[{post2x}]{\setlength{\rightskip}{0pt plus 5cm}int V\-S\-::post2x\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_a63d3c7e65529d389989435d277f3dbe5}
+
+
+distance in pixels between image pixel (0,0) and line correspondent to the left goal's post. 
+
+\hypertarget{classVS_a53922209c67146633aa44c253ddcf511}{\index{V\-S@{V\-S}!rho\-Base@{rho\-Base}}
+\index{rho\-Base@{rho\-Base}!VS@{V\-S}}
+\subsubsection[{rho\-Base}]{\setlength{\rightskip}{0pt plus 5cm}float V\-S\-::rho\-Base\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_a53922209c67146633aa44c253ddcf511}
+
+
+perpendicular distance in pixels from image pixel (0,0) to goal base. 
+
+\hypertarget{classVS_ae5681e223d5b1fec1e8cf7b8ebe29577}{\index{V\-S@{V\-S}!theta\-Base@{theta\-Base}}
+\index{theta\-Base@{theta\-Base}!VS@{V\-S}}
+\subsubsection[{theta\-Base}]{\setlength{\rightskip}{0pt plus 5cm}float V\-S\-::theta\-Base\hspace{0.3cm}{\ttfamily [private]}}}\label{classVS_ae5681e223d5b1fec1e8cf7b8ebe29577}
+
+
+angle in radians between top image x-\/axis and goal base minus 90 degrees. Meaning that base tilted to the right correspond to negative angles, while base tilted to the left correspond to positive angles. 
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{vision__implementation_8hpp}{vision\-\_\-implementation.\-hpp}\item 
+\hyperlink{vision__implementation_8cpp}{vision\-\_\-implementation.\-cpp}\end{DoxyCompactItemize}

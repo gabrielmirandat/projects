@@ -1,0 +1,4 @@
+#settings: version / team / player
+2
+98
+1
