@@ -1,0 +1,8 @@
+./college/classes/computer_science/databases/trabalhoBD/.git
+./college/classes/computer_science/basic_software/trab1asm/trabalho1nasmsb/.git
+./college/classes/computer_science/programming_languages/final_project/Twitter_Analytics/.git
+./college/classes/computer_science/programming_languages/final_project/.git
+./college/classes/computer_science/software_engineering/ES-unBoPP/.git
+./college/particular/private_linked_projects/CLARA/Cascade/programs/imageclipper/.git
+./college/particular/private_linked_projects/find-object/.git
+./college/particular/private_linked_projects/UnBSimulator/QtSimulator/.git
