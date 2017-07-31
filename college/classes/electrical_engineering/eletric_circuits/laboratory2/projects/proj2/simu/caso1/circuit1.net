@@ -1,0 +1,8 @@
+* Schematics Netlist *
+
+
+
+R_R1         0 Vout  4750  
+C_C2         Vin Vout  100n  
+V_V1         Vin 0  
++SIN 0 1 2000 0 0 0

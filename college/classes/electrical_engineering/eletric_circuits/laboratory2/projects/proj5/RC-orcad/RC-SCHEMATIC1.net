@@ -1,0 +1,4 @@
+* source RC
+V_V1         N00016 0 DC 0Vdc AC 2Vac 
+R_R1         N00016 N00022  3.650k  
+C_C1         0 N00022  1n  

@@ -1,0 +1,211 @@
+
+**** 05/18/16 19:16:35 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj6\simu\EXP6.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Wed May 18 19:16:31 2016
+
+
+
+** Analysis setup **
+.tran 1ns 1ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "EXP6.net"
+
+**** INCLUDING EXP6.net ****
+* Schematics Netlist *
+
+
+
+R_R1         Vout1 0  1k  
+R_R3         Vin1 $N_0001  50  
+R_R2         Vin1 $N_0002  50  
+V_V1         $N_0002 0  
++SIN 0 3 5000 0 0 0
+V_V2         $N_0001 0  
++SIN 0 3 10000 0 0 0
+C_C1         Vin1 $N_0003  5.2182n  
+L_L1         $N_0003 Vout1  0.048542H  
+R_R4         Vout2 0  1k  
+R_R5         Vin2 $N_0004  50  
+R_R6         Vin2 $N_0005  50  
+V_V3         $N_0005 0  
++SIN 0 3 5000 0 0 0
+V_V4         $N_0004 0  
++SIN 0 3 10000 0 0 0
+R_R7         Vout3 0  1k  
+R_R8         Vin3 $N_0006  50  
+R_R9         Vin3 $N_0007  50  
+V_V5         $N_0007 0  
++SIN 0 3 5000 0 0 0
+V_V6         $N_0006 0  
++SIN 0 3 10000 0 0 0
+L_L2         $N_0008 Vout2  0.14403H  
+C_C2         Vin2 $N_0008  1.75862n  
+C_C3         Vin3 $N_0009  15.1576n  
+L_L3         $N_0009 Vout3  0.016711H  
+
+**** RESUMING EXP6.cir ****
+.INC "EXP6.als"
+
+
+
+**** INCLUDING EXP6.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=Vout1 2=0 )
+R_R3            R3(1=Vin1 2=$N_0001 )
+R_R2            R2(1=Vin1 2=$N_0002 )
+V_V1            V1(+=$N_0002 -=0 )
+V_V2            V2(+=$N_0001 -=0 )
+C_C1            C1(1=Vin1 2=$N_0003 )
+L_L1            L1(1=$N_0003 2=Vout1 )
+R_R4            R4(1=Vout2 2=0 )
+R_R5            R5(1=Vin2 2=$N_0004 )
+R_R6            R6(1=Vin2 2=$N_0005 )
+V_V3            V3(+=$N_0005 -=0 )
+V_V4            V4(+=$N_0004 -=0 )
+R_R7            R7(1=Vout3 2=0 )
+R_R8            R8(1=Vin3 2=$N_0006 )
+R_R9            R9(1=Vin3 2=$N_0007 )
+V_V5            V5(+=$N_0007 -=0 )
+V_V6            V6(+=$N_0006 -=0 )
+L_L2            L2(1=$N_0008 2=Vout2 )
+C_C2            C2(1=Vin2 2=$N_0008 )
+C_C3            C3(1=Vin3 2=$N_0009 )
+L_L3            L3(1=$N_0009 2=Vout3 )
+_    _(Vout1=Vout1)
+_    _(Vin1=Vin1)
+_    _(Vout2=Vout2)
+_    _(Vin2=Vin2)
+_    _(Vout3=Vout3)
+_    _(Vin3=Vin3)
+.ENDALIASES
+
+
+**** RESUMING EXP6.cir ****
+.probe
+
+
+.END
+
+**** 05/18/16 19:16:35 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj6\simu\EXP6.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( Vin1)    0.0000  ( Vin2)    0.0000  ( Vin3)    0.0000  (Vout1)    0.0000      
+
+(Vout2)    0.0000  (Vout3)    0.0000  ($N_0001)    0.0000                       
+
+($N_0002)    0.0000                   ($N_0003)    0.0000                       
+
+($N_0004)    0.0000                   ($N_0005)    0.0000                       
+
+($N_0006)    0.0000                   ($N_0007)    0.0000                       
+
+($N_0008)    0.0000                   ($N_0009)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+    V_V5         0.000E+00
+    V_V6         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 05/18/16 19:16:35 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj6\simu\EXP6.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+**** 05/18/16 19:16:35 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj6\simu\EXP6.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( Vin1)    0.0000  ( Vin2)    0.0000  ( Vin3)    0.0000  (Vout1)    0.0000      
+
+(Vout2)    0.0000  (Vout3)    0.0000  ($N_0001)    0.0000                       
+
+($N_0002)    0.0000                   ($N_0003)    0.0000                       
+
+($N_0004)    0.0000                   ($N_0005)    0.0000                       
+
+($N_0006)    0.0000                   ($N_0007)    0.0000                       
+
+($N_0008)    0.0000                   ($N_0009)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+    V_V5         0.000E+00
+    V_V6         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .25
+

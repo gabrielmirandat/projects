@@ -1,0 +1,175 @@
+
+**** 04/28/16 12:42:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj4\nao-inversor\nao_inversor.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Apr 28 12:42:52 2016
+
+
+
+** Analysis setup **
+.tran 0ns 10ms 0 20us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "nao_inversor.net"
+
+**** INCLUDING nao_inversor.net ****
+* Schematics Netlist *
+
+
+
+R_R2         $N_0002 $N_0001  10k  
+R_R1         0 $N_0002  1k  
+E_U1         $N_0001 0 VALUE {LIMIT(V($N_0003,$N_0002)*1E6,-10V,+10V)}
+V_Vi         $N_0003 0 DC 0 
++SIN 0 1.6 1k 0 0 0
+
+**** RESUMING nao_inversor.cir ****
+.INC "nao_inversor.als"
+
+
+
+**** INCLUDING nao_inversor.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R2            R2(1=$N_0002 2=$N_0001 )
+R_R1            R1(1=0 2=$N_0002 )
+E_U1            U1(OUT=$N_0001 +=$N_0003 -=$N_0002 )
+V_Vi            Vi(+=$N_0003 -=0 )
+.ENDALIASES
+
+
+**** RESUMING nao_inversor.cir ****
+.probe
+
+
+.END
+
+**** 04/28/16 12:42:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj4\nao-inversor\nao_inversor.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)    0.0000                       
+
+($N_0003)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vi         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/28/16 12:42:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj4\nao-inversor\nao_inversor.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_U1      
+V-SOURCE     0.000E+00
+I-SOURCE     0.000E+00
+**** 04/28/16 12:42:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj4\nao-inversor\nao_inversor.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)    0.0000                       
+
+($N_0003)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vi         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+ERROR -- Convergence problem in transient analysis at Time =  403.8E-06
+         Time step =  4.657E-15, minimum allowable step size =  10.00E-15
+
+  These voltages failed to converge:
+
+    V($N_0002)                =        0.909091 / -0.909091
+    V($N_0001)                =              10 / -10
+
+  These supply currents failed to converge:
+
+    I(E_U1)                   =    -0.000909091 / 0.000909091
+
+  These devices failed to converge:
+    E_U1      
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)   10.0000                   ($N_0002)     .9091                       
+
+($N_0003)     .9090                   
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

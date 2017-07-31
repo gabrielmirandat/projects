@@ -1,0 +1,31 @@
+* Schematics Netlist *
+
+
+
+R_R1         Vout1 0  1k  
+R_R3         Vin1 $N_0001  50  
+R_R2         Vin1 $N_0002  50  
+V_V1         $N_0002 0  
++SIN 0 3 5000 0 0 0
+V_V2         $N_0001 0  
++SIN 0 3 10000 0 0 0
+C_C1         Vin1 $N_0003  5.2182n  
+L_L1         $N_0003 Vout1  0.048542H  
+R_R4         Vout2 0  1k  
+R_R5         Vin2 $N_0004  50  
+R_R6         Vin2 $N_0005  50  
+V_V3         $N_0005 0  
++SIN 0 3 5000 0 0 0
+V_V4         $N_0004 0  
++SIN 0 3 10000 0 0 0
+R_R7         Vout3 0  1k  
+R_R8         Vin3 $N_0006  50  
+R_R9         Vin3 $N_0007  50  
+V_V5         $N_0007 0  
++SIN 0 3 5000 0 0 0
+V_V6         $N_0006 0  
++SIN 0 3 10000 0 0 0
+L_L2         $N_0008 Vout2  0.14403H  
+C_C2         Vin2 $N_0008  1.75862n  
+C_C3         Vin3 $N_0009  15.1576n  
+L_L3         $N_0009 Vout3  0.016711H  

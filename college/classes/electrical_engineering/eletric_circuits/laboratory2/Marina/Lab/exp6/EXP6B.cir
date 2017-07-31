@@ -1,0 +1,23 @@
+* C:\Users\Marina\Desktop\EXP6B.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Wed May 27 13:14:45 2015
+
+
+
+** Analysis setup **
+.tran 1ns 1ms
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "EXP6B.net"
+.INC "EXP6B.als"
+
+
+.probe
+
+
+.END

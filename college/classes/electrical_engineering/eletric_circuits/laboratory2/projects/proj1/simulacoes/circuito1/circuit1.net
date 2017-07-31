@@ -1,0 +1,9 @@
+* Schematics Netlist *
+
+
+
+R_R1         0 Vout  1.050k  
+L_L1         $N_0001 Vout  33uH  
+C_C1         Vin $N_0001  0.1uF  
+V_V1         Vin 0 DC 0 
++SIN 0 1 0.5k 0 0 0

@@ -1,0 +1,146 @@
+
+**** 03/31/16 17:49:36 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Desktop\SEMESTRE6\7.CE2Lab\projects\14-03.20-03\simulacoes\circuito2\circuit2.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Mar 31 12:53:04 2016
+
+
+
+** Analysis setup **
+.tran 0ns 2ms 0 2us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "circuit2.net"
+
+**** INCLUDING circuit2.net ****
+* Schematics Netlist *
+
+
+
+L_L1         $N_0001 Vout  33uH  
+C_C1         0 Vout  0.1uF  
+R_R1         Vin1 $N_0001  2.250k  
+V_V1         Vin1 0 DC 0 
++SIN 0 2.828 3k 0 0 0
+R_R2         Vin2 $N_0001  1.050k  
+V_V2         Vin2 0 DC 0 
++SIN 0 7.071 10k 0 0 0
+
+**** RESUMING circuit2.cir ****
+.INC "circuit2.als"
+
+
+
+**** INCLUDING circuit2.als ****
+* Schematics Aliases *
+
+.ALIASES
+L_L1            L1(1=$N_0001 2=Vout )
+C_C1            C1(1=0 2=Vout )
+R_R1            R1(1=Vin1 2=$N_0001 )
+V_V1            V1(+=Vin1 -=0 )
+R_R2            R2(1=Vin2 2=$N_0001 )
+V_V2            V2(+=Vin2 -=0 )
+_    _(Vout=Vout)
+_    _(Vin1=Vin1)
+_    _(Vin2=Vin2)
+.ENDALIASES
+
+
+**** RESUMING circuit2.cir ****
+.probe
+
+
+.END
+
+**** 03/31/16 17:49:36 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Desktop\SEMESTRE6\7.CE2Lab\projects\14-03.20-03\simulacoes\circuito2\circuit2.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( Vin1)    0.0000  ( Vin2)    0.0000  ( Vout)    0.0000  ($N_0001)    0.0000    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 03/31/16 17:49:36 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Desktop\SEMESTRE6\7.CE2Lab\projects\14-03.20-03\simulacoes\circuito2\circuit2.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+**** 03/31/16 17:49:36 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Desktop\SEMESTRE6\7.CE2Lab\projects\14-03.20-03\simulacoes\circuito2\circuit2.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( Vin1)    0.0000  ( Vin2)    0.0000  ( Vout)    0.0000  ($N_0001)    0.0000    
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .06
+

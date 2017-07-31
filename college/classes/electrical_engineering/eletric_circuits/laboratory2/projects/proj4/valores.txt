@@ -1,0 +1,49 @@
+inversor
+
+Vi: -0.5 f=1k
+	vi: -499. 807m
+	vo: -4.9981
+	ganho de vo/vi = ?
+	fase = 500us
+
+Vi: 1.1 f=1k
+	vi: 1.0995
+	vo: 10
+	ganho de vo/vi = ?
+
+nao_inversor
+
+Vi: 0.6 f=1k
+	vi: 594.224m
+	vo: 6.5676
+	ganho de vo/vi = ?
+	fase = 32.787us
+
+Vi: 1.6 f=1k
+	vi: 1.5994
+	vo: 10
+	ganho de vo/vi = ?
+
+passa_baixas
+R1 = 1k, R2 = 2k, C = 79,57nF
+Vin = 1, f = 100Hz
+	vi: 1
+	vo: 1.99
+	ganho de vo/vi = ?
+
+R1 = 1k, R2 = 2k, C = 79,57nF
+Vin = 1, f = 1kHz
+	vi: 0.9994
+	vo: 1.4125
+	ganho de vo/vi = ?
+
+R1 = 1k, R2 = 2k, C = 79,57nF
+Vin = 1, f = 10kHz
+	vi: 980.067m
+	vo: 180,421m
+	ganho de vo/vi = ?
+
+
+
+
+	

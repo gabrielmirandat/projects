@@ -1,0 +1,22 @@
+* C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj9\simu\EXP6.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Jun 16 10:26:39 2016
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "EXP6.net"
+.INC "EXP6.als"
+
+
+.probe
+
+
+.END

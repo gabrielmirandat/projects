@@ -1,0 +1,177 @@
+
+**** 06/16/16 10:26:39 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj9\simu\EXP6.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Jun 16 10:26:39 2016
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "EXP6.net"
+
+**** INCLUDING EXP6.net ****
+* Schematics Netlist *
+
+
+
+V_V5         $N_0001 0 5V
+V_V6         $N_0002 0 5V
+R_R1A3         $N_0003 $N_0001  10.05k  
+R_R1B3         $N_0004 $N_0001  2.05k  
+R_R1C3         $N_0004 $N_0003  2.05k  
+R_R2A3         0 $N_0005  10.05k  
+R_R2B3         $N_0003 $N_0005  4.75k  
+R_R2C3         $N_0003 0  10.05k  
+R_R1A4         $N_0007 $N_0006  10.05k  
+R_R1B4         $N_0002 $N_0006  2.05k  
+R_R1C4         $N_0002 $N_0007  2.05k  
+R_R2A4         0 $N_0007  10.05k  
+R_R2B4         $N_0008 $N_0007  4.75k  
+R_R2C4         $N_0008 0  10.05k  
+V_V1         $N_0009 0 5V
+V_V2         $N_0010 0 5V
+V_V3         $N_0011 0 5V
+V_V4         $N_0012 0 5V
+R_R1A1         0 $N_0009  10.05k  
+R_R1B1         $N_0013 $N_0009  2.05k  
+R_R1C1         $N_0013 0  2.05k  
+R_R2A1         0 $N_0010  10.05k  
+R_R2B1         $N_0014 $N_0010  4.75k  
+R_R2C1         $N_0014 0  10.05k  
+R_R1B2         $N_0011 $N_0015  2.05k  
+R_R1A2         0 $N_0015  10.05k  
+R_R1C2         $N_0011 0  2.05k  
+R_R2A2         0 $N_0016  10.05k  
+R_R2B2         $N_0012 $N_0016  4.75k  
+R_R2C2         $N_0012 0  10.05k  
+
+**** RESUMING EXP6.cir ****
+.INC "EXP6.als"
+
+
+
+**** INCLUDING EXP6.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V5            V5(+=$N_0001 -=0 )
+V_V6            V6(+=$N_0002 -=0 )
+R_R1A3          R1A3(1=$N_0003 2=$N_0001 )
+R_R1B3          R1B3(1=$N_0004 2=$N_0001 )
+R_R1C3          R1C3(1=$N_0004 2=$N_0003 )
+R_R2A3          R2A3(1=0 2=$N_0005 )
+R_R2B3          R2B3(1=$N_0003 2=$N_0005 )
+R_R2C3          R2C3(1=$N_0003 2=0 )
+R_R1A4          R1A4(1=$N_0007 2=$N_0006 )
+R_R1B4          R1B4(1=$N_0002 2=$N_0006 )
+R_R1C4          R1C4(1=$N_0002 2=$N_0007 )
+R_R2A4          R2A4(1=0 2=$N_0007 )
+R_R2B4          R2B4(1=$N_0008 2=$N_0007 )
+R_R2C4          R2C4(1=$N_0008 2=0 )
+V_V1            V1(+=$N_0009 -=0 )
+V_V2            V2(+=$N_0010 -=0 )
+V_V3            V3(+=$N_0011 -=0 )
+V_V4            V4(+=$N_0012 -=0 )
+R_R1A1          R1A1(1=0 2=$N_0009 )
+R_R1B1          R1B1(1=$N_0013 2=$N_0009 )
+R_R1C1          R1C1(1=$N_0013 2=0 )
+R_R2A1          R2A1(1=0 2=$N_0010 )
+R_R2B1          R2B1(1=$N_0014 2=$N_0010 )
+R_R2C1          R2C1(1=$N_0014 2=0 )
+R_R1B2          R1B2(1=$N_0011 2=$N_0015 )
+R_R1A2          R1A2(1=0 2=$N_0015 )
+R_R1C2          R1C2(1=$N_0011 2=0 )
+R_R2A2          R2A2(1=0 2=$N_0016 )
+R_R2B2          R2B2(1=$N_0012 2=$N_0016 )
+R_R2C2          R2C2(1=$N_0012 2=0 )
+.ENDALIASES
+
+
+**** RESUMING EXP6.cir ****
+.probe
+
+
+.END
+
+**** 06/16/16 10:26:39 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj9\simu\EXP6.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    5.0000                   ($N_0002)    5.0000                       
+
+($N_0003)    3.3636                   ($N_0004)    4.1818                       
+
+($N_0005)    2.2841                   ($N_0006)    4.8081                       
+
+($N_0007)    3.8674                   ($N_0008)    2.6261                       
+
+($N_0009)    5.0000                   ($N_0010)    5.0000                       
+
+($N_0011)    5.0000                   ($N_0012)    5.0000                       
+
+($N_0013)    2.5000                   ($N_0014)    3.3953                       
+
+($N_0015)    4.1529                   ($N_0016)    3.3953                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V5        -5.620E-04
+    V_V6        -6.461E-04
+    V_V1        -1.717E-03
+    V_V2        -8.354E-04
+    V_V3        -2.852E-03
+    V_V4        -8.354E-04
+
+    TOTAL POWER DISSIPATION   3.72E-02  WATTS
+
+
+**** 06/16/16 10:26:39 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj9\simu\EXP6.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

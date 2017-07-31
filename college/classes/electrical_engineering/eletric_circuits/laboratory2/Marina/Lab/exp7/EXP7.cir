@@ -1,0 +1,24 @@
+* C:\Users\Marina\Desktop\EXP7.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Jun 17 20:32:45 2015
+
+
+
+** Analysis setup **
+.tran 0ns 300000ns
+.four 33000 7 V([A])
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "EXP7.net"
+.INC "EXP7.als"
+
+
+.probe
+
+
+.END

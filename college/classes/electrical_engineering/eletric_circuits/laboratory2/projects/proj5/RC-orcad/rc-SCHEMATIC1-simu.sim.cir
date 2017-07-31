@@ -1,0 +1,19 @@
+** Profile: "SCHEMATIC1-simu"  [ C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj5\RC-orcad\rc-SCHEMATIC1-simu.sim ] 
+
+** Creating circuit file "rc-SCHEMATIC1-simu.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of pspiceev.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 20k 3000k
+.PROBE 
+.INC "rc-SCHEMATIC1.net" 
+
+.INC "rc-SCHEMATIC1.als"
+
+
+.END

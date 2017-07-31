@@ -1,0 +1,23 @@
+* C:\Users\gabriel\Desktop\SEMESTRE6\7.CE2Lab\projects\14-03.20-03\simulacoes\circuito2\circuit2.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Mar 31 12:53:04 2016
+
+
+
+** Analysis setup **
+.tran 0ns 2ms 0 2us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "circuit2.net"
+.INC "circuit2.als"
+
+
+.probe
+
+
+.END

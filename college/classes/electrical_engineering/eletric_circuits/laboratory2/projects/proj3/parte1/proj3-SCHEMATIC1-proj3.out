@@ -1,0 +1,59 @@
+
+**** 04/13/16 19:21:19 *********** Evaluation PSpice (Nov 1999) **************
+
+ ** Profile: "SCHEMATIC1-proj3"  [ C:\Users\gabriel\Desktop\SEMESTRE6\7.CE2Lab\projects\proj3\parte1\proj3-schematic1-proj3.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "proj3-schematic1-proj3.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of pspiceev.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 300ms 0ns 300us SKIPBP 
+.PROBE 
+.INC "proj3-SCHEMATIC1.net" 
+
+
+**** INCLUDING proj3-SCHEMATIC1.net ****
+* source PROJ3
+R_R1         N00279 N00285  1050  
+L_L1         N00285 N00288  470uH  
+L_L2         0 N00288  6H  
+R_R2         0 N00288  5050  
+V_V1         N00279 0  
++SIN 0 1.296 60 0 0 0
+
+**** RESUMING proj3-schematic1-proj3.sim.cir ****
+.INC "proj3-SCHEMATIC1.als"
+
+
+
+**** INCLUDING proj3-SCHEMATIC1.als ****
+.ALIASES
+R_R1            R1(1=N00279 2=N00285 )
+L_L1            L1(1=N00285 2=N00288 )
+L_L2            L2(1=0 2=N00288 )
+R_R2            R2(1=0 2=N00288 )
+V_V1            V1(+=N00279 -=0 )
+.ENDALIASES
+
+**** RESUMING proj3-schematic1-proj3.sim.cir ****
+.END
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .05
+

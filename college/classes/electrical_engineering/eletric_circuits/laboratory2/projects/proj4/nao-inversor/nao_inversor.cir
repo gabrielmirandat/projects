@@ -1,0 +1,23 @@
+* C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj4\nao-inversor\nao_inversor.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Apr 28 12:42:52 2016
+
+
+
+** Analysis setup **
+.tran 0ns 10ms 0 20us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "nao_inversor.net"
+.INC "nao_inversor.als"
+
+
+.probe
+
+
+.END

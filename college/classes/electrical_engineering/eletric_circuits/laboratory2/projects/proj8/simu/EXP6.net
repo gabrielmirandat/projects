@@ -1,0 +1,24 @@
+* Schematics Netlist *
+
+
+
+R_R1         Vin1 $N_0001  1.55k  
+R_R2         Vin2 $N_0002  1.55k  
+C_C2         0 Vout2  0.1u  
+V_V2         Vin2 0  
++PULSE 0 5 0 1us 1us 100ms 200ms
+V_V3         Vin3 0  
++PULSE 0 5 0 1us 1us 100ms 200ms
+R_R3         Vin3 $N_0003  1.55k  
+R_R4         Vin4 $N_0004  1.55k  
+C_C3         0 Vout3  0.1u  
+C_C1         0 Vout1  0.1u  
+V_V4         Vin4 0  
++PULSE 0 5 0 1us 1us 100ms 200ms
+L_L4         $N_0004 Vout4  500mH  
+C_C4         0 Vout4  0.1u  
+L_L1         $N_0001 Vout1  1pH  
+L_L2         $N_0002 Vout2  100mH  
+L_L3         $N_0003 Vout3  200mH  
+V_V1         Vin1 0  
++PULSE 0 5 0 1us 1us 100ms 200ms

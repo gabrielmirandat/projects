@@ -1,0 +1,19 @@
+** Profile: "SCHEMATIC1-proj3"  [ C:\Users\gabriel\Desktop\SEMESTRE6\7.CE2Lab\projects\proj3\parte2\proj3-schematic1-proj3.sim ] 
+
+** Creating circuit file "proj3-schematic1-proj3.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of pspiceev.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 300ms 0ns 300us SKIPBP 
+.PROBE 
+.INC "proj3-SCHEMATIC1.net" 
+
+.INC "proj3-SCHEMATIC1.als"
+
+
+.END

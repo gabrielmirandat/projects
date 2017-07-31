@@ -1,0 +1,13 @@
+a) Botei 1.296V
+Vfonte = 1.2946V
+Vcarga = 1.0006V
+Ifonte = 484.727u¿
+Paparente_fonte = 317.984uW
+Fase_tens„o_corrente_carga = 63.218
+
+a) Botei 1.21V
+Vfonte = 1.2080V
+Vcarga = 0.9985V
+Ifonte = 208.243u¿
+Paparente_fonte = 133.977uW
+Fase_tens„o_corrente_carga = 15.804

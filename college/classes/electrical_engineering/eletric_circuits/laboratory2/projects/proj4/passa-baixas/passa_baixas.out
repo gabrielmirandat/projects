@@ -1,0 +1,150 @@
+
+**** 04/28/16 13:14:12 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj4\passa-baixas\passa_baixas.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Apr 28 13:14:12 2016
+
+
+
+** Analysis setup **
+.tran 0ns 10ms 0 20us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "passa_baixas.net"
+
+**** INCLUDING passa_baixas.net ****
+* Schematics Netlist *
+
+
+
+R_R1         $N_0002 $N_0001  1k  
+R_R2         $N_0001 $N_0003  2k  
+C_C         $N_0001 $N_0003  79.67n  
+E_U1         $N_0003 0 VALUE {LIMIT(V(0,$N_0001)*1E6,-10V,+10V)}
+V_Vi         $N_0002 0 DC 0 
++SIN 0 1 10k 0 0 0
+
+**** RESUMING passa_baixas.cir ****
+.INC "passa_baixas.als"
+
+
+
+**** INCLUDING passa_baixas.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=$N_0002 2=$N_0001 )
+R_R2            R2(1=$N_0001 2=$N_0003 )
+C_C             C(1=$N_0001 2=$N_0003 )
+E_U1            U1(OUT=$N_0003 +=0 -=$N_0001 )
+V_Vi            Vi(+=$N_0002 -=0 )
+.ENDALIASES
+
+
+**** RESUMING passa_baixas.cir ****
+.probe
+
+
+.END
+
+**** 04/28/16 13:14:12 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj4\passa-baixas\passa_baixas.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)    0.0000                       
+
+($N_0003)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vi         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/28/16 13:14:12 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj4\passa-baixas\passa_baixas.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** VOLTAGE-CONTROLLED VOLTAGE SOURCES
+
+
+NAME         E_U1      
+V-SOURCE     0.000E+00
+I-SOURCE     0.000E+00
+**** 04/28/16 13:14:12 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj4\passa-baixas\passa_baixas.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)    0.0000                       
+
+($N_0003)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vi         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .06
+

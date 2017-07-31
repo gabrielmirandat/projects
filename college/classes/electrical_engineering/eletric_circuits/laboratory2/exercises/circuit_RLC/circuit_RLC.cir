@@ -1,0 +1,22 @@
+* D:\Eduardo\unb\Disciplinas\Disciplinas_Lecionadas\CEA-Lab Circuitos Aplicados\2S2013\simulacao\circuit_RLC.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Fri Sep 13 18:16:03 2013
+
+
+
+** Analysis setup **
+.tran 0ns 0.10s
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "circuit_RLC.net"
+.INC "circuit_RLC.als"
+
+
+.probe
+
+
+.END

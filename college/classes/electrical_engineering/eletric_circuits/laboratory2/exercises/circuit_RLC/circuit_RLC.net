@@ -1,0 +1,9 @@
+* Schematics Netlist *
+
+
+
+R_R1         0 $N_0001  1k  
+C_C1         $N_0002 $N_0003  1u  
+L_L1         $N_0003 $N_0001  10uH  
+V_V1         $N_0002 0  
++SIN 0 1 100 0 0 0

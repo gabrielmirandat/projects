@@ -1,0 +1,96 @@
+
+**** 09/13/13 18:16:29 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\Eduardo\unb\Disciplinas\Disciplinas_Lecionadas\CEA-Lab Circuitos Aplicados\2S2013\simulacao\circuit_RLC.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Fri Sep 13 18:16:03 2013
+
+
+
+** Analysis setup **
+.tran 0ns 0.10s
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "circuit_RLC.net"
+
+**** INCLUDING circuit_RLC.net ****
+* Schematics Netlist *
+
+
+
+R_R1         0 $N_0001  1k  
+C_C1         $N_0002 $N_0003  1u  
+L_L1         $N_0003 $N_0001  10uH  
+V_V1         $N_0002 0  
++SIN 0 1 100 0 0 0
+
+**** RESUMING circuit_RLC.cir ****
+.INC "circuit_RLC.als"
+
+
+
+**** INCLUDING circuit_RLC.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=0 2=$N_0001 )
+C_C1            C1(1=$N_0002 2=$N_0003 )
+L_L1            L1(1=$N_0003 2=$N_0001 )
+V_V1            V1(+=$N_0002 -=0 )
+.ENDALIASES
+
+
+**** RESUMING circuit_RLC.cir ****
+.probe
+
+
+.END
+
+**** 09/13/13 18:16:29 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\Eduardo\unb\Disciplinas\Disciplinas_Lecionadas\CEA-Lab Circuitos Aplicados\2S2013\simulacao\circuit_RLC.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)    0.0000                       
+
+($N_0003)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

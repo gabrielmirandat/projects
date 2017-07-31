@@ -1,0 +1,195 @@
+
+**** 06/17/15 20:32:45 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Marina\Desktop\EXP7.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Jun 17 20:32:45 2015
+
+
+
+** Analysis setup **
+.tran 0ns 300000ns
+.four 33000 7 V([A])
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "EXP7.net"
+
+**** INCLUDING EXP7.net ****
+* Schematics Netlist *
+
+
+
+R_R2         A 0  10.051k  
+R_R1         $N_0001 A  50  
+V_V6         $N_0001 $N_0002 5V
+V_V1         $N_0003 0  
++SIN 0 0.636 33000 0 0 0
+V_V2         $N_0004 $N_0003  
++SIN 0 0.212 99000 0 0 0
+V_V3         $N_0005 $N_0004  
++SIN 0 0.127 165000 0 0 0
+V_V4         $N_0002 $N_0005  
++SIN 0 0.0909 231000 0 0 0
+
+**** RESUMING EXP7.cir ****
+.INC "EXP7.als"
+
+
+
+**** INCLUDING EXP7.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R2            R2(1=A 2=0 )
+R_R1            R1(1=$N_0001 2=A )
+V_V6            V6(+=$N_0001 -=$N_0002 )
+V_V1            V1(+=$N_0003 -=0 )
+V_V2            V2(+=$N_0004 -=$N_0003 )
+V_V3            V3(+=$N_0005 -=$N_0004 )
+V_V4            V4(+=$N_0002 -=$N_0005 )
+_    _(A=A)
+.ENDALIASES
+
+
+**** RESUMING EXP7.cir ****
+.probe
+
+
+.END
+
+**** 06/17/15 20:32:45 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Marina\Desktop\EXP7.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    A)    4.9753  ($N_0001)    5.0000                   ($N_0002)    0.0000    
+
+($N_0003)    0.0000                   ($N_0004)    0.0000                       
+
+($N_0005)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V6        -4.950E-04
+    V_V1        -4.950E-04
+    V_V2        -4.950E-04
+    V_V3        -4.950E-04
+    V_V4        -4.950E-04
+
+    TOTAL POWER DISSIPATION   2.48E-03  WATTS
+
+
+**** 06/17/15 20:32:45 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Marina\Desktop\EXP7.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+**** 06/17/15 20:32:45 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Marina\Desktop\EXP7.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    A)    4.9753  ($N_0001)    5.0000                   ($N_0002)    0.0000    
+
+($N_0003)    0.0000                   ($N_0004)    0.0000                       
+
+($N_0005)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V6        -4.950E-04
+    V_V1        -4.950E-04
+    V_V2        -4.950E-04
+    V_V3        -4.950E-04
+    V_V4        -4.950E-04
+
+    TOTAL POWER DISSIPATION   2.48E-03  WATTS
+
+
+**** 06/17/15 20:32:45 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\Marina\Desktop\EXP7.sch
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE V(A)
+
+
+
+ DC COMPONENT =   4.975052E+00
+
+ HARMONIC   FREQUENCY    FOURIER    NORMALIZED    PHASE        NORMALIZED
+    NO         (HZ)     COMPONENT    COMPONENT    (DEG)       PHASE (DEG)
+
+     1     3.300E+04    6.324E-01    1.000E+00   -3.603E+01    0.000E+00
+     2     6.600E+04    4.127E-04    6.526E-04   -9.056E+01   -1.850E+01
+     3     9.900E+04    2.094E-01    3.311E-01   -1.080E+02    1.163E-01
+     4     1.320E+05    5.228E-04    8.266E-04   -1.421E+02    2.059E+00
+     5     1.650E+05    1.231E-01    1.947E-01   -1.798E+02    3.183E-01
+     6     1.980E+05    1.306E-04    2.065E-04   -1.255E+02    9.066E+01
+     7     2.310E+05    8.555E-02    1.353E-01    1.081E+02    3.603E+02
+
+
+     TOTAL HARMONIC DISTORTION =   4.072014E+01 PERCENT
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .06
+

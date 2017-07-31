@@ -1,0 +1,23 @@
+* C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj4\inversor\inversor.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Apr 28 12:36:39 2016
+
+
+
+** Analysis setup **
+.tran 0ns 10ms 0 20us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "inversor.net"
+.INC "inversor.als"
+
+
+.probe
+
+
+.END

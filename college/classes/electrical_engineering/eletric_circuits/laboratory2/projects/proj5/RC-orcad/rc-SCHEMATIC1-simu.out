@@ -1,0 +1,82 @@
+
+**** 05/11/16 23:48:34 *********** Evaluation PSpice (Nov 1999) **************
+
+ ** Profile: "SCHEMATIC1-simu"  [ C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj5\RC-orcad\rc-SCHEMATIC1-simu.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "rc-SCHEMATIC1-simu.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of pspiceev.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100 20k 3000k
+.PROBE 
+.INC "rc-SCHEMATIC1.net" 
+
+
+**** INCLUDING rc-SCHEMATIC1.net ****
+* source RC
+V_V1         N00016 0 DC 0Vdc AC 2Vac 
+R_R1         N00016 N00022  3.650k  
+C_C1         0 N00022  1n  
+
+**** RESUMING rc-SCHEMATIC1-simu.sim.cir ****
+.INC "rc-SCHEMATIC1.als"
+
+
+
+**** INCLUDING rc-SCHEMATIC1.als ****
+.ALIASES
+V_V1            V1(+=N00016 -=0 )
+R_R1            R1(1=N00016 2=N00022 )
+C_C1            C1(1=0 2=N00022 )
+.ENDALIASES
+
+**** RESUMING rc-SCHEMATIC1-simu.sim.cir ****
+.END
+
+**** 05/11/16 23:48:34 *********** Evaluation PSpice (Nov 1999) **************
+
+ ** Profile: "SCHEMATIC1-simu"  [ C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj5\RC-orcad\rc-SCHEMATIC1-simu.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00016)    0.0000 (N00022)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .03
+

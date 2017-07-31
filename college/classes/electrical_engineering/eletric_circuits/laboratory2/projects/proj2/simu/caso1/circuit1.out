@@ -1,0 +1,136 @@
+
+**** 04/07/16 13:12:41 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Desktop\SEMESTRE6\7.CE2Lab\projects\proj2\simu\caso1\circuit1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Apr 07 13:12:37 2016
+
+
+
+** Analysis setup **
+.tran 0ns 10ms 0 20us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "circuit1.net"
+
+**** INCLUDING circuit1.net ****
+* Schematics Netlist *
+
+
+
+R_R1         0 Vout  4750  
+C_C2         Vin Vout  100n  
+V_V1         Vin 0  
++SIN 0 1 2000 0 0 0
+
+**** RESUMING circuit1.cir ****
+.INC "circuit1.als"
+
+
+
+**** INCLUDING circuit1.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=0 2=Vout )
+C_C2            C2(1=Vin 2=Vout )
+V_V1            V1(+=Vin -=0 )
+_    _(Vout=Vout)
+_    _(Vin=Vin)
+.ENDALIASES
+
+
+**** RESUMING circuit1.cir ****
+.probe
+
+
+.END
+
+**** 04/07/16 13:12:41 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Desktop\SEMESTRE6\7.CE2Lab\projects\proj2\simu\caso1\circuit1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  Vin)    0.0000  ( Vout)    0.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 04/07/16 13:12:41 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Desktop\SEMESTRE6\7.CE2Lab\projects\proj2\simu\caso1\circuit1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+**** 04/07/16 13:12:41 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Desktop\SEMESTRE6\7.CE2Lab\projects\proj2\simu\caso1\circuit1.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  Vin)    0.0000  ( Vout)    0.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+

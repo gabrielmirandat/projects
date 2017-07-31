@@ -1,0 +1,11 @@
+* Schematics Netlist *
+
+
+
+R_R1         Vs 0  1k  
+R_R2         Ve $N_0001  50  
+V_V3         $N_0001 0 DC 0V AC 3V 
+V_V4         $N_0002 0 DC 0V AC 3V 
+R_R3         Ve $N_0002  50  
+C_C1         Ve $N_0003  1.758n  
+L_L1         $N_0003 Vs  0.14405H  

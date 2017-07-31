@@ -1,0 +1,180 @@
+
+**** 06/01/16 23:26:45 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj7\circuit.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Wed Jun 01 23:22:31 2016
+
+
+
+** Analysis setup **
+.tran 0ns 5ms 0 20us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "circuit.net"
+
+**** INCLUDING circuit.net ****
+* Schematics Netlist *
+
+
+
+R_R1         $N_0002 $N_0001  50  
+R_R2         $N_0004 $N_0003  50  
+R_R3         $N_0006 $N_0005  50  
+R_R4         $N_0008 $N_0007  50  
+R_R5         Vin $N_0009  50  
+R_R6         0 Vin  10.05k  
+V_V1         $N_0001 0 DC 0 
++SIN 0 1.2732 1k 0 0 0
+V_V2         $N_0003 $N_0002 DC 0 
++SIN 0 0.4244 3k 0 0 0
+V_V3         $N_0005 $N_0004 DC 0 
++SIN 0 0.2546 5k 0 0 0
+V_V4         $N_0007 $N_0006 DC 0 
++SIN 0 0.1818 7k 0 0 0
+V_V5         $N_0009 $N_0008 DC 0 
++SIN 0 0.1414 9k 0 0 0
+
+**** RESUMING circuit.cir ****
+.INC "circuit.als"
+
+
+
+**** INCLUDING circuit.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_R1            R1(1=$N_0002 2=$N_0001 )
+R_R2            R2(1=$N_0004 2=$N_0003 )
+R_R3            R3(1=$N_0006 2=$N_0005 )
+R_R4            R4(1=$N_0008 2=$N_0007 )
+R_R5            R5(1=Vin 2=$N_0009 )
+R_R6            R6(1=0 2=Vin )
+V_V1            V1(+=$N_0001 -=0 )
+V_V2            V2(+=$N_0003 -=$N_0002 )
+V_V3            V3(+=$N_0005 -=$N_0004 )
+V_V4            V4(+=$N_0007 -=$N_0006 )
+V_V5            V5(+=$N_0009 -=$N_0008 )
+_    _(Vin=Vin)
+_    _(Vout=0)
+.ENDALIASES
+
+
+**** RESUMING circuit.cir ****
+.probe
+
+
+.END
+
+**** 06/01/16 23:26:45 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj7\circuit.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  Vin)    0.0000  ($N_0001)    0.0000                   ($N_0002)    0.0000    
+
+($N_0003)    0.0000                   ($N_0004)    0.0000                       
+
+($N_0005)    0.0000                   ($N_0006)    0.0000                       
+
+($N_0007)    0.0000                   ($N_0008)    0.0000                       
+
+($N_0009)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+    V_V5         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 06/01/16 23:26:45 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj7\circuit.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+**** 06/01/16 23:26:45 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj7\circuit.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  Vin)    0.0000  ($N_0001)    0.0000                   ($N_0002)    0.0000    
+
+($N_0003)    0.0000                   ($N_0004)    0.0000                       
+
+($N_0005)    0.0000                   ($N_0006)    0.0000                       
+
+($N_0007)    0.0000                   ($N_0008)    0.0000                       
+
+($N_0009)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+    V_V2         0.000E+00
+    V_V3         0.000E+00
+    V_V4         0.000E+00
+    V_V5         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .03
+

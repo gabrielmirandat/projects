@@ -1,0 +1,107 @@
+
+**** 05/12/16 02:10:26 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj5\RC\circuit.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Thu May 12 00:34:37 2016
+
+
+
+** Analysis setup **
+.ac DEC 1000 4k 400k
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "circuit.net"
+
+**** INCLUDING circuit.net ****
+* Schematics Netlist *
+
+
+
+V_V1         Vin 0 DC 0V AC 2V 
+R_R1         Vout Vin  3.650k  
+C_C1         0 Vout  1nF  
+
+**** RESUMING circuit.cir ****
+.INC "circuit.als"
+
+
+
+**** INCLUDING circuit.als ****
+* Schematics Aliases *
+
+.ALIASES
+V_V1            V1(+=Vin -=0 )
+R_R1            R1(1=Vout 2=Vin )
+C_C1            C1(1=0 2=Vout )
+_    _(Vin=Vin)
+_    _(Vout=Vout)
+.ENDALIASES
+
+
+**** RESUMING circuit.cir ****
+.probe
+
+
+.END
+
+**** 05/12/16 02:10:26 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj5\RC\circuit.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  Vin)    0.0000  ( Vout)    0.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 05/12/16 02:10:26 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\gabriel\Dropbox\SEMESTRE6\7.CE2Lab\projects\proj5\RC\circuit.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .06
+

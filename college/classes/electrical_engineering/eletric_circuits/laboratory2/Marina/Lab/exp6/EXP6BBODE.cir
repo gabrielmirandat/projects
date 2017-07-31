@@ -1,0 +1,22 @@
+* C:\Users\Marina\Desktop\EXP6BBODE.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Wed May 27 13:00:28 2015
+
+
+
+** Analysis setup **
+.ac DEC 101 1K 100K
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "EXP6BBODE.net"
+.INC "EXP6BBODE.als"
+
+
+.probe
+
+
+.END

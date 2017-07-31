@@ -1,0 +1,23 @@
+* C:\Users\gabriel\Desktop\SEMESTRE6\7.CE2Lab\projects\proj2\simu\caso1\circuit1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Apr 07 13:12:37 2016
+
+
+
+** Analysis setup **
+.tran 0ns 10ms 0 20us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "circuit1.net"
+.INC "circuit1.als"
+
+
+.probe
+
+
+.END
