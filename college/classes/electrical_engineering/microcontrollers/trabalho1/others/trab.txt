@@ -1,0 +1,44 @@
+Barramento/Protocolo I2C
+
+Objetivo: comunicar com outro disp. ou periféricos
+		  conversão (AD - DA), LCD, EPROM, sensores
+
+Barramento I2C - imagem
+
+Estrutura: 2 fios para com. bidirecional entre dispositivos SDA (dados) e SCL (clock)
+		   SDA para receptor e transmissor - um só
+		   Transmissor: gera mensagem
+		   Receptor: recebe mensagem
+		   Mestre: dispositivo que controla mensagem
+		   Escravo: dispositivos controlados pelo mestre
+
+		   Mestres e escravos assumem papéis de transmissor e receptor ao longo
+		   da comunicação.
+
+		   Só o mestre controla o SCL, mesmo sendo transmissor ou receptor.
+
+Sinais de controle: START e STOP
+		   - idle: ninguem escreve. SDA e SCL em high.
+		   - START: mestre desce SDA enquanto clock ativo.
+		   - STOP: mestre sobe SDA enquanto clock ativo.
+		   # mudanças em SDA com clock em ativo = sinais de controle.
+		   - BIT 1: SDA estável em 1 enquanto clock sobe e desce 
+		   - BIT 0: SDA estável em 0 enquanto clock sobe e desce 
+		   - ENVIO: RECEIVER SEMPRE EM 1
+		   - ACK: RECEIVER em 0
+
+Comunicação: em bytes
+			 A cada byte, sinal de ACK deve ser gerado.
+			 data output é SDA, comum ao transmissor e receptor - um pros dois.
+
+			 No envio de um byte, o transmissor manda os 8 bits em SDA (em 8 sinais de clock
+			 separados), e o receptor gera o sinal de acknowledge, também em SDA, no nono sinal de clock.
+
+			 O receptor gera o sinal 0 para sinalizar o acknowledge (“entendido”) e 1 para sinalizar 
+			 que não entendeu a mensagem.
+
+			 Clock é gerado pelo mestre, enquanto os papéis de transmissor/receptor podem ser feitos 
+			 tanto pelo mestre quanto pelo escravo.
+
+Programa em C.
+Imprimir no terminal o byte recebido em representação hexadecimal, por exemplo: 0x34 ou 0xFA.
