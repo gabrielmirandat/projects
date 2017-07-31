@@ -1,0 +1,46 @@
+A51 MACRO ASSEMBLER  SOMA                                                                 10/16/2015 09:50:43 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.09
+OBJECT MODULE PLACED IN C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\exp7\soma\soma.OBJ
+ASSEMBLER INVOKED BY: C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\assembly_8051\dos8051-montador\A51.EXE C:\Users\gabri
+                      el\Downloads\SEMESTRE5\SD2-LAB\exp7\soma\soma.ASM
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ;Soma de P0 com P1, resultado apresentado em P2
+                       2     
+                       3     $mod51                                                          ;arquitetura 8051
+0000                   4     ORG 0                                                           ;lugar da memoria onde fica
+                             ra o codigo de maquina (a partir de 0)
+                       5     
+0000 7400              6     MOV A,#0H                                                       ;acumulador = 0
+                       7     
+0002                   8     LOOP:
+                       9     
+0002 E580             10     MOV A, P0                                                       ;acumulador = P0
+0004 2590             11     ADD A, P1                                                       ;acumulador = acumulador + 
+                             P1
+0006 F5A0             12     MOV P2, A                                                       ;P2 = acumulador
+                      13     
+0008 80F8             14     JMP LOOP
+                      15     
+                      16     END
+A51 MACRO ASSEMBLER  SOMA                                                                 10/16/2015 09:50:43 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+LOOP . . . . . . .  C ADDR   0002H   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,42 @@
+A51 MACRO ASSEMBLER  CONT_PULSOS                                                          10/16/2015 19:53:30 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.09
+OBJECT MODULE PLACED IN C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\exp7\cont_pulsos\cont_pulsos.OBJ
+ASSEMBLER INVOKED BY: C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\assembly_8051\dos8051-montador\A51.EXE C:\Users\gabri
+                      el\Downloads\SEMESTRE5\SD2-LAB\exp7\cont_pulsos\cont_pulsos.ASM
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     $mod51                                  ; início
+0000                   2     ORG 0                           ; para gravar a partir de 0
+0000 7800              3     MOV R0, #0H         ; para zerar o registrador R0
+0002 308002            4     JNB P0.0, CASO0         ; se o primeiro bit de P0 for 0,
+                       5                                             ; vai para a rotina 'CASO0'
+0005 8003              6     JMP CASO1                       ; senão vai para a rotina 'CASO1'
+0007 3080FD            7     CASO0: JNB P0.0, CASO0 ; enquanto o primeiro bit de P0 não
+                       8                                                ; mudar para 1, ele permanece aqui.
+000A 2080FD            9     CASO1: JB P0.0, CASO1 ; enquanto o primeiro bit de P0 não mudar
+                      10                                               ; de volta para 0, ele permanece aqui.
+000D 08               11     INC R0                          ; completou um ciclo de 0 e 1,
+                      12                                             ; indicando que foi feito um pulso.
+000E 80F7             13     JMP CASO0                       ; Volta para 'CASO0' para reiniciar
+                      14                                             ; o processo
+                      15     END
+A51 MACRO ASSEMBLER  CONT_PULSOS                                                          10/16/2015 19:53:30 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CASO0. . . . . . .  C ADDR   0007H   A   
+CASO1. . . . . . .  C ADDR   000AH   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

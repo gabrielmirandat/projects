@@ -1,0 +1,29 @@
+BL51 BANKED LINKER/LOCATER V5.03                                                        11/05/2015  15:16:25  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V5.03, INVOKED BY:
+BL51 C:\USERS\GABRIEL\DOWNLOADS\SEMESTRE5\SD2-LAB\EXP8\EXPERIMENTO8.OBJ
+
+
+INPUT MODULES INCLUDED:
+  C:\USERS\GABRIEL\DOWNLOADS\SEMESTRE5\SD2-LAB\EXP8\EXPERIMENTO8.OBJ (EXPERIMENTO8)
+
+
+LINK MAP OF MODULE:  C:\USERS\GABRIEL\DOWNLOADS\SEMESTRE5\SD2-LAB\EXP8\EXPERIMENTO8 (EXPERIMENTO8)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0083H     ABSOLUTE     
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0083H BYTE ( 6%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=131
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

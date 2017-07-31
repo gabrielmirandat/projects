@@ -1,0 +1,520 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\froman\fcharset0 Times New Roman;}{\f2\fswiss\fcharset255 CMSS8;}{\f3\froman\fcharset255 CMSS9;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Msftedit 5.41.21.2509;}\viewkind4\uc1\pard\nowidctlpar\qj\lang22\f0\fs22 1) VISTO1\par
+\par
+nome do arquivo: \cf1\kerning2\f1 somador_completo.vhdl\par
+\pard\sa200\sl276\slmult1\cf0\kerning0\f0\par
+\pard\nowidctlpar\qj\cf1\kerning2\f1 library ieee;\par
+use ieee.std_logic_1164.all;\par
+\par
+entity somador_completo is\par
+\tab port(Cin,A,B: in STD_LOGIC;\par
+\tab          S,Cout: out STD_LOGIC);\par
+end somador_completo;\par
+\par
+architecture somador_completo_op of somador_completo is\par
+begin\par
+\tab S <= Cin xor (A xor B);\par
+           Cout <= (A and B) or (Cin and(A xor B));\par
+end somador_completo_op;\par
+\par
+\cf0\kerning0\f0 nome do arquivo: \cf1\kerning2\f1 somador_2_4bits.vhdl\par
+\par
+library ieee;\par
+use ieee.std_logic_1164.all;\par
+\par
+entity somador_2_4bits is\par
+\tab port(A: in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab        B: in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab        S: out STD_LOGIC_VECTOR(4 downto 0));\par
+\par
+end somador_2_4bits;\par
+\par
+architecture somador_2_4bits_op of somador_2_4bits is\par
+\tab component somador_completo is\par
+\f2\tab\tab\f1 port(Cin,A,B: in STD_LOGIC;\par
+\tab          \tab          S,Cout: out STD_LOGIC);\par
+\tab end component\f3 ;\f1\par
+\par
+signal AUXin, C1, C2, C3: STD_LOGIC;\par
+begin\par
+\tab AUXin <= '0';\par
+\tab\f3 U1:\f1 somador_completo port map\f3 (\f1 AUXin\f3 ,A(0),B(0),S(0),C1);\par
+\tab U2:\f1 somador_completo port map\f3 (      C1,A(1),B(1),S(1),C2);\par
+\tab U3:\f1 somador_completo port map\f3 (      C2,A(2),B(2),S(2),C3);\par
+\tab U4:\f1 somador_completo port map\f3 (      C3,A(3),B(3),S(3),S(4));\par
+\f1\par
+\par
+end somador_2_4bits_op;\par
+\par
+nome do arquivo : somador_2_4bits.ucf\par
+\par
+NET "A<3>" LOC = "N3"; # SW7\par
+NET "A<2>" LOC = "E2"; # SW6\par
+NET "A<1>" LOC = "F3"; # SW5\par
+NET "A<0>" LOC = "G3"; # SW4\par
+\par
+NET "B<3>" LOC = "B4";  # SW3\par
+NET "B<2>" LOC = "K3";  # SW2\par
+NET "B<1>" LOC = "L3";  # SW1\par
+NET "B<0>" LOC = "P11"; # SW0\par
+\par
+NET "S<4>" LOC = "N5";   # LD4\par
+NET "S<3>" LOC = "P6";   #LD3\par
+NET "S<2>" LOC = "P7";   #LD2\par
+NET "S<1>" LOC = "M11"; #LD1\par
+NET "S<0>" LOC = "M5";   #LD0\par
+\par
+\cf0\kerning0\f0 2) VISTO2\cf1\kerning2\f1\par
+\par
+library ieee;\par
+use ieee.std_logic_1164.all;\par
+\par
+entity binario_BCD is\par
+\tab port(\tab S: in STD_LOGIC_VECTOR(4 downto 0);  \par
+\tab\tab D: out STD_LOGIC_VECTOR(3 downto 0); \par
+\tab\tab U: out STD_LOGIC_VECTOR(3 downto 0)); \par
+end binario_BCD;\par
+\par
+architecture binario_BCD_op of binario_BCD is\par
+begin\par
+\par
+with S select\par
+\tab U <= \tab "0000" when "00000" | "01010" | "10100" | "11110" ,\par
+\tab\tab "0001" when "00001" | "01011" | "10101" | "11111" ,\par
+\tab\tab "0010" when "00010" | "01100" | "10110",\par
+\tab\tab "0011" when "00011" | "01101" | "10111",\par
+\tab\tab "0100" when "00100" | "01110" | "11000",\par
+\tab\tab "0101" when "00101" | "01111" | "11001",\par
+\tab\tab "0110" when "00110" | "10000" | "11010",\par
+\tab\tab "0111" when "00111" | "10001" | "11011",\par
+\tab\tab "1000" when "01000" | "10010" | "11100",\par
+\tab\tab "1001" when "01001" | "10011" | "11101",\par
+\tab\tab "0000" when others;\par
+\par
+with S select\par
+\tab D <=    "0000" when "00000" | "00001" | "00010" | "00011" | "00100" | "00101" | \tab\tab\tab\tab  "00110" | "00111" | "01000" | "01001", \par
+\tab\tab     "0001" when "01010" | "01011" | "01100" | "01101" | "01110" | "01111" | \tab\tab\tab\tab  "10000" | "10001" | "10010" | "10011",\par
+\tab\tab     "0010" when "10100" | "10101" | "10110" | "10111" | "11000" | "11001" | \tab\tab\tab\tab  "11010" | "11011" | "11100" | "11101",\par
+\tab\tab     "0011" when   "11110" | "11111",\par
+\tab\tab     "0000" when others;\par
+\par
+end  binario_BCD_op;\par
+\par
+nome do arquivo : binario_BCD .ucf\par
+\par
+NET "S<4>" LOC = "G3";   # SW4\par
+NET "S<3>" LOC = "B4"; #SW3\par
+NET "S<2>" LOC = "K3"; #SW2\par
+NET "S<1>" LOC = "L3";   #SW1\par
+NET "S<0>" LOC = "P11";   #SW0\par
+\par
+NET "D<3>" LOC = "G1";   # LD7\par
+NET "D<2>" LOC = "P4"; #LD6\par
+NET "D<1>" LOC = "N4";   #LD5\par
+NET "D<0>" LOC = "N5";   #LD4\par
+\par
+NET "U<3>" LOC = "P6";   # LD3\par
+NET "U<2>" LOC = "P7"; #LD2\par
+NET "U<1>" LOC = "M11";   #LD1\par
+NET "U<0>" LOC = "M5";   #LD0\par
+\par
+\par
+\par
+3)VISTO 3\par
+\par
+library ieee;\par
+use ieee.std_logic_1164.all;\par
+\par
+entity somador_2_4bits_BCD is\par
+\tab port(\tab A : in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab\tab B : in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab\tab D : out STD_LOGIC_VECTOR(3 downto 0);\par
+\tab\tab U : out STD_LOGIC_VECTOR(3 downto 0));\par
+end somador_2_4bits_BCD;\par
+\par
+architecture somador_2_4bits_BCD_op of somador_2_4bits_BCD is \par
+\tab component somador_2_4bits is\par
+\tab\tab port(A: in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab\tab        B: in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab\tab        S: out STD_LOGIC_VECTOR(4 downto 0));\par
+\tab end component;\par
+\par
+\tab component binario_BCD is\par
+\tab\tab port(\tab S: in STD_LOGIC_VECTOR(4 downto 0);  \par
+\tab\tab\tab D: out STD_LOGIC_VECTOR(3 downto 0); \par
+\tab\tab\tab U: out STD_LOGIC_VECTOR(3 downto 0)); \par
+\tab end component;\par
+\par
+signal S : STD_LOGIC_VECTOR(4 downto 0);\par
+begin\par
+\tab\f3 U1:\f1  somador_2_4bits port map\f3 (\f1 A, B, S\f3 );\par
+\tab U2: \f1 binario_BCD port map(S, D, U);\f3\par
+\f1 end somador_2_4bits_BCD;\par
+\par
+\par
+nome do arquivo: somador_2_4bits_BCD.ucf\par
+\par
+\par
+NET "A<3>" LOC = "N3"; # SW7\par
+NET "A<2>" LOC = "E2"; # SW6\par
+NET "A<1>" LOC = "F3"; # SW5\par
+NET "A<0>" LOC = "G3"; # SW4\par
+\par
+NET "B<3>" LOC = "B4";  # SW3\par
+NET "B<2>" LOC = "K3";  # SW2\par
+NET "B<1>" LOC = "L3"; # SW1\par
+NET "B<0>" LOC = "P11"; # SW0\par
+\par
+NET "D<3>" LOC = "G1";   # LD7\par
+NET "D<2>" LOC = "P4"; #LD6\par
+NET "D<1>" LOC = "N4";   #LD5\par
+NET "D<0>" LOC = "N5";   #LD4\par
+\par
+NET "U<3>" LOC = "P6";   # LD3\par
+NET "U<2>" LOC = "P7"; #LD2\par
+NET "U<1>" LOC = "M11";   #LD1\par
+NET "U<0>" LOC = "M5";   #LD0\par
+\par
+4)VISTO 4\par
+\par
+library IEEE;\par
+use IEEE.STD_LOGIC_1164.ALL;\par
+use IEEE.STD_LOGIC_ARITH.ALL;\par
+use IEEE.STD_LOGIC_UNSIGNED.ALL;\par
+\par
+entity mostrador is\par
+\tab Port ( ck: in STD_LOGIC; --clock da placa\par
+\tab     digito : out STD_LOGIC_VECTOR (6 downto 0); --digito a ser mostrado\par
+   \tab displays : out STD_LOGIC_VECTOR (3 downto 0) ); --seletor de mostrador\par
+end mostrador;\par
+\par
+architecture mostrador_op of mostrador is\par
+\tab signal display0,display1 : STD_LOGIC_VECTOR (6 downto 0);\par
+\tab signal cntDiv: STD_LOGIC_VECTOR(28 downto 0); -- general clock div/cnt\par
+\tab alias clkDisp: STD_LOGIC is cntDiv(16); -- divided clock: 50MHz/2^17=381Hz\par
+begin\par
+\tab display0 <= "0000001"; -- decimal "0"\par
+\tab display1 <= "1001111"; -- decimal "1"\par
+\tab -- CODIGO PARA ALTERNAR ENTRE OS MOSTRADORES AN0 E AN1\par
+\tab\par
+\tab ckDivider: process(ck)\par
+\tab begin\par
+\tab\tab if ck'event and ck='1' then\par
+\tab\tab\tab cntDiv <= cntDiv + '1';\par
+\tab\tab end if;\par
+\tab\tab\par
+\tab\tab case clkDisp is\par
+\tab\tab\tab when '0' =>\par
+\tab\tab\tab\tab digito <= display0;\par
+\tab\tab\tab\tab displays <= "1110"; -- seleciona mostrador AN0\par
+\tab\tab\tab when others =>\par
+\tab\tab\tab\tab digito <= display1;\par
+\tab\tab\tab\tab displays <= "1101"; -- seleciona mostrador AN1\par
+\tab\tab end case;\par
+\tab end process;\par
+end mostrador_op;\par
+\par
+nome do arquivo:  mostrador.ucf\par
+\par
+NET  "ck" LOC = "B8";  # clock\par
+\par
+NET "digito<6>" LOC = "L14"; #a\par
+NET "digito<5>" LOC = "H12"; #b\par
+NET "digito<4>" LOC = "N14"; #c\par
+NET "digito<3>" LOC = "N11"; #d\par
+NET "digito<2>" LOC = "P12"; #e\par
+NET "digito<1>" LOC = "L13"; #f\par
+NET "digito<0>" LOC = "M12"; #g\par
+\par
+NET "displays<3>" LOC = "K14"; #AN3\par
+NET "displays<2>" LOC = "M13"; #AN2\par
+NET "displays<1>" LOC = "J12"; #AN1\par
+NET "displays<0>" LOC = "F12"; #AN0\par
+\par
+\par
+\par
+5) VISTO 5\par
+\par
+library IEEE;\par
+use IEEE.STD_LOGIC_1164.ALL;\par
+use IEEE.STD_LOGIC_ARITH.ALL;\par
+use IEEE.STD_LOGIC_UNSIGNED.ALL;\par
+\par
+entity mostrador is\par
+\tab Port ( ck: in STD_LOGIC; --clock da placa\par
+\tab      Dseg:   in STD_LOGIC_VECTOR (6 downto 0); --dezenas\par
+\tab      Useg:   in STD_LOGIC_VECTOR (6 downto 0); --unidades\par
+\tab     digito : out STD_LOGIC_VECTOR (6 downto 0); --digito a ser mostrado\par
+   \tab displays : out STD_LOGIC_VECTOR (3 downto 0) ); --seletor de mostrador\par
+end multiplexador;\par
+\par
+architecture mostrador_op of mostrador is\par
+\tab signal cntDiv: STD_LOGIC_VECTOR(28 downto 0); -- general clock div/cnt\par
+\tab alias clkDisp: STD_LOGIC is cntDiv(16); -- divided clock: 50MHz/2^17=381Hz\par
+begin\par
+\tab -- CODIGO PARA ALTERNAR ENTRE OS MOSTRADORES AN0 E AN1\par
+\tab\par
+\tab ckDivider: process(ck)\par
+\tab begin\par
+\tab\tab if ck'event and ck='1' then\par
+\tab\tab\tab cntDiv <= cntDiv + '1';\par
+\tab\tab end if;\par
+\tab\tab\par
+\tab\tab case clkDisp is\par
+\tab\tab\tab when '0' =>\par
+\tab\tab\tab\tab digito <= Dseg;\par
+\tab\tab\tab\tab displays <= "1110"; -- seleciona mostrador AN0\par
+\tab\tab\tab when others =>\par
+\tab\tab\tab\tab digito <= Useg;\par
+\tab\tab\tab\tab displays <= "1101"; -- seleciona mostrador AN1\par
+\tab\tab end case;\par
+\tab end process;\par
+end mostrador_op;\par
+\par
+6) VISTO 6\par
+-------------------------------------------------------------------------------------------------------------------\par
+library ieee;\par
+use ieee.std_logic_1164.all;\par
+\par
+entity somador_completo is\par
+\tab port(Cin,A,B: in STD_LOGIC;\par
+\tab          S,Cout: out STD_LOGIC);\par
+end somador_completo;\par
+\par
+architecture somador_completo_op of somador_completo is\par
+begin\par
+\tab S <= Cin xor (A xor B);\par
+           Cout <= (A and B) or (Cin and(A xor B));\par
+end somador_completo_op;\par
+-------------------------------------------------------------------------------------------------------------------\par
+library ieee;\par
+use ieee.std_logic_1164.all;\par
+\par
+entity somador_2_4bits is\par
+\tab port(A: in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab        B: in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab        S: out STD_LOGIC_VECTOR(4 downto 0));\par
+\par
+end somador_2_4bits;\par
+\par
+architecture somador_2_4bits_op of somador_2_4bits is\par
+\tab component somador_completo is\par
+\f2\tab\tab\f1 port(Cin,A,B: in STD_LOGIC;\par
+\tab          \tab          S,Cout: out STD_LOGIC);\par
+\tab end component\f3 ;\f1\par
+\par
+signal AUXin: STD_LOGIC;\par
+begin\par
+\tab AUXin <= '0';\par
+\tab\f3 U1:\f1 somador_completo port map\f3 (\f1 AUXin\f3 ,A(0),B(0),S(0),C1);\par
+\tab U2:\f1 somador_completo port map\f3 (      C1,A(1),B(1),S(1),C2);\par
+\tab U3:\f1 somador_completo port map\f3 (      C2,A(2),B(2),S(2),C3);\par
+\tab U4:\f1 somador_completo port map\f3 (      C3,A(3),B(3),S(3),S(4));\par
+\f1\par
+\par
+end somador_2_4bits_op;\par
+-------------------------------------------------------------------------------------------------------------------\par
+library ieee;\par
+use ieee.std_logic_1164.all;\par
+\par
+entity binario_BCD is\par
+\tab port(\tab S: in STD_LOGIC_VECTOR(4 downto 0);  \par
+\tab\tab D: out STD_LOGIC_VECTOR(3 downto 0); \par
+\tab\tab U: out STD_LOGIC_VECTOR(3 downto 0)); \par
+end binario_BCD;\par
+\par
+architecture binario_BCD_op of binario_BCD is\par
+begin\par
+\par
+with S select\par
+\tab U <= \tab "0000" when "00000" | "01010" | "10100" | "11110" ,\par
+\tab\tab "0001" when "00001" | "01011" | "10101" | "11111" ,\par
+\tab\tab "0010" when "00010" | "01100" | "10110",\par
+\tab\tab "0011" when "00011" | "01101" | "10111",\par
+\tab\tab "0100" when "00100" | "01110" | "11000",\par
+\tab\tab "0101" when "00101" | "01111" | "11001",\par
+\tab\tab "0110" when "00110" | "10000" | "11010",\par
+\tab\tab "0111" when "00111" | "10001" | "11011",\par
+\tab\tab "1000" when "01000" | "10010" | "11100",\par
+\tab\tab "1001" when "01001" | "10011" | "11101",\par
+\tab\tab "0000" when others;\par
+\par
+with S select\par
+\tab D <=    "0000" when "00000" | "00001" | "00010" | "00011" | "00100" | "00101" | \tab\tab\tab\tab  "00110" | "00111" | "01000" | "01001", \par
+\tab\tab     "0001" when "01010" | "01011" | "01100" | "01101" | "01110" | "01111" | \tab\tab\tab\tab  "10000" | "10001" | "10010" | "10011",\par
+\tab\tab     "0010" when "10100" | "10101" | "10110" | "10111" | "11000" | "11001" | \tab\tab\tab\tab  "11010" | "11011" | "11100" | "11101",\par
+\tab\tab     "0011" when   "11110" | "11111",\par
+\tab\tab     "0000" when others;\par
+\par
+end  binario_BCD_op;\par
+-------------------------------------------------------------------------------------------------------------------\par
+library ieee;\par
+use ieee.std_logic_1164.all;\par
+\par
+entity somador_2_4bits_BCD is\par
+\tab port(\tab A : in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab\tab B : in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab\tab D : out STD_LOGIC_VECTOR(3 downto 0);\par
+\tab\tab U : out STD_LOGIC_VECTOR(3 downto 0));\par
+end somador_2_4bits_BCD;\par
+\par
+architecture somador_2_4bits_BCD_op of somador_2_4bits_BCD is \par
+\tab component somador_2_4bits is\par
+\tab\tab port(A: in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab\tab        B: in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab\tab        S: out STD_LOGIC_VECTOR(4 downto 0));\par
+\tab end component;\par
+\par
+\tab component binario_BCD is\par
+\tab\tab port(\tab S: in STD_LOGIC_VECTOR(4 downto 0);  \par
+\tab\tab\tab D: out STD_LOGIC_VECTOR(3 downto 0); \par
+\tab\tab\tab U: out STD_LOGIC_VECTOR(3 downto 0)); \par
+\tab end component;\par
+\par
+signal S : STD_LOGIC_VECTOR(4 downto 0);\par
+begin\par
+\tab\f3 U1:\f1  somador_2_4bits port map\f3 (\f1 A, B, S\f3 );\par
+\tab U2: \f1 binario_BCD port map(S, D, U);\f3\par
+\f1 end somador_2_4bits_BCD;\par
+-------------------------------------------------------------------------------------------------------------------\par
+library ieee;\par
+use ieee.std_logic_1164.all;\par
+\par
+entity bin4to7segmentos is\tab //BCD_mostrador\par
+\tab port(\tab BCD : in STD_LOGIC_VECTOR(3 downto 0);  \par
+\tab\tab BCDseg: out STD_LOGIC_VECTOR(6 downto 0);  --a b c d e f g\par
+end bin4to7segmentos;\par
+\par
+architecture bin4to7segmentos_op of bin4to7segmentos is\par
+signal f: STD_LOGIC_VECTOR(6 downto 0);  \par
+begin\par
+\par
+with B select\par
+\tab f <= \tab '1111110' when "0000",\par
+\tab\tab '0110000' when "0001",\par
+\tab\tab '1101101' when "0010",\par
+\tab\tab '1111001' when "0011",\par
+\tab\tab '0110011' when "0100",\par
+\tab\tab '1011011' when "0101",\par
+\tab\tab '1011111' when "0110",\par
+\tab\tab '1110000' when "0111",\par
+\tab\tab '1111111' when "1000",\par
+\tab\tab '1110011' when "1001",\par
+\tab\tab '1110111' when "1010",\par
+\tab\tab '0011111' when "1011",\par
+\tab\tab '1001110' when "1100",\par
+\tab\tab '0111101' when "1101",\par
+\tab\tab '1001111' when "1110",\par
+\tab\tab '1000111' when "1111",\par
+\tab\tab '0000000' when others;\par
+\par
+BCDseg = not(f);\par
+\par
+end bin4to7segmentos_op ;\par
+-------------------------------------------------------------------------------------------------------------------\par
+library IEEE;\par
+use IEEE.STD_LOGIC_1164.ALL;\par
+use IEEE.STD_LOGIC_ARITH.ALL;\par
+use IEEE.STD_LOGIC_UNSIGNED.ALL;\par
+\par
+entity mostrador is\par
+\tab Port ( ck: in STD_LOGIC; --clock da placa\par
+\tab      Dseg:   in STD_LOGIC_VECTOR (6 downto 0); --dezenas\par
+\tab      Useg:   in STD_LOGIC_VECTOR (6 downto 0); --unidades\par
+\tab     digito : out STD_LOGIC_VECTOR (6 downto 0); --digito a ser mostrado\par
+   \tab displays : out STD_LOGIC_VECTOR (3 downto 0) ); --seletor de mostrador\par
+end multiplexador;\par
+\par
+architecture multiplexador_op of multiplexador is\par
+\tab signal cntDiv: STD_LOGIC_VECTOR(28 downto 0); -- general clock div/cnt\par
+\tab alias clkDisp: STD_LOGIC is cntDiv(16); -- divided clock: 50MHz/2^17=381Hz\par
+begin\par
+\tab -- CODIGO PARA ALTERNAR ENTRE OS MOSTRADORES AN0 E AN1\par
+\tab\par
+\tab ckDivider: process(ck)\par
+\tab begin\par
+\tab\tab if ck'event and ck='1' then\par
+\tab\tab\tab cntDiv <= cntDiv + '1';\par
+\tab\tab end if;\par
+\tab\tab\par
+\tab\tab case clkDisp is\par
+\tab\tab\tab when '0' =>\par
+\tab\tab\tab\tab digito <= Dseg;\par
+\tab\tab\tab\tab displays <= "1110"; -- seleciona mostrador AN0\par
+\tab\tab\tab when others =>\par
+\tab\tab\tab\tab digito <= Useg;\par
+\tab\tab\tab\tab displays <= "1101"; -- seleciona mostrador AN1\par
+\tab\tab end case;\par
+\tab end process;\par
+end multiplexador_op;\par
+\pard\sa200\sl276\slmult1 -------------------------------------------------------------------------------------------------------------------\cf0\kerning0\f0\line\cf1\kerning2\f1 library IEEE;\line use IEEE.STD_LOGIC_1164.ALL;\line use IEEE.STD_LOGIC_ARITH.ALL;\line use IEEE.STD_LOGIC_UNSIGNED.ALL;\par
+\pard\nowidctlpar\qj entity somador_saida_decimal is\par
+\tab port ( A: in STD_LOGIC_VECTOR(3 downto 0); --primeira palavra de 4 bits\par
+\tab          B: in STD_LOGIC_VECTOR(3 downto 0); --segunda palavra de 4 bits\par
+                    ck: in STD_LOGIC; --clock da placa\par
+\tab    digito : out STD_LOGIC_VECTOR (6 downto 0); --digito a ser mostrado   \line            displays : out STD_LOGIC_VECTOR (3 downto 0) ); --seletor de mostrador\par
+end somador_saida_decimal;\par
+\pard\sa200\sl276\slmult1\cf0\kerning0\f0\par
+\pard\nowidctlpar\qj\cf1\kerning2\f1 architecture somador_saida_decimal_op of somador_saida_decimal is \par
+\tab component somador_2_4bits_BCD is\par
+\tab\tab port(\tab A : in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab\tab\tab B : in STD_LOGIC_VECTOR(3 downto 0);\par
+\tab\tab\tab D : out STD_LOGIC_VECTOR(3 downto 0);\par
+\tab\tab\tab U : out STD_LOGIC_VECTOR(3 downto 0));\par
+\tab end component;\par
+\par
+\tab component bin4to7segmentos is\par
+\tab\tab port(\tab B: in STD_LOGIC_VECTOR(3 downto 0);  \par
+\tab\tab\tab S: out STD_LOGIC_VECTOR(6 downto 0);  --a b c d e f g\par
+\tab end component;\par
+\par
+\tab component multiplexador is\par
+\tab\tab Port ( ck: in STD_LOGIC; --clock da placa\par
+\tab\tab      Dseg:   in STD_LOGIC_VECTOR (6 downto 0); --dezenas\par
+\tab\tab      Useg:   in STD_LOGIC_VECTOR (6 downto 0); --unidades\par
+\tab\tab     digito : out STD_LOGIC_VECTOR (6 downto 0); --digito a ser mostrado\par
+\tab    \tab displays : out STD_LOGIC_VECTOR (3 downto 0) ); --seletor de mostrador\par
+\tab end component;\par
+\par
+signal D,U : STD_LOGIC_VECTOR(3 downto 0);\par
+signal Dseg,Useg : STD_LOGIC_VECTOR(6 downto 0);\par
+begin\par
+\tab\f3 U1:\f1  somador_2_4bits_BCD port map\f3 (\f1 A, B, D,U\f3 );\par
+\tab U2: \f1 bin4to7segmentos port map(D, Dseg);\par
+\f3\tab U3: \f1 bin4to7segmentos port map(U, Useg);\par
+\tab U4: multiplexador port map(ck,Dseg,Useg,digito, displays);\f3\par
+\f1 end somador_saida_decimal;\par
+\pard\sa200\sl276\slmult1\cf0\kerning0\f0\par
+\cf1\kerning2\f1 -------------------------------------------------------------------------------------------------------------------\cf0\kerning0\f0\par
+\pard\nowidctlpar\qj\cf1\kerning2\f1\par
+NET "A<3>" LOC = "N3"; #  SW7\par
+NET "A<2>" LOC = "E2"; # SW6\par
+NET "A<1>" LOC = "F3"; # SW5\par
+NET "A<0>" LOC = "G3"; #SW4\par
+\par
+NET "B<3>" LOC = "B4";  # SW3\par
+NET "B<2>" LOC = "L3";  # SW2\par
+NET "B<1>" LOC = "K3"; # SW1\par
+NET "B<0>" LOC = "P11"; # SW0\par
+\par
+NET  "ck" LOC = "B8";  # clock\par
+\par
+NET "digito<6>" LOC = "L14"; #a\par
+NET "digito<5>" LOC = "H12"; #b\par
+NET "digito<4>" LOC = "N14"; #c\par
+NET "digito<3>" LOC = "N11"; #d\par
+NET "digito<2>" LOC = "P12"; #e\par
+NET "digito<1>" LOC = "L13"; #f\par
+NET "digito<0>" LOC = "M12"; #g\par
+\par
+NET "displays<3>" LOC = "K14"; #AN3\par
+NET "displays<2>" LOC = "M13"; #AN2\par
+NET "displays<1>" LOC = "J12"; #AN1\par
+NET "displays<0>" LOC = "F12"; #AN0\par
+\par
+\par
+\pard\sa200\sl276\slmult1\cf0\kerning0\f0\par
+\par
+}
+ 

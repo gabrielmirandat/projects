@@ -1,0 +1,24 @@
+NET "A<3>" LOC = "N3"; #  SW7
+NET "A<2>" LOC = "E2"; # SW6
+NET "A<1>" LOC = "F3"; # SW5
+NET "A<0>" LOC = "G3"; #SW4
+
+NET "B<3>" LOC = "B4";  # SW3
+NET "B<2>" LOC = "L3";  # SW2
+NET "B<1>" LOC = "K3"; # SW1
+NET "B<0>" LOC = "P11"; # SW0
+
+NET  "ck" LOC = "B8";  # clock
+
+NET "digito<6>" LOC = "L14"; #a
+NET "digito<5>" LOC = "H12"; #b
+NET "digito<4>" LOC = "N14"; #c
+NET "digito<3>" LOC = "N11"; #d
+NET "digito<2>" LOC = "P12"; #e
+NET "digito<1>" LOC = "L13"; #f
+NET "digito<0>" LOC = "M12"; #g
+
+NET "displays<3>" LOC = "K14"; #AN3
+NET "displays<2>" LOC = "M13"; #AN2
+NET "displays<1>" LOC = "J12"; #AN1
+NET "displays<0>" LOC = "F12"; #AN0

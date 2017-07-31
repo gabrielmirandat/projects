@@ -1,0 +1,30 @@
+BL51 BANKED LINKER/LOCATER V5.03                                                        10/17/2015  09:36:04  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V5.03, INVOKED BY:
+BL51 C:\USERS\GABRIEL\DOWNLOADS\SEMESTRE5\SD2-LAB\EXP7\CONT_PULSOS_ENABLE\CONT_PULSOS_ENABLE.OBJ
+
+
+INPUT MODULES INCLUDED:
+  C:\USERS\GABRIEL\DOWNLOADS\SEMESTRE5\SD2-LAB\EXP7\CONT_PULSOS_ENABLE\CONT_PULSOS_ENABLE.OBJ (CONT_PULSOS_ENABLE)
+
+
+LINK MAP OF MODULE:  C:\USERS\GABRIEL\DOWNLOADS\SEMESTRE5\SD2-LAB\EXP7\CONT_PULSOS_ENABLE\CONT_PULSOS_ENABLE (CONT_PULSO
+>> S_ENABLE)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0025H     ABSOLUTE     
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0024H BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=37
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

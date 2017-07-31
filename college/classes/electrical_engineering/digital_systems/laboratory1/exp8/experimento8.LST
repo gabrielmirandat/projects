@@ -1,0 +1,152 @@
+A51 MACRO ASSEMBLER  EXPERIMENTO8                                                         11/05/2015 15:16:25 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.09
+OBJECT MODULE PLACED IN C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\exp8\experimento8.OBJ
+ASSEMBLER INVOKED BY: C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\assembly_8051\dos8051-montador\A51.EXE C:\Users\gabri
+                      el\Downloads\SEMESTRE5\SD2-LAB\exp8\experimento8.ASM
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ;Leitor de disquete em Assembly
+                       2     
+                       3     $mod51                  ;início 
+0000                   4     ORG 0                   ;para gravar a partir de 0  
+                       5     
+0000                   6     INICIO:
+  0020                 7     EP EQU 20H              ;estado presente
+  0090                 8     HP BIT P1.0             ;entrada HP
+  0091                 9     MOK BIT P1.1    ;entrada MOK
+  0092                10     Tme BIT P1.2    ;entrada T<
+  0093                11     TOK BIT P1.3    ;entrada TOK
+  0094                12     Tma BIT P1.4    ;entrada T>
+  0095                13     S0 BIT P1.5             ;entrada S0
+  0096                14     SOK BIT P1.6    ;entrada SOK
+  0097                15     LEU BIT P1.7    ;entrada LEU
+                      16     
+  00A0                17     MT BIT P2.0             ;saída MT
+  00A1                18     LDHD BIT P2.1   ;saída LDHD 
+  00A2                19     LET BIT P2.2    ;saída LT
+  00A3                20     AVC BIT P2.3    ;saída AVC
+  00A4                21     RETR BIT P2.4   ;saída RETR
+  00A5                22     LS BIT P2.5             ;saída LS
+  00A6                23     LER BIT P2.6    ;saída LER
+  00A7                24     RESET BIT P2.7  ;entrada RESET
+                      25     
+0000                  26     estadoA: ;0000
+0000 752000           27             MOV EP, #0
+0003 C2A6             28             CLR LER                         ;zera LER
+0005 20A775           29             JB RESET, resetar       ;verifica a entrada reset para resetar as entradas e saída
+                             s
+0008 C2A0             30             CLR MT                          ;zera MT
+000A C2A1             31             CLR LDHD                        ;zera LDHD
+000C 209002           32             JB HP, estadoB          ;passa para estado B se HP estiver ativado
+000F 80EF             33             JMP estadoA                     ;continua em A se HP estiver desativado
+                      34     
+0011                  35     estadoB: ;0001
+0011 752001           36             MOV EP, #1
+0014 C2A5             37             CLR LS                          ;zera LS
+0016 20A764           38             JB RESET, resetar
+0019 D2A0             39             SETB MT                         ;ativa MT
+001B D2A1             40             SETB LDHD                       ;ativa LDHD
+001D 209102           41             JB MOK, estadoC         ;passa para estado C se MOK estiver ativado
+0020 80EF             42             JMP estadoB                     ;continua em B se MOK estiver desativado
+                      43     
+0022                  44     estadoC: ;0011
+0022 752003           45             MOV EP, #3
+0025 C2A3             46             CLR AVC                         ;zera ANÇ
+0027 C2A4             47             CLR RETR                        ;zera RETR
+0029 20A751           48             JB RESET, resetar
+002C D2A2             49             SETB LET                        ;ativa LT
+002E 209308           50             JB TOK, estadoD         ;passa para estado D se TOK estiver ativado
+0031 209231           51             JB Tme, estadoG         ;passa para estado G se T< estiver ativado
+0034 20943A           52             JB Tma, estadoH         ;passa para estado H se T> estiver ativado
+0037 80E9             53             JMP estadoC                     ;continua em C se TOK estiver desativado
+                      54     
+0039                  55     estadoD: ;0100
+0039 752004           56             MOV EP, #4
+A51 MACRO ASSEMBLER  EXPERIMENTO8                                                         11/05/2015 15:16:25 PAGE     2
+
+003C C2A2             57             CLR LET                         ;zera LT
+003E 20A73C           58             JB RESET, resetar
+0041 209502           59             JB S0, estadoE          ;passa para estado E se S0 estiver ativado
+0044 80F3             60             JMP estadoD                     ;continua em D se S0 estiver desativado
+                      61     
+0046                  62     estadoE: ;0010
+0046 752002           63             MOV EP, #2
+0049 20A731           64             JB RESET, resetar
+004C D2A5             65             SETB LS                         ;ativa LS
+004E 2095C0           66             JB S0, estadoB          ;volta ao estado B se S0 estiver ativado
+0051 209602           67             JB SOK, estadoF         ;passa para estado F se SOK estiver ativado e S0 desativado
+0054 80F0             68             JMP estadoE                     ;continua em E se SOK e S0 estiverem desativados
+                      69     
+0056                  70     estadoF: ;0101
+0056 752005           71             MOV EP, #5
+0059 C2A5             72             CLR LS                          ;zera LS
+005B 20A71F           73             JB RESET, resetar
+005E D2A6             74             SETB LER                        ;ativa LER
+0060 20979D           75             JB LEU, estadoA         ;retorna ao estado incial A se LEU estiver ativo
+0063 80F1             76             JMP estadoF                     ;continua em F se LEU estiver desativado
+                      77     
+0065                  78     estadoG: ;0110
+0065 752006           79             MOV EP, #6
+0068 C2A2             80             CLR LET                         ;zera LT
+006A 20A710           81             JB RESET, resetar
+006D D2A3             82             SETB AVC                        ;ativa ANÇ
+006F 80B1             83             JMP estadoC                     ;volta para estado C incondicionalmente
+                      84     
+0071                  85     estadoH: ;0111
+0071 752007           86             MOV EP, #7
+0074 C2A2             87             CLR LET                         ;zera LT
+0076 20A704           88             JB RESET, resetar
+0079 D2A4             89             SETB RETR                       ;ativa RETR
+007B 80A5             90             JMP estadoC                     ;volta para estado C incondicionalmente
+                      91             
+007D                  92     resetar:
+007D 8500A0           93             MOV P2, 0               ;passa todas as saídas para 0
+0080 0100             94             JMP estadoA             ;retorna ao estado inicial A
+                      95     
+                      96     END
+A51 MACRO ASSEMBLER  EXPERIMENTO8                                                         11/05/2015 15:16:25 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AVC. . . . . . . .  B ADDR   00A0H.3 A   
+EP . . . . . . . .  N NUMB   0020H   A   
+ESTADOA. . . . . .  C ADDR   0000H   A   
+ESTADOB. . . . . .  C ADDR   0011H   A   
+ESTADOC. . . . . .  C ADDR   0022H   A   
+ESTADOD. . . . . .  C ADDR   0039H   A   
+ESTADOE. . . . . .  C ADDR   0046H   A   
+ESTADOF. . . . . .  C ADDR   0056H   A   
+ESTADOG. . . . . .  C ADDR   0065H   A   
+ESTADOH. . . . . .  C ADDR   0071H   A   
+HP . . . . . . . .  B ADDR   0090H.0 A   
+INICIO . . . . . .  C ADDR   0000H   A   
+LDHD . . . . . . .  B ADDR   00A0H.1 A   
+LER. . . . . . . .  B ADDR   00A0H.6 A   
+LET. . . . . . . .  B ADDR   00A0H.2 A   
+LEU. . . . . . . .  B ADDR   0090H.7 A   
+LS . . . . . . . .  B ADDR   00A0H.5 A   
+MOK. . . . . . . .  B ADDR   0090H.1 A   
+MT . . . . . . . .  B ADDR   00A0H.0 A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+RESET. . . . . . .  B ADDR   00A0H.7 A   
+RESETAR. . . . . .  C ADDR   007DH   A   
+RETR . . . . . . .  B ADDR   00A0H.4 A   
+S0 . . . . . . . .  B ADDR   0090H.5 A   
+SOK. . . . . . . .  B ADDR   0090H.6 A   
+TMA. . . . . . . .  B ADDR   0090H.4 A   
+TME. . . . . . . .  B ADDR   0090H.2 A   
+TOK. . . . . . . .  B ADDR   0090H.3 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

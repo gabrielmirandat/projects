@@ -1,0 +1,61 @@
+A51 MACRO ASSEMBLER  CONT_PULSOS_ENABLE                                                   10/17/2015 09:36:04 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.09
+OBJECT MODULE PLACED IN C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\exp7\cont_pulsos_enable\cont_pulsos_enable.OBJ
+ASSEMBLER INVOKED BY: C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\assembly_8051\dos8051-montador\A51.EXE C:\Users\gabri
+                      el\Downloads\SEMESTRE5\SD2-LAB\exp7\cont_pulsos_enable\cont_pulsos_enable.ASM
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     $mod51                             ;início
+0000                   2     ORG   0                ;para gravar a partir de 0
+0000 7800              3     MOV   R0,#0H           ;para zerar o registrador R0
+0002 7900              4     MOV   R1,#0H           ;para zerar o registrador R1
+0004 E4                5     CLR   A                ;para zerar o acumulador
+                       6     
+                       7     
+0005 30800A            8     LB1:    JNB   P0.0, LB0        ;se no começo do programa P0.0 for 0, vai para a rotina 'LB
+                             0'
+0008 8005              9                     JMP   LB3              ;senão vai para 'a rotina 'LB3'
+                      10     
+000A E8               11     LB2:    MOV   A, R0;           ;se P0.0 for 1, copia o valor de R0 para o acumulador
+000B 29               12                     ADD   A, R1;           ;soma o valor do acumulador com R1
+000C C9               13                     XCH   A, R1;           ;troca o valor de A com R1
+000D 7800             14                     MOV   R0,#0H           ;para zerar o registrador R0
+                      15     
+000F 2081FD           16     LB3:    JB    P0.1, LB3        ;se P0.0 continuar em 1 ele permanece aqui, senão ele segue
+                              para LB0
+                      17     
+0012 308102           18     LB0:    JNB   P0.1, CASO0      ;se P0.1 for 0, vai para a rotina 'CASO0'
+0015 8003             19             JMP   CASO1            ;senão vai para a rotina 'CASO1'
+                      20     
+0017 3081FD           21     CASO0:  JNB   P0.1,CASO0       ;enquanto P0.1 não mudar para 1, ele permanece aqui.
+                      22     
+001A 2081FD           23     CASO1:  JB    P0.1,CASO1       ;enquanto P0.1 não mudar, permanece aqui.
+001D 08               24             INC   R0               ;Completou um ciclo de 0 e 1,
+001E 2081E9           25             JB    P0.1,LB2         ;se P0.0 for 1, vai para a rotina 'LB2'
+0021 80F4             26             JMP   CASO0            ;se P0.0 ainda for 0,volta para 'CASO0' para reiniciar o pro
+                             cesso
+                      27     END
+A51 MACRO ASSEMBLER  CONT_PULSOS_ENABLE                                                   10/17/2015 09:36:04 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CASO0. . . . . . .  C ADDR   0017H   A   
+CASO1. . . . . . .  C ADDR   001AH   A   
+LB0. . . . . . . .  C ADDR   0012H   A   
+LB1. . . . . . . .  C ADDR   0005H   A   
+LB2. . . . . . . .  C ADDR   000AH   A   
+LB3. . . . . . . .  C ADDR   000FH   A   
+P0 . . . . . . . .  D ADDR   0080H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

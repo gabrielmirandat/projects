@@ -1,0 +1,153 @@
+A51 MACRO ASSEMBLER  DISQUETE                                                             11/05/2015 16:37:02 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.09
+OBJECT MODULE PLACED IN C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\exp8\disquete.OBJ
+ASSEMBLER INVOKED BY: C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\assembly_8051\dos8051-montador\A51.EXE C:\Users\gabri
+                      el\Downloads\SEMESTRE5\SD2-LAB\exp8\disquete.ASM
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     $mod51                     ;início
+0000                   2     ORG  0                    ;para gravar a partir de 0
+0000 E4                3     CLR  A                    ;para zerar o acumulador
+                       4                     
+  0020                 5     EP      EQU 20H               ;estado presente
+  0090                 6     HP      BIT P1.0                  ;entrada HP
+  0091                 7     MOK     BIT P1.1                  ;entrada MOK
+  0092                 8     Tmenor  BIT P1.2                  ;entrada T<
+  0093                 9     TOK             BIT P1.3                  ;entrada TOK
+  0094                10     Tmaior  BIT P1.4                  ;entrada T>
+  0095                11     SO              BIT P1.5                  ;entrada SO
+  0096                12     SOK             BIT P1.6                  ;entrada SOK
+  0097                13     LEU             BIT P1.7                  ;entrada LEU
+  00A7                14     RESET   BIT P2.7                  ;entrada RESET
+  00A6                15     LER             BIT P2.6                  ;saida LER
+  00A5                16     LS              BIT P2.5                  ;saida LS
+  00A4                17     RETR    BIT P2.4          ;saida RETR
+  00A3                18     AVAN    BIT P2.3                  ;saida AVÇ
+  00A2                19     LTa             BIT P2.2                  ;saida LT
+  00A1                20     LDHD    BIT P2.1                  ;saida LDHD
+  00A0                21     MT              BIT P2.0                  ;saida MT
+                      22     
+                      23     ;limpa todas as variaveis
+0001 C290             24     CLR HP                                    ;entrada HP
+0003 C291             25     CLR MOK                                   ;entrada MOK
+0005 C292             26     CLR Tmenor                                ;entrada T<
+0007 C293             27     CLR TOK                                   ;entrada TOK
+0009 C294             28     CLR Tmaior                                ;entrada T>
+000B C295             29     CLR SO                                    ;entrada SO
+000D C296             30     CLR SOK                                   ;entrada SOK
+000F C297             31     CLR LEU                                   ;entrada LEU
+0011 C2A7             32     CLR RESET                                 ;entrada RESET
+0013 C2A6             33     CLR LER                                   ;saida LER
+0015 C2A5             34     CLR LS                                    ;saida LS
+0017 C2A4             35     CLR RETR                          ;saida RETR
+0019 C2A3             36     CLR AVAN                                  ;saida AVÇ
+001B C2A2             37     CLR LTa                                   ;saida LT
+001D C2A1             38     CLR LDHD                                  ;saida LDHD
+001F C2A0             39     CLR MT                                    ;saida MT
+                      40     
+0021 752000           41     A0:     MOV EP, #0                ;estado 0
+0024 C2A6             42                     CLR  LER          ;LER = 0
+0026 C2A1             43                     CLR  LDHD         ;LDHD = 0
+0028 C2A0             44                     CLR  MT           ;MT = 0
+002A 20A769           45                     JB RESET, RES     ;se RESET, RES
+002D 3090F1           46                     JNB   HP, A0      ;se A e HP==0, A, senão B
+                      47     
+0030 752001           48     B1:             MOV EP, #1                ;estado 1
+0033 C2A5             49                     CLR  LS           ;LS = 0
+0035 D2A1             50                     SETB  LDHD        ;LDHD = 1
+0037 D2A0             51                     SETB  MT          ;MT = 1
+0039 20A75A           52                     JB RESET, RES     ;se RESET, RES
+003C 3091F1           53                     JNB   MOK, B1     ;se B e MOK==0, B, senão C
+                      54     
+003F 752002           55     C2:         MOV EP, #2            ;estado 2
+0042 D2A2             56                     SETB  LTa         ;LT = 1
+0044 C2A3             57                     CLR  AVAN         ;AVÇ = 0
+A51 MACRO ASSEMBLER  DISQUETE                                                             11/05/2015 16:37:02 PAGE     2
+
+0046 C2A4             58                     CLR  RETR         ;RETR = 0
+0048 20A74B           59                     JB RESET, RES     ;se RESET, RES
+004B 209308           60                     JB   TOK, D3      ;se C e TOK==1, D
+004E 20922D           61                     JB   Tmenor, G6   ;se C e Tmenor==1, G
+0051 209436           62                     JB   Tmaior, H7   ;se C e Tmaior==1, H
+0054 80E9             63                     JMP  C2               ;senão, C
+                      64     
+0056 752003           65     D3:             MOV EP, #3                ;estado 3
+0059 C2A2             66                     CLR  LTa          ;LT = 0
+005B 20A738           67                     JB RESET, RES     ;se RESET, RES
+005E 3095F5           68                     JNB   SO, D3      ;se D e SO==0, D, senão E
+                      69     
+0061 752004           70     E4:             MOV EP, #4                ;estado 4
+0064 D2A5             71                     SETB  LS          ;LS = 1
+0066 20A72D           72                     JB RESET, RES     ;se RESET, RES
+0069 2095C4           73                     JB  SO, B1                ;se E e SO==1, B
+006C 309600           74                     JNB  SOK,F5               ;se E e SO==0 e SOK==0, E, senão F
+                      75     
+006F 752005           76     F5:             MOV EP, #5                ;estado 5
+0072 C2A5             77                     CLR  LS           ;LS = 0
+0074 D2A6             78                     SETB LER          ;LER = 1
+0076 20A71D           79                     JB RESET, RES     ;se RESET, RES
+0079 3097F3           80                     JNB  LEU, F5      ;se F e LEU==0, F
+007C 80A3             81                     JMP      A0                       ;senão, A
+                      82     
+007E 752006           83     G6:             MOV EP, #6                ;estado 6
+0081 C2A2             84                     CLR  LTa          ;LT = 0
+0083 D2A3             85                     SETB  AVAN        ;AVÇ = 1
+0085 20A70E           86                     JB RESET, RES     ;se RESET, RES
+0088 80B5             87                     JMP  C2               ;pula sempre para C
+                      88     
+008A 752007           89     H7:             MOV EP, #7                ;estado 7
+008D C2A2             90                     CLR  LTa          ;LT = 0
+008F D2A4             91                     SETB RETR         ;RETR = 1
+0091 20A702           92                     JB RESET, RES     ;se RESET, RES
+0094 80A9             93                     JMP  C2               ;pula sempre para C
+                      94                     
+0096                  95     RES:
+0096 8500A0           96                     MOV P2, 0               ;zera todas as saídas
+0099 8086             97                     JMP A0              ;retorna ao estado inicial A
+                      98     
+                      99     END
+A51 MACRO ASSEMBLER  DISQUETE                                                             11/05/2015 16:37:02 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+A0 . . . . . . . .  C ADDR   0021H   A   
+AVAN . . . . . . .  B ADDR   00A0H.3 A   
+B1 . . . . . . . .  C ADDR   0030H   A   
+C2 . . . . . . . .  C ADDR   003FH   A   
+D3 . . . . . . . .  C ADDR   0056H   A   
+E4 . . . . . . . .  C ADDR   0061H   A   
+EP . . . . . . . .  N NUMB   0020H   A   
+F5 . . . . . . . .  C ADDR   006FH   A   
+G6 . . . . . . . .  C ADDR   007EH   A   
+H7 . . . . . . . .  C ADDR   008AH   A   
+HP . . . . . . . .  B ADDR   0090H.0 A   
+LDHD . . . . . . .  B ADDR   00A0H.1 A   
+LER. . . . . . . .  B ADDR   00A0H.6 A   
+LEU. . . . . . . .  B ADDR   0090H.7 A   
+LS . . . . . . . .  B ADDR   00A0H.5 A   
+LTA. . . . . . . .  B ADDR   00A0H.2 A   
+MOK. . . . . . . .  B ADDR   0090H.1 A   
+MT . . . . . . . .  B ADDR   00A0H.0 A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+RES. . . . . . . .  C ADDR   0096H   A   
+RESET. . . . . . .  B ADDR   00A0H.7 A   
+RETR . . . . . . .  B ADDR   00A0H.4 A   
+SO . . . . . . . .  B ADDR   0090H.5 A   
+SOK. . . . . . . .  B ADDR   0090H.6 A   
+TMAIOR . . . . . .  B ADDR   0090H.4 A   
+TMENOR . . . . . .  B ADDR   0090H.2 A   
+TOK. . . . . . . .  B ADDR   0090H.3 A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

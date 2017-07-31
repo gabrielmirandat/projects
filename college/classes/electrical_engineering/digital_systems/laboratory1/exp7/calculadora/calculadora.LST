@@ -1,0 +1,81 @@
+A51 MACRO ASSEMBLER  CALCULADORA                                                          11/04/2015 23:07:55 PAGE     1
+
+
+MACRO ASSEMBLER A51 V7.09
+OBJECT MODULE PLACED IN C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\exp7\calculadora\calculadora.OBJ
+ASSEMBLER INVOKED BY: C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\assembly_8051\dos8051-montador\A51.EXE C:\Users\gabri
+                      el\Downloads\SEMESTRE5\SD2-LAB\exp7\calculadora\calculadora.ASM
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     $mod51                          ;início
+0000                   2             ORG   0                ;para gravar a partir de 0
+0000 758000            3             MOV   P0,#0H           ;para zerar a porta P0
+0003 759000            4             MOV   P1,#0H           ;para zerar a porta P1
+0006 75A000            5             MOV   P2,#0H           ;para zerar a porta P2
+0009 E4                6                 CLR   A                ;para zerar o acumulador
+                       7     
+                       8     
+000A 30A013            9     INICIO:   JNB   P2.0, LB0        ;se no começo do programa P2.0 for 0,Vai para a rotina 'S
+                             S'
+000D 20A010           10               JB    P2.0, LB0        ;se no começo do programa P2.0 for 0,Vai para a rotina 'M
+                             D'
+                      11     
+0010                  12     SS:       JNB   P2.1, SOMA
+*** _______________________________________________^
+*** ERROR #A45 IN 12 (C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\exp7\calculadora\calculadora.ASM, LINE 12): UNDEFINED
+                              SYMBOL (PASS-2)
+0013                  13               JB    P2.1, MULT     
+*** _______________________________________________^
+*** ERROR #A45 IN 13 (C:\Users\gabriel\Downloads\SEMESTRE5\SD2-LAB\exp7\calculadora\calculadora.ASM, LINE 13): UNDEFINED
+                              SYMBOL (PASS-2)
+0016                  14     INIC:     
+0016 8005             15                     JMP   LB3              ;se no começo do programa, P0.0 for 1, vai para LB3
+                      16     
+0018 E8               17     LB2:    MOV   A, R0;           ;se P0.0 for 1, copia o valor de R0 para o acumulador
+0019 29               18                     ADD   A, R1;           ;soma o valor do acumulador com R1
+001A C9               19                     XCH   A, R1;           ;troca o valor de A com R1
+001B 7800             20                     MOV   R0,#0H           ;para zerar o registrador R0
+                      21     
+001D 2081FD           22     LB3:    JB    P0.1, LB3        ;se P0.0 continuar em 1 ele permanece aqui, senão ele segue
+                              para LB0
+                      23     
+0020 308102           24     LB0:    JNB   P0.1, CASO0      ;se P0.1 for 0,
+0023 8003             25             JMP   CASO1            ;senão vai para a rotina 'CASO1'
+                      26     
+0025 3081FD           27     CASO0:  JNB   P0.1,CASO0       ;enquanto P0.1 não
+                      28                                    ;mudar para 1, ele permanece aqui.
+0028 2081FD           29     CASO1:  JB    P0.1,CASO1       ;enquanto P0.1 não mudar
+002B 08               30             INC   R0               ;Completou um ciclo de 0 e 1,
+                      31                                    ;indicando que foi feito um pulso, então incrementa R0.
+002C 2081E9           32             JB    P0.1,LB2         ;se P0.0 for 1, vai para a rotina 'LB2'
+002F 80F4             33             JMP   CASO0            ;se P0.0 ainda for 0,volta para 'CASO0' para reiniciar
+                      34                                    ;o processo
+                      35     END
+A51 MACRO ASSEMBLER  CALCULADORA                                                          11/04/2015 23:07:55 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CASO0. . . . . . .  C ADDR   0025H   A   
+CASO1. . . . . . .  C ADDR   0028H   A   
+INIC . . . . . . .  C ADDR   0016H   A   
+INICIO . . . . . .  C ADDR   000AH   A   
+LB0. . . . . . . .  C ADDR   0020H   A   
+LB2. . . . . . . .  C ADDR   0018H   A   
+LB3. . . . . . . .  C ADDR   001DH   A   
+MULT . . . . . . .    ----   -----       
+P0 . . . . . . . .  D ADDR   0080H   A   
+P1 . . . . . . . .  D ADDR   0090H   A   
+P2 . . . . . . . .  D ADDR   00A0H   A   
+SOMA . . . . . . .    ----   -----       
+SS . . . . . . . .  C ADDR   0010H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 2 ERROR(S)
