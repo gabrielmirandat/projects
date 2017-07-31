@@ -1,0 +1,14 @@
+/*Estes sao os codigos de comando para o video exemplo do youtube */
+
+opencv_createsamples -info cars.info -num 550 -w 48 -h 24 -vec cars.vec
+opencv_createsamples -vec cars.vec -w 48 -h 24	/*opcional: ver imagens carregadas*/
+opencv_traincascade -data data -vec cars.vec -bg bg.txt -numPos 500 -numNeg 500 -numStages 2 -w 48 -h 24 -featureType LBP
+
+/*Estes sao os codigos de comando para o nosso */
+
+opencv_createsamples -info inst.info -num 52 -w 38 -h 38 -vec inst.vec
+opencv_createsamples -vec inst.vec -w 38 -h 38  /*opcional: ver imagens carregadas*/
+opencv_traincascade -data data -vec inst.vec -bg bg.txt -numPos 52 -numNeg 456 -numStages 20 -w 38 -h 38 -featureType LBP
+
+Em /outros tem um codigo pra criar os arquivos texto, la esta explicado como funciona
+Com "make proj='cascade.cpp'" compila o código pra testar em alguma image de teste. Pra rodar é ./proj cascade.xml imagem_teste.jpg
