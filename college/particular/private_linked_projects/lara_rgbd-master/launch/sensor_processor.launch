@@ -1,0 +1,10 @@
+<launch>
+    <!--*******************************      Sensor Processor       *******************************-->
+
+    <!--*******************************         Arguments           *******************************-->
+
+    <!--*******************************           Nodes             *******************************-->
+
+    <node pkg="lara_rgbd" type="new_sensor_processor" name="sensor_processor" output="screen" launch-prefix="valgrind"  />
+
+</launch>
