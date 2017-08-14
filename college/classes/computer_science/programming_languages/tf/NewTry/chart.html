@@ -1,0 +1,21 @@
+<!-- Esse código foi retirado da série de tutoriais sobre mineração do twitter: http://marcobonzanini.com/2015/04/01/mining-twitter-data-with-python-part-5-data-visualisation-basics/ -->
+
+<html>  
+<head>    
+    <title>Twitter Mining</title>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://d3js.org/d3.geo.projection.v0.min.js" charset="utf-8"></script>
+    <script src="http://trifacta.github.com/vega/vega.js"></script>
+</head>
+<body>
+    <div id="vis"></div>
+</body>
+<script type="text/javascript">
+
+function parse(spec) {
+  vg.parse.spec(spec, function(chart) { chart({el:"#vis"}).update(); });
+}
+parse("frequencia.json");
+</script>
+</html>

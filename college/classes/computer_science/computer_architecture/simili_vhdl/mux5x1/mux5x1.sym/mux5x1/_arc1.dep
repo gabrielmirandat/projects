@@ -1,0 +1,5 @@
+ieeevarstd_logic_1164ieee.sym/std_logic_1164/prim.var
+ieeesrcstd_logic_1164stdlogic.vhd
+.varmux5x1(arc1)mux5x1.sym/mux5x1/_arc1.var
+.srcmux5x1(arc1)c:/altera/13.0/2.mux5x1/mux5x1.vhd
+.varmux5x1mux5x1.sym/mux5x1/prim.var

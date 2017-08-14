@@ -1,0 +1,6 @@
+pai(joao,mane).
+pai(joao, ze).
+pai(joao, quim).
+pai(mane,maria).
+pai(ze, zefa).
+pai(ze, ruth).

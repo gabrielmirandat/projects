@@ -1,0 +1,33 @@
+[System]
+Name='realce_fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='entrada'
+Range=[0 255]
+NumMFs=3
+MF1='escuro':'trapmf',[-63.9285714285714 -20.3285714285714 92.7714285714286 137.071428571429]
+MF2='claro':'trapmf',[122.160317460317 161.160317460317 322.160317460317 361.160317460317]
+MF3='cinza':'gbellmf',[19.1 1.97674190589858 128]
+
+[Output1]
+Name='saida'
+Range=[0 255]
+NumMFs=3
+MF1='maisescuro':'trapmf',[-33.8 -32.8 1.69 57.0039682539683]
+MF2='cinza':'gaussmf',[39.0991357346877 128]
+MF3='maisclaro':'trapmf',[197.321428571429 254 313 319]
+
+[Rules]
+1, 1 (1) : 1
+2, 3 (1) : 1
+3, 2 (1) : 1

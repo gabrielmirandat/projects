@@ -1,0 +1,1 @@
+somat = foldl (+) 0

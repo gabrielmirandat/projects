@@ -1,0 +1,16 @@
+mpicc ag_cube_blk.c 1_cio.c -o ag_cube_blk
+mpicc ag_cube_nblk.c 1_cio.c -o ag_cube_nblk
+mpicc ag_ring_blk.c 1_cio.c -o ag_ring_blk
+mpicc ag_ring_buf.c 1_cio.c -o ag_ring_buf
+mpicc ag_ring_nblk.c 1_cio.c -o ag_ring_nblk
+mpicc ag_ring_pers.c 1_cio.c -o ag_ring_pers
+mpicc ag_ring_rdy.c 1_cio.c -o ag_ring_rdy
+mpicc ag_ring_syn.c 1_cio.c -o ag_ring_syn
+# mpiexec -n 4 ag_cube_blk
+# mpiexec -n 4 ag_cube_nblk
+# mpiexec -n 4 ag_ring_blk
+# mpiexec -n 4 ag_ring_buf
+# mpiexec -n 4 ag_ring_nblk
+# mpiexec -n 4 ag_ring_pers
+# mpiexec -n 4 ag_ring_rdy
+# mpiexec -n 4 ag_ring_syn

@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( normalizado )
+find_package( OpenCV REQUIRED )
+add_executable( normalizado normalizado.cpp )
+target_link_libraries( normalizado ${OpenCV_LIBS} )

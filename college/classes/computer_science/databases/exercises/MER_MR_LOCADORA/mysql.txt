@@ -1,0 +1,7 @@
+Mainteiner			-  Oracle Corporation
+First public release date 	- 1995-11
+Latest stable version		- 5.7.11
+Latest release date		- 2016-02-05
+License				- GPL v2 or Proprietary
+Suporte				- Windows, OS X, Linux, BSD, Unix, AmigaOS, Symbian, z/OS, iOS, Android
+Features				- ACID, Referential Integrity, Transactions (except for DDL), Fine-grained locking (row-level locking), unicode
