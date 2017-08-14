@@ -1,5 +1,0 @@
-Passos para compilar:
-  1. usando cd até o diretório '130111350_gabriel' no terminal.
-  2. digite make. Serão criados dois executáveis: teste e projeto1mp
-  3. com ./teste sera executado o teste do CUnit
-  4. com ./projeto1mp sera executado o programa em si.

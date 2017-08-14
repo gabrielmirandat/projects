@@ -1,1 +1,0 @@
-nomes x = [ (x:y) | (x:y) <- x , elem x ['A'..'Z']]

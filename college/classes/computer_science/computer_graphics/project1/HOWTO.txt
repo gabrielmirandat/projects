@@ -1,8 +1,0 @@
-Aluno: Gabriel Martins de Miranda
-Matricula: 13/0111350
-
--No terminal:
-  -Vá até a pasta raiz (aquela que contém o Makefile) da árvore de diretórios do .zip enviado.
-  -Digite make, serão criados os executáveis das três versões do trabalho nas devidas pastas.
-    simples, colorido e aleatório.
-  -Execute.

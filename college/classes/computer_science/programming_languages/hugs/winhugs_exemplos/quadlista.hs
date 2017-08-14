@@ -1,1 +1,0 @@
-quadlista = map (^2)

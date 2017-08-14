@@ -1,2 +1,0 @@
-javac -cp .;sintese.jar MusicaCriada.java
-java -cp .;sintese.jar MusicaCriada

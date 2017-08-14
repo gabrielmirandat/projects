@@ -1,7 +1,0 @@
-<map id="ligadorDeClasse" name="ligadorDeClasse">
-<area shape="rect" id="node2" href="$cruzeiro_8c.html#aee16aa11ac6dc26f08b24ee6b446bc50" title="iniciar_jvm" alt="" coords="181,5,265,32"/>
-<area shape="rect" id="node4" href="$interpreter_8h.html#a54502836ddf2d43bd74e607cade9fb08" title="accessField" alt="" coords="177,56,269,83"/>
-<area shape="rect" id="node5" href="$interpreter_8h.html#ab804e07f31fd89fef7cd8022278a27fa" title="invoke" alt="" coords="193,107,253,133"/>
-<area shape="rect" id="node6" href="$interpreter_8h.html#a71f70628eeae78d6f63ae10b87a0a8bf" title="handleObject" alt="" coords="173,157,272,184"/>
-<area shape="rect" id="node3" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="320,5,371,32"/>
-</map>

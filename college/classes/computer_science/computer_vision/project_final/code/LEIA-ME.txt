@@ -1,3 +1,0 @@
-Para compilar:
-- Com o terminal na pasta do programa, digite make. Sera criado o executável proj.
-- Execute com ./proj <path_para_diretório_com_imagens>

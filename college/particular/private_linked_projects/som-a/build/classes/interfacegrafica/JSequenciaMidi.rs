@@ -1,2 +1,0 @@
-interfacegrafica.InterpreteMidi
-interfacegrafica.JSequenciaMidi

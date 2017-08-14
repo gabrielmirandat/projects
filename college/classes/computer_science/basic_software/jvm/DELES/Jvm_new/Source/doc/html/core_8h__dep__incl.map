@@ -1,8 +1,0 @@
-<map id="core.h" name="core.h">
-<area shape="rect" id="node2" href="$checker_8h.html" title="checker.h" alt="" coords="59,80,137,107"/>
-<area shape="rect" id="node3" href="$checker_8c.html" title="checker.c" alt="" coords="5,155,83,181"/>
-<area shape="rect" id="node4" href="$interpreter_8h.html" title="interpreter.h" alt="" coords="108,155,199,181"/>
-<area shape="rect" id="node5" href="$cruzeiro_8c.html" title="cruzeiro.c" alt="" coords="5,229,83,256"/>
-<area shape="rect" id="node6" href="$interpreter_8c.html" title="interpreter.c" alt="" coords="108,229,199,256"/>
-<area shape="rect" id="node7" href="$main_8c.html" title="main.c" alt="" coords="223,229,284,256"/>
-</map>

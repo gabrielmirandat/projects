@@ -1,4 +1,0 @@
-https://webdocs.cs.ualberta.ca/~sutton/book/the-book.html
-https://webdocs.cs.ualberta.ca/~sutton/book/ebook/the-book.html
-https://webdocs.cs.ualberta.ca/~sutton/book/code/code.html
-

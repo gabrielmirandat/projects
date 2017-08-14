@@ -1,1 +1,0 @@
-append2 = foldr (++) []

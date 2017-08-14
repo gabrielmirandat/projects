@@ -1,1 +1,0 @@
-/home/gabriel/Documentos/FERIAS/Visão Computacional/projetos/tuto/HoughCircleTransform/fitEllipse/CMakeFiles/proj.dir
