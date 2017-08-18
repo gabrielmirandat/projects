@@ -1,4 +1,73 @@
-# Questões de Concursos - filtro salvo como  'FCC - Banco de Dados'
+//-- 31% SQL.
+//-- 19% Modelo Entidade-Relacionamento.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Justaposição é um processo de formação de coisas por composição, ou seja, ocorre a fusão das coisas
 
 - Um Administrador de bancos de dados e tuning
