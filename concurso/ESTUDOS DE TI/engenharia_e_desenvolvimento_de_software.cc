@@ -1,69 +1,94 @@
 // -- 20% Aspectos gerais das linguagens PHP, HTML5, XML, Java SE, Java EE, JUnit.
 
-JUnit,  Frameworks Java
-	- framework java para realizar testes de unidade
+- HTML
+- input
+	- entrada de texto
+	- id 'atributo para identificar e manipular texto'
+- label
+	- define uma label para o elemento input
+	- provê usabilidade melhorada para usuarios de mouse, se clicar no texto ele clica no input também
+	- for 'atributo deve ser igual a atributo id do elemento para dar bind'
 
-(JEE/J2EE) - Java Enterprise Edition,  Plataforma Java
-	- coleção de tecnologias e APIs para aplicações de empresas, ou seja, grande escala, distribuidas, transacionais, 
-	  boa disponibilidade para suportar requisitos criticos de negocios
-	- inclui todas as funcionalidades do Java SE mais funcionalidades necessarias para desenvolver aplicações em ambiente corporativo
-	- JCP é um processo formalizado que permite que partes interessadas se envolvam nas definições de versões futuras e funcionalidades da plataforma Java
+- CSS
+	- <p id="t1">TRT</p>
+	  <p class="t2">11ª Região</p>
+	  #t1, .t2{color:#ff0000} 'associa a cor vermelha aos dois paragrafos'
+	  'exemplos válidos'
+		  p {text-align: right; color: #BA2;}
+	      p.minhaclasse01 { color:#ABC; }
+	      .minhaclasse02 { color:#CAD; }
+	      # iddomeuelemento { color:#ACD; }
+	      p.minhaclasse03 .minhaclasse04 { color:#ACD; }
+	- # se refere a id
+	- . se refere a class
 
-	- Containers
-		- a arquitetura Java EE independente de plataforma e baseada em componentes, que torna aplicações Java EE faceis de escrever usando lógica de componentes reusáveis
-		- O servidor Java EE prove serviços na forma de containers para todos os tipos de componentes
-		- Container é a interface entre uma componente e a plataforma de baixo-nivel que a suporta
-		- Antes que possa executar, uma aplicação web, enterprise bean ou componente cliente deve ser montada num módulo Java EE e botada em produção no seu container
-		- (EJB) - Enterprise Java Bean é um componente JEE que roda num container num servidor de aplicação
-		- Como a arquitetura JEE prove serviços configuraveis, componentes da mesma aplicação podem se comportar diferente baseado em onde são botadas em produção
-		- Uma EJB pode fornecer configurações de acesso a banco de dados diferentes para ambientes de produção diferentes
-		- O container também gerencia serviços não configuraveis, como enterprise bean e ciclos de vida servlet, conexão de banco com pooling de recurso, persistencia de dados
+
+- Java SE
+
+- (JEE/J2EE) 
+- Java Enterprise Edition,  Plataforma Java
+- coleção de tecnologias e APIs para aplicações de empresas, ou seja, grande escala, distribuidas, transacionais, 
+  boa disponibilidade para suportar requisitos criticos de negocios
+- inclui todas as funcionalidades do Java SE mais funcionalidades necessarias para desenvolver aplicações em ambiente corporativo
+- JCP é um processo formalizado que permite que partes interessadas se envolvam nas definições de versões futuras e funcionalidades da plataforma Java
+
+- Containers
+	- a arquitetura Java EE independente de plataforma e baseada em componentes, que torna aplicações Java EE faceis de escrever usando lógica de componentes reusáveis
+	- O servidor Java EE prove serviços na forma de containers para todos os tipos de componentes
+	- Container é a interface entre uma componente e a plataforma de baixo-nivel que a suporta
+	- Antes que possa executar, uma aplicação web, enterprise bean ou componente cliente deve ser montada num módulo Java EE e botada em produção no seu container
+	- (EJB) - Enterprise Java Bean é um componente JEE que roda num container num servidor de aplicação
+	- Como a arquitetura JEE prove serviços configuraveis, componentes da mesma aplicação podem se comportar diferente baseado em onde são botadas em produção
+	- Uma EJB pode fornecer configurações de acesso a banco de dados diferentes para ambientes de produção diferentes
+	- O container também gerencia serviços não configuraveis, como enterprise bean e ciclos de vida servlet, conexão de banco com pooling de recurso, persistencia de dados
+	
+	- containers e servidores JEE
+		- 'MÁQUINA CLINTE (2 itens)'
+			
+			- CLIENT CONTAINER
+				- gerencia a execução de componentes do cliente (clientes da aplicação e seus containers rodam no cliente)
+			
+			- WEB BROWSER
 		
-		- containers e servidores JEE
-			- 'MÁQUINA CLINTE (2 itens)'
-				
-				- CLIENT CONTAINER
-					- gerencia a execução de componentes do cliente (clientes da aplicação e seus containers rodam no cliente)
-				
-				- WEB BROWSER
+		- 'SERVIDOR JEE (2 itens)'
+			- porção runtime do JEE 
 			
-			- 'SERVIDOR JEE (2 itens)'
-				- porção runtime do JEE 
+			- WEB CONTAINER (3 itens)
+				- gerencia a execução de páginas JSP e componentes servlets (componentes web e seus containers rodam no servidor JEE)
 				
-				- WEB CONTAINER (3 itens)
-					- gerencia a execução de páginas JSP e componentes servlets (componentes web e seus containers rodam no servidor JEE)
-					
-					- SERVLET
-						- programas que rodam na web ou servidor de aplicação e agem como camada entre request de browser ou cliente HTTP e bancos ou aplicações de servidor HTTP
-						- você pode coletar entrada de usuário, mostrar registros de um banco, criar páginas dinâmicas
-						- é HTML em java
-						- rodam mais rapido que JSP
-						- é programa java já compilado que cria conteudo web dinâmico
-						- é CONTROLLER
-					
-					- PÁGINAS JSP
-						- tecnologia para criar páginas dinamicas com HTML e XML, similar a PHP
-						- para por em produção e rodar, é necessário um servidor web compatível com servlet container, tais como Apache Tomcat ou Jetty
-						- contem dois tipos de texto, HTML e XML como dados estáticos e elementos JSP como dados dinâmicos
-						- tecnologia para desenvolver páginas dinâmicas que suporta conteudo dinâmico
-						- é java em HTML usando tags JSP especiais, começando com <% e terminando com %>
-						- é linguagem de script que gera conteudo dinâmico
-						- é VIEW
-					
-					- PÁGINA WEB
+				- SERVLET
+					- programas que rodam na web ou servidor de aplicação e agem como camada entre request de browser ou cliente HTTP e bancos ou aplicações de servidor HTTP
+					- você pode coletar entrada de usuário, mostrar registros de um banco, criar páginas dinâmicas
+					- é HTML em java
+					- rodam mais rapido que JSP
+					- é programa java já compilado que cria conteudo web dinâmico
+					- é CONTROLLER
 				
-				- CONTAINER EJB (sem item)
-					- gerencia a execução dos enterprise beans para aplicações JEE (enterprise beans e seus containers rodam no servidor JEE)
-					- 2 enterprise bean ou beans de sessão
-					- é MODEL
+				- PÁGINAS JSP
+					- tecnologia para criar páginas dinamicas com HTML e XML, similar a PHP
+					- para por em produção e rodar, é necessário um servidor web compatível com servlet container, tais como Apache Tomcat ou Jetty
+					- contem dois tipos de texto, HTML e XML como dados estáticos e elementos JSP como dados dinâmicos
+					- tecnologia para desenvolver páginas dinâmicas que suporta conteudo dinâmico
+					- é java em HTML usando tags JSP especiais, começando com <% e terminando com %>
+					- é linguagem de script que gera conteudo dinâmico
+					- é VIEW
+				
+				- PÁGINA WEB
 			
-			- 'BANCO DE DADOS'
-				- classes de entidade
-			
-			- 'APPLET CONTAINER'
-				- gerencia a execução de applets
-				- consiste de um web browser com um plugin java rodando juntos no cliente
+			- CONTAINER EJB (sem item)
+				- gerencia a execução dos enterprise beans para aplicações JEE (enterprise beans e seus containers rodam no servidor JEE)
+				- 2 enterprise bean ou beans de sessão
+				- é MODEL
+		
+		- 'BANCO DE DADOS'
+			- classes de entidade
+		
+		- 'APPLET CONTAINER'
+			- gerencia a execução de applets
+			- consiste de um web browser com um plugin java rodando juntos no cliente
 
+- JUnit,  Frameworks Java
+- framework java para realizar testes de unidade	
 
 //-- 17% Análise e projeto orientados a objetos (UML).
 
@@ -175,28 +200,3 @@ JUnit,  Frameworks Java
 			- DE INTERAÇÃO/VISÃO GERAL DE INTERAÇÃO 
 
 			- DE TEMPO/TEMPORAL
-
-Dicas 
-	- na herança uma classe herda todos os atributos e operações da classe da qual deriva e pode sobrescrever ou modificar alguns deles, 
-	  bem como adicionar mais atributos e operações próprios
-	- DAO
-		- Design Pattern usado em Java
-		- Data Access Object
-		- encapsula e abstrai tudo que for referente ao acesso a dados da aplicação
-	- DTO/VO
-		- Design Pattern usado em Java
-		- Data Transfer Objects/Value Object
-		- Objetos apenas com atributos e métodos acessores (gets e sets)
-		- para transportar conjunto de dados entre as camadas de uma aplicação
-		- sem necessidade de efetuar uma chamada para cada atributo do objeto
-		- muito usado em J2EE por economizar tráfego de rede
-
-			
-
-		
-
-
-
-
-
-
