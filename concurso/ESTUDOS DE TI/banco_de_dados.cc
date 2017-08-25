@@ -119,20 +119,66 @@ DICAS (depois passa pra cima)
 
 //-- 19% Modelo Entidade-Relacionamento.
 
+- Para estudo e levantamento dos requisitos necessários
+- Identifica-se as principais partes e objetos envolvidos, possíveis ações e responsabilidades
+- características e como interagem entre sistema
+- Daí, desenvolver modelo conceitual que será utilizado para orientar o desenvolvimento
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+- MER/ER
+	- modelo conceitual para descrever objetos/entidades envolvidos em um domínio, suas características/atributos e relacionamentos
+	- Entidades
+		- objetos ou partes envolvidas
+		- Físicas ou lógicas
+			- físicas'realmente tangíveis, existentes e visíveis no mundo real, como cliente/produto'
+			- lógicas'existem em decorrência da interação entre ou com entidades físicas, como venda/modelo/espécie/função'
+		- Segundo existência
+			- fortes'existência independe de outras entidades, como produto num sistema de vendas'
+			- fracas'dependem de outras para existirem, não fazem sentido sozinhas, venda depende de produto'
+			- associativas'quando se precisa associar a entidade a um caso específico de outra entidade, pode possuir duas chaves primárias'
+	- Relacionamentos
+		- 1..1
+			- cada uma das duas entidades envolvidas referenciam obrigatoriamente apenas uma unidade da outra
+			- cada usuário só pode ter um currículo, cada currículo só pertence a um único usuário
+		- 1..n/1..*
+			- uma das entidades envolvidas pode referenciar várias unidades da outra, porém, do outro lado cada uma das 
+			  várias unidades referenciadas só pode estar ligada uma unidade da outra entidade
+			- um usuário pode ter vários dependentes, mas cada dependente só pode estar ligado a um usuário principal
+		- n..n/.*..*
+			-  cada entidade, de ambos os lados, podem referenciar múltiplas unidades da outra
+			- um título pode ser escrito por vários autores, um autor pode escrever vários títulos
+	- Atributos
+		- descrevem cada entidade dentro do domínio
+		- um cliente possui nome, endereço e telefone
+		- Função
+			- descritivos'característica intrínsecas de uma entidade, como nome/cor'
+			- nominativos'além de definir identificam um objeto, como nome/código/número'
+			- referenciais'representam a ligação de uma entidade com outra em um relacionamento, uma venda possui o CPF do cliente, que a relaciona com a entidade cliente'
+		- Estrutura 
+			- simples'um único atributo define uma característica da entidade, como nome/peso'
+			- compostos'para definir uma informação da entidade, são usados vários atributos, endereço pode ser composto por rua, número, bairro, etc'
+		- chave primária'representam valores únicos que identificam a entidade, sendo que não podem repetir, como CPF'
+		- chave estrangeira'referenciais, ligados a uma chave primária, venda tem campo CPF do cliente que se relaciona com campo CPF da entidade cliente'
+	- DER/ER
+		- enquanto MER é modelo conceitual, DER é sua representação gráfica e principal ferramenta
+		- Notação
+			- entidades'retângulos'
+			- Para Peter Chen, entidades fracas'retângulo duplo'
+			- atributos'elipses'
+			- relacionamentos'losangos, ligados por linhas, contendo cardinalidade (1..1, 1..n ou n..n)'
+			- Em notações mais modernas, abandonou-se as elipses e passou-se a utilizar o formato 'UML'
+		- Se tem entidade1-card1-relacionamento-card2-entidade2, lê-se entidade1 relacionamento card2 entidade2
+			- imovel-1-aluga-n-inquilino, lê-se um inquilino aluga um imóvel, um imóvel é alugado por n inquilinos
+		- Se representação por cardinalidade completa, como entidade1-(card1,card2)-relacionamento-(card3,card4)-entidade2
+			- lê-se card1 ou card2 entidade1 relacionamento card3 ou card4 entidade2
+			- grupo-(1,1)-possui-(0,n)-produto, lê-se 1ou1 grupos possuem 0oun produtos
+		- o formato UML é o mais usado hoje em dia
+		- atributo com asterisco'chave primária da tabela'
+		- não é necessário especificar tipo de cada atributo 
+	- Num relacionamento n:m 
+		- deriva em três tabelas no modelo relacional normalizado, sendo uma delas a correspondência entre as instâncias específicas de uma entidade com as da outra
+		- Em um relacionamento (n:n) é necessário criar uma tabela contento a chave primária de ambas.
+		- Em um relacionamento (1:n) é necessário criar uma chave estrangeira no lado n referenciando a chave primária no lado 1.
+	- Se uma entidade depende de um atributo de outra entidade para poder existir/fazer sentido, é uma entidade fraca
 
 
 
