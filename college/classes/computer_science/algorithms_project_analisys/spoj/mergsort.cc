@@ -1,4 +1,4 @@
-// g++ mergsort.c -Wall -g -o mergsort
+// g++ mergsort.cc -Wall -g -o mergsort
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -94,16 +94,16 @@ int main() {
    
   read_input();
 
-  cout << "List before sorting\n";
-  for (int i =0; i < input_size; i++) // checking the content of the list
-      cout<<input_list[i]<<" ";
+  // cout << "List before sorting\n";
+  // for (int i =0; i < input_size; i++) // checking the content of the list
+  //     cout<<input_list[i]<<" ";
 
   sort(0, input_size-1);
 
-  cout << "\nList after sorting\n";
+  // cout << "\nList after sorting\n";
   for (int i =0; i < input_size; i++) // checking the content of the list
       cout<<input_list[i]<<" ";
 
-  cout << "\nEnd\n";
+  // cout << "\nEnd\n";
   return 0;
 }
