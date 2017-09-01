@@ -57,8 +57,8 @@ C03 - ANALISTA JUDICIÁRIO – ÁREA APOIO ESPECIALIZADO – ESPECIALIDADE ANÁL
 
 //--
 # Bancos de Dados '3 PASSADAS SEM COMPLETAR'
-*3 - 31% SQL. 																												'207 - FCC - Banco de Dados - SQL'
-5 - 19% Modelo Entidade-Relacionamento. 																					'216 - FCC - Banco de Dados'MER Entidade Relacionamento
+x'30/65'- 31% SQL.																											'257 - FCC - Banco de Dados - SQL'
+x'20/54'- 19% Modelo Entidade-Relacionamento. 																				'216 - FCC - Banco de Dados'MER Entidade Relacionamento
 16% Oracle PL/SQL. 																											'164 - FCC - Banco de Dados - Oracle - PL-SQL'
 11% Normalização de Banco de Dados. 																						'38  - FCC - Banco de Dados - Formas normais'
 'PARE AQUI - 77% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
@@ -71,12 +71,12 @@ Princípios sobre administração de bancos de dados. 																			'13  - 
 
 //--
 # Engenharia e Desenvolvimento de Software '3 PASSADAS SEM COMPLETAR'
-5 - 20% Aspectos gerais das linguagens PHP, HTML5, XML, Java SE, Java EE, JUnit.											'237 - FCC - Programação - PHP - HTML - XML - Java SE - JEE - JUnit'
-3 - 17% Análise e projeto orientados a objetos (UML). 																		'235 - FCC - Engenharia de Software - UML'
+20% Aspectos gerais das linguagens PHP, HTML5, XML, Java SE, Java EE, JUnit.												'237 - FCC - Programação - PHP - HTML - XML - Java SE - JEE - JUnit'
+x'20/59'- 17% Análise e projeto orientados a objetos (UML). 																'235 - FCC - Engenharia de Software - UML'
 8%  Princípios sobre qualidade de software: modelo MPS.BR e CMMI-DEV versão 1.3. 											'138 - FCC - Governança de TI - MPS.BR - CMMI'
 7%  Processos de software. 																									'26  - FCC - Governança de TI - ISO-IEC 12207 '
 7%  Estruturas de dados e de controle de fluxo. 																			'27  - FCC - Algoritmos e Estrutura de Dados - Estrutura de dados - Estruturas de controle e repetição'
-7%  Conceitos sobre orientação a objetos (classes, atributos, objetos, métodos, herança, interfaces e outras hierarquias).  '118 - FCC - Engenharia de Software - Orientação a Objetos'
+x'12/30'- 7%  Conceitos sobre orientação a objetos (classes, atributos, objetos, métodos, herança, interfaces). 			'118 - FCC - Engenharia de Software - Orientação a Objetos'
 5%  Engenharia de requisitos. 																								'67  - FCC - Engenharia de Software - Engenharia de Requisitos'
 'PARE AQUI - 71% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
 4%  Métodos ágeis (eXtreme Programming – XP, Scrum, Kanban). 																'94  - FCC - Engenharia de Software - Processos de Software - Desenvolvimento Ágil'
@@ -91,20 +91,20 @@ Princípios sobre administração de bancos de dados. 																			'13  - 
 1%  Princípios de engenharia de software. 																					'5   - FCC - Engenharia de Software - Conceitos Básicos'
 1%  Modelos de desenvolvimento de sistemas.
 1%  Controle de versões com Git e SVN. 																						'27  - FCC - Engenharia de Software - Gerência de Configuração'
-1%  Conceitos de linguagens orientadas a objetos. 																			'39  - FCC - Programação - Conceitos básicos de programação'
+$1%  Conceitos de linguagens orientadas a objetos. 																			'39  - FCC - Programação - Conceitos básicos de programação'
 1%  Web Standards, W3C. 																									'2.208 - FCC - Tecnologia da Informação'web padrão arquitetura W3C
 Testes de software. 																										'60  - FCC - Engenharia de Software - Teste de Software'
-Análise e projeto estruturados de sistemas.
+$Análise e projeto estruturados de sistemas.
 Modelagem de dados.
-Modelagem orientada a objetos.
+$Modelagem orientada a objetos.
 Funções e procedimentos.
 Conceitos de linguagens estruturadas. 																						'5   - FCC - Programação - Programação estruturada'	
 Conceitos sobre desenvolvimento Web e cliente/servidor. 																	'6   - FCC - Arquitetura de Software - Arquitetura Cliente-Servidor'
 
 //--
 # Sistemas de apoio à decisão '3 PASSADAS SEM COMPLETAR'
-3 - 44% Arquitetura OLAP. 																									'31 - FCC - Banco de Dados - OLAP (On-line Analytical Processing)'
-3 - 18% Data Mining. 																										'16 - FCC - Banco de Dados - Data Mining'
+44% Arquitetura OLAP. 																										'31 - FCC - Banco de Dados - OLAP (On-line Analytical Processing)'
+18% Data Mining. 																											'16 - FCC - Banco de Dados - Data Mining'
 14% Data Warehouse. 																										'53 - FCC - Banco de Dados - DW - Data Warehouse'
 'PARE AQUI - 76% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
 13% ERP.																													'4  - FCC - Arquitetura de Software - ERP (Enterprise Resource Planning)'
@@ -114,8 +114,8 @@ Conceitos sobre desenvolvimento Web e cliente/servidor. 																	'6   - 
 
 //--
 # Governança e Gestão de TI '3 PASSADAS SEM COMPLETAR'
-3 - 66% Gestão de serviços de TI com ITIL v3 Edição 2011 - Estrutura, objetivos e conceitos gerais. 						'144 - FCC - Governança de TI - ITIL v. 3'
-3 - 8%  Governança e Gestão de TI com COBIT 5 - Estrutura, objetivos e conceitos gerais. 									'32  - FCC - Governança de TI - COBIT v. 5.0'
+66% Gestão de serviços de TI com ITIL v3 Edição 2011 - Estrutura, objetivos e conceitos gerais. 							'144 - FCC - Governança de TI - ITIL v. 3'
+8%  Governança e Gestão de TI com COBIT 5 - Estrutura, objetivos e conceitos gerais. 										'32  - FCC - Governança de TI - COBIT v. 5.0'
 'PARE AQUI - 74% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
 8%  Planejamento estratégico de TI – PETI. 																					'20  - FCC - Governança de TI - Planejamento Estratégico de TI (PETI)'
 6%  Gestão de projetos com PMBOK 5a Edição. 																				'164 - FCC - Gerência de Projetos - PMBOK e Processos de Gerenciamento de Projetos'
@@ -140,5 +140,8 @@ Práticas de gestão da TI. 																									'27  - FCC - Gerência de P
 
 FAZ 2 DE CADA ESPECIFICO, DEPOIS ATENTA-SE AO GERAL TAMBEM
 
-x JÁ FOI
+$ JÁ LI
 * NO MOMENTO
+x JÁ FOI FACEIS
+xx JÁ FOI MF-MÉDIO
+
