@@ -1,355 +1,317 @@
 //-- 66% Gestão de serviços de TI com ITIL v3 Edição 2011 - Estrutura, objetivos e conceitos gerais
 
-- ITIL'Biblioteca de Infraestrutura de Tecnologia da Informação'
-	- conjunto de publicações sobre melhores práticas para gerenciamento de serviços de TI
-	- informações sobre processos, funções e outras habilidades
-	- elementos para entregar serviços de TI com qualidade
-	- descreve práticas testadas e validadas por várias organizações do mundo
-	- ITIL v3 traz a abordagem da ITIL reforçada com a estrutura do ciclo de vida de serviço
-	- ITIL V3 2011 é a nova publicação seguindo a atualização
-	- considerada como a mais reconhecida referência de práticas de gerenciamento de serviços de TI do mundo
-	- a nova versão é totalmente diferente da primeira versão
-	
-	- descrito em 5 livros
-		- A ITIL sugere que as atividades de gerenciamento de serviços sejam estruturadas com base no 'ciclo de vida do serviço'
-		- Esse ciclo considera a vida do serviço desde a sua concepção até a sua descontinuação
-		- Cada um dos cinco principais livros da biblioteca se 'refere a um estágio específico do ciclo de vida do serviço'
-			- 1. Estratégia de Serviço
-			- 2. Desenho de Serviço
-			- 3. Transição de Serviço
-			- 4. Operação de Serviço
-			- 5. Melhoria continuada de serviço 
-
-		- 1. Estratégia de Serviço
-			- O objetivo é definir a direção estratégica dos serviços de TI
-			- quem são os seus clientes e quais serviços serão disponibilizados pra eles
-			- pensar de uma maneira mais estratégica
-				- melhor uso dos serviços pra beneficiar a organização?
-				- diferenciar de outros competidores?
-				- criar valor para nossos clientes?
-			- gerenciamento de serviços como um ativo estratégico e entrega sempre focada em suportar as necessidades de negocio
-			- Duas áreas
-				- uso do gerenciamento de serviços como um ativo estratégico
-				- processos que vão habilitar a organização de TI a gerenciar os seus serviços de TI através do cilo de vida de serviço
-			- Ao definir estratégia, estabelecer políticas para facilitar a implementação da estratégia e atingir os resultados propostos
-			- estratégia de serviço ainda inclui atividades para aprovar os serviços e adquirir o financiamento e recursos para desenvolve-lo
-			- Todas as questões detalhadas nos seguintes processos
-				- Gerenciamento estratégico para serviços de TI
-				- Gerenciamento de relacionamento do negócio
-				- Gerenciamento do portfólio de serviço
-				- Gerenciamento financeiro para serviços de TI
-				- Gerenciamento da demanda
-		
-		- 2. Desenho de Serviço
-			- O objetivo é desenhar um novo serviço ou modificar um já existente visando sua entrada no ambiente produtivo
-			- momento onde a ideia de um novo serviço ou a modificação de um serviço existente vai para o papel
-			- a partir dos requisitos anteriores, são construídos planos, desenhos e estimativas de recursos
-			- Incorpora os seguintes processos 
-				- Coordenação do desenho 
-				- Gerenciamento de nível de serviço 
-				- Gerenciamento do catalogo de serviço
-				- Gerenciamento de fornecedores 
-				- Gerenciamento da disponibilidade e capacidade 
-				- Gerenciamento da continuidade de serviços de TI
-				- Gerenciamento da Segurança da Informação 
-			- Incorpora os seguintes atos
-				- Como projetar a infraestrutura de forma que se mantenha segura e tolerante a falhas.
-				- Como identificar e gerenciar riscos e criar um mapeamento completo dos riscos possíveis.
-				- Quais documentos devem ser usados para registrar os planos, políticas, arquiteturas e treinamento da equipe.
-				- Como alertar a Central de Serviços com antecedência sobre novos serviços e como preparar e treinar o pessoal de suporte.
-				- Como contribuir para a melhoria continuada do serviço assegurando que está sendo implantada qualidade do serviço no ambiente de produção.
-
-		- 3. Transição de Serviço
-			- O objetivo é ajudar a organização a planejar e gerenciar mudanças em serviços e implementar liberações no ambiente produtivo
-			- Por exemplo, instalar ou configurar um software, hardware e qualquer outro componente ou documentação associada
-			- garantir que os requisitos da Estratégia, incluídos no Desenho, sejam efetivamente realizados na Operação ao mesmo tempo controlando 
-			  os riscos de falhas e interrupções
-			- serviços são tirados do papel e de fato materializados, em algo “consumível”
-			- Os seguintes processos fazem parte desse estágio:
-				- Planejamento e suporte da transição 
-				- Gerenciamento de mudanças
-				- Gerenciamento da configuração e ativos de serviço
-				- Gerenciamento de liberação e implantação 
-				- Gerenciamento do conhecimento
-
-		- 4. Operação de Serviço
-			- O objetivo é coordenar e executar as atividades e processos necessários pra entregar os serviços aos clientes e usuários do negocio, 
-			  gerenciando os serviços nos níveis acordados.
-			- cobre o gerenciamento de rotina da tecnologia usada pra entregar ou suportar os serviços
-			- O momento em que os serviços de TI passam a ser consumidos pelos clientes e usuários
-			- aqui o valor do serviço é percebido!
-			- Os processos deste estagio do ciclo de vida incluem:
-				- Gerenciamento de eventos
-				- Gerenciamento de incidentes
-				- Cumprimento de requisição 
-				- Gerenciamento de problemas 
-				- Gerenciamento de acesso
-
-		- 5. Melhoria continuada de serviço
-			- O objetivo é alinhar e realinhar continuamente os serviços de TI de acordo com as necessidades do cliente, identificando e 
-			  implementando melhorias aos serviços de TI que suportam os processos de negocio
-			- Atividades
-				- Identificar, ou ajudar a identificar oportunidades de melhoria
-				- Priorizar as melhorias identificadas
-				- Definir e executar, ou ajudar a definir e executar, iniciativas de melhoria.
-			- não diz respeito a um projeto de melhoria, mas a um número de iniciativas ou projetos recorrentes que visam melhorar um ou mais aspectos dos serviços de TI
+- ITIL 
+	- é uma 'Biblioteca de Infraestrutura de Tecnologia da Informação'
+	- reúne 'melhores práticas', foca na 'operação e gestão', considera que 'serviço é a entrega de valor ao cliente', visto na 'ótica de ciclo de vida'
+	- diz 'o que fazer, e não como', similar a 'ISO/IEC 20000'
 
 
-	Exemplos ITIL v3
-		- solução de contorno
-			- 'Ação de reiniciar um servidor'
-		- evento
-			- 'O antivírus está desatualizado'
-		- incidente
-			- 'Todas as portas USB pararam de funcionar'
-		- alerta
-			- 'A memória do servidor de Banco de Dados ultrapassou 80% da taxa de ocupação'
+- 'serviço' meio para entregar valor aos clientes
+- 'gerenciamento' conjunto de habilidades para oferecer valor para o cliente
+- 'provedor' provê serviços internos ou externos de TI
+- 'função' conjunto de pessoas e recursos empregados para realizar um ou mais processos ou atividades
+- 'processo' conjunto de atividades com o objetivo de produzir uma saída com criação de valor para um cliente ou interessado
+	- Propósito, Objetivos, Escopo, Valor, Políticas, Princípios, Atividades, Métodos, Gatilhos, Entradas, Saídas, Interfaces, Gerenciamento, Fatores críticos, 
+			Indicadores-chave, Desafios, Riscos
+	- Responsáveis são o Dono e o Gerente
+- 'ativo' recurso ou habilidade de um provedor de serviço
+	- Gerência, Organização, Processo, Conhecimento, Pessoas, Informações, Aplicativos, Infraestrutura e Capital Financeiro
 
-	Situações
-		- Se chamado aberto em relação a um incidente
-			- teve o atendimento de 1° nível na Central de Serviços
-			- após ser inicialmente diagnosticado, o técnico não conseguiu aplicar uma solução de contorno ou fornecer uma resolução
-		- 'Solução': incidente deve ser escalado, passado para profissional com mais experiência ou profissionais de nível gerencial
+- ciclo de vida (5 livros)
+	- 'Estratégia de Serviço' como políticas e processos de gerenciamento podem ser desenhados e desenvolvidos como ativos
+	- 'Desenho/Projeto de Serviço' fornece orientação para o desenho e desenvolvimento para o gerenciamento
+	- 'Transição de serviço' como efetivar a transição de serviços novos e modificados para operações implementadas
+	- 'Operação de Serviço' descreve as atividades do dia a dia (eventos, incidentes, problemas, acesso e execução), garantindo entrega e suporte eficiente
+	- 'Melhoria Contínua de Serviço' orienta práticas de como realizar melhorias incrementais em larga escala na qualidade dos serviços
 
-	Auditoria de TI
-		- É uma atividade independente que tem como missão o gerenciamento de risco operacional envolvido e avaliar 
-		  a adequação das tecnologias e sistemas de informação utilizados na organização através da revisão e avaliação
+
+- matriz RACI 'distribui papéis no processo'
+	- apenas um 'A - accountable'
+	- apenas atribuir responsabilidades se tiver autoridade
+	- não sobrecarregar o 'R - responsible'
+		- 'R (responsible, ou responsável)' aquele que executa a tarefa
+		- 'A (accountable, ou responsabilizado)' aquele que presta contas pelo resultado, superior ao R (Gerente)
+		- 'C (consulted, ou consultado)' aqueles que são consultados, opinão sobre decisões
+		- 'I (informed, ou informado)' aqueles que são informados do progresso e decisões tomadas
+
+- Estratégia de Serviço (Service Strategies)
+	- responde 'Que serviços quero oferecer? Qual o meu público alvo? Como pretendo criar valor para meus clientes?'
+	- 'P1.Perspectiva' visão da organização, valores e convicções
+	- 'P2.Posição' imagem que a organização quer passar para o cliente
+	- 'P3.Plano' a estratégia e execução que torna a organização competitiva
+	1- 'P4.Padrão' os procedimentos da organização
+			- são os procedimentos, guiando as atividades para executar a estratégia
+	- Valor 'é a utilidade (o cliente quer é aquilo que o serviço faz) mais garantia (como o serviço é feito, sua qualidade )'
+	- Ativos
+	- Provedores
+		- 'tipo1' interno, um serviço TI pra cada depto (custo alto)
+		- 'tipo2' compartilhado, um serviço TI pra empresa (reduz custo, não especialista)
+		- 'tipo3' externo, terceirizados especialistas
+	- Estágios de Gestão
+		- '1.rede' entrega rápida, informal, sob demanda (o desafio é a liderança)
+		- '2.diretivo' boa gestão, gerentes funcionais (o desafio é a autonomia)
+		- '3.delegação' mais poder para os gerentes (o desafio é o controle)
+		- '4.coordenação' sistemas formais para coordenação (o desafio é a burocracia)
+		- '5.colaboração' sintonia, flexibilidade, gerentes habilitados, trabalho de equipe e resolução de conflitos
+	- Modelos de Gestão
+		- 'Even Keel' forma progressiva, TI fiel aos planos
+		- 'Trouble' reconhecem problemas na gestão da TI, processos para encarar os problemas (custo alto)
+		- 'Growth' empresa que quer crescer e vê TI como solução, processos para elevar patamar da empresa
+		- 'Radical Change' mudança radical, fusão ou reformular TI, terceirizando ou internalizando (custo de treinamento inicial)
+	- Processos
+		- gera 'Pacote de Nível de Serviço (SLP)' permitindo continuidade do Desenho de Serviço
+		1- 1. Estratégia 'desenvolvimento e manutenção de negócios e estratégias, avaliação estratégica para criar estratégia usando melhoria contínua'
+				- cuida da avaliação estratégica, analisa situação atual do provedor por meio do método SWOT
+				- 'SWOT' instrumento que ajuda a identificar restrições que possam impactar qualidade e satisfação dos clientes, identificando oportunidades de melhoria
+		2- 2. Portfólio 'gerencia o ciclo de vida de todos os serviços usando o funil de serviços'
+				'Portfólio de Serviço' conjunto completo de serviços (funil + catálogo + obsoletos + não existentes devido a recursos)
+				1'Funil de Serviço' serviços não prontos sob consideração ou em desenvolvimento
+					- ainda não disponíveis ao cliente
+				1'Catálogo de Serviços' serviços oferecidos ao cliente, prontos para operar ou em funcionamento
+					- voltados para o cliente e visíveis ao negócio e de suporte, requeridos pelo provedor para entregar serviços ao cliente
+				'Serviços Obsoletos' serviços que não oferece mais
+		1- 3. Demanda 'evita desperdícios de recursos para atender a demanda usando os PAN para analisar, rastrear e monitorar demandas atuais e futurass'
+				'PAN (Padrões de Atividade de Negócio)'
+				- entendimento, previsão e influência da necessidade do cliente por serviços
+		- 4. Financeiro 'administra o ciclo financeiro do Portfólio quantificando o valor e assegurando recursos financeiros compatíveis'
+				'TCO (Total Cost of Ownership)' estimativa para avaliar custos e gastos
+				'ROI (Return On Investiment)' taxa de lucro de investimento
+				'TCU (Total Cost of Utilization)' avalia custo do serviço durante seu ciclo de vida
+				'PBP (Payback Period)' período estimado para lucro líquido ser igual ao investimento acumulado
+				'NPV (Net Present Value)' compara investimento inicial com retorno futuro
+				'IRR (Internal Return Rate)' calcula a taxa de juros para a qual manter o dinheiro investido seria equivalente a utilizá-lo em um novo projeto
+		- 5. Relacionamento 'manter o relacionamento entre o provedor e o cliente assegurando que o provedor esteja a par continuamente dos requisitos'
+
+2- Desenho de Serviço(Service Design)/Projeto de Serviço
+	- traduz 'Pacote de Nível de Serviço (SLP)' para um conjunto de especificações, passível de implementação
+	- 'P1.Pessoas' determinar papéis das pessoas
+	- 'P2.Processos' definir processos a a realizar
+	- 'P3.Produtos/tecnologia' determinar produtos e tecnologia utilizadas
+	- 'P4.Parceiros' estabelecer parcerias
+	- Aspectos
+		- 'Soluções de serviços' analisar, documentar e validar os requisitos
+		- 'Sistemas e ferramentas e portfólio' revisar que sistemas capazes de suportar novo serviço
+		- 'Arquiteturas de tecnologia e gerenciamento' também revisar, senão alterar ferramentas
+		- 'Processos requeridos' revisar todos processos e papéis
+		- 'Métricas e Métodos de medição' assegurar se conseguem mensurar serviço
+	- Estratégias sourcing
+		- 'In-sourcing' organização desenvolve o serviço. Total controle. Arca todos os custos
+		- 'Outsourcing' usa serviço externo. Menor controle, vantajosa para serviços comuns
+		- 'Co-sourcing ou multi-sourcing' terceiriza diversos serviços para múltiplos fornecedores, partes bem definidas, menos riscos
+		- 'Parceria' múltiplas organizações se juntam para fazer todo o serviço
+		- 'Business Process Outsourcing' organização fornece e gerencia totalmente os processos de outra
+		- 'Knowledge Process Outsourcing' terceirização e expertise de processos e negócio
+		- 'Application Service Provision' acordo com um ASP (Provedor de Serviços de Aplicação) para reduzir custos, utilizando software compartilhado
+		- 'Nuvem' terceirização de serviços na nuvem. Reduz custos, mas inapropriada para sistemas críticos
+		- 'Multi-vendor sourcing' contratação múltipla de vários tipos de sourcing, envolvendo os tipos citados acima
+	- Processos
+		- gera os 'Pacotes de Desenho de Serviços (PDS)' que detalha todos os requisitos, desenho, infraestrutura, hardware, software, plano de testes, riscos, 
+				critérios de aceitação, plano de ciclo de vida, plano de transição, permitindo que Transição do Serviço implante o serviço, podendo envolver checklist 
+				e autorização do Gerenciamento de Mudanças
+		- 1. Desenho 'esclarece como alinhar Estratégia à atividades, coordena processos e cria o PDS, definindo abordagem dos ciclos de desenhos'
+				- defini desenho e acurácia, planeja recursos e capacidades, eficiência, riscos, gerência e trabalho contínuo, planeja, coordena, monitora e revisa
+		- 2. Catálogo 'gerenciar catálogo e assegurar suas precisão permitindo aproveitamento e eficiência e tornando-o sempre disponível'
+				'Catálogo de Serviços' banco de dados/documento estruturado informação de entregáveis, preços, contatos, processos e entregas dos serviços
+		6- 3. Nível 'assegura que serviços e performances sejam mensuradas de forma eficiente'
+					1'Acordo de Nível de Serviço (ANS)' rege as relações entre o provedor e o cliente 
+						- rege relações entre provedor e outro departamento para entrega em tempo acordado
+					'ANS baseada em serviço' um serviço pra todos clientes, um ANS
+					'ANS baseada em cliente' serviços para grupos fechadas à necessidade do cliente
+					'ANS multinível' todos os assuntos da organização, de grupo particular ou de serviço, misto dos anteriores
+					'Requisitos de Nível de Serviço (RNS)' coletar e compreender exigências de nível de serviço para estabelecer ANSs e ANOs
+					1'Acordo de Nível de Serviço (ANS)' acordo escrito entre provedor e clientes, definindo metas e responsabilidades 
+						- descreve o serviço, documenta metas de nível e especifica responsabilidades do provedor e do cliente
+						- pode cobrir múltiplos serviços e múltiplos clientes
+					2'Acordo de Nível Operacional (ANO)' acordo entre provedor e outra parte da organização que fornece serviços, como infraestrutura e instalações
+						- acordo entre Central de Serviços e depto de Suporte para solucionar incidentes dentro um prazo acordado
+						- solução de problemas internos, tais como servidor caindo
+					'Contratos de suporte' contrato formal entre um provedor e um terceiro com obrigações e metas
+					'Plano de Melhoria de Serviço' plano de ações de melhoria priorizada de todos os serviços e processos
+					- deverão ser desenvolvidos e gerenciados os Acordos de Nível Operacional − ANOs baseados no alinhamento das metas com os Acordos de Nível de Serviço − ANSs
+					- Trata de alterações de mudanças fora de acordos vigentes entre cliente e provedor
+		1- 4. Disponibilidade 'assegura que serviços tenham disponibilidade compatível com níveis acordados'
+					'oficiosidade (serviceability)' capacidade do terceiro honrar com termos do contrato
+					'TMPR (Medium Time To Repair, ou Tempo Médio Para Reparo)' tempo médio levado para reparar uma falha a partir da detecção
+					'TMRS (Medium Time to Restore Service, ou Tempo Médio Para Restaurar o Serviço)' tempo que o serviço leva para voltar a funcionar
+							'sustentabilidade (maintainability)' capacidade de voltar a funcionar após uma falha
+					'TMEF (Medium Time Between Failures, ou Tempo Médio Entre Falhas)' tempo médio entre falhas, funcionando normalmente
+					'TMEIS (Medium Time Between Service Incidents, ou Tempo Médio Entre Incidentes de Serviço)' tempo médio entre um incidente e outro
+							'confiabilidade (reliability)' medida de quanto tempo o serviço consegue funcionar sem interrupção
+		1- 5. Capacidade 'assegura que infraestrutura compatível com demanda atual e futura, administração do Sistema de Informação de Gerenciamento da Capacidade (CIMS)'
+					'atividades reativas'
+						- Monitorar, medir e reportar a performance atual de serviços e componentes de TI
+						- Responder aos alertas de eventos de capacidade e solicitar a correção devida
+						- Prover informações sobre performance para os processos que necessitem dessas informações
+					'atividades proativas'
+						- Produzir/manter Plano de Capacidade que reflita os requisitos de demandas e tendências de utilização atual do serviço para planejamento da capacidade
+						- Identificar e antecipar falhas de performance e solicitar a tomada de ações antes que elas ocorram
+						- Buscar ativamente a melhoria da performance do serviço mesmo sem orçamento pela otimização da performance dos serviços e componentes
+		- 6. Continuidade 'certifica que recuperações se deêm dentro do tempo requerido analisando a BIA e gerando o Plano de Continuidade de Serviços de TI'
+					'Análise de Impacto do Negócio – (Business Impact Analysis)' identificar perda de renda, reputação, vantagem, marketing, serviço 
+					'Recuperação gradual (Cold Standby)' serviços cujo tempo de recuperação é dias ou semanas, podem ser oferecidas por terceiros
+					'Recuperação intermediária (Warm Standby)' período pré-determinado de tempo, para prevenir impactos
+					'Recuperação Rápida (Hot Standby)' reestabelecimento de serviços críticos em menos de 24 horas devido à duplicidade de dados críticos
+					'Recuperação Imediata (também chamada de Hot Standby)' recuperação imediata devido à duplicidade de instalações com sistemas paralelos e remotos
+		- 7. Segurança 'manter confidencialidade, integridade e disponibilidade dos dados, sendo baseado na ISO 27001 e no ciclo PDCA para a implementação de um SGSI'
+		- 8. Fornecedores 'obter valor por investimento em fornecedores assegurando alinhamento com necessidades e níveis SLR, SLA acordados'
+					'Sistema de Gerenciamento de Informações de Fornecedores e Contratos' classifica fornecedores como estratégicos, táticos e operacionais
+			
+
+- Transição de Serviço(Service Transition)
+	- Processos
+		- recebe os 'Pacotes de Desenho de Serviços (PDS)' e entrega um serviço materializado para a Operação de Serviço
+		- 1. Transição 'planejar transição e coordenar seus recursos assegurando requisitos do desenho, custos, tempo, qualidade, riscos, atividades, fornecedores, performance'
+		1- 2. Gerenciamento Mudanças 'assegura métodos eficientes na mudança de infraestrutura minimizando impacto e administrando linhas de base de configuração'
+					'Comitê Consultivo de Mudanças (CCM)' equipe que avalia, prioriza e autoriza as mudanças
+					'Comitê Consultivo de Mudanças Emergencial (CCME)' atua somente quando necessário com mínimo de membros para autorização
+					'Requisição de Mudança (RDM)' formulário eletrônico com detalhes da mudança proposta
+					'Registro da Mudança' log da mudança
+					'Proativa' que busca obter benefícios, redução de custos, melhoria no serviço
+					'Reativa' que necessita de correção, adaptar a circunstâncias
+					'Mudança-padrão' pré-autorizada, baixo risco, roteiro pré-determinado, pela Central de Serviços, solicitar instalação de app ou PC, mudar permissão de acesso 
+					'Mudança emergencial' deve ser realizada o quanto antes, CCME, corrigir falha de segurança ou defeito grave em aplicação
+					'Mudança normal' não enquadrada, CCM, fluxo complexo, registrada, revisada, autorizada, submetida a testes, autorizada à implantação, nova versão de app
+					- faz a análise de riscos em relação à correção de erros (impacto e outros incidentes) andando junto com o Gerenciamento de Problema
+		1- 3. Ativos/Configuração 'fornece modelo lógico de infraestrutura pela identificação, controle, manutenção dos ICs protegendo sua integridade pelo ciclo de vida'
+				    'Modelo em V' para planejamento do serviço (do mais genérico) e testes (do mais específico)
+					'Item de configuração(IC)' ativo administrado, sendo servidores, bancos de dados, estações de trabalho, softwares, PDS, dentre outros
+					'Linha de Base da Configuração (LBC)' configuração acordada para um serviço, produto ou Infraestrutura, com conteúdo, detalhes, referência para a mudança
+					'Banco de Dados do Gerenciamento de Configuração (BDGC)' repositório de informações dos ICs
+					'Sistema de Gerenciamento de Configuração(SGC)' sistema que administra os ICs, armazenando os atributos e os relacionamentos dos ICs
+					'Biblioteca de Mídia Definitiva' biblioteca física (CDs, DVDs) que armazena cópias de ICS
+					'ICs de Ciclo de Vida de Serviço' visão dos serviços prestados pela empresa, planos de negócio, liberação, testes, ciclo de vida, pacote de desenho
+					'ICs de Serviço' processos, relatórios, bases de conhecimento, pessoas, Modelo de Serviço, Pacote de Serviço, Pacote de Liberação e outros
+					'ICs de Organização' estratégia, políticas internas, leis, regulamentações e outros requerimentos da empresa
+					'ICs Internos' usados em projetos individuais, hardware, software, configurações lógicas como máquinas virtuais, rotas, instâncias e documentação associada
+					'ICs Externos' requerimentos e acordos com fornecedores
+					'ICs de Interface' necessários para a entrega fim a fim entre provedores, documentos de transferência de atividades entre dois provedores de serviço
+					- snapshot é o estado atual de um IC num determinado momento
+		- 4. Liberação/Distribuição 'assegura que aspectos técnicos de mudança sejam considerados conjuntamente e implantados apropriadamente, protegendo o ambiente'
+					'Big Bang versus por fase' implantar serviço para todos de vez ou fazê-lo em partes, troca de todos os computadores de um depto de vez ou gradual
+					'Empurrada versus Puxada (Push/Pull)' receber atualização automática ou correr atrás dela, atualização de app automática ou por solicitação do usuário
+					'Automatizada versus manual' ferramentas de implantação automatizadas ou exigir a instalação/atualização manual
+					'1. Planejamento da Liberação e Implantação'
+					'2. Construção e teste da entrega'
+					'3. Entrega (autorizada pela Gerência da Mudança)'
+					'4. Revisão e fechamento'
+		- 5. Validação/Teste 'verifica a qualidade do serviço liberado analisando se encontra-se dentro do propósito para o qual foi desenhado no SDP'
+		- 6. Avaliação Mudanças 'avaliação formal de serviço novo garantindo riscos gerenciados e determinando se mudança deve ser autorizada'
+		- 7. Conhecimento 'garantir envio de informação na hora certa para a pessoa certa'
+					'Sistema de Gerenciamento de Conhecimento sobre Serviços' sistema orientado à extração de conhecimento de uma base ampla de dados
+
+- Operação de Serviço(Service Operation)
+	- única que possui processos e ações
+	- Termos
+		- 'Problema' causa de um ou mais incidentes, solucionado por meio de investigação da causa raiz
+		- 'Incidente' interrupção não planejada ou redução na qualidade, falha de um IC
+		- 'Alerta' aviso de que certo limite foi atingido, ou algo mudou, ou falha ocorreu
+		- 'Evento' qualquer ocorrência com significado para serviço ou gerência de IC
+		- 'Requisição de serviço' pedido para mudança ou acesso, atendida pela Centra de Serviço, não requerendo RDM
+		- 'Solução de contorno (workaround)' solução paliativa, temporária
+		- 'Erro conhecido' problema cuja raiz é conhecida e que possui solução de contorno identificada
+		- 'Base de Erros Conhecidos' repositório centralizado de erros conhecidos, usado para resolver incidentes
+	- Hierarquia
+		- eventos e alertas ocorrem o tempo todo
+		- alguns eventos podem ser incidentes
+		- se incidentes com erros conhecidos, já possuem solução de contorno
+		- erros ocorrem devido a problemas
+		- buscar a causa-raiz dos problemas faz incidentes não voltarem a acontecer
+		- mudanças ajudam a resolver problemas
+	- Objtivos conflitantes
+		- 'Visão interna da TI x Visão externa do negócio' negócio preocupado com experiência, TI preocupada com componentes e sistemas intermas
+		- 'Estabilidade x Responsividade' operação quer assegurar infraestrutura estável e reconhecer exigências de mudança do negócio
+		- 'Qualidade do serviço x Custo do Serviço' serviço deve ser entregue como combinado e deve manter custos a nível ótimo
+		- 'Reativo x Proativo' baixa em atividades proativas traz custos altos a atividades reativas e coloca estabilidade em risco
+	- Processos
+		1- 1. Incidentes 'restaurar a operação normal o mais rápido minimizando impacto dos incidentes'
+				Identificados, Registrados (logging), Categorizados por impacto, Priorizados, Escalados até algúem que possa sanar, 
+						Investigado e diagnosticado, Sanado, Fechado
+				'Major Incident Procedure' procedimento próprio para tratar incidentes graves, exigindo mais recursos
+		2- 2. Problema 'análise de causa raiz para resolver incidentes (atividades reativas) e detecção/prevenção de futuros problemas/incidentes (atividade proativas)'
+				'Base de Erros Conhecidos' documenta as causas raiz e soluções de contorno, disgnóstico, resolução de novas ocorrências
+				'Análise temporal' rastro cronológico dos eventos que podem ter conduzido ao problema
+				'Análise da “dor”(pain value)' análise do impacto na organização
+				'Kepner & Tregoe' identificar o problema, analisar prováveis causas e testar a causa mais provável
+				'5 porquês (5-Whys)' inicia com a descrição do problema e se pergunta “Por que ocorreu?” Na quinta, aparece a causa raiz do problema
+				'Isolamento da falha' repetem-se as transações que conduziram ao problema e isola-se o IC
+				'Diagrama de Ishikawa, Diagrama de Pareto', fluxo parecido com o de incidente, mas mais completo
+				- responsável por eliminar problemas recorrentes encontrando a causa raiz e aplicando uma solução definitiva 
+		- 3. Eventos 'gerenciar eventos ao longo do ciclo de vida monitorando TI, baixa de desempenho, eventos, notificações e controle'
+
+		- 4. Requisições 'demandas solicitadas pelos usuários, mudanças-padrão, software adicional, realocação, drives, pedido de informação'
+				'Cumprimento de Requisições' permitir requerer e receber serviço, fornecer e entregar, oferecer suporte, reclamações e sugestões pela Central de Serviços
+		- 5. Acesso 'administra os privilégios de acesso, restringindo o acesso não-autorizado'
+	- Funções
+		- 1. Central de Serviço 'equipe funcional e recursos, ponto focal de tratamento para interrupção de serviço, requisições de serviço e mudança, service desk'
+		- 2. Técnico 'equipes que fornecem conhecimento técnico e de infraestrutura, define papéis do suporte, ferramentas, procedimentos'
+		- 3. Aplicações 'administra os aplicativos ao longo do ciclo de vida'
+	 	- 4. Operações 'executa as atividades do dia a dia, entregando nível de serviço acordado'
+
+
+- Melhoria de Serviço Continuada (Continual Service Improvement)			
+	- 'Registro de Melhoria de Serviço (CSI register)' grava e categoriza oportunidades de melhoria além dos benefícios que seriam alcançados
+	- 'Métricas de Tecnologia' associadas a componentes e aplicação, tais como performance, disponibilidade
+	- 'Métricas de Processo' fatores críticos de sucesso (CSFs), indicadores-chave de performance (KPIs) e métricas de atividade para os processos
+	- 'Métricas de Serviço' métricas que medem a performance do serviço fim-a-fim
+	- Processos
+		1- 1. 7-Step Improvement Process 'desde a definição do que se deseja medir até a implementação das medidas corretivas necessárias'
+				- '1 – Identificar a estratégia de melhoria'  definir o que deve ser medido olhando o catálogo de serviço
+				- '2 – Definir o que você vai medir' listar ferramentas em uso
+				- '3 – Coletar os Dados' coleta por monitoramento automática ou manual
+				- '4 – Processar Dados' converter dados para serem entendidos pelo público com tecnologias de relatório
+				- '5 – Analisar Dados e Informações' transformar informação em conhecimento
+				- '6 – Apresentar e usar a informação' formatar informação para serem entendidas pelos níveis
+				- '7 – Implantar melhoria' otimizar, aperfeiçoar e corrigir os serviços
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //-- 8%  Governança e Gestão de TI com COBIT 5 - Estrutura, objetivos e conceitos gerais
-
-- COBIT v5
-	- Governança'O sistema pelo qual o uso atual e futuro da TI é dirigido e controlado'
-		- avaliação e direção do uso da TI
-		- suporte à organização no alcance de objetivos estratégicos
-		- monitorar uso da TI para realizar planos
-		- inclue a estratégia e políticas para uso de TI dentro de uma organização
-
-		- governar a TI por meio de 3 tarefas principais
-			- 'Avaliar' o uso atual e futuro da TI 													  'checar se uso de determinada tecnologia é relevante'
-				- inclui avaliar estratégias, propostas, arranjos de fornecimento interno ou externo
-				- inclui avaliar pressoes externas e internas, tais como
-					- mudanças tecnologicas, tendências economicas, influências políticas
-			- 'Dirigir' a preparação e a implementação de planos p/ atender objetivos do negócio      'preparar plano para chegar a objetivos'
-				- inclui atribuir responsabilidades para preparação e implementação de planos
-				- os planos devem estabelecer o direcionamento de investimentos nos projetos/operações
-			- 'Monitorar' cumprimento das políticas em relação ao plano 							   'monitorar política que implementa os plano'
-				- monitorar o desempenho com sistemas de mensuração
-				- garantir que o desempenho está de acordo com os planos definidos
-				- ainda checa se objetivos estão em conformidade com as obrigações dentro e fora do ambiente de trabalho
-
-		- A governança é de responsabilidade da alta administração (board), controla a gestão
-		- A gestão é de responsabilidade dos gestores de TI, controla tarefas operacionais
-
-		- COBIT 5 é um framework de governança e gestão corporativa de TI.
-			- faz a integração do conteúdo dos principais frameworks publicados pelo ISACA, empresa em que foi desenvolvido
-				- 'COBIT 4.1'
-				- 'Val IT', conjunto de processos e melhores práticas
-				- 'Risk IT', auxiliar no gerenciamento de riscos
-				- 'Business Model for Information Security (BMIS)', gestão de segurança da informação
-				- 'IT Assurance Framework (ITAF)', concepção, realização e relatório de auditoria de TI
-				- 'Taking Governance Forward (TGF)'
-				- 'Board Briefing on IT Governance 2nd Edition', descrição abrangente dos conceitos de governança de TI para educar o board e a gerência executiva
-			- alinha-se com outros padrões e modelos do mercado, tais como ITIL, TOGAF, PMBOK, PRINCE2, COSO, ISO
-
-			- auxilia organizações a 
-				- criação de valor para TI
-				- equilíbrio entre a realização de benefícios e a otimização dos níveis de risco e o uso de recursos
-
-			- objetivos
-				- auxilia as organizações a otimizar o valor gerado pela TI
-				- permitir que a TI seja governada e gerenciada por inteiro
-				- criar uma linguagem comum entre TI e negócios
-
-			- pra que foi criado
-				- fornece a próxima geração de orientações da ISACA sobre governança corporativa e gestão de TI
-				- mais de 15 anos de uso e aplicação prática por muitos na TI
-				- Permitir que mais partes interessadas falem sobre o que eles esperam da tecnologia da informação e tecnologias relacionadas, prioridades e valor esperado
-				- dependência cada vez maior para o sucesso da organização
-				- Tratar a quantidade de informação
-				- Administrar TI cada vez mais pervasiva
-				- Cobrir o negócio por inteiro
-
-			- compoe 
-				- Sumário Executivo
-				- Componentes e estruturas
-				- 5 princípios, descritos cada um em um capítulo distinto
-				- Visão dos 7 habilitadores e suas dimensões
-				- Cascata de objetivos (COBIT 5 Goals Cascade)
-				- Modelo de Referência de Processos
-				- Introdução ao Guia de Implementação
-				- Modelo de Capacidade de Processos
-
-			- Área 
-				- Governança
-					- 5 processos 
-					- Avaliar, Dirigir e Monitorar (Evaluate, Direct and Monitor - EDM)
-				- Gestão 
-					- 32 processos 
-					- Alinhar, Planejar e Organizar (Align, Plan and Organise - APO) ;
-					- Construir, Adquirir e Implementar (Build, Acquire and Implement - BAI) ;
-					- Entregar, Serviços e Suporte (Deliver, Service and Support - DSS)
-					- Monitorar, Avaliar e Analisar (Monitor, Evaluate and Assess - MEA)
-
-			- COBIT 5 é
-				- Focado em governança corporativa de TI
-				- Deixa clara a distinção entre governança e gestão
-				- Fundamentado em 5 princípios de governança corporativa de TI
-				- Baseado em um conjunto holístico de 7 enablers (ou habilitadores)
-				- Possui 37 processos de TI divididos em domínios de processo de governança e de gestão
-
-			- Evolução
-				- COBIT1'auditoria e controles de TI'
-				- COBIT3'orientações para a gestão de TI'
-				- COBIT4'framework de governança de TI'
-				- COBIT5'integrador de governança e gestão de TI corporativa'	
-
-			- 'Princípios'
-				1. Atender as necessidades dos stakeholders (partes interessadas)
-				2. Cobrir a organização de ponta a ponta
-				3. Aplicar um framework (modelo) único e integrado
-				4. Permitir uma abordagem completa
-				5. Distinguir a governança da gestão
-
-				1. Atender as necessidades dos stakeholders (partes interessadas)
-					- As organizações existem para criar valor para as partes interessadas (stakeholders)
-					- acionistas, auditores, fornecedores, consultores, alta administração, etc
-					- Consequentemente, qualquer organização terá a criação de valor como um objetivo da governança
-					- criação de valor'Obtenção de benefícios por meio da otimização do uso de recursos e dos riscos a um nível aceitável'
-						- Realização de benefícios'financeiros ou serviço publico'
-						- Otimização do risco
-						- Otimização dos recursos
-					- É o alinhamento estratégico entre TI e negócio
-
-					Para cada decisão de governança, as seguintes questões podem e devem ser feitas
-						- Quem recebe os benefícios?
-						- Quem assume os riscos?
-						- Quais são os recursos necessários?
-
-					Cascata de Objetivos do COBIT 5'auxilia em como empregar os habilitadores para alcançar os objetivos corporativos de forma mais concreta'
-						- desdobrar os direcionadores (drives) e as necessidades dos stakeholders em objetivos corporativos
-						- desdobrar os objetivos corporativos em objetivos de TI
-						- desdobrar os objetivos de TI em objetivos para os habilitadores
-
-					No COBIT 5, os objetivos de TI são desdobrados em objetivos de habilitadores, sendo Processos um dos habilitadores
-
-				2. Cobrir a organização de ponta a ponta
-					- Integra a governança corporativa de TI dentro da governança corporativa da organização;
-					- Cobre todas as funções e processos necessários para regular e controlar as informações
-					- Não foca apenas nas funções de TI, mas informação e tecnologia como ativos
-
-					- os gestores de negócio têm a responsabilidade de tratar a TI como um ativo estratégico
-
-					- Componentes
-						- Habilitadores da governança'recursos como princípios, estruturas, processos e práticas'
-						- Escopo da governança'toda a organização ou só uma parte'
-						- Papéis, Atividades e Relacionamentos'quem está envolvido com governança, como estão envolvidos, o que fazem e como interagem'
-
-				3. Aplicar um framework (modelo) único e integrado
-					- COBIT 5 é uma estrutura única e integrada
-					- permite à organização utilizar o COBIT 5 como um integrador dos frameworks de governança e de gestão
-					
-					- família de produtos COBIT 5
-						- COBIT 5 (o framework)
-						- Guia de habilitadores do COBIT 5
-							- COBIT 5: Habilitador Processos (Enabling Processes)
-							- COBIT 5: Habilitador Informação (Enabling Information)
-							- Outros guias habilitadores
-						- Guias profissionais do COBIT 5
-							- COBIT 5 Implementação
-							- COBIT 5 para Segurança da Informação
-							- COBIT 5 para Garantia (Assurance)
-							- COBIT 5 para Risco
-							- Outros guias profissionais
-						- Um ambiente colaborativo on-line, que é disponibilizado para apoiar o uso do COBIT 5
-
-				4. Permitir uma abordagem completa
-					- COBIT 5 define um conjunto de 7 habilitadores
-					
-					- 'Habilitadores' Fatores que, individual e coletivamente, influenciam o funcionamento da governança e gestão corporativas de TI 
-					- são orientados pela cascata de objetivos
-					- objetivos de TI em níveis mais alto definem o que os diferentes habilitadores deverão alcançar
-						1. Princípios, políticas e frameworks'veículos que traduzem o comportamento desejado para gestão diária'
-						2. Processos'conjunto organizado de práticas e atividades para atingir determinados objetivos'
-						3. Estruturas organizacionais'entidades-chave responsáveis pela tomada de decisão'
-						4. Cultura, ética e comportamento'fator de sucesso nas atividades de governança e gestão'
-						5. Informação'todas as informações produzidas e utilizadas, sendo imprescindível para manter a organização em funcionamento e bem governada'
-						6. Serviços, infraestrutura e aplicações'infraestrutura, tecnologia e aplicações que fornecem o serviço de TI'
-						7. Pessoas, habilidades e competências'necessárias para que as atividades sejam executadas com sucesso'
-
-					- Dimensões comuns para habilitadores
-						- Partes interessadas
-							- cada habilitador tem interessados que executam papel ativo ou têm interesse na execução
-						- Objetivos
-							- cada habilitador têm objetivos e criam valor pela realização destes objetivos
-							- divididos em qualidade intrínseca, qualidade contextual e acessibilidade e segurança
-						- Ciclo de vida
-							- desde sua criação, passando por sua vida útil/operacional até chegar ao descarte
-								- Planejar (inclui o desenvolvimento de conceitos e seleção de conceitos)
-								- Projetar
-								- Construir/adquirir/criar/implementar
-								- Utilizar/operar
-								- Avaliar/monitor
-								- Atualizar/eliminar
-						- Boas práticas
-							- Boas práticas apoiam a realização dos objetivos do habilitador
-
-				5. Distinguir a governança da gestão
-					- Essas duas áreas abrangem diferentes tipos de atividades
-					- exigem diferentes estruturas organizacionais e servem a propósitos diferentes
-
-					Governança
-						- A governança garante que as necessidades, as condições e as opções das partes interessadas sejam avaliadas a fim de 
-						- determinar os objetivos corporativos acordados e equilibrados; 
-						- define a direção por meio de priorização e tomada de decisão; e 
-						- provê monitoramento de desempenho e conformidade com relação aos objetivos estabelecidos.
-						- A governança é de responsabilidade do Conselho de Administração, sob a liderança do presidente
-
-					Gestão
-						- A gestão consiste em planejar, construir, executar e monitorar atividades alinhadas com a direção estratégica estabelecida pela governança para
-						- atingir os objetivos corporativos.
-						- A gestão é da responsabilidade da gerência executiva, sob a liderança do chefe diretor executivo (CEO)
-
-
-			- MODELO DE REFERÊNCIA DE PROCESSOS
-				- 37 processos de TI em duas principais áreas de atividade 
-				- governança e gestão
-				- Governança '5'
-					- Avaliar 
-					- Dirigir 
-					- Monitorar 
-				- Gestão 
-					- Planejar  (APO - Align, Plan and Organise)         '13'
-						- estratégia e táticas de TI
-						- arquitetura corporativa
-						- inovação e gerenciamento de portfólio
-						- orçamento, qualidade, riscos e segurança
-					- Construir (BAI - Build, Acquire and Implement)     '10'
-						- torna a estratégia de TI concreta
-						- identificando os requisitos para a TI
-						- gerenciando o programa de investimentos em TI e projetos associados
-						- gerenciamento da disponibilidade e capacidade
-						- mudança organizacional
-						- gerenciamento de mudanças (TI)
-						- aceite e transição
-						- gerenciamento de ativos, configuração e conhecimento
-					- Entregar  (DSS - Deliver, Service and Support)     '6'
-						- à entrega dos serviços de TI necessários para atender aos planos táticos e estratégicos
-						- processos para gerenciar operações, requisições de serviços e incidentes
-						- gerenciamento de problemas, continuidade, serviços de segurança e controle de processos de negócio
-					- Monitorar (MEA - Monitor, Evaluate and Assess) 	 '3'
-						- monitorar o desempenho dos processos
-						- avaliando a conformidade com os objetivos e com os requisitos externos
-
-			- Para cada processo
-				- Identificação
-				- Descrição 
-				- Propósito 
-				- Informação de objetivos em cascata
-				- Objetivos de processos e métricas
-				- Matriz RACI
-				- Descrição detalhada de práticas de processo
-				- Guias relacionados
-
-			- uma capacidade de processo nível 3-Processo Estabelecido exige que a definição e os atributos de implantação do 
-			  processo sejam amplamente atingidos depois que a capacidade dos atributos de processo do nível 2-Processo Gerenciado forem atingidos
