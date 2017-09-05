@@ -92,109 +92,6 @@
 
 //-- 17% Análise e projeto orientados a objetos (UML).
 
-- Diagramas UML 2.5
-	- 'DIAGRAMAS ESTRUTURAIS (6 tipos)'
-		- aspecto estrutural tanto do sistema quanto classes
-		- esqueleto e estruturas relativamente 'estáveis' do sistema
-		- classes, interfaces, colaborações, componentes
-
-		- DE CLASSES
-			- representar estruturas de classes de negócio, interface, de controle
-			- considerado o mais importante, serve de apoio para a maioria dos demais diagrama-
-			- representa coleção de classes e seus inter-relacionamentos
-			ex. quadros com três divisões, sendo nome, atributos, métodos, as relações são como em bancos de dados, 1,1; 1,N; ..
-
-		- DE OBJETOS
-			- representa objetos em diagrama de classes em instante do tempo
-			- representa instancias e relacionamentos
-			- modelagem da visão estática do projeto do sistema
-			- é um retrato em tempo de execução dos objetos do software e seus inter-relacionamentos
-			ex. quadros com duas divisões, sendo nome do objeto:classe e seus atuais atributos da classe a que pertence
-
-		- DE COMPONENTES 
-			- artefatos de que os componentes são feitos
-			- código fonte,  bibliotecas de programação ou tabelas de bancos de dados
-			- modelar software baseado em componentes
-			- indicar os componentes do software e seus relacionamentos
-			- coleção de componentes de software e seus interrelacionamentos
-			ex. relações de nomes de arquivos e bibliotecas
-
-		- DE IMPLEMENTAÇÂO/INSTALAÇÂO/IMPLANTAÇÃO/DEPURAÇÃO
-			- organização do conjunto de elementos de um sistema para sua execução
-			- mostra layout físico do sistema relacionando software e hardware
-			- enfoca estrutura física onde software sera implantado e executado no hardware
-			- como máquinas estarão conectadas e protocolos de comunicação
-			- seus elementos são os nós e os caminhos de comunicação
-			- mostra como uma coleção de componentes são distribuidos em vários nos de hardware
-
-		- DE PACOTES
-			- tem pacotes 
-			- relacionamentos entre pacotes 
-			- representa coleção de outros elementos de modelagem e diagramas
-		
-		- DE ESTRUTURA COMPOSTA
-			- para modelar colaborações
-			- uma colaboração descreve uma visão de um conjunto de entidades cooperativas
-
-	- 'DIAGRAMA COMPORTAMENTAL (5 tipos no 2.5, 4 tipos no 2.0)'
-		- vizualizar, especificar, construir e documentar aspectos 'dinâmicos' de um devido sistema
-		- itens que passam por alteração, como fluxo de mensagem ao longo do tempo
-
-		- DE CASOS DE USO
-			- casos de uso são narrativas em texto, descrevendo a unidade funcional, usados para representar requisitos funcionais nos sistemas 
-			- organiza os comportamentos do sistema
-			- mostra um conjunto de casos de uso e atores e seus relacionamentos
-			- representa conjunto de comportamentos de alto nível que o sistema deve executar para um determinado autor
-			- para organização e modelagem dos comportamentos de um sistema
-			- includes representa obrigatoriedade de realizar determinada ação
-			- extends indica que é opcional
-			ex. autor: usuário
-				casos de uso: consultar cliente, consultar fornecedor, cadastrar fornecedor, ...
-
-		- DE ESTADOS
-			- enfatiza o estado de mudança de um sistema orientado por eventos
-			- mostra uma máquina de estados, que consiste de estados, transições, eventos e atividades.
-			- para ilustar a visão dinâmica de um sistema
-			- para fazer a modelagem do comportamento de uma interface, classe ou colaboração
-			- dão enfase ao comportamento de um objeto, solicitado por eventos, que é de grande ajuda para a modelagem de sistemas relativos
-			- mostra o conjunto de estados que um objeto pode estar e os "gatilhos" que estimulam a transição de estados desse objeto
-			ex. é uma máquina de estados
-
-		- DE ATIVIDADES
-			- enfatiza o fluxo de controle de uma atividade para outra
-			- mostra o fluxo de uma atividade para outra em um sistema
-			- mostra um conjunto de atividades, o fluxo em sequencia ou ramificado de uma atividade para outra e os objetos que realizam ou sofrem ações
-			- para ilustrar a visão dinâmica de um sistema
-			- fazer a modelagem da função de um sistema
-			- dão ênfase ao fluxo de controle na execução de um comportamento
-			- fluxo de tarefas que podem ser executadas pelo sistema ou por um ator
-			ex. é um diagrama de fluxo de código, tem inicio, losando é if, fim
-				
-		- DE SEQUÊNCIA
-			- enfatiza a ordem temporal das mensagens
-			- diagrama de interação que dá ênfase à ordenação temporal de mensagens
-			- mostra um conjunto de papéis e as mensagens enviadas e recebidas pelas instâncias que representam os papéis
-			- para ilustrar a visão dinâmica de um sistema
-			- representa perspectiva, orientada por tempo, da colaboração entre objetos
-
-		- DE COMUNICAÇÃO/COLABORAÇÃO
-			- enfatiza a organização estrutural de objetos que enviam e recebem mensagens
-			- diagrama de interação que dá enfase a organização estrutural dos objetos que enviam e recebem mensagens
-			- mostra um conjunto de papéis, as conexões existentes entre eles e as mensagens enviadas e recebidas pelas instâncias que representam os papéis
-			- para ilustrar a visão dinâmica de um sistema
-			- coleção de objetos que trabalham em conjunto para atender algum comportamento do sistema
-			ex. grade com um campo sendo nome do objeto e relacionamentos sendo setas unidirecionais com ações/métodos
-
-		- 'DE INTERAÇÃO NO 2.0'
-			- DE SEQUÊNCIA
-
-			- DE COMUNICAÇÃO/COLABORAÇÃO
-
-			- DE INTERAÇÃO/VISÃO GERAL DE INTERAÇÃO 
-
-			- DE TEMPO/TEMPORAL
-
-// FCC
 - UML 1.1 (ISO/IEC 19501:2005)
 - É tão expressiva que pode modelar outras sistemas, não só software
 
@@ -395,8 +292,6 @@
 
 // 7%  Conceitos sobre orientação a objetos (classes, atributos, objetos, métodos, herança, interfaces e outras hierarquias)
 
-// FCC
-
 Interface 
 	- possui todos os métodos abstratos
 	- não possui constantes, variáveis ou atributos
@@ -410,8 +305,6 @@ Classe concreta
 
 - Abstração
 	- generalização por redução do conteúdo para reter apenas informação relevante
-	- 
-	- 
 
 - Encapsulamento CAI MUITO
 	- Protege os dados do objeto do uso arbitrário e não-intencional
@@ -441,8 +334,6 @@ Classe concreta
 - Acoplamento
 	- medida do grau de dependência que existe entre os objetos
 	- 'Pressman'Acoplamento é uma medida qualitativa do grau em que as classes estão conectadas entre si
-
-
 
 - Análise 'Modelagem do problema'
 	- com foco no cliente
@@ -508,35 +399,64 @@ Classe concreta
 
 
 
+// 8%  Princípios sobre qualidade de software: modelo MPS.BR e CMMI-DEV 1.3
 
+- CMMI 1.2/1.3
+	- modelo de maturidade que prescreve boas práticas para desenvolvimento e manutenção de software 
+	- 'CMMI for Development (CMMI-DEV)' processo de desenvolvimento de produtos e serviços
+	- 'CMMI for Acquisition (CMMI-ACQ)' processos de aquisição e terceirização de bens e serviços
+	- 'CMMI for Services (CMMI-SVC)' processos de empresas prestadoras de serviços
+	- falaremos do CMMI-DEV que tem 22 áreas de processos
+	- cada área é um conjunto de práticas que atingem metas para melhorias de uma categoria
 
+	- 'abordagem contínua' permite escolher as áreas de processos para as quais deseja ser avaliada por níveis de capacidade
+		- liberdade para aperfeiçoar na ordem que for conveniente
 
+	- 'abordagem por estágios' classificar a empresa em um determinado nível de maturidade
+		- Para alcançar determinado nível a empresa deve realizar um conjunto de áreas de processos
 
+- contínua
+	- níveis de capacidade
+		- Nível 0: Incompleto/Ad-hoc 'processo não executado ou executado parcialmente'
+		- Nível 1: Executado 'satisfaz às metas específicas da área de processo'
+		- Nível 2: Gerenciado/Gerido 'planejado/executado de acordo com uma política, experientes, saídas controladas, interessados, monitorado, controlado, revisado, avaliado'
+		- Nível 3: Definido 'é gerenciado e adaptados pelos processos padrão da empresa por diretrizes de adaptação e gerindo produtos e medidas de melhoria pra ativos'
+		'SO1.2'- Nível 4: Gerenciado Quantitativamente 'definido e controlado por técnicas estatísticas e quantitativas'
+		'SO1.2'- Nível 5: Em otimização/Otimizado 'gerenciado quantitativamente e melhorado com base nas causas comuns de variação inerentes'
 
+- estágios
+	- níveis de maturidade
+		- Nível 1: Inicial/Ad-hoc 'processos ad hoc e caóticos e não oferece ambiente estável para apoiar processos'
+		- Nível 2: Gerenciado/Gerido 'planejados/executados de acordo com uma política, experientes, saídas controlas, interessados, monitoreados, controlados, revisados, avaliados'
+		- Nível 3: Definido 'bem caracterizados e entendidos, descritos em padrões, procedimentos, ferramentas e métodos'
+		- Nível 4: Gerenciado Quantitativamente 'objetivos quantitativos para qualidade e desempenho sendo critérios na gestão'
+		- Nível 5: Em otimização/Otimizado 'melhoria contínua com base nas causas comuns de variação inerentes'
+	- é necessário que todas as áreas de processos de nível dois sejam executados para que a empresa seja certificada com nível dois
+	- Para o nível dois de maturidade, todos os processos deste nível devem ser executados com nível dois de capacidade
+	- Para os níveis de maturidade 3, 4 e 5, os processos correspondentes deverão ser executados no nível de capacidade três
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- JPA 'Java Persistence API'
-	- API que descreve interface comum para frameworks de persistência de dados
-	- Define um meio de mapeamento objeto-relacional para objetos Java simples e comuns (POJOs), denominados beans de entidade.
-	- Diversos frameworks de mapeamento objeto/relacional como o Hibernate implementam a JPA
-	- Também gerencia o desenvolvimento de entidades do Modelo Relacional usando a plataforma nativa Java SE e Java EE
-	- É utilizado principalmente para conexão e acesso a banco de dados relacionais
+- categorias
+	- 1.Gestão de Processos 'atividades transversais, definição, planejamento, execução, monitoramento e contole, avaliação, medição e melhoria de processos'
+		- 1.Foco nos Processos da Organização (OPF) 'colaborar para planejamento, implementação, implantação de melhorias compreendendo pontos fortes e fracos de processos e ativos'
+		- 2.Definição dos Processos da Organização (OPD) 'estabele/contém conjunto de processos padrão'
+		- 3.Treinamento na Organização (OT) 'identifica necessidades de treinamento estratégico e tático'
+		- 4.Desempenho dos Processos da Organização(OPP) 'objetivos quantitativos para qualidade e desempenho a partir de objetivos estratégicos'
+		- 5.Gestão do Desempenho da Organização (OPM) 'analise de linhas de base para entender habilidade em alcançar objetivos'
+			'NO1.2' Implantação de Inovações na Organização (OID)
+	
+	- 2.Gestão de Projetos 'gestão relacionadas a planejamento, monitoramento e controle de projeto'
+		- 1.Planejamento de Projeto (PP) PAG 10
+		- 2.Monitoramento e Controle de Projeto (PMC)
+		- 3.Gestão de Requisitos (REQM)
+		- 4.Gestão de Contrato com Fornecedores (SAM)
+		- 5.Gestão Integrada de Projeto (IPM)
+		- 6.Gestão de Riscos (RSKM)
+		- 7.Gestão Quantitativa de Projeto (QPM)
+	
+	- 3.Engenharia
+		- 
+		- 
+		- 
+		- 
+		- 
+	- Suporte
