@@ -73,7 +73,7 @@ Princípios sobre administração de bancos de dados. 																			'13  - 
 # Engenharia e Desenvolvimento de Software '3 PASSADAS SEM COMPLETAR'
 20% Aspectos gerais das linguagens PHP, HTML5, XML, Java SE, Java EE, JUnit.												'237 - FCC - Programação - PHP - HTML - XML - Java SE - JEE - JUnit'
 x'20/59'- 17% Análise e projeto orientados a objetos (UML). 																'235 - FCC - Engenharia de Software - UML'
-8%  Princípios sobre qualidade de software: modelo MPS.BR e CMMI-DEV versão 1.3. 											'138 - FCC - Governança de TI - MPS.BR - CMMI'
+*8%  Princípios sobre qualidade de software: modelo MPS.BR e CMMI-DEV 1.3. 													'138 - FCC - Governança de TI - MPS.BR - CMMI'
 7%  Processos de software. 																									'26  - FCC - Governança de TI - ISO-IEC 12207 '
 7%  Estruturas de dados e de controle de fluxo. 																			'27  - FCC - Algoritmos e Estrutura de Dados - Estrutura de dados - Estruturas de controle e repetição'
 x'12/30'- 7%  Conceitos sobre orientação a objetos (classes, atributos, objetos, métodos, herança, interfaces). 			'118 - FCC - Engenharia de Software - Orientação a Objetos'
@@ -114,7 +114,7 @@ Conceitos sobre desenvolvimento Web e cliente/servidor. 																	'6   - 
 
 //--
 # Governança e Gestão de TI '3 PASSADAS SEM COMPLETAR'
-66% Gestão de serviços de TI com ITIL v3 Edição 2011 - Estrutura, objetivos e conceitos gerais. 							'144 - FCC - Governança de TI - ITIL v. 3'
+x'20/43'- 66% Gestão de serviços de TI com ITIL v3 Edição 2011 - Estrutura, objetivos e conceitos gerais. 					'169 - FCC - Governança de TI - ITIL v. 3'
 8%  Governança e Gestão de TI com COBIT 5 - Estrutura, objetivos e conceitos gerais. 										'32  - FCC - Governança de TI - COBIT v. 5.0'
 'PARE AQUI - 74% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
 8%  Planejamento estratégico de TI – PETI. 																					'20  - FCC - Governança de TI - Planejamento Estratégico de TI (PETI)'
@@ -132,16 +132,42 @@ Práticas de gestão da TI. 																									'27  - FCC - Gerência de P
 
 //-- --//
 ## ESTRATEGIA DE RESOLUÇÂO
-- LER OS MAIORES QUESTÕES ACIMA DE 90% E DEPOIS FAZER 1/4 DAS QUESTÕES 
-- AO TERMINAR FAZER NA ORDEM
-- MAS SEMPRE LER NO ONIBUS DE FORMA INDEPENDENTE
+---
+1.0
+- LER OS MAIORES COM QUESTÕES ATÉ 90% E DEPOIS FAZER 1/4 DAS QUESTÕES (tenho que acertar questões novas)
+- O RESTO SÓ LÊ RAPIDÃO OU VE VIDEO PARA CONSEGUIR FAZER AS QUESTOES (não preciso acertar questões novas, só as que serão repetidas)
 
+- LER NO ÔNIBUS DE FORMA INDEPENDENTE
 - VÊ TODAS AS RESPOSTAS DE TODAS AS QUESTÕES
 
-FAZ 2 DE CADA ESPECIFICO, DEPOIS ATENTA-SE AO GERAL TAMBEM
+- FAZ 2 DE CADA ESPECIFICO, DEPOIS ATENTA-SE AO GERAL TAMBEM
+
+- MAXIMO DE LINHAS POR CONTEUDO É 250!!!
 
 $ JÁ LI
 * NO MOMENTO
 x JÁ FOI FACEIS
 xx JÁ FOI MF-MÉDIO
+
+OBRIGADO (PERDI DOIS DIAS PARA PERCEBER QUE EU FAZIA ISSO E DAVA CERTO, MAS NÃO TINHA DOCUMENTADO)
+SOLUÇÃO FINAL (A PARTIR DE HOJE 3/9)
+	- LER SEM ANOTAR NADA (BOM POIS DA CONTINUIDADE AO QUE É FEITO NO ÔNIBUS)
+	- DEPOIS DE LER, ANOTAR SÒ O ESQUEMA DO CONTEÚDO
+		- SE NÃO SEI NADA DO CONTEUDO, DEFINIÇÃO RÁPIDA DO TÓPICO PAI!!! (VAI FUNCIONAR!!)
+	- RESOLVER QUESTÕES
+	- SURGINDO DÚVIDAS NAS QUESTÕES, PROCURO NO MATERIAL E COMPLEMENTO O ESQUEMO/ ANOTO (APRENDO O QUE IMPORTA E É BEM MAIS RÁPIDO QUE IR ANOTANDO)
+---
+
+PARA SIMULADOS
+- Ao ler o conteúdo base 70%, fazer o simulado da prova anterior e anotar respostas numa folha separada, checar resultados (não ver o que errou)
+- AO FAZER O TEMPO CURTO ou chegar em 90%?, faz de novo o simulado
+
+QUANDO O TEMPO FOR CURTO
+- Criar PDFs estratégicos de questões com resposta do estratégia para ler no ônibus
+
+DURANTE A PROVA
+- Fazer os 60% de básicos, específicos e discursiva necessários para passar e nessa ordem
+- Ir seguindo nas questões, anotar número até agora se acho que acertei e x se acho que errei, até somar 60%
+- Ao somar, pula pra próxima categoria
+
 
