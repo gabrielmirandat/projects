@@ -51,41 +51,41 @@ Aprovado pela Resolução Administrativa no 1.295/2008
 'PARE AQUI - 100% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
 
 
-//-- --//
+//-- 9 --//
 ## CONHECIMENTOS ESPECÍFICOS
 C03 - ANALISTA JUDICIÁRIO – ÁREA APOIO ESPECIALIZADO – ESPECIALIDADE ANÁLISE DE SISTEMAS
 
-//--
+//--2
 # Bancos de Dados '3 PASSADAS SEM COMPLETAR'
-x'30/65'- 31% SQL.																											'257 - FCC - Banco de Dados - SQL'
-x'20/54'- 19% Modelo Entidade-Relacionamento. 																				'216 - FCC - Banco de Dados'MER Entidade Relacionamento
+xo'30/65'- 31% SQL.																											'257 - FCC - Banco de Dados - SQL'
+xo'20/54'- 19% Modelo Entidade-Relacionamento. 																				'216 - FCC - Banco de Dados'MER Entidade Relacionamento
 16% Oracle PL/SQL. 																											'164 - FCC - Banco de Dados - Oracle - PL-SQL'
-11% Normalização de Banco de Dados. 																						'38  - FCC - Banco de Dados - Formas normais'
-'PARE AQUI - 77% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
-10% Características de um SGBD. 																							'32  - FCC - Banco de Dados - SGBD - Sistema de Gerenciamento de Banco de Dados'
 7%  SQL Server. 																											'41  - FCC - Banco de Dados - SQL Server '
+'PARE AQUI - 73% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
+11% Normalização de Banco de Dados. 																						'38  - FCC - Banco de Dados - Formas normais'
+10% Características de um SGBD. 																							'32  - FCC - Banco de Dados - SGBD - Sistema de Gerenciamento de Banco de Dados'
 'PARE AQUI - 94% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
 3%  Modelo relacional. 																										'28  - FCC  - Banco de Dados - Modelo relacional'
 3%  Modelagem de bancos de dados. 																							'29  - FCC  - Banco de Dados - Modelagem de dados'
 Princípios sobre administração de bancos de dados. 																			'13  - FCC  - Banco de Dados - Administração de banco de dados'
 
-//--
+//--6
 # Engenharia e Desenvolvimento de Software '3 PASSADAS SEM COMPLETAR'
 20% Aspectos gerais das linguagens PHP, HTML5, XML, Java SE, Java EE, JUnit.												'237 - FCC - Programação - PHP - HTML - XML - Java SE - JEE - JUnit'
-x'20/59'- 17% Análise e projeto orientados a objetos (UML). 																'235 - FCC - Engenharia de Software - UML'
-*8%  Princípios sobre qualidade de software: modelo MPS.BR e CMMI-DEV 1.3. 													'138 - FCC - Governança de TI - MPS.BR - CMMI'
-7%  Processos de software. 																									'26  - FCC - Governança de TI - ISO-IEC 12207 '
-7%  Estruturas de dados e de controle de fluxo. 																			'27  - FCC - Algoritmos e Estrutura de Dados - Estrutura de dados - Estruturas de controle e repetição'
-x'12/30'- 7%  Conceitos sobre orientação a objetos (classes, atributos, objetos, métodos, herança, interfaces). 			'118 - FCC - Engenharia de Software - Orientação a Objetos'
-5%  Engenharia de requisitos. 																								'67  - FCC - Engenharia de Software - Engenharia de Requisitos'
-'PARE AQUI - 71% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
+xo'20/59'- 17% Análise e projeto orientados a objetos (UML). 																'237 - FCC - Engenharia de Software - UML'
+x'17/35'- 8%  Princípios sobre qualidade de software: modelo MPS.BR e CMMI-DEV 1.3. 										'142 - FCC - Governança de TI - MPS.BR - CMMI'
+x'12/30'- 7%  Conceitos sobre orientação a objetos (classes, atributos, objetos, métodos, herança, interfaces). 			'123 - FCC - Engenharia de Software - Orientação a Objetos'
+3%  Javascript (ECMAScript 6), bootstrap. jquery. 																			'121 - FCC'javascript jquery bootstrap
 4%  Métodos ágeis (eXtreme Programming – XP, Scrum, Kanban). 																'94  - FCC - Engenharia de Software - Processos de Software - Desenvolvimento Ágil'
-3%  Javascript (ECMAScript 6), bootstrap. jquery. 																			'121 - FCC'javascript jquery bootstrap	
-3%  Modelagem de processos (BPMN). 																							'24  - FCC - Modelagem de Processos de Negócio (BPM) - BPMN (Bussines Process Modeling Notation)'
+5%  Engenharia de requisitos. 																								'67  - FCC - Engenharia de Software - Engenharia de Requisitos'	
 3%  Conceitos de Web Services SOAP e REST. 																					'49  - FCC - Arquitetura de Software - WebServices - SOAP (Simple Object Access Protocol)'
-2%  Ciclo de vida de sistemas.
 2%  CSS3.  																													'40  - FCC - Programação - CSS (Cascading Style Sheets)'
+'PARE AQUI - 69% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
+7%  Estruturas de dados e de controle de fluxo. 																			'27  - FCC - Algoritmos e Estrutura de Dados - Estrutura de dados - Estruturas de controle e repetição'
+3%  Modelagem de processos (BPMN). 																							'24  - FCC - Modelagem de Processos de Negócio (BPM) - BPMN (Bussines Process Modeling Notation)'
 2%  Modelagem funcional. 																									'67  - FCC - Engenharia de Software - Engenharia de Requisitos'
+7%  Processos de software. 																									'26  - FCC - Governança de TI - ISO-IEC 12207 '
+2%  Ciclo de vida de sistemas.
 'PARE AQUI - 90% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
 2%  Padrões de Projeto (design patterns). 																					'34  - FCC - Arquitetura de Software - Padrões de projeto (Design Patterns)'
 1%  Princípios de engenharia de software. 																					'5   - FCC - Engenharia de Software - Conceitos Básicos'
@@ -101,24 +101,24 @@ Funções e procedimentos.
 Conceitos de linguagens estruturadas. 																						'5   - FCC - Programação - Programação estruturada'	
 Conceitos sobre desenvolvimento Web e cliente/servidor. 																	'6   - FCC - Arquitetura de Software - Arquitetura Cliente-Servidor'
 
-//--
+//--0
 # Sistemas de apoio à decisão '3 PASSADAS SEM COMPLETAR'
-44% Arquitetura OLAP. 																										'31 - FCC - Banco de Dados - OLAP (On-line Analytical Processing)'
-18% Data Mining. 																											'16 - FCC - Banco de Dados - Data Mining'
-14% Data Warehouse. 																										'53 - FCC - Banco de Dados - DW - Data Warehouse'
+x'16/55'- 14% Data Warehouse.																								'55 - FCC - Banco de Dados - DW - Data Warehouse'
+x'10/31'- 44% Arquitetura OLAP. 																							'31 - FCC - Banco de Dados - OLAP (On-line Analytical Processing)'
+x'12/17'- 18% Data Mining. 																									'17 - FCC - Banco de Dados - Data Mining'
 'PARE AQUI - 76% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
-13% ERP.																													'4  - FCC - Arquitetura de Software - ERP (Enterprise Resource Planning)'
-'PARE AQUI - 89% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
-6%  Business Intelligence: Conceitos Princípios e Processos. 																'11 - FCC - Banco de Dados - BI (Business Intelligence)'
-4%  ETL. 																													'6  - FCC - Banco de Dados - ETL (Extract Transform Load)'
+$6%  Business Intelligence: Conceitos Princípios e Processos. 																'11 - FCC - Banco de Dados - BI (Business Intelligence)'
+'PARE AQUI - 82% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
+$13% ERP.																													'4  - FCC - Arquitetura de Software - ERP (Enterprise Resource Planning)'
+$4%  ETL. 																													'6  - FCC - Banco de Dados - ETL (Extract Transform Load)'
 
-//--
+//--1
 # Governança e Gestão de TI '3 PASSADAS SEM COMPLETAR'
 x'20/43'- 66% Gestão de serviços de TI com ITIL v3 Edição 2011 - Estrutura, objetivos e conceitos gerais. 					'169 - FCC - Governança de TI - ITIL v. 3'
-8%  Governança e Gestão de TI com COBIT 5 - Estrutura, objetivos e conceitos gerais. 										'32  - FCC - Governança de TI - COBIT v. 5.0'
-'PARE AQUI - 74% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
-8%  Planejamento estratégico de TI – PETI. 																					'20  - FCC - Governança de TI - Planejamento Estratégico de TI (PETI)'
 6%  Gestão de projetos com PMBOK 5a Edição. 																				'164 - FCC - Gerência de Projetos - PMBOK e Processos de Gerenciamento de Projetos'
+'PARE AQUI - 72% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
+8%  Governança e Gestão de TI com COBIT 5 - Estrutura, objetivos e conceitos gerais. 										'32  - FCC - Governança de TI - COBIT v. 5.0'
+8%  Planejamento estratégico de TI – PETI. 																					'20  - FCC - Governança de TI - Planejamento Estratégico de TI (PETI)'
 5%  Gestão de riscos. Programa de gestão de riscos. Processo de gestão de riscos. Métodos de análise de riscos. 			'8   - FCC - Gerência de Projetos - Gerenciamento dos riscos'
 'PARE AQUI - 93% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
 2%  Estrutura organizacional e responsabilidades da TI. Responsabilidade e papéis da TI. Segregação de funções de TI. Controles de segregação de funções.
@@ -147,7 +147,8 @@ Práticas de gestão da TI. 																									'27  - FCC - Gerência de P
 $ JÁ LI
 * NO MOMENTO
 x JÁ FOI FACEIS
-xx JÁ FOI MF-MÉDIO
+xo LIDO MÉDIO DIFICIL
+xx JÁ FOI MEDIO-DIFICIL
 
 OBRIGADO (PERDI DOIS DIAS PARA PERCEBER QUE EU FAZIA ISSO E DAVA CERTO, MAS NÃO TINHA DOCUMENTADO)
 SOLUÇÃO FINAL (A PARTIR DE HOJE 3/9)
@@ -163,6 +164,7 @@ PARA SIMULADOS
 - AO FAZER O TEMPO CURTO ou chegar em 90%?, faz de novo o simulado
 
 QUANDO O TEMPO FOR CURTO
+- Ser seletivo no material estudado!!!! Só ler o que interessa até 70%
 - Criar PDFs estratégicos de questões com resposta do estratégia para ler no ônibus
 
 DURANTE A PROVA

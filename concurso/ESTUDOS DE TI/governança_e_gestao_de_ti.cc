@@ -264,54 +264,34 @@
 				- '7 – Implantar melhoria' otimizar, aperfeiçoar e corrigir os serviços
 
 
+//-- 6%  Gestão de projetos com PMBOK 5a Edição.
 
-			
+- Projeto
+	- esforço 'temporário' com datas bem definidas 
+	  para criar 'produto, serviço ou resultado exclusivo' não existentes anteriormente
+	  ou apenas 'produzir resultados de pesquisa ou viabilidade ' 
+	  concluídos quando 'metas cumpridas'
+	  podendo gerar novas 'operações'
 
+- Operação
+	- esforço 'contínuo e repetitivo'
+	  para manter 'organização funcionando'
 
+- Gerência de Projeto 'aplicação de conhecimento, habilidades, ferramentas e técnicas às atividades do projeto a fim de atender aos seus requisitos'
+	- '47 processos' lógicos em '5 grupos'
 
+	- gerente de projetos
+		- 'conhecimento' sobre gerenciamento
+		- 'desempenho' aplicação do conhecimento
+		- 'pessoal' atitudes, personalidade, liderança
+		- Liderança, Construção de equipes, Motivação, Comunicação, Influência, Tomada de decisões, Consciência política e cultural,
+		  Negociação, Ganho de confiança, Gerenciamento de conflitos, Coaching
 
+- Gerência de Programa 'grupo de projetos coordenados para obtenção de benefícios e controle que não estariam disponíveis se eles fossem gerenciados individualmente'
+	- projetos e tarefas extra-projeto com foco no relacionamento das interdependências dos projetos
+	- projetos relacionados pelo 'resultado comum' ou 'capacidade coletiva'
 
+- Gerência de Portfólio 'conjunto de projetos/programas/outros agrupados para facilitar o gerenciamento eficaz para atingir os objetivos de negócios estratégicos'
+	- garantir que projetos/programas sejam analisados a fim de priorizar a alocação de recursos e consistência do portfólio
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//-- 8%  Governança e Gestão de TI com COBIT 5 - Estrutura, objetivos e conceitos gerais
+9 - dica do professor
