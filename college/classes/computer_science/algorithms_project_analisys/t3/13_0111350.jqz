@@ -1,0 +1,1201 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<hotpot-jquiz-file>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description rdf:about="">
+</rdf:Description>
+</rdf:RDF>
+<version>6</version>
+<data>
+<title></title>
+<timer>
+<include-timer>0</include-timer>
+<seconds>59</seconds>
+</timer>
+<reading>
+<reading-text></reading-text>
+<include-reading>0</include-reading>
+<reading-title></reading-title>
+</reading>
+<questions>
+<question-record>
+<question>(13/0111350) Demonstre por indu&amp;#x00e7;&amp;#x00e3;o que sempre &amp;#x00e9; poss&amp;#x00ed;vel dar um troco de n centavos, para qualquer n &amp;#x003E; 7, com moedas de 3 e 5 centavos
+
+1. Qual deve ser uma Base da indu&amp;#x00e7;&amp;#x00e3;o v&amp;#x00e1;lida?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>P(1)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>P(3)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>P(6)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>P(8), P(9), P(10)</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(13/0111350) Demonstre por indu&amp;#x00e7;&amp;#x00e3;o que sempre &amp;#x00e9; poss&amp;#x00ed;vel dar um troco de n centavos, para qualquer n &amp;#x003E; 7, com moedas de 3 e 5 centavos
+
+2. Qual deve ser a Hip&amp;#x00f3;tese de Indu&amp;#x00e7;&amp;#x00e3;o?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>P(k) &amp;#x00e9; verdadeira para todo 8&amp;#x003C;=k&amp;#x003C;=n-1em que n-1&amp;#x003E;=10</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>P(k) &amp;#x00e9; verdadeira para todo 5&amp;#x003C;=k&amp;#x003C;=n-3em que n-1&amp;#x003E;=5</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>P(k) &amp;#x00e9; falsa para todo 8&amp;#x003C;=k&amp;#x003C;=n-1em que n-1&amp;#x003E;=10</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>P(k) &amp;#x00e9; verdadeira para todo k&amp;#x003C;=n-1em que n-1&amp;#x003E;=0</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(13/0111350) Demonstre por indu&amp;#x00e7;&amp;#x00e3;o que sempre &amp;#x00e9; poss&amp;#x00ed;vel dar um troco de n centavos, para qualquer n &amp;#x003E; 7, com moedas de 3 e 5 centavos
+
+3. Qual deve ser o Passo de Indu&amp;#x00e7;&amp;#x00e3;o? (Mostre que P(n) &amp;#x00e9; verdadeiro para n&amp;#x003E;=11). Considere a e b o n&amp;#x00fa;mero de moedas 3 e 5 centavos, respectivamente.</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>Como n-3&amp;#x003E;=8, temos n-3 = 3a+5b , a E N e b E N  e, consequentemente, n = 3(a+1)+5b</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Como n-4&amp;#x003E;=8, temos n-4 = 3a+5b , a E N e b E N  e, consequentemente, n = 4(a+1)+5b</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Como n-3&amp;#x003E;=8, temos n-3 = 5a+5b , a E N e b E N  e, consequentemente, n = 5(a+1)+5b</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Como n-3&amp;#x003E;=11, temos n-3 = 5a+3b , a E N e b E N  e, consequentemente, n = 5(a+1)+3b</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(13/0111350) Demonstre por indu&amp;#x00e7;&amp;#x00e3;o que sempre &amp;#x00e9; poss&amp;#x00ed;vel dar um troco de n centavos, para qualquer n &amp;#x003E; 7, com moedas de 3 e 5 centavos
+
+4. Que sequ&amp;#x00ea;ncia melhor descreve o comportamente da indu&amp;#x00e7;&amp;#x00e3;o?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>8= 5*1 + 3*1
+9= 5*3 + 3*0
+10=5*0 + 3*2
+11=5*2 + 3*1
+12=5*4 + 3*0
+13=5*1 + 3*2
+14=5*3 + 3*1
+15=5*5 + 3*0
+16=5*2 + 3*2
+17=5*4 + 3*1
+18=5*6 + 3*0</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>8= 3*2 + 5*1
+9= 3*3 + 5*0
+10=3*1 + 5*2
+11=3*3 + 5*1
+12=3*4 + 5*0
+13=3*2 + 5*2
+14=3*4 + 5*1
+15=3*5 + 5*0
+16=3*3 + 5*2
+17=3*5 + 5*1
+18=3*6 + 5*0</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>8= 3*1 + 5*1
+9= 3*3 + 5*0
+10=3*0 + 5*2
+11=3*2 + 5*1
+12=3*4 + 5*0
+13=3*1 + 5*2
+14=3*3 + 5*1
+15=3*5 + 5*0
+16=3*2 + 5*2
+17=3*4 + 5*1
+18=3*6 + 5*0</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>8= 3/1 + 5*1
+9= 3/3 + 5*0
+10=3/1 + 5*2
+11=3/2 + 5*1
+12=3/4 + 5*0
+13=3/1 + 5*2
+14=3/3 + 5*1
+15=3/5 + 5*0
+16=3/2 + 5*2
+17=3/4 + 5*1
+18=3/6 + 5*0</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(13/0111350) Demonstre por indu&amp;#x00e7;&amp;#x00e3;o que sempre &amp;#x00e9; poss&amp;#x00ed;vel dar um troco de n centavos, para qualquer n &amp;#x003E; 7, com moedas de 3 e 5 centavos
+
+5. Para obter n centavos usando moedas de 3 ou 5, basta saber como obter n-3 centavos usando moedas de 3 ou 5 e adicionar uma moeda de 3. Qual pseudoc&amp;#x00f3;digo melhor implementa essa ideia?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>a[8] = 1;
+b[8] = 1;
+a[9] = 3;
+b[9] = 0;
+a[10] = 0;
+b[10] = 2;
+
+for(i=10;i&amp;#x003C;=n;i++){
+  a[i] = a[i-3]+1;
+  b[i] = b[i-3];
+}</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>a[8] = 1;
+b[8] = 1;
+a[9] = 3;
+b[9] = 0;
+a[10] = 0;
+b[10] = 2;
+
+for(i=11;i&amp;#x003C;=n;i++){
+  a[i] = a[i-3]+1;
+  b[i] = b[i-3];
+}</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>a[8] = 1;
+b[8] = 1;
+a[9] = 3;
+b[9] = 0;
+a[10] = 0;
+b[10] = 2;
+
+for(i=11;i&amp;#x003C;=n;i++){
+  a[i] = a[i-2]+1;
+  b[i] = b[i-2];
+}</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>a[8] = 2;
+b[8] = 1;
+a[9] = 3;
+b[9] = 0;
+a[10] = 0;
+b[10] = 2;
+
+for(i=11;i&amp;#x003C;=n;i++){
+  a[i] = a[i-3]+1;
+  b[i] = b[i-3];
+}</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(13/0111350) Para os seguintes algoritmos, calcule o &amp;#x0398; para cada um
+
+Alg1(n):
+For i = 1 to n
+  For j = 1 to 3^(2*n)
+    Print(j)
+
+Alg2(n):
+For i = 1 to n
+  For j = 1 to 3^i
+    For k = 1 to 2^j
+      Print(k)
+
+6. Qual o significado do grande &amp;#x0398;?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>&amp;#x0398; (g(n)) &amp;#x00e9; o conjunto de todas as
+fun&amp;#x00e7;&amp;#x00f5;es com uma ordem de decaimento menor ou igual
+a g(n), multiplicado por uma constante</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>&amp;#x0398; (g(n)) &amp;#x00e9; o conjunto de todas as
+fun&amp;#x00e7;&amp;#x00f5;es com uma ordem de crescimento igual a de g(n),
+multiplicado por uma constante</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>&amp;#x0398; (g(n)) &amp;#x00e9; o subconjunto de todas as
+fun&amp;#x00e7;&amp;#x00f5;es com uma ordem de crescimento menor que
+g(n), multiplicado por uma constante</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>&amp;#x0398; (g(n)) &amp;#x00e9; o conjunto de todas as
+fun&amp;#x00e7;&amp;#x00f5;es com uma ordem de crescimento maior ou igual
+a g(n), multiplicado por uma constante</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(13/0111350) Para os seguintes algoritmos, calcule o &amp;#x0398; para cada um
+
+Alg1(n):
+For i = 1 to n
+  For j = 1 to 3^(2*n)
+    Print(j)
+
+Alg2(n):
+For i = 1 to n
+  For j = 1 to 3^i
+    For k = 1 to 2^j
+      Print(k)
+
+7. Qual a interpreta&amp;#x00e7;&amp;#x00e3;o do primeiro pseudoc&amp;#x00f3;digo? (Considere n o tamanho de um vetor)</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>Para cada elemento do vetor + 1 ser&amp;#x00e1; feito 3^(duas vezes tamanho do vetor + 1) opera&amp;#x00e7;&amp;#x00f5;es</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Para cada elemento do vetor - 1 ser&amp;#x00e1; feito 3^(duas vezes tamanho do vetor - 1) opera&amp;#x00e7;&amp;#x00f5;es</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Para cada elemento do vetor ser&amp;#x00e1; feito 3^(tamanho do vetor) opera&amp;#x00e7;&amp;#x00f5;es</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Para cada elemento do vetor ser&amp;#x00e1; feito 3^(duas vezes tamanho do vetor) opera&amp;#x00e7;&amp;#x00f5;es</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(13/0111350) Para os seguintes algoritmos, calcule o &amp;#x0398; para cada um
+
+Alg1(n):
+For i = 1 to n
+  For j = 1 to 3^(2*n)
+    Print(j)
+
+Alg2(n):
+For i = 1 to n
+  For j = 1 to 3^i
+    For k = 1 to 2^j
+      Print(k)
+
+8. Qual a interpreta&amp;#x00e7;&amp;#x00e3;o do segundo pseudoc&amp;#x00f3;digo? (Considere n o tamanho de um vetor)</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>Para cada elemento do vetor ser&amp;#x00e3;o feitas 3^(indice do elemento atual) opera&amp;#x00e7;&amp;#x00f5;es. Para cada opera&amp;#x00e7;&amp;#x00e3;o ser&amp;#x00e3;o feitas 2^(indice da opera&amp;#x00e7;&amp;#x00e3;o atual) opera&amp;#x00e7;&amp;#x00f5;es</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Para cada elemento do vetor ser&amp;#x00e3;o feitas 3^(indice do elemento atual+1) opera&amp;#x00e7;&amp;#x00f5;es. Para cada opera&amp;#x00e7;&amp;#x00e3;o ser&amp;#x00e3;o feitas 2^(indice da opera&amp;#x00e7;&amp;#x00e3;o atual) opera&amp;#x00e7;&amp;#x00f5;es</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Para cada elemento do vetor ser&amp;#x00e3;o feitas 3^(indice do elemento atual) opera&amp;#x00e7;&amp;#x00f5;es. Para cada elemento do vetor ser&amp;#x00e3;o feitas 2^(indice da opera&amp;#x00e7;&amp;#x00e3;o atual) opera&amp;#x00e7;&amp;#x00f5;es</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Para cada elemento do vetor ser&amp;#x00e3;o feitas 3^(indice do elemento atual) opera&amp;#x00e7;&amp;#x00f5;es. Para cada opera&amp;#x00e7;&amp;#x00e3;o ser&amp;#x00e3;o feitas 2^(indice da opera&amp;#x00e7;&amp;#x00e3;o atual - 2) opera&amp;#x00e7;&amp;#x00f5;es</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(13/0111350) Para os seguintes algoritmos, calcule o &amp;#x0398; para cada um
+
+Alg1(n):
+For i = 1 to n
+  For j = 1 to 3^(2*n)
+    Print(j)
+
+Alg2(n):
+For i = 1 to n
+  For j = 1 to 3^i
+    For k = 1 to 2^j
+      Print(k)
+
+9. Sabendo que &amp;#x0398;(g(n)) ={f(n): &amp;#x2203; constantes positivas c1 , c2 e n0 tais que 0 &amp;#x2264; c1*g(n) &amp;#x2264; f(n) &amp;#x2264; c2*g(n), &amp;#x2200; n &amp;#x2265; n0 }. Qual deve ser o theta do primeiro pseudoc&amp;#x00f3;digo?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>f(n) = 3^(2*n)n</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>f(n) = 3^(2*n)n</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>f(n) = 3^(2*n)n</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>f(n) = 3^(2*n)n</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(13/0111350) Para os seguintes algoritmos, calcule o &amp;#x0398; para cada um
+
+Alg1(n):
+For i = 1 to n
+  For j = 1 to 3^(2*n)
+    Print(j)
+
+Alg2(n):
+For i = 1 to n
+  For j = 1 to 3^i
+    For k = 1 to 2^j
+      Print(k)
+
+10. Sabendo que &amp;#x0398;(g(n)) ={f(n): &amp;#x2203; constantes positivas c1 , c2 e n0 tais que 0 &amp;#x2264; c1*g(n) &amp;#x2264; f(n) &amp;#x2264; c2*g(n), &amp;#x2200; n &amp;#x2265; n0 }. Qual deve ser o theta do segundo pseudoc&amp;#x00f3;digo?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>f(n) = 3^(2*n)n</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>f(n) = 3^(2*n)n</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>f(n) = 3^(2*n)n</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>f(n) = 3^(2*n)n</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Mostre pelo m&amp;#x00e9;todo da substitui&amp;#x00e7;&amp;#x00e3;o:
+A rela&amp;#x00e7;&amp;#x00e3;o de recorr&amp;#x00ea;ncia T(n)=T(n/6)+T(7n/9)+O(n)
+
+11. Quais os passos para a resolu&amp;#x00e7;&amp;#x00e3;o do m&amp;#x00e9;todo da substitui&amp;#x00e7;&amp;#x00e3;o?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>1.Definir constantes
+2.Reduzir n&amp;#x00fa;mero de termos
+3.Resolver para as constantes</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>1. Resolver &amp;#x0398;(n)
+2. Resolver O(n)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>1.Imaginar a forma da solu&amp;#x00e7;&amp;#x00e3;o
+2.Verificar por indu&amp;#x00e7;&amp;#x00e3;o
+3.Resolver para as constantes</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>1. Definir vari&amp;#x00e1;veis
+2. Substituir constantes</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Mostre pelo m&amp;#x00e9;todo da substitui&amp;#x00e7;&amp;#x00e3;o:
+A rela&amp;#x00e7;&amp;#x00e3;o de recorr&amp;#x00ea;ncia T(n)=T(n/6)+T(7n/9)+O(n)
+
+12. Se o palpite &amp;#x00e9; T(n) = O(n), qual o passo de indu&amp;#x00e7;&amp;#x00e3;o?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>Provar que T(n) &amp;#x2264; cn/2, para algum c e n &amp;#x2265; n0</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Provar que T(n) &amp;#x2264; cn^3, para algum c e n &amp;#x2265; n0</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Provar que T(n) &amp;#x2264; cn^2, para algum c e n &amp;#x2265; n0</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Provar que T(n) &amp;#x2264; cn, para algum c e n &amp;#x2265; n0</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Mostre pelo m&amp;#x00e9;todo da substitui&amp;#x00e7;&amp;#x00e3;o:
+A rela&amp;#x00e7;&amp;#x00e3;o de recorr&amp;#x00ea;ncia T(n)=T(n/6)+T(7n/9)+O(n)
+
+13. Qual deve ser a hip&amp;#x00f3;tese indutiva?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>T(n) &amp;#x003C;= cn/6 + c7n/9 + cn</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n) &amp;#x003C;= cn/6 + c7n/9 + n</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n) &amp;#x003C;= cn/6 + c7n/9 + O(c)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n) &amp;#x003C;= cn&amp;#x00b2;/6 + c7n&amp;#x00b2;/9 + n&amp;#x00b2;</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Mostre pelo m&amp;#x00e9;todo da substitui&amp;#x00e7;&amp;#x00e3;o:
+A rela&amp;#x00e7;&amp;#x00e3;o de recorr&amp;#x00ea;ncia T(n)=T(n/6)+T(7n/9)+O(n)
+
+14. Qual deve ser a express&amp;#x00e3;o de desejado - residual?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>cn&amp;#x00b2; - (1/18cn + n) &amp;#x003C;= cn</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>cn&amp;#x00b2; - (1/18cn - n) &amp;#x003C;= cn&amp;#x00b2;</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>cn - (1/18cn - n) &amp;#x003C;= cn</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>cn + (1/18cn - n) &amp;#x003C;= cn</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Mostre pelo m&amp;#x00e9;todo da substitui&amp;#x00e7;&amp;#x00e3;o:
+A rela&amp;#x00e7;&amp;#x00e3;o de recorr&amp;#x00ea;ncia T(n)=T(n/6)+T(7n/9)+O(n)
+
+15. Quais os valores de c e n para tornar a prova v&amp;#x00e1;lida?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>c &amp;#x2265; 18 e n &amp;#x003E;1</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>c &amp;#x003E; 18 e n &amp;#x2265; 2</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>c &amp;#x003C; 18 e n &amp;#x2265; 2</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>c &amp;#x2265; 18 e n &amp;#x2265; 1</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Utilize o m&amp;#x00e9;todo da itera&amp;#x00e7;&amp;#x00e3;o para encontrar a complexidade de T(n)=3^n*T(n&amp;#x2212;2)
+
+16. Qual deve ser a primeira itera&amp;#x00e7;&amp;#x00e3;o do m&amp;#x00e9;todo?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>T(n)=3^n* (3^(n-1)*T(n-2)) = 3^(2n-1)*T(n-2)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n)=3^n* (3^(n-2)*T(n-4)) = 3^2(n-1)*T(n-2)</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n)=3^(n-2)*T(n-4)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n)=3^(n-1)*T(n-2)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Utilize o m&amp;#x00e9;todo da itera&amp;#x00e7;&amp;#x00e3;o para encontrar a complexidade de T(n)=3^n * T(n&amp;#x2212;2)
+
+17. Qual deve ser a segunda itera&amp;#x00e7;&amp;#x00e3;o do m&amp;#x00e9;todo?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>T(n)=3^n* (3^(n-2)*(3^(n-4)*T(n-6)) = 3^(3n-6)*T(n-6)
+
+</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n)=3^n* (3^(n-1)*(3^(n-2)*T(n-3)) = 3^(3n-3)*T(n-3)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n)=3^(n-4)*T(n-6)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n)=3^(n-2)*T(n-3)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Utilize o m&amp;#x00e9;todo da itera&amp;#x00e7;&amp;#x00e3;o para encontrar a complexidade de T(n)=3^n * T(n&amp;#x2212;2)
+
+18. Qual deve ser a terceira itera&amp;#x00e7;&amp;#x00e3;o do m&amp;#x00e9;todo?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>T(n)=3^(2n-6)*T(n-8)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n)=3^(2n-8)*T(n-16)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n)=3^(4n-6)*T(n-4)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n)=3^n*3^(n-2)*3^(n-4)*3^(n-6)*T(n-8) = 3^(4n-12)*T(n-8)</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Utilize o m&amp;#x00e9;todo da itera&amp;#x00e7;&amp;#x00e3;o para encontrar a complexidade de T(n)=3^n * T(n&amp;#x2212;2)
+
+19. Qual o padr&amp;#x00e3;o formado nas itera&amp;#x00e7;&amp;#x00f5;es?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>T(n)=3^(k(n-k-1))T(n-2k) = 3^(n/2*(n/2-1))*T(1)</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n)=3^(k(n-k))T(n-2k) = 3^(n*(n-1))*T(1)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n)=3^(k(n))T(n-2k) = 3^(n/2)*T(1)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n)=n^k</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Utilize o m&amp;#x00e9;todo da itera&amp;#x00e7;&amp;#x00e3;o para encontrar a complexidade de T(n)=3^n * T(n&amp;#x2212;2)
+
+20. Qual a complexidade obtida?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>&amp;#x0398;(3^n&amp;#x00b2;)</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>&amp;#x0398;(2^n&amp;#x00b2;)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>&amp;#x0398;(3^n&amp;#x00b2;-n&amp;#x00b2;)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>&amp;#x0398;(n&amp;#x00b2;)</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Mostre pelo m&amp;#x00e9;todo da substitui&amp;#x00e7;&amp;#x00e3;o
+A rela&amp;#x00e7;&amp;#x00e3;o de recorr&amp;#x00ea;ncia T(n) = 8T(n/2) + n&amp;#x00b3;lg n
+
+21. Se o palpite &amp;#x00e9; T(n) = O(n&amp;#x00b3;lg&amp;#x00b2;n), qual o passo de indu&amp;#x00e7;&amp;#x00e3;o?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>Provar que T(k) &amp;#x2264; ck, para algum c e k &amp;#x2265; n0</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Provar que T(k) &amp;#x2264; ck&amp;#x00b3;, para algum c e k &amp;#x2265; n0</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Provar que T(k) &amp;#x2264; ck&amp;#x00b3;lgk, para algum c e k &amp;#x2265; n0</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>Provar que T(k) &amp;#x2264; ck&amp;#x00b3;lg&amp;#x00b2;k, para algum c e k &amp;#x2265; n0</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Mostre pelo m&amp;#x00e9;todo da substitui&amp;#x00e7;&amp;#x00e3;o
+A rela&amp;#x00e7;&amp;#x00e3;o de recorr&amp;#x00ea;ncia T(n) = 8T(n/2) + n&amp;#x00b3;lg n
+
+22. Qual deve ser a hip&amp;#x00f3;tese indutiva?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>T(n) &amp;#x003C;= cn&amp;#x00b3;/8*lg&amp;#x00b2;(n/2) n&amp;#x00b3;lgn</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n) &amp;#x003C;= cn&amp;#x00b2;/8*lg&amp;#x00b2;(n/2) n&amp;#x00b3;lgn</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n) &amp;#x003C;= cn/8*lg&amp;#x00b2;(n/2) n&amp;#x00b3;lgn</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n) &amp;#x003C;= cn&amp;#x2074;/8*lg&amp;#x00b2;(n/2) n&amp;#x00b3;lgn</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Mostre pelo m&amp;#x00e9;todo da substitui&amp;#x00e7;&amp;#x00e3;o
+A rela&amp;#x00e7;&amp;#x00e3;o de recorr&amp;#x00ea;ncia T(n) = 8T(n/2) + n&amp;#x00b3;lg n
+
+23. Qual deve ser a express&amp;#x00e3;o de desejado - residual?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>T(n) = cn&amp;#x00b3;lg&amp;#x00b2;n - [7/8cn&amp;#x00b3;lg&amp;#x00b2;n +cn&amp;#x00b3;lgn/4 +cn&amp;#x00b3; - n&amp;#x00b3;lgn]</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n) = cn&amp;#x00b2;lg&amp;#x00b2;n - [7/8cn&amp;#x00b3;lg&amp;#x00b2;n +cn&amp;#x00b3;lgn/4 +cn&amp;#x00b3; - n&amp;#x00b3;lgn]</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n) = cn&amp;#x00b3;lg&amp;#x00b2;n - [5/8cn&amp;#x00b3;lg&amp;#x00b2;n +cn&amp;#x00b3;lgn/4 +cn&amp;#x00b3; - n&amp;#x00b3;lgn]</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>T(n) = cn&amp;#x00b3;lg&amp;#x00b2;n - [2/8cn&amp;#x00b3;lg&amp;#x00b2;n +cn&amp;#x00b3;lgn/4 +cn&amp;#x00b3; - n&amp;#x00b3;lgn]</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Mostre pelo m&amp;#x00e9;todo da substitui&amp;#x00e7;&amp;#x00e3;o
+A rela&amp;#x00e7;&amp;#x00e3;o de recorr&amp;#x00ea;ncia T(n) = 8T(n/2) + n&amp;#x00b3;lg n
+
+24. Quais os valores de c e n para tornar a prova v&amp;#x00e1;lida?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>c&amp;#x003E;5 e n &amp;#x003E;2</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>c&amp;#x003E;5 e n &amp;#x003E;=2</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>c&amp;#x003E;2/5 e n &amp;#x003E;2</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>c&amp;#x003E;1/5 e n &amp;#x003E;2</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+<question-record>
+<question>(130111350) Mostre pelo m&amp;#x00e9;todo da substitui&amp;#x00e7;&amp;#x00e3;o
+A rela&amp;#x00e7;&amp;#x00e3;o de recorr&amp;#x00ea;ncia T(n) = 8T(n/2) + n&amp;#x00b3;lg n
+
+25. Quais os valores de c e n para tornar a prova v&amp;#x00e1;lida?</question>
+<clue></clue>
+<category></category>
+<weighting>100</weighting>
+<fixed>0</fixed>
+<question-type>1</question-type>
+<answers>
+<answer><text>c&amp;#x003E;5 e n &amp;#x003E;2</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>c&amp;#x003E;5 e n &amp;#x003E;=2</text>
+<feedback></feedback>
+<correct>1</correct>
+<percent-correct>100</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>c&amp;#x003E;2/5 e n &amp;#x003E;2</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text>c&amp;#x003E;1/5 e n &amp;#x003E;2</text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer><answer><text></text>
+<feedback></feedback>
+<correct>0</correct>
+<percent-correct>0</percent-correct>
+<include-in-mc-options>1</include-in-mc-options>
+</answer></answers>
+</question-record>
+</questions></data>
+<hotpot-config-file>
+<global>
+<separate-js-file>0</separate-js-file>
+<clue-caption>Clue</clue-caption>
+<next-q-caption>=&amp;#x003E;</next-q-caption>
+<last-q-caption>&amp;#x003C;=</last-q-caption>
+<incorrect-indicator>X</incorrect-indicator>
+<font-size>small</font-size>
+<include-next-ex>1</include-next-ex>
+<restart-caption>Restart</restart-caption>
+<contents-url>contents.htm</contents-url>
+<include-timer>0</include-timer>
+<font-face>Geneva,Arial,sans-serif</font-face>
+<include-scorm-12>0</include-scorm-12>
+<user-string-3>three</user-string-3>
+<show-correct-first-time>0</show-correct-first-time>
+<user-string-2>two</user-string-2>
+<user-string-1>one</user-string-1>
+<vlink-color>#0000CC</vlink-color>
+<title-color>#000033</title-color>
+<correct-indicator>:-)</correct-indicator>
+<contents-caption>Index</contents-caption>
+<show-all-questions-caption>Show all questions</show-all-questions-caption>
+<undo-caption>Undo</undo-caption>
+<header-code></header-code>
+<hint-caption>Hint</hint-caption>
+<check-button-caption>Check</check-button-caption>
+<email>you@yourserver.com</email>
+<show-one-by-one-caption>Show questions one by one</show-one-by-one-caption>
+<name-please>Please enter your name:</name-please>
+<formmail-url>http://yourserver.com/cgi-bin/FormMail.pl</formmail-url>
+<next-ex-caption>=&amp;#x003E;</next-ex-caption>
+<back-caption>&amp;#x003C;=</back-caption>
+<text-color>#000000</text-color>
+<page-bg-color>#ffffff</page-bg-color>
+<times-up>Your time is over!</times-up>
+<nav-bar-color>#000066</nav-bar-color>
+<include-contents>1</include-contents>
+<your-score-is>Your score is </your-score-is>
+<graphic-url></graphic-url>
+<link-color>#0000FF</link-color>
+<keypad-characters></keypad-characters>
+<show-also-correct>1</show-also-correct>
+<correct-first-time>Questions answered correctly first time: </correct-first-time>
+<include-cgi>0</include-cgi>
+<ex-bg-color>#bbbbee</ex-bg-color>
+<ok-caption>OK</ok-caption>
+<process-for-rtl>0</process-for-rtl>
+<check-caption>Check</check-caption>
+<include-back>1</include-back>
+<next-correct-letter>Next correct letter is: </next-correct-letter>
+</global>
+<jquiz>
+<next-caption>Next</next-caption>
+<instructions>JQuiz Instructions</instructions>
+<enter-a-guess>Please enter a guess, then check.</enter-a-guess>
+<completed-so-far>Completed so far:</completed-so-far>
+<correct-list>Correct answers:</correct-list>
+<header-code></header-code>
+<include-hint>0</include-hint>
+<include-keypad>0</include-keypad>
+<short-answer-tries-on-hybrid-q>2</short-answer-tries-on-hybrid-q>
+<partly-incorrect>Your answer is partly incorrect.</partly-incorrect>
+<guess-incorrect>Not perfect yet. Please try again.</guess-incorrect>
+<case-sensitive>0</case-sensitive>
+<continuous-scoring>1</continuous-scoring>
+<next-ex-url>nextpage.htm</next-ex-url>
+<send-email>0</send-email>
+<exercise-subtitle></exercise-subtitle>
+<exercise-completed>You have completed the exercise.</exercise-completed>
+<questions-to-show>10</questions-to-show>
+<shuffle-answers>0</shuffle-answers>
+<guess-correct>Correct!</guess-correct>
+<next-correct-letter>Next correct letter is: </next-correct-letter>
+<show-limited-questions>0</show-limited-questions>
+<shuffle-questions>0</shuffle-questions>
+<include-show-answer>1</include-show-answer>
+<show-correct-first-time>0</show-correct-first-time>
+<separate-javascript-file>0</separate-javascript-file>
+<delete-caption>Delete This Flashcard</delete-caption>
+<show-answer-caption>Show Answer</show-answer-caption>
+</jquiz>
+</hotpot-config-file>
+
+</hotpot-jquiz-file>
