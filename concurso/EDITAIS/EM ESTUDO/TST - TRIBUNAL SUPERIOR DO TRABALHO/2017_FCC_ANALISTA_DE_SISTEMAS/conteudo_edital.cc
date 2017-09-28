@@ -71,7 +71,7 @@ Princípios sobre administração de bancos de dados. 																			'13  - 
 
 //--6
 # Engenharia e Desenvolvimento de Software '3 PASSADAS SEM COMPLETAR'
-20% Aspectos gerais das linguagens PHP, HTML5, XML, Java SE, Java EE, JUnit.												'237 - FCC - Programação - PHP - HTML - XML - Java SE - JEE - JUnit'
+*20% Aspectos gerais das linguagens PHP, HTML5, XML, *Java SE (Standard Ed.), Java EE (Enterprise Ed.), JUnit.				'237 - FCC - Programação - PHP - HTML - XML - Java SE - JEE - JUnit'
 xo'20/59'- 17% Análise e projeto orientados a objetos (UML). 																'237 - FCC - Engenharia de Software - UML'
 x'17/35'- 8%  Princípios sobre qualidade de software: modelo MPS.BR e CMMI-DEV 1.3. 										'142 - FCC - Governança de TI - MPS.BR - CMMI'
 x'12/30'- 7%  Conceitos sobre orientação a objetos (classes, atributos, objetos, métodos, herança, interfaces). 			'123 - FCC - Engenharia de Software - Orientação a Objetos'
@@ -79,7 +79,7 @@ x'12/30'- 7%  Conceitos sobre orientação a objetos (classes, atributos, objeto
 4%  Métodos ágeis (eXtreme Programming – XP, Scrum, Kanban). 																'94  - FCC - Engenharia de Software - Processos de Software - Desenvolvimento Ágil'
 5%  Engenharia de requisitos. 																								'67  - FCC - Engenharia de Software - Engenharia de Requisitos'	
 3%  Conceitos de Web Services SOAP e REST. 																					'49  - FCC - Arquitetura de Software - WebServices - SOAP (Simple Object Access Protocol)'
-2%  CSS3.  																													'40  - FCC - Programação - CSS (Cascading Style Sheets)'
+*2%  CSS3. 																													'40  - FCC - Programação - CSS (Cascading Style Sheets)'
 'PARE AQUI - 69% CONTEUDO - TERMINE TODOS OS EXERCICIOS DE CIMA - LER MATERIAL COMPLEMENTAR'
 7%  Estruturas de dados e de controle de fluxo. 																			'27  - FCC - Algoritmos e Estrutura de Dados - Estrutura de dados - Estruturas de controle e repetição'
 3%  Modelagem de processos (BPMN). 																							'24  - FCC - Modelagem de Processos de Negócio (BPM) - BPMN (Bussines Process Modeling Notation)'

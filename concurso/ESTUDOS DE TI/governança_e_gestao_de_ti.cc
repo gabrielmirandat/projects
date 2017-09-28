@@ -269,7 +269,7 @@
 - Projeto
 	- esforço 'temporário' com datas bem definidas 
 	  para criar 'produto, serviço ou resultado exclusivo' não existentes anteriormente
-	  ou apenas 'produzir resultados de pesquisa ou viabilidade ' 
+	  ou apenas 'produzir resultados de pesquisa ou viabilidade' 
 	  concluídos quando 'metas cumpridas'
 	  podendo gerar novas 'operações'
 
@@ -294,4 +294,4 @@
 - Gerência de Portfólio 'conjunto de projetos/programas/outros agrupados para facilitar o gerenciamento eficaz para atingir os objetivos de negócios estratégicos'
 	- garantir que projetos/programas sejam analisados a fim de priorizar a alocação de recursos e consistência do portfólio
 
-9 - dica do professor
+

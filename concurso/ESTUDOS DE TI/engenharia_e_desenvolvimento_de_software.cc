@@ -1,6 +1,73 @@
 // -- 20% Aspectos gerais das linguagens PHP, HTML5, XML, Java SE, Java EE, JUnit.
 
-- HTML5
+- PHP 'permite criar páginas web dinâmicas'
+	- HTML cria páginas estáticas
+	- permite manipular página no servidor antes de ser entregue ao browser cliente
+	- executado no servidor 
+	- pode alterar ou gerar código HTML
+
+	- 'página'
+		- contém parte estática
+			<!DOCTYPE html>
+			<html>
+			<head>..
+		- contém parte dinâmica
+			<?php 
+				$nome = $_POST['nome']
+				echo // adiciona conteúdo HTML dinâmico
+			?>
+
+	- 'superglobais'
+		- variáveis acessadas por qualquer arquivo, classe, função
+		->  $GLOBALS 'array que armazena todas as variáveis - $GLOBALS[indice]'
+			$_SERVER 'infos do servidor, cabeçalhos, caminhos relativos, localização de scripts'
+			$_REQUEST 'coleta dados após submissão de form HTML'
+			$_POST 'retorna dados de form após submissão com post - usado também para passar variáveis entre páginas'
+			$_GET 'retorna dados de form após submissão com get - coleta dados enviados pela URL'
+			$_FILES 'fazer upload e recuperar arquivos'
+			$_ENV 'recupera variáveis de ambiente no server'
+			$_COOKIE 'recupera cookies no cliente'
+			$_SESSION 'guarda variáveis e valores recuperáveis durante a sessão'
+
+	- 'arrays'
+		- guardar múltiplos valores - começa do índice 0!!
+		- 'indexados' índices numéricos
+			- $carros = array("Volvo", "BMW", "Toyota") // $carros[0]
+		- 'associativos' chaves nominais
+			- $idades = array("Pedro"=>"35", "Beto"=>"37", "Carlos"=>"43") // $idade['Pedro']
+			- foreach($idade as $x_chave => $x_valor)
+		- 'multidimensionais' com um ou mais arrays
+
+		- tamanho do array
+			- count() 'retorna tamanho de um array'
+		- ordenação
+			- sort()  'ordem crescente'
+			- rsort() 'ordem decrescente'
+			- ksort() 'associativo em ordem crescente de acordo com chave'
+			- asort() 'associativo em ordem crescente de acordo com valor'
+			- krsort() 'associativo em ordem decrescente de acordo com chave'
+			- arsort() 'associativo em ordem decrescente de acordo com valor'
+
+	- 'funções'
+		<?php
+		function foo ($arg_1, $arg_2, /*..., */ $arg_n)
+		{
+			echo "Exemplo de função. \n";
+			return $valor_retornado;
+		}
+		?>
+
+		- tipadas ou com tipos dinâmicos
+		- $ = passagem por valor
+		- &$= passagem por referência
+			
+
+
+
+
+- HTML5 'linguagem de marcação'
+	- linguagem pois as tags são pre-definidas 
+	- busca exibir dados com foco na aparência
 	- usa 'HTTP'
 	- roda no servidor e é acessada por 'URL'
 	- não é 'case-sensitive'
@@ -10,43 +77,747 @@
 	- '<html> ... </html>' - envolve todo documento menos primeira linha
 	- '!DOCTYPE' e '<title>' - obrigatórios no 'HTML5'
 	- '<meta charset="utf-8"/>' - permite acentos língua portuguesa e diversas escritas - 80% das páginas usam
+	- deu foco em acessibilidade e usabilidade
+	- inclusão de elementos multimídea de vídeo e áudio com suporte nativo
+	- suporte de armazenamento local com sessionStorage e localStorage
+	- total suporte a CSS3
+	- suporte offline com Application Cache
+	- PAG 33
 
 	- '<head>'
-		- '<title>' título da janela
-		- '<style>' estilo do doc
-		- '<base>' endereço base
-		- '<link>' link fonte externa
-		- '<meta>' metadados do doc
-		- '<script>' script client-side (javascript)
-		- '<noscript>' conteúdo para não uso de scripts
+		- <title>
+			'título da janela'
+		
+		- <style>
+			'estilo do doc'
+		
+		- <base>
+			'endereço base'
+		
+		- <link>
+			'link fonte externa'
+		
+		- <meta>
+			'metadados do doc'
+		
+		- <script>
+			'script client-side (javascript)'
+		
+		- <noscript>
+			'conteúdo para não uso de scripts'
 
 	- '<body>'
-		- '<p>..</p>' paragrafo
-		- '<q>..</q>' citação (aspas duplas)
-		- '<h1>..</h6>' paragrafo de níveis diferentes
-		- '<a href="">..</a>' hiperlink
-		- '<img src=""/>' imagem
-		- '<ol><li>..</li></ol>' lista ordenada (números)
-		- '<ul><li>..</li></ul>' lista desordenada (bolas)
-		- '<select> <option value="TST">..</option> </select>' cria lista dropdown (select)
-			- select -> autofocus 'foco automatico' disabled '' form 'formas seleção' multiple '' name 'define nome' required '' size 'num opcoes'
-			- option -> disabled '' label 'rótulo menor' selected 'valor padrão selecionado' value 'valor enviado'
-		- '<!-- bla bla -->' comentário
-		- '<style="propriedade:valor ; propriedade:valor">' separador é ponto-e-vírgula 
-			- font-size: 10px 'seta tam fonte 10 pixels'
-			- color: red 'seta cor texto vermelha'
-			- text-align: left 'texto na esquerda da tela'
-			- font-family: Consolas 'fonte do texto consolas'
-			- background-color: red 'seta cor fundo vermelha'
-		- '<strong>..</strong>' texto em negrito
-		- '<b>..</b>' texto em negrito
-		- '<em>..</em>' texto em itálico
-		- '<span style="..">..</span>' tag sem função - separadora
-		- '<table> <tr> <td>Concurso</td> <td>TST</td> </tr> </table>' tabela, tr - linhas, td - colunas
+		- <p>..</p> 
+			'paragrafo'
+		
+		- <q>..</q> 
+			'citação (aspas duplas)'
+		
+		- <h1>..</h6> 
+			'paragrafo de níveis diferentes'
+		
+		1- <a href="">..</a> 
+			'hiperlink'
+		
+		- <img src=""/> 
+			'imagem'
+		
+		- <ol><li>..</li></ol> 
+			'lista ordenada (números)'
+		
+		- <ul><li>..</li></ul> 
+			'lista desordenada (bolas)'
+		
+		- <!-- bla bla --> 
+			'comentário'
+		
+		- <style="propriedade:valor ; propriedade:valor">
+			 'separador é ponto-e-vírgula'
+			-> font-size: 10px 'seta tam fonte 10 pixels'
+			   color: red 'seta cor texto vermelha'
+			   text-align: left 'texto na esquerda da tela'
+			   font-family: Consolas 'fonte do texto consolas'
+			   background-color: red 'seta cor fundo vermelha'
+		
+		- <strong>..</strong>
+			'texto em negrito'
+		
+		- <b>..</b> 
+			'texto em negrito'
+		
+		- <em>..</em> 
+			'texto em itálico'
+		
+		- <span style="..">..</span> 
+			'tag sem função - separadora'
+				
+		- <table>
+			<thead> //cabeça - primeira linha
+				<caption> Descrição </caption> //descrição da tabela
+				<tr>
+					<th colspan="2">Tabela de despesas</th> //titulo negritado - define grupo de colunas
+				</tr>
+				<tr> //linha
+					<th>Gastos</th> //coluna - negritada
+				</tr>
+			</thead>
+			<tbody> //corpo
+				<tr> //linha
+					<td>R$100,00</th> //coluna
+				</tr>
+			</tbody>
+			<tfoot> //pé
+				<tr> //linha
+					<td>Total</td>    //coluna
+				</tr>
+			</tfoot>
+		  </table>
+		  	'tabela'
+		
+		- <form>..</form>
+			'constroi formulario'
+			-> accept-charset 'codificação de caracteres'
+			   action 'funcao de envio do formulario'
+			   enctype 'tipo de codificação do formulario na submissão'
+			   novalidate 'não valida no envio'
+			   target 'campo de resposta do servidor'
+			   autocomplete, method, name
 
-		19 fim
+		// input de CPF/CNPJ
+		- <input>..</input>
+			'input do formulario'
+			'antes validar demandava javascript, agora HTML5 faz, responsabilidade do navegador, mais rápido, sem sobrecarga'
+			-> autofocus 'foca no elemento ao carregar a página'
+			   placeholder 'dica de entrada'
+			   form 'especifica form que elemento pertence'
+			   pattern 'valida com expressão regular - REGEX'
+			   		REGEX telefone do Brasil - ^\d{2}-\d{4}-\d{4}$
+			   formaction 'substitui action do form'
+			   formenctype 'substitui enctype do form'
+			   formmethod 'substitui method do form'
+			   formnovalidate 'substitui novalidate do form'
+			   formtarget 'substitui target do form'
+			   type 'define tipo de dados do input'
+			   		tel, search, url, email, datetime, date, month, week, time, datetime-local, number, range, color
+			   required, autocomplete
+
+		// pesquisa de nome com seleção de itens
+		- <select> <option value="TST">..</option> </select> 
+			'cria lista dropdown (select)'
+			* select -> autofocus 'foco automatico' 
+						form 'formas seleção' 
+						name 'define nome' 
+						size 'num opcoes'
+						disabled, multiple, required
+			
+			// apenas compartilham disabled, DECORARRR
+			1* option -> label 'rótulo menor' 
+						selected 'valor padrão selecionado' 
+						value 'valor enviado'
+						disabled
+
+	- ADICIONADOS HTML5
+		-> article 'artigo em documento - post em forum, blog'
+		   aside 'sidebar - barra lateral'
+		   audio 'sons - música, outros'
+		   bdi 'troca direção do texto - escrever em árabe'
+		   canvas 'desenha jogos e gráficos - usa JS dinâmico'
+		   datalist 'lista de itens padrão para input'
+		   details 'detalhes para visualizar ou esconder componentes'
+		   dialog 'popups e modais'
+		   embed 'container para plugin'
+		   figcaption 'legenda para figure'
+		   figure 'imagens em geral - fotos, diagramas'
+		   footer 'rodape de documento ou seção'
+		   header 'cabeçalho para itens introdutórios'
+		   keigen 'gerador de pares de chaves para forms'
+		   main 'conteúdo principal de documento - um por documento'
+		   mark 'marcatexto'
+		   menuitem 'define menu de popup'
+		   meter 'gráfico de barras'
+		   nav 'links de navegação'
+		   output 'resultado de cálculo com script'
+		   progress 'progresso de atividade'
+		   section 'define capítulos, cabeçalhos, rodapés'
+		   source 'define códigos para vídeo e áudio'
+		   svg 'desenhar imagens vetorizadas usando SVG'
+		   rp 'para navegadores sem RUBY'
+		   rt 'pronuncia de caractere em RUBY'
+		   ruby 'anotação RUBY'
+		   summary 'cabeçalho para elemento details'
+		   template 'fragmentos HTML clonáveis e inseridos por script'
+		   time 'formatos de data/hora'
+		   track 'faixas de texto para mídia de vídeo e audio'
+		   video 'um vídeo'
+		   wbr 'marcar sugestões de quebra de linha'
+
+	- ABANDONADOS HTML5
+		- APRESENTAÇÂO - melhor tratado pelo CSS
+			- basefont, big, center, font, strike, tt
+	
+		- MÁ USABILIDADE
+			- frame, frameset, noframes
+	
+		- POUCO UTILIZADOS
+			- acronym (abbr), applet (embed), isindex (controles form), dir (ul)
+
+- XML 'metalinguagem de marcação'
+	- metalinguagem pois não possui tags pre-definidas, são criadas pelo usuário 
+	- mas 'linguagem se banca perguntar', a não ser que foquem na diferença
+	- padrão W3C
+	- busca transportar e armazenar dados
+	- provê intercâmbio de documentos na web
+	- é 'independente de plataforma'
+	- pode desenvolver e definir outras linguagens (metalinguagem - criação de tags)
+	- busca e processamento otimizado e simplicado
+	- não faz nada! Estrutura, armazena e transporta informações
+
+	- 'elementos' tudo entre tag inicial e final
+		<book></book> / <book />
+	
+	- 'atributos' informações adicionais sobre o elemento
+		<file type="gif"> computer.gif </file>
+	
+	- 'namespaces' para diferenciar conflitos de nomes iguais
+		- prefixo deve ser definido com atributo 'xmlns'
+		- pode-se definir no próprio elemento ou no elemento raiz do documento
+		- util para remover conflito de tags 'html' e 'xml'
+		- 'URI' é qualquer coisa! Deve ser um identificador único! 
+		xmlns:prefix="URI"
+		<root xmlns:h="http://www.w3.org/TR/html4/">
+		<h:table xmlns:h="http://www.w3.org/TR/html4/"><h:tr>.. 
+		<f:table xmlns:f="..."><f:name>..
+
+	- regras
+			- 'bem formado' documento que obedece regras de construção (NECESSÁRIO PARA SER DOCUMENTO XML)
+			- 1. possui um único elemento raiz
+			- 2. todos elementos tem tag de fechamento
+			- 3. elementos corretamente aninhados (tags fechadas na ordem correta)
+			- 4. atributos com valor em aspas simples ou duplas
+			- 5. nomes de tags e atributos são case-sensitive
+			- 6. possui caracteres especiais (deve-se usar o da esquerda, e não o da direita)
+				- &lt;   < 
+				- &gt;   >
+				- &amp   &
+				- &apos  ''
+				- &quote ""
+			- 7. atributos não podem repetir no mesmo elemento
+			- 8. atributos devem seguir regra de nomenclatura
+				- não podem !""#$%&''()*+,/;<=>?@[\]^`{|} nem espaços nem começar com ńumero, ponto ou hífen
+
+	- esquema
+		- 'válido' documento consistente com seu esquema (SEMPRE È BEM FORMADO, MAS NÃO OBRIGATÓRIO, SEGUINDO AS REGRAS DE UM DTD)
+		- esquema ajuda a padronizar, compartilhar, fornecer referência
+		- são arquivos 'DTD' e 'XSD'
+		
+		- 'DTD' informam quais tags são válidas no XML e como devem ser estruturadas (ANTIGO)
+			<!DOCTYPE note SYSTEM "Note.dtd">
+			ex.
+			<!DOCTYPE note[
+			<!ELEMENT note (to, from, heading, body)>
+			<!ELEMENT to (#PCDATA)>
+			]>
+		
+		- 'XSD'
+			- suporta namespaces, criação de novos tipos, definição de restrições, conversão de dados, manipular schemas com DOM,
+				utilizar parser do XML, editor do XML, escrito em XML, extensível por adições
+			ex.
+			<xs:element name="note">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="to" type="xs:string" />
+					<xs:element name="from" type="xs:string">
+				</xs:sequence>
+			</xs:complexType>
+			</xs:element>	
+
+	- analisadores XML
+		- 'DOM' (abordagem hierárquica)
+			- representa como marcações HTML, XHTML, XML são organizadas e lidas pelo navegador
+			- Javascript manipula a DOM dinamicamente usando a árvore DOM
+			- opera sobre documento como um todo
+			- grande uso pelos elementos da memória - lento
+
+		- 'SAX' (abordagem orientada a eventos) - Simple API for XML
+			- opera cada parte do documento sequencialmente
+			- desencadeia eventos durante análise do arquivo XML
+			- gera apenas elementos necessários - usa memória constante
+
+
+	- DECLARAÇÃO XML 'primeira linha'
+		<?xml version="1.0" encoding="UTF-8">
+
+	- ELEMENTO RAIZ 'primeira elemento da árvore'
+
+
+- *JAVA SE (Standard Edition)
+
+- JAVA EE (Enterprise Edition)
+	- altíssima competitividade - diminuir custos, tempo de resposta, prevenção de falhas, alta disponibilidade, redundância, escalabilidade e segurança
+	- conjunto de especificações para 'aplicações distribuídas', 'robustas', 'escaláveis', 'multicamadas' e de 'alta disponibilida'
+
+	- 'Java EE 6' 
+		- profiles (perfis)
+		- Java API for RESTful Web Services (JAX-RS)
+		- Managed Beans
+		- Contexts and Dependency Injection (CDI)
+		- Dependency Injection for Java
+		- Bean Validation
+		- Enterprise JavaBeans, JavaServer Faces e Servlets
+
+	- 'Java EE 7'
+		- WebSocket, JSON, Servlet, Faces, Expression Language, Pages, Batch, Concurrency, Dependency Injection, Bean, 
+		  Connector, Persistence, Annotations, Message Service, Transaction, JavaMail, RESTful, Web, XML-Based, Authentication, 
+		  Debugging, Database, Streaming
+
+	- 'arquitetura Java EE'
+		- SISTEMA CLIENTE 'camada do cliente (máquina cliente)'
+			- Browser 
+			- Container do Cliente
+				- Client Application
+			- *APPLET
+
+		- SERVIDOR DA APLICAÇÃO (JEE)
+			- Container WEB 'camada web (servidor)'
+				- Java Servlet
+				- JavaServer Pages (JSP)
+				- JavaServer Faces (JSF)
+			- Container EJB 'camada de negócio (servidor)'
+				- Enterprise Beans (EJB)
+				- Enterprise Beans (EJB)
+		- Database 'camada de dados'
+
+	- 'modelo de aplicações Java EE'
+		- aplicações de serviços para 'clientes', 'empregados', 'fornecedores', 'parceiros', 'terceiros'
+		- escalabilidade, acessibilidade, gerenciabilidade
+		- desenvolvedor implementa 
+			- lógica de apresentação
+			- lógica de negócio
+		- fornecido pela Java EE
+			- outros serviços
+		- camada EIS roda no servidor EIS 
+	
+	- 'Profiles' 
+		- define subconjunto de tecnologias da JEE configuráveis
+		- como cada aplicação tem sua particularidade, não implementa todas as tecnologias 
+		- 'Web Profile'
+			- cria aplicações mais leves que rodam num 'Servlet Container'
+			- EJB 3.1 Lite, mais leve (apenas [Stateless, Stateful, Singleton Beans], Interceptors, Declarative security, [Declarative, Programmatic transactions])
+			- apenas arquivos 'WAR' e não 'EAR'
+		- 'Full Profile'
+
+	- 'deploy' implantar aplicação em servidor JEE
+		- componentes são agrupados em módulos e compactados em .ZIP
+		- aqui mapeia-se cada 'componente' do Java EE para seu 'contêiner' correspondente
+
+		- 'tipos de módulos' 
+			- EAR File META-INF/application.xml 'Enteprise Application Archives - aplicação completa - vários arquivos .war e .jar'
+				- Web Module (WAR) WEB-INF/web.xml 'Web Application Archives - Aplicação Web (JSP, HTML, Servlets, Arquivos de Configuração, Imagens, etc) - forma uma página'
+				- EJB Module (JAR) META-INF/ejb-jar.xml 'Java Application Archives - Aplicação EJB, Aplicação Cliente e Applets e arquivos de configuração dos aplicativos'
+				- Connector Module (RAR) META-INF/ra.xml 'Resource Adapter - contém interfaces, classes, bibliotecas, etc'
+
+	- 'JSP (JAVA SERVER PAGES)'
+		- tecnologia JEE para usar código JAVA dentro de páginas WEB ou tags que realizam lógica
+		- geração de documentos baseados em texto executados do lado servidor (como 'Servlets')
+		- o texto é um conjunto de 'dados estáticos' (HTML e XML) ou 'dados dinâmicos' (elementos JSP e tags customizadas)
+		- o código JAVA é o conteúdo dinâmico!
+		- é uma linguagem de script SERVER-SIDE para geração simples, prática e rápida de conteúdo dinâmico para páginas WEB
+		- possui o suporte de vários servidores ('Tomcat', 'GlassFish', 'JBoss')
+		- define a interação entre 'Servidor' e 'Página JSP'
+
+		- 'Páginas JSP'
+			- tags 'XML' e 'Scriplets' escritos em 'JAVA' para encapsular lógica que gera o conteúdo para a 'página web'
+			- separa a lógica do conteúdo da sua apresentação
+			- são 'compiladas em Servlets' e podem chamar 'beans' a fim de executar o processamento no servidor
+			- tipicamente se tornam uma 'Servlet'
+				- 'camada adicional' em que a página é compilada e transformada em uma 'Servlet' no 'Servidor Web'
+				- ciclo de vida exatamente igual ao de uma 'Servlet', porém com métodos diferentes
+			- JSP foi desenhada para simplificar o processo de criação de páginas ao separar a 'apresentação' do 'conteúdo'
+			- conceitos de 'coesão', 'acoplamento' e 'modularidade'
+			- permite separação de especialidades
+				- Desenvolvedores Java criam as Servlets (Lógica de Negócio)
+				- Web Designers criam as Páginas JSP (Lógica de Apresentação)
+			- manipulação de arquivos texto ('PDF', 'DOCX', etc)
+			- criptografia de dados, utilização de cookies e sessões, manipulação de Arquivos XML, diversos bancos de dados e sistemas de relatórios
+
+			- 'objetos implícitos' são criados automaticamente 	pelo 'Contêiner JSP' e disponibilizados para os desenvolvedores
+				- 1. request 'HttpServletRequest com info do pedido HTTP'
+				- 2. response 'HttpServletResponse com resposta HTTP que será enviada ao cliente'
+				- 3. pageContext 'PageContext contém info de contexto para executar a página'
+				- 4. application 'ServletContext para compartilhar info entre todos os componentes web'
+				- 5. out 'JspWriter para imprimir para o response com println'
+				- 6. config 'ServletConfig da página JSP'
+				- 7. page 'HttpJspPage - sinônimo de this'
+				- 8. session 'HttpSession que guarda info da sessão de usuário específico'
+				- 9. exception 'Throwable resultante de erro na página'
+
+			- 'declaraçoes (!)' definem variáveis, objetos e métodos para uso em expressões ou scriplets
+					<%! public final static String[] estacoes = {"Primavera", "Verão", "Outono", "Inverno"} %>
+
+			- 'expressões (=)' retornam valores que são inseridos dinamicamente na página no lugar da expressão
+				- é avaliada, executada, 'convertida' em uma 'string' e inserida no local onde aparece a expressão no Arquivo JSP
+				- convertido em um objeto 'string' e inserido no objeto implícito 'out'
+					<%= idade = idade + 1 %>
+					<%= "Esse é seu aniversário de " + idade + "anos" %>
+
+			3- 'scriplets ()' blocos de Código Java embutidos em uma Página JSP
+				- inclui 'Blocos' ou trechos de operações em 'JAVA' na página
+				- na transformação JSP -> Servlet, 'scriptlets' são traduzidos para 'out.println()' no método '_jspService' da servlet gerada
+				- variável criada na scriplet pode ser acessada de qualquer lugar dentro da Página JSP
+				- expressão é similar a scriplets (porque são convertidas em 'string!!')
+					<%= expressão %> é equivale a out.println(expressão)
+
+					<html>
+						<body>
+							<% String mensagem = "Bem vindo!"; %>
+							<% out.println(mensagem); %>
+						</body>
+					</html>
+
+			- 'comentários (--)' tipo HTML
+					<%-- Comentário JSP --%> // Em HTML, seria: <!-- Comentário HTML -->
+
+			- 'ações (jsp)' permitem acessar e alterar 'regras de negócio' por meio das 'propriedades de JavaBeans'
+				- redirecionamento de Requisições JSP para outra Servlet ou Página JSP
+				- ajudam a controlar o comportamento da Engine da Servlet
+				- são 20
+					- 'jsp:include' inserir conteúdo dinâmico em tempo de solicitação
+					- 'jsp:forward' redirecionar requisições para outra Página JSP
+					- 'jsp:param' passar parâmetros para outra Ação JSP
+					- 'jsp:useBean' invocar/instanciar um JavaBean
+					- 'jsp:plugin' executar e mostrar um objeto (Ex: Applet) no browser
+					- 'jsp:setProperty' setar o valor da propriedade de um JavaBean
+					- 'jsp:getProperty' recuperar o valor da propriedade de um JavaBean
+
+					<jsp: useBean id="user" scope="session" type="org.apache.struts"/>
+
+			- 'diretivas (@)' instruções enviadas ao servidor para definir procedimento de compilação da ṕagina
+				- instruções processadas quando página JSP é compilada em Servlet
+				- 'importar classes de um pacote', 'inserir dados de arquivos externos',' habilitar uso de bibliotecas de tags'
+				- podem afetar estrutura da página, mas não criam saídas visíveis
+				- são 'interpretadas pelo container' antes de tudo!!
+				- são 3 principais
+					- 'page' define atributos de configuração da página
+						- buffer, autoFlush, contentType, errorPage, isErrorPage, Extends, Import, Info, isThreadSafe, language, Session, isELIgnored, isScriptingEnabled
+					<%@ page import="java.swing.*" %>
+					
+					1- 'include' inclui recursos estáticos em uma Página JSP
+					<%@ include file="teste.jsp" %>
+
+					- 'taglib' estende o conjunto de tags adicionando uma biblioteca
+					<%@ taglib uri="http://serlets.com/testes" prefix="ops" %>
+
+			- 'expression language' 
+				- Scriplets e expressões usam código 'JAVA' para 'VIEW' (apresentação)
+				- mas Web Designers acham JAVA é difícil
+				- é interpretada pelo 'Servlet Container' para remover código 'JAVA' da 'página' para tags HTML-like
+				- permite especificar expressões para atributos de componente 'JavaBeans' usando ${...}
+				- operadores mais usados são '.' e '[]'
+				- permite operadores aritméticos, lógicos, funções estendidas de mapeamento, textos estáticos e atributos de tags de 'JAVA'
+				- mapeamento é definição de funções com tags personalizadas, sendo a função 'public static' na classe e declarada na 'TLD'
+				- com 'taglib' importamos a Biblioteca de Tags personalizada criada
+
+					<jsp:setProperty name="cubo" property="aresta" value="10"/>
+					<jsp:setProperty name="cubo" property="perimetro" value="${12*cubo.aresta}"/>
+					
+					// equivalentes
+					${Lista[1]}
+					${Lista["1"]}
+
+					// equivalentes
+					${Lista["Carro"]}
+					${Lista.Carro}
+
+			// PAGINA JSP
+			// HTML COM ALGUMAS COISAS DE JAVA
+			# HelloWorld.jsp (No MVC, em geral, é utilizada como Visão)
+			<html>
+				<head>
+					<title>
+						<%="Hello World"%>
+					</title>
+				</head>
+				<body>
+					<%out.println("Hello Again!");%>
+				</body>
+			</html>
+
+			'RESUMO'
+				Declarations	<%! ... %>
+				Expressions		<%= Expressão %>
+				Scriplets 		<% Scriplet %>
+				Comments 		<%-- Comentário --%>
+				Actions 		<jsp: Ação />
+				Directives 		<%@ Diretiva %>
+
+	- 'Servlet'
+		- API independente de plataforma, escrita em Java, que roda no 'servidor' (Container Web)
+		- 'SERVIDORZINHO' pois estende funcionalidades de um servidor
+		- funcionam para fornecer 'conteúdo web dinâmicos' processando 'requisições/respostas', 'filtrando dados', 'acessando o banco de dados'
+
+		- 'páginas web dinâmicas'
+			- 'client-side' permitem mudanças na interface usando ações do mouse, teclado, outros.. [ANGULAR/VIEW]
+			- 'server-side' variam de acordo com os parâmetros fornecidos por um usuário/programa   [SERVLET/JSP]
+
+			// SERVLET
+			// JAVA COM ALGUMAS COISAS DE HTML
+			# HelloWorld.java (No MVC, em geral, utilizada como Controladora)
+			public class ServletTeste extends HttpServlet
+			{
+				public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException 
+				{
+					res.setContentType("text/html");
+					PrintWriter out = res.getWriter();
+				
+					out.println("<html>");
+					out.println("<body bgcolor = \"white\">");
+					out.println("<h1>Hello Servlet</h1>");
+					out.println("</body>");
+					out.println("</html>");
+				}
+			}
+
+		- pacotes
+			- 'javax.servlet'
+				- classes e interfaces para comunicação com diversos protocolos, interfaces 'ServletRequest', 'ServletResponse' e 'ServletContext'
+				- 'ServletContext' define um 'contexto', unidade de 'aplicação web' que possui suas próprias 'configurações'
+					- Servlets e Páginas JSP precisam estar num 'contexto' de 'aplicação web', sendo um contexto de aplicação web por 'JavaMail'
+					- conjunto de métodos que uma 'servlet' utiliza para interagir com seu 'Servlet Container'
+					- métodos são 'recuperar um arquivo', 'despachar requisições' ou 'escrever em um arquivo' de log
+					- 'ServletContext' serve para qualquer 'servlet do contexto' e pode ser acessado por meio do objeto 'ServletConfig'
+					- cada 'servlet' possui seu 'ServletConfig'
+
+			- 'javax.servlet.http'
+				- classes e interfaces para comunicação usando 'HTTP', interfaces 'HttpServletRequest' e 'HttpServletResponse', classe abstrata 'HttpServlet'
+				- 'HttpServletRequest'
+					- método 'getParameter' retorna o valor do parâmetro de uma requisição como uma String
+					- permite 'servlet' capturar dados de formulários
+
+				- 'HttpServlet' define os métodos 'doGet', 'doPost', 'doPut', 'doDelete', 'doHead', 'doTrace' e 'doOptions'
+
+		- 'ciclo de vida'
+			- 1. Servidor recebe 'Requisição HTTP' e 'repassa' para 'Servlet Container'
+				- já existe instancia: delega a requisição para ela
+				- não existe instancia: carrega classe servlet na memória, cria uma instância e inicializa com método 'init' e parâmetro 'ServletConfig'
+			- 2. Chama método service com dois parâmetros: ServletRequest 'solicitação do cliente' e ServletResponse 'resposta' - ambos criados pelo contêiner
+			- 3. Contêiner chama o método 'destroy' a fim de remover a instância da servlet
+			'PARA CADA REQUISIÇÃO, A SERVLET GERA UMA NOVA THREAD'
+
+	- 'EJB (ENTERPRISE JAVABEANS)'
+		- núcle da aplicação JEE
+		- 'Container EJB' de um 'Servidor de Aplicação'
+		- arquitetura para aplicações corporativas orientada à 'transação' e baseada em 'componentes'
+		- componentes 'server-side' com infraestrutura para o desenvolvimento e implantação de aplicações 'distribuídas', 'escaláveis', 'seguras', 'persistentes' e 'portáteis'
+
+		- programador livre para concentrar na 'lógica de negócio' e na 'resolução do problema'
+		- não se preocupa com infraestrutura 'segurança, escalabilidade, entre outros'
+		- extremamente portáveis e reusáveis
+		- rodam em qualquer servidor de aplicação JEE
+		- recomendado quando aplicação necessite ser 'escalável', 'segura', 'transacional', 'persistente', 'escalável', 'portável', 'distribuída'
+		- neutra em relação a protocolos 'HTTP, IIOP, RMP, DOM'
+
+		- 'Objetivos'
+			- padrão para aplicações corporativas em JAVA
+			- suporta desenvolvimento, implantação e utilização de aplicações corporativas em JAVA
+			- suporta o desenvolvimento, implantação e utilização de Web Services
+			- facilita a escrita de aplicações
+			- implantadas em múltiplas plataformas sem recompilação ou modificação do código-fonte
+			- aborda aspectos de desenvolvimento, implantação e tempo de execução do ciclo de vida de uma aplicação corporativa
+			- defini contratos a ferramentas de terceiros interoperáveis em runtime
+			- torna possível criação de aplicativos utilizando ferramentas de diferentes fabricantes
+			- fornece interoperabilidade entre Beans Corporativos, componentes do Java EE e outras linguagens
+			- compatível com as plataformas de servidores existentes
+			- compatível com outras APIs JAVA
+			- compatível com Protocolos CORBA
+
+		- 'Contêiner EJB' 
+			- 'recipiente' (em tempo de execução) para 'EJBs' que são implantados em um 'Servidor de Aplicação'
+			- 'serviços' 
+				- gerenciamento de ciclo de vida 'desenvolvedor não se preocupa com criação de processos, threads, ativação ou destruição de objetos'
+				- geração de código 
+				- gerenciamento de persistência 'beans não precisam se preocupar com sua persistência em um banco de dados'
+				- gerenciamento de segurança 'fornece suporte a autenticação e controle de acesso orientado a papéis'
+				- gerenciamento de transações 'gerencia o início, enrollment, commitment e rollback de transações'
+				- controle de concorrência 'estado conversacional de Beans (se houver) é gerenciado (salvo/recuperado) automaticamente'
+
+		- 'Descritores de implantação'
+			- são anotações 'XML' 
+			- definem estrutura e comportamento do EJB
+			- criados no processo de empacotamento de EJB sendo parte dele na compilação
+			- 'EJB 3.2' é o 'ejb-jar.xml'
+			- 'anotações' geram artefatos
+				- documentar o código, mapear classes Java para XML, mapear classes Java para bancos de dados, mapear métodos para operações, dependências externas
+				- 'Java EE' prefere anotações
+				- 'EJB 3' define anotações para o tipo de bean, tipo de interface, referências de recurso, atributos de transação, segurança e muito mais
+
+		- 'Formatos'
+			- padronizar o encapsulamento da lógica de negócio sob uma única interface
+			- EAR, WAR, JAR
+
+		- 'novidades EJB 3.1'
+			- componente 'Singleton Session Bean' para capturar eventos de inicialização e encerramento da aplicação
+			- 'Interface opcional' para componentes sem a obrigatoriedade da criação de uma interface remota ou local
+			- Melhorias no serviço de 'agendamento'
+			- *'deploy' de EJBs diretamente na 'camada web' (.war)
+			- 'Chamadas assíncronas' a métodos
+			- Nomes JNDI globais padronizados para 'portabilidade'
+			- versão mais 'leve EJB Lite'
+			- 'EJBs executados no JavaSE' com Embeddable EJB 
+
+		- PAG 81!!!
+
+
+			
+
+- JUNIT 'framework de teste para a linguagem JAVA'
+	- TDD 'Test Driven Development'
+		- prática ágil de desenvolvimento de software
+		- testes de unidade definem requisitos
+		- desenvolvimento orientado a testes
+	- conjunto de classes que usuário estende para criar um ambiente de testes automatizado
+	- cada teste implementado como um 'objeto' e um 'executor' realiza os testes
+	- usa TDD - primeiro teste, depois aplicação
+		- aumenta 'produtividade' e 'estabilidade', reduzindo 'stress' e 'tempo gasto' 
+	
+	- 'manuais' sem apoio de ferramentas
+		- demorado, tedioso, muito investimento, menos confiável, não programável
+	- 'automatizados' usa ferramenta
+		- rápido, menos investimento, confiável, programável 
+
+	- 'características'
+		- opensource
+		- 'anottations' - identificar métodos dos testes
+		- 'assertions' - resultados esperados dos testes
+		- permite escrita rápida de código
+		- simples - de baixa complexidade
+		- resultados automaticos
+		- barra verde (OK) ou vermelha (NÃO OK)
+		- relatório dos casos de teste
+		- teste do todo ou parte do sistema
+		- testes 'unitários', de 'regressão' e 'funcionais'
+		- facilmente integrado com 'eclipse', 'ant' e 'maven'
+		- deve-se estender classe 'TestCase'
+			public class JavaTest extends TestCase
+		- TIPO DESCRIBE 'suite de testes' agregação de testes de unidade executáveis em conjunto ou agregação de suites
+		- PROBLEMA: não fornece informações de cobertura dos casos de teste
 				 
 
+//-- 2%  CSS3.
+
+- CSS3
+	- necessidade de dissociar a linguagem de estruturação/conteúdo (HTML) da linguagem de apresentação/formatação (CSS)
+	- padrão W3C (empresas que estabelecem padrões da internet)
+	- desvantagem é que nem todos os navegadores implementam W3C
+	- é em cascata, para tratar estilos em conflito
+		- usuário !important prevalece sobre demais
+		- desenvolvedor prevalece sobre usuário no resto
+		- se num class com definições contraditórias no mesmo elemento, prevalece a última
+	- /**/ são comentários
+
+	- usuário com dificuldades visuais pode alterar fonte para grande usando !important
+	- usado também para definir posições de elementos e formação de páginas 'em vez de tabelas HTML' - padrão W3C (Tableless)
+	- usado também com XML
+		- CSS/XML  <?xml-stylesheet type="text/css" href="arquivo.css">
+		- XSL/XML  <?xml-stylesheet type="text/xsl" href="arquivo.xsl">
+		- CSS/HTML <link rel="stylesheet" type="text/css" href="arquivo.css">
+		
+	- tipos por localização
+		- 'inline' LOCAL NA TAG DE ABERTURA HTML USANDO STYLE
+			- perde-se as vantagens do CSS pois mistura apresentação com marcação
+			- deve ser usado excepcionalmente
+
+		- 'incorporadas' REGRAS DECLARADAS NA SEÇÃO HEAD DENTRO DE <STYLE></STYLE> NO HTML
+			- ideal para ser aplicada numa única página
+			- perde-se a vantagem de aplicar estilos a toda a aplicação
+
+		- 'externas' REGRAS DECLARADAS NUM ARQUIVO .CSS EXTERNO
+			- ideal para ser aplicado em várias páginas
+			- deve ser linkado dentro do head
+
+	'seletor1, seletor2 {propriedade1: valor1 ; propriedade2: valor2 !important}'
+		- seletor 'identificado por tag, classe, ID'
+			- <p>, <h1>, <form>, .classe
+		- propriedade 'atributo em que será aplicada a regra'
+			- font, color, background
+		- valor 'característica assumidade pela propriedade'
+			- arial, blue, green
+
+	- EXEMPLOS
+		// aplicados diretamente a tags HTML
+		h1, h2, h3{ 
+			color: #0f0;
+		}
+
+		// usados no mesmo tag HTML diferenciados por class
+		p.cor-um{ 
+			color: #000
+		}
+		p.cor-dois{
+			color: #ff
+		}
+
+		// usadas em tags HTML diferentes agrupadas por class
+		.cor-três{
+			color: ##00f
+		}
+
+		// aplicado a único elemento HTML usando ID
+		#meuID{
+			propriedade: valor;
+		}
+
+		// com seletor de atributos aplica-se estilo a propriedade com valor específico
+		// aplica a todo atributo <a> com target sendo blank
+		a[target = "blank"]{
+			background-color="yellow"
+		}
+
+	- TAMANHOS PADRÃO
+		- usar 'px' depende do tamanho da tela
+		- usar 'em' é tamanho relativo da fonte dependendo do dispositivo
+
+	- PRINCIPAIS PROPRIEDADES (são 226)
+		- position 'static, relative, absolute, fixed'
+			- diz posição do elemento
+			- 'top, bottom, left, rigth' só funcionam se 'position' for configurada primeiro
+			- 'static' padrão pelo fluxo da página - não aceita posicionamento manual com 'top, bottom, left, rigth'
+			- 'relative' aceita coordenadaas em relação à pos original 'top: 20px indica elemento 20px abaixo do topo'
+			- 'absolute' se refere a qualquer pai na estrutura HTML que seja 'static'
+			- 'fixed' mantém posição fixa no navegador mesmo com rolagem da tela
+		
+		- list-style 'coisinha aos itens das listas'
+			- propriedades de todas as listas
+			- 'list-style-image' define imagem como marcador da lista
+			- 'list-stule-position' define posicionamento do marcador
+			- 'list-style-type' define tipo de marcador da lista
+
+		- font 'estilo, largura, tamanho,..'
+			- todas as propriedades de fontes
+			- 'font-family/size/style/variant/weight'
+			
+		- background 'cor, imagem, posição,..'
+			- propriedades de plano de fundo
+			- 'background-color/image/position/size/repeat/origin/clip/attachment'
+
+	- ADICIONADOS CSS3
+		-> compatível totalmente com versões anteriores
+		   construir animações, efeitos de rotação, movimento e transição
+		   cálculos aritméticos simples
+		   seletores avançados
+		   manipula fontes 
+		   tipos de bordas e planos de fundo
+		   divisão de textos em colunas
+		   Selectors 'Pesquisa Nome'
+		   Box Model
+		   Backgrounds
+		   Borders
+		   Image Values
+		   Replaced Content
+		   Text Effects
+		   2D/3D Transformations
+		   Animations
+		   Multiple Column Layout
+		   User Interface
 
 
 
