@@ -1,3 +1,7 @@
+// how to
+'https://start.spring.io/'
+
+
 // tecnologias
 gradle
 groovy
@@ -19,10 +23,15 @@ rxjava
 @Id 'define o identificador da tabela'
 @SequenceGenerator 'forma de auto incremento de determinado campo'
 
-@SpringBootApplication 'equivalente a @Configuration, @EnableAutoConfiguration e @ComponentScan com valores default'
-@EnableFeignClients
-@Bean 'bean do Spring'
+@SpringBootApplication 'equivalente a @Configuration, @EnableAutoConfiguration e @ComponentScan com valores default
+						indica uma classe de config que declara um ou mais métodos @Bean e trigger auto-configuration e scan de componente'
+@EnableFeignClients 'faz scan no classpath do pacote da classe em que está definido
+					no caso, seus cliente feign atuais não estão localizados no pacote BaseApplications'
+@Bean 'bean do Spring
+	   receita para criar novas instancias da classe da classe definida pela definição da Bean
+	   servem de injeção de dependência'
 @GetMapping 'mapeia requisições HTTP GET em métodos específicos'
+// PAREI AQUI
 @RestController
 @Autowired
 @Value
