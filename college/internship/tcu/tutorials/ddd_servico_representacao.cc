@@ -31,14 +31,18 @@ rxjava
 	   receita para criar novas instancias da classe da classe definida pela definição da Bean
 	   servem de injeção de dependência'
 @GetMapping 'mapeia requisições HTTP GET em métodos específicos'
-// PAREI AQUI
-@RestController
-@Autowired
-@Value
-@PostMapping
-@RequestBody
-@RequestParam
-@PathVariable
+@RestController 'anotada como @Controller e @ResponseBody'
+@Autowired 'marca um construtor. campo, método setter ou método de config pra ser autowired pelas facilidades de injeção de dependência do Spring'
+@Value 'anotação no campo ou método/construtor para dar um valor padrão para o argumento afetado'
+@PostMapping 'shortcut para @RequestMapping(method = RequestMethod.POST)'
+@RequestBody 'indica que um parametro do método deve ser bound ao corpo do web request'
+@RequestParam 'indica que um parametro do método deve ser bound ao paramtro do web request'
+@PathVariable 'parametro do método deve ser bound a uma variavel template URI'
+@ControllerAdvice 'especialização de @Component para classes que declaram métodos @ExceptionHandler, @InitBinder, ou @ModelAttribute compartilhados em múltiplas classes
+ 				   @Controller'
+@Immutable 'marca entidade, coleção ou atributo como imutável'
+@ExceptionHandler 'gerencia exceções em classes em classes ou métodos específicas de handler'
+
 
 // código
 java.util.logging.Logger // mostra dados na tela
@@ -63,14 +67,17 @@ aplicacao/ // camada da aplicacao
 					// @Value
 					// @PostMapping
 					// @RequestBody
-					AutuarRepresentacaoRest.groovy // entender depois
+					AutuarRepresentacaoRest.groovy // engloba os recursos retornados aos requests do web
 					// @RestController
 					// @GetMapping
 					// @RequestParam
 					// @PathVariable
 					// @PostMapping
 					// @RequestBody
-					ControladorExcecao.groovy
+					ControladorExcecao.groovy // gerencia exceções
+					// @ControllerAdvice
+					// @Immutable
+					// @ExceptionHandler
 					CriaContratoRest.groovy
 					CriarLicitacaoRest.groovy
 					DocumentoRest.groovy
