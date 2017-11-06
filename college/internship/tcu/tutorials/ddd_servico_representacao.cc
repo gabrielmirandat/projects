@@ -36,8 +36,8 @@ rxjava
 @Value 'anotação no campo ou método/construtor para dar um valor padrão para o argumento afetado'
 @PostMapping 'shortcut para @RequestMapping(method = RequestMethod.POST)'
 @RequestBody 'indica que um parametro do método deve ser bound ao corpo do web request'
-@RequestParam 'indica que um parametro do método deve ser bound ao paramtro do web request'
-@PathVariable 'parametro do método deve ser bound a uma variavel template URI'
+@RequestParam 'parametro direto do request HTTP, entra com /?'
+@PathVariable 'parametro que é caminho comum da url, uma barra sem ?'
 @ControllerAdvice 'especialização de @Component para classes que declaram métodos @ExceptionHandler, @InitBinder, ou @ModelAttribute compartilhados em múltiplas classes
  				   @Controller'
 @Immutable 'marca entidade, coleção ou atributo como imutável'
@@ -61,13 +61,14 @@ aplicacao/ // camada da aplicacao
 				config/
 				infra/
 				rest/
-					AutenticacaoRest.groovy // faz autenticação de usuário
+					AutenticacaoRest.groovy // realiza autenticação do usuário (Post em auth)
 					// @RestController
 					// @Autowired
 					// @Value
 					// @PostMapping
 					// @RequestBody
-					AutuarRepresentacaoRest.groovy // engloba os recursos retornados aos requests do web
+					AutuarRepresentacaoRest.groovy // autua a representacao (Gets para documentos de gestão e representação, autores, objetos, dados gerais, objeto, 
+												   // Post para autuar )
 					// @RestController
 					// @GetMapping
 					// @RequestParam
@@ -78,12 +79,43 @@ aplicacao/ // camada da aplicacao
 					// @ControllerAdvice
 					// @Immutable
 					// @ExceptionHandler
-					CriaContratoRest.groovy
-					CriarLicitacaoRest.groovy
-					DocumentoRest.groovy
-					PessoaQualificadaRest.groovy
-					ProcessoRest.groovy
-					RepresentacaoRest.groovy
+					CriaContratoRest.groovy // cria e recupera objetos Contrato (no Post/criar precisa de um body, no Get/recuperar parametros de id, numero, ano)
+					// @RestController
+					// @PostMapping
+					// @RequestBody
+					// @GetMapping
+					// @RequestParam
+					CriarLicitacaoRest.groovy // cria e recupera licitações (no Post/criar precisa de um body, 
+											  // no Get/recuperar pode ser parametros idOrgao, numero, ano, idModalidade ou variavel de caminho id
+											  // tem um Get para as modalidades da licitacao também)
+					// @RestController
+					// @PostMapping
+					// @RequestBody
+					// @GetMapping
+					// @RequestParam
+					// @PathVariable
+					DocumentoRest.groovy // apenas obtem documentos (no Get/recuperar por variavel de caminho id)
+					// @RestController
+					// @GetMapping
+					// @PathVariable
+					PessoaQualificadaRest.groovy // apenas recupera pessoas
+												 // no Get/recuperar por parametros tipoQualificacaoId ou por cpf ou por cnpj ou por nome
+					// @RestController
+					// @GetMapping
+					// @RequestParam
+					ProcessoRest.groovy // recupera processos (no Get/recuperar por parametros numero, ano, digito verificador)
+					// @RestController
+					// @GetMapping
+					// @RequestParam
+					RepresentacaoRest.groovy // recupera ou atualiza uma representação por completo 
+											 // no Get/recuperar por parametros de idProcesso ou variavel de caminho id
+											 // tem um Get para id da Representação por parametro id 
+											 // no Post/atualizar precisa de um body
+					// @RestController
+					// @GetMapping
+					// @RequestParam
+					// @PathVariable
+					// @RequestBody
 				sanityrest/
 					Http2ServiceRest.groovy  // controlador REST / mapeia "/", "/entity-flow", "/push"
 					// @RestController
