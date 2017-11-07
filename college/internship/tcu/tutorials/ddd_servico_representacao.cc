@@ -60,6 +60,36 @@ aplicacao/ // camada da aplicacao
 				aplicacao/
 				config/
 				infra/
+					flyway/
+						FlywayConfiguration.groovy // chama 2 beans, um de inicialização e outro de callback do flyway
+						// @Bean
+
+					seguranca/
+						ConfiguracaoDocumentoAutenticacaoRest.groovy // bean que retorna new RestClientHttpRequestInterceptorDeDocumento()
+						// @Configuration
+						// @Bean
+						TokenLoginIntegradoServico.groovy // tem um string do token
+						// @Immutable
+						// @Builder
+						UsuarioAutenticadoHelper.groovy // retorna usuario autenticado ou null
+						RestClientHttpRequestInterceptorDeDocumento.groovy
+						RestClientHttpRequestInterceptorDeProcesso.groovy
+						RestClientHttpRequestInterceptorDePessoaWrapper.groovy
+						DadosAutenticacaoRecurso.groovy
+						TokenServico.groovy
+						ConfiguracaoProcessoAutenticacaoRest.groovy
+						RestClientHttpRequestInterceptorDeUnidadeTecnica.groovy
+						DadosAutenticacaoLoginIntegrado.groovy
+						ConfiguracaoPessoaWrapperAutenticacaoRest.groovy
+						RestClientHttpRequestInterceptorDePessoa.groovy
+						DadosAutenticacao.groovy
+						RestClientHttpRequestInterceptor.groovy
+						CORSConfig.groovy
+						ConfiguracaoUnidadeTecnicaAutenticacaoRest.groovy
+						RestSecurityConfig.groovy
+						ConfiguracaoPessoaAutenticacaoRest.groovy
+
+
 				rest/
 					AutenticacaoRest.groovy // realiza autenticação do usuário (Post em auth)
 					// @RestController
@@ -98,7 +128,7 @@ aplicacao/ // camada da aplicacao
 					// @RestController
 					// @GetMapping
 					// @PathVariable
-					PessoaQualificadaRest.groovy // apenas recupera pessoas
+					PessoaQualificadaRest.groovy // apenas recupera pessoas 
 												 // no Get/recuperar por parametros tipoQualificacaoId ou por cpf ou por cnpj ou por nome
 					// @RestController
 					// @GetMapping
@@ -116,17 +146,18 @@ aplicacao/ // camada da aplicacao
 					// @RequestParam
 					// @PathVariable
 					// @RequestBody
+				
+
 				sanityrest/
 					Http2ServiceRest.groovy  // controlador REST / mapeia "/", "/entity-flow", "/push"
 					// @RestController
 					// @GetMapping
+				
+
 				RepresentacaoMain.groovy // roda aplicacao SpringBoot / cria um Bean
 				// @SpringBootApplication
 				// @EnableFeignClients
 				// @Bean
-
-
-
 
 
 dominio/ // camada de dominios
