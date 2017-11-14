@@ -401,8 +401,27 @@ java.util.logging.Logger // mostra dados na tela
 
 *dominio/ // camada de dominios
 	build/ // arquivos class da compilacao
-	src/
 	build.gradle // arquivo de configs de compilacao
+	src/
+		test/ // arquivos de teste da main/
+		main/
+			groovy/
+				br/
+					gov/
+						tcu/
+							representacao/
+								dominio/
+									comum/
+										AnotacoesDDD.groovy // apenas define anotacoes de interface para RaizAgregadoDominio, ObjetoDeValorDominio e EntidadeDominio
+										ConversorBooleanParaCaracter.groovy
+										EventoDominio.groovy
+										InvarianteDominio.groovy
+										ViolacaoDominioExcecao.groovy
+									objetocontrato/
+									objetolicitacao/
+									qualificacaoautor/
+									representacao/
+	
 
 
 // outros
