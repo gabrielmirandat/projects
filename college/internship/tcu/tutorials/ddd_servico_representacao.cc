@@ -28,7 +28,7 @@ rxjava
 @EnableFeignClients 'faz scan no classpath do pacote da classe em que está definido
 					no caso, seus cliente feign atuais não estão localizados no pacote BaseApplications'
 @Bean 'bean do Spring
-	   receita para criar novas instancias da classe da classe definida pela definição da Bean
+	   receita para criar novas instancias da classe definida pela definição da Bean
 	   servem de injeção de dependência'
 @GetMapping 'mapeia requisições HTTP GET em métodos específicos'
 @RestController 'anotada como @Controller e @ResponseBody'
@@ -43,13 +43,18 @@ rxjava
 @Immutable 'marca entidade, coleção ou atributo como imutável'
 @ExceptionHandler 'gerencia exceções em classes em classes ou métodos específicas de handler'
 
+// simbolos ao lado do nome
+C - classe 
+I - interface
+cadeado aberto ou fechado - público ou privado
+
 
 // código
 java.util.logging.Logger // mostra dados na tela
 
 
 // principal
-aplicacao/ // camada da aplicacao
+*aplicacao/ // camada da aplicacao
 	build/ // arquivos class da compilacao
 	build.gradle // arquivo de configs de compilacao e outros
 	src/
@@ -58,28 +63,216 @@ aplicacao/ // camada da aplicacao
 			resources/ // arquivos do banco de dados e controle de versao do flyway
 			groovy/
 				aplicacao/
+					*autuarrepresentacao/
+						AutuarProcessoServico.groovy // servico para autuação
+													 // contém processoServicoExterno, licitacaoRepository, contratoRepository, unidadeServico, relatorServicoExterno
+													 // métodos autue, criarComando, montarTextoAssunto, podeDefinirRelator, getCodRelator
+						// @Component
+						AutuarRepresentacaoServicoAplicacao.groovy // tem um autuarProcessoServico
+																   // a pre-autorização checa no banco se o usuario tem alguma Role (permissao)
+																   // métodos autue, documentosPorIdsDocumentosGestao, documentosPorIds, dadosAutores, 
+																   // dadosObjetos, dadosGerais, pesquiseRepresentacaoAutuadaComObjeto
+						// @Service
+						// @Transactional
+    					// @PreAuthorize
+						ComandoAutuarRepresentacao.groovy // DTO: "Data transfer objects " can travel between seperate layers in software 
+														  // declara todas as classes, ComandoAutuarRepresentacao, AutorDto, ObjetoDto, DadosProcessoDto
+						// @JsonIgnoreProperties
+						// @Builder
+						// @Immutable
+						ConversorDtoEmAutorRepresentacao.groovy // apenas uma função de conversão
+						ConversorDtoEmObjetoRepresentacao.groovy // apenas uma função de conversão
+						CriarRepresentacaoServico.groovy // métodos criar, documentosIniciaisOrdenados, novoNumeroRepresentacao, novaRepresentacao
+						// @Component
+						// @Transactional
+						DadosGeraisDto.groovy // DTO: "Data transfer objects " can travel between seperate layers in software 
+											  // declara todas as classes, DadosGeraisDto, UnidadeTecnicaDto, 
+											  // UnidadeResponsavelPorAgirDto, SubunidadeDto ,ConfidencialidadeDto
+						// @JsonIgnoreProperties
+						// @Immutable
+
+					*criarcontrato/
+						ComandoCriarContrato.groovy // apenas encapsula idNegocio, codUASG, descricao, valorTotalContratado
+						// @JsonIgnoreProperties
+						// @Builder
+						// @Immutable
+						// @JsonDeserialize
+						ContratoDto.groovy // encapsula id, idNegocio, nomeOrgaoEntidade, idSituacao, codUASG, descricao, valorTotalContratado
+						// @JsonIgnoreProperties
+						// @Builder
+						// @Immutable
+						// @JsonDeserialize
+						ConversorContratoEmDto.groovy // possui métodos de conversão converte, montaContratoDto, montaIdContratoDto, nomeOrgaoEntidade
+						CriarContratoServicoAplicacao.groovy // possui métodos de criar, recuperePorIdentificador, crieIdentificadorContrato, recuperePorIds
+						// @Service
+						// @Transactional
+						// @PreAuthorize
+						IdContratoDto.groovy // encapsula dados de idOrgaoEntidade, numero, ano
+						// @JsonIgnoreProperties
+						// @Builder
+						// @Immutable
+					*criarlicitacao/
+						ComandoCriarLicitacao.groovy // apenas encapsula idNegocio, codUASG, descricao, valorTotalEstimado
+						// @JsonIgnoreProperties
+						// @Builder
+						// @Immutable
+						// @JsonDeserialize
+						LicitacaoDto.groovy // encapsula id, idNegocio, nomeOrgaoEntidade, idSituacao, codUASG, descricao, valorTotalEstimado
+						// @JsonIgnoreProperties
+						// @Builder
+						// @Immutable
+						// @JsonDeserialize
+						ConversorLicitacaoEmDto.groovy // possui métodos de conversão converte, montaLicitacaoDto, montaIdLicitacaoDto, nomeOrgaoEntidade
+						CriarLicitacaoServicoAplicacao.groovy // possui métodos de criar, recuperePorIdentificador, dadosModalidades, crieIdentificadorLicitacao,
+															  // recuperePorIds, recuperePorId
+						// @Service
+						// @Transactional
+						// @PreAuthorize
+						IdLicitacaoDto.groovy // encapsula dados de idOrgaoEntidade, numero, ano e idModalidade
+						// @JsonIgnoreProperties
+						// @Builder
+						// @Immutable
+					*documento/
+						DocumentoConteudoDto.groovy // encapsula conteudoBase64 e nomeArquivo
+						// @JsonIgnoreProperties
+						// @Immutable
+						DocumentoServicoAplicacao.groovy // possui método obterConteudoDocumento pelo id do documento
+						// @Service
+						// @PreAuthorize
+					*editarrepresentacao/
+						ComandoAtualizarRepresentacao.groovy // apenas encapsula id, autores e objetos
+						// @JsonIgnoreProperties
+						// @Builder
+						// @Immutable
+						ConversorRepresentacaoEmDto.groovy // possui metodos converte, montarDtoComposto, getDocumentos, getAutores, getObjetos, getDadosGerais
+						EditarRepresentacaoServicoAplicacao.groovy // possui métodos getRepresentacaoComIdProcesso, getRepresentacao, atualize
+						// @Service
+						// @PreAuthorize
+						IdRepresentacaoDto.groovy // apenas encapsula id da representacao
+						RepresentacaoDto.groovy // possui classes RepresentacaoDto, NumeroRepresentacaoDto, DadosGeraisDto, DocumentoDto, AutorDto, SignatarioDto,
+												// ObjetoDto, DadosObjetoNaoClassificadoDto
+						// @JsonIgnoreProperties
+						// @Builder
+						// @Immutable
+						UnidadeJurisdicionadaServico.groovy // tem LicitacaoRepository e ContratoRepository
+															// possui métodos recuperarIdsUnidadesJurisdicionadas, recuperarIdsOrgaosEntidadesLicitacaoEContrato
+						// @Service
+					*pessoaqualificada/
+						MunicípioDto.groovy // apenas encapsula uma uf e recebe Map<String, Object> props no construtor
+						// @JsonIgnoreProperties
+						// @JsonCreator
+						PessoaDto.groovy // encapsula id, nome, cpfOuCnpj, municipioLocalizacao, possuiCaraterPublico, incluirDaRFB
+						PessoaQualificadaDto.groovy // encapsula idPessoa, nomePessoa, exigeNumeroFiscalizacao
+						// @Builder
+						// @Immutable
+						PessoaQualificadaServicoAplicacao.groovy // tem pessoaQualificadaRepository e pessoaServicoExterno
+																 // métodos pesquisePorTipoQualificacao, pesquisePorCpf, pesquisePorCnpj, 
+																 // incluirPessoaPorCpfDaReceita, pesquisePorParteNomeOrgao, pessoasPorIdsOrdenadas
+						// @Service
+						// @Transactional
+						// @PreAuthorize
+					*processo/
+						ProcessoServicoAplicacao.groovy // possui ProcessosServicoExterno, AutenticacaoServicoExterno e urlSistemaLegado
+														// métodos obterIdProcessoPorNumeroAnoDV, obterLinkProcessoEGestao
+						// @Service
+						// @Value
+						// @PreAuthorize
+					*servicoexterno/
+						AutenticacaoServicoExterno.groovy // método autentica e autenticaLoginIntegrado
+						// @FeignClient
+						// @PostMapping
+						// @RequestBody
+						ComandoAutuacaoProcesso.groovy // encapsula codTipoProcesso, codUnidadeTecnica, codSubunidadeTecnica, codUnidadeRespAgir, 
+													   // codSubunidadeRespAgir, codTipoConfidencialidade, codClasseAssunto, textoComplementoAssunto, codRelator, 
+													   // codsUnidadesJurisdicionadas, codsDocumentosAJuntar, codsResponsaveis, codsInteressados
+						// @JsonIgnoreProperties
+						// @Builder
+						// @Immutable
+						DocumentosDto.groovy // encapsula lista de documentos
+						// @JsonIgnoreProperties
+						// @Immutable
+						DocumentoServicoExterno.groovy // tem mapeamentos para documentosPorIds(), documentosPorIdsDocumentosGestao(), obterConteudo()
+						// @FeignClient
+						// @GetMapping
+						// @RequestParam
+						// @PathVariable
+						PessoaServicoExterno.groovy // muitos mapeamentos para pessoaFisicaPorCpf(), pessoaJuridicaPorCnpj(), pessoaJuridicaPorCnpjReceita(), 
+													// incluirPessoaJuridicaDaReceita(), orgaoPorParteNome(), pessoasPorIds(), pessoasJuridicasPorIds()
+						// @FeignClient
+						// @GetMapping
+						// @PathVariable
+						// @RequestParam
+						ProcessoDto.groovy // encapsula cod, confidencialidade, codUnidadeResponsavelPorAgir, codUnidadeResponsavelTecnica, 
+										   // codSubunidadeResponsavelPorAgir,  codSubunidadeResponsavelTecnica
+						// @JsonIgnoreProperties
+						// @JsonCreator
+						ProcessosServicoExterno.groovy // mapeamentos para processoPorNumeroAnoDV(), autuarProcesso(), processoPorCodigo()
+						// @FeignClient
+						// @GetMapping
+						// @RequestParam
+						// @RequestBody
+						RelatorServicoExterno.groovy // mapeamento para recuperarCodigoDoRelatorSugerido()
+						// @FeignClient
+						// @GetMapping
+						// @PathVariable
+						// @RequestParam
+						SubUnidadesDto.groovy // apenas encapsula subUnidades
+						// @JsonIgnoreProperties
+						// @Immutable
+						SubUnidadeTecnicaExternaDto.groovy // apenas encapsula id, nome, sigla, idUnidadeSuperior, idNivel, nivelSuperior
+						// @JsonIgnoreProperties
+						// @Immutable
+						UnidadesTecnicasDto.groovy // retorna lista de unidades
+						// @JsonIgnoreProperties
+						// @Immutable
+						UnidadeTecnicaExternaDto.groovy // armazena dados e cria JSON de id e nome
+						// @JsonIgnoreProperties
+						// @JsonCreator
+						// @JsonProperty
+						UnidadeTecnicaServicoExterno.groovy // mapeamentos para os métodos obterUnidades(), obterUnidadePorId() e obterSubUnidades()
+						// @FeignClient
+						// @GetMapping
+						// @PathVariable
+					*util/
+						*perfil/
+							PerfilUsuario.groovy // atributos SEPARADOR_OBJETO, PERFIL_DESENVOLVEDOR, PERFIL_DESENVOLVEDOR_ATUALIZADOR, PERFIL_AUTUADOR_PROCESSO
+												 // metodos desenvolvedor, desenvolvedorAtualizador, desenvolvedores, autuarProcesso e autuadorProcessoUnidade
+							// @Component
+						ConversorValorMonetario.groovy // métodos paraBigDecimal e paraString
+						DesserializadorBigDecimal.groovy // método deserialize
+						// @Override
+						SerializadorBigDecimal.groovy // método serialize
+						// @Override
 				
 
-				config/
-					audithook/
+				*config/
+					*audithook/
 						HibernateConfiguration.groovy // A JPA define um meio de mapeamento objeto-relacional para objetos Java simples e comuns (POJOs), 
 													  // denominados beans de entidade
 													  // é um HibernateJpaAutoConfiguration
 													  // usa hibernate.ejb.interceptor
 						// @Autowired
 						// @Override
-						PkgsOracleInterceptor.groovy
+						PkgsOracleInterceptor.groovy  // chama função atribuiUsuarioParaTriggerAuditLegado()
+						 							  // onSave, onDelete, onFlushDirty, preFlush
+						 							  // atribuiUsuarioParaTriggerAuditLegado, geraEstatisticasAcesso, usuarioRealLogado
 						// @Component
 						// @Autowired
     					// @Lazy
     					// @Override
     					// @SuppressWarnings
 
+					*undertow/
+						DataSourceConfig.groovy // retorna DataSourceBuilder.create().build()
+						// @Configuration
+						// @Bean
+						// @ConfigurationProperties
+						UndertowHttp2BuilderCustomizer.groovy // customiza adicionando a opção de servidor HTTP2
+						// @Override
+						UndertowHttp2Customizer.groovy // usa factory.addBuilderCustomizers()
+						// @Component
+						// @Override
 
-					undertow/
-
-
-				
 
 				*infra/
 					*flyway/
