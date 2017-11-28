@@ -1,0 +1,8 @@
+- encarregados do exercício
+	- GABRIEL MARTINS DE MIRANDA 13/0111350
+
+- tarefas
+	- slides (6)
+	- exercícios (10)
+	- código fonte comentado
+	- este arquivo
