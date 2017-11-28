@@ -411,16 +411,206 @@ java.util.logging.Logger // mostra dados na tela
 						tcu/
 							representacao/
 								dominio/
-									comum/
+									*comum/
 										AnotacoesDDD.groovy // apenas define anotacoes de interface para RaizAgregadoDominio, ObjetoDeValorDominio e EntidadeDominio
-										ConversorBooleanParaCaracter.groovy
-										EventoDominio.groovy
-										InvarianteDominio.groovy
-										ViolacaoDominioExcecao.groovy
-									objetocontrato/
-									objetolicitacao/
+										ConversorBooleanParaCaracter.groovy // contém métodos convertToDatabaseColumn, convertToEntityAttribute
+										// @Override
+										EventoDominio.groovy // classe abstrata que encapsula versao e dataOcorrencia
+										InvarianteDominio.groovy // classe final com funções de checagem
+										ViolacaoDominioExcecao.groovy // classe que é uma exceção RuntimeException
+									*objetocontrato/
+										evento/
+											ContratoAlterado.groovy // é um EventoDominioContrato
+																	// retorna TipoEventoContrato.ALTERADO
+											// @Override
+											ContratoCriado.groovy // é um EventoDominioContrato
+																  // retorna TipoEventoContrato.CRIADO
+											// @Override
+											EventoArmazenadoContrato.groovy // encapsula uma tabela bd de nome EVENTO_CONTRATO
+											// @ObjetoDeValorDominio
+											// @Entity
+											// @Table
+											// @SequenceGenerator
+											// @ToString
+											// @Id
+											// @GeneratedValue
+											// @Column											
+											// @Enumerated
+											EventoContratoRepository.groovy // interface com método findByIdContrato, é um JpaRepository<EventoArmazenadoContrato, Long>
+											EventoDominioContrato.groovy // classe abstrata que é um EventoDominio
+																		 // armazena idContrato e tem método formataTextoEvento
+											TipoEventoContrato.groovy // é um enum com os tipos CRIADO, ALTERADO e EXCLUIDO
+											// @ObjetoDeValorDominio
+											// @JsonFormat
+										Contrato.groovy // encapsula uma tabela bd de nome CONTRATO
+										// @ObjetoDeValorDominio
+										// @Entity
+										// @Table
+										// @SequenceGenerator
+										// @ToString
+										// @Id
+										// @GeneratedValue
+										// @Column											
+										// @Enumerated
+										// @Embedded
+										ContratoRepository.groovy // interface que é um JpaRepository<Contrato, Long>
+																  // tem os metodos findByIdentificador, findAllByIdIn
+										DadosContrato.groovy // encapsula uma tabela bd embutida, sem nome
+										// @ObjetoDeValorDominio
+										// @Embeddable
+										// @EqualsAndHashCode
+										// @ToString
+										// @Column
+										// @Enumerated
+										IdentificadorContrato.groovy // encapsula uma tabela bd embutida, sem nome
+										// @ObjetoDeValorDominio
+										// @Embeddable
+										// @EqualsAndHashCode
+										// @ToString
+										// @Column									
+										SituacaoContrato.groovy // é um enum com ATIVO e EXCLUIDO
+										// @ObjetoDeValorDominio
+										// @JsonFormat										
+
+									*objetolicitacao/
+										evento/
+											EventoArmazenadoLicitacao.groovy // encapsula uma tabela bd de nome EVENTO_LICITACAO
+											// @ObjetoDeValorDominio
+											// @Entity
+											// @Table
+											// @SequenceGenerator
+											// @ToString
+											// @Id
+											// @GeneratedValue
+											// @Column
+											// @Enumerated
+											EventoDominioLicitacao.groovy // classe abstrata, encapsula idLicitacao, metodo formataTextoEvento
+											EventoLicitacaoRepository.groovy // interface que é um JpaRepository<Contrato, Long>
+																  			 // tem os metodos findByIdLicitacao
+											LicitacaoAlterada.groovy // classe que é um EventoDominioLicitacao que seta TipoEventoLicitacao.ALTERADA
+											// @Override
+											LicitacaoCriada.groovy // classe que é um EventoDominioLicitacao que seta TipoEventoLicitacao.CRIADA
+											// @Override
+											TipoEventoLicitacao.groovy // enum TipoEventoLicitacao com tipos CRIADA, ALTERADA e EXCLUIDA
+											// @ObjetoDeValorDominio
+											// @JsonFormat
+										DadosLicitacao.groovy // encapsula uma tabela bd embutida, sem nome
+										// @ObjetoDeValorDominio
+										// @Embeddable
+										// @EqualsAndHashCode
+										// @ToString
+										// @Column
+										// @Enumerated
+										// @Convert
+										IdentificadorLicitacao.groovy // encapsula uma tabela bd embutida, sem nome
+										// @ObjetoDeValorDominio
+										// @Embeddable
+										// @EqualsAndHashCode
+										// @ToString
+										// @Column
+										// @Enumerated
+										Licitacao.groovy // encapsula uma tabela bd de nome LICITACAO
+										// @RaizAgregadoDominio
+										// @Entity
+										// @Table
+										// @SequenceGenerator
+										// @ToString
+										// @Id
+										// @GeneratedValue
+										// @Column
+										// @Version
+										// @Embedded
+										// @Enumerated
+										LicitacaoRepository.groovy // interface que é um JpaRepository<Licitacao, Long>
+																   // com métodos findByIdentificador, findAllByIdIn
+										ModalidadeProcedimentoLicitatorio.groovy // enum com os tipos de modalidade da licitação
+																				 // CONCORRENCIA, CONCORRENCIA_INTERNACIONAL, CONCORRENCIA_SRP, ..
+										// @ObjetoDeValorDominio
+										// @JsonFormat
+										// @Override
+										SituacaoLicitacao.groovy // enum com os tipos de situação da licitação
+																 // ATIVA e EXCLUIDA
+										// @ObjetoDeValorDominio
+										// @JsonFormat
+
 									qualificacaoautor/
+										PessoaQualificada // encapsula uma tabela bd de nome PESSOA_QUALIFICADA
+										// @RaizAgregadoDominio
+										// @Entity
+										// @Table
+										// @SequenceGenerator
+										// @ToString
+										// @Id
+										// @GeneratedValue
+										// @Column
+										// @Version
+										// @Enumerated
+										PessoaQualificadaRepository // interface que é um JpaRepository<PessoaQualificada, Long>
+																	// metodo findByTipo
+
+										QualificacaoAutor // enum com tipos de qualificacaoAutor, OpcaoBuscaAutor, OpcaoSignatario
+														  // MINISTERIO_PUBLICO, TRIBUNAL_CONTAS, ..
+														  // GRUPO_FIXO, CPF_CNPJ, ..
+														  // NAO_PERMITIDO, OPCIONAL, ..
+
 									representacao/
+										evento/
+											EventoArmazenadoRepresentacao // cria tabela EVENTO_REPRESENTACAO
+											// @ObjetoDeValorDominio
+											// @Entity
+											// @Table
+											// @SequenceGenerator
+											// @ToString
+											// @Id
+											// @GeneratedValue
+											// @Column
+											EventoDominioRepresentacao // classe abstrata que eh um EventoDominio
+																		// tem metodo formataTextoEvento
+											EventoRepresentacaoRepository // interface que eh um JpaRepository<EventoArmazenadoRepresentacao, Long>
+																			// metodo findByIdRepresentacao
+											ProcessoRepresentacaoAutuado // classe que eh um EventoDominioRepresentacao
+																		 // torna  TipoEventoRepresentacao.AUTUADA
+											// @Override
+											RepresentacaoCriada // classe eh um EventoDominioRepresentacao
+											 					// torna TipoEventoRepresentacao.CRIADA
+											RepresentacaoEditada // classe eh um EventoDominioRepresentacao
+											 					// torna TipoEventoRepresentacao.EDITADA
+											TipoEventoRepresentacao // enum com tipos de TipoEventoRepresentacao
+																	// CRIADA, AUTUADA, EDITADA
+											// @ObjetoDeValorDominio
+											// @JsonFormat
+										AutorRepresentacao // representa uma tabela de nome AUTOR
+										// @ObjetoDeValorDominio
+										// @Entity
+										// @Table
+										// @SequenceGenerator
+										// @EqualsAndHashCode
+										// @ToString
+										// @Id
+										// @GeneratedValue
+										// @Column
+										// @ElementCollection
+										// @CollectionTable
+										DadosProcesso 
+										// @ObjetoDeValorDominio
+										// @Embeddable
+										// @EqualsAndHashCode
+										// @ToString		
+										// @Column			
+										// @Convert					
+										DetalhamentoObjetoRepresentacao 
+										Documento 
+										DocumentoRepresentacao 
+										DocumentosIniciais 
+										GrupoDetalhamentoObjetoRepresentacao
+										NumeroRepresentacao 
+										ObjetoRepresentacao 
+										QualificacaoObjetoRepresentacao 
+										Representacao 
+										RepresentacaoRepository 
+										SignatarioAutor 
+										SituacaoRepresentacao 
+										TipoTransferencia
 	
 
 
@@ -430,4 +620,4 @@ java.util.logging.Logger // mostra dados na tela
 *representacao/ // arq de propriedades do SISTEMA REPRESENTACAO
 
 // fora do projeto
-*External Libraries/ // bibliotecas baixadas de dependencias
+*External Libraries/ // bibliotecas baixadas de dependencias.groovy
