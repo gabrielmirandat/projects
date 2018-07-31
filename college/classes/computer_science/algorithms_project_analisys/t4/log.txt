@@ -1,0 +1,5 @@
+520 execucoes
+Timer 3s
+233 normais
+239 timer
+48 segfaults

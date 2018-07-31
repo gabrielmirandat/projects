@@ -1,0 +1,6 @@
+1) Para compilar, use ./compila.sh
+2) Para executar todos os casos, use ./executa_set.sh
+3) Para construir os gráficos a partir da execução, python grafico.py
+
+Arquivos de gráficos e gráficos em graph/
+Saída das execuções redirecionadas para resultados.txt

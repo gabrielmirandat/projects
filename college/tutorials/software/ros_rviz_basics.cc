@@ -1,1 +1,1 @@
-oi
+$ rosrun rviz rviz --help
